@@ -1,0 +1,115 @@
+ % $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\inherit}[1]{\mbox{{\color{NavyBlue}{$#1$}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\yellowify}[1]{\mbox{{\color{Yellow}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Assignment \\	$24^{th}$ January 2005}
+
+\author{Conall O'Brien \\ 01734351 \\ conallob@maths.tcd.ie}
+
+\maketitle
+
+\section{Basic Grammar}
+
+\subsection*{Calculator}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Calc} 		&	\to	&	 \nonterminal{Ident} := \nonterminal{Exp} \nonterminal{Calc}	\\
+\nonterminal{Calc} 		&	\to	&	 WRITE \nonterminal{WriteOpt} \nonterminal{Calc}	\\
+\nonterminal{Calc} 		&	\to	&	 END	\\
+\nonterminal{WriteOpt} 	& 	\to	&	 , \nonterminal{WriteType} \nonterminal{WriteOpt}	\\
+\nonterminal{WriteOpt} 	& 	\to	&	 \epsilon	\\
+\nonterminal{WriteType} & 	\to	&	 \nonterminal{Ident}		\\
+\nonterminal{WriteType} & 	\to	&	 \nonterminal{String}
+\end{eqnarray}
+
+\subsection*{Expression}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Exp} 		&	\to	&	 \nonterminal{Minus} \nonterminal{Term} \nonterminal{ExpEnd}	\\
+\nonterminal{Minus} 		&	\to	&	 -	\\
+\nonterminal{Minus} 		&	\to	&	 \epsilon	\\
+\nonterminal{ExpEnd} 	&	\to	&	 + \nonterminal{Term} \nonterminal{ExpEnd}	\\
+\nonterminal{ExpEnd} 	&	\to	&	 - \nonterminal{Term} \nonterminal{ExpEnd}	\\
+\nonterminal{ExpEnd} 	&	\to	&	 \epsilon	
+\end{eqnarray}
+
+\subsection*{Term}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Term} 		&	\to	&	 \nonterminal{Factor} \nonterminal{TermEnd}	\\
+\nonterminal{TermEnd} 	& 	\to	&	 * \nonterminal{Term}	\\
+\nonterminal{TermEnd} 	& 	\to	&	 div \nonterminal{Term}	\\
+\nonterminal{TermEnd} 	& 	\to	&	 mod \nonterminal{Term}	\\
+\nonterminal{TermEnd} 	& 	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{Factor}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Factor} 	&	\to	&	 \nonterminal{Primary}
+\nonterminal{FactorEnd}	\\
+\nonterminal{FactorEnd} & 	\to	&	 \uparrow \nonterminal{Factor}	\\
+\nonterminal{FactorEnd} & 	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{Primary}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{P} 			&	\to	&	 \left( \nonterminal{Exp} \right)	\\
+\nonterminal{P} 			&	\to	&	 \nonterminal{Ident}	\\
+\nonterminal{P} 			&	\to	&	 \nonterminal{No}
+\end{eqnarray}
+\subsection*{Identifier}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Ident}		&	\to	&	 LETTER \nonterminal{IdentEnd}	\\
+\nonterminal{IdentEnd} 	& 	\to	&	 LETTER \nonterminal{IdentEnd}	\\
+\nonterminal{IdentEnd} 	& 	\to	&	 DIGIT \nonterminal{IdentEnd}		\\
+\nonterminal{IdentEnd} 	& 	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{Number}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{No} 			&	\to	&	 DIGIT \nonterminal{NoEnd}	\\
+\nonterminal{NoEnd} 		&	\to	&	 DIGIT \nonterminal{NoEnd}	\\
+\nonterminal{NoEnd} 		&	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{String}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{String} 	&	\to	&	 ' \nonterminal{StrOpt} '	\\
+\nonterminal{StrOpt} 	&	\to	&	 ANY PRINTABLE CHAR EXCEPT ' \nonterminal{StrOpt}	\\
+\nonterminal{StrOpt} 	&	\to	&	 \epsilon
+\end{eqnarray}
+ 
+\end{document}
