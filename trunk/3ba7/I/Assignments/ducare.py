@@ -39,8 +39,9 @@ def LexicalAnalyser(input):
 	};
 
 	output = [];
-	n = 0;
-
+	mem = [];
+	
+	# Decide what lexical token every character from input is
 	for i in range(len(input)):
 		if re.match(r"[A-Za-z]", input[i]):
 			check = 'CHAR';
@@ -52,7 +53,7 @@ def LexicalAnalyser(input):
 			check = 'ENDMARKER';
 		else:
 			check = input[i];
-		if i < (len(input) - 1):
+		if i < (len(input) - 2):
 			# i + 1
 			if re.match(r"[A-Za-z]", input[i + 1]):
 				nextcheck = 'CHAR';
@@ -64,25 +65,29 @@ def LexicalAnalyser(input):
 				nextcheck = 'ENDMARKER';
 			else:
 				nextcheck = input[i + 1];
+#		print input[i], ':', check, nextcheck;
 		# Now to gather the tokens we're going to return
-		if n == 0:
+		if len(mem) == 0:
 			if valid_transitions.has_key(check):
-				if valid_transitions[check] == "ACCEPT":
-					output.append(input[i]);
-					n = 0;  # Clear n
-				elif valid_transitions[check] == nextcheck:
-					n += 1;
+				# Check for a valid sequence of input or consecutive elements of the same type
+				if (valid_transitions[check] == nextcheck) or (check == nextcheck):
+					mem.append(input[i]); # save for later
+				elif valid_transitions[check] == "ACCEPT":
+					output.append(input[i]); # queue for output
+					mem = []; # Clear mem
 			#else: # Error checking
-				#sys.stderr.write("Error at symbol", input[a]);
-		elif n > 0:
+			#	sys.stderr.write("Error at symbol ".join(input[i]));
+		elif len(mem) > 0:
 			if valid_transitions.has_key(check):
-				if valid_transitions[check] == "ACCEPT":
-					output.append(input[(i - n):i]);
-					n = 0;  # Clear n
-				elif valid_transitions[check] == nextcheck:
-					n += 1;
+				# Check for a valid sequence of input or consecutive elements of the same type
+				if (valid_transitions[check] == nextcheck) or (check == nextcheck):
+					mem.append(input[i]); # save for later
+				elif valid_transitions[check] == "ACCEPT":
+					mem.append(input[i]); # add to the end of mem for completeness
+					output.append("".join(mem)); # return mem as a string
+					mem = [];  # Clear mem
 			#else: # Error checking
-				#sys.stderr.write("Error at symbol", input[a]);
+			#	sys.stderr.write("Error at symbol ".join(input[i]));
 	return output;					
 				
 
@@ -92,23 +97,26 @@ if '__main__' == __name__:
 	import re, sys
 	# Setup command line parameters
 	from optparse import OptionParser
-	parser = OptionParser(usage="%prog [-f] [-q]", version="%prog $Rev$");
-	parser.add_option("-i", "--input", dest="inputfile", 
-							help="Read input from FILE", metavar="FILE");
-	parser.add_option("-e", "--inline", dest="cmdinput", 
-							help="Read input from STRING", metavar="STRING");
+	parser = OptionParser(usage="%prog [-f | --file] | [-i | --input] | --version", version="%prog $Rev$");
+	parser.add_option("-f", "--file", dest="inputfile", help="Read input from FILE", metavar="FILE");
+	parser.add_option("-i", "--input", dest="cmdinput", help="Read input from STRING", metavar="STRING");
 	(options, args) = parser.parse_args();
-	if options.inputfile == '' and options.cmdinput == '':
-		# Learn how to default to --help...
-	elif options.inputfile != '':
-		# Read the input File
+	# Complain if no arguements are given
+	if options.cmdinput == None and options.inputfile == None:
+	        parser.error("incorrect number of arguments");
+	# Complain if more than 1 input arguement is given
+	elif options.cmdinput != None and options.inputfile != None:
+	        parser.error("Please specify a file or string, not both.");
+	elif options.inputfile != None:
+		# Otherwise, read the input file...
 		inputfile = open(options.inputfile, 'r');
 		input = inputfile.read();
-	elif options.cmdinput != '':
-		# Read string from command line
+	elif options.cmdinput:
+		# ...or read a string from command line.
 		input = options.cmdinput;
-	#
-	tokens = LexicalAnalyser(inputfile); # Analyse input
+	 # Now, let's get to work...
+	tokens = LexicalAnalyser(input); # Analyse input
+	# Let's give verbobe debugging info...
 	for c in range(len(tokens)):
 		if tokens[c] == "\n":
 			print "\n";
