@@ -43,8 +43,17 @@ def LexicalAnalyser(input):
 	output = [];
 	mem = [];
 	
+	lineno = 1;
+	charpos = 1;
+	
 	# Decide what lexical token every character from input is
 	for i in range(len(input)):
+		# Counter for line and row numers if we find an error...
+		if input[i] == '\n' or input[i] == '\r':
+			lineno += 1; # keep count of the line no
+		else:
+			charpos += 1; # keep count of the char pos
+		# Now, let's see what type our input character is...
 		if re.match(r"[A-Za-z]", input[i]):
 			check = 'CHAR';
 		elif re.match(r"\d", input[i]):
@@ -55,6 +64,7 @@ def LexicalAnalyser(input):
 			check = 'ENDMARKER';
 		else:
 			check = input[i];
+		# And the lookahead...
 		if i < (len(input) - 2):
 			# i + 1
 			if re.match(r"[A-Za-z]", input[i + 1]):
@@ -67,7 +77,6 @@ def LexicalAnalyser(input):
 				nextcheck = 'ENDMARKER';
 			else:
 				nextcheck = input[i + 1];
-#		print input[i], ':', check, nextcheck;
 		# Now to gather the tokens we're going to return
 		if len(mem) == 0:
 			if valid_transitions.has_key(check):
@@ -77,8 +86,8 @@ def LexicalAnalyser(input):
 				elif valid_transitions[check] == "ACCEPT":
 					output.append(input[i]); # queue for output
 					mem = []; # Clear mem
-			#else: # Error checking
-			#	sys.stderr.write("Error at symbol ".join(input[i]));
+			else: # Error reporting
+				sys.stderr.write("".join(["Error at symbol \"", str(input[i]), "\" at line ", str(lineno), ", position ", str(charpos), '\n\r']));
 		elif len(mem) > 0:
 			if valid_transitions.has_key(check):
 				# Check for a valid sequence of input or consecutive elements of the same type
@@ -88,8 +97,11 @@ def LexicalAnalyser(input):
 					mem.append(input[i]); # add to the end of mem for completeness
 					output.append("".join(mem)); # return mem as a string
 					mem = [];  # Clear mem
-			#else: # Error checking
-			#	sys.stderr.write("Error at symbol ".join(input[i]));
+			else: # Error reporting
+				sys.stderr.write("".join(["Error at symbol \"", str(input[i]), "\" at line ", str(lineno), ", position ", str(charpos), '\n\r']));
+		else: # Error reporting
+			sys.stderr.write("".join(["Error at symbol \"", str(input[i]), "\" at line ", str(lineno), ", position ", str(charpos), '\n\r']));
+	# Return what lexical toeksn we have queued up as output
 	return output;					
 				
 
