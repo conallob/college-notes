@@ -1,0 +1,70 @@
+% $Id: 20041109.tex 367 2004-11-23 10:22:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA3: Computer Architecture II \\ Tutorial Solution\\$30^{th}$ November 2004}
+
+\author{Conall O'Brien \\ conallob@maths.tcd.ie \\ 01734351}
+
+\maketitle
+
+\section{}
+
+\subsection*{(i)}
+
+$7-7-6-12$ - $2^{12} = 4096 bytes = 4kB$ \\ \\
+
+$7-7-5-13$ - $2^{13} = 8192 bytes = 8kB$
+
+\subsection*{(ii)}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Optional Configuration	&	Primary			&	Secondary		&	Tertiary			\\
+\hline
+$7-7-6-12$ 					&	$2^{7} = 128$	&	$2^{7} = 128$	&	$2^{6} = 64$	\\
+\hline
+$7-7-5-13$ 					&	$2^{7} = 128$	&	$2^{7} = 128$	&	$2^{5} = 32$	\\
+\hline
+\end{tabular}
+
+\subsection*{(iii)}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Primary Page Table	&	Secondary Page Table	&	Tertiary Page Table	& Start Address	& End Address	\\
+\hline
+$0$	&	$0$	&	$0$	&	$0x00000000$	&	$0x00001000$	\\
+$0$	&	$0$	&	$1$	&	$0x00001000$	&	$0x00002000$	\\
+$0$	&	$0$	&	$2$	&	$0x00002000$	&	$0x00003000$	\\
+$0$	&	$0$	&	$3$	&	$0x00003000$	&	$0x00004000$	\\
+$0$	&	$1$	&	$0$	&	$0x00040000$	&	$0x00041000$	\\
+$\vdots$	&	$\vdots$	&	$\vdots$	&	$\vdots$	&	$\vdots$		\\
+$1$	&	$0$	&	$0$	&	$0x08192000$	&	$0x08193000$	\\
+$\vdots$	&	$\vdots$	&	$\vdots$	&	$\vdots$	&	$\vdots$		\\
+\hline
+\end{tabular}
+
+\subsection*{(iv)}
+
+It's initial user page table is constructed from the master page table.
+Since it is a child process, it's page table includes copies of MEM type
+PTEs from it's parent's file map.
+
+\subsection*{(v)}
+
+Unsure how to approach question asked. Topic not covered by Tues 23rd
+Nov.
+
+\subsection*{(vi)}
+
+Unsure how to approach question asked. Topic not covered by Tues 23rd
+Nov.
+
+\end{document}
