@@ -21,40 +21,50 @@ def LexicalAnalyser(input):
 
 	# A function for lexical analysis using a FSM
 	
-	alphabet = ('[A-Z][a-z]', '[0-9]', 'DIV', 'MOD', 'WRITE', 'END', ':', '=', 
-					',', '+', '-', '*', '|', '(', ')', '(\(n|r|t)| )', '\004');
+#	alphabet = (r'[A-Z][a-z]', r'[0-9]', 'DIV', 'MOD', 'WRITE', 'END', ':', '=', 
+#					 ',', '+', '-', '*', '|', '(', ')', r'(\(n|r|t)| )', '\004');
 
 	valid_transitions = [
-	(0, alphabet[1],   1),
-	(1, alphabet[1],   1),
-	(0, alphabet[2],   2),
-	(1, alphabet[2],   1),
-	(0, alphabet[3],   3),
-	(0, alphabet[4],   4),
-	(0, alphabet[5],   5),
-	(0, alphabet[6],   6),
-	(0, alphabet[7],   7),
-	(0, alphabet[8],   8),
-	(2, alphabet[8],   4),
-	(0, alphabet[9],   9),
-	(0, alphabet[10], 10),
-	(0, alphabet[11], 11),
-	(0, alphabet[12], 12),
-	(0, alphabet[13], 13),
-	(0, alphabet[14], 14),
-	(0, alphabet[15], 15),
-	(0, alphabet[16], 16),
-	(0, alphabet[17], 17)
+	('CHAR',  'CHAR'),	# r"([A-Z]|[a-z])"
+	('CHAR',  'ACCEPT'),
+	('DIGIT', 'DIGIT'),  # r"\d"
+	('DIGIT', 'ACCEPT'), 
+	('DIV',   'ACCEPT'),
+	('MOD',   'ACCEPT'),
+	('WRITE', 'ACCEPT'),
+	('END',   'ACCEPT'),
+	(':',     '='),
+	('=',     'ACCEPT'),
+	(',',     'ACCEPT'),
+	('+',     'ACCEPT'),
+	('-',     'ACCEPT'),
+	('*',     'ACCEPT'),
+	('|',     'ACCEPT'),
+	('(',     'ACCEPT'),
+	('(',     'ACCEPT'),
+	(')',     'ACCEPT'),
+	('WHITESPACE', 'ACCEPT'), # r"\s"
+	('ENDMARKER',  'ACCEPT'),
 	];
 
-
-	def gamma(x, y):
-		return ;
-
+	output = [];
 
 	for a in range(len(input)):
-		
-	
+		for b in range(len(valid_transitions)):
+			if valid_transitions[b][0] = "CHAR":
+				if re.match(r"([A-Z]|[a-z])", input[a]:
+					output.append(input[a]); # Single char check only...
+			if valid_transitions[b][0] = "DIGIT":
+				if re.match(r"\d", input[a]:
+					output.append(input[a]); # Single digit check only...
+			if valid_transitions[b][0] = "WHITESPACE":	
+				if re.match(r"\s", input[a]:
+			if valid_transitions[b][0] = "ENDMARKER":
+				if input[a] == '\004':
+				# ACCEPT
+			elif input[a] == 
+					
+				
 
 # Main function
 
