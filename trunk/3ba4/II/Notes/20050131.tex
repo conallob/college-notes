@@ -1,0 +1,94 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II - VLSI Design \\ Lecture Notes \\ $31^{st}$ January 2005}
+
+\maketitle
+
+\section*{Text Books}
+
+Weste and Eshanghian - Principle of CMOS VLSI Design
+
+
+\section*{CMOS (Complementary Metal Oxide Semiconductors)}
+
+Devices: MOSFETs (... Field Effect Transistor)
+
+\begin{table}[hbtp]
+
+% Transistor Diagram
+
+\caption{Complementary - n-type and p-type devices}
+
+\end{table}
+
+\begin{table}[hbtp]
+
+% Transistor Diagram
+
+\caption{Source is S/D terminal at lower voltage}
+
+\end{table}
+
+Key Parameters:
+
+$V_{T}$ - Threshold Voltage
+
+Behaviour:
+
+$V_{GS} \leq V_{T}$, $i_{DS} = 0$
+
+$V_{GS} \geq V_{T}$, $i_{DS} \geq 0$
+
+\begin{table}[hbtp]
+
+% Switch Diagram
+
+\end{table}
+
+\begin{table}[hbtp]
+
+% Switch Diagram
+
+\end{table}
+
+Input (to $G$) is low, the device is \verb!OFF!, \verb!OPEN!.
+
+Input (to $G$) is high, the device is \verb!ON!, \verb!CLOSED!.
+
+
+Lowest voltage - $0V$ - $V_{SS}$ - $GND$
+
+Highest voltage - $5V$ - $V_{DD}$ - $PWR$
+
+\begin{table}[hbtp]
+
+% Transistor Diagram
+
+\end{table}
+
+Parameter - Threshold voltage
+
+$V_{GS} \geq V_{TN}$, $i_{DS} = 0$
+
+$V_{GS} < V_{TN}$, $i_{DS} \leq 0$
+
+Input is high, device is \verb!OFF!, \verb!OPEN!
+
+Input is low, device is \verb!ON!, \verb!CLOSED!
+
+\begin{table}[hbtp]
+
+% Switch Diagram
+
+\end{table}
+
+\end{document}
