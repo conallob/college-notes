@@ -18,16 +18,31 @@
 
 \begin{figure}[hbtp]
 
-% Transistor Diagram
+\begin{tabular}{ccc}
+
+\input 20050201-NType &
+
+\input 20050201-NTypeSwitch1	&
+
+\input 20050201-NTypeSwitch2	\\
+
+\end{tabular}
 
 \caption{n-type}
 
 \end{figure}
 
-
 \begin{figure}[hbtp]
 
-% Transistor Diagram
+\begin{tabular}{ccc}
+
+\input 20050201-PType	&
+
+\input 20050201-PTypeSwitch1	&
+
+\input 20050201-PTypeSwitch2	\\
+
+\end{tabular}
 
 \caption{p-type}
 
@@ -97,8 +112,9 @@ $1$	&	$1$	&	$1$
 \end{tabular}
 
 \begin{figure}[hbtp]
+\centering 
 
-% Transistor Diagram
+\input 20050201-CMOS-fets
 
 \end{figure}
 
@@ -159,9 +175,9 @@ Pull Down:
 Logical $AND$ - Series Connection \\
 Logical $OR$  - Parallel Connection
 
-\begin{figure}[tbtp]
+\begin{figure}[h]
 
-% Transistor Network Diagram
+\input 20050201-CMOS-net1
 
 \caption{$F = \overline{(A \cdot ((B \cdot C) + D)}$}
 
@@ -179,36 +195,26 @@ botton of the network.
 
 Cannot have two paths.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 
-% Transistor network Diagram
+\input 20050201-CMOS-net3
 
 \end{figure}
 
 Therefore complementary situation required if inputs are such that
 $f(input) = 0$.
 
-\begin{figure}
+\begin{figure}[h]
+\centering 
 
-% NOT Gate Diagram
-
-\end{figure}
-
-\begin{figure}
-
-% Transistor network Diagram
-
-
-\caption{Path Up}
+\input 20050201-NotGate
 
 \end{figure}
 
 What can we implement as a \emph{"standard CMOS gate"}?
 
 Who do we implement the \emph{single}.
-
-Example: $F(a, b) = \overline{a \cdot b}$.
-
 
 \begin{figure}[hbt] 
 \centering 
@@ -219,13 +225,18 @@ Example: $F(a, b) = \overline{a \cdot b}$.
 
 \end{figure} 
 
-\begin{figure}
+\begin{figure}[h]
+\centering 
 
-% Transistor network Diagram
+\input 20050201-CMOS-net4
 
-\caption{Parallel. Either $0$ or closed leave path.}
+\label{NAND Gate} 
+
+\caption{Example: $F(a, b) = \overline{a \cdot b}$}
 
 \end{figure}
+
+Parallel. Either $0$ or closed leave path.
 
 If and only If:
 
