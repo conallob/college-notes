@@ -73,5 +73,78 @@ bar(X,R) $ : $ foo(X),foo(X). \\
 
 $ : $ - Infix operator \\
 
+inter operator - binary - $x + 1$ \\
+
+Postfix operator - $24$ \\
+
+Prefix operator - ??? \\
+
+Prefix operator - ??? \\
+
+Prefix operator - ??? \\
+
+\\
+
+:- (bar(X,Y),\left(foo(X),foo(Y)\right)
+
+\subsection{Lists in Prolog}
+
+A list has 2 arguements, the 'head' and the 'tail'/'head' and 'body'/'car' and 'cdr' (LISP method) \\
+
+.('head','body').
+
+[a,b,c]
+
+.(a,.(b,.(c,[]))).
+
+[] - Emplty list atom
+
+Prolog is a logic programming language.
+
+Clauses are axioms.
+
+When running a prolog program, you're asking for a proof that the query you make is true.
+
+
+member(X,[X|_]).
+
+member(X,[_|R]) :- member(X,R).
+
+
+eg: query:
+
+
+member(a,[61,4,9,a,a(b),X]).
+
+
+Prolog makes Logical Interfaces to prove this goal.
+
+
+In C:
+
+
+% Diagram
+
+
+In prolog:
+
+
+member(a,[61,a]).
+   
+member(x,[X|_]).
+
+
+attempt to unify each arguement with the goal with tit's corresponding arguement in the head.
+
+	- if the arguements are identical
+	
+	- if one is an unbound variable and the other is not, then the unbound variable is 
+	- made equal to the other term (it is instantiated). The two terms are then identical
+	  In fact, they are the same term from then on.
+
+	- If both are unbound variables, they are unified such that they are identical there after,
+	  the same unbound variable.
+
+	- Otherwise, unification fails and resolution fails.
 
 \end{document}
