@@ -64,13 +64,17 @@ for i in range(len(tut_seq)):
 	if luck == 1:
 		# Tag found. Woohoo, a Hit!!
 		print "\033[32mHit\033[m";
-		del cache_tags[details[0]][details[1]]; # Remove the hit from it's cur pos...
-		cache_tags[details[0]].append(tag); # ... and make it the MRU cache line
+		# Remove the hit from it's current position...
+		del cache_tags[details[0]][details[1]]; 
+		# ... and make it the MRU tag in the cache line
+		cache_tags[details[0]].append(tag); 
 		hits += 1;
 	else:
 		# Tag not found, we've got a Miss... :(
 		print "\033[31mMiss\033[m";
-		cache_tags[details[0]].pop(0); # Pop the LRU cache tag out of the cache
-		cache_tags[details[0]].append(tag); # Add the newly cached tag into the cache
+		# Pop the LRU cache tag out of the cache
+		cache_tags[details[0]].pop(0); 
+ 		# Add the newly cached tag into the cache
+		cache_tags[details[0]].append(tag);
 		misses += 1;
 print "Hits:", hits, "Misses:", misses; # Total stats
