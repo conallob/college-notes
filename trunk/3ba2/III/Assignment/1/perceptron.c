@@ -1,3 +1,7 @@
+/* 
+ * $Id$ 
+ */
+
 #include <stdio.h>
 #include <float.h>
 #include <stdlib.h>
@@ -7,6 +11,7 @@ struct perceptron_network {
     unsigned int num_inputs;
     unsigned int num_outputs;
     int absolute_change;
+    int *input;
     int *output;
     double *biases;
     double *weights;
@@ -52,6 +57,7 @@ error:
     return(NULL);
 }
 
+
 void initialize_perceptron_biases(struct perceptron_network *network, unsigned int range)
 {
    int i;
@@ -61,6 +67,7 @@ void initialize_perceptron_biases(struct perceptron_network *network, unsigned i
        network->biases[i] = (drand48() - 0.5) * range;
    }
 }
+
 
 void initialize_perceptron_weights(struct perceptron_network *network, unsigned int range)
 {
@@ -72,15 +79,23 @@ void initialize_perceptron_weights(struct perceptron_network *network, unsigned 
     }
 }
 
+
 bool update_perceptron_network(struct perceptron_network *network, int *input, unsigned int num_inputs)
 {
     if (num_inputs > network->num_inputs)
     {
         return(false);
     }
+	
+	 int i;
 
-    return(true);
+	 for (i = 0; i < network->num_outputs; i++)
+	 {
+	 	  
+	 
+    /* return(true); */
 }
+
 
 void free_perceptron_network(struct perceptron_network *network)
 {
@@ -90,19 +105,47 @@ void free_perceptron_network(struct perceptron_network *network)
     free(network);
 }
 
+
+void set_activation_inputs(struct perception_network *network, char *data_file)
+{
+	int i;
+	FILE ifp;
+	int s;
+
+	ifp = fopen(data_file, "r");
+
+	for (i = 0; i < network->num_inputs; i++)
+	{
+		fscanf(ifp, "%d", &s);
+		network->input[i] = s;
+		fscanf(ifp, "%d", &s); /* Pass every 2nd number, it's t, not s... */
+	}
+	
+	fclose(ifp);
+		  
+}
+
 int main(int argc, char **argv)
 {
+
     struct perceptron_network *network;
 
+	 /*  
+	  * Step 0: And on the first day...
+	  */
+	 
     network = create_perceptron_network(64, 8);
 
     initialize_perceptron_biases(network, 1);
     initialize_perceptron_weights(network, 1);
 
+	 /* Step 1*/
     do {
+			/* Step 2 */
         update_perceptron_network(network, NULL, 0);
     } while (network->absolute_change > 0.0001);
 
+	 
     free_perceptron_network(network);
 
     return(0);
