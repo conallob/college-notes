@@ -92,7 +92,7 @@ bool update_perceptron_network(struct perceptron_network *network, int *input, u
 	 for (i = 0; i < network->num_outputs; i++)
 	 {
 	 	  
-	 
+	 }
     /* return(true); */
 }
 
@@ -106,29 +106,23 @@ void free_perceptron_network(struct perceptron_network *network)
 }
 
 
-void set_activation_inputs(struct perception_network *network, char *data_file)
+void set_activation_inputs(struct perception_network *network, int *training_data_s)
 {
 	int i;
-	FILE ifp;
-	int s;
-
-	ifp = fopen(data_file, "r");
 
 	for (i = 0; i < network->num_inputs; i++)
 	{
-		fscanf(ifp, "%d", &s);
-		network->input[i] = s;
-		fscanf(ifp, "%d", &s); /* Pass every 2nd number, it's t, not s... */
+		network->input[i] = training_data_s[1];
 	}
 	
-	fclose(ifp);
-		  
 }
 
 int main(int argc, char **argv)
 {
 
     struct perceptron_network *network;
+	 int *s *t;
+	 FILE ifp;
 
 	 /*  
 	  * Step 0: And on the first day...
@@ -139,6 +133,18 @@ int main(int argc, char **argv)
     initialize_perceptron_biases(network, 1);
     initialize_perceptron_weights(network, 1);
 
+	 /* Parse training data for s and t from data file... */
+	
+	 ifp = fopen(argv[1], "r");
+
+	 for (i = 0; i < network->num_inputs; i++)
+	 {
+		 fscanf(ifp, "%d", &s);
+		 fscanf(ifp, "%d", &t);
+	 }
+	
+	 fclose(ifp);
+	 
 	 /* Step 1*/
     do {
 			/* Step 2 */
