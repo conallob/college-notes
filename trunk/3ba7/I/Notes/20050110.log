@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  13 JAN 2005 12:27
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  13 JAN 2005 19:16
 **20050110.tex
 (./20050110.tex
 LaTeX2e <2001/06/01>
@@ -195,14 +195,33 @@ LaTeX Warning: No \author given.
 
 [1
 
-] [2] (./20050110.aux) ) 
-Here is how much of TeX's memory you used:
- 3341 strings out of 95847
- 40092 string characters out of 1196008
- 127167 words of memory out of 1000001
- 6250 multiletter control sequences out of 10000+50000
- 14294 words of font info for 59 fonts, out of 500000 for 1000
- 14 hyphenation exceptions out of 1000
- 26i,10n,28p,212b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+]
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
 
-Output written on 20050110.dvi (2 pages, 2752 bytes).
+ []
+
+[2] [3] [4]
+Overfull \hbox (52.31874pt too wide) in paragraph at lines 218--219
+[]$\OML/cmm/m/it/12 SELECT\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 E
+lsePart\OMS/cmsy/m/n/12 i ! \OML/cmm/m/it/12 ^^O\OT1/cmr/m/n/12 ) = \OML/cmm/m/
+it/12 FOLLOW\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 ElsePart\OMS/cm
+sy/m/n/12 i\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 FOLLOW\OT1/cmr/m/n/12 (\OMS/cms
+y/m/n/12 h\OML/cmm/m/it/12 Statement\OMS/cmsy/m/n/12 i\OT1/cmr/m/n/12 ) =
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 232--235
+
+ []
+
+[6] (./20050110.aux) ) 
+Here is how much of TeX's memory you used:
+ 3344 strings out of 95847
+ 40130 string characters out of 1196008
+ 128167 words of memory out of 1000001
+ 6252 multiletter control sequences out of 10000+50000
+ 14770 words of font info for 61 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 26i,10n,28p,212b,309s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 20050110.dvi (6 pages, 9192 bytes).
