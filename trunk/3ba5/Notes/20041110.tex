@@ -80,4 +80,54 @@ On a dataflow
 
 \end{table}
 
+\section*{6}
+
+(a)
+
+SISD will require $4 \times 2 = 8$ cycles
+
+(b)
+
+Dataflow will require $5$ instruction cycles and $3$ multiply circuits
+and $1$ add circuit.
+
+\section*{7}
+
+$f = \sum^{n}_{i - 0} a_{i} x$
+
+(a)
+
+\begin{verbatim}
+     f = a(n);
+     do i = n - 1 to 0
+            f = a(i) + x * f;
+     end
+\end{verbatim}
+
+The body of this \verb!do\verb! loop is executed in times and each
+execution requires $1$ multiplication and $1$ addition, thus
+\verb!2n\verb! instruction cycles and required, ie it is $O(n)$.
+
+(b)
+
+A non-optimal but straightforward evaluation on a dataflow machine is:
+
+\begin{tabular}{llll}
+Operation					&	\# Ins Cycles	&	\# Multiply Circuits	&	\# Add Circuils	\\
+								&						&								&							\\
+Compute $x', i = 2, n$	&	$\log_{2}{n}$	&	$\frac{n}{2}$			&	$0$					\\
+Compute $a_{i}$, $x^{\lambda}$', $i = 1, n$	&	$1$	&	$n$		&	$0$					\\
+Compute $\sum a_{i} x'$	&	$log_{2}{n}$	&	$0$						&	$\frac{n}{2}$		\\
+\end{tabular}
+
+Total number of instruction cycles $= -\log{n} + 1 + \log{n} \Rightarrow
+2 \log{n} + 1 \Rightarrow 2 \log{n}$
+
+Thus dataflow requires time $O\left( \log{n} \right)$ versus SISD time
+$O(n)$.
+
+Total multiply$^{n}$ and add$^{n}$ circuits required - $n \times$
+mult$^{n}$ circuits and $\frac{n}{2}$ add circuits - total
+$\frac{3n}{2}$ circuits of SISD requires $2$.
+
 \end{document}
