@@ -1,0 +1,108 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+%\lstset{language=prolog}
+
+\begin{document}
+
+\title{Course 3BA3: Computer Architecture II \\ Tutorial Solution\\ $20^{th}$ October 2004}
+
+\author{Conall O'Brien \\ conallob@maths.tcd.ie \\ 01734351}
+
+\maketitle
+
+\section{}
+
+\begin{eqnarray*}
+g & \equiv & r9 \\
+i & \equiv & r26 \\
+j & \equiv & r27 \\
+k & \equiv & r16 \\
+\end{eqnarray*}
+
+\begin{verbatim}
+
+	add 	r0,#256,r9		; g = 256
+
+p:
+
+	add 	r26,r27,r16		; k = i + j
+	sll 	r16,#2,r1		; r1 = k << 2
+	sub 	r1,#1,r1			; r1 = (k << 2) - 1
+	ret 	r25,0				; r25 used to return trsult
+
+q:
+
+	add 	r0,r9,r10		; setup param 1
+	sub 	r0,r26,r11		; setup param 2
+	callr r25,p				; result in r1
+	ret	r25,0				; return
+	
+\end{verbatim}
+
+\section{}
+
+\section{}
+
+\subsection*{PowerPC}
+
+System Used: 	$1.5GHz$	G4 PowerPC
+
+Execution Time:
+
+\begin{tabular}{rrr}
+real 	&		&	0m0.032s		\\	
+user 	&		&	0m0.010s		\\
+sys	&		&	0m0.010s		\\
+\end{tabular}
+
+Assembly:
+
+\begin{verbatim}
+\include{20041020.ppc}
+\end{verbatim}
+
+\subsection*{x86}
+
+System Used: 	Dual $3.0 GHz$ Intel Pentium 4 Xeon
+
+Execution Time:
+
+\begin{tabular}{rrr}
+real	&		&	0m0.005s		\\
+user	&		&	0m0.01ms 	\\
+system&		&	0m0.00ms 	\\
+\end{tabular}
+
+Assembly:
+
+\begin{verbatim}
+\include{20041020.x86}
+\end{verbatim}
+
+
+\subsection*{Sparc}
+
+System Used: 	Dual $450 GHz$	UltraSparc
+
+Execution Time:
+
+\begin{tabular}{rrr}
+real 	&		&	0m0.070s		\\	
+user 	&		&	0m0.060s		\\
+sys	&		&	0m0.010s		\\
+\end{tabular}
+
+Assembly:
+
+\begin{verbatim}
+\include{20041020.sparc}
+\end{verbatim}
+
+
+\end{document}
