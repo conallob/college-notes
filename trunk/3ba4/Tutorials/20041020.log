@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  7 NOV 2004 22:51
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  9 NOV 2004 10:32
 **20041020.tex
 (./20041020.tex
 LaTeX2e <2001/06/01>
@@ -31,7 +31,8 @@ Package: amsfonts 2001/10/25 v2.2f
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
-)) (./20041020.aux)
+))
+No file 20041020.aux.
 \openout1 = `20041020.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -47,7 +48,6 @@ LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Try loading font information for U+msa on input line 17.
-
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
@@ -57,14 +57,20 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 ) [1
 
-] [2] (./20041020.aux) ) 
+] [2]
+Overfull \hbox (17.5502pt too wide) in paragraph at lines 269--269
+[]\OT1/cmtt/m/n/12 .section __TEXT,__picsymbolstub1,symbol_stubs,pure_instructi
+ons,32[] 
+ []
+
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] (./20041020.aux) ) 
 Here is how much of TeX's memory you used:
- 539 strings out of 95847
- 5734 string characters out of 1196008
+ 537 strings out of 95847
+ 5708 string characters out of 1196008
  48780 words of memory out of 1000001
  3521 multiletter control sequences out of 10000+50000
  13521 words of font info for 53 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
  23i,6n,24p,184b,312s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20041020.dvi (2 pages, 1768 bytes).
+Output written on 20041020.dvi (14 pages, 12980 bytes).
