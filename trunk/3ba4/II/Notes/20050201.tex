@@ -3,6 +3,7 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
 \usepackage{ulem}
+\usepackage{pstricks}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -15,22 +16,22 @@
 
 \section*{N-Type - P-Type MOSFETs}
 
-\begin{table}[hbtp]
+\begin{figure}[hbtp]
 
 % Transistor Diagram
 
 \caption{n-type}
 
-\end{table}
+\end{figure}
 
 
-\begin{table}[hbtp]
+\begin{figure}[hbtp]
 
 % Transistor Diagram
 
 \caption{p-type}
 
-\end{table}
+\end{figure}
 
 \subsection*{Build Logic Gate}
 
@@ -56,31 +57,35 @@ Keep n-type together, distinct from p-type.
 
 \subsection*{Two Networks}
 
-\begin{table}[hbtp]
+\begin{figure}[hbtp]
 
 % Transistor Network Diagram
 
 \caption{Pull Up and Pull Down Networks}
 
-\end{table}
+\end{figure}
 
-\begin{table}[hbtp]
+\begin{figure}[hbtp]
 
 % Diagram
 
 \caption{P-type - P-type: Does not work very well}
 
-\end{table}
+\end{figure}
 
 \subsection*{$AND$}
 
-\begin{table}[hbtp]
+\begin{figure}[hbt] 
+\centering 
 
-% AND Gate
+\input 20050201-ANDGate
 
 \caption{$AND$ Gate}
 
-\end{table}
+\label{AND Gate} 
+
+\end{figure} 
+
 
 \begin{tabular}{cc|c}
 $a$	&	$b$	&	$F$	\\
@@ -91,11 +96,11 @@ $1$	&	$0$	&	$0$	\\
 $1$	&	$1$	&	$1$	
 \end{tabular}
 
-\begin{table}[hbtp]
+\begin{figure}[hbtp]
 
 % Transistor Diagram
 
-\end{table}
+\end{figure}
 
 \subsubsection*{Problem}
 
@@ -107,11 +112,11 @@ Can't build logic $AND$ as simple standard gate.
 
 Implement $AND$ as $NAND$, then invert.
 
-\begin{table}[hbtp]
+\begin{figure}[hbtp]
 
 % Gate Circuit Diagram
 
-\end{table}
+\end{figure}
 
 \subsubsection*{What Do We Build And How?}
 
@@ -150,13 +155,13 @@ Pull Down:
 Logical $AND$ - Series Connection \\
 Logical $OR$  - Parallel Connection
 
-\begin{table}[tbtp]
+\begin{figure}[tbtp]
 
 % Transistor Network Diagram
 
 \caption{$F = \overline{(A \cdot ((B \cdot C) + D)}$}
 
-\end{table}
+\end{figure}
 
 \subsubsection*{Design Goals - Implement $f$}
 
@@ -170,29 +175,29 @@ botton of the network.
 
 Cannot have two paths.
 
-\begin{table}
+\begin{figure}
 
 % Transistor network Diagram
 
-\end{table}
+\end{figure}
 
 Therefore complementary situation required if inputs are such that
 $f(input) = 0$.
 
-\begin{table}
+\begin{figure}
 
 % NOT Gate Diagram
 
-\end{table}
+\end{figure}
 
-\begin{table}
+\begin{figure}
 
 % Transistor network Diagram
 
 
 \caption{Path Up}
 
-\end{table}
+\end{figure}
 
 What can we implement as a \emph{"standard CMOS gate"}?
 
@@ -200,19 +205,23 @@ Who do we implement the \emph{single}.
 
 Example: $F(a, b) = \overline{a \cdot b}$.
 
-\begin{table}
 
-% a, b --> NAND Gate Diagram
+\begin{figure}[hbt] 
+\centering 
 
-\end{table}
+\input 20050201-NANDGate
 
-\begin{table}
+\label{NAND Gate} 
+
+\end{figure} 
+
+\begin{figure}
 
 % Transistor network Diagram
 
-\caption{Parallel. Eeither $0$ or closed leave path.}
+\caption{Parallel. Either $0$ or closed leave path.}
 
-\end{table}
+\end{figure}
 
 If and only If:
 

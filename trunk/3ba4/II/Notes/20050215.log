@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  15 FEB 2005 21:57
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  15 FEB 2005 22:37
 **20050215.tex
 (./20050215.tex
 LaTeX2e <2001/06/01>
@@ -144,27 +144,84 @@ Package: xy 1999/02/16 Xy-pic version 3.7
 (/sw/share/texmf/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
 (/sw/share/texmf/tex/generic/xypic/xygraph.tex
- Xy-pic option: Graph feature v.3.7 loaded) loaded)) (./20050215.aux)
+ Xy-pic option: Graph feature v.3.7 loaded) loaded))
+(/Users/conall/share/texmf/tex/latex/circ/circ.sty
+Package: circ 1997/04/23 v1.0d for typeset circuit diagrams
+\X*max=\dimen139
+\X*min=\dimen140
+\*X*=\dimen141
+\*Y*=\dimen142
+\**X=\dimen143
+\**Y=\dimen144
+\***X=\dimen145
+\***Y=\dimen146
+\*bbox=\box33
+\box*=\box34
+\ic*=\dimen147
+\ht*=\dimen148
+\wd*=\dimen149
+\dp*=\dimen150
+\cc*=\count98
+\*spc=\dimen151
+\ldd*=\toks23
+\rud*=\toks24
+\llpos*=\toks25
+\ldpos*=\toks26
+\rlpos*=\toks27
+\rdpos*=\toks28
+\ulpos*=\toks29
+\udpos*=\toks30
+\dlpos*=\toks31
+\ddpos*=\toks32
+\cnta*=\count99
+\cntb*=\count100
+\name*=\toks33
+\ld*pin=\toks34
+\ru*pin=\toks35
+\m*pin=\toks36
+\rmacros=\toks37
+\outerspace=\dimen152
+\*Ilist=\toks38
+\*Olist=\toks39
+\pin*spc=\dimen153
+\pin*ind=\dimen154
+\io*ind=\dimen155
+\mid*ind=\dimen156
+\pinnum*spc=\dimen157
+\CIRCfinit=\toks40
+
+(/Users/conall/share/texmf/tex/latex/circ/gate.def
+File: gate.def 
+)
+(/Users/conall/share/texmf/tex/latex/circ/ic.def
+File: ic.def 
+)
+(/Users/conall/share/texmf/tex/latex/circ/box.def
+File: box.def 
+)
+(/Users/conall/share/texmf/tex/latex/circ/basic.def
+File: basic.def 
+)) (./20050215.aux)
 \openout1 = `20050215.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
 
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
 (/sw/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
@@ -172,23 +229,34 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 
 LaTeX Warning: No \author given.
 
-[1
+(./20050215-dia1.tex
+Package CIRC Info: `\put \P \_ \L \S ' redefined on input line 1.
 
-]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
- (/sw/share/texmf/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
- [2] [3] (./20050215.aux) ) 
+! Font \c*fnt=cirest scaled 1200 not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   \relax 
+l.1 \begin{circuit}{1}
+                      
+? 
+! Font \c*fntb=cicirc scaled 1200 not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   \relax 
+l.1 \begin{circuit}{1}
+                      
+? 
+! Interruption.
+\circuit ...ag \font \c*fntb =cicirc scaled \*mag 
+                                                  \font \c*fntd =cidiod scal...
+l.1 \begin{circuit}{1}
+                      
+? X
+ 
 Here is how much of TeX's memory you used:
- 2842 strings out of 95847
- 32938 string characters out of 1196009
- 130596 words of memory out of 1000001
- 5765 multiletter control sequences out of 10000+50000
- 14770 words of font info for 61 fonts, out of 500000 for 1000
+ 3115 strings out of 95847
+ 34928 string characters out of 1196009
+ 121135 words of memory out of 1000001
+ 6037 multiletter control sequences out of 10000+50000
+ 11185 words of font info for 47 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 27i,8n,24p,201b,884s stack positions out of 1500i,500n,5000p,200000b,5000s
-
-Output written on 20050215.dvi (3 pages, 13896 bytes).
+ 25i,6n,24p,201b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+No pages of output.

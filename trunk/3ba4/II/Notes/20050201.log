@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  9 FEB 2005 21:40
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  17 FEB 2005 00:12
 **20050201.tex
 (./20050201.tex
 LaTeX2e <2001/06/01>
@@ -42,27 +42,59 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \ULC@box=\box28
 Package: ulem 2000/05/26
 \ULdepth=\dimen104
-) (./20050201.aux)
+)
+(/sw/share/texmf/tex/latex/pstricks/pstricks.sty
+Package: pstricks 1997/03/25 package wrapper for PSTricks pstricks.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pstricks.tex
+`PSTricks' v97 patch 14  <1999/12/23> (tvz)
+\pst@dima=\dimen105
+\pst@dimb=\dimen106
+\pst@dimc=\dimen107
+\pst@dimd=\dimen108
+\pst@dimg=\dimen109
+\pst@dimh=\dimen110
+\pst@hbox=\box29
+\pst@boxg=\box30
+\pst@cnta=\count88
+\pst@cntb=\count89
+\pst@cntc=\count90
+\pst@cntd=\count91
+\pst@cntg=\count92
+\pst@cnth=\count93
+\pst@toks=\toks16
+(/sw/share/texmf/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen111
+\psxunit=\dimen112
+\psyunit=\dimen113
+\pslinewidth=\dimen114
+\pst@customdefs=\toks17
+\pslinearc=\dimen115
+\everypsbox=\toks18
+\psframesep=\dimen116
+\pslabelsep=\dimen117
+\theoverlaybox=\box31
+)) (./20050201.aux)
 \openout1 = `20050201.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
 
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/sw/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
@@ -70,29 +102,30 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 40.
 (/sw/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
  [1
 
-] [2] [3]
-Overfull \hbox (3.55922pt too wide) in paragraph at lines 179--181
+] (./20050201-ANDGate.tex)
+[2] [3]
+Overfull \hbox (3.55922pt too wide) in paragraph at lines 184--186
 []\OT1/cmr/m/n/12 Therefore com-ple-men-tary sit-u-a-tion re-quired if in-puts 
 are such that $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 input\OT1/cm
 r/m/n/12 ) =
  []
 
-[4] [5] (./20050201.aux) ) 
+(./20050201-NANDGate.tex) [4] [5] (./20050201.aux) ) 
 Here is how much of TeX's memory you used:
- 632 strings out of 95847
- 6687 string characters out of 1196009
- 48780 words of memory out of 1000001
- 3607 multiletter control sequences out of 10000+50000
+ 1445 strings out of 95847
+ 15634 string characters out of 1196009
+ 67515 words of memory out of 1000001
+ 4404 multiletter control sequences out of 10000+50000
  13765 words of font info for 54 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 23i,8n,24p,201b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 23i,8n,24p,201b,269s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20050201.dvi (5 pages, 5760 bytes).
+Output written on 20050201.dvi (5 pages, 7104 bytes).
