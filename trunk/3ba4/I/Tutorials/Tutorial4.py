@@ -17,8 +17,8 @@ tut_seq = [
 # Currently hard coded, I'll take user input later...
 
 L = 16; # length in bits
-K = 8;  # degree of associativity
-N = 1;  # Number of sets
+K = 4;  # degree of associativity
+N = 2;  # Number of sets
 
 # Cache tags and data
 
@@ -57,18 +57,20 @@ for i in range(len(tut_seq)):
 				luck = luck & 1; # Still lucky
 				break;
 			else:
+				# Tag not found, we've got a Miss... :(
 				luck = luck & 0; # Not so lucky...
 			details[0] = n; # Remember n for a little while...
 			details[1] = k; # Remember k for a little while...
 	if luck == 1:
-			print "[32mHit[m";
-			del cache_tags[details[0]][details[1]];
-			cache_tags[details[0]].append(tag);
-			hits += 1;
+		# Tag found. Woohoo, a Hit!!
+		print "\033[32mHit\033[m";
+		del cache_tags[details[0]][details[1]]; # Remove the hit from it's cur pos...
+		cache_tags[details[0]].append(tag); # ... and make it the MRU cache line
+		hits += 1;
 	else:
 		# Tag not found, we've got a Miss... :(
-		print "[31mMiss[m";
-		cache_tags[details[0]].pop(0);
-		cache_tags[details[0]].append(tag);
+		print "\033[31mMiss\033[m";
+		cache_tags[details[0]].pop(0); # Pop the LRU cache tag out of the cache
+		cache_tags[details[0]].append(tag); # Add the newly cached tag into the cache
 		misses += 1;
-print "Hits:", hits, "Misses:", misses;
+print "Hits:", hits, "Misses:", misses; # Total stats
