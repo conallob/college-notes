@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  22 NOV 2004 22:07
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  14 JAN 2005 16:50
 **20041118.tex
 (./20041118.tex
 LaTeX2e <2001/06/01>
@@ -154,7 +154,8 @@ loaded) (/sw/share/texmf/tex/generic/xypic/xyall.tex
 \matrixsize@=\count97
  loaded)
 (/sw/share/texmf/tex/generic/xypic/xygraph.tex
- Xy-pic option: Graph feature v.3.7 loaded) loaded)) (./20041118.aux)
+ Xy-pic option: Graph feature v.3.7 loaded) loaded))
+No file 20041118.aux.
 \openout1 = `20041118.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -170,7 +171,6 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for U+msa on input line 21.
-
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
@@ -198,12 +198,12 @@ Overfull \hbox (42.92575pt too wide) in alignment at lines 68--76
 
 [2] [3] (./20041118.aux) ) 
 Here is how much of TeX's memory you used:
- 3280 strings out of 95847
- 39615 string characters out of 1196008
+ 3278 strings out of 95847
+ 39589 string characters out of 1196008
  131534 words of memory out of 1000001
  6191 multiletter control sequences out of 10000+50000
  13751 words of font info for 57 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
  26i,12n,28p,212b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20041118.dvi (3 pages, 9088 bytes).
+Output written on 20041118.dvi (3 pages, 9084 bytes).

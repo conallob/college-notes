@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  17 NOV 2004 00:52
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  14 JAN 2005 16:50
 **20041104.tex
 (./20041104.tex
 LaTeX2e <2001/06/01>
@@ -45,7 +45,8 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )
 (/sw/share/texmf/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-)) (./20041104.aux)
+))
+No file 20041104.aux.
 \openout1 = `20041104.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -61,7 +62,6 @@ LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Try loading font information for U+msa on input line 18.
-
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
@@ -84,12 +84,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
  [2] [3] [4] (./20041104.aux) ) 
 Here is how much of TeX's memory you used:
- 904 strings out of 95847
- 11097 string characters out of 1196008
+ 902 strings out of 95847
+ 11071 string characters out of 1196008
  54151 words of memory out of 1000001
  3871 multiletter control sequences out of 10000+50000
  13214 words of font info for 52 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
  23i,7n,24p,216b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20041104.dvi (4 pages, 7524 bytes).
+Output written on 20041104.dvi (4 pages, 7656 bytes).

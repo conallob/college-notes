@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  10 JAN 2005 16:39
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  14 JAN 2005 16:51
 **20041209.tex
 (./20041209.tex
 LaTeX2e <2001/06/01>
@@ -165,7 +165,8 @@ loaded) (/sw/share/texmf/tex/generic/xypic/xyall.tex
 \ULC@box=\box32
 Package: ulem 2000/05/26
 \ULdepth=\dimen138
-) (./20041209.aux)
+)
+No file 20041209.aux.
 \openout1 = `20041209.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -181,7 +182,6 @@ LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Try loading font information for U+msa on input line 23.
-
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
@@ -215,8 +215,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
  [3] [4] (./20041209.aux) ) 
 Here is how much of TeX's memory you used:
- 3358 strings out of 95847
- 40371 string characters out of 1196008
+ 3356 strings out of 95847
+ 40345 string characters out of 1196008
  130167 words of memory out of 1000001
  6264 multiletter control sequences out of 10000+50000
  14294 words of font info for 59 fonts, out of 500000 for 1000

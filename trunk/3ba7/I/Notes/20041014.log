@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  27 OCT 2004 02:45
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  14 JAN 2005 16:50
 **20041014.tex
 (./20041014.tex
 LaTeX2e <2001/06/01>
@@ -31,7 +31,8 @@ Package: amsfonts 2001/10/25 v2.2f
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
-)) (./20041014.aux)
+))
+No file 20041014.aux.
 \openout1 = `20041014.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -47,7 +48,6 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Try loading font information for U+msa on input line 13.
-
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
@@ -73,8 +73,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
 [4] [5] (./20041014.aux) ) 
 Here is how much of TeX's memory you used:
- 538 strings out of 95847
- 5717 string characters out of 1196008
+ 536 strings out of 95847
+ 5691 string characters out of 1196008
  48780 words of memory out of 1000001
  3520 multiletter control sequences out of 10000+50000
  13214 words of font info for 52 fonts, out of 500000 for 1000
