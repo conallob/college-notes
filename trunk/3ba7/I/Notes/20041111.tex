@@ -1,0 +1,181 @@
+% $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $11^{th}$ November 2004}
+
+\maketitle
+
+\section*{Attributed Translation Grammar}
+
+A translation grammar with the following additional specifications:
+
+\begin{enumerate}
+
+\item Each input, action and non-terminal symbol has an assocciated
+finite set of attributes.
+
+\item Each attribute of action and non-terminal symbols is specified as
+being synthesized or inherited.
+
+\item 
+
+	(a) For each inherited attribute on the right hand side of
+	 productions, there is an attribute evaluation rule.
+
+	\hspace{25mm} $\langle X \rangle_{\synth{p,q}} \to \langle Y \rangle_{\synth{v,s}} \langle Z \rangle_{\synth{t,v}}$
+
+	(b) An initial value is specified for each inherited attribute of the
+	starting non-terminal symbol.
+
+\item 
+
+	(a) For each synthesized attribute on the left hand side of
+	productions.
+
+	(b) For each synthesized attribute of an action symbol.
+
+\end{enumerate}
+
+An attributed translation for arithmetic expressions.
+
+$A \ast \left( B + C \right) $
+
+$\left(IDENT, \uparrow A \right)
+\left(OP, \ast \right)
+\left(LEFT PAREN \right) \\
+\left(IDENT, \uparrow B \right)
+\left(OP, + \right)
+\left(IDENT, \uparrow C \right)
+\left(RIGHT PAREN \right)$
+
+\begin{tabular}{|c|c|c|c}
+\hline
+Name					&	Type		&	Address		&		\\
+\hline
+$A$					&				&					&		\\
+\hline
+$B$					&				&					&		\\
+\hline
+$C$					&				&					&		\\
+\hline
+$\uparrow PR_{1}$	&				&					&		\\
+\hline
+$\uparrow PR_{2}$	&				&					&		\\
+\hline
+						&				&					&		\\
+\end{tabular}
+
+$PR$ : Partial Result
+
+$\left\{ ADD, \uparrow B,\uparrow C, \uparrow PR_{1} \right\}$ \\
+$\left\{ MULT, \uparrow A,\uparrow PR_{1}, \uparrow PR_{2} \right\}$
+
+\begin{tabular}{lll}
+$L$	&	$R1$	&	$B$ 	\\
+$A$	&	$R1$	&	$C$	\\
+$L$	&	$R2$	&	$A$	\\
+$MR$	&	$R2$	&	$R1$	\\
+\end{tabular}
+
+Each binary operation will be represented by an atom.
+
+The atoms will appear in the order in which they are executed.
+
+Each atom has 3 attributes, two describing the operands and one
+describing the partial result.
+
+$\langle E \rangle_{\synth{p}} \to \langle E \rangle_{\synth{q}} + \langle T \rangle_{\synth{r}} \actionsym{ADD}_{\synth{s,t,u}} \\
+\synth{s \leftarrow q} \\	
+\synth{t \leftarrow	r} \\	
+\synth{(p,u) \leftarrow NEW T} $	
+
+$\langle E \rangle_{\synth{p}}	\to \langle T \rangle_{\synth{q}} \\
+\synth{p	\leftarrow	q}$
+
+$\langle T \rangle_{\synth{p}}	\to	 \langle T \rangle_{\synth{q}} + \langle P \rangle_{\synth{r}} \actionsym{MULT}_{\synth{s,t,u}} \\
+\synth{s	\leftarrow q} \\	
+\synth{t 	\leftarrow	 r} \\	
+\synth{(p,u)	 \leftarrow	 NEW T} $	
+
+$ \langle T \rangle_{\synth{p}} \to	 \langle P \rangle_{\synth{q}} \\
+\synth{p	 \leftarrow q} $	
+
+$\langle P \rangle_{\synth{p}} \to	 \left( \langle E \rangle_{\synth{q}} \right) \\
+\synth{p \leftarrow q} $	
+
+$\langle P \rangle_{\synth{p}} \to	 IDENT_{\synth{q}} \\
+\synth{p \leftarrow q}$	
+
+% Diagram
+
+Where $\langle E \rangle_{\synth{p}} \langle T \rangle_{\synth{p}}$ and
+$\langle P \rangle_{\synth{p}}$ synthesized $\synth{p}$.
+
+All action symbols are inherited and $\synth{NEW T}$ allocated a new
+symbol table entry for a partial result.
+
+$And \actionsym{ADD}_{synth{p,q,r}}$ generates code to add items
+described by $\synth{p}$ to item described by $\synth{q}$ and leaves
+description of the result in the item described by $\synth{r}$.
+
+$A \ast \left( B + C \right) \\
+\left\{ ADD, \uparrow B,\uparrow C, \uparrow PR_{1} \right\} \\
+\left\{ MULT, \uparrow A,\uparrow PR_{1}, \uparrow PR_{2} \right\}$
+
+\section*{Tutorial}
+
+\subsection*{Questions}
+
+\begin{enumerate}
+
+\item 
+
+$\langle E \rangle \to \langle E \rangle ADDOP \langle T \rangle $ \\
+where $ADDOP$ is either $+$, $-$ or $OR$.
+
+\item 
+
+$\langle SE \rangle \to \langle SE \rangle RELOP \langle RE \rangle \\
+\langle SE \rangle \to \langle RE \rangle \\
+\langle RE \rangle \to NOT \langle F \rangle \\
+\langle RE \rangle \to \langle SE \rangle RELOP \langle F \rangle $
+
+\item $\langle ASSIGNMENT \rangle \to IDENT := \langle E \rangle$
+
+\item $\langle VARIABLE \rangle \to IDENT [\langle E \rangle]$
+
+\end{enumerate}
+
+\subsection*{Solutions}
+
+\begin{enumerate}
+
+\item 
+
+$\langle E \rangle \to \langle E \rangle + \langle T \rangle
+\actionsym{ADD} \\
+\langle E \rangle_{\synth{p}} \to \langle E \rangle_{\synth{q}}
+ADDOP_{\synth{r}} \langle T \rangle_{\synth{s}} \actionsym{ADDOP}_{\synth{t,u,v,w}}\\
+\synth{t \leftarrow r} \\
+\synth{u \leftarrow q} \\
+\synth{r \leftarrow s} \\
+\synth{(p,w) \leftarrow NEW T}
+$
+
+\end{enumerate}
+
+\end{document}
