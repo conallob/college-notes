@@ -8,7 +8,7 @@
 
 \begin{document}
 
-\title{Course 3BA3: Computer Architecture II \\ Tutorial Solution\\$9^{th}$ November 2004}
+\title{Course 3BA3: Computer Architecture II \\ Tutorial Solution\\$23^{th}$ November 2004}
 
 \author{Conall O'Brien \\ conallob@maths.tcd.ie \\ 01734351}
 
@@ -18,54 +18,50 @@
 
 \subsection*{(i)}
 
-\begin{verbabim}
-add r1,r1,r1
-add r2,r2,r2
-add r2,r1,r3
-nop
-add r3,r2,r1
+\begin{verbatim}
+add r1,r1,r1 ; r1=r1+r1
+add r2,r2,r2 ; r2=r2+r2
+add r2,r1,r3 ; r3=r2+r1
 \end{verbatim}
 
 \subsection*{(ii)}
 
-\begin{verbabim}
-add r1,r2,r3
-nop
-sub r0,r1,r2
-and r0,r1,r2
-xor r0,r1,r2
-add r0,r1,r2
+\begin{verbatim}
 \end{verbatim}
 
 \subsection*{(iii)}
 
-\begin{verbabim}
+\begin{verbatim}
 \end{verbatim}
 
 \subsection*{(iv)}
 
-\begin{verbabim}
+\begin{verbatim}
+st r2,r2,f0 ; store r2 in memory location 0xf0
 \end{verbatim}
 
 
 \subsection*{(v)}
 
-\begin{verbabim}
+\begin{verbatim}
+ld r2,r2,ff ; load contents of 0xff into r2
 \end{verbatim}
 
 \subsection*{(vi)}
 
-\begin{verbabim}
+\begin{verbatim}
+addi r1,r1,01 ; r1++
+bnez r1,00    ; is r1 == 0?
 \end{verbatim}
 
 \subsection*{(vii)}
 
-\begin{verbabim}
+\begin{verbatim}
 \end{verbatim}
 
 \subsection*{(viii)}
 
-\begin{verbabim}
+\begin{verbatim}
 \end{verbatim}
 
 \section{}
