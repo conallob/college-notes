@@ -25,7 +25,227 @@ $tox$ - Oxide Thickness
 $\omega$ - Channel Width
 $L$ - Channel Length \emph{along} direction of current flow.
 
+\[ \beta_{N} = \mu_{N} \frac{\epsilon_{i}}{tox} \times \frac{\omega}{L}
+= \mu_{N} C_{i} \frac{W}{L} \]
+
+$\epsilon_{i}$ - Permitivity of the oxide insulator \\
+$\mu_{N}$ - mobility of the electrons in $Si$.
 
 
+Parallel plate capactiro of area $A$.
+
+Plates are of distance $t$ apart.
+
+$\frac{\epsilon}{t} =$ capacitance per unit area.
+
+$C = \frac{\epsilon A}{t}$
+
+\[ \beta_{P} = \mu_{P} \times \frac{\epsilon_{i}}{tox} \times
+\frac{W}{L} = \mu_{P} \times C_{i} \times \frac{W}{L} \]
+
+
+$\mu_{N} \times \frac{\epsilon_{i}}{tox}$ - Determined by manufacturer.
+
+$\frac{W}{L}$ - Determined by design.
+
+
+\[ \beta = \mu_{N} \times \frac{\epsilon_{i}}{tox} \times \frac{W}{L} \]
+
+
+We can tune $\beta$s by adjusting $W$, $L$. We need to compensate for
+differences between $\mu_{N}$ and $\mu_{P}$.
+
+
+$\mu_{P}$ - Mobility of holes
+
+Typically $\mu_{N} \approx 3 \mu_{P}$ (according to text books).
+For modern \emph{"sub micron"} devices $\mu_{N} \approx 2 \mu_{P}$
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\end{table}
+
+$\beta_{P} = \beta_{N} \rightarrow$ we need to set $\frac{W_{P}}{L_{P}}
+= 2 \frac{W_{N}}{L_{N}}$
+
+
+Want devices as small as possible.
+
+How small is that?
+
+Depends on manufacturer - they specify \emph{"Minimum Failure Size"} -
+call this $\lambda$.
+
+Want to minimise channel length - Why? Device speed is related to
+channel length.
+
+Keep $L = \lambda$ for all devices. Assume $\lambda = 1$.
+
+With all $L = \lambda$:
+
+\[ W_{P} = 2 W_{N} \]
+
+
+\begin{table}[hbtp]
+
+% Transistor network diagram
+
+\end{table}
+
+$i_{DS} = \beta ( \cdots )$
+
+$\beta \propto W$
+
+$V = 1 R$ \\
+$R = Y$ \\
+$R \propto \frac{1}{\omega}$
+
+\begin{table}[hbtp]
+
+$\beta \propto \omega$
+
+% transistor diagram
+
+(very) $\approx$
+
+$R \propto \frac{1}{\omega}$
+
+% resistor diagram
+
+\end{table}
+
+Series connection, add resistance.
+
+Parallel connection $R_{!} \parallel R{2} = \frac{R_{1} R_{2}}{R_{1} + R_{2}}$
+
+Transistors in series
+
+$n$ transistors in series, increase all widths by factor of $n$.
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\caption{$n$ transistors in series}
+
+\end{table}
+
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\caption{$n$ transistors in parallel}
+
+\end{table}
+
+Not both always on at the same time. Which case do we use? Worst case -
+one branch only is active. Therefore, we do not adjust for parallel
+combinations.
+
+
+\subsection*{Proceedure}
+
+\begin{enumerate}
+
+\item \subitem Set all n-devices $\omega = 1$
+		
+		\subitem Set all p-devices $\omega = 2$
+
+\item For every series chain of length $n$, \textbf{multiply widths} in
+chain by $n$. (Do this \textbf{once only} per transistor)
+
+\item Scale down to minimum size.
+
+\end{enumerate}
+
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\caption{Ex: $NOR 2$ - in $NOR$ gates, p-width $\propto$ fan-in (no of
+inputs)}
+
+\end{table}
+
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\caption{$NAND$ - Cheaper than $NOR$ (in terms of gate width)}
+
+\end{table}
+
+
+\section*{Tutorial Solutions}
+
+\subsection*{1}
+
+\[ F_{1} = \overline{A \cdot \left( B + C \right) } \]
+
+\[ F_{2} = \overline{A \cdot \left( B + C \cdot D \right) } \]
+
+Design CMOS circuit:
+
+\indent - Network
+
+\indent - Size Transistors
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\caption{$F_{1} = \overline{A \cdot \left( B + C \right) }$}
+
+\end{table}
+
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\caption{$F_{2} = \overline{A \cdot \left( B + C \cdot D \right) }$}
+
+\end{table}
+
+\subsubsection*{Marking Scheme}
+
+Begins at $10$
+
+\begin{tabular}{ccc}
+$-1$	&	\hspace{10mm}	&	Not scaled down											\\
+		&						&																	\\
+$-2$	&	\hspace{10mm}	&	Failed to do series multiplier						\\
+		&						&																	\\
+$-2$	&	\hspace{10mm}	&	Did it twice or more to a transistor				\\
+		&						&																	\\
+$-3$	&	\hspace{10mm}	&	Wrong Network												\\
+		&						&																	\\
+$-4$	&	\hspace{10mm}	&	p-devices in pull down or n-devices in pull up	\\
+\end{tabular}
+
+\subsection*{2}
+
+$8$ Input $OR$ Gate
+
+Minimise total sum of widths (areas). Value $< 70$ is possible
+
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\end{table}
+
+
+\begin{table}[hbtp]
+
+% transistor network diagram
+
+\end{table}
 
 \end{document}
