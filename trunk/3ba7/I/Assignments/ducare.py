@@ -9,7 +9,7 @@
 #
 
 revision = "$LastChangedRevision$";
-rev = revision.split(' ')[1][:-1];
+rev = revision.split(' ')[1];
 
 #
 # Functions
@@ -99,7 +99,7 @@ if '__main__' == __name__:
 	import re, sys
 	# Setup command line parameters
 	from optparse import OptionParser
-	parser = OptionParser(usage="%prog [-f | --file] | [-i | --input] | --version", version="%prog ".join(rev));
+	parser = OptionParser(usage="%prog [options...]", version= "".join(["%prog ", rev]));
 	parser.add_option("-f", "--file", dest="inputfile", help="Read input from FILE", metavar="FILE");
 	parser.add_option("-i", "--input", dest="cmdinput", help="Read input from STRING", metavar="STRING");
 	(options, args) = parser.parse_args();
