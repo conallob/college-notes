@@ -1,0 +1,80 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II \\ Lecture Notes \\ $16^{th}$ November 2004}
+
+\maketitle
+
+\section*{Page Fault Handling}
+
+OS must solve page faults by performing one or more of the following
+actions:
+
+\begin{itemize}
+
+\item Allocate a page of physical memory (from the OS free list) for use
+as a secondary page table.
+
+\item Allocate a page of physical memory for the referenced page
+
+\item Update assocciated page table entries.
+
+\item Read in page data from disk (contect swithc to another process)
+
+\item Signalling an access violation (eg if writing to cache area) -
+protection level error
+
+\item Restart (or confining) the faulting instruction.
+
+\end{itemize}
+
+\section*{Translation Look Aside Buffer (TLB)}
+
+\$word an internal cache (TLB) each virtual $\to$ physical address
+translation requires $1$ memory access for each level of page table. 
+($2$ accesses for $2$ level scheme).
+
+MMU controls an m-entry on-chip translation cache (TLB) which provides
+direct mappings for the $m$ most recently accessed virtual pages.
+
+When a virtual address is sent to the TLB, the virtual page number is
+compared with \textbf{all} $m$ tag entries in the TLB in parallel (fill
+assocciative cache)
+
+If a match is found (TLB Hit), the corresponding cached secondary page
+table entry is output by the TLB to provide the physical address.
+
+If a matchnot found (TLB Miss), page tables are walked my MMU
+
+\indent - least recently used TLB entry is replaced with the new
+mapping.
+
+\indent how in the hardware find the LRN entry simply.
+
+Remember that the page tables are just data structures held in main
+memory and can be walked by a CPU using ordinary instructions.
+
+\indent This approach is taken by many RISCs
+
+\indent a TLB miss generates an interrupt and the CPU walks the page
+table using ordinary instructions (TLB Miss $\equiv$ page fault)
+
+\indent Organisation of page table structure set by software and is
+\textbf{not} hard-wired into CPU/MMU.
+
+\indent Need a CPU instruction to replace LRU TLB cache.
+
+TLBs are normally small - typically $64$ entry fully assocciative TLB
+should achieve a hit rate $> 90\%$.
+
+A CPU may have more than one MMU/TLB - Pentium has one for instruction
+and one for data accesses.
+
+\end{document}
