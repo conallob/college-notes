@@ -48,9 +48,8 @@ for i in range(len(tut_seq)):
 	set = ((current >> ilog(L)) & ilog(K)) - 1;
 	tag = (current >> ilog((K+L)));
 	# Now, let's see if we have a relavent cache for current's tag...
-	n = set; # skip straight to the appropriate set
 	for n in range(N):
-		n = set;
+		n = set; # skip straight to the appropriate set
 		for k in range(K):
 			if cache_tags[n][k] == -1:
 				# Tag not found, we've got a Miss... :(
