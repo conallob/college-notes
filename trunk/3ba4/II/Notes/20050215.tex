@@ -1,0 +1,119 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage[all]{xy}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II - VLSI Design \\ Lecture Notes \\ $15^{th}$ February 2005}
+
+\maketitle
+
+\section*{Design Layout for Invertor}
+
+\begin{table}[h]
+
+% CMOS network of Invertor
+
+\end{table}
+
+Layout: graphical display of shapes that define devices.
+
+
+(n-well process)
+
+
+Shapes on layers.
+
+
+n-well - Yellow line
+
+n, n-plus, n-diff - Green line
+
+p, p-plus, p-diff - Purple line
+
+poly, Polysilicon - Red line
+
+metal, Metal1 - Blue line
+
+Contact Cut - Square
+
+\begin{table}[h]
+
+% Mentor Graphics schematic of Invertor
+
+\end{table}
+
+\section*{Mentor Graphics}
+
+Sun Solaris
+
+Inductrial standard
+
+Complete suite of IC design tools, incl:
+
+\begin{itemize}
+
+\item IC Layout Design (IC Station)
+
+\item Schematic Capture
+
+\item Simulation
+
+\item PCB Design
+
+\item Heat Analysis
+
+\end{itemize}
+
+\subsection*{Installation on Suns}
+
+\verb!/mentor/idea/!
+
+Need to set some enviromental varibles
+
+\begin{verbatim}
+MGC_HOME = /mentor/idea/
+.
+.
+.
+MGC_WD=/users/ug/username/mgc
+\end{verbatim}
+
+\subsection*{Using the Software}
+
+Login
+
+\verb!$ xterm &!
+
+\verb!$ ic!
+
+If presented with licence problem, contact help@cs.tcd.ie
+
+\subsection*{Rename, Delete Cells}
+
+use \verb!dmgr!
+
+\begin{table}[h]
+
+\xy <1cm,0cm>:
+0 *+!CC{\mbox{Design Object}} ; (0,-1.5) **\dir{-} *\dir{>} *+!UC{\mbox{"Cell"}} ,
+(0.5,-1.75) ; (4,-1.75) **\dir{-} *+!CL{\mbox{Open \\ (read only)}} ;
+(5.5,-2) ; (5.5,-3.5) **\dir{-} *\dir{>} ?(0.5) *+!DL{\mbox{reserve}} ?(1) *+!UC{\mbox{Editable Cell}} ;
+(4,-3.75) ; (0.6,-1.9) **\dir{-} *\dir{>} ?(0.5) *+!DL{\mbox{Save}} ,
+(4,-3.75) ; (1,-5) **\dir{-} *\dir{>} *+!CR{\mbox{Cell (unreserved)}} ;
+(5.5,-4.25) **\crv{(4.75,-4.75)} *\dir{>} ?(0.5) *+!UL{\mbox{reserve}}
+\endxy
+
+\end{table}
+
+\subsection*{More Info}
+
+http://www.cs.tcd.ie/Andrew.Butterfield/Teaching/3BA4/
+
+\end{document}
