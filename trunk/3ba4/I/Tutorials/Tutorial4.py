@@ -51,7 +51,6 @@ for i in range(len(tut_seq)):
 	n = set; # skip straight to the appropriate set
 	if set <= N:
 		for k in range(K):
-			print k;
 			if cache_tags[n][k] == -1:
 				# Tag not found, we've got a Miss... :(
 				print "[31mMiss[m";
@@ -61,7 +60,7 @@ for i in range(len(tut_seq)):
 			if cache_tags[n][k] != tag:
 				# Tag not found, we've got a Miss... :(
 				print "[31mMiss[m -", "(",n, k,")", cache_tags[n][k], "- Popped";
-				cache_tags[n].pop();
+				cache_tags[n].pop(0);
 				print "(",n, k,")", tag, "- Pushed";
 				cache_tags[n].append(tag);
 				misses = misses + 1;
