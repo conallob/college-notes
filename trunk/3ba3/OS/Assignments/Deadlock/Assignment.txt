@@ -1,0 +1,152 @@
+<html><head>
+<meta name="description" content="Trinity College Dublin: Computer Science Department: Computer Science Department: BA(Mod) in Computer Science: Systems Software (3BA3): Banker's Algorithm Assignment">
+
+<title>Banker's Algorithm Assignment - Systems Software (3BA3) -
+BA(Mod) in Computer Science - Computer Science Department - Computer
+Science - Trinity College Dublin</title><link href="BankersAlgorithmAssignment%202004-5.php_files/enhanced.css" rel="stylesheet" type="text/css"></head>
+<body>
+<table summary="Trinity top-of-page banner with 5 links" style="border-bottom: 1px solid rgb(93, 97, 104); background: rgb(175, 177, 184) url(http://www.tcd.ie/uns/images/litegrey_spacer.gif) repeat scroll 0%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td><div style="margin: 0pt; text-align: left;"><a href="http://www.tcd.ie/"><img src="BankersAlgorithmAssignment%202004-5.php_files/litegreytcd.gif" alt="The University of Dublin, Trinity College" title="[Trinity logo, links to Main Trinity Home Page]" style="border: 0pt none ; margin: 0pt; padding: 0pt;" height="40" width="361"></a></div></td>
+<td style="text-align: right;"><div style="width: 270px; float: right; height: 40px; text-align: right;"><a href="http://www.tcd.ie/Accessibility/index.php"><img src="BankersAlgorithmAssignment%202004-5.php_files/accesslite.gif" alt="Accessibility" title="[Web Accessibility Statement of Trinity College]" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: inline; float: none;" height="40" width="71"></a><span style="display: none;">|</span><a href="http://www.tcd.ie/AZ/index.php"><img src="BankersAlgorithmAssignment%202004-5.php_files/azlite.gif" alt="A to Z" title="[A to Z of Trinity College]" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: inline; float: none;" height="40" width="37"></a><span style="display: none;">|</span><a href="http://search.tcd.ie/"><img src="BankersAlgorithmAssignment%202004-5.php_files/searchlite.gif" alt="Search TCD" title="[Search the Trinity Website]" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: inline; float: none;" height="40" width="78"></a><span style="display: none;">|</span><a href="http://www.tcd.ie/Privacy/index.php"><img src="BankersAlgorithmAssignment%202004-5.php_files/privacylite.gif" alt="Privacy" title="[Privacy Statement of Trinity College]" style="border: 0pt none ; margin: 0pt; padding: 0pt; display: inline; float: none;" height="40" width="52"></a></div></td></tr></tbody></table><center>
+<table border="0" cellpadding="4" cellspacing="4" width="100%">
+<tbody><tr>
+<td align="left">
+<img src="BankersAlgorithmAssignment%202004-5.php_files/du_cols.gif" alt="Dublin University Crest " align="left" height="35" width="30">
+</td>
+<td align="center" bgcolor="#e0e0ff">
+<a href="http://www.cs.tcd.ie/" class="left">Computer Science Department</a>
+ &gt; <a href="http://www.cs.tcd.ie/courses/ba/local-index.html" class="left">BA(Mod) in Computer Science</a>
+ &gt; <a href="http://www.cs.tcd.ie/courses/ba/3ba3/" class="left">Systems Software (3BA3)</a>
+</td>
+<td>
+<img src="BankersAlgorithmAssignment%202004-5.php_files/tcd_crss.gif" alt="Trinity College Crest" align="right" height="35" width="30">
+</td>
+</tr>
+</tbody></table>
+</center>
+<table border="0" cellpadding="3" cellspacing="0" width="95%">
+<tbody>
+<tr>
+<td align="left" valign="top" width="180">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="162"><a href="http://www.cs.tcd.ie/courses/ba/3ba3/" class="left">Home</a></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="162"><b>Notes</b></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td>
+<td width="162"><table>
+<tbody><tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="150"><a href="http://www.cs.tcd.ie/courses/ba/3ba3/OSLectures/" class="left"><font size="-2">OS Notes</font></a></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="150"><a href="http://www.cs.tcd.ie/courses/ba/3ba3/CommsLectures/" class="left"><font size="-2">Comms Notes</font></a></td></tr>
+</tbody></table></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="162"><b>Resources</b></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td>
+<td width="162"><table>
+<tbody><tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="150"><a href="http://www.cs.tcd.ie/courses/ba/3ba3/Resources/SampleCode.php" class="left"><font size="-2">Sample Code</font></a></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="150"><a href="http://www.cs.tcd.ie/courses/ba/3ba3/Resources/OSInfo.php" class="left"><font size="-2">OS Resources</font></a></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="150"><a href="http://www.cs.tcd.ie/courses/ba/3ba3/Resources/CommsInfo.php" class="left"><font size="-2">Comms Resources</font></a></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="150"><a href="http://www.tcd.ie/Local/Exam_Papers/summer_nonTSM.html" class="left"><font size="-2">Exam papers</font></a></td></tr>
+</tbody></table></td></tr>
+<tr bgcolor="#e0e0ff"><td width="7">&nbsp;</td><td width="162"><a href="http://www.cs.tcd.ie/courses/ba/3ba3/Assignments/" class="left">Assignments</a></td></tr>
+</tbody></table>
+</td>
+<td valign="top" width="10">&nbsp;</td>
+<td align="left" valign="top">
+
+<h2>Banker's Algorithm Assignment</h2>
+
+<p><font color="red">Please note that there was a mistake in the copy
+of the assignment which was distributed. The resources released by
+Thread 3 were incorrect. See below (in red) for the correct resource
+release for Thread 3.</font></p>
+
+<p><font color="red">There was also a minor mistake in Message.C where
+"if (errno = EINTR)" should have been "if (errno == EINTR)". This has
+been corrected in the online version.</font></p>
+
+
+<p>This assignment must be implemented under UNIX on the College computers (If
+you do it at home make sure that it works on the machines in College before
+submitting it).</p>
+
+<p>You are asked to build a simulator of the Banker's Algorithm as follows:
+</p><ul>
+<li>Create a thread to simulate each of the resource requesters in the
+system. Request resources by sending messages for the attention of the
+"controlling" thread. Release resources in a similar fashion. Resource
+request and releases should be indicated on screen. The resources
+requests/releases should be as follows:
+<ul>
+<li>Thread 1: (MAX 2A, 3B, 1C)  +AB 3 +CAB 3 +B 9 -AABBBC 5</li>
+<li>Thread 2: (MAX 1A, 2B, 3C)  +CCC 5 +AB 6 +B 8 -ABBCCC 1</li>
+<li>Thread 3: (MAX 3A, 3B, 0C)  +AAA 7 +BBB 5 <font color="red">-ABBCCC</font> 8</li>
+</ul>Note these lists indicate the max resources for each process, and
+the order of the requests/releases. "+AB" means that one A resource and
+one B resource are requested. "-AAC" indicates that two A resources and
+one B resource are to be released. A number indicates a number of
+seconds to wait for (pretending to be doing some processing). Note that
+each thread should terminate once it has finished its sequence of
+requests, releases and waits.</li>
+
+<li> The main thread (i.e. the initial thread) should simulate the the
+central controller which allocates resources as they are/become
+available. It should access requests and releases from the other
+threads and in the case of requests it should reply with a message to
+the requesting thread when the resource is available. No response is
+required for a release. Resource allocation should be shown on screen
+(including a list of remaining available resources). Note that total
+available resources are 3*A, 3*B, and 3*C.</li>
+
+<li>Sample output from the program MUST be provided, as some of the
+evaluation will be based on the output. This output must come from the
+version of the code you submit.</li>
+</ul>
+
+<h3>Resources provided:</h3>
+<ul>
+<li><a href="http://134.226.32.57/courses/ba/3ba3/Assignments/Bankers/Makefile">Makefile</a></li>
+<li><a href="http://134.226.32.57/courses/ba/3ba3/Assignments/Bankers/General.h">General.h</a> and <a href="http://134.226.32.57/courses/ba/3ba3/Assignments/Bankers/General.C">General.C</a></li>
+<li><a href="http://134.226.32.57/courses/ba/3ba3/Assignments/Bankers/MessageQueue.h">MessageQueue.h</a> and <a href="http://134.226.32.57/courses/ba/3ba3/Assignments/Bankers/MessageQueue.C">MessageQueue.C</a></li>
+<li><a href="http://134.226.32.57/courses/ba/3ba3/Assignments/Bankers/BankersController.h">BankersController.h (public methods only)</a></li>
+<li><a href="http://134.226.32.57/courses/ba/3ba3/Assignments/Bankers/memwipe">memwipe</a>.
+This utility (which can be invoked by typing "./memwipe") removes all
+IPC mechanisms currently allocated to you. You'll need this if your
+program doesn't remove the message queue at the end of a run (e.g. if
+the program crashes). Note that you can see what IPC mechanisms are
+currently allocated to you by invoked the <b>ipcs</b> command.
+</li></ul>
+
+
+<h3>To be developed:</h3>
+<ul>
+<li>BankersMain.C</li>
+<li>BankersController.C and the rest of BankersController.h Note that
+you can alter the parameters of the methods defined in
+BankersController.h if you need/want to. You can also add any other
+methods and/or data that you want.</li>
+<li>Any other classes you feel you need.</li>
+</ul>
+
+
+<h3>Submission:</h3>
+
+<p>The deadline for this assignment is given on the <a href="http://134.226.32.57/courses/ba/3ba3/Assignments/index.html">Assignments 
+page</a>.&nbsp; Also please make sure you familiarise yourself with the <a href="http://134.226.32.57/courses/ba/3ba3/Assignments/GuidelinesForAssignments.php">regulations regarding assignments for
+this course</a>.  <font color="red">You may not work on this assignment with any other person or take/provide material from/to any other person.</font>&nbsp; This assignment should be submitted using <a href="http://134.226.32.57/courses/ba/3ba3/Assignments/submit.php?fn=Form&amp;assignment=47">the submission form which is linked
+here</a>.</p>
+
+</td>
+</tr>
+<tr>
+<td valign="bottom"><img src="BankersAlgorithmAssignment%202004-5.php_files/email.jfif" alt="Email" height="9" width="14">&nbsp;
+<a class="left" href="mailto:Kenneth.Dawson-Howe%20@%20cs.tcd.ie"><font size="-2">Kenneth.Dawson-Howe @ cs.tcd.ie</font></a></td>
+<td></td>
+<td><br><br><font size="-2">Last Updated: 24 November 2004 11:58:51</font></td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr bgcolor="#afb1b8"> 
+<td><font color="white" size="-3">&nbsp;Department of Computer Science, Trinity College Dublin, Dublin 2&nbsp;&nbsp;Tel: + 353-1-6081765</font></td>
+<td>
+<div align="right"><a href="http://www.tcd.ie/Secretary/disclaimer.html"><img src="BankersAlgorithmAssignment%202004-5.php_files/litediscb.htm" alt="Disclaimer" border="0" height="23" width="61"></a></div></td>
+</tr>
+</tbody></table>
+</body></html>
