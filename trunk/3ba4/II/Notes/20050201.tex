@@ -1,0 +1,234 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II - VLSI Design \\ Lecture Notes \\ $1^{st}$ February 2005}
+
+\maketitle
+
+\section*{N-Type - P-Type MOSFETs}
+
+\begin{table}[hbtp]
+
+% Transistor Diagram
+
+\caption{n-type}
+
+\end{table}
+
+
+\begin{table}[hbtp]
+
+% Transistor Diagram
+
+\caption{p-type}
+
+\end{table}
+
+\subsection*{Build Logic Gate}
+
+\begin{itemize}
+
+\item Good restoring properties. Weak signal in $\to$ strong signal out.
+
+\item Good noise margins. Weak signal - voltage near middle. Strong
+signal - voltage near extremes.
+
+\end{itemize}
+
+\subsection*{Key Idea}
+
+Inputs go to gates only - MOSFETs
+
+Outputs are connected via switches to $PWR$ and $GND$
+
+\subsection*{Pragmatic Fit}
+
+Keep n-type together, distinct from p-type.
+
+
+\subsection*{Two Networks}
+
+\begin{table}[hbtp]
+
+% Transistor Network Diagram
+
+\caption{Pull Up and Pull Down Networks}
+
+\end{table}
+
+\begin{table}[hbtp]
+
+% Diagram
+
+\caption{P-type - P-type: Does not work very well}
+
+\end{table}
+
+\subsection*{$AND$}
+
+\begin{table}[hbtp]
+
+% AND Gate
+
+\caption{$AND$ Gate}
+
+\end{table}
+
+\begin{tabular}{cc|c}
+$a$	&	$b$	&	$F$	\\
+\hline
+$0$	&	$0$	&	$0$	\\
+$0$	&	$1$	&	$0$	\\
+$1$	&	$0$	&	$0$	\\
+$1$	&	$1$	&	$1$	
+\end{tabular}
+
+\begin{table}[hbtp]
+
+% Transistor Diagram
+
+\end{table}
+
+\subsubsection*{Problem}
+
+$a$ and $b$ lead and lead switches are open. Will not work.
+
+Pull ups need to be p-type.
+
+Can't build logic $AND$ as simple standard gate.
+
+Implement $AND$ as $NAND$, then invert.
+
+\begin{table}[hbtp]
+
+% Gate Circuit Diagram
+
+\end{table}
+
+\subsubsection*{What Do We Build And How?}
+
+Observation (for \emph{Std Gate} - 
+
+All inputs $0$. $\Rightarrow$ output $= 1$. \\
+All inputs $1$. $\Rightarrow$ output $= 0$.
+
+\begin{tabular}{ccccc}
+						&	\hspace{10mm}	&	Functions	&	\hspace{10mm}	&	Do-able?	\\
+All $0$s bar 1		&					&	$\overline{A}$	&		&	Yes	\\
+				&	& $A \cdot ((B \cdot C) \cdot D)$		&		&	? Yes	\\
+					&						&	$A \cdot B$		&		&	No	\\
+					&						&	$A \oplus B$		&		&	No	\\
+Something		&						&	$A \cdot ((B \cdot C) + D)$	&	&	No	\\
+Something		&				&	$\overline{A} \cdot \overline{D}$	& 		& ? Yes
+\end{tabular}
+
+\subsubsection*{Any Function of the Form}
+
+$\overline{AND}$, $\overline{OR}$ and inputs (not negations) is
+buildable as a \textbf{single} Std gate.
+
+$\overline{A} \cdot \overline{B} \to$ DeMorgan's Law $\to
+\overline{A+B}$ is buildable. Partial answer to ? wha % missing part
+
+How do we build this?
+
+Pull Up:
+
+Logical $AND$ - Parallel Connection \\
+Logical $OR$  - Series Connection 
+
+Pull Down:
+
+Logical $AND$ - Series Connection \\
+Logical $OR$  - Parallel Connection
+
+\begin{table}[tbtp]
+
+% Transistor Network Diagram
+
+\caption{$F = \overline{(A \cdot ((B \cdot C) + D)}$}
+
+\end{table}
+
+\subsubsection*{Design Goals - Implement $f$}
+
+$f(a, b, c) \to Y$
+
+When inputs are such that $f(input) = 1$. The \emph{path} exists in a
+pull up network and \emph{no path exists} in a pull down network.
+
+\emph{Path exists} if there is some chain of closed FETs from top to
+botton of the network.
+
+Cannot have two paths.
+
+\begin{table}
+
+% Transistor network Diagram
+
+\end{table}
+
+Therefore complementary situation required if inputs are such that
+$f(input) = 0$.
+
+\begin{table}
+
+% NOT Gate Diagram
+
+\end{table}
+
+\begin{table}
+
+% Transistor network Diagram
+
+
+\caption{Path Up}
+
+\end{table}
+
+What can we implement as a \emph{"standard CMOS gate"}?
+
+Who do we implement the \emph{single}.
+
+Example: $F(a, b) = \overline{a \cdot b}$.
+
+\begin{table}
+
+% a, b --> NAND Gate Diagram
+
+\end{table}
+
+\begin{table}
+
+% Transistor network Diagram
+
+\caption{Parallel. Eeither $0$ or closed leave path.}
+
+\end{table}
+
+If and only If:
+
+\begin{tabular}{|c|c|c|}
+\hline
+$a$	&	$b$	&	$out$	\\
+\hline
+$0$	&	$0$	&	$1$	\\
+\hline
+$0$	&	$1$	&	$1$	\\
+\hline
+$0$	&	$0$	&	$1$	\\
+\hline
+$1$	&	$1$	&	$0$	\\
+\hline
+\end{tabular}
+
+When either $a$ or $b$ are $0$, path going up.
+\end{document}
