@@ -7,7 +7,7 @@ import math;
 # The Tutorial memory address values.
 
 tut_seq = [
-0x0000, 0x0004, 0x000c, 0x2200, 0x00d0, 0x00e0, 0x1130, 0x0028,
+0x0001, 0x0004, 0x000c, 0x2200, 0x00d0, 0x00e0, 0x1130, 0x0028,
 0x113c, 0x2204, 0x0010, 0x0020, 0x0004, 0x0040, 0x2208, 0x0008,
 0x00a0, 0x0004, 0x1104, 0x0028, 0x000c, 0x0084, 0x000c, 0x3390,
 0x00b0, 0x1100, 0x0028, 0x0064, 0x0070, 0x00d0, 0x0008, 0x3394
@@ -17,8 +17,8 @@ tut_seq = [
 # Currently hard coded, I'll take user input later...
 
 L = 16; # length in bits
-K = 1;  # 
-N = 8;  # 
+K = 8;  # 
+N = 1;  # 
 
 # Cache tags and data
 
@@ -38,15 +38,18 @@ def ilog(x):
 	return int(math.log(x, 2));
 
 hits, misses, lost = 0, 0, 0;
-mask = 0xf;
-bigmask = 0xff;
+#mask = 0xf;
+#bigmask = 0x100;
 
 for i in range(len(tut_seq)):
 	current = int(tut_seq[i]); # Select the current memory address
 	# Generate line, set and tag info from current
-	line = (current >> (0 * (ilog(L))) & mask);
-	set = (current >> (1 * (ilog(L))) & mask);
-	tag = (current >> (2 * (ilog(L))) & bigmask);
+#	line = (current >> (0 * (ilog(L))) & mask);
+#	set = (current >> (1 * (ilog(L))) & mask);
+#	tag = (current >> (2 * (ilog(L))) & bigmask);
+	line = current & ilog(L);
+	set = (current >> ilog(L)) & ilog(K);
+	tag = (current >> ilog(K+L));
 	# Now, let's see if we have a relavent cache for current's tag...
 	n = set; # skip straight to the appropriate set
 	if ((n >= 0) and (n < N)):	
