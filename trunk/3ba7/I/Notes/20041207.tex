@@ -1,0 +1,145 @@
+ % $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $7^{th}$ December 2004}
+
+\maketitle
+
+\section*{LL(1) Grammar}
+
+A grammar is LL(1) if and only if the selection sets for productions for
+the same non-terminals are disjoint.
+
+\begin{eqnarray*}
+\nonterminal{S}	&	\to	&	\nonterminal{A} b \nonterminal{B}	\\
+\nonterminal{S}	&	\to	&	d 												\\
+\nonterminal{A}	&	\to	&	\nonterminal{C} \nonterminal{A}	b	\\
+\nonterminal{A}	&	\to	&	\nonterminal{B}							\\
+\nonterminal{B}	&	\to	&	c \nonterminal{S} b						\\
+\nonterminal{B}	&	\to	&	\epsilon										\\
+\nonterminal{C}	&	\to	&	a												\\
+\nonterminal{C}	&	\to	&	e d											\\
+\end{eqnarray*}
+
+$bcdd$
+
+\begin{eqnarray*}
+\nonterminal{S}	&	\stackrel{1}{\Rightarrow}	&	\nonterminal{A} b \nonterminal{B}	\\
+						&	\stackrel{4}{\Rightarrow}	&	\nonterminal{B} b \nonterminal{B}	\\
+						&	\stackrel{6}{\Rightarrow}	&	b \nonterminal{B}							\\
+						&	\stackrel{5}{\Rightarrow}	&	b c \nonterminal{S}						\\
+						&	\stackrel{2}{\Rightarrow}	&	b c d d										\\
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+% tree diagram
+
+\end{table}
+
+\subsection*{$FIRST$}
+
+$FIRST(\alpha)$ where $\alpha$ is a sequence of terminal and
+non-terminal symbols is the set of terminal symbol that can appear at the
+front of strings derived from $\alpha$.
+
+\begin{tabular}{llll}
+						&			&	$\alpha$		&	$FIRST(\alpha)$			\\
+$\nonterminal{S}$	&	$\to$	&	$\nonterminal{A} b \nonterminal{B}$		&	${a, b, c, e}$	\\
+$\nonterminal{S}$	&	$\to$	&	$d$ 												&	${d}$				\\
+$\nonterminal{A}$	&	$\to$	&	$\nonterminal{C} \nonterminal{A} d$		&	${a, e}$			\\
+$\nonterminal{A}$	&	$\to$	&	$\nonterminal{B}$								&	${c}$				\\
+$\nonterminal{B}$	&	$\to$	&	$c \nonterminal{S} d$						&	${c}$				\\
+$\nonterminal{B}$	&	$\to$	&	$\epsilon$										&	${\emptyset}$			\\
+$\nonterminal{C}$	&	$\to$	&	$a$												&	${a}$				\\
+$\nonterminal{C}$	&	$\to$	&	$ed$												&	${e, d}	$		\\
+\end{tabular}
+
+\subsection*{Null Vs Nullable Productions}
+
+A production is a null production if and only if its right hand side is
+$\epsilon$.
+
+A nullable production is one whose right hand side may derive
+$\epsilon$.
+
+For productions of the form $\nonterminal{A} \to \alpha$.
+
+$SELECT(A \to \alpha) = FIRST(\alpha)$
+
+If $\alpha$ is not nullable.
+
+Otherwise, $SELECT(A \to \alpha) = FIRST(\alpha) \cup	FOLLOW(\nonterminal{A})$
+
+$FOLLOW(\nonterminal{A}) = {b}$
+
+\begin{eqnarray*}
+FOLLOW(\nonterminal{B}) &	=	&	FOLLOW(\nonterminal{A}) \cup FOLLOW(\nonterminal{S}) 	\\
+				&	\Rightarrow		&	{b} \cup FOLLOW(\nonterminal{S})				\\
+				&	\Rightarrow		&	{b} \cup {d, \dashv}					\\
+				&	\Rightarrow		&	{b, d, \dashv}										\\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+SELECT(\nonterminal{A} \to \nonterminal{B}) &	=	&	FIRST(\nonterminal{B}) \cup FOLLOW(\nonterminal{A}) 	\\
+				&	\Rightarrow		&	\actionsym{c} \cup \actionsym{b}															\\
+				&	\Rightarrow		&	\actionsym{b, c}																				\\
+\end{eqnarray*}
+
+$\nonterminal{A} \to \alpha$ where $\alpha$ starts as a non-terminal.
+
+$\nonterminal{A} \left| SELECT(\nonterminal{A} \to \alpha) \right|$
+
+$REPLACE(\alpha^{T}), RETAIN$.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+						&	$a$	&	$b$	&	$c$	&	$d$	&	$e$	&	$\dashv$		\\
+\hline
+$\nonterminal{S}$	&	$\#1$	&	$\#1$	&	$\#1$	&	$\#2$	&	$\#1$	&					\\
+\hline
+$\nonterminal{A}$	&	$\#3$	&	$\#4$	&	$\#4$	&			&	$\#3$	&					\\
+\hline
+$\nonterminal{B}$	&	$\ast$&	$\#6$	&	$\#5$	&	$\#6$	&	$\ast$&	$\#6$			\\
+\hline
+$\nonterminal{C}$	&	$\#7$	&			&			&			&	$\#8$	&					\\
+\hline
+$b$					&			&	$POP,ADVANCE$&	&			&			&					\\
+\hline
+$d$					&			&			&			&	$POP, ADVANCE$	&			&		\\
+\hline
+$\triangledown$	&			&			&			&			&	$ACCEPT$	&				\\
+\hline
+\end{tabular}
+
+Starting Stack: $\triangledown \nonterminal{S}$
+
+All blank entries represent $REJECT$.
+
+$\#1$ : $REPLACE(\nonterminal{B} b\ nonterminal{A}),RETAIN$	\\
+$\#2$ : $POP,ADVANCE$													\\
+$\#3$ : $REPLACE(b \nonterminal{A} c),RETAIN$					\\
+$\#4$ : $REPLACE(\nonterminal{B})$									\\
+$\#5$ : $REPLACE(d \nonterminal{S}),ADVANCE$						\\
+$\#6$ : $POP,RETAIN$														\\
+$\#7$ : $POP,ADVANCE$													\\
+$\#8$ : $REPLACE(d),ADVANCE$	\\
+
+\end{document}

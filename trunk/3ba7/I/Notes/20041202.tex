@@ -63,7 +63,7 @@ Properties:
 \item Right hand side of production starts with terminal symbols or are
 empty.
 
-\item Slection sets for productions for the same non-terminal symbol are
+\item Selection sets for productions for the same non-terminal symbol are
 disjoint
 
 \end{enumerate}
@@ -128,7 +128,7 @@ FOLLOW(\nonterminal{S}) = \{a,\dashv\}	\\
 \end{eqnarray*}
 
 Table entry for production of the form $\nonterminal{A} \to \epsilon$
-for row $a$ and colums $SELECT(\nonterminal{A}	\to	\epsilon$ are
+for row $a$ and colums $SELECT(\nonterminal{A}	\to	\epsilon)$ are
 simply $POP,RETAIN$
 
 \subsection*{Push Down Machine}
@@ -187,10 +187,10 @@ $\triangledown$	\\
 \nonterminal{S}	&	\to	&	a \nonterminal{A} \nonterminal{B}	\\	
 \nonterminal{S}	&	\to	&	b \nonterminal{B} \nonterminal{S}	\\	
 \nonterminal{S}	&	\to	&	\epsilon										\\	
-\nonterminal{S}	&	\to	&	c \nonterminal{B} \nonterminal{S}	\\	
-\nonterminal{S}	&	\to	&	\epsilon										\\
-\nonterminal{S}	&	\to	&	d \nonterminal{B}							\\	
-\nonterminal{S}	&	\to	&	e 												\\	
+\nonterminal{A}	&	\to	&	c \nonterminal{B} \nonterminal{S}	\\	
+\nonterminal{A}	&	\to	&	\epsilon										\\
+\nonterminal{B}	&	\to	&	d \nonterminal{B}							\\	
+\nonterminal{B}	&	\to	&	e 												\\	
 \end{eqnarray}
 
 Show that this is a Q-Grammar and build a push down control for it.
