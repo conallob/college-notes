@@ -1,5 +1,10 @@
+% $Id$
+
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
 
 \begin{document}
 
@@ -15,11 +20,15 @@ Input Set: $\{v, c, ',', (, ) \}$
 Where $v$ is a variable identifier specifying an adjustable dimension
 and $c$ is an integer constant.
 
-$	INTEGER 	x ( 2 , I , 5 ) , y 		$
-$				v ( c , v , c ) , v		$ - Lexical Tokens
-$			 1|2|3|4|5|6|5|4|7|8|2		$	
+\begin{verbatim}
+INTEGER 	x ( 2 , I , 5 ) , y
+				v ( c , v , c ) , v * 
+			 1|2|3|4|5|6|5|4|7|8|2
+\end{verbatim}
 
-\begin{table}[c|c]
+$* -$ Lexical Tokens
+
+\begin{tabular}{c l}
 1 & Starting State 						\\
 2 & Variable ID to be made integer	\\
 3 & Left Paren								\\
@@ -28,11 +37,9 @@ $			 1|2|3|4|5|6|5|4|7|8|2		$
 6 & Variable								\\
 7 & Right Arrow							\\
 8 & Comma									\\
+\end{tabular}
 
-\end{table}
-
-\begin{table}[c|c|c|c|c|c|c]
-
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 	&	$v$	&	$c$	&	$,$	&	$($	&	$)$	&	Accepting states \\
 \hline
@@ -54,8 +61,7 @@ $			 1|2|3|4|5|6|5|4|7|8|2		$
 \hline
 E	&			&			&			&			&			&							\\
 \hline
-
-\end{table}
+\end{tabular}
 
 Al blank entries represent transitions to the error state.
 
@@ -81,27 +87,27 @@ State equivalence is:
 
 Partition states into 2 sets: accepting and rejecting.
 
-\[ P_{0} & = & [\{2,7\},\{1,3,4,5,6,8,E\}] \]
+\[ P_{0} = [\{2,7\},\{1,3,4,5,6,8,E\}] \]
 
 Partition with $v$:
 
-\[ P_{1} & = & [\{2,7\},\{1,8\}, {3,4,5,6,E\}] \]
+\[ P_{1} = [\{2,7\},\{1,8\},\{3,4,5,6,E\}] \]
 
 Partition with $)$:
 
-\[ P_{2} & = & [\{2,7\},\{1,8\},\{3,5,E\},\{4,6\}] \]
+\[ P_{2} = [\{2,7\},\{1,8\},\{3,5,E\},\{4,6\}] \]
 
 Partition with $v$:
 
-\[ P_{3} & = & [\{2,7\},\{1,8\},\{3,5\},\{4,6\},\{E\}] \]
+\[ P_{3} = [\{2,7\},\{1,8\},\{3,5\},\{4,6\},\{E\}] \]
 
 Partition with $($:
 
-\[ P_{3} & = & [\{2\},\{7\},\{1,8\},\{3,5\},\{4,6\},\{E\}] \]
+\[ P_{3} = [\{2\},\{7\},\{1,8\},\{3,5\},\{4,6\},\{E\}] \]
 
 
-\[ \{1,8\} & - & A	\]
-\[ \{3,5\} & - & B	\]
-\[ \{4,6\} & - & C	\]
+\[ \{1,8\} - A	\]
+\[ \{3,5\} - B	\]
+\[ \{4,6\} - C	\]
 
 \end{document}
