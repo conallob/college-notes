@@ -1,0 +1,130 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $26^{th}$ October 2004}
+
+\maketitle
+
+\section{Pushdown Machine}
+
+\begin{itemize}
+
+\item A finite set of input symbols including an endmarker ($\dashv$).
+
+\item A finite state of stack symbols including a bottom marker
+($\bigtriangledown$).
+
+\item A finite set of states, including a starting state.
+
+\item A control spcifying an exit or transition for every combination of
+input symbols, stack symbols and states.
+
+\item A starting stack
+
+\end{itemize}
+
+
+Transitions are composed of a stack operation, a state operation and an
+input operation, a state operation of an input operation.
+
+\subsection*{Stack Operation}
+
+Push($X$) - Push symbol $X$ onto the stack \\
+
+Pop() - Remove top stack symbol \\
+
+[ Leave Stack Alone ]
+
+
+\subsection*{State Operation}:
+
+Advance - Get next input symbol \\
+
+Retain - Do \emph{not} advance
+
+\section{Example}
+
+\subsection{}
+
+Design a pushdown recogniser to check an input composed of left and
+right parentheses to ensure that they match.
+
+\[ ( (  ) (  ) ) \dashv \]
+
+\begin{itemize}
+
+\item Input set ${(, ), \dashv }$
+
+\item Stack symbols - ${L, \bigtriangledown}$
+
+\item States Set - ${S}$ - Starting State
+
+\item Control
+
+\begin{eqnarray*}
+\delta( (, L, S) & - & PUSH(L), STATE(S), ADVANCE \\
+\delta( (, \bigtriangledown, S) & - & P)USH(L), STATE(S), ADVANCE \\
+\delta( ), \bigtriangledown, S) & - & REJECT \\
+\delta( \dashv, L, S) & - & REJECT \\
+\delta( (, \dashv, \bigtriangledown, S) & - & ACCEPT \\
+\end{eqnarray*}
+
+\item A Starting Stack - ($\bigtriangledown$).
+
+\end{itemize}
+
+% Diagram
+
+\subsection{}
+
+Design a pushdown recognizer to check an input of $1$s and $0$s to
+ensure that it is of the form $1^{N}o^{N}$ where $N > 0$ and $N$ is the
+no of $1$s and $0$s in input.
+
+e.g: $1100$
+
+\begin{itemize}
+\item Input Set - ${1, 0, \dashv}$
+
+\item Stack Set - ${X, \bigtriangledown}$
+\end{itemize}
+
+
+
+Input Symbols
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+					&		&		$($		&		$)$			&		$\dashv$				\\
+					&		&	PUSH(L)		&		POP			&		REJECT				\\		
+					&	L	&	STATE(S)		&		STATE(S)		&		"UNMATCHED LEFT"	\\
+Stack Symbol	&		&	ADVANCE		&		ADVANCE		&		"PARENTHESES" 		\\
+\hline
+					&		&	PUSH(L)		&		REJECT		&		ACCEPT				\\
+				& & $\bigtriangledown$	&	STATE(S)			&		"EXTRA RIGHT"		\\
+					&		&	ADVANCE		&	"PARENTHESES"	&								\\
+\hline
+\end{tabular}
+
+Starting State: ($\bigtriangledown$)
+
+\begin{tabular}{l c r}
+$\bigtriangledown$		&	$[S]$	&	$( (  ) (  ) ) \dashv $ \\ 
+$\bigtriangledown L$		&	$[S]$	&	$  (  ) (  ) ) \dashv $ \\ 
+$\bigtriangledown LL$	&	$[S]$	&	$     ) (  ) ) \dashv $ \\ 
+$\bigtriangledown L$		&	$[S]$	&	$		  (  ) ) \dashv $ \\ 
+$\bigtriangledown LL$	&	$[S]$	&	$		     ) ) \dashv $ \\ 
+$\bigtriangledown L$		&	$[S]$	&	$				 ) \dashv $ \\ 
+$\bigtriangledown$		&	$[S]$	&	$ 					\dashv $ \\ 
+\end{tabular}
+
+$\Rightarrow$ ACCEPT
+
+\end{document}
