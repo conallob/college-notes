@@ -119,26 +119,70 @@ system's kernel, unless it is a direct kernel update.
 
 \section*{Security}
 
-Virii, worms, trojans. Security patches for patches for patches.
+Windows has a bad reutation when it comes to security. This is the
+result of a combination of non technical issues such as it's dominant 
+market share and social engineering, combined with repeditive vulnerabities 
+(such as the Windows RPC component or the known 
+list\footnote{Windows XP SP2 Compatability List -
+http://support.microsoft.com/default.aspx?kbid=842242\&product=windowsxpsp2
+- $30^{th}$ October $2004$} of compatability issues with Windows XP's
+recently released Service Pack 2 aka SP2 which added long overdue security issues
+some programs assumed were not an issue). The Windows mono user approach
+also contributes to this, where too much simplification removes
+functionality.
 
-Multi user system - Single User Mode - chroot jails.
+Unix systems on the otherhand have a more trusted security model. The
+mukti user approach in Unix is also used to secure specific programs by
+using a \emph{"chroot jail"}, which in effect means a daemon process on a
+Unix server is run as a specific, pseudo user only used to run that
+program. While security vulnerabilities do also exist for Unix systems,
+it's modularity and interest groups ensure vulnerabilities are
+thouroughly resolved and are applicable with little or no disruption to
+most of the system.
 
 \section*{Compatiblity}
 
-Windows - x86, IA64, Alpha. 3rd party driver support
+Due to the popularity of Intel's x86 (i386) and IA-64 (Itanium)
+architectures (and AMD equivalents of x86 and AMD64) with computer 
+manufacturers, Windows primarily is only available for x86 and soon
+IA-64/AMD64 architectures. Windows previously was also available for
+the DEC Alpha architecture as an insentive to migrate DEC Alpha Unix
+systems to Windows. As a result of the popularity of these three main 
+hardware architectures, there is little or no insentive for Microsoft to
+make Windws compatibke with other architectures.
 
-Unix - Everything, mobile phones, TiVo, Embedded devices. Open drivers
+The principle goal of Dennis Ritchie and Ken Thompson in AT\&T in the
+1970s was to write an operationg system which was compatible with
+numerous legacy hardware architectures. To aid this goal, the
+programming language C was born as a foundation for Unix. In modern times,
+Unix derivatives, but especially Linux made it their aim to try and be
+compatible with as many architecture types as possible. Currently, Linux
+is the most architecture compatible Unix derivative, due to it's close
+relationship with the GNU C Compiler (gcc). As a result, Linux is
+compatable with these architectures\footnote{GCC Architecture
+Compatability List - http://gcc.gnu.org/install/specific.html - $30^{th}$
+October $2004$} as well as being used in mobile phones, TiVo (a digital
+television recording device) and numerous other embedded devices.
 
 \section*{Programs}
 
-Windows - Popular - Widely used - Mainstream software
+Thanks mainly to the large marketshare Windows currently holds, Windows
+has support for all the commonly used programs and formats. Program
+suites such as Microsoft Office and Adobe's Photoshop are used for
+general office documents to photo montage and graphics design.
 
-Unix - Core user base - Creating tools to work with the rest of the
-world - Samba, OpenOffice/StarOffice
+Unix has a large amount of software available to be used, especially
+since Unix users can take control of numerous choices available to them
+to customise a system. Although Unix has a number of such programs and
+various methods to support comprehensive, open formats, tools such as 
+Samba (to share files over a network) and StarOffice/OpenOffice (a Unix
+targetted Office Suite with support for Microsoft Office formats) exist
+to bridge the gap between Windows and Unix.
 
 \section*{Total Cost of Ownership}
 
-B\$.
+Total cost of ownership is not an accurate or even comparable
+measurement to compare operating systems by.
 
 Windows Licence + supported hardware + av + firewall + human support
 hours. No generic support from M\$
