@@ -1,0 +1,152 @@
+ % $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $9^{th}$ December 2004}
+
+\maketitle
+
+\begin{tabular}{llll}
+						&			&	$\alpha$											&	$FIRST(\alpha)$\\
+$\nonterminal{S}$	&	$\to$	&	$\nonterminal{A} b \nonterminal{B}$		&	$\{a, b, c, e\}$	\\
+$\nonterminal{S}$	&	$\to$	&	$d$ 												&	$\{d\}$				\\
+$\nonterminal{A}$	&	$\to$	&	$\nonterminal{B}$ 							&	$\{c\} \cup FOLLOW(\nonterminal{A}$	\\
+$\nonterminal{A}$	&	$\to$	&	$\nonterminal{B}$								&	$\{c\}$				\\
+$\nonterminal{B}$	&	$\to$	&	$c \nonterminal{S} d$						&	$\{c\}$				\\
+$\nonterminal{B}$	&	$\to$	&	$\epsilon$										&	$FOLLOW(\nonterminal{B})$	\\
+$\nonterminal{C}$	&	$\to$	&	$a$												&	$\{a\}$				\\
+$\nonterminal{C}$	&	$\to$	&	$e d$												&	$\{e, d\}$			\\
+\end{tabular}
+
+
+$FOLLOW(\nonterminal{A}) = {b}$
+
+\section*{Push Down Machine}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+						&	$a$	&	$b$	&	$c$	&	$d$	&	$e$	&	$\dashv$		\\
+\hline
+$\nonterminal{S}$	&	$\#1$	&	$\#1$	&	$\#1$	&	$\#2$	&	$\#1$	&					\\
+\hline
+$\nonterminal{A}$	&	$\#4$	&	$\#4$	&	$\#4$	&			&	$\#3$	&					\\
+\hline
+$\nonterminal{B}$	&	$\#6$&	$\#6$	&	$\#5$	&	$\#6$	&	$\#6$&	$\#6$			\\
+\hline
+$\nonterminal{C}$	&	$\#7$	&			&			&			&	$\#8$	&					\\
+\hline
+$b$					&	$\ast$&	$POP,ADVANCE$&	&			&	$\ast$&					\\
+\hline
+$d$					&	$\ast$&			&			&	$POP, ADVANCE$	&	$\ast$	&	\\
+\hline
+$\triangledown$	&	$\ast$&			&			&			&	$\ast$	&	$ACCEPT$	\\
+\hline
+\end{tabular}
+
+Starting Stack: $\triangledown \nonterminal{S}$
+
+All blank entries represent $REJECT$.
+
+$\#1$ : $REPLACE(\nonterminal{B} b \nonterminal{A}),RETAIN$	\\
+$\#2$ : $POP,ADVANCE$													\\
+$\#3$ : $REPLACE(b \nonterminal{A} \nonterminal{C}),RETAIN$	\\
+$\#4$ : $REPLACE(\nonterminal{B}), RETAIN$						\\
+$\#5$ : $REPLACE(d \nonterminal{S}),ADVANCE$						\\
+$\#6$ : $POP,RETAIN$														\\
+$\#7$ : $POP,ADVANCE$													\\
+$\#8$ : $REPLACE(d),ADVANCE$											\\
+
+\begin{tabular}{|c|}
+\hspace{15mm}						\\
+\hline
+$\sout{\nonterminal{A}}$		\\
+\hline
+$b$									\\
+\hline
+$\cdots$								\\
+$\cdots$								\\
+$\cdots$								\\
+\hline
+$\triangledown$					\\
+\hline
+\end{tabular}
+
+$bcdd$
+
+\begin{table}[hbtp]
+
+% tree diagram
+
+\end{table}
+
+\begin{eqnarray*}
+\nonterminal{S}	&	\to	&	\nonterminal{A} b \nonterminal{B}		\\
+\nonterminal{S}	&	\to	&	d													\\
+\end{eqnarray*}
+
+\begin{tabular}{llll}
+$1'$		&	$\nonterminal{S}$	&	$\to$	&	$\nonterminal{C}\nonterminal{A} b b \nonterminal{B}$		\\
+$1''$		&	$\nonterminal{S}$	&	$\to$	&	$\nonterminal{B} b \nonterminal{B}$ 							\\
+$1''$		&	$\nonterminal{S}$	&	$\to$	&	$a \nonterminal{A} b b \nonterminal{B}$ 						\\
+$1''$		&	$\nonterminal{S}$	&	$\to$	&	$e d \nonterminal{A} b b \nonterminal{B}$						\\
+$1'''$	&	$\nonterminal{S}$	&	$\to$	&	$c \nonterminal{S} d b \nonterminal{B}$						\\
+$1''''$	&	$\nonterminal{S}$	&	$\to$	&	$b \nonterminal{B}$													\\
+\end{tabular}
+
+\begin{table}[hbtp]
+
+% tree diagram
+
+\end{table}
+
+LL(1) - L(eft to Right) L(eft Most Derivation) One (Look Ahead)
+
+LR(1) - L(eft to Right) R(everse of Rightmost Derivation) One (Look Ahead)
+
+\begin{eqnarray}
+\nonterminal{E}		&	\to	&	\nonterminal{T} \nonterminal{E-List}								\\
+\nonterminal{E-List}	&	\to	&	+ \nonterminal{T} \actionsym{ADD} \nonterminal{E-List}		\\
+\nonterminal{E-List}	&	\to	&	\epsilon																		\\
+\nonterminal{T}		&	\to	&	\nonterminal{P} \nonterminal{T-List}								\\
+\nonterminal{T-List}	&	\to	&	\ast \nonterminal{P} \actionsym{MULT} \nonterminal{T-List}	\\
+\nonterminal{T-List}	&	\to	&	\epsilon																		\\
+\nonterminal{P}		&	\to	&	\left( \nonterminal{E} \right)										\\
+\nonterminal{P}		&	\to	&	IDENT																			\\
+\end{eqnarray}
+
+$\uparrow A \uparrow B \uparrow C \equiv A^{B^{C}} \equiv A^{\left(B^{C}\right)}$
+
+\begin{tabular}{lll}
+		&	$FIRST$					&	$SELECT$									\\
+$1$	&	$\{ '(', IDENT \}$	&	$\{ '(', IDENT\}$						\\
+$2$	&	$\{ '+' \}$				&	$\{ '+' \}$								\\
+$3$	&	$\{ \}$					&	$FOLLOW(\nonterminal{E-List})$	\\
+$4$	&	$\{ '(', IDENT \}$	&	$\{ '(', IDENT\}$						\\
+$5$	&	$\{ '\ast' \}$			&	$\{ '\ast' \}$							\\
+$6$	&	$\{ \}$					&	$FOLLOW(\nonterminal{T-List})$	\\
+$7$	&	$\{ '(' \}$				&	$\{ '(' \}$								\\
+$8$	&	$\{  IDENT \}$			&	$\{ IDENT \}$							\\
+\end{tabular}
+
+$FOLLOW(\nonterminal{E-List}) = FOLLOW(\nonterminal{E}) = \{ ')', \dashv \}$
+
+$FOLLOW(\nonterminal{T-List}) = FOLLOW(\nonterminal{T}) = \{ '+', \} +
+\\ FOLLOW(\nonterminal{E-List}) = \{ '+', ')', \dashv \}$
+
+\end{document}
