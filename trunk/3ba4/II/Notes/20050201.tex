@@ -258,14 +258,121 @@ When either $a$ or $b$ are $0$, path going up.
 
 \section*{Tutorial}
 
-$Y = \overline{A + B + C \cdot D}$
-
 \begin{figure}[h]
 \centering 
 
 \input 20050201-CMOS-net5
 
+\caption{$Y = \overline{A + B + C \cdot D}$}
+
 \end{figure}
 
+\begin{figure}[h]
+\centering 
+
+\input 20050201-CMOS-net6
+
+\caption{$Z = \overline{A \cdot B + C \cdot D} = \overline{A \cdot (B + C)} $}
+
+\end{figure}
+
+All inputs are zero:
+
+All pullups are \verb!CLOSED!
+
+All pull downs are \verb!OPEN!
+
+\verb!OUTPUT = 1!
+
+All inputs are one:
+
+All pullups are \verb!OPEN!
+
+All pull downs are \verb!CLOSED!
+
+\verb!OUTPUT = 0!
+
+Consider changing one input, from $0 \to 1$:
+
+Those p-devices attached to it \verb!OPEN!
+
+Those n-devices attached to it \verb!CLOSE!
+
+Net Effect:
+
+To break up pullup path
+
+To construct pull down path
+
+Only possible change is for output to go from $1$ to $0$.
+
+It only happens once in sequence of converting all inputs from $0 \to
+1$.
+
+ID:
+
+$0 \to 0$ \\
+$1 \to 1$
+
+No.
+
+NOT:
+
+$0 \to 1$\\
+$1 \to 0$
+
+Yes.
+
+\begin{tabular}{ccccc}
+$A$	&	$B$	&	$\overline{AB}$	&	$AB$	&	$\overline{A \oplus B}$	\\
+$0$	&	$0$	&	$1$					&	$0$	&	$0$						\\
+$0$	&	$1$	&	$1$					&	$0$	&	$1$						\\
+$1$	&	$0$	&	$1$					&	$0$	&	$1$						\\
+$1$	&	$1$	&	$0$					&	$1$	&	$0$						\\
+\end{tabular}
+% Insert xy-pic diagram here
+
+$0 \leq 1$ \hspace{20mm} $0 \leq 0$ \hspace{20mm} $1 \leq 1$
+
+$00 \leq 11$ \\
+$00 \leq 01$ \\
+$00 \leq 10$ \\
+$01 \leq 11$ \\
+$10 \leq 11$ \\
+$01 \not= 10$ \\
+$10 \not= 01$
+
+$b_{1} b_{0} \leq a_{1} a_{0}$ if and only if $b_{1} \leq a_{1}$ and
+$b_{0} \leq a_{0}$
+
+
+Partial Order
+
+
+% Inset xy-pic diagram here
+
+% \caption{Hasse Diagram}
+
+% Inset xy-pic diagram here
+
+% Inset xy-pic diagram here
+
+% Inset xy-pic diagram here
+
+$f$ is implemented if $f$ is monotonic decreasing.
+
+$a \leq b \Rightarrow f(a) \geq f(b)$
+
+Maths
+
+monotonic increasing
+
+$x \leq \Rightarrow f(x) \leq f(y)$
+
+% Inset xy-pic diagram here
+
+% Inset xy-pic diagram here
+
+% \caption{$3$ vriable XOR}
 
 \end{document}

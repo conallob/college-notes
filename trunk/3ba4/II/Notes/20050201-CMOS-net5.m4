@@ -17,7 +17,8 @@ DownC: c_fet(down_ ,,) with .S at DownB.D+(loopwid,0) ; llabel(,$C$,)
 DownD: c_fet(down_ ,,) with .S at DownC.D ; llabel(,$D$,)
 
 	# Pullup Network
-	line right from UpC.D to UpB.S then right to UpD.S
+	line right from UpC.D to UpB.S ; dot
+	line right from UpB.S to UpD.S
 	line right from UpC.S to UpD.D
 	
 	# Pulldown Network
@@ -27,6 +28,7 @@ DownD: c_fet(down_ ,,) with .S at DownC.D ; llabel(,$D$,)
 
 	#Output
 	line up (loopwid/4) from DownB.D ; dot
+	line down from UpC.S+((loopwid/2),0) to DownB.D ; dot
 	line up (loopwid/8) from DownB.D then right (2*loopwid) ; "sp_$Y$" ljust
 
 .PE

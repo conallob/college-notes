@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  23 FEB 2005 19:16
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  23 FEB 2005 22:00
 **20050201.tex
 (./20050201.tex
 LaTeX2e <2001/06/01>
@@ -130,18 +130,22 @@ r/m/n/12 ) =
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./20050201-CMOS-net5.tex) [5] [6] (./20050201.aux)
+(./20050201-CMOS-net5.tex) [5] (./20050201-CMOS-net6.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] [7] [8] (./20050201.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1485 strings out of 95847
- 16507 string characters out of 1196009
- 92314 words of memory out of 1000001
- 4405 multiletter control sequences out of 10000+50000
- 13765 words of font info for 54 fonts, out of 500000 for 1000
+ 1490 strings out of 95847
+ 16592 string characters out of 1196009
+ 97555 words of memory out of 1000001
+ 4406 multiletter control sequences out of 10000+50000
+ 13934 words of font info for 55 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
  23i,11n,24p,201b,363s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20050201.dvi (6 pages, 71192 bytes).
+Output written on 20050201.dvi (8 pages, 86152 bytes).
