@@ -17,8 +17,8 @@ tut_seq = [
 # Currently hard coded, I'll take user input later...
 
 L = 16; # length in bits
-K = 8;  # 
-N = 1;  # 
+K = 8;  # degree of associativity
+N = 1;  # Number of sets
 
 # Cache tags and data
 
@@ -37,39 +37,38 @@ for a in range(N):
 def ilog(x):
 	return int(math.log(x, 2));
 
-hits, misses, lost = 0, 0, 0;
-#mask = 0xf;
-#bigmask = 0x100;
+hits, misses = 0, 0;
+details = [0, 0];
 
 for i in range(len(tut_seq)):
 	current = int(tut_seq[i]); # Select the current memory address
+	print hex(current);
 	# Generate line, set and tag info from current
-#	line = (current >> (0 * (ilog(L))) & mask);
-#	set = (current >> (1 * (ilog(L))) & mask);
-#	tag = (current >> (2 * (ilog(L))) & bigmask);
-	line = current & ilog(L);
-	set = (current >> ilog(L)) & ilog(K);
+	line = (current & ilog(L));
+	set = ((current >> ilog(L)) & ilog(K));
 	tag = (current >> ilog(K+L));
 	# Now, let's see if we have a relavent cache for current's tag...
 	n = set; # skip straight to the appropriate set
 	if ((n >= 0) and (n < N)):	
 		for k in range(K):
-			print hex(current);
-			if cache_tags[n][k] != tag:
-				# Tag not found, we've got a Miss... :(
-				print "[31mMiss[m";
-				##print "(",n, k,")", cache_tags[n][k], "- Popped";
-				cache_tags[n].pop(0);
-				##print "(",n, k,")", tag, "- Pushed";
-				cache_tags[n].append(tag);
-				misses += 1;
-			elif cache_tags[n][k] == tag:
+			luck = 1; # Let's assume we're lucky
+			if cache_tags[n][k] == tag:
 				# Tag found. Woohoo, a Hit!!
-				print "[32mHit[m";
-				##print "(",n, k,")", cache_tags[n][k];
-				hits += 1;
-		#n = set; # skip straight to the appropriate set
+				luck = luck & 1; # Still lucky
+				break;
+			else:
+				luck = luck & 0; # Not so lucky...
+			details[0] = n; # Remember n for a little while...
+			details[1] = k; # Remember k for a little while...
+	if luck == 1:
+			print "[32mHit[m";
+			del cache_tags[details[0]][details[1]];
+			cache_tags[details[0]].append(tag);
+			hits += 1;
 	else:
-		print "[33m", n, "[m";
-		lost += 1;
-print "Hits:", hits, "Misses:", misses, "Lost in the Void:", lost;
+		# Tag not found, we've got a Miss... :(
+		print "[31mMiss[m";
+		cache_tags[details[0]].pop(0);
+		cache_tags[details[0]].append(tag);
+		misses += 1;
+print "Hits:", hits, "Misses:", misses;
