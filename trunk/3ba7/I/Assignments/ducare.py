@@ -92,15 +92,22 @@ if '__main__' == __name__:
 	import re, sys
 	# Setup command line parameters
 	from optparse import OptionParser
-	parser = OptionParser();
+	parser = OptionParser(usage="%prog [-f] [-q]", version="%prog $Rev$");
 	parser.add_option("-i", "--input", dest="inputfile", 
 							help="Read input from FILE", metavar="FILE");
 	parser.add_option("-e", "--inline", dest="cmdinput", 
-							help="Read input from command line paramater", metavar="STRING");
+							help="Read input from STRING", metavar="STRING");
 	(options, args) = parser.parse_args();
-	# Read the input File
-	inputfile = open(options.inputfile, 'r');
-	inputfile = inputfile.read();
+	if options.inputfile == '' and options.cmdinput == '':
+		# Learn how to default to --help...
+	elif options.inputfile != '':
+		# Read the input File
+		inputfile = open(options.inputfile, 'r');
+		input = inputfile.read();
+	elif options.cmdinput != '':
+		# Read string from command line
+		input = options.cmdinput;
+	#
 	tokens = LexicalAnalyser(inputfile); # Analyse input
 	for c in range(len(tokens)):
 		if tokens[c] == "\n":
