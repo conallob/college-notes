@@ -1,0 +1,136 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II \\ Lecture Notes \\	$11^{th}$ January 2005}
+
+\maketitle
+
+Address stored in cache by virtual address but addresses on bus are
+physical.
+
+Need to convert from physical addresses on bus into virtual addresses in
+order to invalidate appropriate cahce line.
+
+Could use an inverse mapper.
+
+Alternatively, store both a physical and virtual tag for each cache
+line.
+
+\begin{tabular}{l|l|l|l|}
+\hline
+$set 0$	&	Physical Tag	&	Virtual Tag	&	Data		\\
+\hline
+$set 1$	&	Physical Tag	&	Virtual Tag	&	Data		\\
+\hline
+$set n$	&	Physical Tag	&	Virtual Tag	&	Data		\\
+\hline
+\end{tabular}
+
+CPU matches against virtual tags, but watcher matches against physical
+tag.
+
+On a CPU cache miss, virtual and physical tags updated as parted of the
+miss handling.
+
+Cache positioned between CPU and bus - needs to be "\emph{looking}" in
+two directions at the same time.
+
+Even with a physical cache, it would be normal practice to have
+identical physical tags.
+
+\section*{Intel 486 - 1993}
+
+$8k$ physical unified code and data cache.
+
+Write - through
+
+4 way set associative $16 bytes$ per line
+
+$(L = 16, K = 4 \therefore N = 128)$
+
+\subsection*{Pseudo LRU}
+
+\begin{table}[hbtp]
+
+% sy-pic diagram
+
+\caption{To find Pseudo LRU, go left if bit $= 0$}
+
+\end{table}
+
+On access, set bits in tree to point away from the accessed cache line.
+
+TLB-32 entry fully associative pseudo LRU
+
+
+Non-cachable I/O devices (eg polling a serial interface)
+
+(i) can speficy in a page table entry that page is non-cachable
+
+or
+
+(ii) assert hardware signal to indicate that memory access should be
+treated as non-cachable.
+
+\subsection*{Trace File Size}
+
+How many addresses are required to obtain statistically significant
+results?
+
+Must overcome the initialisation transient during which the (empty)
+cache is filled with data.
+
+Consider a $32K$ cache with $16 bytes$ /line $\Rightarrow 2048$ line
+sets. To reduce transient misses to less than $2\%$ of total misses ($50
+\times 2048$) when running simulation $\approx 100,000$.
+
+If the target miss ratio is $1\%$, this implies requirement $100,000
+\times 100 \approx 10$ million addresses.
+
+Evaluating $N$ varieties of cache design on seperate passes through the
+trace file could take a reasonable amount of CPU time.
+
+Will examine some techniques for reducing this processing effort.
+
+In practice, (eg, can analyse $2$ million addresses in  $< 4 s$ on a
+$166 MHz$ Pentium), it may no longer be necessary to use these
+techniques, but an understanding of them will lead to a better
+understanding of how cahces operate.
+
+\subsection*{Trace Stripping}
+
+\begin{table}{hbtp}
+
+% xy-pic diagram
+
+\end{table}
+
+Generate a reduced trace by simulating  direct mapped cache with $N$
+sets and lines, size $L$ and outputting only those addresses that
+produce misses.
+
+Reduced trace $\approx 20\%$ the size of the full trace (with $!K$
+direct mapped cache). What can be done with the reduced trace?
+
+
+Notice that because it is a direct mapped cache, it is the misses that
+change the state of the cache, a hit doesn't change the internal state
+since there is no tag re-ordering to be done.
+
+
+Simulate a $k$ way cache with $N$ sets and line size $L$ on the full and
+reduced traces will produce the same number of cahce misses (pure
+logic).
+
+Notice again that as $k$ increases, so does the cache size.
+
+
+\end{document}
