@@ -39,37 +39,38 @@ for a in range(N):
 def ilog(x):
 	return int(math.log(x, 2));
 
-hits, misses = 0, 0;
+hits, misses, lost = 0, 0, 0;
+mask = 0xf;
+bigmask = 0xff;
 
 for i in range(len(tut_seq)):
 	current = int(tut_seq[i]); # Select the current memory address
 	# Generate line, set and tag info from current
-	line = (current & ilog(L));
-	set = ((current >> ilog(L)) & ilog(K)) - 1;
-	tag = (current >> ilog((K+L)));
+	line = (current >> (0 * (ilog(L))) & mask);
+	set = (current >> (1 * (ilog(L))) & mask);
+	tag = (current >> (2 * (ilog(L))) & bigmask);
 	# Now, let's see if we have a relavent cache for current's tag...
-	for n in range(N):
-		n = set; # skip straight to the appropriate set
+	n = set; # skip straight to the appropriate set
+	if ((n >= 0) and (n < N)):	
 		for k in range(K):
-			if cache_tags[n][k] == -1:
-				# Tag not found, we've got a Miss... :(
-				print "[31mMiss[m";
-				cache_tags[n][k] = tag;
-				print "(",n, k,")", tag, "- Ammended";
-				misses = misses + 1;
+			print hex(current);
 			if cache_tags[n][k] != tag:
 				# Tag not found, we've got a Miss... :(
-				print "[31mMiss[m -", "(",n, k,")", cache_tags[n][k], "- Popped";
+				print "[31mMiss[m";
+				##print "(",n, k,")", cache_tags[n][k], "- Popped";
 				cache_tags[n].pop(0);
-				print "(",n, k,")", tag, "- Pushed";
+				##print "(",n, k,")", tag, "- Pushed";
 				cache_tags[n].append(tag);
 				misses = misses + 1;
 			elif cache_tags[n][k] == tag:
 				# Tag found. Woohoo, a Hit!!
-				print "[32mHit[m  -", "(",n, k,")", cache_tags[n][k];
+				print "[32mHit[m";
+				##print "(",n, k,")", cache_tags[n][k];
 				hits = hits + 1;
 			k = k + 1;
-		else:
-			pass;	# out of bounds exception
+		#n = set; # skip straight to the appropriate set
+	else:
+		print "[33m", n, "[m";
+		lost = lost + 1;
 	i = i + 1;
-print "Hits:", hits, "Misses:", misses;
+print "Hits:", hits, "Misses:", misses, "Lost in the Void:", lost;
