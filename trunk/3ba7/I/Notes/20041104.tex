@@ -1,0 +1,161 @@
+% $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\color{Emerald}{\{$#1$\}}}}
+
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $4^{th}$ November 2004}
+
+\maketitle
+
+A language may be described by many different context free grammars.
+
+A language is defined by a context free grammar and a set of semantic
+restrictions.
+
+
+\begin{verbatim}
+FOR I := M TO N
+      DO -...
+\end{verbatim}
+
+What is the value of \verb!I!?
+
+
+\begin{eqnarray*}
+\langle E \rangle		&	\to			& \langle E \rangle \langle OP \rangle \langle T \rangle \\
+\langle E \rangle		&	\to			& \langle T \rangle \\
+\langle OP \rangle	&	\to			& + \\
+\langle OP \rangle	&	\to			& OR \\
+\langle T \rangle		&	\to			& IDENT \\
+							&					&		\\
+\langle E \rangle 	&	\Rightarrow	& A + B  \hspace{2mm} OR \hspace{2mm} C
+\end{eqnarray*}
+
+\section*{Translation Grammars}
+
+A translation grammar is a context free grammar where the set of
+terminal symbols is partitioned into a set of input symbols and a set of
+action symbols.
+
+Strings in the language described by a translation grammar are called
+action sequences.
+
+Eg:
+
+Design a grammar to convert arithmetic expressions from infix to postfix
+form.
+
+$A + B \ast C + D \Rightarrow ABC \ast + D +$
+
+$A$ \actionsym{A} $+ B$ \actionsym{B} $ \ast \hspace{2mm} C $
+\actionsym{C} \actionsym{\ast} \actionsym{+} $+ D$
+\actionsym{D} \actionsym{+}
+
+This is an action sequence.
+
+$A$ - Terminal Symbol \\
+\actionsym{A} - Action Symbol (in this case, to output the symbol
+$A$)
+
+A context free grammar may be converted into a translation grammar by
+inserting action symbols at appropriate locations in the right hand side
+of reductions from the context free grammar.
+
+\begin{eqnarray*}
+\langle E \rangle		&	\to	&	\langle E \rangle + \langle T \rangle \mbox{\actionsym{+}} \\
+\langle E \rangle		&	\to	&	\langle T \rangle \\
+\langle T \rangle		&	\to	&	\langle T \rangle \ast \langle P \rangle \mbox{\actionsym{\ast}} \\
+\langle T \rangle		&	\to	&	\langle P \rangle \\ 
+\langle P \rangle		&	\to	&	\left( \langle P \rangle \right) \\
+\langle P \rangle		&	\to	&	IDENT \mbox{\actionsym{IDENT}} \\
+\langle P \rangle		&	\to	&	A \mbox{\actionsym{A}} \\
+\langle P \rangle		&	\to	&	B \mbox{\actionsym{B}} \\
+\langle P \rangle		&	\to	&	C \mbox{\actionsym{C}} \\
+\langle P \rangle		&	\to	&	D \mbox{\actionsym{D}}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\langle E \rangle		&	\Rightarrow	&	\langle E \rangle + \langle T \rangle \mbox{\actionsym{+}} \\
+\langle E \rangle		&	\Rightarrow	&	\langle E \rangle + \langle T \rangle \mbox{\actionsym{+}} + \langle T \rangle \mbox{\actionsym{+}} \\
+\langle T \rangle		&	\Rightarrow	&	\langle T \rangle + \langle T \rangle \mbox{\actionsym{+}} + \langle T \rangle \mbox{\actionsym{1}} \\
+							&	\Rightarrow	&	\langle P \rangle + \langle T \rangle \mbox{\actionsym{+}} + \langle T \rangle \mbox{\actionsym{+}} + \langle T \rangle \mbox{\actionsym{+}} \\
+							&	\Rightarrow	&	IDENT \mbox{\actionsym{IDENT}} + \langle T \rangle \mbox{\actionsym{+}} + \langle T \rangle \mbox{\actionsym{+}} \\
+							&	\Rightarrow	&	IDENT \mbox{\actionsym{IDENT}} + \langle T \rangle \ast \langle P \rangle \mbox{\actionsym{\ast}} \mbox{\actionsym{+}} + \langle T \rangle \mbox{\actionsym{+}}
+\end{eqnarray*}
+
+% Diagram
+
+This is an example of a syntax directed translation.
+
+
+A translation grammar whole all the action symbols specifically output
+actions is termed a string translation grammar.
+
+\begin{eqnarray*}
+\langle E \rangle			& \to	&	\langle T \rangle \langle E-List \rangle \\
+\langle E-List \rangle	& \to	&	+ \langle T \rangle \langle E-List \rangle \\
+\langle E-List \rangle	& \to &	\epsilon \\
+\langle T \rangle			& \to	&	\langle P \rangle \langle T-List \rangle \\
+\langle T-List \rangle	& \to	&	\ast \langle P \rangle \langle T-List \rangle \\
+\langle T-List \rangle	& \to	&	\epsilon \\
+\langle P \rangle			& \to	&	\left( \langle E \rangle \right) \\
+\langle P \rangle			& \to &	IDENT
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\langle E \rangle			& \to	&	\langle T \rangle \langle E-List \rangle \\
+\langle E-List \rangle	& \to	&	+ \langle T \rangle \mbox{\actionsym{+}} \langle E-List \rangle \\
+\langle E-List \rangle	& \to &	\epsilon \\
+\langle T \rangle			& \to	&	\langle P \rangle \mbox{\actionsym{\ast}} \langle T-List \rangle \\
+\langle T-List \rangle	& \to	&	\ast \langle P \rangle \langle T-List \rangle \\
+\langle T-List \rangle	& \to	&	\epsilon \\
+\langle P \rangle			& \to	&	\left( \langle E \rangle \right) \\
+\langle P \rangle			& \to &	IDENT
+\end{eqnarray*}
+
+$A + B \ast C + D$
+
+\begin{eqnarray*}
+\langle E \rangle		&	\Rightarrow	&	\langle T \rangle	\langle E-List \rangle \\
+							&	\Rightarrow	&	\langle P \rangle	\langle T-List \rangle \langle E-List \rangle \\
+							&	\Rightarrow	&	\langle P \rangle \langle T-List \rangle + \langle T \rangle \langle E-List \rangle \\
+							&	\Rightarrow	&	\langle P \rangle \langle T-List \rangle +
+\end{eqnarray*}
+
+
+$A + B$
+
+\begin{eqnarray*}
+\langle E \rangle	&	\Rightarrow	&	\langle T \rangle \langle E-List \rangle \\
+						&	\Rightarrow	&	\langle P \rangle \langle T-List \rangle \langle E-List \rangle \\
+						&	\Rightarrow &	IDENT \mbox{\actionsym{IDENT}} \langle T-List \rangle \langle E-List \rangle \\
+						&	\Rightarrow	&	IDENT \mbox{\actionsym{IDENT}} \langle E-List \rangle \\
+						& \rightarrow	&	IDENT \mbox{\actionsym{IDENT}} + \langle T \rangle \mbox{\actionsym{+}} \langle E-List \rangle
+\end{eqnarray*}
+
+$A + B \Rightarrow A B +$
+
+% Diagram
+
+
+$A + B \ast C + D \Rightarrow A B C \ast + D +$
+
+
+% Diagram
+
+
+% Diagram
+
+Translation Tree
+
+\end{document}
