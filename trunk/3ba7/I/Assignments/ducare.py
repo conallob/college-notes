@@ -1,7 +1,7 @@
 #! /sw/bin/python
 
 #
-# $Id$
+# $Id: ducare.py 494 2005-01-22 23:18:02Z conall $
 #
 
 #
