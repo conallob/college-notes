@@ -7,6 +7,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define x 63
+#define y 7
+
 struct perceptron_network {
     unsigned int num_inputs;
     unsigned int num_outputs;
@@ -64,7 +67,7 @@ void initialize_perceptron_biases(struct perceptron_network *network, unsigned i
 
    for (i = 1; i < network->num_outputs; i++)
    {
-       network->biases[i] = (drand48() - 0.5) * range;
+       network->biases[i] = (((drand48() - 0.5) * range) - 1);
    }
 }
 
@@ -77,7 +80,7 @@ void initialize_perceptron_weights(struct perceptron_network *network, unsigned 
     {
     	  for (i = 1; i < network->num_inputs; i++)
 		  {
-        		network->weights[j][i] = (drand48() - 0.5) * range;
+        		network->weights[j][i] = (((drand48() - 0.5) * range) - 1);
 		  }
     }
 }
@@ -89,6 +92,11 @@ bool update_perceptron_network(struct perceptron_network *network, int *input, u
     {
         return(false);
     }
+
+	 if (network->input[0] == NULL)
+	 {
+			network->input = input;
+	 }
 	
 	 int i, j;
 
@@ -99,11 +107,13 @@ bool update_perceptron_network(struct perceptron_network *network, int *input, u
 				if(network->output[j] != training_data_t[j])
 				{
 					 network->biases[j] += training_data_t[j];
-					 network->weights[j][i] += /* TODO - Pester someone who knows what t_j x_i means*/ ;
-					 network->absolute_change += /* t_j x_i */;
+					 network->weights[j][i] += (training_data_t[j] * network->input[i]);
+					 network->absolute_change += (training_data_t[j] * network->input[i]);
 				}
 		  }
 	 }
+
+	 return(true);
 }
 
 
@@ -126,6 +136,7 @@ void set_activation_inputs(struct perception_network *network, int *training_dat
 	}
 	
 }
+
 
 void compute_perception_outputs(struct perception_network *network, unsigned double theta)
 {
@@ -165,15 +176,18 @@ int main(int argc, char **argv)
 {
 
     struct perceptron_network *network;
-	 int *s *t;
+	 int *s *t, *input;
 	 double theta;
 	 FILE ifp;
+	 int a, range;
+
+	 range =  2;
 
 	 /* Step 0 */
-    network = create_perceptron_network(64, 8);
+    network = create_perceptron_network(x, y);
 
-    initialize_perceptron_biases(network, 1);
-    initialize_perceptron_weights(network, 1);
+    initialize_perceptron_biases(network, range);
+    initialize_perceptron_weights(network, range);
 
 	 if (argv[2] != NULL)
 	 {
@@ -188,12 +202,19 @@ int main(int argc, char **argv)
 
 	 /* Parse training data for s and t from data file... */
 	
-	 ifp = fopen(argv[1], "r");
+	 ifp = fopen(argv[1], "r") else {
+	
+			printf("Error reading ".argv[1]);
+			
+	 };
 
 	 for (i = 0; i < network->num_inputs; i++)
 	 {
-		 fscanf(ifp, "%d", &s);
-		 fscanf(ifp, "%d", &t);
+			/*
+			 * Misunderstanding of format of input files
+			 * Unable to parse input correctly at this time
+			 * so s, t and input are all undfined
+			 */ 
 	 }
 	
 	 fclose(ifp);
@@ -201,16 +222,18 @@ int main(int argc, char **argv)
 	 /* Step 1*/
     do {
 			/* Step 2 */
-			/* Step 3 */
-		   set_activation_inputs(network, s);
-			/* Step 4 */
-			compute_perception_outputs(network, theta);	
+			for (a = 0; a < y; a++)
+			{
+				/* Step 3 */
+		   	set_activation_inputs(network, s);
+				/* Step 4 */
+				compute_perception_outputs(network, theta);	
+			}
 			/* Step 5 */
-         update_perceptron_network(network, NULL, 0);
-		  
+         update_perceptron_network(network, input, x, t);
+	 /* Step 6 */
     } while (network->absolute_change > 0.0001);
 
-	 
     free_perceptron_network(network);
 
     return(0);
