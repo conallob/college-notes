@@ -1,0 +1,95 @@
+% $Id: 20041018.tex 338 2004-10-27 12:48:06Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA2: Artificial Intellegence \\ Additional Lecture Notes \\ $1^{st}$ November 2004}
+
+\maketitle
+
+Last week's tutorial (in Open Prolog):
+
+\begin{verbatim}
+
+p2(X) :-
+        see(X),get0(C),rest_of_p2(C),seen.
+
+rest_of_p2(-1).
+rest_of_p2(C) :- put(C),
+                 get0(N),
+                 rest_of_p2(N).
+
+\end{verbatim}
+
+Tail recursion
+
+\begin{verbatim}
+
+% char_to_tree(C,TreeIn,TreeOut).
+
+char_to_tree(Char,[],node([],Char-1,[])).
+char_to_tree(Char,node(L,Char-V,R),node(L,Char-M,R)) :-
+
+\end{verbatim}
+
+\verb!M\verb! is \verb!N+1\verb! . - very important
+
+\begin{verbatim}
+
+char_to_tree(Char,node,(L,V-C,R)),node(Ls,V-C,R)) :- Char @< V,
+                                                      char_to_tree(Char,L,Ls).
+
+char_to_tree(Char,node(L,V-C,R),node(L,V-C,Rs)) :- Char @> V,
+                                                   char_to_tree(Char,R,Rs).
+
+rest_of_p2(-1,TreeIn,TreeIn).
+rest_of_p2(C,TreeIn,TreeOut) :-
+                               char_to_tree(C,TreeIn,TreeIntermediate),
+                               get0(N),
+                               rest_of_p2(N,TreeIntermediate,TreeOut).
+
+p2(X,Tree) :- see(X),get0(C),rest_of_p2(C),seen.
+
+\end{verbatim}
+
+Prints out nodes and ASCII codes
+
+\begin{verbatim}
+
+print_tree([]).
+print_tree(node(L,C-N,R)) :-
+                            print_tree(L),
+                            put(C),write(' '),
+                            write(C),
+                            write('with a count of '),
+                            write(N),
+                            nl,
+                            print_tree(R)
+
+
+?- p2('juni',Tree,print_tree(Tree)).
+
+\end{verbatim}
+
+\section*{DCGs - Definitive Clause Grammars}
+
+eg sentence $\to$ noun clause, verb clause
+
+\begin{verbatim}
+
+identifier(I) --> small_letter(s),
+                  rest_of_identifier(R).
+
+rest_of_identifier([R|T]) --> alphanumeric(R),
+                              rest_of_identifier(T).
+
+rest_of_identifier([]) --> []
+
+\end{verbatim}
+
+\end{document}
