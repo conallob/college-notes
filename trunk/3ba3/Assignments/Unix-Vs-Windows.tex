@@ -1,10 +1,12 @@
 % $Id$
 
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 \usepackage{amssymb}
 
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
 \setlength{\parindent}{0mm}
-\setlength{\parskip}{7.5mm}
+\setlength{\parskip}{5.0mm}
 
 \begin{document}
 
@@ -40,17 +42,109 @@ conlude which operating system is the winner of my arguement.
 
 \section*{Traditional Use}
 
+Traditionally, since it's widespead takeup in 1992 with Windows 3.1,
+Windows has been used as primarily as a desktop operating system. Users 
+would reuired to be physically in front of the system and the system 
+would only be usable by the currently logged in user.
+
+After 1995, with the release of the Windows NT strain of Windows, a
+version specifically aimed at servers was introduced. Features added to
+the server releases include Terminal Services, which allowed a user
+to use the system without being physically in front of the system. This
+feature has been enhanced in recent years to allow multiple users use the 
+system remotely using Terminal Services.
+
+Unix systems on the other hand have usually been first choices to power
+servers since the 1970s when AT\&T first introduced Unix to the world.
+It's flexible, modular design gave it the ability to scale to meet the
+task given to it. During the 1980s, the original Unix releases suffered
+due to the rising popularity of the BSD Unix derivative. A similar
+uptake is currently visible with the migration from modern Unix 
+derivatives to Linux, a free Unix clone which is the primary example of
+Open Source Programming projects.
+
+Unix derivative systems have constantly been multi user systems. Users
+can use the system locally or remotely and are able to run tasks pseudo
+simulatneously, independant of each other. As a result, until recent
+years, Unix derivatives were almost exclusively for servers only. In
+recent years, with the widepsread use of X Windows implementations, Unix
+has been used on high end workstations, from manufacturers like Sun and
+SGI and more recently, Linux and modern BSD systems are becoming more
+and more popular as desktop systems.
+
 \section*{Usability}
+
+Over the last 11 years, since Windows 3.1, the command line interface
+existing from MS-DOS has been gradually phased out due to the belief
+that a command line interface to an operating system is complicated and
+has a sleep learning curve for new or inexperienced users. As a result,
+Windows initially ran on top of MS-DOS, but by Windows 2000, the MS-DOs
+prereqresuite was removed and a MS-DOS emuator was introduced instead.
+As a result, Windows is almost exclusively used via GUI interfaces,
+primarily for their user friendlyness, except for doing more complex
+tasks or problem solving, when expreienced users and administrators find
+the command line interface to Windows much easier and more informative
+than existing GUI windows.
+
+Due to the comman perseption that a command line interface is
+complicated and required learning curve, Unix derivatives are usually
+considered hard to use. Due to this perception, various projects
+(such as SuSE Linux's YaST\footnote{SuSE YaST -
+http://www.suse.com/us/private/products/suse\_linux/prof/yast.html - 
+$27^{th}$ October $2004$} - Yet Another Setup Tool) aim to be
+comprehensive GUI wrappers to the Unix command line in order to provide
+friendlier methods of using a system effectively via the command line.
 
 \section*{Reliability}
 
+For a number of decades, Unix derivates have kept their reputation in
+terms of reliability. With minimal or even no special preparation, a
+Unix derivative can typically have an uptime (time since last reboot) 
+over 30 days. According to Netcraft\footnote{Netcraft - Top 50 Uptimes 
+-  http://uptime.netcraft.com/up/today/top.avg.html - $26^{th}$ October
+$2004$}, the highest uptime of all the servers it monitors all run a BSD
+Unix derivative. However this ability in itself does not prove Unix's
+reliability, but does demonstrate that it's clean, modular approach to 
+it's kernel components and even how the system surrounding is layed out 
+is the key to it's flexability and reliability for numerous tasks.
+
+On the other hand, Windows systems are not known for it's clean, modular
+design. While for certain tasks can be performed regularly and maintain
+a high uptime for a Windows system, uptime for a Windows machine is
+always far lower than a Unix uptime. Discounting software errors and
+bugs, official updates from Microsoft can often require a system reboot,
+even if they don't directly affect the core services and the kernel.
+However, the equivalent update for a Unix system will rarely affect the
+system's kernel, unless it is a direct kernel update.
+
 \section*{Security}
+
+Virii, worms, trojans. Security patches for patches for patches.
+
+Multi user system - Single User Mode - chroot jails.
 
 \section*{Compatiblity}
 
+Windows - x86, IA64, Alpha. 3rd party driver support
+
+Unix - Everything, mobile phones, TiVo, Embedded devices. Open drivers
+
 \section*{Programs}
 
+Windows - Popular - Widely used - Mainstream software
+
+Unix - Core user base - Creating tools to work with the rest of the
+world - Samba, OpenOffice/StarOffice
+
 \section*{Total Cost of Ownership}
+
+B\$.
+
+Windows Licence + supported hardware + av + firewall + human support
+hours. No generic support from M\$
+
+Unix - No Licence - Any hadware + no av + included firewall + minimal
+supprt time. - Support contract available from distros
 
 \section*{Conclusion}
 
