@@ -150,3 +150,144 @@ Entity <shift_register> (Architecture <behavioral>) compiled.
 Project Navigator Auto-Make Log File
 -------------------------------------
 
+
+Process interrupted by the user.
+ERROR: 
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/addr_counter.vhd in Library work.
+ERROR:HDLParsers:1411 - F:/3ba5/Assignments/1A/addr_counter.vhd Line 24.
+   Parameter COUNT of mode out can not be associated with a formal parameter of
+   mode in.
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/addr_counter.vhd in Library work.
+ERROR:HDLParsers:1411 - F:/3ba5/Assignments/1A/addr_counter.vhd Line 23.
+   Parameter COUNT of mode out can not be associated with a formal parameter of
+   mode in.
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/addr_counter.vhd in Library work.
+ERROR:HDLParsers:1411 - F:/3ba5/Assignments/1A/addr_counter.vhd Line 26.
+   Parameter COUNT of mode out can not be associated with a formal parameter of
+   mode in.
+
+Process interrupted by the user.
+ERROR: 
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/addr_counter.vhd in Library work.
+ERROR:HDLParsers:1411 - F:/3ba5/Assignments/1A/addr_counter.vhd Line 28.
+   Parameter COUNT of mode out can not be associated with a formal parameter of
+   mode in.
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+WARNING:HDLParsers:3458 - Because of erroneous VHDL in VHDL file
+   F:\3ba5\Assignments\1A/mem.vhd, automatic determination of correct order of
+   compilation of files in project file pepExtractor.prj is not possible. Please
+   compile your vhdl file(s) individually to find and fix the error(s) in your
+   vhdl file(s). Defaulting to compilation in the order vhdl file names appear
+   in the project file.
+Compiling vhdl file F:\3ba5\Assignments\1A/mem.vhd in Library work.
+ERROR:HDLParsers:164 - F:\3ba5\Assignments\1A/mem.vhd Line 24. parse error,
+   unexpected TOKBEGIN, expecting OPENPAR or TICK or LSQBRACK
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+

@@ -18,7 +18,6 @@ DEVSIMULATOR Modelsim
 SIMULATORTIME 0
 DEVGENERATEDSIMULATIONMODEL VHDL
 GENERATEDSIMULATIONMODELTIME 0
-SOURCE memory.vhd
 SOURCE or_inv_gate.vhd
 SOURCE and_gate.vhd
 SOURCE shift_register.vhd
@@ -28,6 +27,9 @@ STIMULUS or_gate_tb.tbw
 STIMULUS and_gate_tb.tbw
 STIMULUS dlatch_tb.tbw
 STIMULUS shift_register_tb.tbw
+STIMULUS addr_counter_tb.tbw
+SOURCE mem.vhd
+STIMULUS mem_tb.tbw
 [STATUS-ALL]
 shift_register_tb.vhwFile=ERRORS,0
 [STRATEGY-LIST]

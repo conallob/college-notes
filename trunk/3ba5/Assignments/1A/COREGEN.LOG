@@ -17,5 +17,5 @@ All runtime messages will be recorded in F:\3ba5\Assignments\1A\COREGEN.LOG
 SETPROJECT .
 Set current Project to F:\3ba5\Assignments\1A
 SET BusFormat = BusFormatAngleBracketNotRipped
-SETXIPCPORTHOST 2484
+SETXIPCPORTHOST 4184
 XIPCPJSENDCORES virtex2
