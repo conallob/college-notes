@@ -41,4 +41,26 @@ yes
 
 \end{section}
 
+\section{Predecate}
+
+read_everything(File) :- \\
+\tab see(File),
+. \\ 
+. \\ read(T),
+. \\ process(T),
+. \\
+. \\
+. \\
+
+\\
+
+seen. \\
+
+\\
+
+process(end_of_file). \\
+process(X) :- write(X),nl,read(Y),process(Y).
+
+\end{section}
+
 \end{document}
