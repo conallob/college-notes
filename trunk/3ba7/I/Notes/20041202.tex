@@ -1,0 +1,183 @@
+% $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $2^{nd}$ December 2004}
+
+\maketitle
+
+$\nonterminal{A} \to \actionsym{x} b \actionsym{y} x$
+
+? Action corresponding to row $\nonterminal{A}$ for column $b$.
+
+$OUT(x),OUT(y),REPLACE(x),ADVANCE$
+
+
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+						&	$a$	&	$b$	&	$c$	&	$\dashv$	\\
+\hline
+$\nonterminal{S}$	&			&			&			&				\\
+\hline
+$\nonterminal{A}$	&			&			&			&				\\
+\hline
+$\triangledown$	&			&			&			&				\\
+\hline
+$\actionsym{z}$	&			&			&			&				\\
+\hline
+\end{tabular}
+
+Action always:
+
+$OUT(z).POP,RETAIN$
+
+\section*{Q-Grammar (Quasi-Simple)}
+
+\begin{eqnarray*}
+\nonterminal{S}	&	\to	&	a \nonterminal{A} \nonterminal{S}	\\
+\nonterminal{S}	&	\to	&	b 												\\
+\nonterminal{A}	&	\to	&	c \nonterminal{A} \nonterminal{S}	\\
+\nonterminal{A}	&	\to	&	\epsilon 									\\
+\end{eqnarray*}
+
+Properties:
+
+\begin{enumerate}
+
+\item Right hand side of production starts with terminal symbols or are
+empty.
+
+\item Slection sets for productions for the same non-terminal symbol are
+disjoint
+
+\end{enumerate}
+
+$aacbb$
+
+\begin{eqnarray*}
+\nonterminal{S}	&	\stackrel{1}{\Rightarrow}	&	a \nonterminal{A} \nonterminal{S}	\\
+						&	\stackrel{4}{\Rightarrow}	&	a \nonterminal{S}							\\
+						&	\stackrel{1}{\Rightarrow}	&	aa \nonterminal{A} \nonterminal{S}	\\
+						&	\stackrel{3}{\Rightarrow}	&	aac \nonterminal{A} \nonterminal{S}	\nonterminal{S}\\
+						&	\stackrel{4}{\Rightarrow}	&	aac \nonterminal{S} \nonterminal{S}	\\
+						&	\stackrel{2}{\Rightarrow}	&	aacb \nonterminal{S}						\\
+						&	\stackrel{2}{\Rightarrow}	&	aacbb											\\
+\end{eqnarray*}
+
+\subsection*{$FOLLOW$}
+
+$FOLLOW(\nonterminal{X})$ is the set of terminal symbols that can
+immediately follow the non-terminal $\nonterminal{X}$ in any
+intermediate string derived from $\nonterminal{S} \dashv$.
+
+\[ FOLLOW(\nonterminal{A}) = [a,b] \]
+
+\subsection*{$SELECT$}
+
+$SELECT(\nonterminal{A} \to x)$ is the set of terminal symbols for which
+the production $\nonterminal{A} \to \alpha$ must be chosen when
+non-terminal symbol $\nonterminal{A}$ is at the top of the stack.
+
+For productions of the form $\nonterminal{A} \to b \alpha$, 
+$SELECT(\nonterminal{A} \to b \alpha) = \{b\}$
+
+And for productions of the form $\nonterminal{A} \to \epsilon$, 
+$SELECT(\nonterminal{A} \to \epsilon) = FOLLOW(\nonterminal{A})$.
+
+$SELECT(\nonterminal{S} \to b \nonterminal{A}\nonterminal{S}) = \{a\}$ \\
+$SELECT(\nonterminal{S} \to b) = \{b\}$ \\
+$SELECT(\nonterminal{A} \to c \nonterminal{A}\nonterminal{S}) = \{c\}$ \\
+$SELECT(\nonterminal{A} \to \epsilon) = FOLLOW(\nonterminal{A}) = \{a,b\}$ \\
+
+$SELECT(\nonterminal{S} \to b \nonterminal{A}\nonterminal{S}) \cap
+SELECT(\nonterminal{S} \to b) \\ = \{a\} \cap \{b\} = \emptyset$
+
+$SELECT(\nonterminal{A} \to b \nonterminal{A}\nonterminal{S}) \cap
+SELECT(\nonterminal{A} \to \epsilon) \\ = \{c\} \cap \{a,b\} = \emptyset$
+
+
+\begin{eqnarray*}
+\nonterminal{S}	&	\to	&	a \nonterminal{A}				\\
+\nonterminal{S}	&	\to	&	b \nonterminal{A}				\\
+\nonterminal{A}	&	\to	&	c \nonterminal{A}	a			\\
+\nonterminal{A}	&	\to	&	\epsilon							
+\end{eqnarray*}
+
+\begin{eqnarray*}
+SELECT(\nonterminal{S}	\to	a \nonterminal{A}		) &	= 	&	\{a\}	\\
+SELECT(\nonterminal{S}	\to	b \nonterminal{A}		) &	= 	&	\{b\}	\\
+SELECT(\nonterminal{A}	\to	c \nonterminal{A}	a	) &	= 	&	\{c\}	\\
+SELECT(\nonterminal{A}	\to	\epsilon					) &	= 	&
+FOLLOW(\nonterminal{S}) = \{a,\dashv\}	\\
+\end{eqnarray*}
+
+Table entry for production of the form $\nonterminal{A} \to \epsilon$
+for row $a$ and colums $SELECT(\nonterminal{A}	\to	\epsilon$ are
+simply $POP,RETAIN$
+
+\subsection*{Push Down Machine}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+						&	$a$	&	$b$	&	$c$	&	$\dashv$	\\
+\hline
+$\nonterminal{S}$	&	$\#1$	&	$\#2$	&			&				\\
+\hline
+$\nonterminal{A}$	&	$\#4$	&	$\#4$	&	$\#3$	&	$REJECT/\#4$	\\
+\hline
+$\triangledown$	&			&			&			&	$ACCEPT$	\\
+\hline
+\end{tabular}
+
+Starting Stack: $\triangledown \nonterminal{S}$
+
+$\#1$: $REPLACE(\nonterminal{S}\nonterminal{A}),ADVANCE$ (Note: $\equiv PUSH(\nonterminal{A})$)\\
+$\#2$: $POP,ADVANCE$ \\
+$\#3$: $REPLACE(\nonterminal{S}\nonterminal{A}),ADVANCE$ \\
+$\#4$: $POP,RETAIN$ \\
+
+\begin{tabular}{lcr}
+$\triangledown \nonterminal{S}$	&	\hspace{10mm}	&	$aacbb\dashv$	\\
+$\triangledown \nonterminal{S} \nonterminal{A}$	&	\hspace{10mm}	&	$acbb\dashv$	\\
+$\triangledown \nonterminal{S}$	&	\hspace{10mm}	&	$acbb\dashv$	\\
+$\triangledown \nonterminal{S} \nonterminal{A}$	&	\hspace{10mm}	&	$cbb\dashv$	\\
+$\triangledown \nonterminal{S} \nonterminal{S}\nonterminal{A}$	&	\hspace{10mm}	&	$bb\dashv$	\\
+$\triangledown \nonterminal{S} \nonterminal{S}$	&	\hspace{10mm}	&	$bb\dashv$	\\
+$\triangledown \nonterminal{S}$	&	\hspace{10mm}	&	$b\dashv$	\\
+$\triangledown $						&	\hspace{10mm}	&	$\dashv$	\\
+\end{tabular}
+
+$\Rightarrow ACCEPT$
+
+\begin{tabular}{|c|}
+		\\
+\hline
+\sout{$\nonterminal{A}$}	\\
+\hline
+$\nonterminal{S}$	\\
+\hline
+$\vdots$	\\
+$\vdots$	\\
+\hline
+$\triangledown$	\\
+\hline
+\end{tabular}
+
+
+\end{document}
