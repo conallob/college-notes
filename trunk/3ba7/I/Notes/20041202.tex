@@ -179,5 +179,49 @@ $\triangledown$	\\
 \hline
 \end{tabular}
 
+\section*{Exercise}
+
+\subsection*{1}
+
+\begin{eqnarray}
+\nonterminal{S}	&	\to	&	a \nonterminal{A} \nonterminal{B}	\\	
+\nonterminal{S}	&	\to	&	b \nonterminal{B} \nonterminal{S}	\\	
+\nonterminal{S}	&	\to	&	\epsilon										\\	
+\nonterminal{S}	&	\to	&	c \nonterminal{B} \nonterminal{S}	\\	
+\nonterminal{S}	&	\to	&	\epsilon										\\
+\nonterminal{S}	&	\to	&	d \nonterminal{B}							\\	
+\nonterminal{S}	&	\to	&	e 												\\	
+\end{eqnarray}
+
+Show that this is a Q-Grammar and build a push down control for it.
+
+\subsection*{2}
+
+\begin{eqnarray}
+\nonterminal{B} \to c \nonterminal{S} \nonterminal{A} e
+\end{eqnarray}
+
+How can this be added into the existing grammer from $1$?
+
+\subsection*{Start of Solution}
+
+\begin{tabular}{lcl}
+$1$	&	\hspace{10mm}	&	$\{a\}$	\\
+$2$	&						&	$\{b\}$	\\
+$3$	&						&	$FOLLOW(\nonterminal{S})$	\\
+$4$	&						&	$\{c\}$	\\
+$5$	&						&	$FOLLOW(\nonterminal{A})$	\\
+$6$	&						&	$\{d\}$	\\
+$7$	&						&	$\{e\}$	\\
+\end{tabular}
+
+$FOLLOW(\nonterminal{A}) = \{d,e\} \\
+FOLLOW(\nonterminal{S}) = FOLLOW(\nonterminal{A}) + \{\dashv\} =
+\{d,e,\dashv\}$
+
+\begin{eqnarray*}
+\nonterminal{S} 	&	\stackrel{1}{\Rightarrow} 	& a\nonterminal{A}\nonterminal{B}	\\
+						&	\stackrel{4}{\Rightarrow} 	& ac \nonterminal{B} \nonterminal{S} \nonterminal{B} \\
+\end{eqnarray*}
 
 \end{document}
