@@ -1,5 +1,10 @@
+% $Id$
+
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
 
 \begin{document}
 
@@ -35,12 +40,15 @@ Semantic processing includes:
 		Selecting correct class of operator for instruction when expanding
 		atoms during code generation.
 
+\begin{verbatim}
 
 A + B
 .
 .
 .
 .
+\end{verbatim}
+
 ADD($\uparrow$ A, $\uparrow$ B, $\uparrow$ $T_{n}$)
 
 % Diagram
@@ -69,7 +77,7 @@ iv A set of accepting states
 
 v A set of rejecting states.
 
-\[ \delta(S_{OLD}, INPUT) \therefore S_{NEW} \]
+\[ \delta(S_{OLD}, INPUT) \Rightarrow S_{NEW} \]
 
 % Diagram
 
@@ -81,17 +89,20 @@ States: $\{EVEN, ODD \}$
 
 Starting State: $\{EVEN\}$
 
-Transitions:	$\delta(EVEN, 0) \therefore EVEN $
-					$\delta(EVEN, 1) \therefore ODD $
-					$\delta(ODD, 0) \therefore ODD $
-					$\delta(ODD, 0) \therefore EVEN $
+Transitions:	
+
+$\delta(EVEN, 0) \Rightarrow EVEN $ \\
+$\delta(EVEN, 1) \Rightarrow ODD $ \\
+$\delta(ODD, 0) \Rightarrow ODD $ \\
+$\delta(ODD, 0) \Rightarrow EVEN $ \\
+
+
 Accepting States: ${ODD}$
 
 
 Transition Table:
 
-\begin{list}[c|c|c]
-
+\begin{tabular}{|c|c|c|}
 \hline
 States/Input & $0$ 		& 	$1$ 	\\
 \hline
@@ -99,8 +110,7 @@ $EVEN$		 & $EVEN$	& $ODD$	\\
 \hline
 $ODD$			 & $ODD$		& $EVEN$	\\
 \hline
-
-\end{table}
+\end{tabular}
 
 $1 = $ Accepting State \\
 
@@ -114,18 +124,16 @@ $01011$
 
 % diagram
 
-\begin{list}[c|c|c|c]
-
+\begin{tabular}{|c|c|c|c|}
 \hline
 		 	& $0$ 	& $1$ 	& 		\\
 \hline
 $S$		& $S$		& $S$		& $0$	\\
 \hline
+\end{tabular}
 
-\end{table}
 
-
-\begin{list}[c|c|c|c]
+\begin{tabular}{|c|c|c|c|}
 
 \hline
 		 	& $0$ 	& $1$ 	& 		\\
@@ -135,7 +143,7 @@ $S$		& $T$		& $T$		& $1$	\\
 $T$		& $T$		& $T$		& $0$	\\
 \hline
 
-\end{table}
+\end{tabular}
 
 
 \section{Finite State Processing Machine:}
@@ -159,8 +167,7 @@ Accepting states: ${NOONES}$
 
 Transition Table:
 
-\begin{list}[c|c|c|c]
-
+\begin{tabular}{|c|c|c|c|}
 \hline
 		 	& $0$ 			& $1$ 			& 			\\
 \hline
@@ -170,12 +177,10 @@ $ONEONE$	& $ERROR$		& $NOONES$		& "NO"	\\
 \hline
 $ERROR$	& $ERROR$		& $ERROR$		& "NO"	\\
 \hline
+\end{tabular}
 
-\end{table}
 
-
-\begin{list}[c|c|c|c]
-
+\begin{tabular}{|c|c|c|c|}
 \hline
 		 	& $0$ 			& $1$ 			& $\dashv$		\\
 \hline
@@ -183,7 +188,6 @@ $NOONES$	& $NOONES$		& $ONEONE$		& "YES" $0$		\\
 \hline
 $ONEONE$	& $ERROR$		& "YES" $1$		& "NO"			\\
 \hline
-
-\end{table}
+\end{tabular}
 
 \end{document}
