@@ -1,5 +1,9 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+\usepackage{listings}
+
+
+\lstset{language=Prolog}
 
 \begin{document}
 
@@ -9,28 +13,33 @@
 
 \section{Introduction}
 
-Java
-C/C++
-Eiffel
-$68K$ ASM - Proceedural
-Perl
-Python
-PHP
-QBASIC
+Proceedural Languages - 
+
+\begin{itemize}
+\item Java
+\item C/C++
+\item Eiffel
+\item $68K$ ASM
+\item Perl
+\item Python
+\item PHP
+\item QBASIC
+\end{itemize}
 
 Prolog: Non proceedural, declarative
 
-
-\[ A1 & : & 85 \]
-\[ B4 & : & 876 \]
-\[ C9 & : & A1 \times B4 \]
+\begin{eqnarray*}
+A1 & : & 85 \\
+B4 & : & 876 \\
+C9 & : & A1 \times B4 \\
+\end{eqnarray*}
 
 
 Listener \\
 Interpreter \\
  
 
-\section{Example}
+\begin{lstlisting}
 
 parent(chris,liz). \% a clause \\
 parent(chris,mike). \\
@@ -39,35 +48,28 @@ parent(liz,louise). \\
 parent(make,clare). \\
 parent(mike,kate). \\
 
-\\
-\\
 
 ?- parent(chris,liz). \\
 
-\\
-
 yes
 
-\\
 
 ?-
 
 :- \% if \\
 
-\\
-
 \_ \% anonymous variable \\
-
-\\
 
 \[1,2,3\] \% list \\
 
-\end{section}
+\end{lstlisting}
 
 \section{Predecate}
 
-read_everything(File) :- \\
-\tab see(File),
+
+\begin{lstlisting}
+
+read\_everything(File) :-  see(File),
 . \\ 
 . \\ read(T),
 . \\ process(T),
@@ -75,15 +77,11 @@ read_everything(File) :- \\
 . \\
 . \\
 
-\\
-
 seen. \\
 
-\\
-
-process(end_of_file). \\
+process(end\_of\_file). \\
 process(X) :- write(X),nl,read(Y),process(Y).
 
-\end{section}
+\end{lstlisting}
 
 \end{document}
