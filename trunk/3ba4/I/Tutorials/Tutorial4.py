@@ -31,8 +31,6 @@ for a in range(N):
 	cache_tags[a] = [];
 	for b in range(K):
 		cache_tags[a].append(-1);
-		b = b + 1;
-	a = a + 1;
 
 # A simple wrapper function to return an integer from math.log(x, 2)
 
@@ -67,10 +65,8 @@ for i in range(len(tut_seq)):
 				print "[32mHit[m";
 				##print "(",n, k,")", cache_tags[n][k];
 				hits += 1;
-			#k = k + 2;
 		#n = set; # skip straight to the appropriate set
 	else:
 		print "[33m", n, "[m";
 		lost += 1;
-	#i = i + 1;
 print "Hits:", hits, "Misses:", misses, "Lost in the Void:", lost;
