@@ -3,11 +3,11 @@
 #!/bin/bash
 
 echo "Removing Shared Memory"
-ipcs | grep $USER | nawk '$1 ~ /m/ {system("ipcrm -m "$2"")}'
+ipcs | grep $USER | awk '$1 ~ /m/ {system("ipcrm -m "$2"")}'
 
 echo "Removing Semaphores"
-ipcs | grep $USER | nawk '$1 ~ /s/ {system("ipcrm -s "$2"")}'
+ipcs | grep $USER | awk '$1 ~ /s/ {system("ipcrm -s "$2"")}'
 
 echo "Removing Message Queues"
-ipcs | grep $USER | nawk '$1 ~ /q/ {system("ipcrm -q "$2"")}'
+ipcs | grep $USER | awk '$1 ~ /q/ {system("ipcrm -q "$2"")}'
 
