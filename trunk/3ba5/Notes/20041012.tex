@@ -1,0 +1,83 @@
+% $Id: 20041012.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA7: Computer Engineering \\ Lecture Notes \\ $12^{th}$ October 2004}
+
+\maketitle
+
+Dan McCarthy
+
+Room: ORI G26
+
+mccarthy@cs.tcd.ie
+
+\section*{Objective}
+
+To acquire an understanding of computer architecture, both behaviour and
+design, from von Neuman's single processor up to the highly parallel
+pipelined and multiprocessor systems in use today.
+
+\section*{References}
+
+See Handout
+
+\section*{Course Organisation}
+
+Lectures will be self contained, drawing on material from Zarghan, Hwang
+and Xu, and Quinn.
+
+Tutorials will be based on problem material drawn from these texts,
+supplemented with my own questions.
+
+Projects will require you to implement both pipelined and multiprocessor
+functions. 3 projects, 1 per term.
+
+Assessment:
+
+\begin{tabular}{lccr}
+Exam based on lectures, projects and tutorials	&	&	&	$80\%$	\\
+Projects													 	&	&	&	$20\%$	
+\end{tabular}
+
+A pass is required for the project material.
+
+\section*{Introduction: Fundamental Constraints}
+
+We can transport information as electro-magnetic waves at $C = 300,000
+km/s$ in free space; in copper they travel at about $0.99 C$, slowing to
+about $0.001C$ passing through trnasistors (gates).
+
+% Circuit diagram
+
+For a given clock rate $f$, this puts a limit on the physical seperation
+of registers and hence system size.
+
+Consider for example, a process $P$ with a clock rate $f = 1GHz =
+1000 MHz = 109 cycles/s$
+
+Then the period $\tau = \frac{1}{f} = \frac{1}{109} = 10^{-9} = 1 ns$
+
+Graphically:
+
+% Graph Diagram
+
+Some registers load values.
+
+Some registers load results.
+
+
+Clearly the maximum distance between the source and destination
+registers is:
+
+\[ d = c \times \tau = 3 \times 10^{10} \times 10^{-9} = 30 cm\]
+
+\end{document}
