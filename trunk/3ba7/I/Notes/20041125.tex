@@ -1,0 +1,116 @@
+% $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $25^{th}$ November 2004}
+
+\maketitle
+
+\begin{eqnarray*}
+\langle E \rangle &	\to	&	IDENT \langle R \rangle	\\
+\langle R \rangle &	\to	&	+ IDENT \langle R \rangle	\\
+\langle R \rangle &	\to	&	\ast IDENT \langle R \rangle	\\
+\langle R \rangle &	\to	&	\epsilon \\
+\end{eqnarray*}
+
+$A + B \ast C$
+
+% Diagram
+
+Grammar is precedenceless
+
+\begin{eqnarray*}
+\langle S \rangle &	\to	&	IDENT_{\synth{p}} := \langle E \rangle_{\synth{q}} \actionsym{ASSIGN}_{\synth{r,s}}	\\
+\synth{r}			&	\synth{\leftarrow}	&	\synth{q} \\
+\synth{s}			&	\synth{\leftarrow}	&	\synth{p} \\
+\langle E \rangle_{\synth{p}} &	\to	&	IDENT_{\synth{q}} \langle R \rangle_{\synth{r}}	\\
+\synth{r}			&	\synth{\leftarrow}	&	\synth{q} \\
+\langle R \rangle_{\synth{p}} &	\to	&	+ IDENT_{\synth{q}} \actionsym{ADD}_{\synth{r,s,t}} \langle R \rangle_{\synth{u}} \\
+\synth{r}			&	\synth{\leftarrow}	&	\synth{p} \\
+\synth{s}			&	\synth{\leftarrow}	&	\synth{q} \\
+(\synth{t,u})		&	\synth{\leftarrow}	&	\synth{NEW T} \\
+\langle R \rangle_{\synth{p}} &	\to	&	\ast IDENT _{\synth{q}}\actionsym{MULT}_{\synth{r,s,t}} \langle R \rangle_{\synth{u}}	\\
+\synth{r}			&	\synth{\leftarrow}	&	\synth{p} \\
+\synth{s}			&	\synth{\leftarrow}	&	\synth{q} \\
+(\synth{t,u})		&	\synth{\leftarrow}	&	\synth{NEW T} \\
+\langle R \rangle_{\synth{p}} &	\to	&	\epsilon \\
+\end{eqnarray*}
+
+% Diagram
+
+Where $\langle R \rangle_{\synth{p}}$ - inherited $\synth{p}$, all
+action symbol attributes are inherited and $\synth{NEW T}$ ... 
+
+\begin{eqnarray*}
+\langle S \rangle &	\to	&	IDENT_{\synth{p}} := \langle E \rangle_{\synth{q}} \actionsym{ASSIGN}_{\synth{r,s}}	\\
+\synth{r}			&	\synth{\leftarrow}	&	\synth{q} \\
+\synth{s}			&	\synth{\leftarrow}	&	\synth{p} \\
+\langle E \rangle_{\synth{p}} &	\to	&	IDENT_{\synth{q}} \langle R \rangle_{\synth{r, s}}	\\
+\synth{r}			&	\synth{\leftarrow}	&	\synth{q} \\
+\synth{p}			&	\synth{\leftarrow}	&	\synth{s} \\
+\langle R \rangle_{\synth{p, q}} &	\to	&	+ IDENT_{\synth{r}} \actionsym{ADD}_{\synth{s,t,u}} \langle R \rangle _{\synth{v, w}}\\
+\synth{s}			&	\synth{\leftarrow}	&	\synth{p} \\
+\synth{t}			&	\synth{\leftarrow}	&	\synth{r} \\
+(\synth{u,v})		&	\synth{\leftarrow}	&	\synth{NEW T} \\
+\synth{q}			&	\synth{\leftarrow}	&	\synth{w} \\
+\langle R \rangle_{\synth{p, q}} &	\to	&	\ast IDENT_{\synth{r}} \actionsym{MULT}_{\synth{s,t,u}} \langle R \rangle_{\synth{v, w}}	\\
+\synth{s}			&	\synth{\leftarrow}	&	\synth{p} \\
+\synth{t}			&	\synth{\leftarrow}	&	\synth{r} \\
+(\synth{u,v})		&	\synth{\leftarrow}	&	\synth{NEW T} \\
+\synth{q}			&	\synth{\leftarrow}	&	\synth{w} \\
+\langle R \rangle_{\synth{p, q}} &	\to	&	\epsilon \\
+\synth{q}			&	\synth{\leftarrow}	&	\synth{p} \\
+\end{eqnarray*}
+
+Where $\langle E \rangle_{\synth{p}}$ - synthesized $\synth{p}$, 
+$\langle R \rangle_{\synth{p,q}}$ - inherited $\synth{p}$, synthesized
+$\synth{q}$. All action symbol attributes are inherited and 
+$\synth{NEW T}$ allocates a new symbol table entry for a partial result. 
+
+% Diagram
+
+\section*{Question}
+
+\begin{eqnarray*}
+\langle E \rangle &	\to	&	\langle T \rangle \langle E-LIST \rangle	\\
+\langle E-LIST \rangle &	\to	&	+ \langle T \rangle \langle E-LIST \rangle	\\
+\langle E-LIST \rangle &	\to	&	\epsilon \\
+\langle T-LIST \rangle &	\to	&	\ast \langle P \rangle \langle E-LIST \rangle	\\
+\langle T-LIST \rangle &	\to	&	\epsilon \\
+\langle P \rangle &	\to	&	\left( \langle E \rangle \right) \\
+\langle P \rangle &	\to	&	IDENT \\
+\end{eqnarray*}
+
+$A \ast \left( B + C \right)$
+
+\section*{Solution}
+
+\begin{eqnarray*}
+\langle E \rangle_{\synth{p}} &	\to	&	\langle T \rangle_{\synth{q}} \langle E-LIST \rangle_{\synth{r, s}}	\\
+\synth{r}			&	\synth{\leftarrow}	&	\synth{q} \\
+\synth{p}			&	\synth{\leftarrow}	&	\synth{s} \\
+\langle E-LIST \rangle_{\synth{p, q}} &	\to	&	+ \langle T \rangle_{\synth{r}} \actionsym{ADD}_{\synth{s, t, u}} \langle E-LIST \rangle_{\synth{v, w}}	\\
+\synth{s}			&	\synth{\leftarrow}	&	\synth{p} \\
+\synth{t}			&	\synth{\leftarrow}	&	\synth{r} \\
+(\synth{u, v})		&	\synth{\leftarrow}	&	\synth{NEW T} \\
+\synth{q}			&	\synth{\leftarrow}	&	\synth{w} \\
+\langle E-LIST \rangle_{\synth{p, q}} &	\to	&	\epsilon \\
+\synth{q}			&	\synth{\leftarrow}	&	\synth{p} \\
+						&	\vdots					&	
+\end{eqnarray*}
+
+\end{document}
