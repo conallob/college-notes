@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  24 NOV 2004 21:38
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  25 NOV 2004 20:54
 **20041123.tex
 (./20041123.tex
 LaTeX2e <2001/06/01>
@@ -190,14 +190,23 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
  [1
 
-] [2] (./20041123.aux) ) 
-Here is how much of TeX's memory you used:
- 3279 strings out of 95847
- 39598 string characters out of 1196008
- 127534 words of memory out of 1000001
- 6191 multiletter control sequences out of 10000+50000
- 13582 words of font info for 56 fonts, out of 500000 for 1000
- 14 hyphenation exceptions out of 1000
- 26i,10n,28p,212b,479s stack positions out of 1500i,500n,5000p,200000b,5000s
+] [2]
+Overfull \hbox (29.33469pt too wide) in paragraph at lines 105--107
+[]$\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 STATEMENT\OMS/cmsy/m/n/12 i$ $!$ $\OML/cm
+m/m/it/12 IF$ $\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 C\OMS/cmsy/m/n/12 i$ $\OML/cm
+m/m/it/12 THEN$ $\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 STATEMENT\OMS/cmsy/m/n/12 i
+$ $\OML/cmm/m/it/12 ELSE$ $\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 STATEMENT\OMS/cms
+y/m/n/12 i$ 
+ []
 
-Output written on 20041123.dvi (2 pages, 3288 bytes).
+[3] (./20041123.aux) ) 
+Here is how much of TeX's memory you used:
+ 3282 strings out of 95847
+ 39639 string characters out of 1196008
+ 127534 words of memory out of 1000001
+ 6193 multiletter control sequences out of 10000+50000
+ 14188 words of font info for 58 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 26i,12n,28p,212b,479s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 20041123.dvi (3 pages, 5136 bytes).

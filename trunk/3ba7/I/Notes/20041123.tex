@@ -59,4 +59,50 @@ Where $\langle C \rangle_{\synth{p}}$ synthesizes $\synth{p}$, all
 action symbol attributes are inherited and $\synth{NEW L}$ allocates a
 new symbol table entry for a $\actionsym{LABEL}$.
 
+$\actionsym{JUMPF}_{synth{p, q}}$ - \\
+$\actionsym{LABEL}_{\synth{p}}$
+
+$REPEAT \\
+\mbox{\hspace{15mm}} \leftarrow \\
+\vdots \\
+UNTIL \\
+? \mbox{\hspace{10mm}} \rightarrow \uparrow $
+
+
+$IF$ $\langle C \rangle$ $?$ $THEN$ $\langle STATEMENT \rangle \cdots \\
+\mbox{\hspace{14mm}} \mid \hspace{50mm} \uparrow \\
+\mbox{\hspace{14mm}} \overrightarrow{\mbox{\hspace{54mm}}} 
+$
+
+$\cdots \\
+\cdots \\
+\langle C \rangle \\
+BCF \cdots \\
+\cdots \\
+\cdots \\
+\cdots \\
+\langle STATEMENT \rangle \\
+\cdots \\
+\cdots \\
+\\
+AEC 8 \to$
+
+
+\begin{tabular}{r|c|l}
+							&					&				\\
+							&					&				\\
+$\synth{NEW L} \to$	&	$0000000$	&	$AFA0$	\\
+							&					&				\\
+\end{tabular}
+
+Symbol Table
+
+
+\section*{Excercises:}
+
+$\langle STATEMENT \rangle$ $\to$ $WHILE$ $\langle C \rangle$ $DO$ $\langle STATEMENT \rangle$
+
+$\langle STATEMENT \rangle$ $\to$ $IF$ $\langle C \rangle$ $THEN$
+$\langle STATEMENT \rangle$ $ELSE$ $\langle STATEMENT \rangle$
+
 \end{document}
