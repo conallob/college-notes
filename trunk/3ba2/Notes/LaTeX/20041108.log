@@ -1,6 +1,6 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  10 NOV 2004 20:26
-**20041101.tex
-(./20041101.tex
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  10 NOV 2004 21:52
+**20041108.tex
+(./20041108.tex
 LaTeX2e <2001/06/01>
 Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
 ohyphenation, loaded.
@@ -32,8 +32,8 @@ Package: amsfonts 2001/10/25 v2.2f
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
 ))
-No file 20041101.aux.
-\openout1 = `20041101.aux'.
+No file 20041108.aux.
+\openout1 = `20041108.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -62,37 +62,25 @@ LaTeX Warning: No \author given.
 [1
 
 ]
-Overfull \hbox (91.65024pt too wide) in paragraph at lines 58--58
-[]                                                      \OT1/cmtt/m/n/12 char_t
-o_tree(Char,L,Ls).[] 
+Overfull \hbox (42.25021pt too wide) in paragraph at lines 98--98
+[]\OT1/cmtt/m/n/12 % Usage: specify target state and a list containing the star
+ting state[] 
  []
 
-
-Overfull \hbox (73.12523pt too wide) in paragraph at lines 58--58
-[]                                                   \OT1/cmtt/m/n/12 char_to_t
-ree(Char,R,Rs).[] 
+[2]
+Overfull \hbox (42.25021pt too wide) in paragraph at lines 120--120
+[]\OT1/cmtt/m/n/12 % Usage: specify target state and a list containing the star
+ting state[] 
  []
 
-
-Overfull \hbox (48.42522pt too wide) in paragraph at lines 58--58
-[]                               \OT1/cmtt/m/n/12 char_to_tree(C,TreeIn,TreeInt
-ermediate),[] 
- []
-
-
-Overfull \hbox (42.25021pt too wide) in paragraph at lines 58--58
-[]                               \OT1/cmtt/m/n/12 rest_of_p2(N,TreeIntermediate
-,TreeOut).[] 
- []
-
-[2] [3] (./20041101.aux) ) 
+[3] [4] (./20041108.aux) ) 
 Here is how much of TeX's memory you used:
- 535 strings out of 95847
- 5685 string characters out of 1196008
- 49780 words of memory out of 1000001
- 3519 multiletter control sequences out of 10000+50000
- 13214 words of font info for 52 fonts, out of 500000 for 1000
+ 511 strings out of 95847
+ 5458 string characters out of 1196008
+ 48780 words of memory out of 1000001
+ 3506 multiletter control sequences out of 10000+50000
+ 9846 words of font info for 39 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 23i,6n,24p,184b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 23i,6n,24p,184b,301s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20041101.dvi (3 pages, 2372 bytes).
+Output written on 20041108.dvi (4 pages, 3064 bytes).
