@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  17 FEB 2005 00:12
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  17 FEB 2005 19:00
 **20050201.tex
 (./20050201.tex
 LaTeX2e <2001/06/01>
@@ -111,8 +111,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
  [1
 
 ] (./20050201-ANDGate.tex)
-[2] [3]
-Overfull \hbox (3.55922pt too wide) in paragraph at lines 184--186
+[2] (./20050201-InvertNANDGate.tex) [3]
+Overfull \hbox (3.55922pt too wide) in paragraph at lines 188--190
 []\OT1/cmr/m/n/12 Therefore com-ple-men-tary sit-u-a-tion re-quired if in-puts 
 are such that $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 input\OT1/cm
 r/m/n/12 ) =
@@ -120,12 +120,12 @@ r/m/n/12 ) =
 
 (./20050201-NANDGate.tex) [4] [5] (./20050201.aux) ) 
 Here is how much of TeX's memory you used:
- 1445 strings out of 95847
- 15634 string characters out of 1196009
+ 1449 strings out of 95847
+ 15733 string characters out of 1196009
  67515 words of memory out of 1000001
- 4404 multiletter control sequences out of 10000+50000
+ 4405 multiletter control sequences out of 10000+50000
  13765 words of font info for 54 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 23i,8n,24p,201b,269s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 23i,8n,24p,201b,277s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20050201.dvi (5 pages, 7104 bytes).
+Output written on 20050201.dvi (5 pages, 8544 bytes).

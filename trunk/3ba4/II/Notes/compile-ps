@@ -8,5 +8,5 @@ for i in *.dvi;
 do
 	echo $i
 	name=`echo $i | cut -d. -f1`;
-	dvips -f $name.dvi $name.ps
+	dvips -f $name.dvi >$name.ps
 done
