@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Course 3BA2: Artificial Intellegence \\ Additional Lecture Notes \\ $18^{th}$ October 2004}
+
+\maketitle
+
+\section*{Prolog Syntax}
+
+Everything is a term. \\
+
+\\
+
+Terms are simple or complex ("Structured").
+
+\subsection*{Simple}
+
+"atom" - stands for something. Eg: mike, chair \\
+
+\\
+
+\subsubsection*{Syntax:} 
+
+start with a lower case letter and followed by zero or more 
+alphanumeric characters or underscores.
+
+
+A special character followed by zero or more special characters: $ \&, \#. /. \*, \$ $
+
+
+Any string of characters enclosed in single quotes. Eg: 'The w cat', 'foo.txt', 'can''t do it'
+
+\subsubsection*{Numbers:}
+
+Integers \\
+
+Floats (Implementation dependant)
+
+\subsubsection{Variables:}
+
+Anonymous Variable: $\_$ \\
+
+member(x,[_|R]). \\
+
+\subsubsection{Named Variable:}
+
+Capitol Letter followed by zero or more aplhanumeric characters \\
+
+or \\
+
+An underscrore followed by one or more alphanumerics or underscores. \\
+
+
+Scope of variable in a clause is the clause itself if named or no scope if anonymous.
+
+\subsection{Complex:}
+
+has a functor, which has a name (some syntax rules as an atom) and has an arity of $\gt 0$. \\
+
+composs_points(north,south,east,west). \\
+
+north - Prolog term \\
+
+tree(_,R). \\
+
+temp(L1,R). \\
+
+foo(X). \\
+
+bar(X,R) $ : $ foo(X),foo(X). \\
+
+$ : $ - Infix operator \\
+
+
+\end{document}
