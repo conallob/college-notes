@@ -13,6 +13,70 @@
 
 \maketitle
 
+\section*{Cache Organisation}
+
+Organisation of a cahce can be described as:
+
+$L$ bytes per cache line (or block size).
+
+$K$ cache lines per set (degree of associativity of $K$ way)
+
+$N$ number of sets
+
+Cache size $= L \times K \times N$
+
+\subsection*{$N = 1$}
+
+Full associative Cache - address tag composed with \textbf{all} cache
+tags.
+
+Address can map to any of the $K$ cache lines.
+
+\subsection*{$K = 1$}
+
+Direct Mapped Cache - address tag compared with only one cache tag.
+
+Address can be mapped \textbf{only} onto a single cache.
+
+\subsection*{$N > 1$, $K > 1$}
+
+Set Associativity
+
+
+\section*{Write Through Vs Write Back}
+
+\subsection*{Write Through}
+
+\subsubsection*{Write Hit}
+
+Write Hit - Update main memory only.
+
+\subsubsection*{Write Miss}
+
+Update main memory only 
+
+or
+
+Allocate cache line, read cache line from memory, then write to cache
+line and main memory to cache line [ write allocate cache]
+
+Must read because cache line is $64$ bit and the memory address can only
+be $16$ bit.
+
+\subsection*{Write Back}
+
+\subsubsection*{Write Hit}
+
+Update cache line \textbf{only}, update main meory when cache line is
+flushed or replaced.
+
+\subsubsection*{Write Miss}
+
+Allocate cache line, read cache line from memory, then write to cache
+line.
+
+Must write back previous data if cache line dirty (modified)
+
 \section*{Direct Mapped Vs Associative Caches}
 
 Will an associative cache always outperform a direct mapped cache
