@@ -1,9 +1,8 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
-\usepackage{listings}
 
 
-\lstset{language=Prolog}
+%\lstset{language=prolog}
 
 \begin{document}
 
@@ -39,7 +38,7 @@ Listener \\
 Interpreter \\
  
 
-\begin{lstlisting}
+\begin{verbatim}
 
 parent(chris,liz). \% a clause \\
 parent(chris,mike). \\
@@ -62,12 +61,12 @@ yes
 
 \[1,2,3\] \% list \\
 
-\end{lstlisting}
+\end{verbatim}
 
 \section{Predecate}
 
 
-\begin{lstlisting}
+\begin{verbatim}
 
 read\_everything(File) :-  see(File),
 . \\ 
@@ -82,6 +81,6 @@ seen. \\
 process(end\_of\_file). \\
 process(X) :- write(X),nl,read(Y),process(Y).
 
-\end{lstlisting}
+\end{verbatim}
 
 \end{document}
