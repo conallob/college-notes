@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Course 3BA1: Statistics \\ Additional Lecture Notes \\ $18^{th}$ October 2004}
+
+\maketitle
+
+\[ or  & = & \cup \]
+
+\[ and & = & \cap \]
+
+Mutually exclusive events supposed to disjoint sets of sample space. \\
+
+\\
+
+\[ P(A \cup B) 	& = & P(A) + P(B) - P(A \cap B) \]
+
+\[ P(A or B)	& = & P(A) + P(B) - P(A or B)	\]
+
+\\
+
+\[ P(A \cup B) & \leq & P(A) + P(B) \cdots P(A \cap B) \geq 0 \]
+
+\[ P(A \cap B) & \leq & min(P(A), P(B)) \]
+
+Once consequence that is useful: \\
+
+\\
+
+\[ P(A') & = & 1 - P(A) \]
+
+\[ A' \cup A = 1 - \mbox{certain event} \]
+
+\[ P(A \cup A') & = & 1 \]
+
+\[ A \cap A' 	& = & 0 \]
+
+\[ P(A')	& = & 1 - P(A) \]
+
+
+$10000$ students, $6000$ male. \\
+$400$ Computewr Science. $240$ male. \\
+
+\\
+
+\[ P(male) & = & 0.6 \]
+
+\[ P(In CS) & = & 0.04 \]
+
+\[ P(Female) & = & 0.4 \]
+
+\[ P(Female or in CS) & = & \frac{4000 + 250}{1000} = 0.425 \]
+
+\[ P(Female and in CS) & = & \frac{150}{10000} = 0.15 \]
+
+\\
+
+$P(A and B)$ describes the relationship between the events. Does the occurance of $A$ increae, lower or leave $P(B)$ the same?
+
+\section{Conditional Probability}
+
+$P(A|B) - P(A)$ given that $B$ has occurred. \\
+
+\\
+
+\[ P(A|B) & = & \frac{P(A \cap B)}{P(B)} \]
+
+\[ \therefore P(A \cap B) & = & P(A| B) \times P(B) \]
+
+\[ P(CS|Female) = \frac{P(CS \cap Female}{P(Female)} \]
+
+\[ 	  	& = & \frac{0.015}{4000} /] 
+
+\[ P(Females|CS) & = & \frac{CS \cap Females}{P(CS)} \]
+
+\[		 & = & 0.375	\]
+
+Being female discourages CS and vice versa.
+
+
+\section*{Independance}
+
+$A, B$ independant $\Longleftrightarrow$
+
+\[ P(A|B) & = & P(A) \]
+
+\[ P(B|A) & = & P(B) \]
+
+or
+
+\[ P(A \cap B) & = & P(A) \times P(B) \]
+
+
+
+\end{document}
