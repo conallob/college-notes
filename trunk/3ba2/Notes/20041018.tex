@@ -1,5 +1,10 @@
+% $Id$
+
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
 
 \begin{document}
 
@@ -11,15 +16,11 @@
 
 Everything is a term. \\
 
-\\
-
 Terms are simple or complex ("Structured").
 
 \subsection*{Simple}
 
 "atom" - stands for something. Eg: mike, chair \\
-
-\\
 
 \subsubsection*{Syntax:} 
 
@@ -30,7 +31,8 @@ alphanumeric characters or underscores.
 A special character followed by zero or more special characters: $ \&, \#. /. \*, \$ $
 
 
-Any string of characters enclosed in single quotes. Eg: 'The w cat', 'foo.txt', 'can''t do it'
+Any string of characters enclosed in single quotes. Eg: 'The w
+cat', 'foo.txt', 'can''t do it'
 
 \subsubsection*{Numbers:}
 
@@ -42,9 +44,14 @@ Floats (Implementation dependant)
 
 Anonymous Variable: $\_$ \\
 
-member(x,[_|R]). \\
 
-\subsubsection{Named Variable:}
+\begin{verbatim}
+
+member(x,[_|R]).
+
+\end{verbatim}
+
+\subsubsection*{Named Variable:}
 
 Capitol Letter followed by zero or more aplhanumeric characters \\
 
@@ -55,23 +62,32 @@ An underscrore followed by one or more alphanumerics or underscores. \\
 
 Scope of variable in a clause is the clause itself if named or no scope if anonymous.
 
-\subsection{Complex:}
+\subsection*{Complex:}
 
-has a functor, which has a name (some syntax rules as an atom) and has an arity of $\gt 0$. \\
+has a functor, which has a name (some syntax rules as an atom) and has
+an arity of $< 0$. \\
 
-composs_points(north,south,east,west). \\
+\begin{verbatim}
 
-north - Prolog term \\
+composs_points(north,south,east,west).
 
-tree(_,R). \\
+\end{verbatim}
 
-temp(L1,R). \\
+north - Prolog term
 
-foo(X). \\
+\begin{verbatim}
 
-bar(X,R) $ : $ foo(X),foo(X). \\
+tree(_,R).
 
-$ : $ - Infix operator \\
+temp(L1,R).
+
+foo(X).
+
+bar(X,R) : foo(X),foo(X).
+
+: - Infix operator
+
+\end{verbatim}
 
 inter operator - binary - $x + 1$ \\
 
@@ -83,13 +99,18 @@ Prefix operator - ??? \\
 
 Prefix operator - ??? \\
 
-\\
+
+\begin{verbatim}
 
 :- (bar(X,Y),\left(foo(X),foo(Y)\right)
+
+\end{verbatim}
 
 \subsection{Lists in Prolog}
 
 A list has 2 arguements, the 'head' and the 'tail'/'head' and 'body'/'car' and 'cdr' (LISP method) \\
+
+\begin{verbatim}
 
 .('head','body').
 
@@ -97,7 +118,9 @@ A list has 2 arguements, the 'head' and the 'tail'/'head' and 'body'/'car' and '
 
 .(a,.(b,.(c,[]))).
 
-[] - Emplty list atom
+[] % - Emplty list atom
+
+\end{verbatim}
 
 Prolog is a logic programming language.
 
@@ -105,17 +128,22 @@ Clauses are axioms.
 
 When running a prolog program, you're asking for a proof that the query you make is true.
 
+\begin{verbatim}
 
 member(X,[X|_]).
 
 member(X,[_|R]) :- member(X,R).
 
+\end{verbatim}
 
 eg: query:
 
 
+\begin{verbatim}
+
 member(a,[61,4,9,a,a(b),X]).
 
+\end{verbatim}
 
 Prolog makes Logical Interfaces to prove this goal.
 
@@ -128,11 +156,13 @@ In C:
 
 In prolog:
 
+\begin{verbatim}
 
 member(a,[61,a]).
    
 member(x,[X|_]).
 
+\end{verbatim}
 
 attempt to unify each arguement with the goal with tit's corresponding arguement in the head.
 

@@ -1,6 +1,8 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
 
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
 
 %\lstset{language=prolog}
 
@@ -35,31 +37,31 @@ C9 & : & A1 \times B4 \\
 
 
 Listener \\
+
 Interpreter \\
  
 
 \begin{verbatim}
 
-parent(chris,liz). \% a clause \\
-parent(chris,mike). \\
-parent(liz,aidan). \\
-parent(liz,louise). \\
-parent(make,clare). \\
-parent(mike,kate). \\
+parent(chris,liz). % a clause
+parent(chris,mike).
+parent(liz,aidan).
+parent(liz,louise).
+parent(make,clare).
+parent(mike,kate).
 
-
-?- parent(chris,liz). \\
+?- parent(chris,liz).
 
 yes
 
 
 ?-
 
-:- \% if \\
+:- % if
 
-\_ \% anonymous variable \\
+_ % anonymous variable
 
-\[1,2,3\] \% list \\
+[1,2,3] % list
 
 \end{verbatim}
 
@@ -68,17 +70,17 @@ yes
 
 \begin{verbatim}
 
-read\_everything(File) :-  see(File),
-. \\ 
-. \\ read(T),
-. \\ process(T),
-. \\
-. \\
-. \\
+read_everything(File) :-  see(File),
+.  
+.  read(T),
+.  process(T),
+. 
+. 
+. 
 
-seen. \\
+seen.
 
-process(end\_of\_file). \\
+process(end_of_file).
 process(X) :- write(X),nl,read(Y),process(Y).
 
 \end{verbatim}
