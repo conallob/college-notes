@@ -1,0 +1,64 @@
+% $Id: 20041012.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+\usepackage{tabularx}
+
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA5: Computer Engineering \\ Lecture Notes \\ $19^{th}$ October 2004}
+
+\maketitle
+
+\section*{Taxonomy}
+
+\begin{table}[hbtp]
+
+% xy-pic Diagram
+
+\end{table}
+
+Where
+
+\begin{tabular}{lll}
+$IS$	&	$=$	&	Instruction Set			\\
+$IS'$	&	$=$	&	Decoded Instruction Set	\\
+$DS$	&	$=$	&	Data Stream					\\
+$IR$	&	$=$	&	Instruction Register		\\
+\end{tabular}
+
+\subsection*{SISD - Von Neumann}
+
+This schematic view emphasises the seperate $IS$ and $DS$, giving them
+seperate paths to the $MM$. In practise, only a single pathway is built,
+leading to the so called Von Neumann bottleneck.
+
+% xy-pic Schematic Diagram
+
+(more accurate version of above)
+
+Examples: IBM 360, DEC, PCs, Majority of processor systems.
+
+\subsection*{SIMD - Array Processor}
+
+% xy-pic Schematic diagram
+
+Example:
+
+$C$ is a scalar in each $Mi$.				\\
+$\vec{X}$ vector $X_{i}$ in each $Mi$	\\
+$\vec{Y}$ vector $Y_{i}$ in each $Mi$	\\
+
+\begin{eqnarray*}
+C			&	\leftarrow	&	7.3 \mbox{\hspace{5mm}(ie load direct)}	\\
+\vec{Y}	&	\leftarrow	&	\vec{X} + C						
+\end{eqnarray*}
+
+Eg: The Connections Machine ($Cn1$, $Cn2$)
+
+\end{document}
