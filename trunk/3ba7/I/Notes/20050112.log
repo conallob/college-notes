@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  16 JAN 2005 21:17
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  16 JAN 2005 21:21
 **20050112.tex
 (./20050112.tex
 LaTeX2e <2001/06/01>
@@ -203,12 +203,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ] [2] [3] [4] (./20050112.aux) ) 
 Here is how much of TeX's memory you used:
- 3359 strings out of 95847
- 40342 string characters out of 1196008
+ 3361 strings out of 95847
+ 40363 string characters out of 1196008
  128167 words of memory out of 1000001
- 6265 multiletter control sequences out of 10000+50000
- 14294 words of font info for 59 fonts, out of 500000 for 1000
+ 6266 multiletter control sequences out of 10000+50000
+ 14463 words of font info for 60 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
  26i,9n,28p,252b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20050112.dvi (4 pages, 7384 bytes).
+Output written on 20050112.dvi (4 pages, 7516 bytes).
