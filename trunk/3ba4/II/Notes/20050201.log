@@ -1,151 +1,35 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  23 FEB 2005 22:00
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  28 FEB 2005 20:32
 **20050201.tex
 (./20050201.tex
 LaTeX2e <2001/06/01>
 Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
 ohyphenation, loaded.
-(/sw/share/texmf/tex/latex/base/article.cls
-Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
-(/sw/share/texmf/tex/latex/base/size12.clo
-File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
-)
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
-)
-(/sw/share/texmf/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2002/01/22 v2.2d
 
-(/sw/share/texmf/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2001/10/25 v2.2f
-\@emptytoks=\toks14
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
-))
-(/sw/share/texmf/tex/latex/misc/ulem.sty
-\UL@box=\box26
-\UL@hyphenbox=\box27
-\UL@skip=\skip43
-\UL@hook=\toks15
-\UL@pe=\count87
-\UL@pixel=\dimen103
-\ULC@box=\box28
-Package: ulem 2000/05/26
-\ULdepth=\dimen104
-)
-(/sw/share/texmf/tex/latex/pstricks/pstricks.sty
-Package: pstricks 1997/03/25 package wrapper for PSTricks pstricks.tex
+! LaTeX Error: File `article.cls' not found.
 
-(/sw/share/texmf/tex/generic/pstricks/pstricks.tex
-`PSTricks' v97 patch 14  <1999/12/23> (tvz)
-\pst@dima=\dimen105
-\pst@dimb=\dimen106
-\pst@dimc=\dimen107
-\pst@dimd=\dimen108
-\pst@dimg=\dimen109
-\pst@dimh=\dimen110
-\pst@hbox=\box29
-\pst@boxg=\box30
-\pst@cnta=\count88
-\pst@cntb=\count89
-\pst@cntc=\count90
-\pst@cntd=\count91
-\pst@cntg=\count92
-\pst@cnth=\count93
-\pst@toks=\toks16
-(/sw/share/texmf/tex/generic/pstricks/pstricks.con)
-\psunit=\dimen111
-\psxunit=\dimen112
-\psyunit=\dimen113
-\pslinewidth=\dimen114
-\pst@customdefs=\toks17
-\pslinearc=\dimen115
-\everypsbox=\toks18
-\psframesep=\dimen116
-\pslabelsep=\dimen117
-\theoverlaybox=\box31
-)) (./20050201.aux
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
 
-LaTeX Warning: Label `NAND Gate' multiply defined.
+Enter file name: /sw/share/texmf/tex/latex/base/article.cls
 
-)
-\openout1 = `20050201.aux'.
+! LaTeX Error: File `/sw/share/texmf/tex/latex/base/article.cls' not found.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
- (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2002/01/19 v2.2g AMS font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
 
-(/sw/share/texmf/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-)
+Enter file name: X
 
-LaTeX Warning: No \author given.
-
-(./20050201-NType.tex) (./20050201-NTypeSwitch1.tex)
-(./20050201-NTypeSwitch2.tex) (./20050201-PType.tex)
-(./20050201-PTypeSwitch1.tex) (./20050201-PTypeSwitch2.tex)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 55.
-
-(/sw/share/texmf/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
- [1
-
-] (./20050201-ANDGate.tex)
-(./20050201-CMOS-fets.tex) [2] (./20050201-InvertNANDGate.tex) [3]
-(./20050201-CMOS-net1.tex) [4] (./20050201-CMOS-net3.tex)
-Overfull \hbox (3.55922pt too wide) in paragraph at lines 205--207
-[]\OT1/cmr/m/n/12 Therefore com-ple-men-tary sit-u-a-tion re-quired if in-puts 
-are such that $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 input\OT1/cm
-r/m/n/12 ) =
- []
-
-(./20050201-NotGate.tex) (./20050201-NANDGate.tex) (./20050201-CMOS-net4.tex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(./20050201-CMOS-net5.tex) [5] (./20050201-CMOS-net6.tex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6] [7] [8] (./20050201.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ )
+(\end occurred when \ifx on line 4 was incomplete)
+(\end occurred when \ifx on line 4 was incomplete)
+(\end occurred when \ifx on line 4 was incomplete) 
 Here is how much of TeX's memory you used:
- 1490 strings out of 95847
- 16592 string characters out of 1196009
- 97555 words of memory out of 1000001
- 4406 multiletter control sequences out of 10000+50000
- 13934 words of font info for 55 fonts, out of 500000 for 1000
+ 9 strings out of 95847
+ 103 string characters out of 1196009
+ 44507 words of memory out of 1000001
+ 3037 multiletter control sequences out of 10000+50000
+ 3640 words of font info for 14 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 23i,11n,24p,201b,363s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 11i,0n,7p,78b,7s stack positions out of 1500i,4000n,5000p,200000b,40000s
 
-Output written on 20050201.dvi (8 pages, 86152 bytes).
+No pages of output.

@@ -4,6 +4,7 @@
 \usepackage{amssymb}
 \usepackage{ulem}
 \usepackage{pstricks}
+\usepackage[all]{xy}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -330,7 +331,21 @@ $0$	&	$1$	&	$1$					&	$0$	&	$1$						\\
 $1$	&	$0$	&	$1$					&	$0$	&	$1$						\\
 $1$	&	$1$	&	$0$					&	$1$	&	$0$						\\
 \end{tabular}
-% Insert xy-pic diagram here
+
+\begin{figure}[h]
+
+\xy <1cm,0cm>:
+0 *+!CR{00} ; (2,1) *+!DC{01} ,
+(2,-1) *+!UC{10} ; (4,0) *+!CL{11} ,
+0 ; (2,1) **\crv{(0,1)} *\dir{>} ,
+0 ; (2,-1) **\crv{(0,-1)} *\dir{>} , 
+(2,-1) ; (4,0) **\crv{(4,-1)} *\dir{>} ,
+(2,1) ; (4,0) **\crv{(4,1)} *\dir{>}
+\endxy
+
+\end{figure}
+
+\vspace{10mm}
 
 $0 \leq 1$ \hspace{20mm} $0 \leq 0$ \hspace{20mm} $1 \leq 1$
 
@@ -348,12 +363,35 @@ $b_{0} \leq a_{0}$
 
 Partial Order
 
+\begin{figure}[ht]
 
-% Inset xy-pic diagram here
+\xy <1cm,0cm>:
+0 *+!CR{01} ; (2,2) **\dir{-} *+!DC{11} ;
+(4,0) **\dir{-} *+!CL{10} ;
+(2,-2) **\dir{-} *+!UC{00} ;
+0 **\dir{-} ;
+(1,0) **\dir{-} *\dir{>} *+!CL{1} ,
+(2,2) ; (3,2) **\dir{-} *\dir{>} *+!CL{0} ,
+(4,0) ; (5,0) **\dir{-} *\dir{>} *+!CL{1} ,
+(2,-2) ; (3,-2) **\dir{-} *\dir{>} *+!CL{1} ,
+\endxy
 
-% \caption{Hasse Diagram}
+\caption{Hasse Diagram}
 
-% Inset xy-pic diagram here
+\end{figure}
+
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+0 *+!CC{\bullet} *+!CR{01} ; (1,1) **\dir{-} *+!CC{\circ} *+!DL{11} ;
+(2,0) **\dir{-} *+!CC{\bullet} *+!CR{10} ;
+(1,-1) **\dir{-} *+!CC{\bullet} *+!UC{00} ;
+0 **\dir{-}
+\endxy
+
+\caption{}
+
+\end{figure}
 
 % Inset xy-pic diagram here
 
