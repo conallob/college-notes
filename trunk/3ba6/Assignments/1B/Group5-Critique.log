@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  7 DEC 2004 22:49
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  8 DEC 2004 00:38
 **Group5-Critique.tex
 (./Group5-Critique.tex
 LaTeX2e <2001/06/01>
@@ -95,8 +95,90 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 (/sw/share/texmf/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-Package color Info: Redefining color red on input line 10.
- (./Group5-Critique.aux)
+(/sw/share/texmf/tex/latex/pstricks/pst-all.sty
+Package: pst-all 1997/03/25 all pstricks tools
+
+(/sw/share/texmf/tex/latex/graphics/pstcol.sty
+Package: pstcol 2001/06/20 v1.1 PSTricks color colompatibility (DPC)
+
+(/sw/share/texmf/tex/latex/pstricks/pstricks.sty
+Package: pstricks 1997/03/25 package wrapper for PSTricks pstricks.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pstricks.tex)))
+(/sw/share/texmf/tex/latex/pstricks/pst-grad.sty
+Package: pst-grad 1997/03/25 package wrapper for PSTricks pst-grad.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-grad.tex  v97 patch 1, 1997/04/28
+Package color Info: Redefining color gradbegin on input line 45.
+Package color Info: Redefining color gradend on input line 49.
+))
+(/sw/share/texmf/tex/latex/pstricks/pst-plot.sty
+Package: pst-plot 1997/03/25 package wrapper for PSTricks pst-plot.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-plot.tex  v97 patch 2, 1999/12/12
+(/sw/share/texmf/tex/generic/multido/multido.tex  v1.4, 93/01/14 <tvz>
+\multido@count=\count97
+\multidocount=\count98
+\multido@stuff=\toks24
+)))
+(/sw/share/texmf/tex/latex/pstricks/pst-coil.sty
+Package: pst-coil 1997/03/25 package wrapper for PSTricks pst-coil.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-coil.tex  v97 patch 2, 1998/03/19))
+(/sw/share/texmf/tex/latex/pstricks/pst-text.sty
+Package: pst-text 1997/03/25 package wrapper for PSTricks pst-text.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-text.tex  v97, 1997/03/25))
+(/sw/share/texmf/tex/latex/pstricks/pst-char.sty
+Package: pst-char 1997/03/25 package wrapper for PSTricks pst-char.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-char.tex  v97 patch 3, 1999/03/11))
+(/sw/share/texmf/tex/latex/pstricks/pst-node.sty
+Package: pst-node 1997/03/25 package wrapper for PSTricks pst-node.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-node.tex  v97 patch 11, 2000/11/09
+\psrow=\count99
+\pscol=\count100
+\psmatrixcnt=\count101
+\psrowsep=\skip44
+\pscolsep=\skip45
+))
+(/sw/share/texmf/tex/latex/pstricks/pst-3d.sty
+Package: pst-3d 1997/03/25 package wrapper for PSTricks pst-3d.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-3d.tex  v97, 1997/03/25))
+(/sw/share/texmf/tex/latex/pstricks/pst-eps.sty
+Package: pst-eps 1997/03/25 package wrapper for PSTricks pst-eps.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-eps.tex  v97 patch 1, 1997/05/05
+\pst@epsout=\write3
+\pst@tempout=\write4
+))
+(/sw/share/texmf/tex/latex/pstricks/pst-fill.sty
+Package: pst-fill 1997/04/08 package wrapper for PSTricks pst-fill package
+
+(/sw/share/texmf/tex/generic/pstricks/pst-fill.tex  v97 patch 2, 1997/12/12
+\pst@fillbox=\box32
+))
+(/sw/share/texmf/tex/latex/pstricks/pst-tree.sty
+Package: pst-tree 1997/03/25 package wrapper for PSTricks pst-tree.tex
+
+(/sw/share/texmf/tex/generic/pstricks/pst-tree.tex  v97 patch 5, 1999/10/28
+\pstree@rootbox=\box33
+\pstree@box=\box34
+\psnodecnt=\count102
+\pstreelevel=\count103
+\pstreecnt=\count104
+\pstree@cnt=\count105
+\pstree@stop=\count106
+))
+(/sw/share/texmf/tex/generic/multido/multido.sty
+Package: multido 1997/03/25 package wrapper for multido.tex
+
+(/sw/share/texmf/tex/generic/multido/multido.tex  v1.4, 93/01/14 <tvz>)))
+Package color Info: Redefining color white on input line 9.
+
+(./Group5-Critique.aux)
 \openout1 = `Group5-Critique.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -111,8 +193,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
-
-[1
+ [1
 
 
 ] [2
@@ -121,12 +202,12 @@ LaTeX Font Info:    ... okay on input line 18.
 
 ] (./Group5-Critique.aux) ) 
 Here is how much of TeX's memory you used:
- 1619 strings out of 95847
- 19054 string characters out of 1196008
- 72997 words of memory out of 1000001
- 4601 multiletter control sequences out of 10000+50000
- 4545 words of font info for 17 fonts, out of 500000 for 1000
+ 2645 strings out of 95847
+ 32729 string characters out of 1196008
+ 98627 words of memory out of 1000001
+ 5557 multiletter control sequences out of 10000+50000
+ 4852 words of font info for 18 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 29i,5n,21p,169b,381s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 29i,5n,21p,189b,381s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on Group5-Critique.dvi (3 pages, 2624 bytes).
+Output written on Group5-Critique.dvi (3 pages, 2828 bytes).

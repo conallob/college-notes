@@ -2,20 +2,24 @@
 
 \documentclass[landscape,semcolor,a4]{seminar}
 \usepackage{color}
+\usepackage{pst-all}
 
-%\centerslidesfalse
+\definecolor{darkblue}{rgb}{0,0,0.55}
+\definecolor{conallblue}{rgb}{0.06,0.45,0.75}
+\definecolor{white}{rgb}{1.00,1.00,1.00}
 
-\definecolor{darkblue}{rgb}{0.27,0.18,0.55}
-\definecolor{grayblue}{rgb}{0.50,0.40,0.84}
-\definecolor{red}{rgb}{0.78,0.47,0.68}
-\definecolor{borderred}{rgb}{0.54,0.35,0.39}
+\newenvironment{stitle}{\LARGE\color{conallblue}}{}
 
-\newenvironment{stitle}{\LARGE\color{darkblue}}{}
+\centerslidesfalse
+\slideframe[\psset{linecolor=conallblue}]{scplain}
 
 \pagestyle{empty}
-%\slideframe[\psset{linecolor=borderred}]{scplain}
 
 \begin{document}
+
+\sffamily
+\pagecolor{darkblue}
+\color{white}
 
 \begin{slide}
 
@@ -23,7 +27,11 @@
 Presentation:
 \end{stitle}
 
-Document Aesthetically layed out well. \\
+\vspace{15mm}
+
+Document aesthetically well laid out. \\
+
+\vspace{5mm}
 
 Document language assumes a significant level of familiarity with broadband 
 terminology and knowledge. eg DSL acronym (finally) explained on page 5 (of 8).
@@ -36,12 +44,18 @@ terminology and knowledge. eg DSL acronym (finally) explained on page 5 (of 8).
 Objectives Met:
 \end{stitle}
 
+\vspace{15mm}
+
 Provided criteria met, except:
 
-Lack of info on Digiweb's other products, such as Satelite based
+\vspace{5mm}
+
+Lack of info on Digiweb's other products, such as Satellite based
 internet connectivity. \\
 
-Lack of reference to competitors other than Eircom or compeditor's
+\vspace{5mm}
+
+Lack of reference to competitors other than Eircom or competitor's
 products or the differences (advantages/disadvantages) between DSL and
 wireless broadband products. 
 
@@ -53,15 +67,19 @@ wireless broadband products.
 Improvements:
 \end{stitle}
 
+\vspace{15mm}
+
 Consider the document's audience. Assume the reader has \textbf{no} knowledge 
 about the broadband services sector and is researching the major
 providers in Ireland. \\
+
+\vspace{5mm}
 
 Briefly overview of the low and high end packages key features
 (such as Download/Upload speeds, contention ratio and quota) to allow
 effective comparison with competitor products. Minor package details 
 such as email features and the cost of each package at the time of 
-writing are irrelavent and subject to change.
+writing are irrelevant and subject to change.
 
 \end{slide}
 
