@@ -1,6 +1,6 @@
 % $Id$
 
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
 
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
@@ -10,11 +10,14 @@
 
 \begin{document}
 
-\title{3BA3 - Systems Software \\ Unix Vs Windows}
+\title{3BA3 - Systems Software \\ Unix Vs Windows \\ \vspace{20mm}}
 
-\author{Conall O'Brien \\ conallob@maths.tcd.ie \\ 01734351 }
+\author{Conall O'Brien \\ conallob@maths.tcd.ie \\ 01734351 \\
+\vspace{20mm}}
 
 \maketitle
+
+\newpage
 
 \section*{Introduction}
 
@@ -22,29 +25,29 @@ In this essay, I will be comparing and contrasting the Unix operating
 system to the Windows operating system. When I make reference to Unix, I
 will be referring to all Unix style operating systems, including the BSD
 (Berkeley Software Distribution) family (including FreeBSD, OpenBSD,
-NetBSD, DrangonFly BSD, Darwin, Mac OS X and other minor forks of
+NetBSD, DragonflyBSD, Darwin, Mac OS X and other minor forks of
 these), commercial Unix derivatives (such as Sun's Solaris, SGI's IRIX,
 IBM's AIX, Hewlett Packard's HP-UX, Compaq's TRU64, etc) and Unix
 clones including Linux, GNU HURD and Minix.
 
 My references to Windows will refer to all members of the Microsoft
-Windows Fammily (including Windows 3.1/3.11, Windows 95/98/ME, Windows NT 
+Windows Family (including Windows 3.1/3.11, Windows 95/98/ME, Windows NT 
 3/3.5/4, Windows 2000 and Windows XP). IBM's OS/2 Warp is not included
 in this reference, despite it's close ties to the Windows 95/98/ME
 dynasty, mainly due to it's small usage.
 
 I will compare and contrast the Unix family against the Windows family
 in a number of areas, including: Traditional Uses; Usability;
-Reliability; Security; Compatibity; Programs Available and Total Cost of
+Reliability; Security; Compatibility; Programs Available and Total Cost of
 Ownership. After discussing these aspects of both operating system 
-families, using facts and references to backup my arguement, I will
-conlude which operating system is the winner of my arguement.
+families, using facts and references to backup my argument, I will
+conclude which operating system is the winner of my argument.
 
 \section*{Traditional Use}
 
-Traditionally, since it's widespead takeup in 1992 with Windows 3.1,
+Traditionally, since it's widespread take-up in 1992 with Windows 3.1,
 Windows has been used as primarily as a desktop operating system. Users 
-would reuired to be physically in front of the system and the system 
+would required to be physically in front of the system and the system 
 would only be usable by the currently logged in user.
 
 After 1995, with the release of the Windows NT strain of Windows, a
@@ -65,9 +68,9 @@ Open Source Programming projects.
 
 Unix derivative systems have constantly been multi user systems. Users
 can use the system locally or remotely and are able to run tasks pseudo
-simulatneously, independant of each other. As a result, until recent
+simultaneously, independent of each other. As a result, until recent
 years, Unix derivatives were almost exclusively for servers only. In
-recent years, with the widepsread use of X Windows implementations, Unix
+recent years, with the widespread use of X Windows implementations, Unix
 has been used on high end workstations, from manufacturers like Sun and
 SGI and more recently, Linux and modern BSD systems are becoming more
 and more popular as desktop systems.
@@ -79,14 +82,14 @@ existing from MS-DOS has been gradually phased out due to the belief
 that a command line interface to an operating system is complicated and
 has a sleep learning curve for new or inexperienced users. As a result,
 Windows initially ran on top of MS-DOS, but by Windows 2000, the MS-DOs
-prereqresuite was removed and a MS-DOS emuator was introduced instead.
+prerequisite was removed and a MS-DOS emulator was introduced instead.
 As a result, Windows is almost exclusively used via GUI interfaces,
-primarily for their user friendlyness, except for doing more complex
-tasks or problem solving, when expreienced users and administrators find
+primarily for their user friendliness, except for doing more complex
+tasks or problem solving, when experienced users and administrators find
 the command line interface to Windows much easier and more informative
 than existing GUI windows.
 
-Due to the comman perseption that a command line interface is
+Due to the common perception that a command line interface is
 complicated and required learning curve, Unix derivatives are usually
 considered hard to use. Due to this perception, various projects
 (such as SuSE Linux's YaST\footnote{SuSE YaST -
@@ -97,7 +100,7 @@ friendlier methods of using a system effectively via the command line.
 
 \section*{Reliability}
 
-For a number of decades, Unix derivates have kept their reputation in
+For a number of decades, Unix derivate have kept their reputation in
 terms of reliability. With minimal or even no special preparation, a
 Unix derivative can typically have an uptime (time since last reboot) 
 over 30 days. According to Netcraft\footnote{Netcraft - Top 50 Uptimes 
@@ -105,8 +108,8 @@ over 30 days. According to Netcraft\footnote{Netcraft - Top 50 Uptimes
 $2004$}, the highest uptime of all the servers it monitors all run a BSD
 Unix derivative. However this ability in itself does not prove Unix's
 reliability, but does demonstrate that it's clean, modular approach to 
-it's kernel components and even how the system surrounding is layed out 
-is the key to it's flexability and reliability for numerous tasks.
+it's kernel components and even how the system surrounding is laid out 
+is the key to it's flexibility and reliability for numerous tasks.
 
 On the other hand, Windows systems are not known for it's clean, modular
 design. While for certain tasks can be performed regularly and maintain
@@ -119,54 +122,54 @@ system's kernel, unless it is a direct kernel update.
 
 \section*{Security}
 
-Windows has a bad reutation when it comes to security. This is the
+Windows has a bad reputation when it comes to security. This is the
 result of a combination of non technical issues such as it's dominant 
-market share and social engineering, combined with repeditive vulnerabities 
+market share and social engineering, combined with repetitive vulnerabilities 
 (such as the Windows RPC component or the known 
-list\footnote{Windows XP SP2 Compatability List -
+list\footnote{Windows XP SP2 Compatibility List -
 http://support.microsoft.com/default.aspx?kbid=842242\&product=windowsxpsp2
-- $30^{th}$ October $2004$} of compatability issues with Windows XP's
+- $30^{th}$ October $2004$} of compatibility issues with Windows XP's
 recently released Service Pack 2 aka SP2 which added long overdue security issues
 some programs assumed were not an issue). The Windows mono user approach
 also contributes to this, where too much simplification removes
 functionality.
 
-Unix systems on the otherhand have a more trusted security model. The
-mukti user approach in Unix is also used to secure specific programs by
+Unix systems on the other hand have a more trusted security model. The
+multi user approach in Unix is also used to secure specific programs by
 using a \emph{"chroot jail"}, which in effect means a daemon process on a
 Unix server is run as a specific, pseudo user only used to run that
 program. While security vulnerabilities do also exist for Unix systems,
 it's modularity and interest groups ensure vulnerabilities are
-thouroughly resolved and are applicable with little or no disruption to
+thoroughly resolved and are applicable with little or no disruption to
 most of the system.
 
-\section*{Compatiblity}
+\section*{Compatibility}
 
 Due to the popularity of Intel's x86 (i386) and IA-64 (Itanium)
 architectures (and AMD equivalents of x86 and AMD64) with computer 
 manufacturers, Windows primarily is only available for x86 and soon
 IA-64/AMD64 architectures. Windows previously was also available for
-the DEC Alpha architecture as an insentive to migrate DEC Alpha Unix
+the DEC Alpha architecture as an incentive to migrate DEC Alpha Unix
 systems to Windows. As a result of the popularity of these three main 
-hardware architectures, there is little or no insentive for Microsoft to
-make Windws compatibke with other architectures.
+hardware architectures, there is little or no incentive for Microsoft to
+make Windows compatible with other architectures.
 
 The principle goal of Dennis Ritchie and Ken Thompson in AT\&T in the
-1970s was to write an operationg system which was compatible with
+1970s was to write an operating system which was compatible with
 numerous legacy hardware architectures. To aid this goal, the
 programming language C was born as a foundation for Unix. In modern times,
 Unix derivatives, but especially Linux made it their aim to try and be
 compatible with as many architecture types as possible. Currently, Linux
 is the most architecture compatible Unix derivative, due to it's close
 relationship with the GNU C Compiler (gcc). As a result, Linux is
-compatable with these architectures\footnote{GCC Architecture
-Compatability List - http://gcc.gnu.org/install/specific.html - $30^{th}$
+compatible with these architectures\footnote{GCC Architecture
+Compatibility List - http://gcc.gnu.org/install/specific.html - $30^{th}$
 October $2004$} as well as being used in mobile phones, TiVo (a digital
 television recording device) and numerous other embedded devices.
 
 \section*{Programs}
 
-Thanks mainly to the large marketshare Windows currently holds, Windows
+Thanks mainly to the large market share Windows currently holds, Windows
 has support for all the commonly used programs and formats. Program
 suites such as Microsoft Office and Adobe's Photoshop are used for
 general office documents to photo montage and graphics design.
@@ -176,20 +179,61 @@ since Unix users can take control of numerous choices available to them
 to customise a system. Although Unix has a number of such programs and
 various methods to support comprehensive, open formats, tools such as 
 Samba (to share files over a network) and StarOffice/OpenOffice (a Unix
-targetted Office Suite with support for Microsoft Office formats) exist
+targeted Office Suite with support for Microsoft Office formats) exist
 to bridge the gap between Windows and Unix.
 
 \section*{Total Cost of Ownership}
 
 Total cost of ownership is not an accurate or even comparable
-measurement to compare operating systems by.
+measurement to compare operating systems by. The reason being that
+running an operating system involves many variables which can influence
+the running costs.
 
-Windows Licence + supported hardware + av + firewall + human support
-hours. No generic support from M\$
+In order to run a Windows system properly, you must buy a license from
+Microsoft, have modern hardware less than $5$ years old so the machine
+can meet the minimum system requirements comfortably, an anti virus
+package with a paid subscription for crucial updates and support, a
+trusted firewall for protection from security issues such as internet
+works, as well as 3rd party support for Windows, since Microsoft don't
+offer various support contracts for Windows.
 
-Unix - No Licence - Any hadware + no av + included firewall + minimal
-supprt time. - Support contract available from distros
+A Unix derivative, especially a Linux distribution for example, is
+cheaper to buy, will be able to run on any hardware, no matter how old
+thanks to Unix' compatibility, does not require an anti virus
+(considering the small number of known Linux virii\footnote{Linux Vs
+Windows Viruses -
+http://www.theregister.co.uk/2003/10/06/linux\_vs\_windows\_viruses/ -
+$30^{th}$ October $2004$}, already comes with an integrated firewall as
+standard, has support from the distribution themselves from the start
+and requires less human support hours for maintenance because it can be
+accessed remotely and usually has one core, powerful  packaging system
+which can install, remove or update almost any component of the system.
 
 \section*{Conclusion}
+
+To conclude, there is no \emph{"better"} operating system, in a
+comparison between Unix derivatives and Windows. Both have good and bad
+features, but the key factor should be \emph{"which operating system is 
+better for task X?"}. 
+
+Currently, Windows is a better choice for a desktop system, despite it's
+security issues and it's TCO. Reliability is not really a deciding
+factor for a desktop system, however usability and available programs
+are.
+
+Unix derivatives such as Mac OS X and other projects and Linux
+distributions aim to improve Unix so it is also a viable desktop system 
+alternative. Unix is a better choice for servers and other core system. 
+It is easily scalable, reliable, compatible with any hardware and requires 
+less attention from support staff. Currently desktop Unix systems are
+still in heavy development in order to simplify their use as a
+mainstream desktop system.
+
+Windows systems are currently better for general use by a user not
+asking too much of the system and for compatability with de facto
+standards used today. Unix desktops are better for technical 
+orientated work, high performance operations and for power users 
+interested in how the system works and how to achieve better system 
+performance through customisation.
 
 \end{document}

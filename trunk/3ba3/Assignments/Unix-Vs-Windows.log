@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  5 NOV 2004 03:52
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  5 NOV 2004 10:44
 **Unix-Vs-Windows.tex
 (./Unix-Vs-Windows.tex
 LaTeX2e <2001/06/01>
@@ -6,8 +6,8 @@ Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
 ohyphenation, loaded.
 (/sw/share/texmf/tex/latex/base/article.cls
 Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
-(/sw/share/texmf/tex/latex/base/size10.clo
-File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+(/sw/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -94,35 +94,41 @@ driver:
 \headheight 12.0pt
 \headsep    25.0pt
 \footskip   30.0pt
-\marginparwidth 57.0pt
-\marginparsep   11.0pt
+\marginparwidth 35.0pt
+\marginparsep   10.0pt
 \columnsep  10.0pt
-\skip\footins  9.0pt plus 4.0pt minus 2.0pt
+\skip\footins  10.8pt plus 4.0pt minus 2.0pt
 \hoffset 0.0pt
 \voffset 0.0pt
 \mag 1000
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/sw/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 ) [1
 
-] [2] [3] (./Unix-Vs-Windows.aux) ) 
-Here is how much of TeX's memory you used:
- 889 strings out of 95847
- 10836 string characters out of 1196008
- 57916 words of memory out of 1000001
- 3859 multiletter control sequences out of 10000+50000
- 11243 words of font info for 44 fonts, out of 500000 for 1000
- 14 hyphenation exceptions out of 1000
- 24i,8n,24p,191b,245s stack positions out of 1500i,500n,5000p,200000b,5000s
+] [2]
+Overfull \hbox (60.19221pt too wide) in paragraph at lines 131--131
+[][]\OT1/cmr/m/n/10 Windows XP SP2 Com-pat-i-bil-ity List - http://support.micr
+osoft.com/default.aspx?kbid=842242&product=windowsxpsp2
+ []
 
-Output written on Unix-Vs-Windows.dvi (3 pages, 12740 bytes).
+[3] [4] [5] (./Unix-Vs-Windows.aux) ) 
+Here is how much of TeX's memory you used:
+ 895 strings out of 95847
+ 10933 string characters out of 1196008
+ 57942 words of memory out of 1000001
+ 3865 multiletter control sequences out of 10000+50000
+ 12790 words of font info for 50 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 24i,8n,24p,191b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on Unix-Vs-Windows.dvi (5 pages, 16076 bytes).
