@@ -1,0 +1,63 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II \\ Lecture Notes \\ $18^{th}$ October 2004}
+
+\maketitle
+
+\section*{Loading Constants}
+
+\begin{tabular}{l l l}
+68000 					&	RISC-I 					&							\\
+$- 2^{12} < N < 2^{12} - 1$	&					&							\\
+move.l \#N,rn			&	add r0,\#N<12:0>,rn	&							\\
+$(N < -2^{12}) || (N > 2^{12} -1)$	&			&							\\
+move.l \#N,rm			&	add r0,\#N<12:0>,rm	&							\\
+							&	ldhi \#N<31:13>,rm		&	(From Y field)		\\						
+\end{tabular}
+
+\section*{Synthesis of 68000 addressing modes}
+
+\begin{tabular}{l l l}
+register  & $\to$ & add r0,rm,rn \\
+immediate & $\to$ & add r0,\#N,rn \\
+indexed   & $\to$ & ldl (rsrc1),s2,rdst \\
+			 &			& rdst $\leftarrow$ M[rsrc1 + s2] \\
+absolute	 &	$\to$	& ldl(r0),s2.rdst \\
+			 &			& rdst $\leftarrow$ M[s2] \\
+\end{tabular}
+
+Where s2 is a constant
+
+\section*{Single Cycle Proceedure Calls}
+
+Steps normally carried out during a proceedure call
+
+\begin{itemize}
+
+\item Pass parameters (eg push them to stack)
+
+\item enter new procedure (eg push return address to stack)
+
+\item save registers (eg on stack)
+
+\item allocate space for local variables (eg on stack)
+
+\subitem $<$proceedure body$>$
+
+\item deallocate space for local variables (eg increment Stack Pointer)
+
+\item restore registers (eg from stack)
+return to calling procedure (eg pop return address from stack).
+
+\item remove parameters (increment stack pointers)
+\end{itemize}
+
+\end{document}
