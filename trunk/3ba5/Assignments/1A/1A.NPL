@@ -18,12 +18,17 @@ DEVSIMULATOR Modelsim
 SIMULATORTIME 0
 DEVGENERATEDSIMULATIONMODEL VHDL
 GENERATEDSIMULATIONMODELTIME 0
-SOURCE shifter_16bit.vhd
-SOURCE addr_counter.vhdl
 SOURCE memory.vhd
 SOURCE or_inv_gate.vhd
 SOURCE and_gate.vhd
-SOURCE d-latch.vhd
-SOURCE register_16bit.vhd
+SOURCE shift_register.vhd
+SOURCE dlatch.vhdl
+SOURCE addr_counter.vhd
+STIMULUS or_gate_tb.tbw
+STIMULUS and_gate_tb.tbw
+STIMULUS dlatch_tb.tbw
+STIMULUS shift_register_tb.tbw
+[STATUS-ALL]
+shift_register_tb.vhwFile=ERRORS,0
 [STRATEGY-LIST]
 Normal=True

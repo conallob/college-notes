@@ -2,7 +2,7 @@
 # User = cgobrien
 Initializing default project...
 Loading plug-ins...
-All runtime messages will be recorded in F:\3ba5\Assignments\1A\coregen.log
+All runtime messages will be recorded in F:\3ba5\Assignments\1A\COREGEN.LOG
 # busformat=BusFormatAngleBracketNotRipped
 # designflow=VHDL
 # expandedprojectpath=F:\3ba5\Assignments\1A
@@ -17,5 +17,5 @@ All runtime messages will be recorded in F:\3ba5\Assignments\1A\coregen.log
 SETPROJECT .
 Set current Project to F:\3ba5\Assignments\1A
 SET BusFormat = BusFormatAngleBracketNotRipped
-SETXIPCPORTHOST 1044
+SETXIPCPORTHOST 2484
 XIPCPJSENDCORES virtex2

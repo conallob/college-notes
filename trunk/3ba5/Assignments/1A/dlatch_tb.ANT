@@ -1,0 +1,123 @@
+-- F:\3BA5\ASSIGNMENTS\1A
+-- VHDL Annotation Test Bench created by
+-- HDL Bencher 6.1i
+-- Thu Dec 09 17:42:16 2004
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY dlatch_tb IS
+END dlatch_tb;
+
+ARCHITECTURE testbench_arch OF dlatch_tb IS
+-- If you get a compiler error on the following line,
+-- from the menu do Options->Configuration select VHDL 87
+FILE RESULTS: TEXT OPEN WRITE_MODE IS "f:\3ba5\assignments\1a\dlatch_tb.ano";
+	COMPONENT dlatch
+		PORT (
+			CLK : In  std_logic;
+			RESET : In  std_logic;
+			DIN : In  std_logic_vector (31 DOWNTO 0);
+			OUTPUT : Out  std_logic_vector (31 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	SIGNAL CLK : std_logic;
+	SIGNAL RESET : std_logic;
+	SIGNAL DIN : std_logic_vector (31 DOWNTO 0);
+	SIGNAL OUTPUT : std_logic_vector (31 DOWNTO 0);
+
+BEGIN
+	UUT : dlatch
+	PORT MAP (
+		CLK => CLK,
+		RESET => RESET,
+		DIN => DIN,
+		OUTPUT => OUTPUT
+	);
+
+	PROCESS -- clock process for CLK,
+		VARIABLE TX_TIME : INTEGER :=0;
+
+		PROCEDURE ANNOTATE_OUTPUT(
+			TX_TIME : INTEGER
+		) IS
+			VARIABLE TX_STR : String(1 to 4096);
+			VARIABLE TX_LOC : LINE;
+		BEGIN
+			STD.TEXTIO.write(TX_LOC,string'("Annotate["));
+			STD.TEXTIO.write(TX_LOC, TX_TIME);
+			STD.TEXTIO.write(TX_LOC,string'(",OUTPUT,"));
+			IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, OUTPUT);
+			STD.TEXTIO.write(TX_LOC, string'("]"));
+			TX_STR(TX_LOC.all'range) := TX_LOC.all;
+			STD.TEXTIO.writeline(results, TX_LOC);
+			STD.TEXTIO.Deallocate(TX_LOC);
+		END;
+
+	BEGIN
+		CLOCK_LOOP : LOOP
+		CLK <= transport '0';
+		WAIT FOR 10 ns;
+		TX_TIME := TX_TIME + 10;
+		CLK <= transport '1';
+		WAIT FOR 10 ns;
+		TX_TIME := TX_TIME + 10;
+		ANNOTATE_OUTPUT(TX_TIME);
+		WAIT FOR 40 ns;
+		TX_TIME := TX_TIME + 40;
+		CLK <= transport '0';
+		WAIT FOR 40 ns;
+		TX_TIME := TX_TIME + 40;
+		END LOOP CLOCK_LOOP;
+	END PROCESS;
+
+	PROCESS   -- Process for CLK
+		VARIABLE TX_OUT : LINE;
+
+		BEGIN
+		-- --------------------
+		RESET <= transport '0';
+		DIN <= transport std_logic_vector'("00000000000000000000000000001111"); --F
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=100 ns
+		DIN <= transport std_logic_vector'("00000000000000000000000011111111"); --FF
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=200 ns
+		DIN <= transport std_logic_vector'("00000000000000000000111111111111"); --FFF
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=300 ns
+		DIN <= transport std_logic_vector'("00000000000000001111111111111111"); --FFFF
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=400 ns
+		DIN <= transport std_logic_vector'("00000000000011111111111111111111"); --FFFFF
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=500 ns
+		DIN <= transport std_logic_vector'("00000000111111111111111111111111"); --FFFFFF
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=600 ns
+		DIN <= transport std_logic_vector'("00001111111111111111111111111111"); --FFFFFFF
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=700 ns
+		RESET <= transport '1';
+		DIN <= transport std_logic_vector'("11111111111111111111111111111111"); --FFFFFFFF
+		-- --------------------
+		WAIT FOR 110 ns; -- Time=810 ns
+		-- --------------------
+
+		STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+		STD.TEXTIO.writeline(results, TX_OUT);
+		ASSERT (FALSE) REPORT
+			"Success! Simulation for annotation completed"
+			SEVERITY FAILURE;
+	END PROCESS;
+END testbench_arch;
+
+CONFIGURATION dlatch_cfg OF dlatch_tb IS
+	FOR testbench_arch
+	END FOR;
+END dlatch_cfg;

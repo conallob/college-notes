@@ -1,0 +1,152 @@
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+Launching Application for process "Generate Expected Simulation Results".
+
+Reading C:/FPGAdv62/Modeltech/tcl/vsim/pref.tcl 
+
+# 5.7f
+
+# do or_gate_tb.ado 
+listening on address 127.0.0.1 port 1200
+# resume
+# Model Technology ModelSim SE vcom 5.7f Compiler 2003.09 Sep 15 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity or_inv_gate
+# -- Compiling architecture behavioral of or_inv_gate
+# Model Technology ModelSim SE vcom 5.7f Compiler 2003.09 Sep 15 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity or_gate_tb
+# -- Compiling architecture testbench_arch of or_gate_tb
+# -- Loading entity or_inv_gate
+# -- Compiling configuration or_inv_gate_cfg
+# -- Loading entity or_gate_tb
+# -- Loading architecture testbench_arch of or_gate_tb
+# vsim -lib work -t 1ps or_gate_tb 
+# //  ModelSim SE VHDL 5.7f Sep 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading C:/FPGAdv62/Modeltech/win32/../std.standard
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_1164(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_arith(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../std.textio(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.or_gate_tb(testbench_arch)
+# Loading work.or_inv_gate(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 300 ns  Iteration: 0  Process: /or_gate_tb/line__70 File: or_gate_tb.ant
+# Break at or_gate_tb.ant line 92
+# Stopped at or_gate_tb.ant line 92 
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+Process interrupted by the user.
+ERROR: 
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+Process interrupted by the user.
+ERROR: 
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/dlatch.vhdl in Library work.
+Entity <dlatch> (Architecture <Behavioral>) compiled.
+
+Process interrupted by the user.
+ERROR: 
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/dlatch.vhdl in Library work.
+Entity <dlatch> (Architecture <behavioral>) compiled.
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/shift_register.vhd in Library work.
+Entity <shift_register> (Architecture <behavioral>) compiled.
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
+Compiling vhdl file F:/3ba5/Assignments/1A/shift_register.vhd in Library work.
+Entity <shift_register> (Architecture <behavioral>) compiled.
+
+
+
+Project Navigator Auto-Make Log File
+-------------------------------------
+
