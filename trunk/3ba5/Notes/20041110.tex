@@ -1,0 +1,83 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[all]{xy}
+\usepackage{tabularx}
+
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA5: Computer Engineering \\ Lecture Notes \\ $10^{th}$ November 2004}
+
+\maketitle
+
+\section*{27$^{\mbox{th}}$ October Tutorial Solutions}
+
+\subsection*{4}
+
+(a)
+
+\begin{verbatim}
+     XN(i) = x;
+     do i = 2 to 8
+            XN(i) = x * XN(i - 1);
+     end
+\end{verbatim}
+
+(b)
+
+On a dataflow machine:
+
+\begin{table}[hbtp]
+
+% xy-pic diagram
+
+\end{table}
+
+\begin{table}[hbtp]
+
+% xy-pic schematic diagram
+
+\end{table}
+
+\begin{table}[hbtp]
+
+% xy-pic schematic diagram
+
+\end{table}
+
+\subsection*{5}
+
+\begin{eqnarray*}
+f(x)	&	=	&	3 + 5x - 2x^{2} + 4x^{3} - 6x^{4} = \sum^{4}_{1} a_{i} x	\\
+		&	=	&	3 + x \left(5 + x \left(-2 + x \left(4 + x \left(6\right) \right) \right) \right)	\\ 
+\end{eqnarray*}
+
+(a)
+
+On a SISD - Horner's Method
+
+\begin{verbatim}
+     f = a(4);
+     do i = 3 to 0
+            f = a(i) + x * f;
+     end
+\end{verbatim}
+
+(b)
+
+On a dataflow
+
+\begin{table}[hbtp]
+
+% xy-pic diagram
+
+\end{table}
+
+\end{document}
