@@ -1,0 +1,63 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II \\ Lecture Notes \\ $30^{th}$ November 2004}
+
+\maketitle
+
+\section*{Direct Mapped Vs Associative Caches}
+
+Will an associative cache always outperform a direct mapped cache
+of the same size?? [$L \times K \times N $ equal]
+
+Consider 2 caches:
+
+$K = 4$, $N = 1$, $L = 16$ (fully associative)
+
+$K = 1$, $N = 4$, $L = 16$ (directly mmapped)
+
+and a repeating sequence of 5 addresses:
+
+$a, a + 16, a + 32, a + 48, a + 64, a, a + 16, a + 32, \cdots$
+
+\subsection*{Fully Associative Tags}
+
+\begin{tabular}{r|c|c|c|c|}
+\hline
+set0&\sout{$a$}, $a+64$, $a+48$&\sout{$a+16$}, $a$&\sout{$a+32$},
+$a+16$&$a+48$, $a+32$\\
+\hline
+\end{tabular}
+
+\subsection*{Direct Mapped Tags}
+
+\begin{tabular}{r|c|l}
+\hline
+set0	&	\sout{$a$}, $a+64$, $a$, $\cdots$	&	\\	
+\hline
+set1	&	$a+16$									&	\\	
+\hline
+set2	&	$a+32$									&	\\	
+\hline
+set3	&	$a+48$									&	\\	
+\hline
+\end{tabular}
+
+Fully Associative: only 4 address can \emph{fit} in the 4 way cache so
+that due to the CRU replacement policy, every access will be a miss.
+
+Direct Mapped: since \textbf{only} address $a$ and $a + 64$ map to the
+same set, they will conflict with each other, resulting in 2 misses and
+3 hits per cycle.
+
+The Cs mean that the conflict misses can be negative.
+
+\end{document}
