@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  12 JAN 2005 18:48
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  13 JAN 2005 19:50
 **20050111.tex
 (./20050111.tex
 LaTeX2e <2001/06/01>
@@ -42,7 +42,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \ULC@box=\box28
 Package: ulem 2000/05/26
 \ULdepth=\dimen104
-) (./20050111.aux)
+)
+No file 20050111.aux.
 \openout1 = `20050111.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -58,7 +59,6 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Try loading font information for U+msa on input line 14.
-
 (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
@@ -74,8 +74,8 @@ LaTeX Warning: No \author given.
 
 ] [2] [3] [4] (./20050111.aux) ) 
 Here is how much of TeX's memory you used:
- 614 strings out of 95847
- 6444 string characters out of 1196008
+ 612 strings out of 95847
+ 6418 string characters out of 1196008
  48780 words of memory out of 1000001
  3592 multiletter control sequences out of 10000+50000
  13458 words of font info for 53 fonts, out of 500000 for 1000
