@@ -134,4 +134,135 @@ access the target of load/store
 - if conditional jump is \textbf{not} taken, effective execution order
   is 1, 3, 2, 4.
 
+\section*{Delayed Jump Examples}
+
+Consider the RISC-I code for the following code segment:
+
+\begin{verbatim}
+
+(k = 10;)
+i = 0; // assume i in r16
+while (i < j) // assume j in r17
+      i += f(i); // assume parameter & result in r0
+
+\end{verbatim}
+
+\subsection*{Unoptimised}
+
+\begin{verbatim}
+
+    add r0,r0,r16	// i = 0
+L0: sub r16,r17,r0 {C} // i< j ?
+    jge L1
+	 nop
+	 add r0,r16,r10 //move i into r10
+	 callr f
+	 nop
+	 add r10,r16,r16 // i += f(i)
+	 jmp L0
+	 nop
+
+L1: 
+
+\end{verbatim}
+
+\subsection*{Reorganised and Optimised}
+
+\begin{verbatim}
+
+    add r0,r0,r16
+L0: sub r16,r17,r0 {C} // i < j ?
+    jge L1
+	 nop
+	 call f
+	 add r0,r16,10 // move i into r10
+	 jmp L0
+	 add r10,r16,r16 // i += f(i)
+
+L1:
+
+\end{verbatim}
+
+\begin{tabular}{|l|l|l|l|}
+fetch i1 		& execute i1 	&						&					\\
+					& fetch jump 	& compute addr		&					\\
+--delay slot--	&		 			& fetch i3			& execute i3	\\
+					&					&						& fetch i4		\\
+\end{tabular}
+
+The destination of the jump instruction is i4 (if jump \textbf{not}
+taken, this will be the instruction after the delay slot.)
+
+i3 is executed in the delay slot.
+
+Better to execute in the delay slot than leaving the execution unit
+idle.
+
+Since the instruction in the delay slot is fetched anyway, we might as
+well execute it.
+
+$60$\% if delay slots can be filled with useful instructions.
+
+\subsection*{What about?}
+
+\begin{verbatim}
+
+i0 ...
+jmp L1 // unconditional jump
+jmp L2 // unconditiuonal jump
+< = ?
+
+L1: i10 ...
+    i11 ...
+    <?>
+
+L2: i20 ...
+    i21 ...
+
+\end{verbatim}
+
+\begin{tabular}{|l|l|l|l|l|l|}
+
+i10	& EX	 	&			&			&			&			\\
+		& jmp L1	& EX'		&			&			&			\\
+		&		 	& jmp L2	& EX'		&			&			\\
+		&		 	&			& i10		& EX		&			\\
+		&		 	&			&			& i20		& EX		\\
+		&		 	&			&			&			& i21		\\
+\end{tabular}
+
+EX : Execute \\
+EX': Execute calculate jump, destination address.
+
+\section*{Pipelining}
+
+Key implementation technique for speeding up CPUs (see Hennessy \&
+Patterson - Chapter 6)
+
+Break each instruction into a series of small steps and execute them in
+parallel (steps from different instructions)
+
+\indent Think of a car assembly line
+
+Clock rate set by hte time needed for the longest step - ideally time
+for each step should be equal.
+
+Consider a 5 stage insttuction pipeline for the hypothetical DLX
+microporcessor.
+
+IF : Instruction Fetch \\
+ID	: Instruction Decode and Register Fetch \\
+EX : Execution \& Effective Address Calculation \\
+MA : Memory Access \\
+WB : Write Back
+
+
+\begin{tabular}{|l|l|l|l|l|l|}
+i			&	IF		&	ID	 	&	EX		&	MA		&	WB	\\
+i + 1		&			&	IF		&	ID		&	ID		&	MA	\\
+i + 2		&			&			&	IF		&			&	EX	\\
+i + 3		&			&			&			&	IF		&		\\
+i + 4		&			&			&			&			&	IF	\\
+\end{tabular}
+
 \end{document}

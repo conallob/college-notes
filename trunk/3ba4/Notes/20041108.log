@@ -1,6 +1,6 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  11 NOV 2004 20:12
-**20041026.tex
-(./20041026.tex
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  11 NOV 2004 22:27
+**20041108.tex
+(./20041108.tex
 LaTeX2e <2001/06/01>
 Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
 ohyphenation, loaded.
@@ -31,8 +31,8 @@ Package: amsfonts 2001/10/25 v2.2f
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
-)) (./20041026.aux)
-\openout1 = `20041026.aux'.
+)) (./20041108.aux)
+\openout1 = `20041108.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -59,27 +59,21 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
-(/sw/share/texmf/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
- [1
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
+Overfull \hbox (1.28389pt too wide) in paragraph at lines 30--41
+[][] 
  []
 
-[2] [3] [4] [5] [6] [7] (./20041026.aux) ) 
-Here is how much of TeX's memory you used:
- 556 strings out of 95847
- 6007 string characters out of 1196008
- 49780 words of memory out of 1000001
- 3535 multiletter control sequences out of 10000+50000
- 13828 words of font info for 54 fonts, out of 500000 for 1000
- 14 hyphenation exceptions out of 1000
- 23i,6n,24p,184b,303s stack positions out of 1500i,500n,5000p,200000b,5000s
+[1
 
-Output written on 20041026.dvi (7 pages, 9192 bytes).
+] [2] [3] (./20041108.aux) ) 
+Here is how much of TeX's memory you used:
+ 540 strings out of 95847
+ 5747 string characters out of 1196008
+ 49780 words of memory out of 1000001
+ 3521 multiletter control sequences out of 10000+50000
+ 13868 words of font info for 54 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 23i,7n,24p,184b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 20041108.dvi (3 pages, 4088 bytes).
