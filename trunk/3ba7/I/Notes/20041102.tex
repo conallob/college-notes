@@ -1,0 +1,147 @@
+% $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $2^{nd}$ November 2004}
+
+\maketitle
+
+\section*{A Grammar for Arithmetic Expressions}
+
+\subsection*{Productions}
+
+\begin{eqnarray}
+\langle E \rangle		&	\to	&	\langle T \rangle		\\
+\langle E \rangle		&	\to	&	\langle T \rangle		\\
+\langle T \rangle		&	\to	&	\langle T \rangle \ast \langle P \rangle \\
+\langle T \rangle		&	\to	&	\langle P \rangle \\
+\langle P \rangle		&	\to	&	\left( \langle E \rangle \right) \\
+\langle P \rangle		&	\to	&	CONST
+\end{eqnarray}
+
+This is the $\langle E \rangle + \langle T \rangle$ grammar.
+
+$\langle E \rangle$ is an Expression. \\
+$\langle T \rangle$ is a Term. \\
+$\langle F \rangle$ is a Factor (not shown). \\
+$\langle P \rangle$ is a Primary.
+
+
+Given this grammar, we should be able to derive the expression $1 + 2
+\ast 3 + 4$.
+
+\begin{eqnarray*}
+\langle E \rangle	&	\stackrel{1}{\Rightarrow}	& \langle E \rangle + \langle T \rangle \\
+						&	\stackrel{1}{\Rightarrow}	& \langle E \rangle + \langle T \rangle + \langle T \rangle \\
+						&	\stackrel{2}{\Rightarrow}	& \langle T \rangle + \langle T \rangle + \langle T \rangle \\
+						&	\stackrel{4}{\rightarrow}	& \langle P \rangle + \langle T \rangle + \langle T \rangle \\
+						&	\stackrel{6}{\rightarrow}	& CONST_{1} + \langle T \rangle + \langle T \rangle \\
+						&	\stackrel{3}{\rightarrow}	& CONST_{1} + \langle T \rangle \ast \langle P \rangle + \langle T \rangle \\
+						&	\stackrel{6}{\rightarrow}	& CONST_{1} + CONST_{2} \ast \langle P \rangle + \langle T \rangle \\
+						&	.	& \\
+						&	.	&	\\
+						&	.	&	\\
+						&	\stackrel{*}{\rightarrow}	& CONST_{1} + CONST_{2} \ast CONST_{3} + CONST_{4} \\
+\end{eqnarray*}
+
+\subsection*{Derivation Tree (Parse Tree)}
+
+% Diagram
+
+LR Parsing: Scan input left to right and produce a reverse of the
+rightmost % something - Ask irokie
+
+\section*{Another Grammar for Arithmetic Expressions}
+
+Consider
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\langle E \rangle		& \to	& \langle E \rangle + \langle T \rangle \\
+\langle E \rangle		& \to	& \langle T \rangle \\
+\end{eqnarray}
+
+\begin{eqnarray*}
+\langle E \rangle	&	\stackrel{}{\Rightarrow}	&	\langle E \rangle + \langle T \rangle \\
+						&	\stackrel{1}{\Rightarrow}	&	\langle E \rangle + \langle T \rangle + \langle T \rangle \\
+						&	\stackrel{2}{\Rightarrow}	&	\langle T \rangle + \langle T \rangle + \langle T \rangle 
+\end{eqnarray*}
+
+\subsection*{Productions}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\langle E \rangle			& 	\to	& \langle T \rangle \langle E-List \rangle \\
+\langle E-List \rangle	&	\to	& + \langle T \rangle \langle E-List \rangle \\
+\langle E-List \rangle	&	\to	&	\epsilon 
+\end{eqnarray}
+
+\begin{eqnarray*}
+\langle E \rangle	&	\Rightarrow	&	\langle T \rangle + \langle E-List \rangle \\
+						&	\Rightarrow	&	\langle T \rangle + \langle T \rangle + \langle E-List \rangle \\
+						&	\Rightarrow	&	\langle T \rangle + \langle T \rangle + \langle T \rangle \langle E-List \rangle \\ 
+						&	\Rightarrow	&	\langle T \rangle + \langle T \rangle + \langle T \rangle 
+\end{eqnarray*}
+
+Consider
+
+\begin{eqnarray}
+\langle T \rangle	& 	\to	& \langle T \rangle \langle P \rangle \\
+\langle T \rangle	&	\to	& \langle P \rangle \\
+\end{eqnarray}
+
+\begin{eqnarray*}
+\langle T \rangle	&	\Rightarrow	&	\langle P \rangle \ast \langle P
+\rangle \ast \langle P \rangle 
+\end{eqnarray*}
+
+\subsection*{The $E-Link$ Grammar}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\langle E \rangle			& 	\to	& \langle T \rangle \langle E-List \rangle \\
+\langle E-List \rangle	&	\to	& + \langle T \rangle \langle E-List \rangle \\
+\langle E-List \rangle	&	\to	& \epsilon \\
+\langle T \rangle 		&	\to	& \langle P \rangle \langle T-List \rangle \\
+\langle T-List \rangle	&	\to	& \ast \langle P \rangle \langle T-List \rangle \\
+\langle P \rangle			&	\to	& \left( \langle E \rangle \right) \\
+\langle P \rangle			&	\to	& COUNT
+\end{eqnarray}
+
+eg:
+
+\begin{eqnarray*}
+\langle T \rangle	&	\Rightarrow	&	\langle P \rangle \\
+						&	\Rightarrow	&	\langle P \rangle \ast \langle P \rangle \langle T-List \rangle \\
+						& 	\Rightarrow	& 	\langle P \rangle \ast \langle P \rangle \ast \langle P \rangle \ast \langle T-List \rangle \\
+						&	\Rightarrow	&	\langle P \rangle \ast \langle P \rangle \ast \langle P \rangle \\ 
+\end{eqnarray*}
+
+\section*{Exercise}
+
+\begin{eqnarray*}
+\langle E \rangle	&	\stackrel{1}{\Rightarrow}	&	\langle T \rangle \langle E-List \rangle \\
+						&	\stackrel{4}{\Rightarrow}	&	\langle P \rangle \langle T-List \rangle \langle E-List \rangle \\
+						&	\stackrel{2}{\Rightarrow}	&	COUNT_{1} \langle T-List \rangle \langle E-List \rangle \\
+						&	\stackrel{6}{\Rightarrow}	&	COUNT_{1} \langle E-List \rangle \\
+						&	\stackrel{2}{\Rightarrow}	&	COUNT_{1} + \langle T \rangle \langle E-List \rangle \\
+						&	\stackrel{6}{\Rightarrow}	&	COUNT_{1} + \langle P \rangle \langle T-List \rangle \langle E-List \rangle \\
+						&	\stackrel{8}{\Rightarrow}	&	COUNT_{1} + COUNT_{2} \langle T-List \rangle \langle E-List \rangle \\
+						&	\stackrel{ }{\Rightarrow}	&	COUNT_{1} + COUNT_{2} \ast \langle T-List \rangle \langle E-List \rangle \\
+						&	.	&	\\
+						&	.	&	\\
+						&	.	&	\\
+						&	\stackrel{ }{\Rightarrow}	&	COUNT_{1} + COUNT_{2} \ast COUNT_{3} \ast COUNT_{4}
+\end{eqnarray*}
+
+\subsection*{Derivation Tree}
+
+% Diagram
+
+\end{document}
