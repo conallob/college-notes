@@ -3,30 +3,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <errno.h>
 
-void *print_message_function( void *ptr );
+//#include "BankersController.h"
+#include "MessageQueue.h"
+#include "Resource.h"
 
-
-struct resources {
-
-		  // 5 values for each resource type (A, B, C)
-		  // {a,b,c}[0] is the max value, 
-		  // {a,b,c}[1-4] are the runtime requested values
-		  
-		  int[5] a, b, c;
-};
+#define RESOURCE_TYPES 3
+#define NUMBER_PROCESSES 3
 
 
+int do_stuff(Resource *resource);
 
-main()
+
+int main()
 {
 
+	
 		  // init phase
-		  
-		  resources master, resources1, resources2, resources3;
+
+		  Resources master, resources1, resources2, resources3;
 		  int iret1, iret2, iret3;
- 		  pthread_t thread1, thread2, thread3;
-		  int[4] sleeps1, sleeps2, sleeps3;
+		  pthread_t thread1, thread2, thread3;
+
 		  
 		  // Master Resources
 		  
@@ -42,7 +41,7 @@ main()
 
 		  // sleeps for Thread1:
 
-		  sleeps1 = {3, 3, 9, 5};
+		  resources1.sleeps = {3, 3, 9, 5};
 
 		  // Resources for Thread2:
 		  
@@ -52,7 +51,7 @@ main()
 
 		  // sleeps for Thread2:
 
-		  sleeps2 = {5, 6, 8, 1};
+		  resources2.sleeps = {5, 6, 8, 1};
 
 		  // Resources for Thread3:
 		  
@@ -66,14 +65,14 @@ main()
 
 		  // sleeps for Thread3:
 
-		  sleeps3 = {7, 5, 8, 0};
+		  resources3.sleeps = {7, 5, 8, 0};
 
   
 		  /* Create independant threads each of which will execute function */
 
-		  iret1 = pthread_create( &thread1, NULL, print_message_function, (void*) message1);
-		  iret2 = pthread_create( &thread2, NULL, print_message_function, (void*) message2);
-		  iret3 = pthread_create( &thread3, NULL, print_message_function, (void*) message3);
+		  iret1 = pthread_create( &thread1, NULL, do_stuff, (void*) resources1);
+		  iret2 = pthread_create( &thread2, NULL, do_stuff, (void*) &resources2);
+		  iret3 = pthread_create( &thread3, NULL, do_stuff, (void*) &resources3);
 
 		  /* Wait till threads are complete before main continues. Unless we  */
 		  /* wait we run the risk of executing an exit which will terminate   */
@@ -86,72 +85,96 @@ main()
 		  exit(0);
 }
 
-void *pseudo_resource_process(resources *resource, int *sleeps)
+int do_stuff(Resources *resource, int *sleeps)
 {
 
 		  	for (int i = 1; i <= 4; i++) {
 					  
 					  // Resource A
 
-					  if (resource.a[i] > 0 && resource.a[i] <= resource.a[0]) {
+					  if (resource->a[i] > 0 && resource->a[i] <= resource->a[0]) {
 
 								 // allocate resource
+
+								 print("Allocate A\n");
 						
-					  } else if (resource.a[i] < 0 && (resource.a[i] * -1) <= resource.a[0]) {
+					  } else if (resource->a[i] < 0 && (resource->a[i] * -1) <= resource->a[0]) {
 
 								  // deallocate resource
 
-					  } else if (resource.a[i] >= resource.a[0] || (resource.a[i] * -1) >= resource.a[0]) {
+								 print("Deallocate A\n");
+
+					  } else if (resource->a[i] >= resource->a[0] || (resource->a[i] * -1) >= resource->a[0]) {
 
 								 // error, trying to (de)allocate resources that aren't required or allowed
+
+								 print("Error A\n");
 						
-					  } else if (resource.a[i] != 0) {
+					  } else if (resource->a[i] != 0) {
 					
 								 // I don't want any resources right now
+
+								 print("Don't Need A\n");
 								 
 					  }
 
 					  // Resource B
 
-					  if (resource.b[i] > 0 && resource.b[i] <= resource.b[0]) {
+					  if (resource->b[i] > 0 && resource->b[i] <= resource->b[0]) {
 
 								 // allocate resource
+
+								 print("Allocate B\n");
 						
-					  } else if (resource.b[i] < 0 && (resource.b[i] * -1) <= resource.b[0]) {
+					  } else if (resource->b[i] < 0 && (resource->b[i] * -1) <= resource->b[0]) {
 
 								  // deallocate resource
 
-					  } else if (resource.b[i] >= resource.b[0] || (resource.b[i] * -1) >= resource.b[0]) {
+								 print("Deallocate B\n");
+
+					  } else if (resource->b[i] >= resource->b[0] || (resource->b[i] * -1) >= resource.b[0]) {
 
 								 // error, trying to (de)allocate resources that aren't required or allowed
+
+								 print("Error B\n");
 						
-					  } else if (resource.b[i] != 0) {
+					  } else if (resource->b[i] != 0) {
 					
 								 // I don't want any resources right now
+
+								 print("Don't Need B\n");
 								 
 					  }
 
 					  // Resource C
 
-					  if (resource.c[i] > 0 && resource.c[i] <= resource.c[0]) {
+					  if (resource->c[i] > 0 && resource->c[i] <= resource->c[0]) {
 
 								 // allocate resource
+
+								 print("Allocate C\n");
 						
-					  } else if (resource.c[i] < 0 && (resource.c[i] * -1) <= resource.c[0]) {
+					  } else if (resource->c[i] < 0 && (resource->c[i] * -1) <= resource->c[0]) {
 
 								  // deallocate resource
 
-					  } else if (resource.c[i] >= resource.c[0] || (resource.c[i] * -1) >= resource.c[0]) {
+								 print("Deallocate C\n");
+
+					  } else if (resource->c[i] >= resource->c[0] || (resource->c[i] * -1) >= resource->c[0]) {
 
 								 // error, trying to (de)allocate resources that aren't required or allowed
+
+								 print("Error C\n");
 						
-					  } else if (resource.c[i] != 0) {
+					  } else if (resource->c[i] != 0) {
 					
 								 // I don't want any resources right now
+
+								 print("Don't Need C\n");
 								 
 					  }
 
-					  sleep(sleeps[i]);
+					  sleep(resource->sleeps);
 
 			}
 
