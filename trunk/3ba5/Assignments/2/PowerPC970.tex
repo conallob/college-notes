@@ -32,6 +32,33 @@ Techniques in the \\ IBM PowerPC 970 (A.K.A PowerPC G5)}
 
 \section{Overview}
 
+\section{PowerPC Architecture}
+
+\cite[In 1991]{a3}, Apple, IBM and Motorola formed the AIM allience to
+produce a compeditor to the Windows Operating System on the Intel x86
+architecture. The PowerPC architecture is the sole surviving product of
+this allience.
+
+
+The PowerPC architecture is a \cite[RISC based]{a3} architecture with
+great potential which was has gained a market share in the desktop
+computing market as the nearest competitor to the Intel x86
+architecture, despite \cite[troubles experienced by numerous PC
+manufactures, such as IBM]{a3} in creating a PowerPC based
+systems.
+
+
+To date, the PowerPC architecture is commonly used in all Apple
+Macintosh systems, both desktop and server, as well as in high
+performance servers from IBM. Recent developments have also seen the
+PowerPC become an embedded processor, used in embedded devices such as
+\cite[the Nintendo CameCube, the Microsoft Xbox 2, Cisco dedicated 
+networking hardware, and the TiVo set top box.]{a3}. An extremely high
+performance CPU, called the \cite[Cell Technology]{a3}, being developed for
+embedded devices, is also a member of the PowerPC architecture.
+
+\subsection{PowerPC 970}
+
 The PowerPC 970 is the most recent member to the AIM (Apple, IBM,
 Motorola) Consortium's PowerPC architecture commonly found in many 
 systems, such as Apple Macintosh computers and various high 
@@ -43,8 +70,16 @@ the reduction of steps when computing high precision computations
 using multiple registers for single operands, as explained
 \cite[here]{a6}
 
+
 The PowerPC 970 has been designed primarily for high performance
-workstation and computation roles, 
+workstation and computation roles, particularly for operations involving
+a high degree of precision using custom written computational software
+which can be optimised to take full advantage of the PowerPC 970 64 bit
+datapath pipeline and 64 bit registers. Hence why in November 2004, the
+\cite[published list of high performance computing systems]{a11} lists
+two PoerPC 970 based systems in the top 10, namely the \cite[Marenostrum
+in the Barcelona Supercomputer Centre and the System X system in
+Virginia Tech]{a11}.
 
 \begin{figure}[hb]
 
@@ -79,7 +114,9 @@ However, in practice, such a pipeline will rarely be optimally used and
 will likely include occasional pipeline stalls when converting from wide
 pipelined tasks to narrow pipelined tasks in a short timeframe.
 
-\subsection{Integer Unit}
+\subsubsection{Execution Cores}
+
+\subsubsection{Integer Unit}
 
 As \cite[discussed in detail]{a2}, the Integer Units in the PowerPC 970 are not
 completely symmetric, thus conditional logic is used to ensure 
@@ -95,7 +132,7 @@ registers will be unleased, however, at present, very few non custom
 written, high performance software utilises this feature of the integer
 units of the PowerPC 970.
  
-\subsection{Floating Point Unit}
+\subsubsection{Floating Point Unit}
 
 With \cite[80 registers, (32 PowerPC architectural registers and 48
 rename registers)]{a2} in both of the PowerPC 970's floating point units, the
@@ -129,7 +166,7 @@ one operation greatly enhance the floating point operation performance as
 well as the already well established reputation of the floating point high 
 performance. 
 
-\subsection{Vector Unit}
+\subsubsection{Vector Unit}
 
 
 

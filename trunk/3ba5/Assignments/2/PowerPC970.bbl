@@ -5,6 +5,10 @@ Unknown, ``{PowerPC 970},'' {\em IBM}, Accessed 25-3-2005.
 \newblock
   http://www-5.ibm.com/es/press/fotos/servidoresytecnologia/i/powerpc970-1.jpg.
 
+\bibitem{a3}
+Misc, ``{PowerPC},'' {\em WikiPedia - The Free Encyclopedia}, 19-3-2005.
+\newblock http://en.wikipedia.org/wiki/PowerPC.
+
 \bibitem{a6}
 C.~Shamieh, ``{Understanding 64-bit PowerPC architecture - Critical
   considerations in 64-bit microprocessor design},'' {\em IBM Whitepaper -
@@ -12,6 +16,10 @@ C.~Shamieh, ``{Understanding 64-bit PowerPC architecture - Critical
 \newblock
   http://www-106.ibm.com/developerworks/library/pa-microdesign/?ca=dgr-lnxw016%
 4BitPowerPC.
+
+\bibitem{a11}
+Unknown, ``{Top 500 List 11/2004},'' {\em Top500.org}, Accessed 1-4-2005.
+\newblock http://www.top500.org/lists/plists.php?Y=2004\&M=11.
 
 \bibitem{a2}
 J.~Stokes, ``{Inside the IBM PowerPC 970 - Part II:The Execution Core},'' {\em

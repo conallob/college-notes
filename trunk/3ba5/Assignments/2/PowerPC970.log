@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2005.3.3)  4 APR 2005 02:40
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2005.3.3)  4 APR 2005 12:00
 entering extended mode
 **PowerPC970.tex
 (./PowerPC970.tex
@@ -106,88 +106,100 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  <powerpc970-1.png, id=1, 120.45pt x 166.7028pt>
 File: powerpc970-1.png Graphic file (type png)
  <use powerpc970-1.png>
-(./PowerPC970.toc)
+(./PowerPC970.toc [1
+
+{/sw/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./powerpc970-1.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+)
 \tf@toc=\write4
 \openout4 = `PowerPC970.toc'.
 
- [1
-
-{/sw/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./powerpc970-1.png>] <9
-70-arch.png, id=15, 596.2275pt x 462.72874pt>
+ [2] [3] <970-arch.png, id=21, 596.2275pt x 462.72874pt>
 File: 970-arch.png Graphic file (type png)
 
-<use 970-arch.png> [2 <./970-arch.png>] [3] (./PowerPC970.bbl [4]
-Underfull \hbox (badness 1314) in paragraph at lines 9--15
+<use 970-arch.png> [4 <./970-arch.png>] [5] (./PowerPC970.bbl
+Underfull \hbox (badness 1412) in paragraph at lines 9--11
+[]\OT1/cmr/m/n/12 Misc, ``Pow-erPC,'' \OT1/cmr/m/it/12 WikiPedia - The Free En-
+cy-clo-pe-dia\OT1/cmr/m/n/12 , 19-3-2005.
+ []
+
+[6]
+Underfull \hbox (badness 1314) in paragraph at lines 13--19
 []\OT1/cmr/m/n/12 C. Shamieh, ``Un-der-stand-ing 64-bit Pow-erPC ar-chi-tec-tur
 e - Crit-i-
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 9--15
+Underfull \hbox (badness 1009) in paragraph at lines 13--19
 \OT1/cmr/m/n/12 cal con-sid-er-a-tions in 64-bit mi-cro-pro-ces-sor de-sign,'' 
 \OT1/cmr/m/it/12 IBM Whitepa-
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 9--15
+Underfull \hbox (badness 3068) in paragraph at lines 13--19
 \OT1/cmr/m/it/12 per - Power Ar-chi-tec-ture Tech-nol-ogy\OT1/cmr/m/n/12 , 19-1
 0-2004.  http://www-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--15
+Underfull \hbox (badness 10000) in paragraph at lines 13--19
 \OT1/cmr/m/n/12 106.ibm.com/developerworks/library/pa-microdesign/?ca=dgr-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--20
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
 []\OT1/cmr/m/n/12 J. Stokes, ``In-side the IBM Pow-erPC 970 - Part
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--20
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
 \OT1/cmr/m/n/12 II:The Ex-e-cu-tion Core,'' \OT1/cmr/m/it/12 Arts Tech-nica\OT1
 /cmr/m/n/12 , 14-5-2003.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
 []\OT1/cmr/m/n/12 J. Stokes, ``In-side the IBM Pow-erPC 970 - Part I: De-
  []
 
 
-Underfull \hbox (badness 7832) in paragraph at lines 22--25
+Underfull \hbox (badness 7832) in paragraph at lines 30--33
 \OT1/cmr/m/n/12 sign Phi-los-o-phy and Front End,'' \OT1/cmr/m/it/12 Arts Tech-
 nica\OT1/cmr/m/n/12 , 22-11-2002.
  []
 
 
-Underfull \hbox (badness 3312) in paragraph at lines 27--29
+Underfull \hbox (badness 3312) in paragraph at lines 35--37
 []\OT1/cmr/m/n/12 A. C. Inc, ``Pow-er-Mac G5 Whitepa-per,'' \OT1/cmr/m/it/12 Ap
 -ple.com\OT1/cmr/m/n/12 , 31-6-2006.
  []
 
 
-Overfull \hbox (2.2615pt too wide) in paragraph at lines 27--29
+Overfull \hbox (2.2615pt too wide) in paragraph at lines 35--37
 \OT1/cmr/m/n/12 http://images.apple.com/powermac/pdf/PowerPCG5[]WP[]06092004.pd
 f. 
  []
 
-) [5] (./PowerPC970.aux) ) 
+) [7] (./PowerPC970.aux) ) 
 Here is how much of TeX's memory you used:
- 909 strings out of 94500
- 10991 string characters out of 1176115
- 58830 words of memory out of 1000000
- 4123 multiletter control sequences out of 10000+50000
- 6410 words of font info for 23 fonts, out of 500000 for 2000
+ 929 strings out of 94500
+ 11198 string characters out of 1176115
+ 58836 words of memory out of 1000000
+ 4137 multiletter control sequences out of 10000+50000
+ 9155 words of font info for 32 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
  25i,6n,19p,226b,236s stack positions out of 1500i,500n,5000p,200000b,5000s
 PDF statistics:
- 31 PDF objects out of 300000
+ 38 PDF objects out of 300000
  0 named destinations out of 131072
  11 words of extra memory for PDF output out of 65536
 </sw/share/texmf-dist/fonts/type1/bluesky/cm/cmti12.p
 fb></sw/share/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></sw/share/texmf-dis
 t/fonts/type1/bluesky/cm/cmr12.pfb></sw/share/texmf-dist/fonts/type1/bluesky/cm
 /cmr17.pfb>
-Output written on PowerPC970.pdf (5 pages, 1006582 bytes).
+Output written on PowerPC970.pdf (7 pages, 1013564 bytes).
