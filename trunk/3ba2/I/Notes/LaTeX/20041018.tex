@@ -2,6 +2,7 @@
 
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+\usepackage[all]{xypic}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -151,7 +152,12 @@ Prolog makes Logical Interfaces to prove this goal.
 In C:
 
 
-% Diagram
+\xy <1cm,0cm>:
+(1,-10) *= (2,-6) !UL\txt{} *\frm{-} ,
+0 ; (15,0) ; (15,-10) **\dir{-} ;
+(0,-10) **\dir{-} ;
+0 **\dir{-} ,
+\endxy
 
 
 In prolog:
