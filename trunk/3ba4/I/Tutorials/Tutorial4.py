@@ -17,8 +17,8 @@ tut_seq = [
 # Currently hard coded, I'll take user input later...
 
 L = 16; # length in bits
-K = 8;  # 
-N = 1;  # 
+K = 1;  # 
+N = 8;  # 
 
 # Cache tags and data
 
@@ -49,7 +49,8 @@ for i in range(len(tut_seq)):
 	tag = (current >> ilog((K+L)));
 	# Now, let's see if we have a relavent cache for current's tag...
 	n = set; # skip straight to the appropriate set
-	if set <= N:
+	for n in range(N):
+		n = set;
 		for k in range(K):
 			if cache_tags[n][k] == -1:
 				# Tag not found, we've got a Miss... :(
