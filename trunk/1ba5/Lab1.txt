@@ -1,0 +1,20 @@
+2)
+	a) 1.84V
+	b) 3.11V
+	c) 11.92mA
+3)
+
+using the 51 ohm resistor:
+	a) .94V
+	b) (220) 4.04V & (51) .94V
+	c) (220 resistor) 15.95mA & (51 resistor) 15.86mA
+
+using the 101 ohm resistor:
+	a) 1.56V
+	b) (220) 3.43V & (101) 1.56V
+	c) (220 resistor) 13.79mA & (101 resistor) 11.71mA
+
+using the 220 ohm resistor:
+	a) 1.76V
+	b) (first 220) 3.22V & (2nd 220) 1.76V
+	c) (first resistor) 12.4mA & (2nd resistor) 6.77mA

@@ -1,0 +1,134 @@
+-- F:\2BA4\VHDL\2\2\MUX4TO1_TB.ANT
+-- VHDL Annotation Test Bench created by
+-- HDL Bencher 4.1i
+-- Tue May 11 21:08:42 2004
+
+LIBRARY  IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+LIBRARY ieee;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY testbench IS
+END testbench;
+
+ARCHITECTURE testbench_arch OF testbench IS
+-- If you get a compiler error on the following line,
+-- from the menu do Options->Configuration select VHDL 87
+FILE RESULTS: TEXT OPEN WRITE_MODE IS "f:\2ba4\vhdl\2\2\mux4to1_tb.ano";
+	COMPONENT mux_4to1
+		PORT (
+			SEL : in  std_logic_vector (1 DOWNTO 0);
+			A : in  std_logic;
+			B : in  std_logic;
+			C : in  std_logic;
+			D : in  std_logic;
+			MUX_OUT : out  std_logic
+		);
+	END COMPONENT;
+
+	SIGNAL SEL : std_logic_vector (1 DOWNTO 0);
+	SIGNAL A : std_logic;
+	SIGNAL B : std_logic;
+	SIGNAL C : std_logic;
+	SIGNAL D : std_logic;
+	SIGNAL MUX_OUT : std_logic;
+
+BEGIN
+	UUT : mux_4to1
+	PORT MAP (
+		SEL => SEL,
+		A => A,
+		B => B,
+		C => C,
+		D => D,
+		MUX_OUT => MUX_OUT
+	);
+
+	PROCESS -- Annotate outputs process
+		VARIABLE TX_TIME : INTEGER :=0;
+
+		PROCEDURE ANNOTATE_MUX_OUT(
+			TX_TIME : INTEGER
+		) IS
+			VARIABLE TX_STR : String(1 to 4096);
+			VARIABLE TX_LOC : LINE;
+		BEGIN
+			write(TX_LOC,string'("Annotate["));
+			write(TX_LOC, TX_TIME);
+			write(TX_LOC,string'(",MUX_OUT,"));
+			write(TX_LOC, MUX_OUT);
+			write(TX_LOC, string'("]"));
+			TX_STR(TX_LOC.all'range) := TX_LOC.all;
+			writeline(results, TX_LOC);
+			Deallocate(TX_LOC);
+		END;
+
+	BEGIN
+		CHECK_LOOP : LOOP
+		WAIT FOR 50 ns;
+		TX_TIME := TX_TIME + 50;
+		ANNOTATE_MUX_OUT(TX_TIME);
+		WAIT FOR 50 ns;
+		TX_TIME := TX_TIME + 50;
+		END LOOP CHECK_LOOP;
+	END PROCESS;
+
+	PROCESS
+		VARIABLE TX_OUT : LINE;
+
+		BEGIN
+		-- --------------------
+		SEL <= transport std_logic_vector'("00"); --0
+		A <= transport '1';
+		B <= transport '0';
+		C <= transport '0';
+		D <= transport '0';
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=100 ns
+		SEL <= transport std_logic_vector'("01"); --1
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=200 ns
+		SEL <= transport std_logic_vector'("10"); --2
+		A <= transport '1';
+		B <= transport '0';
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=300 ns
+		SEL <= transport std_logic_vector'("11"); --3
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=400 ns
+		SEL <= transport std_logic_vector'("00"); --0
+		A <= transport '0';
+		B <= transport '1';
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=500 ns
+		SEL <= transport std_logic_vector'("01"); --1
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=600 ns
+		SEL <= transport std_logic_vector'("10"); --2
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=700 ns
+		SEL <= transport std_logic_vector'("11"); --3
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=800 ns
+		A <= transport '1';
+		B <= transport '0';
+		-- --------------------
+		WAIT FOR 1000 ns; -- Time=1800 ns
+		-- --------------------
+
+		write(TX_OUT, string'("Total[]"));
+		writeline(results, TX_OUT);
+		ASSERT (FALSE) REPORT
+			"Success! Simulation for annotation completed"
+			SEVERITY FAILURE;
+	END PROCESS;
+END testbench_arch;
+
+CONFIGURATION mux_4to1_cfg OF testbench IS
+	FOR testbench_arch
+	END FOR;
+END mux_4to1_cfg;

@@ -1,0 +1,5417 @@
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @register.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    register.vhd
+Scanning    register.vhd
+Writing register.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @register.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    register.vhd
+Scanning    register.vhd
+Writing register.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @register.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    register.vhd
+Scanning    register.vhd
+Writing register.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'exewrap @testbenchApp.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit decoder...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+decoder.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named decoder...
+vhdtdtfi completed with errors...
+
+Error creating decoder_test.vhd.  Defaulting to boilerplate test bench.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+Starting: 'jhdparse @decoder_test.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder_test.vhd
+Scanning    decoder_test.vhd
+Writing decoder_test.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'exewrap @testbenchApp.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 2to1mux.vhd...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+2to1mux.vhd(8): Syntax error at or near: 2
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 2to1mux.vhd...
+vhdtdtfi completed with errors...
+
+Error creating 2to1mux_test.vhd.  Defaulting to boilerplate test bench.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+Starting: 'jhdparse @2to1mux_test.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux_test.vhd
+Scanning    2to1mux_test.vhd
+Writing 2to1mux_test.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'exewrap @testbenchApp.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 6to1mux.vhd...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+6to1mux.vhd(8): Syntax error at or near: 6
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 6to1mux.vhd...
+vhdtdtfi completed with errors...
+
+Error creating 6to1mux_test.vhd.  Defaulting to boilerplate test bench.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+Starting: 'jhdparse @6to1mux_test.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux_test.vhd
+Scanning    6to1mux_test.vhd
+Writing 6to1mux_test.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'exewrap @testbenchApp.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit register...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+register.vhd(6): Syntax error at or near: register
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named register...
+vhdtdtfi completed with errors...
+
+Error creating register_test.vhd.  Defaulting to boilerplate test bench.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+Starting: 'jhdparse @register_test.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    register_test.vhd
+Scanning    register_test.vhd
+Writing register_test.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @register.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Synthesize
+
+Starting: 'exewrap @__2to1mux_2epf_exewrap.rsp'
+
+
+Creating TCL Process
+Done: completed successfully.
+
+Starting: 'expresscli 2to1mux.epfx'
+
+
+Unable to obtain a license for FPGA Express
+Done: failed with exit code: 65535.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Synthesize
+
+Starting: 'exewrap @__6to1mux_2epf_exewrap.rsp'
+
+
+Creating TCL Process
+Done: completed successfully.
+
+Starting: 'expresscli 6to1mux.epfx'
+
+
+Unable to obtain a license for FPGA Express
+Done: failed with exit code: 65535.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Launch ModelSim Simulator
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -command xilperl _toldo.pl'
+
+
+Done: completed successfully.
+
+Launching: 'exewrap @_launchModelSimApp_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_decoder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit decoder...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+decoder.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named decoder...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_2to1mux_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 2to1mux...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+2to1mux.vhd(8): Syntax error at or near: 2
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 2to1mux...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_register_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit register...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+register.vhd(8): Syntax error at or near: register
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named register...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @register.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux_test.jp'
+
+
+
+Starting: 'jhdparse @register_test.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    register_test.vhd
+Scanning    register_test.vhd
+Writing register_test.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @decoder_test.jp'
+
+
+
+Starting: 'jhdparse @6to1mux_test.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux_test.vhd
+Scanning    6to1mux_test.vhd
+Writing 6to1mux_test.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Synthesize
+
+Starting: 'exewrap @__2to1mux_2epf_exewrap.rsp'
+
+
+Creating TCL Process
+Done: completed successfully.
+
+Starting: 'expresscli 2to1mux.epfx'
+
+
+Unable to obtain a license for FPGA Express
+Done: failed with exit code: 65535.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_2to1mux_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 2to1mux...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+2to1mux.vhd(8): Syntax error at or near: 2
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 2to1mux...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @register.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_decoder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit decoder...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+decoder.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named decoder...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @register.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_decoder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit decoder...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+decoder.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named decoder...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+register.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named reg...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+reg.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named reg...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+reg.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named reg...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @reg.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @reg.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+reg.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named reg...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @reg.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_reg_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan reg.spl reg.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Synthesize
+
+Starting: 'exewrap @__reg_2epf_exewrap.rsp'
+
+
+Creating TCL Process
+Done: completed successfully.
+
+Starting: 'expresscli reg.epfx'
+
+
+Unable to obtain a license for FPGA Express
+Done: failed with exit code: 65535.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_decoder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit decoder...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_decoder_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan decoder.spl decoder.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_6to1mux_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 6to1mux...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+6to1mux.vhd(8): Syntax error at or near: 6
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 6to1mux...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_6to1mux_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 6to1mux...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+6to1mux.vhd(8): Syntax error at or near: 6
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 6to1mux...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_6to1mux_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 6to1mux...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+6to1mux.vhd(8): Syntax error at or near: 6
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 6to1mux...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Writing 6to1mux.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @6to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    6to1mux.vhd
+Scanning    6to1mux.vhd
+Writing 6to1mux.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux6to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux6to1.vhd
+Scanning    mux6to1.vhd
+Writing mux6to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_mux6to1_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit mux6to1...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_mux6to1_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan mux6to1.spl mux6to1.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Writing 2to1mux.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_mux2to1_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit mux2to1...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_mux2to1_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan mux2to1.spl mux2to1.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux6to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux6to1.vhd
+Scanning    mux6to1.vhd
+Writing mux6to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: decoder_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do decoder_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do decoder_tb.ado 
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity decoder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of decoder
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity decoder
+# ERROR: decoder.vhd(24): String length is 8. Expected length is 6.
+# ERROR: decoder.vhd(38): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./decoder_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity decoder
+# -- Compiling configuration decoder_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-3173) Entity 'work.decoder' has no architecture.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do decoder_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: mux2to1_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do mux2to1_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mux2to1
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of mux2to1
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity mux2to1
+# ERROR: mux2to1.vhd(23): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(24): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(29): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./mux2to1_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity mux2to1
+# -- Compiling configuration mux2to1_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-3173) Entity 'work.mux2to1' has no architecture.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: mux6to1_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux6to1_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do mux6to1_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mux6to1
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of mux6to1
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity mux6to1
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity mux6to1
+# -- Compiling configuration mux6to1_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.mux6to1(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 1700 ns  Iteration: 0  Instance: /testbench
+# Break at mux6to1_tb.ant line 128
+# Stopped at mux6to1_tb.ant line 128 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux6to1_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.reg(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 960 ns  Iteration: 0  Instance: /testbench
+# Break at reg_tb.ant line 101
+# Stopped at reg_tb.ant line 101 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.reg(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 960 ns  Iteration: 0  Instance: /testbench
+# Break at reg_tb.ant line 134
+# Stopped at reg_tb.ant line 134 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.reg(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 960 ns  Iteration: 0  Instance: /testbench
+# Break at reg_tb.ant line 134
+# Stopped at reg_tb.ant line 134 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.reg(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 960 ns  Iteration: 0  Instance: /testbench
+# Break at reg_tb.ant line 127
+# Stopped at reg_tb.ant line 127 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @reg.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    reg.vhd
+Scanning    reg.vhd
+Writing reg.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__tbwTOjhd_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# ERROR: reg.vhd(28): Type error resolving index expression.
+# ERROR: reg.vhd(31): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./reg_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-13) Recompile work.reg(behavioral) because work.reg has changed.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# ERROR: reg.vhd(28): Type error resolving index expression.
+# ERROR: reg.vhd(31): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./reg_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-13) Recompile work.reg(behavioral) because work.reg has changed.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_reg_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan reg.spl reg.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# ERROR: reg.vhd(28): Type error resolving index expression.
+# ERROR: reg.vhd(31): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./reg_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-13) Recompile work.reg(behavioral) because work.reg has changed.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @reg.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    reg.vhd
+Scanning    reg.vhd
+Writing reg.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\reg_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# ERROR: reg.vhd(28): Type error resolving index expression.
+# ERROR: reg.vhd(31): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./reg_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-13) Recompile work.reg(behavioral) because work.reg has changed.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\decoder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: decoder_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do decoder_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do decoder_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity decoder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of decoder
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity decoder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity decoder
+# -- Compiling configuration decoder_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.decoder(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 1560 ns  Iteration: 0  Instance: /testbench
+# Break at decoder_tb.ant line 121
+# Stopped at decoder_tb.ant line 121 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do decoder_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'exewrap @__tbwTOjhd_exewrap.rsp'
+
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: mux2to1_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do mux2to1_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mux2to1
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of mux2to1
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity mux2to1
+# ERROR: mux2to1.vhd(23): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(24): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(29): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./mux2to1_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity mux2to1
+# -- Compiling configuration mux2to1_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-3173) Entity 'work.mux2to1' has no architecture.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: mux2to1_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do mux2to1_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mux2to1
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of mux2to1
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity mux2to1
+# ERROR: mux2to1.vhd(23): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(24): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(29): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./mux2to1_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity mux2to1
+# -- Compiling configuration mux2to1_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-3173) Entity 'work.mux2to1' has no architecture.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: mux2to1_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do mux2to1_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mux2to1
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of mux2to1
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity mux2to1
+# ERROR: mux2to1.vhd(23): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(24): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(29): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./mux2to1_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity mux2to1
+# -- Compiling configuration mux2to1_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-3173) Entity 'work.mux2to1' has no architecture.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: mux2to1_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do mux2to1_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mux2to1
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of mux2to1
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity mux2to1
+# ERROR: mux2to1.vhd(23): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(24): Type error in string literal (base type is not ARRAY_TYPE).
+# ERROR: mux2to1.vhd(29): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./mux2to1_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity mux2to1
+# -- Compiling configuration mux2to1_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-3173) Entity 'work.mux2to1' has no architecture.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do mux2to1_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# ERROR: reg.vhd(28): Type error resolving index expression.
+# ERROR: reg.vhd(31): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./reg_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-13) Recompile work.reg(behavioral) because work.reg has changed.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: reg_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do reg_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity reg
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of reg
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity reg
+# ERROR: reg.vhd(28): Type error resolving index expression.
+# ERROR: reg.vhd(31): VHDL Compiler exiting
+# ERROR: invalid command name "bind"
+# Initialization problem, exiting.
+# Executing ONERROR command at macro ./reg_tb.ado line 9
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity reg
+# -- Compiling configuration reg_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# ** Error: (vsim-13) Recompile work.reg(behavioral) because work.reg has changed.
+# Error loading design
+Error loading design
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected a return code of '12' from program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do reg_tb.ado'
+
+VSim failed to simulate annotated testbench
+Reason: 
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Check Syntax
+
+Starting: 'exewrap @__mux2to1_2cstx_exewrap.rsp'
+
+
+Creating TCL Process
+Done: completed successfully.
+
+Starting: 'expresscli mux2to1.cstx'
+
+
+Unable to obtain a license for FPGA Express
+Done: failed with exit code: 65535.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\decoder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\decoder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux6to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\reg_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @reg.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    reg.vhd
+Scanning    reg.vhd
+Writing reg.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\reg_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux2to1.vhd
+Scanning    mux2to1.vhd
+Writing mux2to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "d:\cgobrien\1a\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'exewrap -tapkeep -mode pipe -command createsch -family=spartan reg_file.sch'
+
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'sch2jhd -family=spartan reg_file.sch reg_file.jhd'
+
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_decoder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit decoder...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_decoder_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan decoder.spl decoder.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_mux2to1_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit mux2to1...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_mux2to1_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan mux2to1.spl mux2to1.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_mux6to1_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit mux6to1...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_mux6to1_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan mux6to1.spl mux6to1.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_reg_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan reg.spl reg.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_splitter_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit splitter...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+splitter.vhd(18): Syntax error at or near: begin
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named splitter...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_splitter_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit splitter...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+splitter.vhd(18): Syntax error at or near: begin
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named splitter...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Check Syntax
+
+Starting: 'exewrap @__splitter_2cstx_exewrap.rsp'
+
+
+Creating TCL Process
+Done: completed successfully.
+
+Starting: 'expresscli splitter.cstx'
+
+
+Unable to obtain a license for FPGA Express
+Done: failed with exit code: 65535.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_splitter_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit splitter...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_splitter_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan splitter.spl splitter.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "u:\college\2ba4\vhdl\1\1a\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: splitter_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do splitter_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do splitter_tb.ado 
+# ** Error: (vlib-35) Failed to create directory "work".
+# File exists. (errno = EEXIST)
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity splitter
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of splitter
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity splitter
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity splitter
+# -- Compiling configuration splitter_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.splitter(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 1200 ns  Iteration: 0  Instance: /testbench
+# Break at splitter_tb.ant line 189
+# Stopped at splitter_tb.ant line 189 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do splitter_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Generate Expected Simulation Results
+
+Starting: 'exewrap -tapkeep -mode pipe -sen 50 -tcl -command C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl __antTOano.rsp'
+
+
+Creating TCL Process
+Running Automatic Do File: splitter_tb.ado
+Starting: 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do splitter_tb.ado'
+
+
+Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+
+# 5.6f
+
+# do splitter_tb.ado 
+# ** Warning: (vlib-34) Library already exists at "work".
+# resume
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity splitter
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of splitter
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity splitter
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity splitter
+# -- Compiling configuration splitter_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# //  ModelSim SE VHDL 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.splitter(behavioral)
+# ** Failure: Success! Simulation for annotation completed
+#    Time: 1200 ns  Iteration: 0  Instance: /testbench
+# Break at splitter_tb.ant line 195
+# Stopped at splitter_tb.ant line 195 
+Tcl C:/Xilinx/data/projnav/__simulateAnnoTestBench.tcl detected that program 'c:/progra~1/fpgadv54/modeltech/win32/vsim -c -do splitter_tb.ado' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap -tcl -command __runBencherAnno.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "u:\college\2ba4\vhdl\1\1a\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "u:\college\2ba4\vhdl\1\1a\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "u:\college\2ba4\vhdl\1\1a\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_splitter_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit splitter...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_splitter_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan splitter.spl splitter.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_splitter_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit splitter...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_splitter_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan splitter.spl splitter.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "u:\college\2ba4\vhdl\1\1a\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_splitter_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit splitter...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_splitter_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan splitter.spl splitter.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "u:\college\2ba4\vhdl\1\1a\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "u:\college\2ba4\vhdl\1\1a\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_splitter_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit splitter...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_splitter_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=spartan splitter.spl splitter.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'exewrap -tapkeep -mode pipe -command createsch -family=spartan reg_file.sch'
+
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'sch2jhd -family=spartan reg_file.sch reg_file.jhd'
+
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'sch2jhd -family=spartan reg_file.sch reg_file.jhd'
+
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'sch2jhd -family=spartan reg_file.sch reg_file.jhd'
+
+
+Done: completed successfully.
+

@@ -1,0 +1,10 @@
+Chapter 5 Exercise 2
+
+I can go to a club if I have enough money and I'm dressed neatly and I'm not drunk:
+goToClub = (money >= enough) && (amNeatlyDressed) && !drunk;
+
+I should stop if I've found the house I'm looking for or I'm at the end of the road:
+shouldStop = (position == housePosition) || (position == endOfRoad);
+
+I should continue while I havent found the house and there are more houses:
+shouldContinue = (!foundHouse) && (housesLeft > 0);

@@ -1,0 +1,23 @@
+class Event {
+	Time startTime;
+	Duration eventDuration;
+
+	public Event(Time startTimeToSet, Duration eventDurationToSet) {
+		startTime = startTimeToSet;
+		eventDuration = eventDurationToSet;
+	}
+
+	public Time getStartTime() {
+	 return startTime;
+	} 
+
+	public Time getFinishTime() {
+		Time endTime = new Time(startTime.getHours(), startTime.getMinutes());
+		endTime.addDuration(eventDuration);
+		return endTime;
+	} 
+
+	public Duration getDuration(){
+		return eventDuration;
+	}
+}

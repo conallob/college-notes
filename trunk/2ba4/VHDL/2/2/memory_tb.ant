@@ -1,0 +1,142 @@
+-- F:\2BA4\VHDL\2\2\MEMORY_TB.ANT
+-- VHDL Annotation Test Bench created by
+-- HDL Bencher 4.1i
+-- Wed May 12 10:41:58 2004
+
+LIBRARY  IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+LIBRARY ieee;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY testbench IS
+END testbench;
+
+ARCHITECTURE testbench_arch OF testbench IS
+-- If you get a compiler error on the following line,
+-- from the menu do Options->Configuration select VHDL 87
+FILE RESULTS: TEXT OPEN WRITE_MODE IS "f:\2ba4\vhdl\2\2\memory_tb.ano";
+	COMPONENT memory
+		PORT (
+			CLK : in  std_logic;
+			MW : in  std_logic;
+			A : in  std_logic_vector (8 DOWNTO 0);
+			Din : in  std_logic_vector (15 DOWNTO 0);
+			Dout : out  std_logic_vector (15 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	SIGNAL CLK : std_logic;
+	SIGNAL MW : std_logic;
+	SIGNAL A : std_logic_vector (8 DOWNTO 0);
+	SIGNAL Din : std_logic_vector (15 DOWNTO 0);
+	SIGNAL Dout : std_logic_vector (15 DOWNTO 0);
+
+BEGIN
+	UUT : memory
+	PORT MAP (
+		CLK => CLK,
+		MW => MW,
+		A => A,
+		Din => Din,
+		Dout => Dout
+	);
+
+	PROCESS -- clock process
+		VARIABLE TX_TIME : INTEGER :=0;
+
+		PROCEDURE ANNOTATE_Dout(
+			TX_TIME : INTEGER
+		) IS
+			VARIABLE TX_STR : String(1 to 4096);
+			VARIABLE TX_LOC : LINE;
+		BEGIN
+			write(TX_LOC,string'("Annotate["));
+			write(TX_LOC, TX_TIME);
+			write(TX_LOC,string'(",Dout,"));
+			write(TX_LOC, Dout);
+			write(TX_LOC, string'("]"));
+			TX_STR(TX_LOC.all'range) := TX_LOC.all;
+			writeline(results, TX_LOC);
+			Deallocate(TX_LOC);
+		END;
+
+	BEGIN
+		CLOCK_LOOP : LOOP
+		CLK <= transport '0';
+		WAIT FOR 10 ns;
+		TX_TIME := TX_TIME + 10;
+		CLK <= transport '1';
+		WAIT FOR 10 ns;
+		TX_TIME := TX_TIME + 10;
+		ANNOTATE_Dout(TX_TIME);
+		WAIT FOR 40 ns;
+		TX_TIME := TX_TIME + 40;
+		CLK <= transport '0';
+		WAIT FOR 40 ns;
+		TX_TIME := TX_TIME + 40;
+		END LOOP CLOCK_LOOP;
+	END PROCESS;
+
+	PROCESS
+		VARIABLE TX_OUT : LINE;
+
+		BEGIN
+		-- --------------------
+		MW <= transport '1';
+		A <= transport std_logic_vector'("000000010"); --2
+		Din <= transport std_logic_vector'("0000000000110110"); --36
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=100 ns
+		MW <= transport '0';
+		A <= transport std_logic_vector'("000000100"); --4
+		Din <= transport std_logic_vector'("0000001000110100"); --234
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=200 ns
+		MW <= transport '1';
+		A <= transport std_logic_vector'("000001000"); --8
+		Din <= transport std_logic_vector'("0000001111001011"); --3CB
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=300 ns
+		MW <= transport '0';
+		A <= transport std_logic_vector'("000010000"); --10
+		Din <= transport std_logic_vector'("0000001000100010"); --222
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=400 ns
+		MW <= transport '1';
+		A <= transport std_logic_vector'("000100000"); --20
+		Din <= transport std_logic_vector'("0000001101101001"); --369
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=500 ns
+		MW <= transport '0';
+		A <= transport std_logic_vector'("001000000"); --40
+		Din <= transport std_logic_vector'("0001001001001100"); --124C
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=600 ns
+		MW <= transport '1';
+		A <= transport std_logic_vector'("010000000"); --80
+		Din <= transport std_logic_vector'("0000001000100010"); --222
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=700 ns
+		MW <= transport '0';
+		A <= transport std_logic_vector'("100000000"); --100
+		Din <= transport std_logic_vector'("0010011010010001"); --2691
+		-- --------------------
+		WAIT FOR 960 ns; -- Time=1660 ns
+		-- --------------------
+
+		write(TX_OUT, string'("Total[]"));
+		writeline(results, TX_OUT);
+		ASSERT (FALSE) REPORT
+			"Success! Simulation for annotation completed"
+			SEVERITY FAILURE;
+	END PROCESS;
+END testbench_arch;
+
+CONFIGURATION memory_cfg OF testbench IS
+	FOR testbench_arch
+	END FOR;
+END memory_cfg;

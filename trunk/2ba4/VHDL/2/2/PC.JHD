@@ -1,0 +1,3 @@
+MODULE pc
+   SUBMODULE full_adder_9bit
+   SUBMODULE mux_4to1_9bit

@@ -1,0 +1,8 @@
+[xc2v40-6cs144-FPGA Express VHDL]
+Design Entry Utilities=true
+[adder_4]
+Design Entry Utilities=true
+User Constraints=true
+Implement Design=false
+[adder_4_tb.tbw]
+ModelSim Simulator=true

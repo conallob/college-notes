@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Course 2BA5: Digital Electronics \\ Tutorial Answers}
+
+\author{Conall O'Brien \\ \\ 01734351 \\ \\ conall@conall.net}
+
+\maketitle
+
+\noindent $V = V_{m1} \sin{\omega t} + V_{m3} \sin{3 \omega t}$
+
+\vspace{5mm}
+
+\noindent Find $\overline{V}$ and $\overline{V^{2}(t)}$.
+
+\section{$\overline{V(t)}$}
+
+\begin{eqnarray*}
+\overline{V(t)} & = & \int^{T}_{0} (V_{m1} \sin{\omega t} + V_{m3} \sin{3 \omega t}) dt \\
+					 & = & V_{m1} \int^{T}_{0} \sin{\omega t} dt + V_{m3} \int^{T}_{0} \sin{3 \omega t}) dt \\
+					 & = & V_{m1} \int^{\frac{2 \pi}{\omega}}_{0} \sin{\omega t} dt + V_{m3} \int^{\frac{2 \pi}{\omega}}_{0} \sin{3 \omega t}) dt \\
+\omega t			 & = & \theta \\
+t 					 & = & 0 \\
+\theta			 & = & 0 \\
+t					 & = & \frac{2 \pi}{\omega} \\
+\theta			 & = & 2 \pi \\
+\int^{2 \pi}_{0} \sin{\theta} d\theta & & \\
+\int^{2 \pi}_{0} \sin{3 \theta} d\theta & & \\
+\overline{V(t)} & = & \frac{1}{\omega} \left( V_{m1} \int^{2 \pi}_{0}
+\sin{\theta}
+\end{eqnarray*}
+
+\section{$\overline{V^{2}(t)}$}
+
+\begin{eqnarray*}
+\end{eqnarray*}
+
+\end{document}

@@ -1,0 +1,1 @@
+-tapkeep -show normal -mode pipe -command sch2sym -refsym=alu -family=virtex2 alu.sch alu.sym

@@ -1,0 +1,13 @@
+Release 4.2.03i - xst E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to .
+CPU : 0.00 / 0.08 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter overwrite set to YES
+CPU : 0.00 / 0.08 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Compiling vhdl file F:/2ba4/VHDL/2/2/reg_16bit.vhd in Library work.
+Entity <reg_16bit> (Architecture <behavioral>) compiled.
+CPU : 0.76 / 0.84 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 

@@ -1,0 +1,22 @@
+backslash
+insert <PROJECT> d:/cgobrien/1a/__express_prj/reg
+insert <LIBRARY>
+insert unisim C:/Xilinx/vhdl/src/unisims/unisim_vcomp.vhd
+insert <LIBRARY>
+plslib 
+insert <V_LIBRARY>
+insert 
+insert <FILES> d:/cgobrien/1a/reg.vhd 
+insert <SYNTAX> d:/cgobrien/1a/reg.vhd 
+insert <TOP> ~reg~
+insert <TARGET> ~Spartan~ ~S05PC84~ ~-4~ 50
+insert <IMPLEMENT> ~reg~
+insert QUIK
+insert HIER
+insert X_NO
+insert OHOT
+insert O_NO
+insert V_NO
+insert HDLC
+insert <TOUCH_FILE> reg.impl
+create reg.epf TOepf -- generated only for ProjNav status tracking

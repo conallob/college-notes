@@ -1,0 +1,64 @@
+JDF E
+// Created by ISE ver 1.0
+PROJECT 2
+DESIGN 2 Normal
+DEVKIT xc2v40-6cs144
+DEVFAM virtex2
+FLOW XST VHDL
+STIMULUS splitter16_tb.tbw Normal
+STIMULUS mux4to1_tb.tbw Normal
+STIMULUS mux8to1_tb.tbw Normal
+STIMULUS mux9to1_tb.tbw Normal
+STIMULUS mux2to1_tb.tbw Normal
+STIMULUS zero_detect_tb.tbw Normal
+STIMULUS zero_fill_tb.tbw Normal
+MODULE memory.vhd
+MODSTYLE memory Normal
+MODULE mux_4to1.vhd
+MODSTYLE mux_4to1 Normal
+MODULE splitter_16bit.vhd
+MODSTYLE splitter_16bit Normal
+MODULE zero_fill_16bit.vhd
+MODSTYLE zero_fill_16bit Normal
+MODULE mux_8to1.vhd
+MODSTYLE mux_8to1 Normal
+MODULE mux_9to1.vhd
+MODSTYLE mux_9to1 Normal
+MODULE car.vhd
+MODSTYLE car Normal
+MODULE mux2to1.vhd
+MODSTYLE mux2to1 Normal
+MODULE mux8to1.vhd
+MODSTYLE mux8to1 Normal
+MODULE logic_16bit.vhd
+MODSTYLE logic_16bit Normal
+MODULE mux_2to1_16bit.vhd
+MODSTYLE mux_2to1_16bit Normal
+MODULE mux_9to1_16bit.vhd
+MODSTYLE mux_9to1_16bit Normal
+MODULE pc.vhd
+MODSTYLE pc Normal
+MODULE control_mem.vhd
+MODSTYLE control_memory Normal
+MODULE adder_16.vhd
+MODSTYLE adder_16 Normal
+MODSTYLE full_adder Normal
+MODSTYLE half_adder Normal
+MODULE reg_file.vhd
+MODSTYLE reg_file Normal
+MODULE reg_16bit.vhd
+MODSTYLE reg_16bit Normal
+MODULE opcode.vhd
+MODSTYLE opcode Normal
+MODULE zero_detect_16bit.vhd
+MODSTYLE zero_detect_16bit Normal
+MODULE decoder_16bit.vhd
+MODSTYLE decoder Normal
+MODULE extend.vhd
+MODSTYLE extend Normal
+MODULE register_16bit.vhd
+MODSTYLE register_16bit Normal
+MODULE flag_splitter.vhd
+MODSTYLE flag_splitter Normal
+[STRATEGY-LIST]
+Normal=True, 1084294302

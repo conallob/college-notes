@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.1  (Linux)">
+	<META NAME="CREATED" CONTENT="20021115;245400">
+	<META NAME="CHANGED" CONTENT="16010101;0">
+	<STYLE>
+	<!--
+		@page { margin-left: 3.18cm; margin-right: 3.18cm; margin-top: 2.54cm; margin-bottom: 2.54cm }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US">
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Chapter
+1 Exercises</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Exercise
+2</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Attributes
+of the following objects in a Supermarket Stock Control Program:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Product:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Bar
+	code number (Array of integers).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Number
+	of items in stock (Integer).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>List
+	of best before dates (Array of Strings[actually java has a date
+	object i think]).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Supermarket:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Location
+	(String).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Staff
+	(Array/Hash of some sort of Employee Object).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Items
+	(Array/Hash of all items the supermarket can order).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>On
+Order List:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Total
+	Cost (integer [hopefully])</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>List
+	of products (Array/Hash of Product objects).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>List
+	of arrival dates (Array/Hash of date objects).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>In
+Stock List:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>List
+	of products (Array/Hash of Product objects).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=4><FONT FACE="Blue Highway">Total
+	Value of working capital (for book-keeping)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Percentage
+	of Storage space used (integer).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Out
+of Date Stock:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>List
+	of products (Array/Hash of Product objects).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Number
+	of items to be removed on current day (integer).</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Schedule
+	for removal of products by staff (Array of job objects, where job
+	objects contain a reference to an employee object, a reference to a
+	product object and two integers to specify estimated starting and
+	ending time).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Attributes
+of the following objects in an ATC Program:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>VFR
+Landmark:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Location
+	(Array of two integers specifying longitude and latitude).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Height
+	(Integer value).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Visible
+	by night (boolean).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>No
+Fly Zone:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=4><FONT FACE="Blue Highway">Location(Array
+	of two integers specifying the longitude and latitude of the center
+	point of the no fly zone).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>The
+	size of the no fly zone (Integer).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Restrictions
+	(Enumerated type, where 0 = civilian only, 1 = government, 2 =
+	military).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Time
+Related Restrictions:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>The
+	time they apply to (Array of two date objects, starting and ending
+	time).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Textual
+	description of restriction (String)</FONT></FONT></P>
+</UL>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Restrictions
+	(Enumerated type, where 0 = civilian only, 1 = government, 2 =
+	military).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Current
+Weather:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Cloud-base(Integer)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Cloud
+	cover(Integer, 1-8)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Visibility(Integer)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Aircraft</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Current
+	Position (Array of three integers for longitude, latitude and
+	heading).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Registration
+	of aircraft (String).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Type
+	of aircraft (Enumerated type, where 0 = civilian, 1 = government, 2
+	= military).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Attributes
+of the following objects in a Hospital Management Program:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Doctors:</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Patients
+	(Array/Hash of Patient Objects).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Specialization
+	(String / Enumerated type).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Days
+	in hospital during week (Array of 7 integers, 1 = present, 0 =
+	absent)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Nurses</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Patients
+	(Array/Hash of Patient Objects).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Ward
+	(String /Enumerated type).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Days
+	in hospital during week (Array of 7 integers, 1 = present, 0 =
+	absent)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Patients</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Location
+	(ward, either string or enumerated type).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Medication
+	(List of drugs with their dosage and regularity).</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Estimated
+	Stay (array of two date objects - entrance time and estimated
+	departure time).</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Debtors</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Total
+	Amount (Integer)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>List
+	of Debtors (Array/Hash of debtor objects)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Overdue
+	debts (Array/Hash of debtor objects)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Pharmaceuticals</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Stocked
+	Drugs(Array/Hash of drug objects)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>On
+	Order Drugs (Array/Hash of drug objects)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Blue Highway"><FONT SIZE=4>Out
+	of Date Drugs to be Removed (Array/Hash of drug objects)</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>

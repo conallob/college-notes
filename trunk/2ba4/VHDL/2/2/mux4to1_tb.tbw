@@ -1,0 +1,49 @@
+info x 42 201 0 0 0 0 0 0 VHDLvhdl_genericverilog_generic
+col x 257 0 0 0 0 0 0 0 
+radix x 10 0 0 0 0 0 0 0 
+entity name 0 0 0 0 0 0 0 0 mux_4to1
+term mark 36 0 0 0 0 0 0 0 
+vlib save 0 0 0 0 0 0 0 0 LIBRARY  IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+var add 1 1 0 164 10 15 0 0 SELinstd_logic_vector
+var add 2 0 1 162 11 12 0 0 Ainstd_logic
+var add 3 0 1 162 11 15 0 0 Binstd_logic
+var add 4 0 1 162 11 18 0 0 Cinstd_logic
+var add 5 0 1 162 11 21 0 0 Dinstd_logic
+var add 6 0 1 162 12 18 0 0 MUX_OUToutstd_logic
+vdone xxx 0 0 0 0 0 0 0 0 
+npos xxx 110 0 0 0 0 0 0 0 
+cell fill 1 0 0 0 0 0 0 0 00
+cell fill 1 2 0 0 0 0 0 0 01
+cell fill 1 4 0 0 0 0 0 0 10
+cell fill 1 6 0 0 0 0 0 0 11
+cell fill 1 8 0 0 0 0 0 0 00
+cell fill 1 10 0 0 0 0 0 0 01
+cell fill 1 12 0 0 0 0 0 0 10
+cell fill 1 14 0 0 0 0 0 0 11
+cell fill 2 0 0 0 0 0 0 0 1
+cell fill 2 4 0 0 0 0 0 0 1
+cell fill 2 8 0 0 0 0 0 0 0
+cell fill 2 16 0 0 0 0 0 0 1
+cell fill 3 0 0 0 0 0 0 0 0
+cell fill 3 4 0 0 0 0 0 0 0
+cell fill 3 8 0 0 0 0 0 0 1
+cell fill 3 16 0 0 0 0 0 0 0
+cell fill 4 0 0 0 0 0 0 0 0
+cell fill 5 0 0 0 0 0 0 0 0
+time info 50 50 10 10 50 50 0 1 ns
+font save -14 0 400 49 0 0 0 0 Times New Roman
+src mod 0 846409216 29636479 8 0 0 0 0 mux_4to1.vhd
+utd false 0 0 0 0 0 0 0 0 
+cellenab on 0 0 0 0 0 0 0 0 
+grid on 0 0 0 0 0 0 0 0 
+com add 1 0 50 216 8 0 -67 0 Waveform created by
+HDL Bencher 4.1i
+Source = mux_4to1.vhd
+Tue May 11 21:07:45 2004
+type info 31 0 0 0 0 0 0 0 std_logic_vectorVECTORDOWNTO
+type info 31 0 0 0 0 0 0 0 std_logicBITDOWNTO
+opt vhdl87 0 0 0 0 0 0 0 0 

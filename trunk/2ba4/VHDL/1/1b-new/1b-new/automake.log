@@ -1,0 +1,39 @@
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\zero_detect_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+

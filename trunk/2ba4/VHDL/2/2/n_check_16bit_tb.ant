@@ -1,0 +1,113 @@
+-- F:\2BA4\VHDL\2\2\N_CHECK_16BIT_TB.ANT
+-- VHDL Annotation Test Bench created by
+-- HDL Bencher 4.1i
+-- Wed May 12 12:41:50 2004
+
+LIBRARY  IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+LIBRARY ieee;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY testbench IS
+END testbench;
+
+ARCHITECTURE testbench_arch OF testbench IS
+-- If you get a compiler error on the following line,
+-- from the menu do Options->Configuration select VHDL 87
+FILE RESULTS: TEXT OPEN WRITE_MODE IS "f:\2ba4\vhdl\2\2\n_check_16bit_tb.ano";
+	COMPONENT n_check_16bit
+		PORT (
+			input : in  std_logic_vector (15 DOWNTO 0);
+			n : out  std_logic
+		);
+	END COMPONENT;
+
+	SIGNAL input : std_logic_vector (15 DOWNTO 0);
+	SIGNAL n : std_logic;
+
+BEGIN
+	UUT : n_check_16bit
+	PORT MAP (
+		input => input,
+		n => n
+	);
+
+	PROCESS -- Annotate outputs process
+		VARIABLE TX_TIME : INTEGER :=0;
+
+		PROCEDURE ANNOTATE_n(
+			TX_TIME : INTEGER
+		) IS
+			VARIABLE TX_STR : String(1 to 4096);
+			VARIABLE TX_LOC : LINE;
+		BEGIN
+			write(TX_LOC,string'("Annotate["));
+			write(TX_LOC, TX_TIME);
+			write(TX_LOC,string'(",n,"));
+			write(TX_LOC, n);
+			write(TX_LOC, string'("]"));
+			TX_STR(TX_LOC.all'range) := TX_LOC.all;
+			writeline(results, TX_LOC);
+			Deallocate(TX_LOC);
+		END;
+
+	BEGIN
+		CHECK_LOOP : LOOP
+		WAIT FOR 50 ns;
+		TX_TIME := TX_TIME + 50;
+		ANNOTATE_n(TX_TIME);
+		WAIT FOR 50 ns;
+		TX_TIME := TX_TIME + 50;
+		END LOOP CHECK_LOOP;
+	END PROCESS;
+
+	PROCESS
+		VARIABLE TX_OUT : LINE;
+
+		BEGIN
+		-- --------------------
+		input <= transport std_logic_vector'("0000000000000010"); --2
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=100 ns
+		input <= transport std_logic_vector'("0000000000000100"); --4
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=200 ns
+		input <= transport std_logic_vector'("0000000000001000"); --8
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=300 ns
+		input <= transport std_logic_vector'("1111111111111111"); --FFFF
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=400 ns
+		input <= transport std_logic_vector'("0000000000000000"); --0
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=500 ns
+		input <= transport std_logic_vector'("0000000000000101"); --5
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=600 ns
+		input <= transport std_logic_vector'("0000000000000100"); --4
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=700 ns
+		input <= transport std_logic_vector'("0000000000001000"); --8
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=800 ns
+		input <= transport std_logic_vector'("0000000000000101"); --5
+		-- --------------------
+		WAIT FOR 200 ns; -- Time=1000 ns
+		-- --------------------
+
+		write(TX_OUT, string'("Total[]"));
+		writeline(results, TX_OUT);
+		ASSERT (FALSE) REPORT
+			"Success! Simulation for annotation completed"
+			SEVERITY FAILURE;
+	END PROCESS;
+END testbench_arch;
+
+CONFIGURATION n_check_16bit_cfg OF testbench IS
+	FOR testbench_arch
+	END FOR;
+END n_check_16bit_cfg;

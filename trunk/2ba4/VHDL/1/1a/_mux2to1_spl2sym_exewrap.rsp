@@ -1,0 +1,1 @@
+-tapkeep -show normal -mode pipe -command spl2sym -family=spartan mux2to1.spl mux2to1.sym

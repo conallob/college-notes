@@ -1,0 +1,19 @@
+<PROJECT> u:\college\2ba4\vhdl\1a\1a\__express_prj\6to1mux
+<LIBRARY>
+unisim C:\Xilinx\vhdl\src\unisims\unisim_vcomp.vhd
+<LIBRARY>
+<V_LIBRARY>
+
+<FILES> u:\college\2ba4\vhdl\1a\1a\6to1mux.vhd
+<SYNTAX> u:\college\2ba4\vhdl\1a\1a\6to1mux.vhd
+<TOP> "6to1mux"
+<TARGET> "Spartan" "S05PC84" "-4" 50
+<IMPLEMENT> "6to1mux"
+QUIK
+HIER
+X_NO
+OHOT
+O_NO
+V_NO
+HDLC
+<TOUCH_FILE> 6to1mux.impl

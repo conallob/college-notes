@@ -1,0 +1,75 @@
+# Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+# //  ModelSim SE Viewer 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# do rpple_adder_tb.fdo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity half_adder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture dataflow_3 of half_adder
+# -- Loading package std_logic_1164
+# -- Loading entity half_adder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture struc_dataflow_3 of full_adder
+# -- Loading package std_logic_1164
+# -- Loading entity full_adder
+# -- Loading entity half_adder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ripple_adder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture structural_4 of ripple_adder
+# -- Loading package std_logic_1164
+# -- Loading entity ripple_adder
+# -- Loading entity full_adder
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity ripple_adder
+# -- Compiling configuration ripple_adder_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.ripple_adder(structural_4)
+# Loading work.full_adder(struc_dataflow_3)
+# Loading work.half_adder(dataflow_3)
+# .wave
+# .structure
+# .signals
+# ** Failure: Simulation successful (not a failure).  No problems detected. 
+#    Time: 1 us  Iteration: 0  Instance: /testbench
+# Break at rpple_adder_tb.vhw line 149
+# Simulation Breakpoint: Break at rpple_adder_tb.vhw line 149
+# MACRO ./rpple_adder_tb.fdo PAUSED at line 19
+destroy .wave

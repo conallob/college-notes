@@ -1,0 +1,8 @@
+<PROJECT> d:\cgobrien\1a\__express_prj\mux2to1
+<LIBRARY>
+unisim C:\Xilinx\vhdl\src\unisims\unisim_vcomp.vhd
+<V_LIBRARY>
+
+<FILES> mux2to1.vhd
+<SYNTAX> mux2to1.vhd
+<TOUCH_FILE> mux2to1.stx
