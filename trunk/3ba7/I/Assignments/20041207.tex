@@ -79,22 +79,23 @@ symbol are disjoint, proving this grammar is a Q-Grammar.
 \hline
 						&	$a$	&	$b$	&	$c$	&	$d$	&	$e$	&	$\dashv$ \\
 \hline
-$\nonterminal{S}$	&			&			&			&			&			&				\\
+$\nonterminal{S}$	&	$\#1$	&	$\#2$	&			&			&			&	$\#5$		\\
 \hline
-$\nonterminal{A}$	&			&			&			&			&			&				\\
+$\nonterminal{A}$	&			&			&	$\#2$	&			&			&	$\#5$		\\
 \hline
-$\nonterminal{B}$	&			&			&			&			&			&				\\
+$\nonterminal{B}$	&			&			&			&	$\#3$	&	$\#4$	&				\\
 \hline
-$\triangledown$	&			&			&			&			&			&				\\
+$\triangledown$	&			&			&			&			&			& $ACCEPT$	\\
 \hline
 \end{tabular}
 
 Starting Stack: $\triangledown \nonterminal{S}$
 
-$\#1$: $ $ \\
-$\#2$: $ $ \\
-$\#3$: $ $ \\
-$\#4$: $POP,RETAIN$ \\
+$\#1$: $REPLACE(\nonterminal{A}\nonterminal{B})$ \\
+$\#2$: $REPLACE(\nonterminal{B}\nonterminal{S})$ \\
+$\#3$: $REPLACE(\nonterminal{B}$ \\
+$\#4$: $POP,ADVANCE$ \\
+$\#5$: $POP,RETAIN$ \\
 
 \subsection*{2}
 
