@@ -1,4 +1,4 @@
- % $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+ % $Id$
 
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
@@ -111,5 +111,45 @@
 \nonterminal{StrOpt} 	&	\to	&	 ANY PRINTABLE CHAR EXCEPT ' \nonterminal{StrOpt}	\\
 \nonterminal{StrOpt} 	&	\to	&	 \epsilon
 \end{eqnarray}
- 
+
+\section{Lexical Analyser}
+
+\subsection*{Finite State Machine}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+			&	$LETTER$	&	$DIGIT$	&	$:$		&	$=$		&	$,$		&	$+$		&	$-$		&	$*$		&	$|$		&	$($		&	$)$		&	$'$		&	$WS$		&	$\dashv$	\\
+\hline
+$S_{0}$	&	$S_{1}$	&	$S_{2}$	&	$S_{3}$	&	$S_{4}$	&	$S_{5}$	&	$S_{6}$	&	$S_{7}$	&	$S_{8}$	&	$S_{9}$	&	$S_{10}$	&	$S_{11}$	&	$S_{12}$	&	$S_{13}$	&	$ACCEPT$	\\
+\hline
+$S_{1}$	&	$S_{1}$	&	$S_{1}$	&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline
+$S_{2}$	&				&				&				&	$S_{4}$	&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{3}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{4}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{5}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{6}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{7}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{8}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{9}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{10}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{11}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{12}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{13}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                        
+$S_{14}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline
+\end{tabular}
+
 \end{document}

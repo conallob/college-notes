@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  18 JAN 2005 19:20
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  19 JAN 2005 20:26
 **20050124.tex
 (./20050124.tex
 LaTeX2e <2001/06/01>
@@ -191,14 +191,19 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 ) [1
 
-] [2] [3] (./20050124.aux) ) 
-Here is how much of TeX's memory you used:
- 3343 strings out of 95847
- 40072 string characters out of 1196008
- 129167 words of memory out of 1000001
- 6252 multiletter control sequences out of 10000+50000
- 14294 words of font info for 59 fonts, out of 500000 for 1000
- 14 hyphenation exceptions out of 1000
- 26i,6n,28p,212b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+] [2]
+Overfull \hbox (106.85751pt too wide) in paragraph at lines 119--154
+[] 
+ []
 
-Output written on 20050124.dvi (3 pages, 5224 bytes).
+[3] [4] (./20050124.aux) ) 
+Here is how much of TeX's memory you used:
+ 3344 strings out of 95847
+ 40089 string characters out of 1196008
+ 138167 words of memory out of 1000001
+ 6253 multiletter control sequences out of 10000+50000
+ 14601 words of font info for 60 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 26i,8n,28p,212b,238s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 20050124.dvi (4 pages, 11856 bytes).
