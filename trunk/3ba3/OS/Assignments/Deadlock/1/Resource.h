@@ -14,4 +14,16 @@ class Resource {
 		  
 					 int sleeps[4];
 
+					 Resource();
+
 };
+
+Resource::Resource() {
+
+		  int a[5] = {0, 0, 0, 0, 0};
+		  int b[5] = {0, 0, 0, 0, 0};
+		  int c[5] = {0, 0, 0, 0, 0};
+		  
+		  int sleeps[4]  = {0, 0, 0, 0};
+		  
+}
