@@ -47,7 +47,8 @@ def LexicalAnalyser(input):
 	charpos = 1;
 	
 	# Decide what lexical token every character from input is
-	for i in range(len(input)):
+	for j in range(1, len(input)):
+		i = j - 1;
 		# Counter for line and row numers if we find an error...
 		if input[i] == '\n' or input[i] == '\r':
 			lineno += 1; # keep count of the line no
@@ -65,18 +66,18 @@ def LexicalAnalyser(input):
 		else:
 			check = input[i];
 		# And the lookahead...
-		if i < (len(input) - 2):
-			# i + 1
-			if re.match(r"[A-Za-z]", input[i + 1]):
-				nextcheck = 'CHAR';
-			elif re.match(r"\d", input[i + 1]):
-				nextcheck = 'DIGIT';
-			elif re.match(r"\s", input[i + 1]):
-				nextcheck = 'WHITESPACE';
-			elif (input[i + 1] == '\004'):
-				nextcheck = 'ENDMARKER';
-			else:
-				nextcheck = input[i + 1];
+		#if i < (len(input) - 2):
+		# j
+		if re.match(r"[A-Za-z]", input[j]):
+			nextcheck = 'CHAR';
+		elif re.match(r"\d", input[j]):
+			nextcheck = 'DIGIT';
+		elif re.match(r"\s", input[j]):
+			nextcheck = 'WHITESPACE';
+		elif (input[j] == '\004'):
+			nextcheck = 'ENDMARKER';
+		else:
+			nextcheck = input[j];
 		# Now to gather the tokens we're going to return
 		if len(mem) == 0:
 			if valid_transitions.has_key(check):
@@ -136,3 +137,4 @@ if '__main__' == __name__:
 			print "\n";
 		else:
 			print tokens[c];
+	print tokens;
