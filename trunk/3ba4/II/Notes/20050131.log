@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  13 FEB 2005 23:20
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  21 FEB 2005 00:42
 **20050131.tex
 (./20050131.tex
 LaTeX2e <2001/06/01>
@@ -160,7 +160,8 @@ Xy-pic Warning: `\uline' redefined [20050131:233].
 
 Xy-pic Warning: `\uuline' redefined [20050131:233].
 
-loaded)) (./20050131.aux)
+loaded))
+No file 20050131.aux.
 \openout1 = `20050131.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -176,7 +177,7 @@ LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Try loading font information for U+msa on input line 15.
- (/sw/share/texmf/tex/latex/amsfonts/umsa.fd
+(/sw/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 15.
@@ -211,8 +212,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3] [4] (./20050131.aux) ) 
 Here is how much of TeX's memory you used:
- 3090 strings out of 95847
- 34617 string characters out of 1196009
+ 3088 strings out of 95847
+ 34591 string characters out of 1196009
  178597 words of memory out of 1000001
  6010 multiletter control sequences out of 10000+50000
  14463 words of font info for 60 fonts, out of 500000 for 1000
