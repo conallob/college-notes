@@ -174,9 +174,8 @@ $S_{17}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&
 
 \begin{eqnarray}
 \setcounter{equation}{1}
-\nonterminal{Calc} 		&	\to	&	 \nonterminal{Ident}_{\synth{p}} :=
-\nonterminal{Exp}_{\inherit{q}} \nonterminal{Calc} \actionsym{ASSIGN}_{\inherit{q}, \synth{p}}	\\
-\nonterminal{Calc} 		&	\to	&	 WRITE \nonterminal{WriteOpt} \nonterminal{Calc} \actionsym{WRITE} \\
+\nonterminal{Calc} 		&	\to	&	 \nonterminal{Ident}_{\synth{p}} := \nonterminal{Exp}_{\inherit{q}}  \actionsym{ASSIGN}_{\inherit{q}, \synth{p}} \nonterminal{Calc}	\\
+\nonterminal{Calc} 		&	\to	&	 WRITE \nonterminal{WriteOpt} \actionsym{WRITE} \nonterminal{Calc} \\
 \nonterminal{Calc} 		&	\to	&	 END	\actionsym{END}	\\
 \nonterminal{WriteOpt} 	& 	\to	&	 , \nonterminal{WriteType} \nonterminal{WriteOpt}	\\
 \nonterminal{WriteOpt} 	& 	\to	&	 \epsilon	\\
@@ -189,7 +188,7 @@ $S_{17}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&
 \begin{eqnarray}
 \setcounter{equation}{1}
 \nonterminal{Exp} 		&	\to	&	 \nonterminal{Minus} \nonterminal{Term} \nonterminal{ExpEnd}	\\
-\nonterminal{Minus}_{\inherit{p, q} \synth{r}} &	\to	&	 - \actionsym{SUB}_{\inherit{s, t} \synth{u}}\\
+\nonterminal{Minus}_{\inherit{p} \synth{q}} &	\to	&	 - \actionsym{SUB}_{\inherit{r, s} \synth{t}}\\
 \nonterminal{Minus} 		&	\to	&	 \epsilon	\\
 \nonterminal{ExpEnd}_{\inherit{p} \synth{q}} 	&	\to	&	 + \nonterminal{Term}_{\inherit{r}} \actionsym{ADD}_{\inherit{s, t} \synth{u}} \nonterminal{ExpEnd}	\\
 \nonterminal{ExpEnd}_{\inherit{p} \synth{q}} 	&	\to	&	 - \nonterminal{Term}_{\inherit{r}} \actionsym{SUB}_{\inherit{s, t} \synth{u}} \nonterminal{ExpEnd}	\\

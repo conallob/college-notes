@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  20 JAN 2005 19:28
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  24 JAN 2005 20:04
 **20050124.tex
 (./20050124.tex
 LaTeX2e <2001/06/01>
@@ -228,13 +228,13 @@ Overfull \hbox (103.49416pt too wide) in paragraph at lines 125--166
 [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 178.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 177.
 
 (/sw/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
  [3] [4
 
 
@@ -246,6 +246,6 @@ Here is how much of TeX's memory you used:
  6478 multiletter control sequences out of 10000+50000
  14601 words of font info for 60 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 26i,10n,28p,214b,261s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 26i,10n,28p,251b,261s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20050124.dvi (6 pages, 21648 bytes).
+Output written on 20050124.dvi (6 pages, 21652 bytes).
