@@ -101,7 +101,7 @@ if '__main__' == __name__:
 	# Read the input File
 	inputfile = open(options.inputfile, 'r');
 	inputfile = inputfile.read();
-	tokens = LexicalAnalyser(inputfile);
+	tokens = LexicalAnalyser(inputfile); # Analyse input
 	for c in range(len(tokens)):
 		if tokens[c] == "\n":
 			print "\n";
