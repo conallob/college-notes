@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $19^{th}$ October 2004}
+
+\maketitle
+
+Design a FSM to recognise any valid sequence that many follow the
+keyword integer in Fortran.
+
+Input Set: $\{v, c, ',', (, ) \}$
+
+Where $v$ is a variable identifier specifying an adjustable dimension
+and $c$ is an integer constant.
+
+$	INTEGER 	x ( 2 , I , 5 ) , y 		$
+$				v ( c , v , c ) , v		$ - Lexical Tokens
+$			 1|2|3|4|5|6|5|4|7|8|2		$	
+
+\begin{table}[c|c]
+1 & Starting State 						\\
+2 & Variable ID to be made integer	\\
+3 & Left Paren								\\
+4 & Constant								\\
+5 & Comma									\\
+6 & Variable								\\
+7 & Right Arrow							\\
+8 & Comma									\\
+
+\end{table}
+
+\begin{table}[c|c|c|c|c|c|c]
+
+\hline
+	&	$v$	&	$c$	&	$,$	&	$($	&	$)$	&	Accepting states \\
+\hline
+1	&	$2$	&			&			&			&			&	$0$					\\
+\hline
+2	&			&			&	$8$	&	$3$	&			&	$1$					\\
+\hline
+3	&	$6$	&	$4$	&			&			&			&	$0$					\\
+\hline
+4	&			&			&	$5$	&			&	$7$	&	$0$					\\
+\hline
+5	&	$6$	&	$4$	&			&			&			&	$0$					\\
+\hline
+6	&			&			&	$5$	&			&	$7$	&	$0$					\\
+\hline
+7	&			&			&	$8$	&			&			&	$1$					\\
+\hline
+8	&	$2$	&			&			&			&			&	$0$					\\
+\hline
+E	&			&			&			&			&			&							\\
+\hline
+
+\end{table}
+
+Al blank entries represent transitions to the error state.
+
+\section{Extraneous State}
+
+Make list of non extroneous states:
+
+$\{1,2,8,3,6,4,5,7,E \}$
+
+\section{State Equivalence}
+
+Machine: N, M
+
+States:	S, T
+
+\section{Destinguishing Sequences}
+
+State equivalence is:
+	
+	reflexive
+	symmetric
+	transitive
+
+Partition states into 2 sets: accepting and rejecting.
+
+\[ P_{0} & = & [\{2,7\},\{1,3,4,5,6,8,E\}] \]
+
+Partition with $v$:
+
+\[ P_{1} & = & [\{2,7\},\{1,8\}, {3,4,5,6,E\}] \]
+
+Partition with $)$:
+
+\[ P_{2} & = & [\{2,7\},\{1,8\},\{3,5,E\},\{4,6\}] \]
+
+Partition with $v$:
+
+\[ P_{3} & = & [\{2,7\},\{1,8\},\{3,5\},\{4,6\},\{E\}] \]
+
+Partition with $($:
+
+\[ P_{3} & = & [\{2\},\{7\},\{1,8\},\{3,5\},\{4,6\},\{E\}] \]
+
+
+\[ \{1,8\} & - & A	\]
+\[ \{3,5\} & - & B	\]
+\[ \{4,6\} & - & C	\]
+
+\end{document}

@@ -1,0 +1,189 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $14^{th}$ October 2004}
+
+\maketitle
+
+Syntax analyser ensures that the sequence of Lexical Tokens is
+gramatically correct.
+
+\section{Code Generation}
+
+Expansion of sequence of atoms into object code ($\equiv$ machine
+codeassembly language/core image memory image)
+
+
+\section{Semantic Analysis}
+
+Processing relating to the meaning of symbols.
+
+Eg: semantics of an identifier.
+
+	Includes it's type, it's bounds, if it is an array, etc...
+
+Semantic processing includes:
+
+	Static:
+
+		Filling it's symbol table entry with a type of identifier.
+
+	Dynamic:	
+
+		Selecting correct class of operator for instruction when expanding
+		atoms during code generation.
+
+
+A + B
+.
+.
+.
+.
+ADD($\uparrow$ A, $\uparrow$ B, $\uparrow$ $T_{n}$)
+
+% Diagram
+
+Optimiser:
+
+Optimisation code imporvisation techniques.
+
+
+\section{Runtime Implementation}
+
+Symbol table management
+
+passes
+
+\section{Finite State Machine}
+
+i A finite state of imput symbols (inut alphabet)
+
+ii A finite set of states, including a starting state.
+
+iii A transition function  $\delta$ that assigns a new state to every
+combination of state and input.
+
+iv A set of accepting states
+
+v A set of rejecting states.
+
+\[ \delta(S_{OLD}, INPUT) \therefore S_{NEW} \]
+
+% Diagram
+
+Eg: Parity Checker
+
+Input: $0, 1$
+
+States: $\{EVEN, ODD \}$
+
+Starting State: $\{EVEN\}$
+
+Transitions:	$\delta(EVEN, 0) \therefore EVEN $
+					$\delta(EVEN, 1) \therefore ODD $
+					$\delta(ODD, 0) \therefore ODD $
+					$\delta(ODD, 0) \therefore EVEN $
+Accepting States: ${ODD}$
+
+
+Transition Table:
+
+\begin{list}[c|c|c]
+
+\hline
+States/Input & $0$ 		& 	$1$ 	\\
+\hline
+$EVEN$		 & $EVEN$	& $ODD$	\\
+\hline
+$ODD$			 & $ODD$		& $EVEN$	\\
+\hline
+
+\end{table}
+
+$1 = $ Accepting State \\
+
+$0 = $ Rejecting State
+
+Transition Diagram:
+
+% Diagram
+
+$01011$
+
+% diagram
+
+\begin{list}[c|c|c|c]
+
+\hline
+		 	& $0$ 	& $1$ 	& 		\\
+\hline
+$S$		& $S$		& $S$		& $0$	\\
+\hline
+
+\end{table}
+
+
+\begin{list}[c|c|c|c]
+
+\hline
+		 	& $0$ 	& $1$ 	& 		\\
+\hline
+$S$		& $T$		& $T$		& $1$	\\
+\hline
+$T$		& $T$		& $T$		& $0$	\\
+\hline
+
+\end{table}
+
+
+\section{Finite State Processing Machine:}
+
+A finite state recognising machine with input alphabet extended by the
+end marker symbol $\dashv$.
+
+
+\section{Question}
+
+Design a FSM to recognise input containing pairs of $1$s.
+
+
+Input: $0$, $1$
+
+States: ${NOONES, ONEONE}$
+
+Starting State: ${NOONES}$
+
+Accepting states: ${NOONES}$
+
+Transition Table:
+
+\begin{list}[c|c|c|c]
+
+\hline
+		 	& $0$ 			& $1$ 			& 			\\
+\hline
+$NOONES$	& $NOONES$		& $ONEONE$		& "YES"	\\
+\hline
+$ONEONE$	& $ERROR$		& $NOONES$		& "NO"	\\
+\hline
+$ERROR$	& $ERROR$		& $ERROR$		& "NO"	\\
+\hline
+
+\end{table}
+
+
+\begin{list}[c|c|c|c]
+
+\hline
+		 	& $0$ 			& $1$ 			& $\dashv$		\\
+\hline
+$NOONES$	& $NOONES$		& $ONEONE$		& "YES" $0$		\\
+\hline
+$ONEONE$	& $ERROR$		& "YES" $1$		& "NO"			\\
+\hline
+
+\end{table}
+
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $12^{th}$ October 2004}
+
+\maketitle
+
+David Abrahamson
+
+Semester 1 - Compiler Design
+
+david@cs.tcd.ie
+
+6081716
+
+ORI F11
+
+2 Exercises - $20\%$ of $\frac{1}{2}$ 3BA7
+
+No requirement to pass.
+
+1 or more exam questions on exam based upon coursework.
+
+
+\section{Language Processors}
+
+Piece of software which produces an output language from an input
+language.
+
+
+Interpreter - Source Language $\to$ Execution
+
+Translater -  Source Language $\to$ Object Language
+
+(i) Assemblers
+	
+	- Low Level Language
+	  1 to 1 translations
+
+(ii) Compiler
+	
+	- High Level Languages
+	  1 to many translations
+
+
+% Diagram
+
+Simple model of compiler
+
+\section{Lexical Analysis}
+
+Splits input into a sequence of lexical tokens
+
+(Class),(Class,Variable),(Class,Value)
+
+
+eg
+	if $x \gt y$ then
+		$A := B + C * D;$
+
+Lexical Element $\equiv$ Lexem
+
+(IF) (IDENT,$\uparrow$ x) (RELOP,GT) (IDENT,$\uparow$ y) (THEN) ...
+
+\section{Syntax Analysis}
+
+Verifies that the sequence of lecical tokens is syntactically correct
+and translates them into a sequence of atoms that more closely refect
+the order of execution at runtime.
+
+
+Input to syntax analyser:
+
+(IDENT,$\uparrow$ A), (ASSIGN), (IDENT,$\uparrow$ B), (OP, PLUS),
+(IDENT,$\uparrow$ C), (OP, TIMES), (IDENT,$\uparrow$ D)
+
+$A := B + C * D$
+
+Output:
+
+MULT($\uparrow$ C, $\uparrow$ D, $\uparrow$ $TR_{1}$)
+ADD($\uparrow$ B,$\uparrow$ $TR_{1}, $\uparrow$ $TR_{2}$)
+STORE($\uparrow$ A, $\uparrow$ $TR_{2}$)
+
+\end{document}
