@@ -4,40 +4,53 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <errno.h>
+#include <time.h>
+
 
 //#include "BankersController.h"
 #include "MessageQueue.h"
-#include "Resource.h"
+//#include "Resource.h"
 
-#define RESOURCE_TYPES 3
-#define NUMBER_PROCESSES 3
+struct Resource {
+        
+		  // {a,b,c}[0] is the max value
+		  //      
+		  // {a,b,c}[1-4] are the realtime values
+		  
+		  int a[5], b[5], c[5];
+		  
+		  // realtime paramaters for sleep() 
+		  
+		  int sleeps[4];
+				
+} master, resources1, resources2, resources3;
+
 
 
 int do_stuff(Resource *resource);
 
+void sleep(int secs);
 
-int main()
-{
+int main() {
 
-	
 		  // init phase
 
-		  Resources master, resources1, resources2, resources3;
-		  int iret1, iret2, iret3;
+		  unsigned long int iret1, iret2, iret3;
 		  pthread_t thread1, thread2, thread3;
-
 		  
 		  // Master Resources
 		  
-		  master.a = {3,3,3,3,3};
-		  master.b = {3,3,3,3,3};
-		  master.c = {3,3,3,3,3};
+		  master.a = {3, 3, 3, 3, 3};
+		  master.b = {3, 3, 3, 3, 3};
+		  master.c = {3, 3, 3, 3, 3};
+
+		  master.sleeps = {0, 0, 0, 0};
 		  
 		  // Resources for Thread1:
 		  
-		  resources1.a = {2,1,1,0,-2};
-		  resources1.b = {3,1,1,1,-3};
-		  resources1.c = {1,0.1,0,-1};
+		  resources1.a = {2, 1, 1, 0, -2};
+		  resources1.b = {3, 1, 1, 1, -3};
+		  resources1.c = {1, 0, 1, 0, -1};
 
 		  // sleeps for Thread1:
 
@@ -45,9 +58,9 @@ int main()
 
 		  // Resources for Thread2:
 		  
-		  resources2.a = {1,0,1,0,-1};
-		  resources2.b = {2,0,1,1,-2};
-		  resources2.c = {3,3.0,0,-3};
+		  resources2.a = {1, 0, 1, 0, -1};
+		  resources2.b = {2, 0, 1, 1, -2};
+		  resources2.c = {3, 3, 0, 0, -3};
 
 		  // sleeps for Thread2:
 
@@ -55,28 +68,24 @@ int main()
 
 		  // Resources for Thread3:
 		  
-
 		  // assuming type in assignment should read 
 		  // -AAABBB not -ABBCCC, since max C = 0...
 		  
-		  resources3.a = {3,3,0,-3,0};
-		  resources3.b = {3,0,3,-3,0};
-		  resources3.c = {0,0,0,0,0};
+		  resources3.a = {3, 3, 0, -3, 0};
+		  resources3.b = {3, 0, 3, -3, 0};
+		  resources3.c = {0, 0, 0,  0, 0};
 
 		  // sleeps for Thread3:
 
 		  resources3.sleeps = {7, 5, 8, 0};
 
-  
 		  /* Create independant threads each of which will execute function */
 
-		  iret1 = pthread_create( &thread1, NULL, do_stuff, (void*) resources1);
-		  iret2 = pthread_create( &thread2, NULL, do_stuff, (void*) &resources2);
-		  iret3 = pthread_create( &thread3, NULL, do_stuff, (void*) &resources3);
+		  iret1 = pthread_create( &thread1, NULL, (void*) do_stuff, (void*) resources1);
+		  iret2 = pthread_create( &thread2, NULL, (void*) do_stuff, (void*) resources2);
+		  iret3 = pthread_create( &thread3, NULL, (void*) do_stuff, (void*) resources3);
 
-		  /* Wait till threads are complete before main continues. Unless we  */
-		  /* wait we run the risk of executing an exit which will terminate   */
-		  /* the process and all threads before the threads have completed.   */
+		  // Wait till threads are complete before main continues.
 
 		  pthread_join( thread1, NULL);
 		  pthread_join( thread2, NULL); 
@@ -85,8 +94,7 @@ int main()
 		  exit(0);
 }
 
-int do_stuff(Resources *resource, int *sleeps)
-{
+int do_stuff(Resource *resource) {
 
 		  	for (int i = 1; i <= 4; i++) {
 					  
@@ -96,25 +104,25 @@ int do_stuff(Resources *resource, int *sleeps)
 
 								 // allocate resource
 
-								 print("Allocate A\n");
+								 printf("Allocate A\n");
 						
 					  } else if (resource->a[i] < 0 && (resource->a[i] * -1) <= resource->a[0]) {
 
 								  // deallocate resource
 
-								 print("Deallocate A\n");
+								 printf("Deallocate A\n");
 
 					  } else if (resource->a[i] >= resource->a[0] || (resource->a[i] * -1) >= resource->a[0]) {
 
 								 // error, trying to (de)allocate resources that aren't required or allowed
 
-								 print("Error A\n");
+								 printf("Error A\n");
 						
 					  } else if (resource->a[i] != 0) {
 					
 								 // I don't want any resources right now
 
-								 print("Don't Need A\n");
+								 printf("Don't Need A\n");
 								 
 					  }
 
@@ -124,25 +132,25 @@ int do_stuff(Resources *resource, int *sleeps)
 
 								 // allocate resource
 
-								 print("Allocate B\n");
+								 printf("Allocate B\n");
 						
 					  } else if (resource->b[i] < 0 && (resource->b[i] * -1) <= resource->b[0]) {
 
 								  // deallocate resource
 
-								 print("Deallocate B\n");
+								 printf("Deallocate B\n");
 
-					  } else if (resource->b[i] >= resource->b[0] || (resource->b[i] * -1) >= resource.b[0]) {
+					  } else if (resource->b[i] >= resource->b[0] || (resource->b[i] * -1) >= resource->b[0]) {
 
 								 // error, trying to (de)allocate resources that aren't required or allowed
 
-								 print("Error B\n");
+								 printf("Error B\n");
 						
 					  } else if (resource->b[i] != 0) {
 					
 								 // I don't want any resources right now
 
-								 print("Don't Need B\n");
+								 printf("Don't Need B\n");
 								 
 					  }
 
@@ -152,34 +160,44 @@ int do_stuff(Resources *resource, int *sleeps)
 
 								 // allocate resource
 
-								 print("Allocate C\n");
+								 printf("Allocate C\n");
 						
 					  } else if (resource->c[i] < 0 && (resource->c[i] * -1) <= resource->c[0]) {
 
 								  // deallocate resource
 
-								 print("Deallocate C\n");
+								 printf("Deallocate C\n");
 
 					  } else if (resource->c[i] >= resource->c[0] || (resource->c[i] * -1) >= resource->c[0]) {
 
 								 // error, trying to (de)allocate resources that aren't required or allowed
 
-								 print("Error C\n");
+								 printf("Error C\n");
 						
 					  } else if (resource->c[i] != 0) {
 					
 								 // I don't want any resources right now
 
-								 print("Don't Need C\n");
+								 printf("Don't Need C\n");
 								 
 					  }
 
-					  sleep(resource->sleeps);
+					  sleep((int) resource->sleeps);
 
 			}
 
+			return 0;
 
 }
 
 
+		 
+void sleep(int secs) {
+
+		  // A basic function to simulate the sleep() functionality I need
+
+		  clock_t endwait;
+		  endwait = clock () + secs;
+		  while (clock() < endwait) {}
 		  
+}
