@@ -2,6 +2,8 @@
 
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{longtable}
 \usepackage[usenames]{color}
 \usepackage[arc,poly,all]{xy}
 \usepackage{ulem}
@@ -116,40 +118,141 @@
 
 \subsection*{Finite State Machine}
 
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{table}[hbtp]
+
+\begin{landscape}
+
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-			&	$LETTER$	&	$DIGIT$	&	$:$		&	$=$		&	$,$		&	$+$		&	$-$		&	$*$		&	$|$		&	$($		&	$)$		&	$'$		&	$WS$		&	$\dashv$	\\
+			&	$LETTER$	&	$DIGIT$	&	$DIV$		&	$MOD$		&	$WRITE$	&	$END$		&	$:$		&	$=$		&	$,$		&	$+$		&	$-$		&	$*$		&	$|$		&	$($		&	$)$		&	$'$		&	$WS$		&	$\dashv$	\\
+\hline                                                                           
+$S_{0}$	&	$S_{1}$	&	$S_{2}$	&	$S_{3}$	&	$S_{4}$	&	$S_{5}$	&	$S_{6}$	&	$S_{7}$	&	$S_{8}$	&	$S_{9}$	&	$S_{10}$	&	$S_{11}$	&	$S_{12}$	&	$S_{13}$	&	$S_{14}$	&	$S_{15}$	&	$S_{16}$	&	$S_{17}$	&	$ACCEPT$	\\
+\hline                                                                           
+$S_{1}$	&	$S_{1}$	&	$S_{1}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{2}$	&				&				&				&				&				&				&				&	$S_{4}$	&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{3}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{4}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{5}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{6}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{7}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{8}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{9}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{10}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{11}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{12}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{13}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{14}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
 \hline
-$S_{0}$	&	$S_{1}$	&	$S_{2}$	&	$S_{3}$	&	$S_{4}$	&	$S_{5}$	&	$S_{6}$	&	$S_{7}$	&	$S_{8}$	&	$S_{9}$	&	$S_{10}$	&	$S_{11}$	&	$S_{12}$	&	$S_{13}$	&	$ACCEPT$	\\
+$S_{15}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{16}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
+\hline                                                                           
+$S_{17}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
 \hline
-$S_{1}$	&	$S_{1}$	&	$S_{1}$	&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline
-$S_{2}$	&				&				&				&	$S_{4}$	&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{3}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{4}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{5}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{6}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{7}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{8}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{9}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{10}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{11}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{12}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{13}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline                        
-$S_{14}$	&				&				&				&				&				&				&				&				&				&				&				&				&				&	$ACCEPT$	\\
-\hline
-\end{tabular}
+\end{longtable}
+
+\end{landscape}
+
+\end{table}
+
+\section{Grammar With Action Symbols}
+
+\subsection*{Calculator}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Calc} 		&	\to	&	 \nonterminal{Ident}_{\synth{p}} :=
+\nonterminal{Exp}_{\inherit{q}} \nonterminal{Calc} \actionsym{ASSIGN}_{\inherit{q}, \synth{p}}	\\
+\nonterminal{Calc} 		&	\to	&	 WRITE \nonterminal{WriteOpt} \nonterminal{Calc}	\actionsym{WIITE}\\
+\nonterminal{Calc} 		&	\to	&	 END	\actionsym{END}	\\
+\nonterminal{WriteOpt} 	& 	\to	&	 , \nonterminal{WriteType} \nonterminal{WriteOpt}	\\
+\nonterminal{WriteOpt} 	& 	\to	&	 \epsilon	\\
+\nonterminal{WriteType} & 	\to	&	 \nonterminal{Ident}		\\
+\nonterminal{WriteType} & 	\to	&	 \nonterminal{String}
+\end{eqnarray}
+
+\subsection*{Expression}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Exp} 		&	\to	&	 \nonterminal{Minus} \nonterminal{Term} \nonterminal{ExpEnd}	\\
+\nonterminal{Minus}_{\inherit{p, q} \synth{r}} 		&	\to	&	 -	\actionsym{SUB}\\
+\nonterminal{Minus} 		&	\to	&	 \epsilon	\\
+\nonterminal{ExpEnd} 	&	\to	&	 + \nonterminal{Term} \actionsym{ADD} \nonterminal{ExpEnd}	\\
+\nonterminal{ExpEnd} 	&	\to	&	 - \nonterminal{Term} \actionsym{SUB} \nonterminal{ExpEnd}	\\
+\nonterminal{ExpEnd} 	&	\to	&	 \epsilon	
+\end{eqnarray}
+
+\subsection*{Term}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Term} 		&	\to	&	 \nonterminal{Factor} \nonterminal{TermEnd}	\\
+\nonterminal{TermEnd} 	& 	\to	&	 * \nonterminal{Term} \actionsym{TIMES}\\
+\nonterminal{TermEnd} 	& 	\to	&	 div \nonterminal{Term} \actionsym{DIVIDE}\\
+\nonterminal{TermEnd} 	& 	\to	&	 mod \nonterminal{Term} \actionsym{MODULO}\\
+\nonterminal{TermEnd} 	& 	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{Factor}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Factor} 	&	\to	&	 \nonterminal{Primary} \nonterminal{FactorEnd}	\\
+\nonterminal{FactorEnd} & 	\to	&	 \uparrow \nonterminal{Factor} \actionsym{???} \\
+\nonterminal{FactorEnd} & 	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{Primary}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{P} 			&	\to	&	 \left( \nonterminal{Exp} \right)	\\
+\nonterminal{P} 			&	\to	&	 \nonterminal{Ident}	\\
+\nonterminal{P} 			&	\to	&	 \nonterminal{No}
+\end{eqnarray}
+
+\subsection*{Identifier}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Ident}		&	\to	&	 LETTER \actionsym{LETTER} \nonterminal{IdentEnd}	\\
+\nonterminal{IdentEnd} 	& 	\to	&	 LETTER \actionsym{LETTER} \nonterminal{IdentEnd}	\\
+\nonterminal{IdentEnd} 	& 	\to	&	 DIGIT \actionsym{LETTER} \nonterminal{IdentEnd}		\\
+\nonterminal{IdentEnd} 	& 	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{Number}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{No} 			&	\to	&	 DIGIT \actionsym{DIGIT} \nonterminal{NoEnd}	\\
+\nonterminal{NoEnd} 		&	\to	&	 DIGIT \actionsym{DIGIT} \nonterminal{NoEnd}	\\
+\nonterminal{NoEnd} 		&	\to	&	 \epsilon
+\end{eqnarray}
+
+\subsection*{String}
+                            
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{String} 	&	\to	&	 ' \nonterminal{StrOpt} '	\\
+\nonterminal{StrOpt} 	&	\to	&	 ANY PRINTABLE CHAR EXCEPT ' \actionsym{CHAR} \nonterminal{StrOpt}	\\
+\nonterminal{StrOpt} 	&	\to	&	 \epsilon
+\end{eqnarray}
+
+
 
 \end{document}
