@@ -1,0 +1,2 @@
+MODULE barrle_shifter_tb
+SUBMODULE barrel_shifter_32bit

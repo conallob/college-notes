@@ -1,0 +1,5 @@
+-proj f:\1b
+-t float_exp_adder_tb.tbw
+-source float_exp_adder.vhdl
+-entity float_exp_adder
+-ipcport 2229
