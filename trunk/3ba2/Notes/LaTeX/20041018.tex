@@ -1,0 +1,180 @@
+% $Id: 20041018.tex 338 2004-10-27 12:48:06Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA2: Artificial Intellegence \\ Additional Lecture Notes \\ $18^{th}$ October 2004}
+
+\maketitle
+
+\section*{Prolog Syntax}
+
+Everything is a term. \\
+
+Terms are simple or complex ("Structured").
+
+\subsection*{Simple}
+
+"atom" - stands for something. Eg: mike, chair \\
+
+\subsubsection*{Syntax:} 
+
+start with a lower case letter and followed by zero or more 
+alphanumeric characters or underscores.
+
+
+A special character followed by zero or more special characters: $ \&, \#. /. \*, \$ $
+
+
+Any string of characters enclosed in single quotes. Eg: 'The w
+cat', 'foo.txt', 'can''t do it'
+
+\subsubsection*{Numbers:}
+
+Integers \\
+
+Floats (Implementation dependant)
+
+\subsubsection{Variables:}
+
+Anonymous Variable: $\_$ \\
+
+
+\begin{verbatim}
+
+member(x,[_|R]).
+
+\end{verbatim}
+
+\subsubsection*{Named Variable:}
+
+Capitol Letter followed by zero or more aplhanumeric characters \\
+
+or \\
+
+An underscrore followed by one or more alphanumerics or underscores. \\
+
+
+Scope of variable in a clause is the clause itself if named or no scope if anonymous.
+
+\subsection*{Complex:}
+
+has a functor, which has a name (some syntax rules as an atom) and has
+an arity of $< 0$. \\
+
+\begin{verbatim}
+
+composs_points(north,south,east,west).
+
+\end{verbatim}
+
+north - Prolog term
+
+\begin{verbatim}
+
+tree(_,R).
+
+temp(L1,R).
+
+foo(X).
+
+bar(X,R) : foo(X),foo(X).
+
+: - Infix operator
+
+\end{verbatim}
+
+inter operator - binary - $x + 1$ \\
+
+Postfix operator - $24$ \\
+
+Prefix operator - ??? \\
+
+Prefix operator - ??? \\
+
+Prefix operator - ??? \\
+
+
+\begin{verbatim}
+
+:- (bar(X,Y),\left(foo(X),foo(Y)\right)
+
+\end{verbatim}
+
+\subsection{Lists in Prolog}
+
+A list has 2 arguements, the 'head' and the 'tail'/'head' and 'body'/'car' and 'cdr' (LISP method) \\
+
+\begin{verbatim}
+
+.('head','body').
+
+[a,b,c]
+
+.(a,.(b,.(c,[]))).
+
+[] % - Emplty list atom
+
+\end{verbatim}
+
+Prolog is a logic programming language.
+
+Clauses are axioms.
+
+When running a prolog program, you're asking for a proof that the query you make is true.
+
+\begin{verbatim}
+
+member(X,[X|_]).
+
+member(X,[_|R]) :- member(X,R).
+
+\end{verbatim}
+
+eg: query:
+
+
+\begin{verbatim}
+
+member(a,[61,4,9,a,a(b),X]).
+
+\end{verbatim}
+
+Prolog makes Logical Interfaces to prove this goal.
+
+
+In C:
+
+
+% Diagram
+
+
+In prolog:
+
+\begin{verbatim}
+
+member(a,[61,a]).
+   
+member(x,[X|_]).
+
+\end{verbatim}
+
+attempt to unify each arguement with the goal with tit's corresponding arguement in the head.
+
+	- if the arguements are identical
+	
+	- if one is an unbound variable and the other is not, then the unbound variable is 
+	- made equal to the other term (it is instantiated). The two terms are then identical
+	  In fact, they are the same term from then on.
+
+	- If both are unbound variables, they are unified such that they are identical there after,
+	  the same unbound variable.
+
+	- Otherwise, unification fails and resolution fails.
+
+\end{document}
