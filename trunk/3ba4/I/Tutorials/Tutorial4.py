@@ -61,16 +61,16 @@ for i in range(len(tut_seq)):
 				cache_tags[n].pop(0);
 				##print "(",n, k,")", tag, "- Pushed";
 				cache_tags[n].append(tag);
-				misses = misses + 1;
+				misses += 1;
 			elif cache_tags[n][k] == tag:
 				# Tag found. Woohoo, a Hit!!
 				print "[32mHit[m";
 				##print "(",n, k,")", cache_tags[n][k];
-				hits = hits + 1;
-			k = k + 1;
+				hits += 1;
+			#k = k + 2;
 		#n = set; # skip straight to the appropriate set
 	else:
 		print "[33m", n, "[m";
-		lost = lost + 1;
-	i = i + 1;
+		lost += 1;
+	#i = i + 1;
 print "Hits:", hits, "Misses:", misses, "Lost in the Void:", lost;
