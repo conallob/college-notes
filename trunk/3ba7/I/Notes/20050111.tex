@@ -1,0 +1,139 @@
+ % $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\	$11^{th}$ January 2005}
+
+\maketitle
+
+\begin{verbatim}
+{ PARSE AN <S> }
+PROCEDURE S (OTHERSYMBOLS: SYMBOLSET)
+BEGIN
+      SKIP_TO ([a, b], OTHERSYMBOLS)
+            IF (SYMBOL = a) THEN
+                    BEGIN { Parse Production 1 }
+                           NEXTSYMBOL;
+                           A ([a, b] + OTHERSYMBOLS);
+                           S (OTHERSYMBOLS);
+                    END { Parse Production 1 }
+            IF (SYMBOL = b) THEN
+                    BEGIN { Parse Production 2 }
+                           NEXTSYMBOL;
+                    END { Parse Production 2 }
+END;
+\end{verbatim}
+
+Symbols which must not be skipped over because they can be handled
+outside this instance $S$.
+
+\begin{verbatim}
+{ PARSE AN <A> }
+PROCEDURE A (OTHERSYMBOLS: SYMBOLSET)
+BEGIN
+      SKIP_TO ([c, a, b], OTHERSYMBOLS)
+            IF (SYMBOL = c) THEN
+                    BEGIN { Parse Production 3 }
+                           NEXTSYMBOL;
+                           A ([a, b] + OTHERSYMBOLS);
+                           S (b + OTHERSYMBOLS);
+                    END
+                    IF (SYMBOL = b) THEN
+                           BEGIN
+                           NEXTSYMBOL;
+                    ELSE
+                           ERROR(1); { Local Recovery }
+                    END { Parse Production 3 }
+END;
+\end{verbatim}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{S}	&	\to	&	a \nonterminal{A} \nonterminal{S}	\\
+\nonterminal{S}	&	\to	&	b 												\\
+\nonterminal{A}	&	\to	&	c \nonterminal{A} \nonterminal{S}	\\
+\nonterminal{A}	&	\to	&	\epsilon		
+\end{eqnarray}
+
+$SELECT(\nonterminal{A} \to \epsilon) = FOLLOW(\nonterminal{A}) = 
+\{ a, b \}$
+
+\begin{verbatim}
+{ MAIL LINE }
+      NEXTSYMBOL; { CALL LEXICAL ANALYSER }
+		S; { PARSE AN <S> }
+		IF SYMBOL = ENDMARKER THEN 
+		       ACCEPT
+      ELSE
+             REJECT	
+\end{verbatim}
+
+\begin{verbatim}
+{ PARSE AN <S> }
+PROCEDURE S;
+BEGIN
+      CASE SYMBOL OF
+            a : BEGIN { PRODUCTION 1 }
+                    NEXTSYMBOL; { ADVANCE }
+                    A; S;
+                END
+            b : NEXTSYMBOL; { PRODUCTION 2 }
+
+            c : ENDMARKER : REJECT
+END;
+\end{verbatim}
+
+\begin{verbatim}
+TYPE SYMBOLSET = set of symbols
+{ Procedure to skip to next synchronising symbol }
+PROCEDURE SKIP_TO(VALIDSYMBOLS, OTHERSYMBOLS: SYMBOLSET);
+BEGIN
+      IF NOT (SYMBOL IN VALIDSYMBOLS) THEN
+            BEGIN { PROCESS ERROR }
+                    ERROR(0);
+                    VALIDSYMBOLS := VALIDSYMBOLS + OTHERSYMBOLS
+                    WHILE NOT (SYMBOL IN VALIDSYMBOLS)
+                          DO
+                                NEXTSYMBOL;
+                    END { PROCESS ERROR }
+END;
+\end{verbatim}
+
+\begin{eqnarray}
+\nonterminal{S}	&	\to	&	a \nonterminal{A} \nonterminal{S}		\\
+\nonterminal{S}	&	\to	&	b													\\
+\nonterminal{A}	&	\to	&	b \nonterminal{A} \nonterminal{S} c		\\
+\nonterminal{A}	&	\to	&	\epsilon
+\end{eqnarray}
+
+\begin{verbatim}
+{ MAIN LINE }
+PROCEDURE A;
+NEXTSYMBOL;
+S ([ENDMARKER])
+IF (SYMBOL = ENDMARKER) THEN
+      ACCEPT
+ELSE
+      ERROR(99)
+\end{verbatim}
+
+List of symbols which \textbf{may not} be skipped over if $S$ starts
+skipping symbols.
+
+\end{document}
