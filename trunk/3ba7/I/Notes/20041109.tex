@@ -1,0 +1,111 @@
+% $Id: 20041026.tex 336 2004-10-27 12:47:38Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $9^{th}$ November 2004}
+
+\maketitle
+
+Synthesized Attributes:
+
+$\left( 1 + 2 \right) \ast \left( 3 + 4 \right) $
+
+\begin{eqnarray*}
+\langle S \rangle	&	\to	&	\langle E \rangle \mbox{\actionsym{Answer}} \\
+						&			&  \hspace{5mm} \synth{p} \hspace{10mm} \synth{q} \hspace{10mm} \synth{p \leftarrow q}	\\
+\langle E \rangle	&	\to	&	\langle E \rangle + \langle T \rangle	\\
+\hspace{5mm}\synth{p}	&			&	\hspace{5mm} \synth{q} \hspace{10mm} \synth{r} \hspace{10mm} \synth{p \leftarrow q + r} \\
+\langle E \rangle	&	\to	&	\langle T \rangle \\
+\hspace{5mm}\synth{p}	&			&	\hspace{5mm} \synth{q} \hspace{23mm} \synth{p \leftarrow q} \\
+\langle T \rangle	&	\to	&	\langle T \rangle \ast \langle P \rangle \\
+\hspace{5mm}\synth{p}	&			&	\hspace{5mm} \synth{q} \hspace{10mm} \synth{r} \hspace{10mm} \synth{p \leftarrow q \ast r} \\
+\langle T \rangle	&	\to	&	\langle P \rangle \\
+\hspace{5mm}\synth{p}	&			&	\hspace{5mm} \synth{q} \hspace{23mm} \synth{p \leftarrow q} \\
+\langle P \rangle	&	\to	&	\left( \langle E \rangle \right) \\
+\hspace{5mm}\synth{p}	&			&	\hspace{5mm} \synth{q} \hspace{23mm} \synth{p \leftarrow q} \\
+\langle P \rangle	&	\to	&	CONST \\
+\hspace{5mm}\synth{p}	&			&	\hspace{5mm} \synth{q} \hspace{23mm} \synth{p \leftarrow q} \\
+\end{eqnarray*}
+
+% Diagram
+
+Each non-terminal symbol has a single attribute that synthesizes the
+value of the sub-expression that it generates.
+
+Where
+\indent $\langle E \rangle_{\synth{p}}, \langle T \rangle_{\synth{p}}$
+and $\langle P \rangle_{\synth{r}}$ synthesized - $\synth{p}$ and
+$\actionsym{Answer}_{\synth{p}}$ inherited $\synth{p}$.
+
+
+This is an attributed translation grammar. In this case, the attributes
+of the non-terminal symbols are evaluated from the bottom up.
+
+
+\subsection*{Inherited Attributes}
+
+$REAL x,y$
+
+\begin{eqnarray*}
+\langle DECL \rangle				&	\to	&	TYPE_{\synth{p}} IDENT_{\synth{q}} \actionsym{SETTYPE}_{\synth{t,s}} \langle MORE IDENTS \rangle \\
+\langle MORE IDENTS \rangle	&	\to	& , IDENT \actionsym{SETTYPE} \langle MORE IDENTS \rangle \\
+\langle MORE IDENTS \rangle	&	\to	& \epsilon
+\end{eqnarray*}
+
+
+Where $TYPE$, $IDENT$ and $,$ are lexical tokens.
+
+The value part of $TYPE$ us $REAL$, $INTEGER$ or $BOOLEAN$, and the
+value part of the $IDENT$ is a pointer to a symbol table entry for this
+identifier.
+
+\begin{table}[h]
+
+\begin{tabular}{|c|c|c|}
+\hline
+Name		&	Type		&			\\
+\hline	&				&\hspace{15mm}	\\
+$X$		&	$REAL$	&					\\
+$Y$		&	$REAL$	&					\\
+			&				&					\\
+			&				&					\\
+\hline
+\end{tabular}
+
+\caption{Symbol Table}
+
+\end{table}
+
+% Diagram
+
+\begin{eqnarray*}
+\langle DECL \rangle	&	\to	& TYPE_{\synth{p}} IDENT_{\synth{q}} \actionsym{SETTYPE}_{\synth{r,s}} \langle MORE INDENTS \rangle_{\synth{t}} \\
+\langle MORE IDENTS \rangle	&	\to	& IDENT_{\synth{q}} \actionsym{SETTYPE}_{\synth{r,s}} \langle MORE IDENTS \rangle + \\
+\langle MORE IDENTS \rangle	&	\to	& \epsilon 
+\end{eqnarray*}
+
+Where $\langle MORE INDENTS \rangle_{\synth{p}}$ and
+$\actionsym{SETTYPE}_{\synth{p,q}}$ inherited $\synth{p,q}$. Inherited 
+attributes are passed across and down the derivation tree.
+
+$\synth{r \leftarrow q }$ \\
+$\synth{s \leftarrow p }$ \\
+$\synth{r \leftarrow v }$ \\
+$\synth{(s,t) \leftarrow p }$ \\
+
+% Diagram
+
+\end{document}
