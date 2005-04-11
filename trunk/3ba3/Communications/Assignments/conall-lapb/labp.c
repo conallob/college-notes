@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
     exit(1);
   }
 
-  printf("\n\n Simulating LABP\n");
-  start_simulator(sender_lapd, receiver_lapb, event, timeout_interval, pkt_loss, garbled, debug_flags);
+  printf("\n\n Simulating LAPB\n");
+  start_simulator(sender_lapb, receiver_lapb, event, timeout_interval, pkt_loss, garbled, debug_flags);
 }
 
 void sender_lapb(void)
 {
   seq_nr next_frame_to_send;	/* seq number of next outgoing frame */
-  frame s;		/* scratch variable */
+  lapb_frame s;		/* scratch variable */
   packet buffer;	/* buffer for an outbound packet */
   event_type event;
 
@@ -60,7 +60,7 @@ void sender_lapb(void)
 void receiver_lapb(void)
 {
   seq_nr frame_expected;
-  frame r, s;
+  lapb_frame r, s;
   event_type event;
 
   frame_expected = 0;
@@ -74,9 +74,10 @@ void receiver_lapb(void)
                         to_network_layer_lapb(&r.info);	/* pass the data to the network layer */
                         inc(frame_expected);	/* next time expect the other sequence nr */
                 }
-                init_frame(&s);
+                init_frame_lapb(&s);
                 s.ack = 1 - frame_expected;	/* tell which frame is being acked */
                 to_physical_layer_lapb(&s);	/* only the ack field is use */
         }
   }
 }
+
