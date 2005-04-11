@@ -12,6 +12,15 @@ typedef struct {	/* frames are transported in this layer */
   packet info;  	/* the network layer packet */
 } frame;
 
+typedef struct {		/* frames are transported in this layer */
+  uint8_t flag_head;	/* LAPB header flag byte */
+  uint8_t address;	/* LAPB address byte */
+  uint8_t control;	/* LAPB Control Byte */
+  packet info;  		/* the network layer packet */
+  uint16_t fcs;		/* LAPB FCS word */ 
+  uint8_t flag_tail;	/* LAPB trailer flag byte */
+} lapb_frame;
+
 /* start_simulator initializes various simulator parameters and starts the
  * simulation. Control will return from this function only after the simulation
  * has been completed. 
@@ -42,8 +51,16 @@ void start_simulator(void (*proc1)(), void (*proc2)(), long event,
  */
 void init_frame(frame *s);
 
+/* And the LAPB version... */
+
+void init_frame_lapb(lapb_frame *s);
+
 /* Wait for an event to happen; return its type in event. */
 void wait_for_event(event_type *event);
+
+/* And the LAPB version... */
+
+void wait_for_event_lapb(event_type *event);
 
 /* Fetch a packet from the network layer for transmission on the channel. */
 void from_network_layer(packet *p);
@@ -56,6 +73,10 @@ void from_physical_layer(frame *r);
 
 /* Pass the frame to the physical layer for transmission. */
 void to_physical_layer(frame *s);
+
+/* And the LAPB version... */
+
+void to_physical_layer_lapb(frame *s);
 
 /* Start the clock running and enable the timeout event. */
 void start_timer(seq_nr k);

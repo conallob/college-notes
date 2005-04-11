@@ -69,6 +69,13 @@ int payloads_accepted;          /* number of pkts passed to network layer */
 int timeouts;                   /* number of timeouts */
 int ack_timeouts;               /* number of ack timeouts */
 
+/* LAPB Specific Statistics */
+
+int lapb_rej;						  /* number of LAPB rej */
+int lapb_srej;						  /* number of LAPB srej */
+
+boolean lapb_proto;				  /* Simple flag to check if we're using LAPB or not */
+
 /* Incoming frames are buffered here for later processing. */
 frame queue[MAX_QUEUE];         /* buffered incoming frames */
 frame *inp = &queue[0];         /* where to put the next frame */
@@ -111,6 +118,17 @@ void fr(frame *f);
 void recalc_timers(void);
 void print_statistics(void);
 void sim_error(char *s);
+
+/* LAPB variant functions */
+
+void init_frame_lapb(lapb_frame *s);
+void wait_for_event_lapb(event_type *event);
+void to_physical_layer_lapb(frame *s);
+void wait_for_event_lapb(event_type *event);
+void lapb_fr(lapb_frame *f);
+event_type frametype_lapb(void);
+void from_physical_layer_lapb(lapb_frame *r);
+
 int parse_first_five_parameters(int argc, char *argv[], long *event, int *timeout_interval, int *pkt_loss, int *garbled, int *debug_flags);
 
 void start_simulator(void (*p1)(), void (*p2)(), long event, int tm_out, int pk_loss, int grb, int d_flags)
@@ -364,6 +382,53 @@ void wait_for_event(event_type *event)
 }
 
 
+void wait_for_event_lapb(event_type *event)
+{
+/* Wait_for_event_lapb reads the pipe from main to get the time.  Then it
+ * fstat's the pipe from the other worker to see if any
+ * frames are there.  If so, if collects them all in the queue array.
+ * Once the pipe is empty, it makes a decision about what to do next.
+ */
+ 
+ bigint ct, word = OK;
+
+  offset = 0;			/* prevents two timeouts at the same tick */
+  retransmitting = 0;		/* counts retransmissions */
+  while (true) {
+	queue_frames();		/* go get any newly arrived frames */
+	if (write(mwfd, &word, TICK_SIZE) != TICK_SIZE) print_statistics();
+	if (read(mrfd, &ct, TICK_SIZE) != TICK_SIZE) print_statistics();
+	if (ct == 0) print_statistics();
+	tick = ct;		/* update time */
+	if ((debug_flags & PERIODIC) && (tick%INTERVAL == 0))
+		printf("Tick %u. Proc %d. Data sent=%d  Payloads accepted=%d  Timeouts=%d\n", tick/DELTA, id, data_sent, payloads_accepted, timeouts);
+
+	/* Now pick event. */
+	*event = pick_event();
+	if (*event == NO_EVENT) {
+		word = (lowest_timer == 0 ? NOTHING : OK);
+		continue;
+	}
+	word = OK;
+	if (*event == timeout) {
+		timeouts++;
+		retransmitting = 1;	/* enter retransmission mode */
+		if (debug_flags & TIMEOUTS)
+		      printf("Tick %u. Proc %d got timeout for frame %d\n",
+					       tick/DELTA, id, oldest_frame);
+	}
+
+	if (*event == ack_timeout) {
+		ack_timeouts++;
+		if (debug_flags & TIMEOUTS)
+		      printf("Tick %u. Proc %d got ack timeout\n",
+					       tick/DELTA, id);
+	}
+	return;
+  }
+}
+
+
 void init_frame(frame *s)
 {
   /* Fill in fields that that the simulator expects. Protocols may update
@@ -380,6 +445,23 @@ void init_frame(frame *s)
   s->info.data[3] = 0;
 }
 
+void init_frame_lapb(lapb_frame *s)
+{
+  /* Fill in fields that that the simulator expects. Protocols may update
+   * some of these fields. This filling is not strictly needed, but makes the
+   * simulation trace look better, showing unused fields as zeros.
+   */
+
+  s->flag_head = 0x7e; /* 01111110 */
+  s->address = 0x01;  /* Static value */
+  s->control = 0x00;  /* 00000000 to start off... */
+  s->info.data[0] = 0;
+  s->info.data[1] = 0;
+  s->info.data[2] = 0;
+  s->info.data[3] = 0;
+  s->fcs; /* Unsure what to initialise fcs to... */
+  s->flag_tail = 0x7e; /* 01111110 */
+}
 
 /* AZN: Re-written queue_frames to work with select rather than 
  * fstating pipes which is not POSIX compatible.
@@ -387,7 +469,11 @@ void init_frame(frame *s)
 void queue_frames(void)
 {
   int prfd, frct, k;
-  frame *top;
+  if (lapb_proto) {			 
+  		lapb_frame *top;
+  } else {
+  		frame *top;
+  }
   fd_set readfs;
   int  retval, rsz;
   struct timeval tv;
@@ -564,6 +650,56 @@ event_type frametype(void)
   return(event);
 }
 
+/* LAPB Variant */
+
+event_type frametype_lapb(void)
+{
+/* This function is called after it has been decided that a frame_arrival
+ * event will occur.  The earliest frame is removed from queue[] and copied
+ * to last_frame.  This copying is needed to avoid messing up the simulation
+ * in the event that the protocol does not actually read the incoming frame.
+ * For example, in protocols 2 and 3, the senders do not call
+ * from_physical_layer() to collect the incoming frame. If frametype() did
+ * not remove incoming frames from queue[], they never would be removed.
+ * Of course, one could change sender2() and sender3() to have them call
+ * from_physical_layer(), but doing it this way is more robust.
+ *
+ * This function determines (stochastically) whether the arrived frame is good
+ * or bad (contains a checksum error).
+ */
+
+  int n, i;
+  event_type event;
+
+  /* Remove one frame from the queue. */
+  last_frame = *outp;		/* copy the first frame in the queue */
+  outp++;
+  if (outp == &queue[MAX_QUEUE]) outp = queue;
+  nframes--;
+
+  /* Generate frames with checksum errors at random. */
+  n = rand() & 01777;
+  if (n < garbled) {
+	/* Checksum error.*/
+	event = cksum_err;
+	if (last_frame.kind == data) cksum_data_recd++;
+	if (last_frame.kind == ack) cksum_acks_recd++;
+	i = 0;
+  } else {
+	event = frame_arrival;
+	if (last_frame.kind == data) good_data_recd++;
+	if (last_frame.kind == ack) good_acks_recd++;
+	i = 1;
+  }
+
+  if (debug_flags & RECEIVES) {
+	printf("Tick %u. Proc %d got %s frame:  ",
+						tick/DELTA,id,badgood[i]);
+	fr(&last_frame);
+  }
+  return(event);
+}
+
 
 void from_network_layer(packet *p)
 {
@@ -603,8 +739,17 @@ void from_physical_layer (frame *r)
  *r = last_frame;
 }
 
-void to_physical_layer(frame *s)
+void from_physical_layer_lapb(lapb_frame *r)
 {
+/* Copy the newly-arrived frame to the user. */
+ *r = last_frame;
+}
+
+void to_physical_layer_lapb(lapb_frame *s)
+{
+
+		  /* Review and rewrite this function */
+		  
 /* Pass the frame to the physical layer for writing on pipe 1 or 2. 
  * However, this is where bad packets are discarded: they never get written.
  */
@@ -622,12 +767,14 @@ void to_physical_layer(frame *s)
    * timeout, knowing the buffer number makes it possible to determine
    * the sequence number.
    */
+  
   if (s->kind==data) seqs[s->seq % (nseqs/2)] = s->seq; 
 
   if (s->kind == data) data_sent++;
   if (s->kind == ack) acks_sent++;
   if (retransmitting) data_retransmitted++;
 
+  
   /* Bad transmissions (checksum errors) are simulated here. */
   k = rand() & 01777;		/* 0 <= k <= about 1000 (really 1023) */
   if (k < pkt_loss) {	/* simulate packet loss */
@@ -775,6 +922,16 @@ void fr(frame *f)
 	tag[f->kind], f->seq, f->ack, pktnum(&f->info));
 }
 
+/* LAPB Version */
+
+void lapb_fr(lapb_frame *f)
+{
+/* Print frame information for tracing. */
+
+  printf("control=%d  fcs=%d\n payload=%d\n",
+	tag[f->control], f->fcs, f->ack, pktnum(&f->info));
+}
+
 void recalc_timers(void)
 {
 /* Find the lowest timer */
@@ -811,6 +968,13 @@ void print_statistics(void)
   printf("\tAck frames lost:         %9d\n", acks_lost);
   printf("\tAck frames not lost:     %9d\n", acks_not_lost);
 
+  if (lapb_proto) {
+			 
+  		printf("\tLAPB REJ Frame Occurances:     %9d\n", lapb_rej);
+  		printf("\tLAPB SREJ Frame Occurances:     %9d\n", lapb_srej);
+
+  }
+  
   printf("\tTimeouts:                %9d\n", timeouts);
   printf("\tAck timeouts:            %9d\n", ack_timeouts);
   fflush(stdin);
