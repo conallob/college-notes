@@ -134,6 +134,13 @@ void lapb_fr(lapb_frame *f);
 event_type frametype_lapb(void);
 void from_physical_layer_lapb(lapb_frame *r);
 
+/* LAPB Specific Functions */
+
+void lapb_increment_ns(lapb_frame *f);
+void lapb_increment_nr(lapb_frame *f);
+int get_lapb_ns(lapb_frame *f);
+int get_lapb_nr(lapb_frame *f);
+
 int parse_first_five_parameters(int argc, char *argv[], long *event, int *timeout_interval, int *pkt_loss, int *garbled, int *debug_flags);
 
 void start_simulator(void (*p1)(), void (*p2)(), long event, int tm_out, int pk_loss, int grb, int d_flags)
@@ -475,72 +482,6 @@ void queue_frames(void)
 {
   int prfd, frct, k;
   frame *top;
-  fd_set readfs;
-  int  retval, rsz;
-  struct timeval tv;
-  char tmpbuf[50*FRAME_SIZE], *ip;
-  
-
-  prfd = (id == 0 ? r2 : r1);	/* which file descriptor is pipe on */
-
-  FD_ZERO(&readfs);
-  FD_SET(prfd, &readfs); /* Set testing for prfd */
-
-  /* Do not block */
-  tv.tv_sec = 0;
-  tv.tv_usec = 0;
-
-  retval = select(prfd+1, &readfs, NULL, NULL, &tv);
-
-  if (retval == -1 && errno == EINTR) /* A non-blocked signal was caught */
-	  return;
-
-  if (retval < 0) sim_error("Select() failed");
-
-  if (FD_ISSET(prfd, &readfs)) {
-	  rsz = read( prfd,  tmpbuf, 10*FRAME_SIZE);
-	  ip = tmpbuf;
-
-	  /* Just make sure what was read is divisible by FRAME_SIZE */
-	  if ((rsz % FRAME_SIZE)) sim_error("Error reading frames from peer");
-
-	  frct = rsz/FRAME_SIZE;	/* number of arrived frames */
-
-	  if (nframes + frct >= MAX_QUEUE)	/* check for possible queue overflow*/
-		  sim_error("Out of queue space. Increase MAX_QUEUE and re-make.");  
-
-	  /* If frct is 0, the pipe is empty, so don't read from it. */
-	  if (frct > 0) {
-		  /* How many frames can be read consecutively? */
-		  top = (outp <= inp ? &queue[MAX_QUEUE] : outp);/* how far can we rd?*/
-		  k = top - inp;	/* number of frames that can be read consecutively */
-		  if (k > frct) k = frct;	/* how many frames to read from peer */  
-		  memcpy((void *)inp, (void *)tmpbuf, k * FRAME_SIZE);
-		  ip += k*FRAME_SIZE; /* increment by k*FRAME_SIZE octets */
-
-		  frct -= k;		/* residual frames not yet read */
-		  inp += k;
-		  if (inp == &queue[MAX_QUEUE]) inp = queue;
-		  nframes += k;
-
-		  /* If frct is still > 0, the queue has been filled to the upper
-		   * limit, but there is still space at the bottom.  Continue reading
-		   * there.  This mechanism makes queue a circular buffer.
-		   */
-		  if (frct > 0) {
-			  memcpy((void *)queue, (void *)ip, frct * FRAME_SIZE);
-			  nframes += frct;
-			  inp = &queue[frct];
-		  }
-	  }
-  }
-
-}
-
-void queue_frames_lapb(void)
-{
-  int prfd, frct, k;
-  lapb_frame *top;
   fd_set readfs;
   int  retval, rsz;
   struct timeval tv;
@@ -1089,6 +1030,26 @@ void lapb_increment_nr(lapb_frame *f)
 		  /* Update simultor statistics... */
 
 		  acks_sent++;
+
+}
+
+
+int get_lapb_ns(lapb_frame *f)
+{
+
+		  uint8_t z;
+
+		  z = (f->control & LAPB_NS_MASK) >> 4; /* Apply mask and shift 4 places to the right */
+		  return((int) z);
+																         
+}
+
+int get_lapb_nr(lapb_frame *f)
+{
+		  uint8_t z;
+		
+		  z = (f->control & LAPB_NR_MASK); /* Apply mask */
+		  return((int) z);
 
 }
 

@@ -37,21 +37,25 @@ void sender_lapb(void)
   lapb_frame s;		/* scratch variable */
   packet buffer;	/* buffer for an outbound packet */
   event_type event;
+  boolean handshake; /* true if handshake sucessful, false otherwise */
 
   next_frame_to_send = 0;	/* initialize outbound sequence numbers */
+  handshake = false; /* initialise handshake flag */
   from_network_layer(&buffer);	/* fetch first packet */
   while (true) {
         init_frame_lapb(&s);
         s.info = buffer;	/* construct a frame for transmission */
-        s.seq = next_frame_to_send;	/* insert sequence number in frame */
+ /*       s.seq = next_frame_to_send;	/* insert sequence number in frame */ 
         to_physical_layer_lapb(&s);	/* send it on its way */
-        start_timer(s.seq);	/* if answer takes too long, time out */
+		  increment_lapb_ns();
+        start_timer(get_lapb_ns(&s));	/* if answer takes too long, time out */
         wait_for_event_lapb(&event);	/* frame_arrival, cksum_err, timeout */
         if (event == frame_arrival) {
                 from_physical_layer_lapb(&s);	/* get the acknowledgement */
-                if (s.ack == next_frame_to_send) {
+                if (get_lapb_nr(&s) == next_frame_to_send) {
                         from_network_layer_lapb(&buffer);	/* get the next one to send */
                         inc(next_frame_to_send);	/* invert next_frame_to_send */
+								increment_lapb_ns(&s);
                 }
         }
   }
@@ -62,20 +66,22 @@ void receiver_lapb(void)
   seq_nr frame_expected;
   lapb_frame r, s;
   event_type event;
+  boolean handshake; /* true if handshake sucessful, false otherwise */
 
   frame_expected = 0;
+  handshake = false; /* initialise handshake flag */
   while (true) {
         wait_for_event_lapb(&event);	/* possibilities: frame_arrival, cksum_err */
         if (event == frame_arrival) {
                 /* A valid frame has arrived. */
                 from_physical_layer_lapb(&r);	/* go get the newly arrived frame */
-                if (r.seq == frame_expected) {
+                if (get_lapb_ns(&r) == frame_expected) {
                         /* This is what we have been waiting for. */
                         to_network_layer_lapb(&r.info);	/* pass the data to the network layer */
                         inc(frame_expected);	/* next time expect the other sequence nr */
                 }
                 init_frame_lapb(&s);
-                s.ack = 1 - frame_expected;	/* tell which frame is being acked */
+                increment_lapb_nr(&s);	/* tell which frame is being acked */
                 to_physical_layer_lapb(&s);	/* only the ack field is use */
         }
   }
