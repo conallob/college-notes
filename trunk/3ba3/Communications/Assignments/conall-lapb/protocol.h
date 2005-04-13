@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #define MAX_PKT 4	/* determines packet size in bytes */
 
 typedef enum {false, true} boolean;	/* boolean type */

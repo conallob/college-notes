@@ -1,3 +1,5 @@
+/* $Id$ */
+
 /* Simulator for datalink protocols. 
  *    Written by Andrew S. Tanenbaum.
  *    Revised by Shivakant Mishra.
@@ -28,6 +30,15 @@
 
 #define LAPB_NS_MASK 0x70
 #define LAPB_NR_MASK 0x07
+
+#define LAPB_UA 0xC6
+#define LAPB_ARQ 0xD0
+#define LAPB_SSR 0xD1
+
+#define LAPB_RR   0x88
+#define LAPB_RNR  0x98
+#define LAPB_REJ  0xA8
+#define LAPB_SREJ 0xB8
 
 /* DEBUG MASKS */
 #define SENDS        0x0001     /* frames sent */
@@ -78,8 +89,6 @@ int ack_timeouts;               /* number of ack timeouts */
 
 int lapb_rej;						  /* number of LAPB rej */
 int lapb_srej;						  /* number of LAPB srej */
-
-boolean lapb_proto;				  /* Simple flag to check if we're using LAPB or not */
 
 /* Incoming frames are buffered here for later processing. */
 frame queue[MAX_QUEUE];         /* buffered incoming frames */
@@ -140,6 +149,7 @@ void lapb_increment_ns(lapb_frame *f);
 void lapb_increment_nr(lapb_frame *f);
 int get_lapb_ns(lapb_frame *f);
 int get_lapb_nr(lapb_frame *f);
+void set_lapb_nr(lapb_frame *f, int value);
 
 
 int parse_first_five_parameters(int argc, char *argv[], long *event, int *timeout_interval, int *pkt_loss, int *garbled, int *debug_flags);
@@ -1054,6 +1064,11 @@ int get_lapb_nr(lapb_frame *f)
 
 }
 
+
+void set_lapb_nr(lapb_frame *f, int value)
+{		
+		  f->control |= (LAPB_NR_MASK & value);
+}
 
 int parse_first_five_parameters(int argc, char *argv[], long *event, int *timeout_interval, int *pkt_loss, int *garbled, int *debug_flags)
 {

@@ -1,3 +1,5 @@
+/* $Id$ */
+
 /* Protocol 7 (labp) simulates...
  *
  * To compile: cc -o protocol7 labp.c simulator.o
@@ -10,10 +12,6 @@
 #define MAX_PROTOCOL 7          /* highest protocol being simulated */
                                 /* THIS SHOULD BE REMOVED */
 
-#define LAPB_UA 0xC6
-#define LAPB_ARQ 0xD0
-#define LAPB_SSR 0xD1
-
 typedef enum  {handshake, frame_arrival, cksum_err, timeout} event_type;
 
 typedef enum {arq, ssr} repeat_algorithm;
@@ -23,7 +21,6 @@ typedef enum {arq, ssr} repeat_algorithm;
 void sender_lapb(void);
 void receiver_lapb(void);
 
-repeat_algorithm method; /* How are we going to handle repeats? */ 
 
 /* method = arq; */
 /* method = ssr; */
@@ -49,6 +46,7 @@ void sender_lapb(void)
   lapb_frame s;		/* scratch variable */
   packet buffer;	/* buffer for an outbound packet */
   event_type event;
+  repeat_algorithm method; /* How are we going to handle repeats? */ 
 
   next_frame_to_send = 0;	/* initialize outbound sequence numbers */
   from_network_layer(&buffer);	/* fetch first packet */
@@ -77,13 +75,15 @@ void sender_lapb(void)
                         }
 								to_physical_layer_lapb(&s); /* Send the first frame */
 					 			from_physical_layer_lapb(&s);	/* Wait for the acknowledgement */
-                			if (lapb_control_field(&s) == LAPB_UA) {
+                			if (s.control == LAPB_UA) {
 										  event = frame_arrival; /* handshake successful, moving on... */
 								}
                         	from_network_layer_lapb(&buffer);	/* get the next one to send */
+									init_lapb_frame(&s);
+									s->info = buffer;
                         	inc(next_frame_to_send);	/* invert next_frame_to_send */
 									increment_lapb_ns(&s);
-                			}
+                			
 
 					 break;
 
@@ -92,10 +92,13 @@ void sender_lapb(void)
 					 case frame_arrival:
 					 
 					 			from_physical_layer_lapb(&s);	/* get the acknowledgement */
+								good_acks_recd++;
                 			if (get_lapb_nr(&s) == next_frame_to_send) {
                         	from_network_layer_lapb(&buffer);	/* get the next one to send */
                         	inc(next_frame_to_send);	/* invert next_frame_to_send */
+									s->data = buffer;
 									increment_lapb_ns(&s);
+									data_sent++;
                 			}
 							
 					 break;
@@ -111,22 +114,77 @@ void receiver_lapb(void)
   lapb_frame r, s;
   event_type event;
   boolean handshake; /* true if handshake sucessful, false otherwise */
+  repeat_algorithm method; /* How are we going to handle repeats? */ 
 
   frame_expected = 0;
-  handshake = false; /* initialise handshake flag */
   while (true) {
         wait_for_event_lapb(&event);	/* possibilities: frame_arrival, cksum_err */
-        if (event == frame_arrival) {
-                /* A valid frame has arrived. */
-                from_physical_layer_lapb(&r);	/* go get the newly arrived frame */
-                if (get_lapb_ns(&r) == frame_expected) {
-                        /* This is what we have been waiting for. */
-                        to_network_layer_lapb(&r.info);	/* pass the data to the network layer */
-                        inc(frame_expected);	/* next time expect the other sequence nr */
-                }
-                init_frame_lapb(&s);
-                increment_lapb_nr(&s);	/* tell which frame is being acked */
-                to_physical_layer_lapb(&s);	/* only the ack field is use */
+        switch(event) {
+
+					 /* Handshake mode */
+
+					 case handshake:
+
+					 			from_physical_layer_lapb(&r);	/* Wait for the first packet */
+                        switch(r->control) {
+
+										case LAPB_ARQ:
+
+												  method = arq;
+
+										break;
+
+										case LAPB_SSR:
+
+												  method = ssr;
+
+										break;
+								}
+								init_lapb_frame(&s);
+								s->control = LAPB_UA; /* UA Frame created */
+								to_physical_layer_lapb(&s); /* Send it... */
+								event = frame_arrival; /* handshake successful, moving on... */
+
+						break;
+
+					 /* Arrival Mode */
+
+					 case frame_arrival:
+					 				/* A valid frame has arrived. */
+                				from_physical_layer_lapb(&r);	/* go get the newly arrived frame */
+                				if (get_lapb_ns(&r) = frame_expected)
+									{
+											 init_lapb_frame(&s);
+											 s->control = LAPB_RR;
+											 set_lapb_nr(&s, frame_expect);
+											 to_physical_layer_lapb(&s); /* Send an RR ack */
+											 ack_sent++;
+											 to_network_layer_lapb(&r.info);	/* pass the data to the network layer */
+											 payloads_accepted++;
+											 inc(frame_expected);	/* next time expect the other sequence nr */
+									} else if(get_lapb_ns(&r) > frame_expected)
+									{
+											 /* Aaaaah! Slow down, you're speaking too fast!! */
+											 init_lapb_frame(&s);
+											 s->control = LAPB_RNR;
+											 set_lapb_nr(&s, frame_expect);
+											 to_physical_layer_lapb(&s); /* Send an RNR ack */
+									} else {
+											 /* Uh oh! Error. Let's ask for that again... */
+											 init_lapb_frame(&s);
+											 if (method == arq) {
+														s->control = LAPB_REJ;
+														lapb_rej++;
+											 else if (method == ssr) {
+														s->control = LAPB_SREJ;
+														lapb_srej++;
+											 }
+											 set_lapb_nr(&s, frame_expect); /* Which one do we want? */
+											 to_physical_layer_lapb(&s); /* Send a REJ or SREJ request */
+									}
+											  
+					 break;
+					 
         }
   }
 }
