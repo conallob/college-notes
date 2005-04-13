@@ -141,6 +141,7 @@ void lapb_increment_nr(lapb_frame *f);
 int get_lapb_ns(lapb_frame *f);
 int get_lapb_nr(lapb_frame *f);
 
+
 int parse_first_five_parameters(int argc, char *argv[], long *event, int *timeout_interval, int *pkt_loss, int *garbled, int *debug_flags);
 
 void start_simulator(void (*p1)(), void (*p2)(), long event, int tm_out, int pk_loss, int grb, int d_flags)
@@ -1052,6 +1053,7 @@ int get_lapb_nr(lapb_frame *f)
 		  return((int) z);
 
 }
+
 
 int parse_first_five_parameters(int argc, char *argv[], long *event, int *timeout_interval, int *pkt_loss, int *garbled, int *debug_flags)
 {
