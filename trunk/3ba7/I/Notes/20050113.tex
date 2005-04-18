@@ -206,43 +206,140 @@ $\#4$ : $POP, ADVANCE$	\\
 
 \begin{table}[hbtp]
 
-% xy-pic diagram
+\xy <1cm,0cm>:
+0 *=(2,1)!UL\txt{$\triangledown$} *\frm{-}
+\endxy
 
 \end{table}
 
 \begin{table}[hbtp]
 
-% xy-pic diagram
+\xy <1cm,0cm>:
+0 *=(5,3)\frm{-} ,
+(-2.5,0) ; (2.5,0) **\dir{--} ,
+\POS (0,0.75) *+{\actionsym{E}} ,
+\POS (0,-0.75) *+\txt{PTR to place on stack \\ where synth value is \\ (to be) stored} ,
+\endxy
 
 \end{table}
 
 \begin{table}[hbtp]
 
-% xy-pic diagram
+\xy <1cm,0cm>:
+0 *=(3,2)\frm{-} ,
+(-1.5,0) ; (1.5,0) **\dir{--} ,
+(0,-2) *=(3,2)\frm{-} ,
+(-1.5,-2) ; (1.5,-2) **\dir{--} ,
+\POS (0,0.5) *+{\actionsym{E}} ,
+\POS (0,-1.5) *+{\actionsym{ANSWER}} ,
+(0,-0.5) *{\bullet} ; (2.5,-0.5) **\dir{-} ;
+(2.5,-2.5) **\dir{-} ;
+(1,-2.5) **\dir{-} *\dir{>}
+\endxy
 
 \end{table}
 
 \begin{table}[hbtp]
 
-% xy-pic diagram
+\xy <1cm,0cm>:
+0 *=(4,2)\frm{-} ,
+(-2,0) ; (2,0) **\dir{--} ,
+(0,-2) *=(4,2)\frm{-} ,
+(-2,-2) ; (2,-2) **\dir{--} ,
+(0,-4) *=(4,2)\frm{-} ,
+(-2,-4) ; (2,-4) **\dir{--} ,
+(0,-6) *=(4,2)\frm{-} ,
+(-2,-6) ; (2,-6) **\dir{--} ,
+\POS (0,0.5) *+{\actionsym{E}} ,
+\POS (0,-1.5) *+{\actionsym{E}} ,
+\POS (0,-3.5) *+{\txt{\actionsym{ADD} or \actionsym{MULT}}} ,
+\POS (0,-6.5) *+\txt{PTR to ...} ,
+(0,-0.5) *{\bullet} ; (3,-0.5) **\dir{-} ;
+(3,-4.5) **\dir{-} ;
+(1,-4.5) **\dir{-} *\dir{>} ,
+(0,-2.5) *{\bullet} ; (-3,-2.5) **\dir{-} ;
+(-3,-5.5) **\dir{-} ;
+(-1,-5.5) **\dir{-} *\dir{>} ,
+\endxy
 
 \end{table}
 
 \begin{table}[hbtp]
 
-% xy-pic diagram
+\xy <1cm,0cm>:
+0 *=(3,2)\frm{-} ,
+(-1.5,0) ; (1.5,0) **\dir{--} ,
+\POS (0,0.5) *+{\actionsym{E}} ,
+\POS (0,-0.5) *+{\triangledown} ,
+(-0.25,-1.5) ; (-0.25,-3) **\dir{-} ,
+(0.25,-1.5) ; (0.25,-3) **\dir{-} ,
+(1,-2.5) ; (0,-3.25) **\dir{-} ;
+(-1,-2.5) **\dir{-} ,
+\POS (0,-2.25) *+{1}
+\endxy
+
+\vspace{15mm}
+
+\xy <1cm,0cm>:
+0 *=(3,2)\frm{-} ,
+(-1.5,0) ; (1.5,0) **\dir{--} ,
+(0,-2) *=(3,2)\frm{-} ,
+(-1.5,-2) ; (1.5,-2) **\dir{--} ,
+(0,-4) *=(3,2)\frm{-} ,
+(-1.5,-4) ; (1.5,-4) **\dir{--} ,
+\POS (0,0.5) *+{\actionsym{E}} ,
+\POS (0,-1.5) *+{\actionsym{ANSWER}} ,
+\POS (0,-3.5) *+{\triangledown} ,
+(0,-0.5) *{\bullet} ; (2.5,-0.5) **\dir{-} ;
+(2.5,-2.5) **\dir{-} ;
+(0.75,-2.5) **\dir{-} *\dir{>} ,
+%
+(-0.25,-5.5) ; (-0.25,-7) **\dir{-} ,
+(0.25,-5.5) ; (0.25,-7) **\dir{-} ,
+(1,-6.5) ; (0,-7.25) **\dir{-} ;
+(-1,-6.5) **\dir{-} ,
+\POS (0,-6.25) *+{2}
+\endxy
 
 \end{table}
 
 \begin{table}[hbtp]
 
-% xy-pic diagram
-
-\end{table}
-
-\begin{table}[hbtp]
-
-% xy-pic diagram
+\xy <1cm,0cm>:
+0 *=(3,2)\frm{-} ,
+(-1.5,0) ; (1.5,0) **\dir{--} ,
+(0,-2) *=(3,2)\frm{-} ,
+(-1.5,-2) ; (1.5,-2) **\dir{--} ,
+(0,-4) *=(3,2)\frm{-} ,
+(-1.5,-4) ; (1.5,-4) **\dir{--} ,
+(0,-6) *=(3,2)\frm{-} ,
+(-1.5,-6) ; (1.5,-6) **\dir{--} ,
+(0,-8) *=(3,2)\frm{-} ,
+(-1.5,-8) ; (1.5,-8) **\dir{--} ,
+(0,-10) *=(3,2)\frm{-} ,
+(-1.5,-10) ; (1.5,-10) **\dir{--} ,
+\POS (0,0.5) *+{\actionsym{E}} ,
+\POS (0,-1.5) *+{\actionsym{E}} ,
+\POS (0,-3.5) *+{\actionsym{ADD}} ,
+\POS (0,-4.5) *+{1} ,
+\POS (0,-5.5) *+{2} ,
+\POS (0,-7.5) *+{\actionsym{ANSWER}} ,
+\POS (0,-8.5) *+{3} ,
+\POS (0,-9.5) *+{\triangledown} ,
+(0,-0.5) *{\bullet} ; (2,-0.5) **\dir{-} ;
+(2,-4.5) **\dir{-} ;
+(0.5,-4.5) **\dir{-} *\dir{>} ,
+(0,-2.5) *{\bullet} ; (-2,-2.5) **\dir{-} ;
+(-2,-5.5) **\dir{-} ;
+(-0.5,-5.5) **\dir{-} *\dir{>} ,
+(0,-6.5) *{\bullet} ; (2,-6.5) **\dir{-} ;
+(2,-8.5) **\dir{-} ;
+(0.5,-8.5) **\dir{-} *\dir{>} ,
+(-1.5,1) ; (1.5,-1) **\dir{-} ,
+(1.5,1) ; (-1.5,-1) **\dir{-} ,
+(-1.5,-1) ; (1.5,-3) **\dir{-} ,
+(1.5,-1) ; (-1.5,-3) **\dir{-} ,
+\endxy
 
 \end{table}
 
