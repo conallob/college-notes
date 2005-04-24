@@ -2,6 +2,7 @@
 
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+\usepackage{pst-all}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -26,7 +27,50 @@ search(Target,[CostSoFar-[P|Route]|Front],Result) :-
 
 \end{verbatim}
 
-% Tree Diagram
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TC*}{
+	\pstree{\TC*}{
+		\pstree{\TC*}{
+			\TC*
+			\pstree{\TC*}{
+				\TC*
+				\TC*
+			}
+			\Tn
+		}
+		\Tn
+	}
+	\TC*
+	\pstree{\TC*}{
+		\Tn
+		\pstree{\TC*}{
+			\pstree{\TC*}{
+				\Tn
+				\pstree{\TC*}{
+					\TC*
+					\TC*
+				}
+				
+			}
+		}
+	}
+	\pstree{\TC*}{
+		\Tn
+		\pstree{\TC*}{
+			\Tn
+			\TC*
+		}
+		\pstree{\TC*}{
+			\Tn
+			\TC*
+		}
+	}
+}
+
+\end{figure}
 
 % Tree Diagram
 

@@ -85,19 +85,19 @@ If operand is parameter, it is passed by reference.
 \[ A + B [x + y] \]
 
 
-%\begin{tabular}{lll}
-%$\actionsym{ADD}_{\uparrow X, \uparrow Y, \uparrow PR_{1}}$	&	\verb!LOAD X!	&	\\
-%																				&	\verb!ADD Y!	&	\\
-%$\actionsym{SUBSCRIPT}_{\uparrow B, \uparrow PR_{1}, \uparrow PR_{2}}$	&
-%\multirow{}{2}{Produce code to compute address of subscripted variable}	&	$B[x + y]$\\
-%																				&		&	\\
-%																				&		&	\\
-%$\actionsym{ADD}_{\uparrow A, \uparrow PA_{2}, \uparrow PR_{2}}$	&
-%\multirow{}{3}{Store temp \\ Load A \\ Add A \\ Add at Temp (Indirect Add)}	&	\\
-%																				&		&	\\
-%																				&		&	\\
-%																				&		&	\\
-%\end{tabular}
+\begin{tabular}{lll}
+$\actionsym{ADD}_{\uparrow X, \uparrow Y, \uparrow PR_{1}}$	&	\verb!LOAD X!	&	\\
+																				&	\verb!ADD Y!	&	\\
+$\actionsym{SUBSCRIPT}_{\uparrow B, \uparrow PR_{1}, \uparrow PR_{2}}$	&
+\multirow{3}{50mm}{Produce code to compute address of subscripted variable}	&	$B[x + y]$\\
+																				&		&	\\
+																				&		&	\\
+$\actionsym{ADD}_{\uparrow A, \uparrow PA_{2}, \uparrow PR_{2}}$	&
+\multirow{4}{50mm}{Store temp \\ Load A \\ Add A \\ Add at Temp (Indirect Add)}	&	\\
+																				&		&	\\
+																				&		&	\\
+																				&		&	\\
+\end{tabular}
 
 $\actionsym{ADDOP}_{p\txt{ },q\txt{ },r\txt{ },s,} $	-	$+, -, OR$
 

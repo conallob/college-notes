@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.3.3)  24 APR 2005 02:52
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.3.3)  24 APR 2005 13:40
 entering extended mode
 **20050120.tex
 (./20050120.tex
@@ -382,33 +382,47 @@ Package xcolor Warning: Incompatible color definition on input line 73.
 Package xcolor Warning: Incompatible color definition on input line 74.
 
 
-Package xcolor Warning: Incompatible color definition on input line 102.
+Package xcolor Warning: Incompatible color definition on input line 89.
+
+
+Package xcolor Warning: Incompatible color definition on input line 91.
+
+
+Package xcolor Warning: Incompatible color definition on input line 95.
+
+
+Overfull \vbox (14.50005pt too high) detected at line 96
+ []
 
 [2]
 
+Package xcolor Warning: Incompatible color definition on input line 102.
+
+
 Package xcolor Warning: Incompatible color definition on input line 140.
 
+[3]
 
 Package xcolor Warning: Incompatible color definition on input line 157.
 
-[3] [4]
+[4] [5]
 
 Package xcolor Warning: Incompatible color definition on input line 238.
 
 
 Package xcolor Warning: Incompatible color definition on input line 249.
 
-[5]
 
 Package xcolor Warning: Incompatible color definition on input line 258.
 
 
 Package xcolor Warning: Incompatible color definition on input line 270.
 
+[6]
 
 Package xcolor Warning: Incompatible color definition on input line 278.
 
-[6] [7] [8] (./20050120.aux) ) 
+[7] [8] (./20050120.aux) ) 
 Here is how much of TeX's memory you used:
  5546 strings out of 94501
  67474 string characters out of 1176138
@@ -418,4 +432,4 @@ Here is how much of TeX's memory you used:
  580 hyphenation exceptions out of 1000
  36i,13n,42p,212b,403s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20050120.dvi (8 pages, 18676 bytes).
+Output written on 20050120.dvi (8 pages, 19364 bytes).
