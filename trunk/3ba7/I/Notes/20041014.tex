@@ -2,6 +2,7 @@
 
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+\usepackage[all,matrix,tips,frame,curve,arrow]{xypic}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -49,9 +50,25 @@ A + B
 .
 \end{verbatim}
 
-ADD($\uparrow$ A, $\uparrow$ B, $\uparrow$ $T_{n}$)
+\verb!ADD(!$\uparrow$ \verb!A, !$\uparrow$ \verb!B, !$\uparrow$ $T_{n}$\verb!)!
 
-% Diagram
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+0 *=(2,1)\frm{-} ="A",
+(3,0) *=(2,1)\frm{-} ="B",
+(6,0) *=(2,1)\frm{-} ="C",
+(6,-2) *=(2,1)\frm{-} ="D",
+\POS "A" !CR \ar ; "B" !CL ,
+\POS "B" !CR \ar ; "C" !CL ,
+\POS "C" !DC \ar ; "D" !UC ,
+\POS "A" *{\txt{SA}} ,
+\POS "B" *{\txt{SEM}} ,
+\POS "C" *{\txt{CG}} ,
+\POS "D" *{\txt{OPT}} ,
+\endxy
+
+\end{figure}
 
 Optimiser:
 
@@ -79,7 +96,13 @@ v A set of rejecting states.
 
 \[ \delta(S_{OLD}, INPUT) \Rightarrow S_{NEW} \]
 
-% Diagram
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+0 *++[F-:<2mm>]\txt{$S_{old}$} \ar ^{input} ; (3,0) *++[F-:<2mm>]\txt{$S_{new}$}
+\endxy
+
+\end{figure}
 
 Eg: Parity Checker
 
@@ -116,13 +139,42 @@ $1 = $ Accepting State \\
 
 $0 = $ Rejecting State
 
-Transition Diagram:
+\begin{figure}[ht]
 
-% Diagram
+\xy <1cm,0cm>:
+\UseTips
+\entrymodifiers={+++[o][F]}
+\xymatrix @-1mm {
+		*+\txt{Starting \\ State} \ar[r]
+	&	Even \ar@(dr,dl)[]^0 \ar@/^6mm/[r]^1
+	&	*+++[o][F=]{Odd}
+		\ar@(d,dl)[]^0 \ar@/^6mm/[l]_1
+	& *+\txt{Accepting \\ State} \ar@{.>}[l]
+}
+\endxy
+
+\caption{Transition Diagram}
+
+\end{figure}
+
 
 $01011$
 
-% diagram
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+\UseTips
+\entrymodifiers={+++[o][F]}
+\xymatrix @-1mm {
+		E \ar[r]^0
+	&	E \ar[r]^1
+	&	O \ar[r]^1
+	&	E \ar[r]^1
+	&	O
+}
+\endxy
+
+\end{figure}
 
 \begin{tabular}{|c|c|c|c|}
 \hline
