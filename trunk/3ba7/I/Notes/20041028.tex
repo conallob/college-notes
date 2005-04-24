@@ -2,9 +2,12 @@
 
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
+\usepackage{pst-all}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
+
+\newcommand{\nonterminal}[1]{$\langle #1 \rangle$}
 
 \begin{document}
 
@@ -247,9 +250,47 @@ language.
 Corresponding to each derivation, it is possible to draw an assocciated
 derivation tree.
 
-% Diagram
+\begin{figure}[ht]
 
-% Diagram
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{A}}}{
+	\TR{$a$}
+	\pstree{\TR{\nonterminal{A}}}{
+		\pstree{\TR{\nonterminal{A}}}{
+				\TR{$e$}
+				\Tn
+		}
+	\TR{$b$}
+	}
+	\pstree{\TR{\nonterminal{B}}}{
+		\Tn
+		\TR{$\epsilon$}
+	}
+	\TR{$c$}
+}
+
+\end{figure}
+
+
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{A}}}{
+	\TR{$a$}
+	\pstree{\TR{\nonterminal{A}}}{
+		\TR{$e$}
+		\Tn
+	}
+	\pstree{\TR{\nonterminal{B}}}{
+		\Tn
+		\TR{$b$}
+	}
+	\TR{$c$}
+}
+
+\end{figure}
 
 A derivation tree hides the order of the deviation.
 
