@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.3.3)  21 APR 2005 00:04
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.3.3)  24 APR 2005 02:52
 entering extended mode
 **20050120.tex
 (./20050120.tex
@@ -172,27 +172,171 @@ Package: ulem 2000/05/26
 )
 (/sw/share/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen139
-) (./20050120.aux)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-all.sty
+Package: pst-all 2004/05/06 the main pstricks tools
+
+(/sw/share/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2004/05/12 v0.2l LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pstricks.tex
+`PSTricks' v1.04  <2004/06/22> (tvz)
+\pst@dima=\dimen140
+\pst@dimb=\dimen141
+\pst@dimc=\dimen142
+\pst@dimd=\dimen143
+\pst@dimg=\dimen144
+\pst@dimh=\dimen145
+\pst@hbox=\box33
+\pst@boxg=\box34
+\pst@cnta=\count99
+\pst@cntb=\count100
+\pst@cntc=\count101
+\pst@cntd=\count102
+\pst@cntg=\count103
+\pst@cnth=\count104
+\pst@toks=\toks23
+(/sw/share/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen146
+\psxunit=\dimen147
+\psyunit=\dimen148
+\pslinewidth=\dimen149
+\pst@customdefs=\toks24
+\pslinearc=\dimen150
+\everypsbox=\toks25
+\psframesep=\dimen151
+\pslabelsep=\dimen152
+\theoverlaybox=\box35
+)
+File: pstricks.tex 2004/06/22 v1.04 `PSTricks' (tvz)
+
+(/sw/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2004/07/04 v2.00 LaTeX color extensions (UK)
+
+(/sw/share/texmf-dist/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Package option `override' ignored on input line 128.
+Package xcolor Info: Driver file: dvips.def on input line 136.
+LaTeX Info: Redefining \color on input line 494.
+Package xcolor Info: Color model `cmy' added on input line 972.
+Package xcolor Info: Color model `HTML' added on input line 1000.
+Package xcolor Info: Color model `HSB' added on input line 1006.
+Package xcolor Info: Color model `Gray' added on input line 1012.
+))
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-grad.sty
+Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-grad.tex  v1.04, 2004/06/24)
+File: pst-grad.tex 2004/06/24 1.04 `pst-grad' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-plot.sty
+Package: pst-plot 2004/07/15 package wrapper for pst-plot.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-plot.tex
+ v97 patch 2, 1999/12/12 (/sw/share/texmf-dist/tex/generic/multido/multido.tex
+ v1.41, 2004/05/18 <tvz>
+\multido@count=\count105
+\multidocount=\count106
+\multido@stuff=\toks26
+))
+File: pst-plot.tex 2004/05/18 1.41 `pst-plot' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-coil.sty
+Package: pst-coil 2004/07/15 package wrapper for pst-coil.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-coil.tex
+ v97 patch 2, 1998/03/19)
+File: pst-coil.tex 1998/03/19 v97 patch 2 `pst-coil' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-text.sty
+Package: pst-text 2004/07/15 package wrapper for pst-text.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-text.tex  v97, 1997/03/25)
+File: pst-text.tex 1997/03/25 97 `pst-text' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-char.sty
+Package: pst-char 2004/07/15 package wrapper for pst-char.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-char.tex
+ v97 patch 3, 1999/03/11)
+File: pst-char.tex 1999/03/11 97 patch 3 `pst-char' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-node.sty
+Package: pst-node 2004/07/15 package wrapper for pst-node.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-node.tex
+ v97 patch 11, 2000/11/09
+\psrow=\count107
+\pscol=\count108
+\psmatrixcnt=\count109
+\psrowsep=\skip44
+\pscolsep=\skip45
+)
+File: pst-node.tex 2000/11/09 97 patch 11 `pst-node' (tvz)
+) (/sw/share/texmf-dist/tex/latex/pstricks/pst-3d.sty
+Package: pst-3d 2004/07/15 package wrapper for pst-3d.tex
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-3d.tex  v97, 1997/03/25)
+File: pst-3d.tex 1997/03/25 97 `pst-3d' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-eps.sty
+Package: pst-eps 2004/07/15 package wrapper for pst-eps.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-eps.tex
+ v97 patch 1, 1997/05/05
+\pst@epsout=\write4
+\pst@tempout=\write5
+)
+File: pst-eps.tex 1997/05/05 97 patch 1 `pst-eps' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-fill.sty
+Package: pst-fill 2004/07/15 package wrapper for pst-fill.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-fill.tex
+ v97 patch 4, 2004/08/18
+\pst@fillbox=\box36
+)
+File: pst-fill.tex 2004/08/18 97 patch 4 `pst-fill' (tvz)
+)
+(/sw/share/texmf-dist/tex/latex/pstricks/pst-tree.sty
+Package: pst-tree 2004/07/15 package wrapper for pst-tree.tex
+
+(/sw/share/texmf-dist/tex/generic/pstricks/pst-tree.tex
+ v97 patch 6, 2004/07/24
+\pstree@rootbox=\box37
+\pstree@box=\box38
+\psnodecnt=\count110
+\pstreelevel=\count111
+\pstreecnt=\count112
+\pstree@cnt=\count113
+\pstree@stop=\count114
+)
+File: pst-tree.tex 2004/07/24 97 patch 6 `pst-tree' (tvz)
+)
+(/sw/share/texmf-dist/tex/generic/multido/multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+)) (./20050120.aux)
 \openout1 = `20050120.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 
 (/sw/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/sw/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
@@ -200,28 +344,78 @@ File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 32.
+
+Package xcolor Warning: Incompatible color definition on input line 33.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
 (/sw/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+
+
+Package xcolor Warning: Incompatible color definition on input line 41.
+
+
+Package xcolor Warning: Incompatible color definition on input line 43.
+
+
+Package xcolor Warning: Incompatible color definition on input line 46.
+
+
+Package xcolor Warning: Incompatible color definition on input line 47.
+
+[1
 
 ]
-! Dimension too large.
-\@xmultirow ...mpdima \@tempcnta \dp \@arstrutbox 
-                                                  \ifnum \@tempcnta <0\@temp...
-l.91 ...o compute address of subscripted variable}
-                                                  	&	$B[x + y]$\\
-? X
- 
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 68.
+
+
+Package xcolor Warning: Incompatible color definition on input line 73.
+
+
+Package xcolor Warning: Incompatible color definition on input line 74.
+
+
+Package xcolor Warning: Incompatible color definition on input line 102.
+
+[2]
+
+Package xcolor Warning: Incompatible color definition on input line 140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 157.
+
+[3] [4]
+
+Package xcolor Warning: Incompatible color definition on input line 238.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+[5]
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 270.
+
+
+Package xcolor Warning: Incompatible color definition on input line 278.
+
+[6] [7] [8] (./20050120.aux) ) 
 Here is how much of TeX's memory you used:
- 3370 strings out of 94501
- 40967 string characters out of 1176138
- 128840 words of memory out of 1000000
- 6511 multiletter control sequences out of 10000+50000
+ 5546 strings out of 94501
+ 67474 string characters out of 1176138
+ 186550 words of memory out of 1000000
+ 8610 multiletter control sequences out of 10000+50000
  14471 words of font info for 60 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
- 26i,10n,28p,212b,190s stack positions out of 1500i,500n,5000p,200000b,5000s
-Output written on 20050120.dvi (1 page, 1940 bytes).
+ 36i,13n,42p,212b,403s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 20050120.dvi (8 pages, 18676 bytes).

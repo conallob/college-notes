@@ -6,6 +6,7 @@
 \usepackage[arc,poly,all]{xy}
 \usepackage{ulem}
 \usepackage{multirow}
+\usepackage{pst-all}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -84,19 +85,19 @@ If operand is parameter, it is passed by reference.
 \[ A + B [x + y] \]
 
 
-\begin{tabular}{lll}
-$\actionsym{ADD}_{\uparrow X, \uparrow Y, \uparrow PR_{1}}$	&	\verb!LOAD X!	&	\\
-																				&	\verb!ADD Y!	&	\\
-$\actionsym{SUBSCRIPT}_{\uparrow B, \uparrow PR_{1}, \uparrow PR_{2}}$	&
-\multirow{}{2}{Produce code to compute address of subscripted variable}	&	$B[x + y]$\\
-																				&		&	\\
-																				&		&	\\
-$\actionsym{ADD}_{\uparrow A, \uparrow PA_{2}, \uparrow PR_{2}}$	&
-\multirow{}{3}{Store temp \\ Load A \\ Add A \\ Add at Temp (Indirect Add)}	&	\\
-																				&		&	\\
-																				&		&	\\
-																				&		&	\\
-\end{tabular}
+%\begin{tabular}{lll}
+%$\actionsym{ADD}_{\uparrow X, \uparrow Y, \uparrow PR_{1}}$	&	\verb!LOAD X!	&	\\
+%																				&	\verb!ADD Y!	&	\\
+%$\actionsym{SUBSCRIPT}_{\uparrow B, \uparrow PR_{1}, \uparrow PR_{2}}$	&
+%\multirow{}{2}{Produce code to compute address of subscripted variable}	&	$B[x + y]$\\
+%																				&		&	\\
+%																				&		&	\\
+%$\actionsym{ADD}_{\uparrow A, \uparrow PA_{2}, \uparrow PR_{2}}$	&
+%\multirow{}{3}{Store temp \\ Load A \\ Add A \\ Add at Temp (Indirect Add)}	&	\\
+%																				&		&	\\
+%																				&		&	\\
+%																				&		&	\\
+%\end{tabular}
 
 $\actionsym{ADDOP}_{p\txt{ },q\txt{ },r\txt{ },s,} $	-	$+, -, OR$
 
@@ -105,58 +106,74 @@ $\actionsym{ADDOP}_{p\txt{ },q\txt{ },r\txt{ },s,} $	-	$+, -, OR$
 
 \begin{figure}[hb]
 
-\xy <1cm,0cm:
+\xy <1cm,0cm>:
 0 *=(1,1)\frm{-} , 
 (1,0) *=(1,1)\frm{-} , 
 (2,0) *=(1,1)\frm{-} , 
 0 ; (0,-3) **\dir{-} ;
 (3,-3) **\dir{-} *\dir{>} ;
-\txt{Mode Table} ,
+\POS (3.25,-3) *!CL{\txt{Mode Table}} ,
 (1,0) ; (1,-2) **\dir{-} ;
 (3,-2) **\dir{-} *\dir{>}  ,
 (2,0) ; (2,-1) **\dir{-} ;
-(3,-1) **\dir{-} *\dir{>} ,
+(3,-1) **\dir{-} *\dir{>} 
 \endxy
 
 \end{figure}
 
 \subsubsection{Mode Table}
 
-\begin{tabular}{l|l|l|l|l}
-R Right / \\ Q Left	&	Const	&	Scalar	&	Subscription Variable	&	Param	\\
-Const						&	$#1$	&				&									&			\\
-Scalar					&			&	$#2$		&									&			\\
-Subscription Variable	&			&				&	$#$							&			\\
-Param						&			&				&									&	$#$	\\
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+R Right /  Q Left			&	Const	&	Scalar	&	Subscription Variable	&	Param	\\
+\hline
+Const							&	$\#1$	&				&									&			\\
+\hline
+Scalar						&			&	$\#2$		&									&			\\
+\hline
+Subscription Variable	&			&				&	$\#$							&			\\
+\hline
+Param							&			&				&									&	$\#$	\\
+\hline
 \end{tabular}
 
-$#1$:	Perform at compile time. eg $\actionsym{ADDOP}_{ADD, 7, 5,\uparrow S}$ \\
-$#1$:	$\downarrow$
+$\#1$:	Perform at compile time. eg $\actionsym{ADDOP}_{ADD, 7, 5,\uparrow S}$ \\
+$\#1$:	$\downarrow$
 
 \subsubsection{Type Table}
 
-\begin{tabular}{l|l|l|l|l}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
 R Right / \\ Q Left	&	Int		&	Real		&	Bool	\\
-Int						&	$#2_{1}$	&				&	ERROR	\\
-Real						&	$#2_{2}$	&	$\ast$	&	ERROR	\\
+\hline
+Int						&	$\#2_{1}$	&				&	ERROR	\\
+\hline
+Real						&	$\#2_{2}$	&	$\ast$	&	ERROR	\\
+\hline
 Bool						&	ERROR		&	ERROR		&	ERROR	\\
+\hline
 \end{tabular}
 
 $\ast$: $\actionsym{ADD}_{Q, R', S}$ \\
-$#2_{2}$: Convert Int to Real ($R$, $R'$) \\
-$#2_{1}$:	$\downarrow$
+$\#2_{2}$: Convert Int to Real ($R$, $R'$) \\
+$\#2_{1}$:	$\downarrow$
 
 \subsubsection{Location Table}
 
-\begin{tabular}{l|l|l|l|l}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
 R Right / \\ Q Left	&	REG		&	MEM		&	BOTH	\\
-REG						&	$#2_{1_{1}}$	&	$#2_{1_{2}}$	&			\\
+\hline
+REG						&	$\#2_{1_{1}}$	&	$\#2_{1_{2}}$	&			\\
+\hline
 MEM						&				&				&			\\
+\hline
 BOTH						&				&				&			\\
+\hline
 \end{tabular}
 
-$#2_{1_{1}}$:  Generate ADDR instruction	\\
-$#2_{1_{2}}$:	Generate ADD instruction
+$\#2_{1_{1}}$:  Generate ADDR instruction	\\
+$\#2_{1_{2}}$:	Generate ADD instruction
 
 
 and update symbol table.
@@ -192,12 +209,12 @@ registers as \verb!FREE!.
 \begin{figure}[ht]
 
 \xy <1cm,0cm>:
-0 *!UL=(1,1)\frm{-} ,
-0 ; (3,-2) **\dir{-} *\dir{>} ,
-(3,0) *!UR=(1,1)\frm{-} ,
-(2,0) ; (2,-2) **\dir{-} *\dir{>} ;
-*DL=(1,1)\frm{-} ,
-(1.5,-3) ; (1.5,-4) **\dir{-} *\dir{>}
+0 *=(1,1)\frm{-} ="A",
+(3,0) *=(1,1)\frm{-} ="B",
+(1.5,-2) *=(1,1)\frm{-} ="C",
+\POS "A" !DR \ar ; "C" !UL , 
+\POS "B" !DL \ar ; "C" !UR , 
+\POS "C" !DC \ar ; +(0,-1) , 
 \endxy
 
 \end{figure}
@@ -250,7 +267,7 @@ A    r0,F
 LINK (r0,PR3)
 \end{verbatim}
 
-$\actionsym{MULT}_{\uparrow PR_{2}, \uparrow PR_{{3}, \uparrow PR_{4}}$
+$\actionsym{MULT}_{\uparrow PR_{2}, \uparrow PR_{3}, \uparrow PR_{4}}$
 
 \begin{verbatim}
 MR   r0,r1
@@ -281,18 +298,74 @@ A    r1,TEMP
 
 \begin{figure}[ht]
 
-% Tree Diagram
+\vspace{15mm}
+
+\psset{levelsep=15mm,nodesep=1mm,labelsep=0mm}
+
+\pstree{\TR{$+$} ~{$2$}}
+{
+		\pstree{\TR{$\ast$} ~{$1$}}
+		{
+			\TR{$A$} ~{$1$}
+			\TR{$B$} ~{$0$}
+		}
+		\pstree{\TR{$\ast$} ~{$2$}}
+		{
+			\pstree{\TR{$+$} ~{$1$}}
+			{
+				\TR{$C$} ~{$1$}	
+				\TR{$D$} ~{$0$}	
+			}
+			\pstree{\TR{$+$} ~{$1$}}
+			{
+				\TR{$E$} ~{$1$}	
+				\TR{$F$} ~{$0$}	
+			}
+		}
+}
 
 \end{figure}
 
 \begin{figure}[ht]
 
-% Tree Diagram
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{$Z_{regs}$}}
+{
+		\TR{$X_{regs}$}
+		\TR{$Y_{regs}$}
+}
 
 \caption{Optimisation}
 
 \end{figure}
 
-If
+If $X_{regs} = Y_{regs}$ then
+
+
+\hspace{10mm} $Z_{regs} \gets X_{regs} + 1$
+
+else
+
+\hspace{10mm} MAX$(X_{regs}, Y_{regs})$
+
+Label tree with left leaf $1$ and right leaf $0$.
+
+
+When generating code from labelled trees, generate code for sub trees
+with highest label first or left said tree if labels are equal, navi
+setai...
+
+\begin{verbatim}
+L       r0,C
+A       r0,D
+L       r1,E
+A       r1,F
+M  (R)  r0,R1
+L       r0,A
+M       r1,B
+AR      r0,r1
+\end{verbatim}
+
 
 \end{document}
