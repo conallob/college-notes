@@ -3,11 +3,16 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
 \usepackage[usenames]{color}
+\usepackage{pst-all}
+
+%
+% Crazy Tree Diagram Arrows Still TO DO
+%
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
 
-
+\newcommand{\nonterminal}[1]{$\langle #1 \rangle$}
 \newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
 
 \newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
@@ -40,7 +45,65 @@ $\left( 1 + 2 \right) \ast \left( 3 + 4 \right) $
 \hspace{5mm}\synth{p}	&			&	\hspace{5mm} \synth{q} \hspace{23mm} \synth{p \leftarrow q} \\
 \end{eqnarray*}
 
-% Diagram
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{S}}}{
+	\pstree{\TR{\nonterminal{E}}}{
+		\pstree{\TR{\nonterminal{T}}}{
+			\pstree{\TR{\nonterminal{T}}}{
+				\pstree{\TR{\nonterminal{P}}}{
+					\TR{$($}
+					\pstree{\TR{\nonterminal{E}}}{
+						\pstree{\TR{\nonterminal{E}}}{
+							\pstree{\TR{\nonterminal{T}}}{
+								\pstree{\TR{\nonterminal{P}}}{
+									\TR{$CONST$}
+								}
+							}
+						}
+						\TR{$+$}
+						\pstree{\TR{\nonterminal{T}}}{
+							\pstree{\TR{\nonterminal{T}}}{
+								\pstree{\TR{\nonterminal{P}}}{
+									\TR{$CONST$}
+								}
+							}
+						}
+					}
+					\TR{$)$}
+				}
+			}
+			\TR{$\ast$}
+			\pstree{\TR{\nonterminal{P}}}{
+				\TR{$($}
+				\pstree{\TR{\nonterminal{E}}}{
+					\pstree{\TR{\nonterminal{E}}}{
+						\pstree{\TR{\nonterminal{T}}}{
+							\pstree{\TR{\nonterminal{P}}}{
+								\TR{$CONST$}
+							}
+						}
+					}
+					\TR{$+$}
+					\pstree{\TR{\nonterminal{T}}}{
+						\pstree{\TR{\nonterminal{P}}}{
+							\TR{$CONST$}
+						}
+					}
+				}
+				\TR{$)$}
+			}
+		}
+	}
+	\TR{\actionsym{ANSWER}}
+}
+
+\caption{$\uparrow$: Synthesis}
+
+\end{figure}
+
 
 Each non-terminal symbol has a single attribute that synthesizes the
 value of the sub-expression that it generates.
@@ -89,7 +152,27 @@ $Y$		&	$REAL$	&					\\
 
 \end{table}
 
-% Diagram
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{DECL}}}{
+	\TR{$TYPE$}
+	\TR{$IDENT$}
+	\pstree{\TR{\nonterminal{$MORE$ $IDENTS$}}}{
+		\TR{$,$}
+		\TR{$IDENT$}
+		\pstree{\TR{\nonterminal{$MORE$ $IDENTS$}}}{
+			\TR{$\epsilon$}
+		}
+	}
+}
+
+
+\caption{\actionsym{SETTYPE}}
+
+\end{figure}
+
 
 \begin{eqnarray*}
 \langle DECL \rangle	&	\to	& TYPE_{\synth{p}} IDENT_{\synth{q}} \actionsym{SETTYPE}_{\synth{r,s}} \langle MORE INDENTS \rangle_{\synth{t}} \\
@@ -106,6 +189,24 @@ $\synth{s \leftarrow p }$ \\
 $\synth{r \leftarrow v }$ \\
 $\synth{(s,t) \leftarrow p }$ \\
 
-% Diagram
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{DECL}}}{
+	\TR{$TYPE$}
+	\TR{$IDENT$}
+	\TR{\actionsym{SETTYPE}}
+	\pstree{\TR{\nonterminal{MORE IDENTS}}}{
+		\TR{$,$}
+		\TR{$IDENT$}
+		\TR{\actionsym{SETTYPE}}
+		\pstree{\TR{\nonterminal{MORE IDENTS}}}{
+			\TR{$\epsilon$}
+		}
+	}
+}
+
+\end{figure}
 
 \end{document}
