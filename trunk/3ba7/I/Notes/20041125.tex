@@ -4,11 +4,12 @@
 \usepackage{amssymb}
 \usepackage[usenames]{color}
 \usepackage[arc,poly,all]{xy}
+\usepackage{pst-all}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
 
-
+\newcommand{\nonterminal}[1]{$\langle #1 \rangle$}
 \newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
 
 \newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
@@ -29,9 +30,30 @@
 
 $A + B \ast C$
 
-% Diagram
+\begin{figure}[ht]
 
-Grammar is precedenceless
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{E}}}{
+	\TR{$IDENT$}
+	\pstree{\TR{\nonterminal{R}}}{
+		\TR{$+$}
+		\TR{$IDENT$}
+		\pstree{\TR{\nonterminal{R}}}{
+			\TR{$\ast$}
+			\TR{$IDENT$}
+				\pstree{\TR{\nonterminal{R}}}{
+					\Tn
+					\TR{$\epsilon$}				
+				}
+		}
+	}
+}
+
+\caption{Grammar is precedenceless}
+
+\end{figure}
+
 
 \begin{eqnarray*}
 \langle S \rangle &	\to	&	IDENT_{\synth{p}} := \langle E \rangle_{\synth{q}} \actionsym{ASSIGN}_{\synth{r,s}}	\\
@@ -50,7 +72,29 @@ Grammar is precedenceless
 \langle R \rangle_{\synth{p}} &	\to	&	\epsilon \\
 \end{eqnarray*}
 
-% Diagram
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{E}}}{
+	\TR{$IDENT_{A}$}
+	\pstree{\TR{\nonterminal{R}}}{
+		\TR{$+$}
+		\TR{$IDENT_{B}$}
+		\TR{\actionsym{ADD}}
+		\pstree{\TR{\nonterminal{R}}}{
+			\TR{$\ast$}
+			\TR{$IDENT_{C}$}
+			\TR{\actionsym{MULT}}
+			\pstree{\TR{\nonterminal{R}}}{
+				\Tn
+				\TR{$\epsilon$}
+			}
+		}
+	}
+}
+
+\end{figure}
 
 Where $\langle R \rangle_{\synth{p}}$ - inherited $\synth{p}$, all
 action symbol attributes are inherited and $\synth{NEW T}$ ... 
@@ -81,7 +125,32 @@ $\langle R \rangle_{\synth{p,q}}$ - inherited $\synth{p}$, synthesized
 $\synth{q}$. All action symbol attributes are inherited and 
 $\synth{NEW T}$ allocates a new symbol table entry for a partial result. 
 
-% Diagram
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{S}}}{
+	\TR{$IDENT_{\uparrow A}$}
+	\TR{$:=$}
+	\pstree{\TR{\nonterminal{E}}}{
+		\TR{$IDENT_{\uparrow B}$}
+		\pstree{\TR{\nonterminal{R}}}{
+			\TR{$+$}
+			\TR{$IDENT_{\uparrow C}$}
+			\TR{\actionsym{ADD}}
+			\pstree{\TR{\nonterminal{R}}}{
+				\Tn
+				\TR{$\epsilon$}
+			}
+		}
+		\Tn
+	}
+	\TR{\actionsym{ASSIGN}}
+}
+
+\caption{$A := B + C$}
+
+\end{figure}
 
 \section*{Question}
 
