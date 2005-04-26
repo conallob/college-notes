@@ -3,11 +3,12 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{amssymb}
 \usepackage[usenames]{color}
+\usepackage{pst-all}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
 
-
+\newcommand{\nonterminal}[1]{$\langle #1 \rangle$}
 \newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
 
 \newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
@@ -120,7 +121,46 @@ $\langle P \rangle_{\synth{p}} \to	 \left( \langle E \rangle_{\synth{q}} \right)
 $\langle P \rangle_{\synth{p}} \to	 IDENT_{\synth{q}} \\
 \synth{p \leftarrow q}$	
 
-% Diagram
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{E}}}{
+  \pstree{\TR{\nonterminal{T}}}{
+  	\pstree{\TR{\nonterminal{T}}}{
+  		\pstree{\TR{\nonterminal{P}}}{
+  			\TR{IDENT}
+  		}
+  	}
+  	\TR{$\ast$}
+  	\pstree{\TR{\nonterminal{P}}}{
+  		\TR{$($}
+  		\pstree{\TR{\nonterminal{E}}}{
+  			\pstree{\TR{\nonterminal{E}}}{
+  				\pstree{\TR{\nonterminal{T}}}{
+  					\pstree{\TR{\nonterminal{P}}}{
+  						\TR{$IDENT$}
+  					}
+  				}
+  			}
+  			\TR{$+$}
+  			\pstree{\TR{\nonterminal{T}}}{
+  				\pstree{\TR{\nonterminal{P}}}{
+  					\TR{$IDENT$}
+  				}
+  			}
+  			\TR{\actionsym{ADD}}
+  		}
+  		\TR{$)$}
+  	}
+  	\TR{\actionsym{MULT}
+  }
+  }
+}
+
+\end{figure}
+
+
 
 Where $\langle E \rangle_{\synth{p}} \langle T \rangle_{\synth{p}}$ and
 $\langle P \rangle_{\synth{p}}$ synthesized $\synth{p}$.
