@@ -3,7 +3,6 @@
 # (C) Edsko de Vries, 2000-2002
 
 # Compile circuit macros
-echo Compiling circuit macros...
 for i in *.dvi;
 do
 	echo $i

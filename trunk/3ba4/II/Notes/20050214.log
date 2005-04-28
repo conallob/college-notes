@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.3.3)  22 MAR 2005 19:14
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.3.3)  28 APR 2005 19:51
 entering extended mode
 **20050214.tex
 (./20050214.tex
@@ -289,12 +289,12 @@ LaTeX Warning: No \author given.
 
 ] [2] [3] (./20050214.aux) ) 
 Here is how much of TeX's memory you used:
- 4409 strings out of 94501
- 49821 string characters out of 1176138
- 179779 words of memory out of 1000000
- 7532 multiletter control sequences out of 10000+50000
+ 4411 strings out of 94501
+ 49829 string characters out of 1176138
+ 223779 words of memory out of 1000000
+ 7534 multiletter control sequences out of 10000+50000
  13688 words of font info for 57 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
- 29i,9n,40p,205b,717s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 29i,10n,40p,205b,718s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on 20050214.dvi (3 pages, 23504 bytes).
+Output written on 20050214.dvi (3 pages, 48008 bytes).

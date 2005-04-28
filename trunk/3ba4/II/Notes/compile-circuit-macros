@@ -3,11 +3,23 @@
 # (C) Edsko de Vries, 2000-2002
 
 # Compile circuit macros
-echo Compiling circuit macros...
-for i in *.m4;
-do
-	echo $i
-	name=`echo $i | cut -d. -f1`;
-	m4 lib/pstricks.m4 lib/libcct.m4 $name.m4 > $name.pic;
+
+echo "Compiling circuit macros..."
+
+if [ -z "$1" ]; then
+	for i in *.m4;
+	do
+		echo $i
+		name=`echo $i | cut -d. -f1`;
+		m4 ~/lib/pstricks.m4 ~/lib/libcct.m4 $name.m4 > $name.pic;
+		dpic -p $name.pic > $name.tex;
+	done
+	exit
+fi
+
+if [ -z "$2" ]; then
+	name=`basename $1 .m4` 
+	m4 ~/lib/pstricks.m4 ~/lib/libcct.m4 $name.m4 > $name.pic;
 	dpic -p $name.pic > $name.tex;
-done
+	exit
+fi
