@@ -1,0 +1,69 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{3BA7 \\ Requirement Specification \\ and Work Plan for \\ YASS}
+
+\author{Group 8 \\ \\ Ross Lynch (02739747) \\ Philip McGuinness (02719673) \\ Conall O'Brien (01734351) \\ Michael Pearce (01014200) \\ \\ cs-3ba7-8@maths.tcd.ie}
+
+\maketitle
+
+\section{Functional System Requirements}
+
+\begin{itemize}
+
+\item Must Be Intuitive and Easy To Use.
+
+\item Must Insure High Degree of Control. Three User cases:
+Administrator, Client and User.
+
+\item Must Be Scalable (Works The Same for 10 Clients or 10000 Clients)
+
+\end{itemize}
+
+\section{Non Functional System Requirements}
+
+\begin{itemize}
+
+\item Must Be Secure (Access via SSL - https)
+
+\item Must Be Portable (to Various Webserver Setups)
+
+\item Must Use a SQL Database for Back end.
+
+\end{itemize}
+
+\section{Resource and Cost Requirements}
+
+\begin{itemize}
+
+\item Can Be Run on Low End (Inexpensive) Hardware.
+
+\item Can Be run Using Minimal Bandwidth (eg Residential Broadband).
+
+\item Economic Setup and Running Costs 
+
+\end{itemize}
+
+\section{High Level Project Work Plan}
+
+\newpage
+
+\section{Testing Plan}
+
+\begin{itemize}
+
+\item Testing on Multiple Common Platforms (Win32, Linux, Unix, MacOS, etc).
+
+\item Testing on Multiple Browsers (Internet Explorer, Netscape, Mozilla, Firefox, Opera, Safari, Konquerer, etc)
+
+\item Testing ACLs for Security (Clients cannot become Administrators, Users cannot become Clients)
+
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<project name="YASS" company="" manager="" phase="" project-start="20050414T000000Z" mrproject-version="2" calendar="1">
+  <properties>
+    <property name="cost" type="cost" owner="resource" label="Cost" description="standard cost for a resource"/>
+  </properties>
+  <phases>
+    <phase name="Setup"/>
+    <phase name="Development"/>
+    <phase name="Testing"/>
+    <phase name="Maintainance"/>
+  </phases>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Working" description="A default working day"/>
+      <day-type id="1" name="Nonworking" description="A default non working day"/>
+      <day-type id="2" name="Use base" description="Use day from base calendar"/>
+    </day-types>
+    <calendar id="1" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="Documentation" note="" work="100800" start="20050414T000000Z" end="20050419T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Requirments" note="" work="28800" start="20050414T000000Z" end="20050414T170000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="3" name="Specification" note="" work="28800" start="20050414T170000Z" end="20050415T120000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="2" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="4" name="Object Analysis" note="" work="28800" start="20050415T120000Z" end="20050415T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="3" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="5" name="Progress Report" note="" work="28800" start="20050415T170000Z" end="20050418T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="4" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="6" name="Demonostration" note="" work="28800" start="20050418T120000Z" end="20050418T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="5" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="7" name="Submission" note="&#10;" work="28800" start="20050418T170000Z" end="20050419T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="6" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="8" name="Setup" note="" work="57600" start="20050414T000000Z" end="20050415T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="9" name="Webserver" note="" work="144000" duration="57600" start="20050414T000000Z" end="20050415T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+      <task id="10" name="Repository" note="" work="28800" start="20050414T000000Z" end="20050414T170000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="11" name="https" note="" work="28800" start="20050414T000000Z" end="20050414T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="12" name="Development" note="" work="288000" start="20050415T170000Z" end="20050422T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="8" type="FS"/>
+      </predecessors>
+      <task id="13" name="User Cases" note="" work="86400" start="20050421T120000Z" end="20050422T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="15" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="14" name="Backend Data Storage" note="" work="86400" start="20050415T170000Z" end="20050419T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="15" name="Authentication System" note="" work="115200" start="20050419T120000Z" end="20050421T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="14" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="16" name="General" note="" work="288000" start="20050415T170000Z" end="20050422T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="17" name="QA" note="" work="460800" start="20050422T170000Z" end="20050428T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="12" type="FS"/>
+      </predecessors>
+      <task id="18" name="QA/Testing" note="" work="288000" start="20050422T170000Z" end="20050428T170000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="19" name="Bug Fixes" note="" work="201600" start="20050422T170000Z" end="20050428T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+  </tasks>
+  <resource-groups>
+    <group id="1" name="Docs" admin-name="" admin-phone="" admin-email=""/>
+    <group id="2" name="Coders" admin-name="" admin-phone="" admin-email=""/>
+  </resource-groups>
+  <resources>
+    <resource group="1" id="1" name="Ross Lynch" short-name="rlynch3" type="1" units="0" email="rlynch3@tcd.ie" note="" std-rate="0">
+      <properties>
+        <property name="cost" value=""/>
+      </properties>
+    </resource>
+    <resource group="1" id="2" name="Philip McGuinness" short-name="hamlet" type="1" units="0" email="phmcguin@tcd.ie" note="" std-rate="0">
+      <properties>
+        <property name="cost" value=""/>
+      </properties>
+    </resource>
+    <resource group="2" id="3" name="Michael Pearce" short-name="hamster" type="1" units="0" email="hamster@netsoc.tcd.ie" note="" std-rate="0">
+      <properties>
+        <property name="cost" value=""/>
+      </properties>
+    </resource>
+    <resource group="2" id="4" name="Conall O'Brien" short-name="conall" type="1" units="0" email="conallob@maths.tcd.ie" note="" std-rate="0">
+      <properties>
+        <property name="cost" value=""/>
+      </properties>
+    </resource>
+  </resources>
+  <allocations>
+    <allocation task-id="7" resource-id="1" units="100"/>
+    <allocation task-id="6" resource-id="1" units="100"/>
+    <allocation task-id="5" resource-id="1" units="100"/>
+    <allocation task-id="4" resource-id="1" units="100"/>
+    <allocation task-id="3" resource-id="1" units="100"/>
+    <allocation task-id="18" resource-id="1" units="100"/>
+    <allocation task-id="17" resource-id="1" units="100"/>
+    <allocation task-id="7" resource-id="2" units="100"/>
+    <allocation task-id="6" resource-id="2" units="100"/>
+    <allocation task-id="5" resource-id="2" units="100"/>
+    <allocation task-id="4" resource-id="2" units="100"/>
+    <allocation task-id="3" resource-id="2" units="100"/>
+    <allocation task-id="18" resource-id="2" units="100"/>
+    <allocation task-id="17" resource-id="2" units="100"/>
+    <allocation task-id="18" resource-id="3" units="25"/>
+    <allocation task-id="19" resource-id="3" units="100"/>
+    <allocation task-id="17" resource-id="3" units="100"/>
+    <allocation task-id="15" resource-id="3" units="100"/>
+    <allocation task-id="14" resource-id="3" units="100"/>
+    <allocation task-id="13" resource-id="3" units="100"/>
+    <allocation task-id="16" resource-id="3" units="100"/>
+    <allocation task-id="12" resource-id="3" units="100"/>
+    <allocation task-id="18" resource-id="4" units="25"/>
+    <allocation task-id="19" resource-id="4" units="100"/>
+    <allocation task-id="17" resource-id="4" units="100"/>
+    <allocation task-id="15" resource-id="4" units="100"/>
+    <allocation task-id="14" resource-id="4" units="100"/>
+    <allocation task-id="13" resource-id="4" units="100"/>
+    <allocation task-id="16" resource-id="4" units="100"/>
+    <allocation task-id="12" resource-id="4" units="100"/>
+    <allocation task-id="11" resource-id="4" units="100"/>
+    <allocation task-id="10" resource-id="4" units="100"/>
+    <allocation task-id="9" resource-id="4" units="250"/>
+  </allocations>
+</project>
