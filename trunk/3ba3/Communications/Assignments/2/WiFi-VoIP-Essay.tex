@@ -57,7 +57,12 @@ Over the last 20 years, since the emergance of the Internet, the
 telecoms industry have become \footnote{Internet Service
 Providers}{ISPs}, providing \footnote{Internet Protocol}{IP}
 connectivity over various mediums, such as copper transmission lines
-(ordinary phone lines), ISDN,  
+(ordinary phone lines), fibre optic transmission lines, ISDN, etc, as
+well as 
+\footnote{Groupe Sp{\'e}cial Mobile/Global System for Mobile Communications}{GSM}
+and 
+\footnote{General Packet Radio Service}{GPRS} with mobile or
+\quote{cell} phones
 
 \part{Emerging Technologies}
 
@@ -65,7 +70,40 @@ connectivity over various mediums, such as copper transmission lines
 
 \subsection{Protocols}
 
+The 802.11 \footnote{Wireless Fidelity}{WiFi} 
+\footnote{Institute of Electrical and Electronics Engineers}{IEEE}
+family of standards is a member of the 
+\cite[\footnote{Media Access Control - The lower sublayer of the OSI Data Link
+Layer}{MAC} sublayer]{tanenbaum}. The various standards (eg 802.11a, 802.11b, 
+802.11g, 802.11i, etc...) are all closely related, mainly using the
+\cite[2.4GHz or 5GHz]{wikipedia-80211} (in the case of 802.11a), thus
+allowing the use of the TCP/IP networking model, replacing the Ethernet
+MAC sublayer with radio waves. 
+
 \subsection{Security Concerns}
+
+Cognitively, one implicit, basic security feature of the 802.3 Ethernet protocol is it's
+reliance on copper cables, which  can be given restricted network access
+or physically restricted. The same cannot be said for the 802.11 WiFi
+protocol. By it's very design, a malicious user has access to the
+network, so other security methods are required.
+
+
+One the last few years, wireless \footnote{Local Area Network}{LAN{
+security reccommendations have changed more than once. The 
+\cite[802.11 standards define specifications for built in encryption, entitled
+\footnote{Wired Equivalent Privacy}{WEP}]{wikipedia-wep}. However,
+concerns over the integrity of WEP, particulary events in \cite[2001,
+including the University of California at Berkeley, a paper entitled
+\quote{Weaknesses in the Key Scheduling Algorithm of RC4} by Fluhrer, 
+Mantin, and Shamir and AT\&T]{wikipedia-80211} each highlighted various
+issues with the WEP security model and choice of cypher algorithm.
+
+
+At the time of writing this paper, the current de facto methods of
+securing a wireless lan involve the use of \footnote{WiFi Protected
+Access}{WPA} (which was created the result of WPA's shortcomings),
+802.1x user authenticaion
 
 \section{VoIP Technologies}
 
