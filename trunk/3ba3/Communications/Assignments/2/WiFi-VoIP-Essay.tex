@@ -9,7 +9,7 @@
 
 \begin{document}
 
-\title{Course 3BA3: Comunications \\ \vspace{10mm} Assignment 2 \\
+\title{Course 3BA3: Communications \\ \vspace{10mm} Assignment 2 \\
 \vspace{10mm} Is Mobile Communication the Future? \\ \vspace{10mm}
 {\small Do you think the proliferation of mobile voice and data communication
 technologies (Cellular Mobile Phones, WiFi, WiMax, Bluetooth, GPRS, etc)
@@ -33,18 +33,133 @@ business.
 
 \section{Bandwidth}
 
-The telecommunications 
+The many members of the 
+\cite[traditional telecommunications industry]{wikipedia-isp}
+became
+\footnote{Internet Service Providers}{ISPs}
+during the 1980s and 1990s when the Internet experienced huge growth,
+particularly in home and business users as well as it's existing 
+academic base. \cite[In the 1970s]{wikipedia-pstn}, the 
+telecommunications industry begun researching replacing analogue
+technologies with high capacity digital alternative, giving birth to
+technologies such as 
+\cite[\footnote{Digital Line Subscriber}{DSL} and 
+\footnote{Integrated Systems Digital Network}{ISDN}]{wikipedia-pstn},
+both of which have proven useful in the area of data transmission since
+such products have been made available to the end users.
 
-\section{Security}
+
+At the same time, ISPs have invested large amounts of money into high
+bandwidth networks for data transmission. One key feature of VoIP in the
+eyes on the telecommunications industry is the ability to connect a
+large number of calls due to the ready access to high bandwidth. It is
+quite likely their \footnote{Internet Protocol} datagram networks could
+route a higher capacity of voice communications using VoIP than their
+dedicated hardware \footnote{Public Switched Telephone Network}{PSTN},
+which could offer in the long term, lower running costs.
 
 
+Since the wide availability of high speed broadband internet access to
+many residential, business and mobile users, using various mediums such as
+\footnote{Digital Subscription Line}{DSL}, cable and 
+\footnote{General Packet Radio Service} and 
+\footnote{3G}{Third Generation} mobile phone
+communications, the primary use for such bandwidth currently is 
+multimedia content. DSL and cable access to the internet is frequently
+used to gain access to high quality audio and video content while GPRS
+and 3G connections from mobile phones are used for accessing medium
+quality audio and video content.
 
-\section{}
+\section{Voice over IP}
 
+VoIP protocols are relatively recent examples of application layer
+protocols designed to provide rich content to broadband users. There are
+6 main VoIP options, 
+\cite[the \footnote{Internet Engineering Task Force}{IETF}'s 
+\footnote{Session Initiation Protocol}{SIP},
+the \footnote{International Telecommunications Union}{ITU}'s H.323,
+Cisco's Skinny Client Control Protocol, The IETF and ITU's 
+Megaco (aka H.348), MiNET, Skype and
+\footnote{Inter-Asterisk eXchange}{IAX} ]{wikipedia-voip}.
+
+
+Unfortunately, each protocol has it's own advantages and disadvantages,
+thus there is no single popular choice. H.323, SIP and Skype are all
+popular protocols, although they all are known to have issues 
+traversing firewall and \footnote{Network Address Translation}{NAT} 
+setups, particularly H.323. Cisco's Skinny Client Control Protocol is
+popular with business, where dedicated hardware VoIP
+telephones and are often used in large 
+\footnote{Wide Area Networks}{WANs}. Other issues for all VoIP protocols inherent to IP datagram networking 
+include \footnote{Quality of Service}{QoS}, latency and data integrity.
+
+\section{Wireless Security}
+
+Cognitively, one implicit, basic security feature of the 802.3 Ethernet
+protocol is it's
+reliance on copper cables, which  can be given restricted network access
+or physically restricted. The same cannot be said for the 802.11 WiFi
+protocol. By it's very design, a malicious user has access to the
+network, so other security methods are required.
+
+
+One the last few years, wireless \footnote{Local Area Network}{LAN}
+security recommendations have changed more than once. The 
+\cite[802.11 standards define specifications for built in encryption,
+entitled
+\footnote{Wired Equivalent Privacy}{WEP}]{wikipedia-wep}. However,
+concerns over the integrity of WEP, particularly events in \cite[2001,
+including the University of California at Berkeley, a paper entitled
+\quote{Weaknesses in the Key Scheduling Algorithm of RC4} by Fluhrer, 
+Mantin, and Shamir and AT\&T]{wikipedia-80211} each highlighted various
+issues with the WEP security model and choice of cipher algorithm.
+
+
+At the time of writing this paper, the current de facto methods of
+securing a wireless lan involve the use of \footnote{WiFi Protected
+Access}{WPA} (which was created the result of WPA's shortcomings),
+802.1x user authentication and the use of a \footnote{Virtual Private
+Network}{VPN} to encrypt all traffic using high security ciphers.
+
+\section{Convergence}
+
+Convergence between VoIP protocols and high speed broadband and
+wireless networking has already begun. 
+\footnote{Such as the ZyXEL Prestige 2000W -
+http://www.zyxel.com/product/P2000W.php}{Products}
+offering VoIP services over \footnote{Wireless Fidelity}{WiFi}
+are becoming available.
+
+
+Telecommunication providers have already begun to use VoIP to transport
+calls between switched routing stations to lower costs, while improving
+throughput.
 
 \section{Conclusions}
 
+VoIP protocols, combined with broadband internet access and wireless
+networking has great potential, however there a still a few issues
+preventing it's widespread adoption. First off, there are too many
+competing protocols, each of which attempt to address some of the
+issues VoIP face concerning firewalls and QoS.
 
+
+Another key show-stopper is the conversion from VoIP calls to the PSTN.
+There are small providers who offer conversion from one to the other,
+but large telecommunications companies have the resources and hardware
+to supply this service much cheaper than existing operators. However,
+this is unlikely to happen soon, since it is in the interest of the
+telecommunications industry that cheap VoIP based calls are not freely
+available, in an effort to keep prices high.
+
+
+To conclude, the proliferation of VoIP amongst end users will will
+continue, but it will slow down in the coming future, until the 
+telecommunications industry decide to offer the end user VoIP 
+services. This trend will probably be comparable to the uptake of
+internet access in the 1990s which started as being expensive and
+lacking clear standards before telecommunication companies started to
+offer digital services such as DSL and ISDN to end users. 
 
 \section{Bibliography}
 

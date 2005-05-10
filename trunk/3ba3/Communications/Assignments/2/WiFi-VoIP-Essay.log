@@ -1,4 +1,4 @@
-This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2005.4.17)  9 MAY 2005 21:13
+This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2005.4.17)  10 MAY 2005 15:54
 entering extended mode
 **WiFi-VoIP-Essay.tex
 (./WiFi-VoIP-Essay.tex
@@ -65,40 +65,36 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 32.
+(Font)              <12> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 32.
+(Font)              <8> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 32.
+(Font)              <6> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
+(Font)              <5> on input line 26.
 
 [1
 
-] [2] [3] (./WiFi-VoIP-Essay.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-[]\OT1/cmr/m/n/12 Misc, ``Pub-lic Switched Tele-phone Net-work,''
+] [2] [3]
+Overfull \hbox (5.91843pt too wide) in paragraph at lines 106--114
+[]\OT1/cmr/m/n/12 One the last few years, wire-less []LAN se-cu-rity rec-om-men
+-da-tions have changed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-\OT1/cmr/m/it/12 WikiPedia - The Free En-cy-clo-pe-dia\OT1/cmr/m/n/12 , 8-5-200
-5.
+Overfull \hbox (9.49585pt too wide) in paragraph at lines 134--137
+\OT1/cmr/m/n/12 calls be-tween switched rout-ing sta-tions to lower costs, whil
+e im-prov-ing through-
  []
 
-[4]) [5] (./WiFi-VoIP-Essay.aux) )
-(\end occurred inside a group at level 2)
-
-### simple group (level 2) entered at line 92 ({)
-### simple group (level 1) entered at line 92 ({)
-### bottom level 
+[4] (./WiFi-VoIP-Essay.bbl [5]) [6] (./WiFi-VoIP-Essay.aux) ) 
 Here is how much of TeX's memory you used:
- 549 strings out of 95739
- 6365 string characters out of 1194635
- 52880 words of memory out of 1000001
- 3595 multiletter control sequences out of 10000+50000
- 9455 words of font info for 33 fonts, out of 500000 for 1000
+ 548 strings out of 95739
+ 6360 string characters out of 1194635
+ 53880 words of memory out of 1000001
+ 3594 multiletter control sequences out of 10000+50000
+ 8841 words of font info for 31 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 25i,10n,19p,192b,230s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 25i,8n,19p,192b,200s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on WiFi-VoIP-Essay.dvi (5 pages, 7780 bytes).
+Output written on WiFi-VoIP-Essay.dvi (6 pages, 11792 bytes).
