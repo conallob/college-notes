@@ -1,7 +1,7 @@
-This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2005.4.17)  9 MAY 2005 17:55
+This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2005.4.17)  10 MAY 2005 17:15
 entering extended mode
-**BusinessPlan.tex
-(./BusinessPlan.tex
+**Google.tex
+(./Google.tex
 LaTeX2e <2001/06/01>
 Babel <v3.7h> and hyphenation patterns for american, french, ngerman, nohyphena
 tion, loaded.
@@ -22,8 +22,12 @@ File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-No file BusinessPlan.aux.
-\openout1 = `BusinessPlan.aux'.
+(/usr/share/texmf/tex/latex/misc/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (./Google.aux)
+\openout1 = `Google.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -41,23 +45,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 19.
-[1
+ [1
 
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 50.
- [2] [3] [4] [5] [6] [7] [8] (./BusinessPlan.aux) ) 
+] (./Google.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+[]\OT1/cmr/m/n/12 Misc, ``Google In-vestor Re-la-tions,'' \OT1/cmr/m/it/12 Abou
+t Google\OT1/cmr/m/n/12 , 10-5-2005.
+ []
+
+[2]
+Overfull \vbox (256.2756pt too high) has occurred while \output is active []
+
+
+[3]) (./Google.aux) ) 
 Here is how much of TeX's memory you used:
- 233 strings out of 95739
- 2427 string characters out of 1194635
- 47582 words of memory out of 1000001
- 3303 multiletter control sequences out of 10000+50000
- 9155 words of font info for 32 fonts, out of 500000 for 1000
+ 256 strings out of 95739
+ 2793 string characters out of 1194635
+ 47618 words of memory out of 1000001
+ 3322 multiletter control sequences out of 10000+50000
+ 6410 words of font info for 23 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 22i,8n,19p,140b,197s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 22i,6n,19p,137b,201s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on BusinessPlan.dvi (8 pages, 14176 bytes).
+Output written on Google.dvi (3 pages, 2212 bytes).
