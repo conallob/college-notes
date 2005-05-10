@@ -1,4 +1,4 @@
-This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2005.4.17)  10 MAY 2005 17:15
+This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2005.4.17)  10 MAY 2005 18:34
 entering extended mode
 **Google.tex
 (./Google.tex
@@ -47,24 +47,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 19.
  [1
 
-] (./Google.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-[]\OT1/cmr/m/n/12 Misc, ``Google In-vestor Re-la-tions,'' \OT1/cmr/m/it/12 Abou
-t Google\OT1/cmr/m/n/12 , 10-5-2005.
+] [2] [3] [4] [5] [6] (./Google.bbl [7]
+Overfull \vbox (190.77608pt too high) has occurred while \output is active []
+
+
+[8]
+Underfull \hbox (badness 1424) in paragraph at lines 14--16
+[]\OT1/cmr/m/n/12 Misc, ``Board of Di-rec-tors,'' \OT1/cmr/m/it/12 Google In-ve
+stor Re-la-tions\OT1/cmr/m/n/12 , 10-5-2005.
  []
 
-[2]
-Overfull \vbox (256.2756pt too high) has occurred while \output is active []
-
-
-[3]) (./Google.aux) ) 
+) [9] (./Google.aux) ) 
 Here is how much of TeX's memory you used:
- 256 strings out of 95739
- 2793 string characters out of 1194635
+ 259 strings out of 95739
+ 2828 string characters out of 1194635
  47618 words of memory out of 1000001
- 3322 multiletter control sequences out of 10000+50000
- 6410 words of font info for 23 fonts, out of 500000 for 1000
+ 3325 multiletter control sequences out of 10000+50000
+ 6717 words of font info for 24 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 22i,6n,19p,137b,201s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 22i,6n,19p,137b,199s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on Google.dvi (3 pages, 2212 bytes).
+Output written on Google.dvi (9 pages, 11500 bytes).
