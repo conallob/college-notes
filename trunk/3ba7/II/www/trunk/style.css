@@ -1,0 +1,118 @@
+/* $Id: style.css 28 2005-04-25 16:52:49Z hamster $ */
+
+body {
+		  background-color: #F0F0F0;
+}
+p {
+		  color: #202020;
+		  font-size: 0.8em;
+		  font-family: sans-serif;
+		  text-align: justify;
+		  margin-right: 2%;
+		  margin-left: 2%;
+		  margin-bottom: 2%;
+		  margin-top: 2%;
+}
+p.right {
+		  color: #0A0A0A;
+		  font-size: 0.9em;
+		  font-family: sans-serif;
+		  text-align: right;
+		  margin-right: 2%;
+		  margin-left: 2%;
+		  margin-bottom: 2%;
+		  margin-top: 2%;
+}
+p.bar {
+		  color: #0A0A0A;
+		  font-size: 0.9em;
+		  font-family: sans-serif;
+		  text-align: center;
+		  margin-right: 2%;
+		  margin-left: 2%;
+		  margin-bottom: 1%;
+		  margin-top: 2%;
+}
+p.err {
+		  color: #800000;
+		  font-size: 0.8em;
+		  font-family: sans-serif;
+		  text-align: justify;
+		  margin-right: 2%;
+		  margin-left: 2%;
+		  margin-bottom: 2%;
+		  margin-top: 2%;
+}
+li.sel {
+		  color: #202020;
+		  font-size: 0.8em;
+		  font-family: sans-serif;
+		  margin-top: 1%;
+		  margin-bottom: 1%;
+		  margin-left: 2%;
+}
+a {
+		  color: #404040;
+		  font-size: 0.9em;
+		  font-family: sans-serif;
+		  text-decoration: underline
+}
+a:hover {
+		  color: #A0A0A0;
+		  font-size: 0.9em;
+		  font-family: sans-serif;
+		  text-decoration: underline		  
+}
+a.bar {
+		  color: #0A0A0A;
+		  font-size: 0.9em;
+		  font-family: sans-serif;
+		  text-decoration: underline
+}
+a.bar:hover {
+		  color: #404040;
+		  font-size: 0.9em;
+		  font-family: sans-serif;
+		  text-decoration: underline		  
+}
+h1{
+		  color: #0A0A0A;
+		  text-align: center;
+		  text-decoration: none;
+		  font-size: 1.2em;
+		  font-family: sans-serif;
+		  margin-top: 1%;
+}
+h3 {
+		  color: #0A0A0A;
+		  text-align: left;
+		  text-decoration: underline;
+		  font-size: 1.3em;
+		  font-family: sans-serif;
+		  margin-top: 5%;
+		  margin-bottom: 3%;
+		  margin-left: 2%;
+}
+div.main{
+		  background-color: #FFFFFF;
+		  color: #0A0A0A;
+		  position: absolute;
+		  top: 170px;
+		  bottom: 60px;
+		  left: 10%;
+		  width: 80%;
+		  border-style: dotted;
+		  border-width: 1px;
+}
+div.bar{
+		  position: absolute;
+		  left: 10%;
+		  width: 80%;
+		  bottom: 0%;
+}
+input.but{
+		  margin-left: 20%;
+}
+select{
+		margin-left: 2%;
+}		
