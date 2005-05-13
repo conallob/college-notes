@@ -62,9 +62,11 @@ int main(int argc, char **argv) {
 	/* send the initial A values to their correct places */
 	for(i = 0; i < row; i++) {
 		/* send to the left */
-		MPI_Issend(&A, 1, MPI_INT, h, tag, MPI_COMM_WORLD, &my_request);
+		MPI_Issend(&A, 1, MPI_INT, h, tag, MPI_COMM_WORLD, 
+							 &my_request);
 		/* recieve from the right */
-		MPI_Recv(&tmpA, 1, MPI_INT, l, tag, MPI_COMM_WORLD, NULL);
+		MPI_Recv(&tmpA, 1, MPI_INT, l, tag, MPI_COMM_WORLD, 
+							 NULL);
 		/* make sure that the send completed properly */
 		MPI_Wait(&my_request, NULL);
 		A = tmpA;
@@ -73,26 +75,33 @@ int main(int argc, char **argv) {
 	tag = 0;
 	/* send the initial B values to their correct places */
 	for (i = 0; i < column; i++) {
-		MPI_Issend(&B, 1, MPI_INT, k, tag, MPI_COMM_WORLD, &my_request);
-		MPI_Recv(&tmpB, 1, MPI_INT, j, tag, MPI_COMM_WORLD, NULL);
+		MPI_Issend(&B, 1, MPI_INT, k, tag, MPI_COMM_WORLD, 
+							 &my_request);
+		MPI_Recv(&tmpB, 1, MPI_INT, j, tag, MPI_COMM_WORLD, 
+							 NULL);
 		MPI_Wait(&my_request, NULL);
 		B = tmpB;
 	}
 
 	tag = 0;
-	/* we have the correct elements for the first multiplication */
+	/* we have the correct elements for the first 
+	 * multiplication */
 	C = A * B;
 	/* we do length - 1 more multiplications */
 	for (i = 0; i < length - 1; i++) {
 		/* shift left */
-		MPI_Issend(&A, 1, MPI_INT, h, tag, MPI_COMM_WORLD, &my_request);
-		MPI_Recv(&tmpA, 1, MPI_INT, l, tag, MPI_COMM_WORLD, NULL);
+		MPI_Issend(&A, 1, MPI_INT, h, tag, MPI_COMM_WORLD, 
+							 &my_request);
+		MPI_Recv(&tmpA, 1, MPI_INT, l, tag, MPI_COMM_WORLD, 
+							 NULL);
 		MPI_Wait(&my_request, NULL);
 		A = tmpA;
 
 		/* shift upwards */
-		MPI_Issend(&B, 1, MPI_INT, k, tag, MPI_COMM_WORLD, &my_request);
-		MPI_Recv(&tmpB, 1, MPI_INT, j, tag, MPI_COMM_WORLD, NULL);
+		MPI_Issend(&B, 1, MPI_INT, k, tag, MPI_COMM_WORLD, 
+							 &my_request);
+		MPI_Recv(&tmpB, 1, MPI_INT, j, tag, MPI_COMM_WORLD, 
+							 NULL);
 		MPI_Wait(&my_request, NULL);
 		B = tmpB;
 
