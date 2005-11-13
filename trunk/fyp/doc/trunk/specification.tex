@@ -1,0 +1,97 @@
+ % $Id: /college/trunk/3ba7/I/Notes/20050111.tex 293 2005-04-26T19:21:47.134940Z conall  $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\begin{document}
+
+\section{Client Sending a Message to Server}
+
+\xy<1cm,0cm>:
+(10,0) *=(7.5,1)!UC\txt{Message} *\frm{-} ;
+(10,-3) **\dir{-} *\dir{>},
+(10,-3)*=(7.5,1)!UC\txt{Encode into Unicode} *\frm{=} ; 
+(10,-6) **\dir{-} *\dir{>},
+(10,-6)*=(7.5,1)!UC\txt{Encrypt Message} *\frm{-} ; 
+(10,-9) **\dir{-} *\dir{>},
+(10,-9)*=(7.5,1)!UC\txt{Passed to $Server_{Sender}$} *\frm{-} ; 
+(10,-11) **\dir{=} *\dir{>},
+\endxy
+
+\begin{enumerate}
+
+\item User types messages, then hits send.
+
+\item Message is (optionally) translated into Unicode. If message is
+already in Unicode, no translation is performed.
+
+\item Message is encrypted before transport across the network
+
+\item Message is placed in the outgoing queue of the local server
+
+\end{enumerate}
+
+\section{Sending a Message between Servers}
+
+\xy<1cm,0cm>:
+(10,0) *=(7.5,1)!UC\txt{Send from $Server_{Sender}$} *\frm{-} ;
+(10,-3) **\dir{-} *\dir{>},
+(10,-3)*=(7.5,1)!UC\txt{Receive at $Server_{Receive}$} *\frm{-} , 
+(7.5,-4) ; (7.5,-6)**\dir{-} *\dir{>},
+(12.5,-6) ; (12.5,-4)**\dir{--} *\dir{>},
+(10,-6)*=(7.5,1)!UC\txt{Poll for User} *\frm{-} ; 
+(10,-9) **\dir{=} *\dir{>},
+\endxy
+
+\begin{enumerate}
+
+\item Message is queued in $Server_{Sender}$.
+
+\item $Server_{Sender}$ passes message to $Server_{Receiver}$.
+
+\item $Server_{Receiver}$ polls for recipient user. 
+
+\subitem If user is available, attempt to delivery messege. 
+
+\subitem If user is not available, pass message to local SMTP queue. 
+
+\subitem If user does not exist, destroy message and report error to $Server_{Sender}$.
+
+\end{enumerate}
+
+\section{User Receiving a Message from Server}
+
+\xy<1cm,0cm>:
+(10,2) ; (10,0) **\dir{=} *\dir{>},
+(10,0) *=(7.5,1)!UC\txt{Message Received by $Server_{Reciece}$} *\frm{-} ;
+(10,-3) **\dir{-} *\dir{>},
+(10,-3)*=(7.5,1)!UC\txt{User is Available} *\frm{-} ; 
+(10,-6) **\dir{-} *\dir{>},
+(10,-6)*=(7.5,1)!UC\txt{Decrypt Message} *\frm{-} ; 
+(10,-9) **\dir{-} *\dir{>},
+(10,-9)*=(7.5,1)!UC\txt{Decode from Unicode} *\frm{=} ; 
+(10,-12) **\dir{-} *\dir{>},
+(10,-12)*=(7.5,1)!UC\txt{Print Message to User} *\frm{-} ; 
+\endxy
+
+\begin{enumerate}
+
+\item Message is received by $Server_{Receive}$.
+
+\item User appears to be available. Attempting to deliver messege.
+
+\item Message is decrypted by recipient user. 
+
+\item Message is optionally translated from Unicode, unless user has
+declared they can accept Unicode. 
+
+\item Message is printed to user's terminal
+
+\end{enumerate}
+
+\end{document}
