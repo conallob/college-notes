@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.10.26)  24 NOV 2005 15:30
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.10.26)  24 NOV 2005 18:11
 entering extended mode
 **Mainframes.tex
 (./Mainframes.tex
@@ -40,13 +40,23 @@ LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 16.
+(Font)              <14.4> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 16.
+(Font)              <7> on input line 18.
+ [1
 
-(./Mainframes.bbl [1
+]
+Overfull \hbox (4.25783pt too wide) in paragraph at lines 67--67
+[]\OT1/cmr/bx/n/17.28 The Fall and Res-ur-rec-tion of the Main-frame 
+ []
 
-]) [2] (./Mainframes.aux) ) 
+
+Overfull \hbox (8.2167pt too wide) in paragraph at lines 69--76
+\OT1/cmr/m/n/12 Traditionally, Main-frames were ac-cessed us-ing monochrome, te
+xt based "Dumb
+ []
+
+[2] (./Mainframes.bbl) [3] (./Mainframes.aux) ) 
 Here is how much of TeX's memory you used:
  221 strings out of 94501
  2376 string characters out of 1176136
@@ -54,6 +64,6 @@ Here is how much of TeX's memory you used:
  3468 multiletter control sequences out of 10000+50000
  6103 words of font info for 22 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
- 22i,6n,19p,134b,206s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 22i,6n,19p,142b,197s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on Mainframes.dvi (2 pages, 2380 bytes).
+Output written on Mainframes.dvi (3 pages, 5884 bytes).
