@@ -1,0 +1,316 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{pst-all}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\newcommand{\nonterminal}[1]{$\langle #1 \rangle$}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $28^{th}$ October 2004}
+
+\maketitle
+
+\section{Pushdown Machines (Continued)}
+
+2 States
+
+\begin{tabular}{r|l|l|l|}
+\hline
+		&		$0$						&			$1$	&	$\dashv$	\\
+\hline
+$X$	&	Pop State($2$), Advance	& Push($X$), State($2$), Advance	& Reject \\
+\hline
+$\triangledown$	&	Reject	& Push($X$), State($1$), Advance	& Reject \\
+\hline
+\end{tabular}
+
+State 1. No $1$s. $N = 0$.
+
+\begin{tabular}{r|l|l|l|}
+\hline
+		&		$0$						&			$1$	&	$\dashv$	\\
+\hline
+$X$	&	Pop State($2$), Advance	& Reject	& Reject 		\\
+\hline
+$\triangledown$	&	Reject	& Reject & Accept			\\
+\hline
+\end{tabular}
+
+State 2. % Missing Label
+
+
+Starting State: $\triangledown$
+
+Stack Moves:
+
+\begin{tabular}{rcl}
+Stack								&	State		&	Input				\\
+$\triangledown$			&	$[s1]$	&	$1100\dashv$	\\	
+$\triangledown X$			&	$[s1]$	&	$100\dashv$	\\	
+$\triangledown X X$		&	$[s1]$	&	$00\dashv$	\\	
+$\triangledown X$			&	$[s2]$	&	$0\dashv$	\\	
+$\triangledown$			&	$[s2]$	&	$\dashv$	\\	
+\end{tabular}
+
+$\Rightarrow$ ACCEPT
+
+
+Extended Stack Operation: \verb!REPLACE!
+
+\verb!REPLACE(ABC)! $\equiv$ \verb!pop,push(A),push(B),push(C)!
+
+
+A different machine to do the same job:
+
+Initialise stack to
+
+\begin{tabular}{|c|}
+		\\
+\hspace{20mm}	\\
+		\\
+\hline
+$Y$	\\
+\hline
+$X$	\\
+\hline
+$\triangledown$	\\
+\hline
+\end{tabular}
+
+Every time we see a $1$ at head of input, \verb!replace(X,Y)! and
+advance input
+
+
+\begin{tabular}{r|l|l|l|}
+\hline
+		&		$1$		&			$0$			&	$\dashv$				\\
+\hline
+$X$	&	Reject		&	Pop, Advance 		& Reject 				\\
+\hline
+$Y$	&	Replace($X$,$Y$),Advance	&	Pop,Retain		& Reject \\
+\hline
+$\triangledown$	&	Reject		& Reject 			& Accept	\\
+\hline
+\end{tabular}
+
+
+Starting State: $\triangledown Y$.
+
+Stack Movie:
+
+\begin{tabular}{rcl}
+Stack								&		&	Input				\\
+$\triangledown Y$			&		&	$1100\dashv$	\\	
+$\triangledown X Y$		&		&	$100\dashv$	\\	
+$\triangledown X X Y$	&		&	$00\dashv$	\\	
+$\triangledown X X$		&		&	$0\dashv$	\\	
+$\triangledown X$			&		&	$\dashv$	\\	
+$\triangledown$			&		&	$\dashv$	\\	
+\end{tabular}
+
+$\Rightarrow$ ACCEPT
+
+Slower than the other machine, but smaller.
+
+
+There is in general no reduced (minimal) push-down machine.
+
+\verb!OUT(X)! $\to$	Output Symbol $X$
+
+A push down translator is a pushdown machine that produces an output.
+
+Eg:
+
+Design a machine to translate an arbitary sequence of ones and zeros
+into the sequence $0^{N}1^{1}$ where $M, N$ are the number of zeros and
+ones in their original input sequence.
+
+$010111 \Rightarrow 00111$
+
+\begin{tabular}{|c|}
+		\\
+\hspace{20mm}	\\
+		\\
+\hline
+$X$	\\
+\hline
+$Y$	\\
+\hline
+$X$	\\
+\hline
+$\triangledown$	\\
+\hline
+\end{tabular}
+
+
+\begin{tabular}{r|l|l|l|}
+\hline
+		&		$0$		&			$1$			&	$\dashv$				\\
+\hline
+$X$	& Out($0$),Advance	&	Push($X$), Advance 		& Pop,Out($1$),Retain \\
+\hline
+$\triangledown$	&	Out($0$),Advance		& Push($X$),Advance	& Accept	\\
+\hline
+\end{tabular}
+
+Starting State: $\triangledown$
+
+
+Stack Movie:
+
+\begin{tabular}{rcl}
+Stack								&				&	Input				\\
+$\triangledown$			& out($0$)	&	$01011\dashv$	\\	
+$\triangledown$			&				&	$1011\dashv$	\\	
+$\triangledown X$			& out($0$)	&	$01\dashv$		\\	
+$\triangledown X$			&				&	$11\dashv$		\\	
+$\triangledown X X$		&				&	$1\dashv$		\\	
+$\triangledown X X X$	& out($1$)	&	$\dashv$			\\	
+$\triangledown X X$		& out($1$)	&	$\dashv$			\\	
+$\triangledown X$			& out($1$)	&	$\dashv$			\\	
+$\triangledown$			&				&	$\dashv$			\\	
+\end{tabular}
+
+$\Rightarrow$ Accept $\Rightarrow 01011 \Rightarrow 00111$
+
+\section*{Context Free Grammars}
+
+\begin{enumerate}
+
+\item A finite set of terminal symbols
+
+\item A finite set of non-terminal symbols. (Disjoint from the set of
+terminal symbols)
+
+\item A finite set of \textbf{productions} with the form $\langle A
+\rangle \to X$, where $A$ is a non-terminal symbol and $A$ is a sequence
+(possibly the null sequence) of terminal and non-terminal symbols.
+
+\item A starrting non-terminal symbol.
+
+\end{enumerate}
+
+\subsection*{Productions}
+
+\begin{enumerate}
+
+\item $\langle A \rangle \to a \langle A \rangle \langle A \rangle
+\langle B \rangle C$ (starting non-terminal by convention). $\langle A
+\rangle$ and $\langle B \rangle$ are non-terminal symbols, $a$ and $C$
+are terminal symbols.
+
+\item $\langle A \rangle \to \langle A \rangle b$
+
+\item $\langle A \rangle \to \epsilon$ (Epsilon - the null sequence)
+
+\item $\langle B \rangle \to b$
+
+\item $\langle B \rangle \to \epsilon$
+
+\end{enumerate}
+
+A language is a set of all sequences of terminal symbols that can be
+derived from the starting non-terminal of a given context free grammar.
+
+\subsection*{Derivations}
+
+\begin{tabular}{lcl|l}
+$\langle A \rangle$	&	$\stackrel{1}{\Rightarrow}$	&	$a \langle A \rangle
+\langle B \rangle c$	&	$\langle A \rangle \Rightarrow abc$ \\
+							&	$\stackrel{2}{\Rightarrow}$	&	$a \langle A \rangle
+b \langle B \rangle c$	&	 \\	
+							&	$\stackrel{3}{\Rightarrow}$	&	$a b \langle B \rangle c$	&	 \\
+							&	$\stackrel{5}{\Rightarrow}$	&	$a b c $	&	\\
+\end{tabular}
+
+This is called \textbf{left most derivation}
+
+$\Rightarrow : $ Derives in one step \\
+$\stackrel{*}{\Rightarrow} : $ Derives in $0$ or more steps \\
+$\stackrel{+}{\Rightarrow} : $ Derives in $1$ or more steps \\
+$\stackrel{n}{\Rightarrow} : $ Derives using production $n$ \\
+
+\begin{eqnarray*}
+\langle A \rangle &	\stackrel{1}{\Rightarrow}	&	a \langle A \rangle \langle B \rangle C \\
+						&	\stackrel{2}{\Rightarrow}	&	a \langle B \rangle c \\
+						&	\stackrel{4}{\Rightarrow}	&	abc	\\
+\end{eqnarray*}
+
+Because the string $abc$ can be derived in two different ways, the
+grammar is said to be \textbf{ambiguous}.
+
+Note: Ambiguity is a \emph{property of a grammar}, \textbf{not} a
+language.
+
+Corresponding to each derivation, it is possible to draw an assocciated
+derivation tree.
+
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{A}}}{
+	\TR{$a$}
+	\pstree{\TR{\nonterminal{A}}}{
+		\pstree{\TR{\nonterminal{A}}}{
+				\TR{$e$}
+				\Tn
+		}
+	\TR{$b$}
+	}
+	\pstree{\TR{\nonterminal{B}}}{
+		\Tn
+		\TR{$\epsilon$}
+	}
+	\TR{$c$}
+}
+
+\end{figure}
+
+
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{A}}}{
+	\TR{$a$}
+	\pstree{\TR{\nonterminal{A}}}{
+		\TR{$e$}
+		\Tn
+	}
+	\pstree{\TR{\nonterminal{B}}}{
+		\Tn
+		\TR{$b$}
+	}
+	\TR{$c$}
+}
+
+\end{figure}
+
+A derivation tree hides the order of the deviation.
+
+\begin{eqnarray*}
+\langle A \rangle &	\Rightarrow	&	a \langle A \rangle \langle B \rangle C \\
+						&	\Rightarrow	&	a \langle A \rangle b c \\
+						&	\Rightarrow	&	abc	\\
+\end{eqnarray*}
+
+Right most derivation.
+
+
+Corresponding to every string, there is one or more something
+derivations.
+
+Corresponding to every derivation tree, there is a unique left most and
+a unique right most derivation.
+
+When each string derivable from the starting non-terminal of a given
+context free grammar has only one derivation tree, the grammar is said
+to be \textbf{unambiguous}.
+
+\end{document}

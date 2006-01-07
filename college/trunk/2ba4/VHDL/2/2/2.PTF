@@ -1,0 +1,8 @@
+[2]
+Design Entry Utilities=true
+[car]
+Design Entry Utilities=true
+User Constraints=true
+Synthesize=true
+[car_tb.tbw]
+ModelSim Simulator=true

@@ -1,0 +1,10 @@
+[Inputs]
+IL
+CLK
+=DATA_IN[15:0]=
+[Outputs]
+=DR[2:0]=
+=SA[2:0]=
+=SB[2:0]=
+=OPCODE_OUT[7:0]=
+[BiDir]

@@ -1,0 +1,223 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.1.25)  21 FEB 2005 00:42
+**20050131.tex
+(./20050131.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(/sw/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/sw/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/sw/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/sw/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/sw/share/texmf/tex/latex/misc/ulem.sty
+\UL@box=\box26
+\UL@hyphenbox=\box27
+\UL@skip=\skip43
+\UL@hook=\toks15
+\UL@pe=\count87
+\UL@pixel=\dimen103
+\ULC@box=\box28
+Package: ulem 2000/05/26
+\ULdepth=\dimen104
+)
+(/sw/share/texmf/tex/generic/xypic/xypic.sty
+(/sw/share/texmf/tex/generic/xypic/xy.sty
+(/sw/share/texmf/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes, docmode,
+(/sw/share/texmf/tex/generic/xypic/xyrecat.tex)
+(/sw/share/texmf/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.7 <1999/02/16>
+ Copyright (c) 1991-1998 by Kristoffer H. Rose <krisrose@ens-lyon.fr>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen105
+\Y@c=\dimen106
+\U@c=\dimen107
+\D@c=\dimen108
+\L@c=\dimen109
+\R@c=\dimen110
+\Edge@c=\toks16
+\X@p=\dimen111
+\Y@p=\dimen112
+\U@p=\dimen113
+\D@p=\dimen114
+\L@p=\dimen115
+\R@p=\dimen116
+\Edge@p=\toks17
+\X@origin=\dimen117
+\Y@origin=\dimen118
+\X@xbase=\dimen119
+\Y@xbase=\dimen120
+\X@ybase=\dimen121
+\Y@ybase=\dimen122
+\X@min=\dimen123
+\Y@min=\dimen124
+\X@max=\dimen125
+\Y@max=\dimen126
+\lastobjectbox@=\box29
+\zerodotbox@=\box30
+\almostz@=\dimen127
+ direction,
+\d@X=\dimen128
+\d@Y=\dimen129
+\K@=\count88
+\KK@=\count89
+\Direction=\count90
+\K@dXdY=\dimen130
+\K@dYdX=\dimen131
+\xyread@=\read1
+\xywrite@=\write3
+\csp@=\count91
+\quotPTK@=\dimen132
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks18
+\connectobjectbox@@=\box31
+ objects,
+\styletoks@=\toks19
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+
+LaTeX Warning: You have requested package `xypic',
+               but the package provides `xy'.
+
+Package: xy 1999/02/16 Xy-pic version 3.7
+(/sw/share/texmf/tex/generic/xypic/xyall.tex
+ Xy-pic option: All features v.3.3
+(/sw/share/texmf/tex/generic/xypic/xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.7 curve,
+\crv@cnt@=\count92
+\crvpts@=\toks20
+\splinebox@=\box32
+\splineval@=\dimen133
+\splinedepth@=\dimen134
+\splinetol@=\dimen135
+\splinelength@=\dimen136
+ circles,
+\L@=\dimen137
+ loaded)
+(/sw/share/texmf/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.7 loaded)
+(/sw/share/texmf/tex/generic/xypic/xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.3
+(/sw/share/texmf/tex/generic/xypic/xytips.tex
+ Xy-pic option: More Tips extension v.3.3 loaded) loaded)
+(/sw/share/texmf/tex/generic/xypic/xyline.tex
+ Xy-pic option: Line styles extension v.3.6
+\xylinethick@=\dimen138
+ loaded)
+(/sw/share/texmf/tex/generic/xypic/xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.3 loaded)
+(/sw/share/texmf/tex/generic/xypic/xycolor.tex
+ Xy-pic option: Colour extension v.3.3 loaded)
+(/sw/share/texmf/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.4
+\Row=\count93
+\Col=\count94
+\queue@=\toks21
+\queue@@=\toks22
+\qcount@=\count95
+\qcount@@=\count96
+\matrixsize@=\count97
+ loaded)
+(/sw/share/texmf/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
+(/sw/share/texmf/tex/generic/xypic/xygraph.tex
+ Xy-pic option: Graph feature v.3.7 loaded) loaded))
+(/sw/share/texmf/tex/generic/xypic/xyv2.tex
+ Xy-pic option: Version 2 Compatibility v.3.4
+
+Xy-pic Warning: `\stop' redefined.
+
+
+Xy-pic Warning: `\uline' redefined [20050131:233].
+
+
+Xy-pic Warning: `\uuline' redefined [20050131:233].
+
+loaded))
+No file 20050131.aux.
+\openout1 = `20050131.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+(/sw/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+
+(/sw/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+
+LaTeX Warning: No \author given.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
+
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4] (./20050131.aux) ) 
+Here is how much of TeX's memory you used:
+ 3088 strings out of 95847
+ 34591 string characters out of 1196009
+ 178597 words of memory out of 1000001
+ 6010 multiletter control sequences out of 10000+50000
+ 14463 words of font info for 60 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 27i,8n,24p,201b,754s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 20050131.dvi (4 pages, 37488 bytes).

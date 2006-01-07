@@ -1,0 +1,139 @@
+ % $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\inherit}[1]{\mbox{{\color{NavyBlue}{$#1$}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\	$12^{th}$ January 2005}
+
+\maketitle
+
+\section*{L Attributed Grammars}
+
+\begin{eqnarray*}
+\nonterminal{A}_{\inherit{i_{1}}, \synth{s_{2}}, \synth{s_{3}}}	&	\to	&	\nonterminal{B}_{\inherit{i_{4}}} \nonterminal{C}_{\synth{s_{5}}} \nonterminal{D}_{\inherit{i_{6}}, \synth{s_{7}}} \nonterminal{E}_{\synth{s_{8}}}	\\
+\inherit{i_{4}}	&	\gets	&	f(\inherit{i_{1}})	\\
+\inherit{i_{6}}	&	\gets	&	f(\inherit{i_{1}}, \inherit{i_{4}}, \synth{s_{5}})	\\
+\nonterminal{A}	&	\to	&	\nonterminal{B} \nonterminal{C}
+\end{eqnarray*}
+
+(i)   Evaluate inherited attributes of $\nonterminal{A}$.
+(ii)  Evaluate inherited attributes of $\nonterminal{A}$.
+(iii) Evaluate synthesized attributes of $\nonterminal{B}$.
+(iv)  Evaluate inherited attributes of $\nonterminal{C}$.
+(v)   Evaluate synthesized attributes of $\nonterminal{C}$.
+(vi)  Evaluate synthesized attributes of $\nonterminal{A}$.
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{S}_{\inherit{p}}	&	\to	&	a_{\inherit{q}} \nonterminal{A}_{r} \actionsym{X}_{\synth{s, t}} \nonterminal{S}_{\synth{u}}
+\end{eqnarray}
+
+\begin{eqnarray*}
+\synth{p}	&	\gets	&	\inherit{s} + \inherit{t}	\\
+\synth{r}	&	\gets	&	\inherit{q}	\\
+\synth{t}	&	\gets	&	\inherit{s} - 5	\\
+\synth{u}	&	\gets	&	\inherit{q} + \inherit{t}
+\end{eqnarray*}
+
+\begin{eqnarray}
+\setcounter{equation}{2}
+\nonterminal{S}_{\inherit{p}}	&	\to	&	b \actionsym{Z}_{\synth{q}}
+\end{eqnarray}
+
+\begin{eqnarray*}
+\synth{q}	&	\to	&	\inherit{p}
+\end{eqnarray*}
+
+\begin{eqnarray}
+\setcounter{equation}{3}
+\nonterminal{A}_{\synth{p}}	&	\to	&	c_{\inherit{q}} \actionsym{Y}_{\synth{r}} \nonterminal{A}_{\inherit{s}} \nonterminal{S}_{\synth{t}} \actionsym{V}_{w} b
+\end{eqnarray}
+
+\begin{eqnarray*}
+\synth{p}	&	\gets		&	\inherit{s} + \inherit{t}	\\
+\synth{r}	&	\gets		&	\inherit{q}	\\
+\synth{t}	&	\gets		&	\inherit{s} - 5	\\
+\synth{u}	&	\gets		&	\inherit{q} + \inherit{t}
+\end{eqnarray*}
+
+\begin{eqnarray}
+\setcounter{equation}{4}
+\nonterminal{A}_{\synth{p}}	&	\to	&	\actionsym{W}
+\end{eqnarray}
+
+
+\begin{eqnarray*}
+\synth{q}	&	\gets		&	\inherit{p}
+\end{eqnarray*}
+
+Where $\nonterminal{S}_{\inherit{p}}$ - inherited $\inherit{p}$	\\
+\indent $\nonterminal{A}_{\synth{p}}$ - synthesized $\synth{p}$
+\indent all action symbols attributes and inherited.
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{S}_{p}	&	\to	&	a_{q} \nonterminal{A}_{r} \nonterminal{X}_{q, p} \nonterminal{S}_{r}
+\end{eqnarray}
+
+\begin{eqnarray*}
+\synth{p}	&	\gets	&	\inherit{s} + \inherit{t}	\\
+\synth{r}	&	\gets	&	\inherit{q}	\\
+\synth{t}	&	\gets	&	\inherit{s} - 5	\\
+\synth{u}	&	\gets	&	\inherit{q} + \inherit{t}
+\end{eqnarray*}
+
+\begin{eqnarray}
+\setcounter{equation}{2}
+\nonterminal{S}_{p}	&	\to	&	b \actionsym{Z}_{p}
+\end{eqnarray}
+
+\begin{eqnarray*}
+\synth{q}	&	\to	&	\inherit{p}
+\end{eqnarray*}
+
+\begin{eqnarray}
+\setcounter{equation}{3}
+\nonterminal{A}_{p}	&	\to	&	c_{q} \nonterminal{Y}_{q} \nonterminal{A}_{r} \nonterminal{S}_{s} \actionsym{V}_{t} b
+\end{eqnarray}
+
+\begin{eqnarray*}
+\synth{s}	&	\to	&	\inherit{r} - \inherit{5}	\\
+\synth{t}	&	\to	&	\inherit{q}	+ \inherit{q}	\\
+\synth{p}	&	\to	&	\inherit{r} + \inherit{s}
+\end{eqnarray*}
+
+\begin{eqnarray}
+\setcounter{equation}{4}
+\nonterminal{A}_{p}	&	\to	&	\actionsym{W}
+\end{eqnarray}
+
+\begin{eqnarray*}
+\synth{p}	&	\to	&	\inherit{2}
+\end{eqnarray*}
+
+\begin{verbatim}
+A(r);
+
+S(s);
+
+S(149);
+\end{verbatim}
+
+\end{document}

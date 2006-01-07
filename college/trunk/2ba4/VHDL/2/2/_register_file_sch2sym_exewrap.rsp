@@ -1,0 +1,1 @@
+-tapkeep -show normal -mode pipe -command sch2sym -refsym=register_file -family=virtex2 register_file.sch register_file.sym

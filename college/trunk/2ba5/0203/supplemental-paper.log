@@ -1,0 +1,64 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.4.30)  30 MAY 2004 15:24
+**supplemental-paper.tex
+(./supplemental-paper.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, british, french, ngerman, 
+latin, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./supplemental-paper.aux)
+\openout1 = `supplemental-paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 12.
+
+
+LaTeX Warning: No \author given.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+[1
+
+] [2] [3] [4] [5] (./supplemental-paper.aux) ) 
+Here is how much of TeX's memory you used:
+ 234 strings out of 95835
+ 2511 string characters out of 1195748
+ 47613 words of memory out of 1000001
+ 3241 multiletter control sequences out of 10000+50000
+ 9155 words of font info for 32 fonts, out of 500000 for 1000
+ 22 hyphenation exceptions out of 1000
+ 22i,8n,19p,124b,213s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on supplemental-paper.dvi (5 pages, 6540 bytes).

@@ -1,0 +1,39 @@
+% $Id: 20041108.tex 353 2004-11-12 00:21:25Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA4: Computer Architecture II \\ Lecture Notes \\ $15^{th}$ November 2004}
+
+\maketitle
+
+\section*{MMU Operation}
+
+Primary page table entry contains a pointer to a secondary page table
+(page aligned).
+
+Pre process, one primary and multiple secondary page tables
+
+Secondary page tables created on demand
+
+Notice size of pagefiles is $4k$ - the page file itself.
+
+
+When MMU access a page table entry it checks the Valid bit:
+
+\indent if $V = 0$ and accessing primary page table entry, then no
+physical memory allocated for secondary page table.
+
+\indent if $V = 0$ and accessing secondary page entry, then no physical
+memory allocated for referenced page.
+
+
+In both cases, a \emph{"page fault"} occurs - the instruction is aborted
+and the CPU is interuppted.
+
+\end{document}

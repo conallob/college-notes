@@ -1,0 +1,58 @@
+# Reading c:/progra~1/fpgadv54/modeltech/tcl/vsim/pref.tcl 
+# //  ModelSim SE Viewer 5.6f Jan 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# do splitter_tb.fdo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity splitter
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture behavioral of splitter
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading entity splitter
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# Model Technology ModelSim SE vcom 5.6f Compiler 2003.01 Jan 13 2003
+# -- Loading package standard
+# -- Compiling architecture testbench_arch of testbench
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading entity testbench
+# -- Loading entity splitter
+# -- Compiling configuration splitter_cfg
+# -- Loading entity testbench
+# -- Loading architecture testbench_arch of testbench
+# vsim -L xilinxcorelib -lib work -t 1ps testbench 
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.standard
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_1164(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_arith(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../std.textio(body)
+# Loading c:/progra~1/fpgadv54/modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.testbench(testbench_arch)
+# Loading work.splitter(behavioral)
+# .wave
+# .structure
+# .signals
+destroy .wave

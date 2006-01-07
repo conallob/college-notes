@@ -1,0 +1,4 @@
+-proj "f:\2ba4\vhdl\2\2"
+-name "mux9to1_tb.tbw"
+-file "mux_9to1_16bit.vhd"
+-entity "mux_9to1_16bit"

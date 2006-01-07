@@ -1,0 +1,75 @@
+% $Id: 20041020.tex 338 2004-10-27 12:48:06Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+%\lstset{language=prolog}
+
+\begin{document}
+
+\title{Course 3BA2: Artificial Intellegence \\ Tutorial Solution\\ $27^{th}$ October 2004}
+
+\maketitle
+
+% Diagram
+
+% Diagram
+
+Paths may not be bidirectional. Paths may also have an anocial cost
+
+\begin{verbatim}
+
+door(outside,a).
+door(a,b).
+door(b,c).
+door(c,d).
+door(d,a).
+door(d,e).
+
+
+path(X,Y) :- door(X,Y).
+path(X,Y) :- door(Y,X).
+path(X,Y) :- door(X,Z),door(Z,Y).
+path(X,Y) :- door(Z,X),door(Z,Y).
+
+\end{verbatim}
+
+While logically correct, in practice this may enter a loop. Also, it
+does not record the path. How do we do this?
+
+\begin{verbatim}
+
+path(X,Y,V,[Y|V]) :- door(X,Y);door(Y,X).
+path(X,Y,V,R) :- door(X,Z);door(Z,X)),\+ member(Z,V),path(Z,Y,[Z|V],R).
+
+\end{verbatim}
+
+This will only generate loop that can't include loops.
+
+\verb!{\+}\verb! is the prefix  operator for \textbf{NOT}.
+
+\verb!{+}\verb! is "Not possible to prove that the follwoing statement
+is true".
+
+\begin{verbatim}
+
+quicksort([],[]).
+quicksort([P|R],S) :- 
+                     partition(R,P,L,Ge),
+                     quicksort(L,Ls),
+                     quicksort(Ge,Ges),
+                     append(Ls,[P|Ges],S).
+
+append([],_,[],[]).
+partition([H|B],P,[H|L],R) :-
+                              H @< P,
+                              partition(B,P,L,R),
+                              partition(B,P,L,R).
+
+\end{verbatim}
+
+
+\end{document}

@@ -1,0 +1,8 @@
+[Inputs]
+C0
+=B[15:0]=
+=A[15:0]=
+[Outputs]
+C4
+=S[15:0]=
+[BiDir]

@@ -1,0 +1,5 @@
+MODULE half_adder
+MODULE full_adder
+   SUBMODULE half_adder
+MODULE adder_4
+   SUBMODULE full_adder

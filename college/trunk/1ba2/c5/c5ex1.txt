@@ -1,0 +1,11 @@
+Chapter 5 Exercise 1
+
+yes && (no || maybe) is true
+
+no || (!yes && maybe) is false
+
+yes || no || maybe is true
+
+no || yes && maybe is true
+
+(!no && yes) || (!no && maybe) is true

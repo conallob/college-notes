@@ -1,0 +1,117 @@
+# ProjNav -> New -> Test Bench
+__projnav/createTB.err
+# ProjNav -> New -> Test Bench
+__projnav/createTB.err
+# ProjNav -> New Source -> TBW
+f:\1b\__projnav\hb_cmds
+# Bencher Waveform : PDCL (jhdparse)
+# ModelSim : Simulate Behavioral VHDL Model
+barrle_shifter_tb.fdo
+# ModelSim : Simulate Behavioral VHDL Model
+vsim.wlf
+# Bencher Waveform : PDCL (jhdparse)
+# Bencher Waveform : PDCL (jhdparse)
+# ModelSim : Generate Expected Simulation Results
+barrle_shifter_tb.ado
+barrle_shifter_tb.ano
+# ModelSim : Generate Expected Simulation Results
+# Bencher Waveform : PDCL (jhdparse)
+# Update Bencher Waveform
+__projnav/updateTBW_tcl.rsp
+barrle_shifter_tb.vhw
+barrle_shifter_tb.ano
+barrle_shifter_tb.tfw
+# VHDL : Create Schematic Symbol
+__projnav/tb.rsp
+barrel_shifter_32bit.spl
+__projnav/vhd2spl.err
+# Update Bencher Waveform
+__projnav/updateTBW_tcl.rsp
+barrle_shifter_tb.vhw
+barrle_shifter_tb.ano
+barrle_shifter_tb.tfw
+# ModelSim : Simulate Behavioral VHDL Model
+barrle_shifter_tb.fdo
+# ModelSim : Simulate Behavioral VHDL Model
+vsim.wlf
+# Bencher Waveform : PDCL (jhdparse)
+# ModelSim : Simulate Behavioral VHDL Model
+barrle_shifter_tb.fdo
+# ModelSim : Simulate Behavioral VHDL Model
+vsim.wlf
+# Bencher Waveform : PDCL (jhdparse)
+# ProjNav -> New Source -> TBW
+F:\1b\__projnav\hb_cmds
+# Bencher Waveform : PDCL (jhdparse)
+# Bencher Waveform : PDCL (jhdparse)
+# Update Bencher Waveform
+__projnav/updateTBW_tcl.rsp
+barrel_shifter_tb.vhw
+barrel_shifter_tb.ano
+barrel_shifter_tb.tfw
+# ModelSim : Simulate Behavioral VHDL Model
+barrel_shifter_tb.fdo
+# ModelSim : Simulate Behavioral VHDL Model
+vsim.wlf
+# Bencher Waveform : PDCL (jhdparse)
+# ProjNav -> New Source -> TBW
+F:\1b\__projnav\hb_cmds
+# Bencher Waveform : PDCL (jhdparse)
+# Bencher Waveform : PDCL (jhdparse)
+# Bencher Waveform : PDCL (jhdparse)
+# Bencher Waveform : PDCL (jhdparse)
+# Bencher Waveform : PDCL (jhdparse)
+# Update Bencher Waveform
+__projnav/updateTBW_tcl.rsp
+float_adder_tb.vhw
+float_adder_tb.ano
+float_adder_tb.tfw
+# Update Bencher Waveform
+__projnav/updateTBW_tcl.rsp
+float_adder_tb.vhw
+float_adder_tb.ano
+float_adder_tb.tfw
+# Update Bencher Waveform
+__projnav/updateTBW_tcl.rsp
+float_adder_tb.vhw
+float_adder_tb.ano
+float_adder_tb.tfw
+# ModelSim : Simulate Behavioral VHDL Model
+float_adder_tb.fdo
+# ModelSim : Simulate Behavioral VHDL Model
+vsim.wlf
+# Update Bencher Waveform
+__projnav/updateTBW_tcl.rsp
+float_adder_tb.vhw
+float_adder_tb.ano
+float_adder_tb.tfw
+# ModelSim : Simulate Behavioral VHDL Model
+float_adder_tb.fdo
+# ModelSim : Simulate Behavioral VHDL Model
+vsim.wlf
+# Bencher Waveform : PDCL (jhdparse)
+# ModelSim : Simulate Behavioral VHDL Model
+float_adder_tb.fdo
+# ModelSim : Simulate Behavioral VHDL Model
+vsim.wlf
+# Bencher Waveform : PDCL (jhdparse)
+# ProjNav -> New Source -> TBW
+F:\1b\__projnav\hb_cmds
+# Bencher Waveform : PDCL (jhdparse)
+# Bencher Waveform : PDCL (jhdparse)
+# VHDL : Create Schematic Symbol
+__projnav/tb.rsp
+float_exp_adder.spl
+__projnav/vhd2spl.err
+# VHDL : Create Schematic Symbol
+__projnav/tb.rsp
+float_exp_adder.spl
+__projnav/vhd2spl.err
+# VHDL : Create Schematic Symbol
+__projnav/tb.rsp
+float_exp_adder.spl
+__projnav/vhd2spl.err
+# VHDL : Create Schematic Symbol
+__projnav/tb.rsp
+float_exp_adder.spl
+__projnav/vhd2spl.err

@@ -1,0 +1,125 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[all]{xypic}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $12^{th}$ October 2004}
+
+\maketitle
+
+David Abrahamson
+
+Semester 1 - Compiler Design
+
+david@cs.tcd.ie
+
+6081716
+
+ORI F11
+
+2 Exercises - $20\%$ of $\frac{1}{2}$ 3BA7
+
+No requirement to pass.
+
+1 or more exam questions on exam based upon coursework.
+
+
+\section{Language Processors}
+
+Piece of software which produces an output language from an input
+language.
+
+
+Interpreter - Source Language $\to$ Execution
+
+Translater -  Source Language $\to$ Object Language
+
+(i) Assemblers
+	
+	- Low Level Language
+	  1 to 1 translations
+
+(ii) Compiler
+	
+	- High Level Languages
+	  1 to many translations
+
+\begin{figure}[ht]
+
+\vspace{10mm}
+
+\xy <1cm,0cm>:
+0 *=(3,2)\frm{-}  ="A" ,
+(4,0) *=(3,2)\frm{-} ="B" ,
+(8,0) *=(3,2)\frm{-} ="C" ,
+(4,-3) *=(3,2)\frm{-} ="D" ,
+\POS (0,2) *!DC={\txt{Source Code}} \ar ; "A" !UC ,
+\POS "C" !UC \ar ; +(0,1) *!DC={\txt{Object Code}} ,
+\POS "A" !CR \ar ; "B" !CL , 
+\POS "B" !CR \ar ; "C" !CL , 
+\POS "A" !DC *\dir{<} ; (0,-3) **\dir{-} ; "D" !CL **\dir{-} *\dir{>} , 
+\POS "B" !DC \ar@{<->} ; "D" !UC , 
+\POS "C" !DC *\dir{<} ; (8,-3) **\dir{-} ; "D" !CR **\dir{-} *\dir{>} , 
+\POS "A" *--\txt{Lexical \\ Analyser} ,
+\POS "B" *--\txt{Syntax \\ Analyser} ,
+\POS "C" *--\txt{Code \\ Generator} ,
+\POS "D" *--\txt{Symbol Table,\\ etc...} ,
+\endxy
+
+\caption{Simple model of compiler}
+
+\end{figure}
+
+
+
+\section{Lexical Analysis}
+
+Splits input into a sequence of lexical tokens
+
+(Class),(Class,Variable),(Class,Value)
+
+
+eg
+
+\begin{verbatim}
+
+	if x > y then
+		A := B + C * D;
+
+\end{verbatim}
+
+Lexical Element $\equiv$ Lexem
+
+\verb!(IF) (IDENT,!$\uparrow$\verb!x) (RELOP,GT) (IDENT,!$\uparrow$\verb!y) (THEN) ...!
+
+\section{Syntax Analysis}
+
+Verifies that the sequence of lecical tokens is syntactically correct
+and translates them into a sequence of atoms that more closely refect
+the order of execution at runtime.
+
+
+Input to syntax analyser:
+
+
+\verb!(IDENT,!$\uparrow$\verb! A), (ASSIGN), (IDENT,!$\uparrow$\verb!B), (OP, PLUS),! \\
+\verb!(IDENT,!$\uparrow$\verb!C), (OP, TIMES), (IDENT,!$\uparrow$\verb!D)!
+
+\begin{verbatim}
+A := B + C * D
+\end{verbatim}
+
+Output:
+
+\verb!MULT(!$\uparrow$\verb!C,!$\uparrow$\verb!D,!$\uparrow TR_{1}$\verb!)! \\
+\verb!ADD(!$\uparrow$\verb!B,!$\uparrow TR_{1}$, $\uparrow TR_{2}$\verb!)! \\
+\verb!STORE(!$\uparrow$\verb!A,!$\uparrow$ $TR_{2}$\verb!)!
+
+
+\end{document}

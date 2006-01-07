@@ -1,0 +1,9 @@
+[Inputs]
+A
+B
+C
+D
+=SEL[1:0]=
+[Outputs]
+MUX_OUT
+[BiDir]

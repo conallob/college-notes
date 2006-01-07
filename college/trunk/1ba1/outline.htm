@@ -1,0 +1,328 @@
+<HTML>
+<TITLE>
+Linear algebra outline
+</TITLE>
+<BODY BGCOLOR="white">
+<FONT size = +2>
+<H1>
+Linear algebra outline
+</H1>
+
+<H1>Table of Contents</H1><P>
+<A HREF="#twodim">
+2-dimensional coordinate geometry, points, scalars, and vectors </A><br>
+<A HREF="#dot_prod"> Dot products </A><br>
+<A HREF="#threedim"> 3-dimensional geometry </A><br>
+<A HREF="#cr_prods"> Cross products </A><br>
+<A HREF="#lin_maps"> Linear maps </A><br>
+<A HREF="#lin_eqs"> Systems of linear equations and EROs </A><br>
+<A HREF="#gje"> Matrices and Gauss-Jordan elimination </A><br>
+<A HREF="#inversn"> Matrix inversion </A><br>
+<A HREF="#avs_base"> Abstract vector spaces and bases </A><br>
+<A HREF="#lin_mats"> Linear maps and matrices </A><br>
+<A HREF="#perm_det"> Permutation groups and determinants </A><br>
+<A HREF="#det_eros"> EROs and determinants </A><br>
+<A HREF="#det_trans"> Determinants and transpose </A><br>
+<A HREF="#cofactor"> Cofactor expansion </A><br>
+<A HREF="#adjoint"> Adjoint formula for inverse </A><br>
+<A HREF="#cramers"> Cramer's rule </A><br>
+<A HREF="#elementa"> Elementary matrices </A><br>
+<A HREF="#invrsion"> Theory of matrix inversion </A><br>
+<A HREF="#prodrule"> Product rule </A><br>
+<P>
+
+<A NAME="twodim"><H1> 2-dimensional coordinate geometry,
+	points, scalars, and vectors</H1></A><P>
+<A NAME="dot_prod"><H1> Dot products</H1></A><P>
+<A NAME="threedim"><H1> 3-dimensional geometry</H1></A><P>
+<A NAME="cr_prods"><H1> Cross products</H1></A><P>
+<A NAME="lin_maps"><H1> Linear maps</H1></A><P>
+Let <i>V</i> and <i>W</i> be 2- or 3-dimensional
+space (in any combination).<br>
+
+A <b>linear map</b> <i>f</i> from <i>V</i> to <i>W</i>
+is a map (also called function, mapping, or transformation) such
+that for any points <i>P</i> and <i>Q</i> and scalars <i>s</i> and <i>t</i>,
+<P>
+<I>f(sP+tQ) = sf(P) + tf(Q).</I>
+<P>
+
+<b>Example: perpendicular projection onto the line OP</b><br>
+This can be defined by the formula
+
+<B>
+<pre>
+                     OP . OX
+            X  +-->  -------   P
+                     OP . OP
+</pre>
+</B>
+
+The formula works in 2 or 3 dimensions.
+<A HREF=proj1.html>Click here for an explanation</A><br>
+
+<P>
+<b>Example: projection onto a line <I>OP</I> parallel to
+another line <I>OQ</I> in 2 dimensions.</b><P>  Formula:<br>
+<B>
+<pre>
+                     ON . OX
+            X  +-->  -------   P
+                     ON . OP
+</pre>
+</B>
+where <I>ON</I> is a normal to <I>OP</I>. 
+<A HREF=proj2.html>Click here for an explanation</A><br>
+The same formula
+works for<br>
+
+<B>Projection onto a line <I>OP</I> parallel to a plane
+in 3 dimensions,</B> but the interpretation is different: <I>ON</I>
+is perpendicular to the given plane.
+
+<P>
+<B>Perpendicular projection onto a plane in 3 dimensions.</B>
+Given a plane (through <I>O</I>, of course), let <I>OP</I> be
+a normal to the plane.  Then the image of a point <I>X</I> is the
+point <I>Z=X-Y</I> where <I>Y</I> is the perpendicular projection
+of <I>X</I> onto <I>OP</I>. <B>Explanation:</B>
+from the parallelogram law, <I> X = Y+Z</I>.
+
+<A NAME="lin_eqs"><H1> Systems of linear equations and EROs</H1></A><P>
+<A NAME="gje"><H1> Matrices and Gauss-Jordan elimination</H1></A><P>
+<A NAME="inversn"><H1> Matrix inversion</H1></A><P>
+<A NAME="avs_base"><H1> Abstract vector spaces and bases</H1></A><P>
+An abstract vector space is the general term for a large range
+of mathematical structures having properties similar to the
+spaces with which we are familiar, such as 2- and 3-dimensional
+space.  There are about a dozen axioms needed to describe an
+abstract vector space, but we shall not study them.<P>
+
+The most important ideas in connection with abstract vector
+spaces are linear dependence, independence, and bases.
+A linear combination of `points' <I>P<sub>1</sub>...P<sub>k</sub></I>
+is an expression of the form<br>
+<I>a<sub>1</sub>P<sub>1</sub>+...+a<sub>k</sub>P<sub>k</sub></I><br>
+where the <I>a<sub>i</sub></I> are all scalars. These scalars
+are called the coefficients.  If not all coefficients are zero
+then the linear combination is called <I>nontrivial</I>.<P>
+
+A list of points is <I>linearly dependent</I> if there exists a
+nontrivial
+linear combination involving only points in
+the list and equal to the zero vector <I>O</I>.  Otherwise
+the list is called <I>linearly independent</I>.  The list <I>spans</I>
+a vector space <I>V</I> if every point in <I>V</I> is a linear
+combination of points in the list.  If it is linearly independent
+and  spans <I>V</I> then it is  called a <I>basis</I> for <I>V</I>.
+<P>
+Every basis provides a <I>co-ordinate system</I>, since every point
+<I>X</I> in <I>V</I> can be expressed <I>uniquely</I> as a linear
+combination<br>
+<I>a<sub>1</sub>P<sub>1</sub>+...+a<sub>k</sub>P<sub>k</sub></I><br>
+(this is easily proved.) The list <I>a<sub>1</sub>...a<sub>k</sub></I>
+are called the coordinates of <I>X</I> with respect to the given
+ordered basis.
+<P>
+The following proposition can be proved. Suppose that
+<I>B<sub>1</sub>...B<sub>m</sub></I> is a basis for a vector
+space <I>V</I>, and <I>N<sub>1</sub>... N<sub>n</sub> </I> is an
+ordered list of points in <i>V</I>. 
+Let <I>U</I> be the <I>m</I>x<I>n</I> matrix whose columns give
+the coordinates of these points <I>N<sub>j</sub></I> in terms of
+the basis <i>B<sub>i</sub></I>.  Then the list <I>N<sub>j</sub></I>
+forms a basis if and only if <I>U</I> is square and invertible.
+
+<P>
+As a corollary,  every basis for
+<I>V</I> has the same number of elements.  This number is called
+the dimension of <I>V</I>.
+<A NAME="lin_mats"><H1> Linear maps and matrices</H1></A><P>
+<b>R</b><sup><i>n</i></sup> is the vector space consisting of
+column vectors of height <I>n</I>.  The column vectors
+<I>E<sub>i</sub></I> form the `standard basis.'  These are
+the vectors [1, 0, 0, ...]<sup><i>T</i></sup>,
+[0, 1, 0, ...]<sup><i>T</i></sup>, and so on (<I>T</I> is for
+`transpose.')  The basis they form is called the standard
+basis because the coordinates of a column vector with respect
+to this basis are the usual coordinates.
+<P>
+If <I>U</I> is a square matrix representing a new basis,
+as mentioned in the previous paragraph, then the relation
+between the `new' matrix <I>A'</I>
+and the standad matrix <I>A</I> of some linear map <I>f</I> is
+<O>
+<I>
+A = U A' U<sup>-1</sup>.
+</I>
+<P>
+(The `primed' notation <I>A'</I> has no special meaning.
+It does not mean a transposed matrix or anything like that.)
+<A NAME="perm_det"><H1> Permutation groups and determinants</H1></A><P>
+<A NAME="det_eros"><H1> EROs and determinants</H1></A><P>
+<A NAME="det_trans"><H1> Determinants and transpose</H1></A><P>
+<A NAME="cofactor><H1>" Cofactor expansion</H1></A><P>
+<A NAME="adjoint"><H1> Adjoint formula for inverse</H1></A><P>
+<A NAME="cramers"><H1> Cramer's rule</H1></A><P>
+<A NAME="elementa"><H1> Elementary matrices</H1></A><P>
+
+Elementary matrices are of theoretical rather than practical
+importance.
+With every ERO on matrices <i>A</i> of height <i>m</i>
+there is associated a unique <i>m</i>x<i>m</i>
+matrix <i>E</i> such that the operation converts <i>A</i>  to <i>EA</i>.
+
+<P>
+<i>E</i> is easily calculated: simply apply the operation
+to the <i>m</i>x<i>m</i> identity matrix <i>I</i>: the result
+is <i>EI</i>, i.e., <i>E</i>. 
+
+<P>
+EROs are reversible: one can easily deduce that elementary
+matrices are invertible.  In other words, if <i>E</i> is an
+elementary matrix for some ERO, then the elementary matrix for the reverse
+ERO is a (unique) matrix <i>E<sup>-1</sup></i>, where 
+<i>E<sup>-1</sup>E=EE<sup>-1</sup>=I</i>.
+
+<P>
+<b>Examples.</b><br>
+<pre>
+For matrices of height 3.  (i) Swapping the first and second
+rows --- the elementary matrix is
+            +       +
+            | 0 1 0 |
+            | 1 0 0 |,  which is its own inverse.
+            | 0 0 1 |
+            +       +
+
+(ii) Scaling the third row by -2:
+            +        +            +          +
+            | 1 0  0 |            | 1 0   0  |
+            | 0 1  0 |.  Inverse: | 0 1   0  |
+            | 0 0 -2 |            | 0 0 -1/2 |          
+            +        +            +          +
+
+(iii) Subtracting twice the middle row from the third:
+            +        +            +       +
+            | 1  0 0 |            | 1 0 0 |
+            | 0  1 0 |.  Inverse: | 0 1 0 |
+            | 0 -2 1 |            | 0 2 1 |          
+            +        +            +       +
+</pre>
+
+<P>
+Since every matrix <i>A</i> can be reduced to its RREF <i>F</i> 
+by a sequence of EROs, it follows that
+<P>
+<i>F=PA</i>,
+<P>
+
+where <i>P</i> is a product of elementary matrices:
+
+<P>
+<i>P = E<sub>k</sub>E<sub>k-1</sub>...E<sub>1</sub>.</i>
+
+<P>
+The matrices are indexed in descending order to emphasise that
+the leftmost matrix represents the last of the EROs in the reduction
+of <i>A</i> to <i>F</i>.
+
+<P><b>Example.</b><br>
+<pre>
+                               +       +       +       +
+  1  1  2  1      = R1    E1 = | 1 0 0 |  E2 = | 1 0 0 |
+  2  5  7  5      -2 R1        |-2 1 0 |       | 0 1 0 |
+  1  3  4  3      - R1         | 0 0 1 |       |-1 0 1 |
+                               +       +       +       +
+
+                                 +         +       +       +
+  1  1  2  1      - R2      E3 = | 1  0  0 |  E4 = |1 -1 0 |
+  0  3  3  3      /3 = R2        | 0 1/3 0 |       |0  1 0 |
+  0  2  2  2      - 2 R2         | 0  0  1 |       |0  0 1 |
+                                 +         +       +       +
+
+                                 +        +
+                            E5 = | 1  0 0 |
+                                 | 0  1 0 |
+                                 | 0 -2 1 |
+                                 +        +
+
+  1  0  1  0    RREF F = PA, where
+  0  1  1  1    P = E5 E4 E3 E2 E1     
+  0  0  0  0      
+</pre>
+
+<b>Point to note.</b><br>
+<i>E<sub>1</sub></i> and <i>E<sub>2</sub></i> commute, as do
+<i>E<sub>4</sub></i> and <i>E<sub>5</sub></i>.  However,
+<i>E<sub>3</sub></i> does not commute with 
+<i>E<sub>4</sub></i> or <i>E<sub>5</sub></i>. It is important
+that <i>E<sub>3</sub></i> come right of those two --- in other
+words, the middle row is scaled before multiples are subtracted
+from the other two.
+
+<P>
+<A NAME="P_invertible">What is significant</A>
+is that <i>P</i> is also invertible.
+Therefore <i>F=PA</i> and <i>A = P<sup>-1</sup> F</i>.
+Its inverse, which is unique, is the product of the inverse
+elementary matrices, in reverse order.
+
+<P>
+<i>P = E<sub>1</sub><sup>-1</sup>...E<sub>k-1</sub><sup>-1</sup>E<sub>k</sub><sup>-1</sup>.</i>
+
+<P><b>Example.</b><br>
+<pre>
+with P as above, its inverse is
++       + +       + +       + +       + +       +
+| 1 0 0 | | 1 0 0 | | 1 0 0 | | 1 1 0 | | 1 0 0 |
+| 2 1 0 | | 0 1 0 | | 0 3 0 | | 0 1 0 | | 0 1 0 |
+| 0 0 1 | | 1 0 1 | | 0 0 1 | | 0 0 1 | | 0 2 1 |
++       + +       + +       + +       + +       +
+</pre>
+
+
+<A HREF="#invrsion"><H1>Theory of matrix inversion</H1></A><br>
+<b>Definition.</b> If <i>A</i> and <i>B</i> are <i>n</i>x<i>n</i>
+matrix such that <i>AB=I</i>, then <i>B</i> is called a
+<b>right inverse</b> for <i>A</i>.  
+If, also, <i>BA=I</i>, then <i>B</i> is called a <b>2-sided inverse</b>
+for <i>A</i>.<P>
+
+Actually, there is no distinction between the two, but that is not
+obvious. It can be proved in the following way.
+
+<P>
+Let <i>A</i> be a square matrix.  Then it possesses a
+right inverse if and only if its RREF is the identity
+matrix.
+<A HREF=./rrefiden.html>Click here for the proof.</A>
+
+<P><b>Corollary.</b>
+Let <i>A</i> be a square matrix.  If it possesses a
+right inverse <i>B</i>, then <i>B</i> is unique and
+actually a two-sided inverse.<P>
+
+<b>Proof.</b>
+By the above proposition, the RREF of <i>A</i> is the
+identity matrix.  By the results of the previous
+section,
+<A HREF="#P_invertible">click here for the reference,</A>
+<i>PA=I</i> where <i>P</i>, being a product of elementary
+matrices, is (two-sided) invertible. Then <i>B=P</i>, because
+<P>
+<i> B = IB = (PA)B = P(AB) = PI = P. </i><P>
+
+This shows that <i>B</i> is unique: for any other
+right inverse <i>B'</i> for <i>A</i>,
+<i>B'=P</i> by the same reasoning, hence
+<i>B' = B</i>.  (Also, <i>P</i> is unique.)
+
+Since <i>B=P</i> and <i>PA=I</i>, <i>BA=I</i>, so
+<i>B</i> is a 2-sided inverse for <i>A</i> as asserted. Q.E.D.
+
+<A NAME="prodrule"><H1> Product rule</H1></A><P>
+
+</FONT>
+</BODY>
+</HTML>

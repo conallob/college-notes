@@ -1,0 +1,52 @@
+;PALASM Design Description
+
+;---------------------------------- Declaration Segment ------------
+TITLE    Gal2
+PATTERN  2BA4 - Group 15
+REVISION 1.1
+AUTHOR   Conall O'Brien
+COMPANY  
+DATE     12/02/04
+
+CHIP  _gal1  PAL22V10
+
+;---------------------------------- PIN Declarations ---------------
+PIN  24         VCC                                              ;    INPUT   
+PIN  12         GND                                              ;    INPUT   
+PIN  1          A19                                              ;    INPUT
+PIN  2          A18                                              ;    INPUT   
+PIN  3          A17                                              ;    INPUT
+PIN  4          A16                                              ;    INPUT
+PIN  5          A15                                              ;    INPUT
+PIN  6          A14                                              ;    INPUT
+PIN  7          A13                                              ;    INPUT
+PIN  8          A12                                              ;    INPUT
+PIN  9          A11                                              ;    INPUT
+PIN  10         AS                                               ;    OUTPUT
+PIN  11         VAC                                              ;    OUTPUT
+PIN  19         ROM                                              ;    OUTPUT
+PIN  21         RAM1                                             ;    OUTPUT
+PIN  20         RAM2                                             ;    OUTPUT
+PIN  16         IO1                                              ;    OUTPUT
+PIN  17         IO2                                              ;    OUTPUT
+PIN  18         DTACK                                            ;    OUTPUT
+PIN  14         IOSEL                                            ;    OUTPUT
+
+
+;----------------------------------- Boolean Equation Segment ------
+EQUATIONS
+
+/ROM = /AS * /A19 * /A18 * /A17 * /A16 * /A15 * /A14 * /A13
+/RAM1 = /AS * /A19 * /A18 * /A17 * /A16 * /A15 * A14 * /A13 * /A11
+/RAM2 = /AS * /A19 */A18 * /A17 * /A16 * /A15 * A14 * /A13 * A11
+/IO1 = /AS * /A19 * /A18 * /A17 * /A16 * A15 * A14 * /A13
+/IO2 = /AS * /A19 * /A18 * /A17 * A16 * /A15 * A14 * /A13
+/DTACK = ROM + RAM1 + RAM2
+/IOSEL = IO1 + IO2
+
+;----------------------------------- Simulation Segment ------------
+SIMULATION
+
+;-------------------------------------------------------------------
+
+

@@ -1,0 +1,212 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{pst-all}
+\usepackage{lscape}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\newcommand{\nonterminal}[1]{$\langle #1 \rangle$}
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $18^{th}$ November 2004}
+
+\maketitle
+
+\begin{verbatim}
+PROGRAM TEST(INPUT, OUTPUT);
+
+   VAR
+
+      CH: CHAR;
+      X, Y: REAL;
+      I, J, K : INTEGER;
+
+   BEGIN
+      .
+      .
+      .
+   END.
+\end{verbatim}
+
+\begin{tabular}{|c|c|c|c|c|c|c}
+\hline
+	&	Name				&	Type			&	Address	&	ID-Link	&	Dec-Link	&		\\
+\hline
+$1$&	\verb!TEST!	&	\verb!PROGRAM NAME!	&	&	\verb!NIL!	&	&	\\
+\hline
+$2$&	\verb!INPUT!&	\verb!FILE!		&		&	\verb!NIL!	&	&	\\
+\hline                               
+$3$&	\verb!OUTPUT!&	\verb!FILE!		&		&	$2$		& $\longrightarrow$ &	$\Lsh$ \\
+\hline                               
+$4$&	\verb!CH!	&	\verb!CHAR!		&$0$	&	\verb!NIL!	&$6$&	\\
+\hline                               
+$5$&	\verb!X!		&	\verb!REAL!		&$8$	&	\verb!NIL!	&	&	\\
+\hline                               
+$6$&	\verb!Y!		&	\verb!REAL!		&$4$	&	$5$		&$9$& $\Lsh$\\
+\hline
+$7$&	\verb!I!		&	\verb!INTEGER!	&$20$	&	\verb!NIL!	&	&	\\
+\hline
+$8$&	\verb!J!		&	\verb!INTEGER!	&$16$	&	$7$		& $\longrightarrow$ &	$\Lsh$\\
+\hline
+$9$&	\verb!K!		&	\verb!INTEGER!	&$12$	&	$8$		& \verb!NIL! &	$\Lsh$ \\
+\hline
+	&			&		&		&		&		&	\\
+\hline
+\end{tabular}
+
+
+$TEST \Rightarrow \left( IDENT, 1 \right)$
+
+\begin{eqnarray*}
+\langle PROGRAM \rangle &	\to &	PROGRAM IDENT \left( \langle IDENT LIST \rangle \right) \\ 
+&	&	\langle DECLARATIONS \rangle \langle COMPOUND STAT \rangle \\
+\langle PROGRAM \rangle_{\synth{p}}	 &	\to & PROGRAM \actionsym{INIT}
+IDENT_{\synth{q}} \\ 
+& & \actionsym{SETPROGRAM NAME}_{\synth{r}} \left( \langle IDENT LIST \rangle \right) \\ 
+&	& \langle DECLARATIONS \rangle \langle COMPOUND STAT \rangle \actionsym{CLEANUP}.\\
+(\synth{p,r} &\synth{\leftarrow}	& \synth{q})
+\end{eqnarray*}
+
+Where ...
+
+...$\left( \langle IDENT LIST \rangle_{\synth{p}} \actionsym{SETFILE}_{\synth{q}} \right)$ 
+($\synth{q}$ is a Linked List of $IDENT$s)
+
+\begin{eqnarray*}
+\langle IDENT LIST \rangle_{\synth{p}} &	\to &	IDENT_{\synth{q}} \\
+\synth{p} &	\synth{\leftarrow}	& \synth{q}
+\end{eqnarray*}
+
+Where...
+
+\begin{eqnarray*}
+\langle IDENT LIST \rangle_{\synth{p}} & \to & \langle IDENT LIST \rangle_{\synth{q}} \\
+& & IDENT_{\synth{r}} \actionsym{LINK
+ID}_{\synth{s,t}} \\
+\synth{s} &\synth{\leftarrow}	&	\synth{r} \\
+(\synth{p,t} & \synth{\leftarrow} &	\synth{q})
+\end{eqnarray*}
+
+Where ...
+
+and $\actionsym{LINK ID}_{\synth{p},\synth{q}}$ links $\synth{p}$ to the
+front of the linked list pointed to by $\synth{q}$.
+
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{\nonterminal{IDLIST}}}{
+	\pstree{\TR{\nonterminal{IDLIST}}}{
+		\TR{$IDENT_{2}$}
+	}
+	\TR{$,$}
+	\TR{$IDENT_{3}$}
+}
+
+\end{figure}
+
+\begin{eqnarray*}
+\langle DECLARATIONS \rangle	& \to	& VAR \langle DEC LIST \rangle_{\synth{p}} \actionsym{ALLOCATE}_{\synth{q}} \\
+\synth{q}	& \synth{\leftarrow}	& \synth{p}	\\
+\langle DECLARATIONS \rangle	& \to	&	\epsilon \\
+\langle DEC LIST \rangle_{\synth{p}}	& \to	& \langle IDENT LIST \rangle_{\synth{q}} : TYPE_{\synth{r}} \actionsym{SETTYPE}_{\synth{s,t}} \\ 
+& & \langle MORE DECS \rangle_{\synth{u}} \actionsym{LINK DESC}_{\synth{v,w}} \\
+\synth{s}	&	\synth{\leftarrow}	& \synth{r} \\
+(\synth{p,t,u})	&	\synth{\leftarrow}	& \synth{q} \\
+\synth{w}	&	\synth{\leftarrow}	& \synth{u} \\
+\end{eqnarray*}
+
+Where...
+
+\begin{eqnarray*}
+\langle MORE DECS \rangle_{\synth{p}}	& \to	& \langle IDENT LIST \rangle_{\synth{q}} : TYPE_{\synth{r}} \actionsym{SETTYPE}_{\synth{s,t}} \\
+&	&	\langle MORE DECS \rangle_{\synth{u}} \actionsym{LINKDECS}_{\synth{v,t}} \\
+\synth{s}	& \synth{\leftarrow}	& \synth{r}	\\
+(\synth{p,t,v})	& \synth{\leftarrow}	& \synth{q}	\\
+\synth{w}	& \synth{\leftarrow}	& \synth{u}	\\
+\langle MORE DECS \rangle_{\synth{p}}	& \to	&	\epsilon \\
+\synth{p}	&	\synth{\leftarrow}	& \synth{NIL} \\
+\end{eqnarray*}
+
+\begin{landscape}
+
+\begin{center}
+
+\begin{figure}[ht]
+
+\psset{levelsep=20mm,nodesep=1mm,unit=.5cm}
+
+\pstree{\TR{\nonterminal{DECLARATIONS}}}{
+	\TR{$VAR$}
+	\pstree{\TR{\nonterminal{DECLIST}}}{
+			\pstree{\TR{\nonterminal{IDLIST}}}{
+				\TR{$IDENT_{4}$}
+			}
+		\TR{$:$}
+		\TR{$TYPE$}
+		\TR{\actionsym{SETTYPE}}
+			\pstree{\TR{\nonterminal{MOREDECS}}}{
+				\pstree{\TR{\nonterminal{IDLIST}}}{
+					\pstree{\TR{\nonterminal{IDLIST}}}{
+						\TR{$IDENT_{5}$}
+					}
+					\TR{$,$}
+					\TR{$IDENT_{6}$}
+					\TR{\actionsym{LINKID}}
+				}
+				\TR{$:$}
+				\TR{$TYPE$}
+				\TR{\actionsym{SETTYPE}}
+				\psset{levelsep=35mm,nodesep=1mm}
+				\pstree{\TR{\nonterminal{MOREDECS}}}{
+				\psset{levelsep=20mm,nodesep=1mm}
+					\pstree{\TR{\nonterminal{IDLIST}}}{
+						\pstree{\TR{\nonterminal{IDLIST}}}{
+							\pstree{\TR{\nonterminal{IDLIST}}}{
+								\TR{$IDENT$}
+							}
+						\TR{$,$}
+						\TR{$IDENT$}
+						\TR{\actionsym{LINKID}}
+						}
+					\TR{$,$}
+					\TR{$IDENT$}
+					\TR{\actionsym{LINKID}}
+					}
+					\TR{$:$}
+					\TR{$TYPE$}
+					\TR{\actionsym{SETTYPE}}
+					\TR{$;$}
+					\pstree{\TR{\nonterminal{MOREDECS}}}{
+						\TR{$\epsilon$}
+					}
+					\TR{\actionsym{LINKDECS}}
+					\Tn
+				}
+				\TR{\actionsym{LINKDECS}}
+				\Tn
+			}
+			\TR{\actionsym{LINKDECS}}
+			\Tn
+	}
+	\TR{\actionsym{ALLOCATE}}
+}
+
+\end{figure}
+
+\end{landscape}
+
+\end{center}
+
+\end{document}

@@ -1,0 +1,42 @@
+info x 37 201 0 0 0 0 0 0 VHDLvhdl_genericverilog_generic
+col x 257 0 0 0 0 0 0 0 
+radix x 10 0 0 0 0 0 0 0 
+entity name 0 0 0 0 0 0 0 0 full_adder
+term mark 34 0 0 0 0 0 0 0 
+vlib save 0 0 0 0 0 0 0 0 LIBRARY  ieee;
+USE ieee.std_logic_1164.all;
+
+var add 1 0 0 162 24 10 0 0 xinstd_logic
+var add 2 0 0 162 24 13 0 0 yinstd_logic
+var add 3 0 0 162 24 16 0 0 zinstd_logic
+var add 4 0 0 162 25 10 0 0 soutstd_logic
+var add 5 0 0 162 25 13 0 0 coutstd_logic
+vdone xxx 0 0 0 0 0 0 0 0 
+npos xxx 60 0 0 0 0 0 0 0 
+cell fill 1 0 0 0 0 0 0 0 0
+cell fill 1 8 0 0 0 0 0 0 1
+cell fill 2 0 0 0 0 0 0 0 0
+cell fill 2 4 0 0 0 0 0 0 1
+cell fill 2 8 0 0 0 0 0 0 0
+cell fill 2 12 0 0 0 0 0 0 1
+cell fill 3 0 0 0 0 0 0 0 0
+cell fill 3 2 0 0 0 0 0 0 1
+cell fill 3 4 0 0 0 0 0 0 0
+cell fill 3 6 0 0 0 0 0 0 1
+cell fill 3 8 0 0 0 0 0 0 0
+cell fill 3 10 0 0 0 0 0 0 1
+cell fill 3 12 0 0 0 0 0 0 0
+cell fill 3 14 0 0 0 0 0 0 1
+time info 50 50 10 10 50 50 0 1 ns
+font save -14 0 400 49 0 0 0 0 Times New Roman
+src mod 0 677390336 29636509 22 0 0 0 0 adder_16.vhd
+utd false 0 0 0 0 0 0 0 0 
+cellenab on 0 0 0 0 0 0 0 0 
+grid on 0 0 0 0 0 0 0 0 
+com add 1 0 50 220 7 0 -67 0 Waveform created by
+HDL Bencher 4.1i
+Source = adder_16.vhd
+Wed May 12 11:11:36 2004
+type info 0 0 0 0 0 0 0 0 std_logicBITDOWNTO
+type info 31 0 0 0 0 0 0 0 std_logic_vectorVECTORDOWNTO
+opt vhdl87 0 0 0 0 0 0 0 0 

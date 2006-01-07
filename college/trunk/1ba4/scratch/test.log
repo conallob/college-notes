@@ -1,0 +1,176 @@
+
+*** Start MACHPAR.E 16:29:22 
+ษออออออออออออออออออออCOMPILATION OPTIONSอออออออออออออออออออออป
+บ  Log file name:    TEST.LOG                                บ
+บ  Run mode:         Run All Programs                        บ
+บ                                                            บ
+บ  Format:  Text     File:  TEST.PDS                         บ
+ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+ษอออออออออออออออออออออออออออMACH FITTING OPTIONSอออออออออออออออออออออออออออป
+บ SIGNAL PLACEMENT:                                                        บ
+บ   Handling of Preplacements                 No Change                    บ
+บ   Use placement data from                   Design file                  บ
+บ   Save last successful placement            <F3>                         บ
+บ   Press <F9> to edit file containing        Last successful placement    บ
+บ                                                                          บ
+บ FITTING OPTIONS:                                                         บ
+บ   Global Clocks routable as Pterm Clocks?   N                            บ
+บ   22V10/MACH1XX/2XX S/R Compatibility?      Y                            บ
+บ   SET/RESET treated as DONT_CARE?           Y                            บ
+บ   Run Time Upper Bound in 15 minutes        0                            บ
+บ   Iterate between partition & place/route?  Y                            บ
+บ   Balanced partitioning?                    Y                            บ
+บ   Spread placement?                         Y                            บ
+บ   Reduce Non-forced Global Clocks?          N  .. if 'Y', Number = 1     บ
+บ   Reduce Routes Per Placement?              N                            บ
+บ                                                                          บ
+ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+
+ษออออออออออออออออออออออออLOGIC SYNTHESIS OPTIONSออออออออออออออออออออออออป
+บ Use automatic pin/node input pairing?  Y                              บ
+บ Use automatic gate splitting?          N  .. if 'Y', Threshold = 20   บ
+บ Gate split max num. pterms per eqn     20                             บ
+บ Optimize registers for D/T-type        D,T As specified. JK,RS to D   บ
+บ Ensure polarity after minimization is  As specified in design file    บ
+บ Use 'IF-THEN-ELSE','CASE' default as   Off                            บ
+บ Use fast minimization?                 N                              บ
+บ                                                                       บ
+ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+
+Test.pds
+
+MACHXL 2.1 R9 PARSER (1-24-95)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1993, 1994, 1995
+
+
+                    ***********************************
+                    *     MACHXL PARSER LISTING       *
+                    ***********************************
+
+LINE #   |----+----1----+----2----+----3----+----4----+----5----+----6----+
+   1     |AUTHOR  XYZ
+   2     |COMPANY AMD
+   3     |PATTERN SUPER PAL 
+   4     |TITLE SUPER_PAL
+   5     |REVISION 1.0
+   6     |DATE 12-08-92
+   7     |
+   8     |CHIP SUPER_PAL MACH435
+   9     |
+  10     |  
+  11     |PIN ?  Q1 
+  12     |PIN ?  Q0 
+  13     | 
+  14     |
+  15     |EQUATIONS
+  16     | 
+  17     |Q1 = Q0
+  18     |
+  19     |SIMULATION
+  20     |SETF Q0
+  21     |CHECK Q1
+  22     |SETF /Q0
+  23     |CHECK /Q1
+
+ %% MACHPAR %%    ERROR count:  0      WARNING count:  0
+
+ %% MACHPAR %%    File processed successfully.    File:  Test.pds
+
+*** End MACHPAR.EXE 16:29:22; (MACHPAR.EXE= 0 sec.) elapsed time= 0 sec.
+Accumulated Disk space used = 0 bytes
+Free Disk space = 1023932928 bytes
+
+*** Start MACHBPP.E 16:29:22 
+MACHXL 2.1 R9 MACHBPP (1-24-95)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1993, 1994, 1995
+
+EQUATIONS SEGMENT
+Processing equation for ====>Q1
+SIMULATION SEGMENT
+....
+ %%  MACHBPP  %% Maximum memory allocated was: 68836 bytes.
+
+ %%  MACHBPP  %% File Processed Successfully.  File: Test.pds.
+ %%  MACHBPP  %% ERROR count: 0  WARNING count: 0
+
+*** End MACHBPP.EXE 16:29:22; (MACHBPP.EXE= 0 sec.) elapsed time= 0 sec.
+Accumulated Disk space used = 0 bytes
+Free Disk space = 1023932928 bytes
+
+*** Start MACHMIN.E 16:29:22 
+MACHXL 2.1 R9 MACHMIN   - (1-24-95)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1994, 1995
+
+
+Processing equation(s) for pin Q1...
+====> Q1                 MIN_ON (1 + pt)
+
+ %%  MACHMIN  %% Maximum memory allocated was: 48362 bytes.
+
+ %%  MACHMIN  %% File Processed Successfully.  File: Test.pds.
+ %%  MACHMIN  %% ERROR count: 0  WARNING count: 0
+
+
+*** End MACHMIN.EXE 16:29:22; (MACHMIN.EXE= 0 sec.) elapsed time= 0 sec.
+Accumulated Disk space used = 0 bytes
+Free Disk space = 1023932928 bytes
+
+*** Start MACHMIN.E 16:29:22 
+MACHXL 2.1 R9 MACHTPLA   - (1-24-95)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1994, 1995
+
+
+Converting TRE file test.tre to PLA file test.pla...
+
+.
+.
+
+ %%  MACHTPLA  %% Maximum memory allocated was: 48416 bytes.
+
+ %%  MACHTPLA  %% File Processed Successfully.  File: Test.pds.
+ %%  MACHTPLA  %% ERROR count: 0  WARNING count: 0
+
+
+*** End MACHMIN.EXE 16:29:22; (MACHMIN.EXE= 0 sec.) elapsed time= 0 sec.
+Accumulated Disk space used = 0 bytes
+Free Disk space = 1023932928 bytes
+
+*** Start MACHFITR. 16:29:22 
+MACHXL 2.1 R11 MACHFITR (3-31-95)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1993, 1994, 1995
+*** Source file is Test.pds . Device is MACH435 .
+|> INFO z5065 - For outputs, implicit output enables will be set to VCC.
+
+*** End of Pla2db. 
+Check preplaced pins/nodes
+Check preplaced blocks
+Check unreferenced pins/nodes
+Check clock rules
+
+List of non-global clocks:
+   None.
+
+*** End of Normalization.
+
+*** End of DRC. 
+
+*** Start Partitioning
+ 
+*** Partitioning successful.
+
+*** Routing successful. Assembler invoked.
+*** The JEDEC file generated is Test.JED .
+*** Report Generator invoked.
+
+Partitioning 100% - Completed
+Placement    100% - Completed
+Routing      100% - Completed
+%%% Fitting process is successful %%%
+*** Report Generator end.
+
+%%%% MACHFITR %%%% Fitting successful. File Test.pds .
+%%%% MACHFITR %%%% ERROR count 0 WARNING count 0 .
+
+*** End MACHFITR.EX 16:29:23; (MACHFITR.EXE= 1 sec.) elapsed time= 1 sec.
+Accumulated Disk space used = 0 bytes
+Free Disk space = 1023932928 bytes

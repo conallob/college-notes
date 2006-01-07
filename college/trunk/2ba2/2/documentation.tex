@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{2BA2: \\ Programming Techniques \\ Assignment II \\ Word Search}
+
+\author{Conall O'Brien \\ \\ 01734351 \\ \\ conall@conall.net}
+
+\maketitle
+
+\pagebreak
+
+\section{Basic Design}
+
+\noindent Instead of approaching this program in a brute force manner to
+check every posible permutation of adjacent characters to find the
+required words, I decided to approach the problem in the way a human
+would. Humans don't read characters, they read words. Humans can
+identify words correctly, even if misspelt, so long as the first and
+last characters are in the correct places. Read
+http://science.slashdot.org/science/03/09/15/2227256.shtml?tid=133 for
+more information 
+
+
+\pagebreak
+
+\section{The Text Parser}
+
+\subsection{parse\_grid\_input(file: STRING; i, j : INTEGER) :
+ARRAY2[CHARACTER]}
+
+\noindent This function parses a text file containing 15 lines, each
+with 15 characters and returns them in a simple, yet useful data
+sctructure consisting of an \emph{ARRAY2} of \emph{CHARACTER} variables.
+This system was chosen for the functions available in the SmartEiffel
+libraries for these classes.
+
+\subsection{parse\_list\_input(file: STRING; length : INTEGER) :
+ARRAY[STRING]}
+
+\noindent This function parses a list of words layed out in a file one
+word per line. The list is returned, in the same order as in the file as
+a one dimensional \emph{ARRAY} of \emph{STRING} variables, allowing
+access to many useful functions available to the SmartEiffel
+\emph{STRING} class.
+
+\section{The Grid Searcher}
+
+\subsection{search(word: STRING; matrix : ARRAY2[CHARACTER]) : INTEGER}
+
+\noindent This is the wrapper function called by the main loop which
+iterates through the list of words. If the selected word is found, it
+returns the value $1$, otherwise it defaults to $0$. Inside it, it calls
+numerous other functions during the two main stages of searching,
+scanning and close inspection.
+
+\subsection{scan(word : STRING; grid : ARRAY2[CHARACTER]; f, l :
+CHARACTER; len, x, y : INTEGER) : INTEGER}
+
+
+\noindent This function does the basic scanning for the fitst character
+and the last character, allowing for the offset between them equaling
+the length of the word being searchied for. This function uses
+SmartEiffel functions to check for valid bounds to ensure the scanning
+is as efficient as possible, eliminating as many possibliities as
+possible using basic intellegence (ie the known length of a word and the
+end points or poles).
+
+\subsection{further\_investigation(word : STRING; grid :
+ARRAY2[CHARACTER]; x1, y1, x2, y2 : INTEGER) :INTEGER}
+
+\noindent This is the function used to iterate through a finite no of
+elements in the grid of characters, once a positive mathc for the end
+characters with the appropriate length as been detected. If every
+character matches the word being searched for, the search function has
+completed.
+
+\subsection{forward\_or\_reverse(a, b : INTEGER) : INTEGER}
+
+\noindent This is a simple function used to return the smaller of two
+numers, in order to clean up code and save reusing the same code
+repeaditly, decreasing the program's efficiency. It is required by the
+\emph{further\_investigation(word : STRING; grid : ARRAY2[CHARACTER];
+x1, y1, x2, y2 : INTEGER) :INTEGER} function to establish the vertical
+and horizonal directions (right $\to$ left, right $\to$ left, bottom
+$\to$ top, top $\to$ bottom.)
+
+\pagebreak
+
+\section{Source Code}
+
+\pagebreak
+
+\end{document}

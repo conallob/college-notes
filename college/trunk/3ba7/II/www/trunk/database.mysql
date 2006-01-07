@@ -1,0 +1,224 @@
+-- MySQL dump 10.9
+--
+-- Host: localhost    Database: 3ba7
+-- ------------------------------------------------------
+-- Server version	4.1.10a
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+--
+-- Table structure for table `fhm`
+--
+
+DROP TABLE IF EXISTS `fhm`;
+CREATE TABLE `fhm` (
+  `sid` int(11) NOT NULL auto_increment,
+  `user` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`sid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fhm`
+--
+
+
+/*!40000 ALTER TABLE `fhm` DISABLE KEYS */;
+LOCK TABLES `fhm` WRITE;
+INSERT INTO `fhm` VALUES (1,'rlynch3'),(3,'kiggly'),(4,'kiggly'),(5,'rlynch3');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `fhm` ENABLE KEYS */;
+
+--
+-- Table structure for table `flogs`
+--
+
+DROP TABLE IF EXISTS `flogs`;
+CREATE TABLE `flogs` (
+  `user` varchar(20) NOT NULL default '',
+  `password` varchar(20) NOT NULL default '',
+  `attempts` int(2) NOT NULL default '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `flogs`
+--
+
+
+/*!40000 ALTER TABLE `flogs` DISABLE KEYS */;
+LOCK TABLES `flogs` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `flogs` ENABLE KEYS */;
+
+--
+-- Table structure for table `fourfourtwo`
+--
+
+DROP TABLE IF EXISTS `fourfourtwo`;
+CREATE TABLE `fourfourtwo` (
+  `sid` int(11) NOT NULL auto_increment,
+  `user` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`sid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fourfourtwo`
+--
+
+
+/*!40000 ALTER TABLE `fourfourtwo` DISABLE KEYS */;
+LOCK TABLES `fourfourtwo` WRITE;
+INSERT INTO `fourfourtwo` VALUES (2,'hamster'),(3,'kiggly'),(4,'rlynch3');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `fourfourtwo` ENABLE KEYS */;
+
+--
+-- Table structure for table `magazines`
+--
+
+DROP TABLE IF EXISTS `magazines`;
+CREATE TABLE `magazines` (
+  `mid` int(11) NOT NULL auto_increment,
+  `owner` varchar(20) default NULL,
+  `magname` varchar(50) default NULL,
+  `fmagname` varchar(50) NOT NULL default '',
+  `description` mediumtext,
+  PRIMARY KEY  (`mid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `magazines`
+--
+
+
+/*!40000 ALTER TABLE `magazines` DISABLE KEYS */;
+LOCK TABLES `magazines` WRITE;
+INSERT INTO `magazines` VALUES (15,'client2','test2','Test Magazine 2','A Test Magazine'),(16,'client2','fhm','FHM Magazine','For Men Who Should Know Better. Men\'s Magazine'),(20,'client1','test','test magazine 1','a test magazine'),(17,'client1','fourfourtwo','Four Four Two Magazine','Football Magazine. All the latest news from the world of football.'),(18,'client1','time','Time Magazine','News magazine focusing on world polotics and current affairs'),(19,'client2','natgeo','National Geographic','Education / Environmental Magazine');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `magazines` ENABLE KEYS */;
+
+--
+-- Table structure for table `natgeo`
+--
+
+DROP TABLE IF EXISTS `natgeo`;
+CREATE TABLE `natgeo` (
+  `sid` int(11) NOT NULL auto_increment,
+  `user` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`sid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `natgeo`
+--
+
+
+/*!40000 ALTER TABLE `natgeo` DISABLE KEYS */;
+LOCK TABLES `natgeo` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `natgeo` ENABLE KEYS */;
+
+--
+-- Table structure for table `test`
+--
+
+DROP TABLE IF EXISTS `test`;
+CREATE TABLE `test` (
+  `sid` int(11) NOT NULL auto_increment,
+  `user` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`sid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `test`
+--
+
+
+/*!40000 ALTER TABLE `test` DISABLE KEYS */;
+LOCK TABLES `test` WRITE;
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `test` ENABLE KEYS */;
+
+--
+-- Table structure for table `test2`
+--
+
+DROP TABLE IF EXISTS `test2`;
+CREATE TABLE `test2` (
+  `sid` int(11) NOT NULL auto_increment,
+  `user` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`sid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `test2`
+--
+
+
+/*!40000 ALTER TABLE `test2` DISABLE KEYS */;
+LOCK TABLES `test2` WRITE;
+INSERT INTO `test2` VALUES (5,'hamster');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `test2` ENABLE KEYS */;
+
+--
+-- Table structure for table `time`
+--
+
+DROP TABLE IF EXISTS `time`;
+CREATE TABLE `time` (
+  `sid` int(11) NOT NULL auto_increment,
+  `user` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`sid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `time`
+--
+
+
+/*!40000 ALTER TABLE `time` DISABLE KEYS */;
+LOCK TABLES `time` WRITE;
+INSERT INTO `time` VALUES (1,'hamster');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `time` ENABLE KEYS */;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `uid` mediumint(9) NOT NULL auto_increment,
+  `name` varchar(20) NOT NULL default '',
+  `password` varchar(20) NOT NULL default '',
+  `permissions` int(1) NOT NULL default '0',
+  `email` varchar(50) NOT NULL default '',
+  `realfname` varchar(20) NOT NULL default '',
+  `realsname` varchar(20) default NULL,
+  PRIMARY KEY  (`uid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+LOCK TABLES `users` WRITE;
+INSERT INTO `users` VALUES (1,'hamster','ese3Nach',1,'hamster@netsoc.tcd.ie','Michael','Pearce'),(2,'conallob','%SHsav42c',1,'conallob=3ba7@maths.tcd.ie','Conall','O\'Brien'),(3,'hamlet','WU47qo_ke',1,'hamlet@netsoc.tcd.ie','Philip','McGuinness'),(4,'rlynch3','reFp0Sb3[',1,'rlynch3@tcd.ie','Ross','Lynch'),(5,'guest','guest',3,'joe.bloggs@gmail.com','Joe','Bloggs'),(6,'client1','client1',2,'client1@gmail.com','John','Smith'),(7,'client2','client2',2,'client2@gmail.com','Jane','Doe'),(14,'michael','hXp3imj)i',3,'michaelppearce@gmail.com','Michael','Pearce'),(15,'kiggly','himick',3,'kgmf@netsoc.tcd.ie','Kiggly','Muff'),(16,'mcqueen','cActz9j@a',3,'rlynch3@gmail.com','im really gay','lynch');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

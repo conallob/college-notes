@@ -1,0 +1,7 @@
+[Inputs]
+=input[3:0]=
+[Outputs]
+s2
+c_in
+=sel[1:0]=
+[BiDir]

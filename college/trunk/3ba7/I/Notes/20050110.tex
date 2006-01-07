@@ -1,0 +1,238 @@
+ % $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\	$10^{th}$ January 2005}
+
+\maketitle
+
+\section*{Error Processing}
+
+(i) Detection
+
+(ii) Recovery
+
+
+Prefix Property - Top down parsers use prefix property but not all 
+bottom up parsers do. Commonly used bottom up parsers do use prefix 
+property.
+
+
+Local - Global
+
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{S}	&	\to	&	a													\\
+\nonterminal{S}	&	\to	&	( \nonterminal{S} \nonterminal{R}	\\
+\nonterminal{R}	&	\to	&	, \nonterminal{S} \nonterminal{R}		\\
+\nonterminal{R}	&	\to	&	)
+\end{eqnarray}
+
+
+Expressions of the form:
+
+\begin{tabular}{cccc}
+$a$						&	$\left( a \right)$	&	$\left( \left( a \right), \right)$	&	$\cdots$	\\
+$\left( a a \right)$	&	$ a , a )$		&	$\left( ( a ( a \right)$	&	$\cdots$	\\
+\end{tabular}
+
+\begin{table}[hbtp]
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+						&	$a$		&	$,$		&	$($		&	$)$		&	$\dashv$		\\
+\hline
+$\nonterminal{S}$	&	$\#1$		&	$\#3$		&	$R_{E}$	&	$\#4$		&	$R_{F}$		\\
+\hline
+$\triangledown$	&	$R_{G}$	&	$R_{H}$	&	$R_{I}$	&	$R_{J}$	&	$ACCEPT$		\\
+\hline
+\end{tabular}
+
+\caption{Push Down Machine}
+
+\end{table}
+
+Starting Stack: $\triangledown \nonterminal{S}$
+
+$\#1$ : $POP,ADVANCE$													\\
+$\#2$ : $REPLACE(\nonterminal{R}\nonterminal{S}),ADVANCE$	\\
+$\#3$ : $PUSH(\nonterminal{S},ADVANCE$								\\
+$\#4$ : $POP,ADVANCE$													\\
+
+$R_{A}, R_{B}$ - occurs when $\nonterminal{S Expression}$ expected. \\ $ADVANCE$
+
+$R_{C}$ - Missing $\nonterminal{S Expression}$. \\ $EXIT$
+
+$R_{D}, R_{E}$ - Missing comma. \\ $PUSH(\nonterminal{S}),RETAIN$
+
+$R_{A}, R_{B}$ - Incmplete $\nonterminal{S Expression}$. \\ $EXIT$
+
+$R_{G}, R_{H}, R_{I}, R_{J}$ - occurs after $\nonterminal{S Expression}$
+
+$R_{H}, R_{J}$ - $ADVANCE$
+
+$R_{G}, R_{I}$ - $PUSH(\nonterminal{S}),RETAIN$ or
+$REPLACE(\triangledown,\nonterminal{R}\nonterminal{S}),ADVANCE$
+
+\begin{table}[hbtp]
+
+% xy-pic diagram
+
+\end{table}
+
+\section*{Recursive Decent}
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{S}	&	\to	&	a \nonterminal{A} \nonterminal{S}	\\
+\nonterminal{S}	&	\to	&	b 												\\
+\nonterminal{A}	&	\to	&	c \nonterminal{A} \nonterminal{S}	\\
+\nonterminal{A}	&	\to	&	\epsilon		
+\end{eqnarray}
+
+$SELECT(\nonterminal{A} \to \epsilon) = FOLLOW(\nonterminal{A}) = 
+\{ a, b \}$
+
+\begin{verbatim}
+{ MAIL LINE }
+      NEXTSYMBOL; { CALL LEXICAL ANALYSER }
+		S; { PARSE AN <S> }
+		IF SYMBOL = ENDMARKER THEN 
+		       ACCEPT
+      ELSE
+             REJECT	
+\end{verbatim}
+
+\begin{verbatim}
+{ PARSE AN <S> }
+PROCEDURE S;
+BEGIN
+      CASE SYMBOL OF
+            a : BEGIN { PRODUCTION 1 }
+                    NEXTSYMBOL; { ADVANCE }
+                    A; S;
+                END
+            b : NEXTSYMBOL; { PRODUCTION 2 }
+
+            c : ENDMARKER : REJECT
+END;
+\end{verbatim}
+
+\begin{verbatim}
+{ PARSE AN <A> }
+PROCEDURE A;
+BEGIN
+      IF SYMBOL = C
+            THEN BEGIN { PRODUCTION 3 }
+                    NEXTSYMBOL;
+                    A; S;
+                    IF SYMBOL = B
+                          THEN
+                                NEXTSYMBOL;
+                          ELSE REJECT
+                END ELSE
+            IF SYMBOL = ENDMARKER THEN
+                    REJECT;
+END;
+\end{verbatim}
+
+\subsection*{Removal of Left Recursion}
+
+\begin{eqnarray*}
+\nonterminal{ID List}	&	\to	&	\nonterminal{ID List}, \nonterminal{ID}	\\
+\nonterminal{ID List}	&	\to	&	\nonterminal{ID}									\\
+\end{eqnarray*}
+
+becomes
+
+\begin{eqnarray*}
+\nonterminal{ID List}		&	\to	&	\nonterminal{ID}, \nonterminal{Rest Of List}	\\
+\nonterminal{Rest Of List}	&	\to	&	, \nonterminal{ID} \nonterminal{Rest Of List}\\
+\nonterminal{Rest Of List}	&	\to	&	\epsilon													\\
+\end{eqnarray*}
+
+\subsection*{Left Factoring}
+
+\begin{eqnarray*}
+\nonterminal{Procedure Call}	&	\to	&	IDENT									\\
+\nonterminal{Procedure Call}	&	\to	&	IDENT(\nonterminal{LIST})		\\
+\end{eqnarray*}
+
+becomes
+
+\begin{eqnarray*}
+\nonterminal{Procedure Call}	&	\to	&	IDENT \nonterminal{List Part}	\\
+\nonterminal{List Part}			&	\to	&	(\nonterminal{List})				\\
+\nonterminal{List Part}			&	\to	&	\epsilon								\\
+\end{eqnarray*}
+
+\subsection*{If Statement}
+
+\begin{eqnarray*}
+\nonterminal{Statement}	&	\to	&	IF \nonterminal{C} THEN \nonterminal{Statement}		\\
+\nonterminal{Statement}	&	\to	&	IF \nonterminal{C} THEN \nonterminal{Statement}	ELSE \nonterminal{Statement}
+\end{eqnarray*}
+
+$IF X THEN IF Y THEN P ELSE Q$
+
+\begin{table}{hbtp}
+
+% Tree Diagram
+
+\end{table}
+
+\begin{table}{hbtp}
+
+% Tree Diagram
+
+\end{table}
+
+Although grammar is ambiguous, $LEFT-FACTOR$.
+
+\begin{eqnarray}
+\setcounter{equation}{1}
+\nonterminal{Statement}	&	\to	&	IF \nonterminal{C} THEN \nonterminal{Statement} \nonterminal{Else Part}	\\
+\nonterminal{Else Part}	&	\to	&	ELSE \nonterminal{Statement}															\\
+\nonterminal{Else Part}	&	\to	&	\epsilon	 
+\end{eqnarray}
+
+Note: Grammar is still ambiguous.
+
+$SELECT(\nonterminal{Else Part} \to \epsilon) = FOLLOW(\nonterminal{Else Part}) = FOLLOW(\nonterminal{Statement}) = \{ ELSE, \dashv \}$
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+									&	$IF$	&	$THEN$	&	$ELSE$	&	$\dashv$	\\
+\hline
+$\nonterminal{Statement}$	&	$\#1$	&				&				&				\\
+\hline
+$\nonterminal{Else Part}$	&			&				&	$\#2$		&	$\#3$		\\
+\hline
+$\triangledown$				&			&				&				&	$ACCEPT$	\\
+\hline
+\end{tabular}
+
+$\#1$ : $REPLACE(\nonterminal{Else Part} \nonterminal{Statement} THEN \nonterminal{C}),ADVANCE$ \\
+$\#2$ : $REPLACE(\nonterminal{Statement}),ADVANCE$ \\
+$\#3$ : $POP,RETAIN$ \\
+
+If either production $\#2$ or $\#3$ can be applied, apply production $\#2$ 
+
+\end{document}

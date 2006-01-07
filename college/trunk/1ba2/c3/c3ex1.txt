@@ -1,0 +1,20 @@
+myName				valid identifier
+while  				java keyword
+ELSE 					valid identifier 
+5.0E3  				double literal base 10
+0x56A1   			hexadecimal integer literal 
+02547L  				octal long literal
+numOf$  				valid identifier
+2345.78F  			float literal base 10
+timeToGo  			valid identifier
+timetogo   			valid identifier
+1110  				int literal base 10
+01110  				octal int literal 
+8945.89e-10D  		double literal base 10
+class  				java keyword
+an_identifier   	valid identifier
+2tired  				invalid identifier (begins with a number)
+'c'  					char literal
+"Vinny"  			string literal
+2,345  				invalid int literal (commas not allowed)
+0xFFFF				int literal base 16

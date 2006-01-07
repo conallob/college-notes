@@ -1,0 +1,245 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[all,matrix,tips,frame,curve,arrow]{xypic}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $14^{th}$ October 2004}
+
+\maketitle
+
+Syntax analyser ensures that the sequence of Lexical Tokens is
+gramatically correct.
+
+\section{Code Generation}
+
+Expansion of sequence of atoms into object code ($\equiv$ machine
+codeassembly language/core image memory image)
+
+
+\section{Semantic Analysis}
+
+Processing relating to the meaning of symbols.
+
+Eg: semantics of an identifier.
+
+	Includes it's type, it's bounds, if it is an array, etc...
+
+Semantic processing includes:
+
+	Static:
+
+		Filling it's symbol table entry with a type of identifier.
+
+	Dynamic:	
+
+		Selecting correct class of operator for instruction when expanding
+		atoms during code generation.
+
+\begin{verbatim}
+
+A + B
+.
+.
+.
+.
+\end{verbatim}
+
+\verb!ADD(!$\uparrow$ \verb!A, !$\uparrow$ \verb!B, !$\uparrow$ $T_{n}$\verb!)!
+
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+0 *=(2,1)\frm{-} ="A",
+(3,0) *=(2,1)\frm{-} ="B",
+(6,0) *=(2,1)\frm{-} ="C",
+(6,-2) *=(2,1)\frm{-} ="D",
+\POS "A" !CR \ar ; "B" !CL ,
+\POS "B" !CR \ar ; "C" !CL ,
+\POS "C" !DC \ar ; "D" !UC ,
+\POS "A" *{\txt{SA}} ,
+\POS "B" *{\txt{SEM}} ,
+\POS "C" *{\txt{CG}} ,
+\POS "D" *{\txt{OPT}} ,
+\endxy
+
+\end{figure}
+
+Optimiser:
+
+Optimisation code imporvisation techniques.
+
+
+\section{Runtime Implementation}
+
+Symbol table management
+
+passes
+
+\section{Finite State Machine}
+
+i A finite state of imput symbols (inut alphabet)
+
+ii A finite set of states, including a starting state.
+
+iii A transition function  $\delta$ that assigns a new state to every
+combination of state and input.
+
+iv A set of accepting states
+
+v A set of rejecting states.
+
+\[ \delta(S_{OLD}, INPUT) \Rightarrow S_{NEW} \]
+
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+0 *++[F-:<2mm>]\txt{$S_{old}$} \ar ^{input} ; (3,0) *++[F-:<2mm>]\txt{$S_{new}$}
+\endxy
+
+\end{figure}
+
+Eg: Parity Checker
+
+Input: $0, 1$
+
+States: $\{EVEN, ODD \}$
+
+Starting State: $\{EVEN\}$
+
+Transitions:	
+
+$\delta(EVEN, 0) \Rightarrow EVEN $ \\
+$\delta(EVEN, 1) \Rightarrow ODD $ \\
+$\delta(ODD, 0) \Rightarrow ODD $ \\
+$\delta(ODD, 0) \Rightarrow EVEN $ \\
+
+
+Accepting States: ${ODD}$
+
+
+Transition Table:
+
+\begin{tabular}{|c|c|c|}
+\hline
+States/Input & $0$ 		& 	$1$ 	\\
+\hline
+$EVEN$		 & $EVEN$	& $ODD$	\\
+\hline
+$ODD$			 & $ODD$		& $EVEN$	\\
+\hline
+\end{tabular}
+
+$1 = $ Accepting State \\
+
+$0 = $ Rejecting State
+
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+\UseTips
+\entrymodifiers={+++[o][F]}
+\xymatrix @-1mm {
+		*+\txt{Starting \\ State} \ar[r]
+	&	Even \ar@(dr,dl)[]^0 \ar@/^6mm/[r]^1
+	&	*+++[o][F=]{Odd}
+		\ar@(d,dl)[]^0 \ar@/^6mm/[l]_1
+	& *+\txt{Accepting \\ State} \ar@{.>}[l]
+}
+\endxy
+
+\caption{Transition Diagram}
+
+\end{figure}
+
+
+$01011$
+
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+\UseTips
+\entrymodifiers={+++[o][F]}
+\xymatrix @-1mm {
+		E \ar[r]^0
+	&	E \ar[r]^1
+	&	O \ar[r]^1
+	&	E \ar[r]^1
+	&	O
+}
+\endxy
+
+\end{figure}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+		 	& $0$ 	& $1$ 	& 		\\
+\hline
+$S$		& $S$		& $S$		& $0$	\\
+\hline
+\end{tabular}
+
+
+\begin{tabular}{|c|c|c|c|}
+
+\hline
+		 	& $0$ 	& $1$ 	& 		\\
+\hline
+$S$		& $T$		& $T$		& $1$	\\
+\hline
+$T$		& $T$		& $T$		& $0$	\\
+\hline
+
+\end{tabular}
+
+
+\section{Finite State Processing Machine:}
+
+A finite state recognising machine with input alphabet extended by the
+end marker symbol $\dashv$.
+
+
+\section{Question}
+
+Design a FSM to recognise input containing pairs of $1$s.
+
+
+Input: $0$, $1$
+
+States: ${NOONES, ONEONE}$
+
+Starting State: ${NOONES}$
+
+Accepting states: ${NOONES}$
+
+Transition Table:
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+		 	& $0$ 			& $1$ 			& 			\\
+\hline
+$NOONES$	& $NOONES$		& $ONEONE$		& "YES"	\\
+\hline
+$ONEONE$	& $ERROR$		& $NOONES$		& "NO"	\\
+\hline
+$ERROR$	& $ERROR$		& $ERROR$		& "NO"	\\
+\hline
+\end{tabular}
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+		 	& $0$ 			& $1$ 			& $\dashv$		\\
+\hline
+$NOONES$	& $NOONES$		& $ONEONE$		& "YES" $0$		\\
+\hline
+$ONEONE$	& $ERROR$		& "YES" $1$		& "NO"			\\
+\hline
+\end{tabular}
+
+\end{document}

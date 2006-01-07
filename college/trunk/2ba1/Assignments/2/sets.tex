@@ -1,0 +1,230 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Course 2BA1: Michaelmas Term 2003 \\ Assignment II}
+
+\author{Conall O'Brien \\ \\ 01734351 \\ \\ conall@conall.net}
+
+\maketitle
+
+\section{}
+
+\subsection*{Question}
+
+Prove that
+
+\[ A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C) \]
+
+\subsection*{Proof}
+
+Let $D = A \setminus (B \setminus C)$ and $E = (A \setminus B) \cup (A
+\cap C)$
+
+\vspace{10mm}
+
+\noindent If $x \in D$, then $x \in A$ and $x \in B \setminus C$, since
+$x \in D$, $x \not\in B$ and $x \not\in C$. $x \in A \setminus B$, since 
+$x \in A$ and $x \not\in B$. $x \in A \cap C$ and since $x \in A$ and 
+$x \not\in C$. $x \in (A \setminus B) \cup (A \cap C)$, ie $x \in E$.
+
+\vspace{10mm}
+
+\noindent If $x \in E$. Therefore $x \in A \setminus B$ or $x \in A \cap
+C$. If $x \in A \setminus B$, $x \in A$ and $x \not\in B$. If $x \in A $
+or $x \in C$, $x \not\in B$. Therefore $x \in A \setminus (B \setminus
+C)$, since $x \in A$. Therefore $x \in D$.
+
+\vspace{10mm}
+
+\noindent $ D \subset E$ and $E \subset D$.
+
+\noindent Therefore $D = E$ and so $A \setminus (B \setminus C) = (A
+\setminus B) \cup (A \cap C)$.
+
+\section{}
+
+\subsection*{(i)}
+
+\noindent $xPy$ for all $x$, $y \in \mathbb{R}$ when $y = xk^{2}$. $k \in \mathbb{Z}$.
+
+\subsubsection*{Reflexive?}
+
+\noindent Therefore $xPx$ is true if and only if $x = xk^{2}$.
+
+\vspace{10mm}
+
+ \[1 = k^{2} \]
+
+\[ 1 = k \]
+
+\[ 1 \in \mathbb{Z} \]
+
+\vspace{10mm}
+
+\noindent Therefore $P$ is reflexive.
+
+\subsubsection*{Symmetric?}
+
+\noindent $xPy = yPx$ if and only if $y = xk^{2}$ and $x = yl^{2}$.
+$xRy = yPx$ when $k$, $l \in \mathbb{Z}$.
+
+\[ y = (yl^{2})k^{2} \]
+
+\[ y = y l^{2} k^{2} \]
+
+\[ 1 = l^{2} k^{2} \]
+
+\[ 1 = k l \]
+
+\noindent if $l = 3$ and $k = \frac{1}{3}$, then $1 = 1 \times
+\frac{1}{3}$. However when $k = \frac{1}{3}$, $k \not\in \mathbb{Z}$.
+
+\noindent Therefore $P$ is not symmetric.
+
+\subsubsection*{Transitive?}
+
+$xPy$ and $yPz$ are true, so $y = xk^{2}$ and $z = yl^{2}$. Therefore
+$xPz$ is true, if $z = xj^{2}$ is also true.
+
+\[ (yl^{2}) = xj^{2} \]
+
+\[ k^{2}l^{2} = j^{2} \]
+
+\[ kl = j \]
+
+\noindent Therefore $j$, $k$, $l \in \mathbb{Z}$. Thus $P$ is transitive.
+
+\subsubsection*{Anti-Symmetric?}
+
+$x = $ if $xPy$ and $yPx$ are true, if and only if $y = x k^{2}$ and $x
+= y l^{2}$.
+
+\[ y = (y l^{2}) k^{2} \]
+
+\[ y = y l^{2} k^{2} \]
+
+\[ 1 = l^{2} k^{2} \]
+
+\[ 1 = l k \]
+
+\noindent If $k = 2$ and $l = \frac{1}{2}$, then $1 = 1$. However, when
+$l = \frac{1}{2}$, $k \not\in \mathbb{Z}$. Hence $P$ is not
+anti-symmetric.
+
+\subsubsection*{Conclusion}
+
+\noindent $P$ is neither an equivalence relation, nor a partial order, since it is
+neither symmetric nor anti-symmetric.
+
+\subsection*{(ii)}
+
+$xQy$ if $x$, $y \in \mathbb{R}$ if and only if $y^{3} = x^{3} - x + y$.
+
+\subsubsection*{Reflexive?}
+
+$xQx$ is true if and only if $x^{3} = x^{3} - x + x$.
+
+\[ x^{3} = x^{3} \]
+
+\noindent Therefore, $Q$ is reflexive.
+
+\subsubsection*{Symmetric?}
+
+$xQy = yQx$ if and only if $y^{3} = x^{3} - x + y$ and $x^{3} = y^{3} -
+y + x$.
+
+\[ y^{3} = (y^{3} - y + x) - x + y \]
+
+\[ y^{3} = y^{3} - y + x - x + y \]
+
+\[ y^{3} = y^{3} \]
+
+\noindent Therefore $Q$ is symmetric.
+
+\subsubsection*{Transitive?}
+
+\noindent If $xQy$ and $yQz$ are true, then $y^{3} = x^{3} - x + y$ and $z^{3} =
+y^{3} - y + z$ are also true. Therefore is $z^{3} = x^{3} - x + z$ true,
+hence $xQz$ true as well?
+
+\[ (y^{3} - y + z) = x^{3} - x + z \]
+
+\[ (x^{3} - x + y) - y + z = x^{3} - x + z \]
+
+\[ x^{3} - x + z = x^{3} - x + z \]
+
+\noindent Therefore $Q$ is transitive.
+
+\subsubsection*{Anti-Symmetric?}
+
+\noindent If $xQy$ and $yQx$ are true, and hence $y^{3} = x^{3} - x + y$ and
+$x^{3} = y^{3} - y + x$, is $x = y$ true?
+
+\[ y^{3} = (y^{3} - y + x) - x + y \]
+
+\[ y^{3} = y^{3} - y + x - x + y \]
+
+\[ y^{3} = y^{3} \]
+
+\noindent Therefore, if $y = y$, $y \neq x$, thus $Q$ is not anti-symmetric.
+
+\subsubsection*{Conclusion}
+
+\noindent $Q$ is a not a partial order since it is not anti-symmetric. It is not an 
+equivalence relation however, since it is reflexive, symmetric and
+transitive.
+
+\section{}
+
+\subsection*{(i)}
+
+$ f : [-1, 1] \to [-2, 2] $ for $f(x) = x^{3} + x$, $x \in [-1, 1]$.
+
+\[ f'(x) = 3x^{2} + 1 = 0 \]
+
+\noindent Therefore $f(x)$ is a strictly increasing function.
+
+\[ f(-1) = (-1)^{3} + (-1) \]
+
+\[ f(-1) = -2 \]
+
+\[ f(1) = (1)^{3} + (1) = 2 \]
+
+\[ f(1) = 2 \]
+
+\[ f(-1) \neq f(1) \]
+
+\noindent Therefore $f$ is injective.
+
+\[ f(-1) = -2 \]
+
+\[ f(1) = 2 \]
+
+\noindent Therefore $f$ is surjective and hence $f$ is bijective, since it
+is injective and surjective. Hence it is invertible.
+
+\subsection*{(ii)}
+
+\noindent $g : (-1, 1) \to \mathbb{R}$ with $g(x) = \frac{1}{1 - x^{2}}$ for all
+values of $x \in (-1, 1)$.
+
+\[ g(0) = \frac{1}{1 - (0)^{2}} = 1 \]
+
+\[ g(0.5) = \frac{1}{1 - 0.25} = \frac{1}{0.75} = \frac{4}{3} \]
+
+\[ g(-0.5) = \frac{1}{1 - 0.25} = \frac{1}{0.75} = \frac{4}{3} \]
+
+\noindent Therefore $g$ is not injective since $0.5 \neq -0.5$.
+
+\vspace{10mm}
+
+\noindent However, $g(0.5) = \frac{4}{3}$, $g(-0.5) = \frac{4}{3}$. $\frac{4}{3}
+\in \mathbb{R}$. Therefore $g$ is surjective.
+
+\noindent Therefore $g$ is not bijective, because it is not injective.
+Hence it is not invertible.
+
+
+\end{document}

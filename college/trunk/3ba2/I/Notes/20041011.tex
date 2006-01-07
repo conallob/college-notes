@@ -1,0 +1,90 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+%\lstset{language=prolog}
+
+\begin{document}
+
+\title{Course 3BA2: Artificial Intellegence \\ Additional Lecture Notes \\ $11^{th}$ October 2004}
+
+\maketitle
+
+\section{Introduction}
+
+Proceedural Languages - 
+
+\begin{itemize}
+\item Java
+\item C/C++
+\item Eiffel
+\item $68K$ ASM
+\item Perl
+\item Python
+\item PHP
+\item QBASIC
+\end{itemize}
+
+Prolog: Non proceedural, declarative
+
+\begin{eqnarray*}
+A1 & : & 85 \\
+B4 & : & 876 \\
+C9 & : & A1 \times B4 \\
+\end{eqnarray*}
+
+
+Listener \\
+
+Interpreter \\
+ 
+
+\begin{verbatim}
+
+parent(chris,liz). % a clause
+parent(chris,mike).
+parent(liz,aidan).
+parent(liz,louise).
+parent(make,clare).
+parent(mike,kate).
+
+?- parent(chris,liz).
+
+yes
+
+
+?-
+
+:- % if
+
+_ % anonymous variable
+
+[1,2,3] % list
+
+\end{verbatim}
+
+\section{Predecate}
+
+
+\begin{verbatim}
+
+read_everything(File) :-  see(File),
+.  
+.  read(T),
+.  process(T),
+. 
+. 
+. 
+
+seen.
+
+process(end_of_file).
+process(X) :- write(X),nl,read(Y),process(Y).
+
+\end{verbatim}
+
+\end{document}

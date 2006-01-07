@@ -1,0 +1,10 @@
+backslash
+insert <PROJECT> u:/college/2ba4/vhdl/1/1a/__express_prj/splitter
+insert <LIBRARY>
+insert unisim C:/Xilinx/vhdl/src/unisims/unisim_vcomp.vhd
+plslib 
+insert <V_LIBRARY>
+insert 
+insert <FILES> splitter.vhd 
+insert <SYNTAX> splitter.vhd 
+insert <TOUCH_FILE> splitter.stx
