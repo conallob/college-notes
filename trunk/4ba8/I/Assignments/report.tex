@@ -18,11 +18,61 @@
 
 \section{Introduction}
 
-\section{Design}
+Given the broad guidelines relating to the implementation of this 
+assignment,  programming language and Web Services, I have decided to 
+use three technologies, Perl, MySQL and XML-RPC.
 
-\section{Architecture}
+
+I have chosen to use Perl for multiple reasons, primarily it's
+popular use developing server-side applications and dynamic web content.
+In addition, the extensive library of modules available to Perl ensures
+a complete implementation of numerous web service technologies.
+
+
+I have chosen to use XML-RPC for the exchanging of RPC messages due to
+it's lightweight and uncomplicated definition. It is my belief that the 
+use of XML-RPC over compeditors such as SOAP is appropariate for an
+application of this size and complexity.
+
+
+For backend database storage, I have opted to use MySQL, the open source
+SQL complient database over other Web Services backend solutions, such 
+as UDDI standard, who's definition is incomplete.
+
+
+In addition, I have chosen to run my Assignment on web hosting servers
+running the Apache 2.0 web server running on the Debian GNU/Linux
+platform. To satisfy the assignment requirement of "system must be 
+deployable across the Internet. It should, for example, be possible for 
+services to interoperate in an environment controlled by firewalls and 
+other Internet infrastructure", I have used MacOS X, FreeBSD and Ubuntu 
+GNU/Linux, systems connected to the TCD network, located behind the
+main TCD Cisco PIX firewall.
+
+\section{Architectural Design}
+
+My application design is simple, based upon the client - server
+architecture. A Perl script on the primary server acts as a translator
+between XML-RPC calls to the MySQL backend and the client script. An 
+additional feature of the server script not implemented by the 
+assignment of the deadline allows two server scripts to communicate
+between each other, allowing for backend replication between multiple,
+resielient hosts using XML-RPC.
+
+
+A second Perl script, the client script is a Command Line Interface 
+(CLI) to the server. It allows a user to do multiple actions, such as
+tourism service searchs (queries on the database), comparison of tourism 
+services (comparison of query results) and creation of new service
+instances (insert queries on the backend).
 
 \section{Code}
+
+\subsection{SQL Database}
+
+\subsection{Server}
+
+\subsection{Client}
 
 \section{Sample Output}
 
