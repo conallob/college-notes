@@ -1,4 +1,0 @@
-set -tmpdir .
-set -overwrite YES
-elaborate
--ifn reg_16bit.sprj

@@ -1,1 +1,0 @@
--tapkeep -show normal -mode pipe -command spl2sym -family=virtex2 full_adder.spl full_adder.sym

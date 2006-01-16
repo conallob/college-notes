@@ -1,1 +1,0 @@
--tapkeep -show normal -mode pipe -command spl2sym -family=virtex2 mux_9to1_16bit.spl mux_9to1_16bit.sym

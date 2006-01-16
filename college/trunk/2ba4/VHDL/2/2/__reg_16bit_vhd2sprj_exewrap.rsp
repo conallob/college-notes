@@ -1,1 +1,0 @@
--mode pipe -tapkeep -check warn -tcl -command C:/Xilinx/data/projnav/chipsim.tcl reg_16bit._sprj reg_16bit.sprj

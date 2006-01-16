@@ -1,1 +1,0 @@
--mode pipe -tapkeep -check warn -tcl -command C:/Xilinx/data/projnav/chipsim.tcl adder_16._prj adder_16.prj

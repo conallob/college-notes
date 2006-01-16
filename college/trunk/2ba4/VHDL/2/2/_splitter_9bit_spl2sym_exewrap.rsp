@@ -1,1 +1,0 @@
--tapkeep -show normal -mode pipe -command spl2sym -family=virtex2 splitter_9bit.spl splitter_9bit.sym

@@ -1,1 +1,0 @@
--tapkeep -mode pipe -command C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\rpple_adder_tb.tbw"

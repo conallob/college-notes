@@ -1,1 +1,0 @@
--tapkeep -mode pipe -command C:/Xilinx/bin/nt/tb.exe /j "d:\cgobrien\1a\decoder_tb.tbw"

@@ -1,7 +1,0 @@
-[Inputs]
-RESET
-CLK
-=D_IN[2:0]=
-[Outputs]
-=D_OUT[5:0]=
-[BiDir]

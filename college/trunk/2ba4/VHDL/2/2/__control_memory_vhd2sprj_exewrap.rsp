@@ -1,1 +1,0 @@
--mode pipe -tapkeep -check warn -tcl -command C:/Xilinx/data/projnav/chipsim.tcl control_memory._sprj control_memory.sprj
