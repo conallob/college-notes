@@ -1,3 +1,5 @@
+// $Id$
+
 #include "apr.h"
 #include "apr_file_io.h"
 	
@@ -12,7 +14,9 @@ int main(int argc, char *argv[])
 		  apr_pool_create(&p, NULL);
 
 		  apr_file_open_stdout(&fp, p);
-		  apr_file_printf(fp, "Hello World\n");
+
+		  apr_file_printf(fp, argv[1]);
+		  apr_file_printf(fp, "\n");
 
 		  return 0;
 }
