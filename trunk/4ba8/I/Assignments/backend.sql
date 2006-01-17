@@ -1,7 +1,5 @@
 # $Id$
 
-service ENUM ('Hotel', 'Car', 'Bike', 'Airline', 'Train');
-
 create table servicetype (
 	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
 	TypeName VARCHAR(80),
