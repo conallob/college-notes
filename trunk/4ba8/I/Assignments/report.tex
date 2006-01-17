@@ -5,6 +5,13 @@
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
 
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+\usepackage{listing}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
 \usepackage[left=2cm,right=2cm,top=4cm,bottom=4cm]{geometry}
 \usepackage{graphicx}
 
@@ -67,9 +74,84 @@ tourism service searchs (queries on the database), comparison of tourism
 services (comparison of query results) and creation of new service
 instances (insert queries on the backend).
 
+\subsection{Description of Functions}
+
+% function: AddService
+
+\subsubsection{AddService}
+
+This function is used to add a new type of service into the system. 
+
+To accomodate dynamic creation of new service types, this function
+performs one, optionally two operations. When an administrator invokes 
+AddService, they are given the choice to select an existing service 
+type, or add a new one. Once they have selected their service type, they
+then add service details, such as name and create a unique identifer
+used throughout the backend system.
+
+% function: RmService
+
+\subsection{RmService}
+
+This function compliments AddService. It simply removes a service
+operator from the list of known operators. Additionally, in order to
+prevent hanging dependancies, RmService also check for service instances
+accreddited to the deleted service and remove them, in order to ensure
+data consistincy in the booking system.
+
+% function: EditService
+
+\subsection{EditService}
+
+This function allows a service partner to edit their service details,
+such as their name.
+
+% function: SearchService
+
+\subsection{SearchService}
+
+This function is the core of the intented user experience. Based upon
+supplied criteria, it searches the collection of service instances 
+currently available and returns summary details of the results to enable
+comparisons of the search results.
+
+% function: GetService
+
+\subsection{GetService}
+
+GetService retrieves detailed information of a selected service,
+including Date, Time, Cost, Capacity, and additional details.
+
+% function: MkBooking
+
+\subsection{MkBooking}
+
+MkBooking allows a system user to create a booking of a selected service
+instance. At booking time, a user can make their booking flexible,
+meaning a different user may be able to reserve the booking.
+
+% function: GetBooking
+
+\subsection{GetBooking}
+
+GetBooking returns the status of an existing booking, confirming if a
+booking exists andf whether it is confirmed, flexible or cancelled.
+
+% function: EditBooking
+
+\subsection{EditBooking}
+
+EditBooking allows the booking system to edit the status flags of an
+existing booking. It can be used to mark a booking flexible or
+inflexible, to confirm or unconfirm a booking and to cancel a booking.
+
 \section{Code}
 
 \subsection{SQL Database}
+
+%\lsttset{language=Python,basicstyle=\footnotesize,fancyvrb=true}
+
+%\lstinputlisting{backend.sql}
 
 \subsection{Server}
 
