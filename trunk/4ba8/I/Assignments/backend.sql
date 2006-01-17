@@ -2,10 +2,16 @@
 
 service ENUM ('Hotel', 'Car', 'Bike', 'Airline', 'Train');
 
+create table servicetype (
+	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
+	TypeName VARCHAR(80),
+	PRIMARY 		KEY(TypeID)
+);
+
 create table service (
 	ServiceID	INTEGER	NOT NULL AUTO_INCREMENT,
 	ServiceName	VARCHAR(80) NOT NULL,
-	ServiceType	service NOT NULL,
+	ServiceType	INTEGER NOT NULL,
 	PRIMARY 		KEY(ServiceID)
 );
 
