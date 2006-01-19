@@ -6,6 +6,12 @@ create table servicetype (
 	PRIMARY 		KEY(TypeID)
 );
 
+create table servicetype (
+	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
+	TypeName VARCHAR(80),
+	PRIMARY 		KEY(TypeID)
+);
+
 create table service (
 	ServiceID	INTEGER	NOT NULL AUTO_INCREMENT,
 	ServiceName	VARCHAR(80) NOT NULL,
