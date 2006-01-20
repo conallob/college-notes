@@ -1,17 +1,13 @@
 -- $Id$
 
+drop table if exists servicetype;
 create table servicetype (
 	TypeID	int(5) NOT NULL auto_increment,
 	TypeName varchar(80) default '',
 	PRIMARY KEY(TypeID)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-create table servicetype (
-	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
-	TypeName VARCHAR(80),
-	PRIMARY 		KEY(TypeID)
-);
-
+drop table if exists service;
 create table service (
 	ServiceID	int(5)	NOT NULL auto_increment,
 	ServiceName	varchar(80) NOT NULL default '',
@@ -19,6 +15,7 @@ create table service (
 	PRIMARY KEY(ServiceID)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+drop table if exists instance;
 create table instance (
 	UniqueID		int(5) NOT NULL auto_increment,
 	ServiceID	int(5) NOT NULL auto_increment,
@@ -29,6 +26,7 @@ create table instance (
 	FOREIGN 		KEY(ServiceID) REFERENCES service (ServiceID);
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+drop table if exists booking;
 create table booking (
 	BookingID	int(5) NOT NULL auto_increment,
 	UniqueID		int(5) NOT NULL auto_increment,
