@@ -18,7 +18,7 @@ create table service (
 drop table if exists instance;
 create table instance (
 	UniqueID		int(5) NOT NULL auto_increment,
-	ServiceID	int(5) NOT NULL auto_increment,
+	ServiceID	int(5) NOT NULL,
 	ServiceDate	datetime	NOT NULL default '0000-00-00 00:00:00',
 	Capacity		int(5) NOT NULL default 0,
 	Cost			int(5) NOT NULL default 0,
@@ -28,10 +28,10 @@ create table instance (
 drop table if exists booking;
 create table booking (
 	BookingID	int(5) NOT NULL auto_increment,
-	UniqueID		int(5) NOT NULL auto_increment,
-	Booked		int(1),
-	Flexible		int(1),
-	Cancelled	int(1),
-	Confirmed	int(1),
+	UniqueID		int(5) NOT NULL,
+	Booked		enum('false', 'true') NOT NULL default 'false',
+	Flexible		enum('false', 'true') NOT NULL default 'false',
+	Cancelled	enum('false', 'true') NOT NULL default 'false',
+	Confirmed	enum('false', 'true') NOT NULL default 'false',
 	PRIMARY KEY(BookingID)
 );
