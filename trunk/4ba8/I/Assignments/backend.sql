@@ -1,10 +1,10 @@
-# $Id$
+-- $Id$
 
 create table servicetype (
-	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
-	TypeName VARCHAR(80),
-	PRIMARY 		KEY(TypeID)
-);
+	TypeID	int(5) NOT NULL auto_increment,
+	TypeName varchar(80) default '',
+	PRIMARY KEY(TypeID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 create table servicetype (
 	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
@@ -13,30 +13,29 @@ create table servicetype (
 );
 
 create table service (
-	ServiceID	INTEGER	NOT NULL AUTO_INCREMENT,
-	ServiceName	VARCHAR(80) NOT NULL,
-	ServiceType	INTEGER NOT NULL,
-	PRIMARY 		KEY(ServiceID)
-);
+	ServiceID	int(5)	NOT NULL auto_increment,
+	ServiceName	varchar(80) NOT NULL default '',
+	ServiceType	int(5) NOT NULL,
+	PRIMARY KEY(ServiceID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 create table instance (
-	UniqueID		INTEGER NOT NULL AUTO_INCREMENT,
-	ServiceID	INTEGER	NOT NULL AUTO_INCREMENT,
-	ServiceDate	DATE	NOT NULL,
-	ServiceDate	NOT NULL,
-	Capacity		INTEGER	NOT NULL,
-	Cost			INTEGER NOT NULL,
+	UniqueID		int(5) NOT NULL auto_increment,
+	ServiceID	int(5) NOT NULL auto_increment,
+	ServiceDate	datetime	NOT NULL default '0000-00-00 00:00:00',
+	Capacity		int(5) NOT NULL default 0,
+	Cost			int(5) NOT NULL default 0,
 	PRIMARY 		KEY(UniqueID),
 	FOREIGN 		KEY(ServiceID) REFERENCES service (ServiceID);
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 create table booking (
-	BookingID	INTEGER NOT NULL AUTO_INCREMENT,
-	UniqueID		INTEGER NOT NULL AUTO_INCREMENT,
-	Booked		BOOLEAN,
-	Flexible		BOOLEAN,
-	Cancelled	BOOLEAN,
-	Confirmed	BOOLEAN,
+	BookingID	int(5) NOT NULL auto_increment,
+	UniqueID		int(5) NOT NULL auto_increment,
+	Booked		int(1),
+	Flexible		int(1),
+	Cancelled	int(1),
+	Confirmed	int(1),
 	PRIMARY KEY(BookingID),
 	FOREIGN KEY(UniqueID) REFERENCES instance (UniqueID);
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
