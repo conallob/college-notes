@@ -5,7 +5,7 @@ create table servicetype (
 	TypeID	int(5) NOT NULL auto_increment,
 	TypeName varchar(80) default '',
 	PRIMARY KEY(TypeID)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 create table servicetype (
 	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
@@ -18,7 +18,7 @@ create table service (
 	ServiceName	varchar(80) NOT NULL default '',
 	ServiceType	int(5) NOT NULL,
 	PRIMARY KEY(ServiceID)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 drop table if exists instance;
 create table instance (
@@ -27,8 +27,9 @@ create table instance (
 	ServiceDate	datetime	NOT NULL default '0000-00-00 00:00:00',
 	Capacity		int(5) NOT NULL default 0,
 	Cost			int(5) NOT NULL default 0,
-	PRIMARY 		KEY(UniqueID)
-);
+	PRIMARY 		KEY(UniqueID),
+	FOREIGN 		KEY(ServiceID) REFERENCES service (ServiceID);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 drop table if exists booking;
 create table booking (
@@ -38,5 +39,6 @@ create table booking (
 	Flexible		int(1),
 	Cancelled	int(1),
 	Confirmed	int(1),
-	PRIMARY KEY(BookingID)
-);
+	PRIMARY KEY(BookingID),
+	FOREIGN KEY(UniqueID) REFERENCES instance (UniqueID);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
