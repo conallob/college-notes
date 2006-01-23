@@ -25,7 +25,6 @@ create table instance (
 	Capacity		int(5) NOT NULL default 0,
 	Cost			int(5) NOT NULL default 0,
 	PRIMARY 		KEY(UniqueID),
-	FOREIGN 		KEY(ServiceID) REFERENCES service (ServiceID);
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 drop table if exists booking;
@@ -37,5 +36,4 @@ create table booking (
 	Cancelled	int(1),
 	Confirmed	int(1),
 	PRIMARY KEY(BookingID),
-	FOREIGN KEY(UniqueID) REFERENCES instance (UniqueID);
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
