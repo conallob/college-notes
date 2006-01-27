@@ -37,6 +37,11 @@ package ba8;
 		shift;
 		my ($name) = @_;
 
+		if (! defined($name)) {
+			return undef;
+			# Report an error
+		}
+
   	  	my $sth = $dbh->prepare("INSERT into servicetype values(NULL, '$name');");
 
 		if ($sth->execute()) {
@@ -51,6 +56,11 @@ package ba8;
 		shift;
 		my ($oldname, $newname) = @_;
 
+		if (! defined($oldname) || ! defined($newname)) {
+			return undef;
+			# Report an error
+		}
+
   	  	my $sth = $dbh->prepare("UPDATE servicetype SET TypeName=$newname where TypeName=$oldname;");
 
 		if ($sth->execute()) {
@@ -63,9 +73,14 @@ package ba8;
 
 	sub DeleteServiceType {
 		shift;
-		my ($id) = @_;
+		my ($name) = @_;
 
-  	  	my $sth = $dbh->prepare("DROP * from servicetype where TypeID=$id;");
+		if (! defined($name)) {
+			return undef;
+			# Report an error
+		}
+
+  	  	my $sth = $dbh->prepare("DROP * from servicetype where TypeName=$name;");
 
 		if ($sth->execute()) {
 			# Good status code
@@ -78,6 +93,11 @@ package ba8;
 	sub GetServiceType {
 		shift;
 		my ($id) = @_;
+
+		if (! defined($id)) {
+			return undef;
+			# Report an error
+		}
 			  
   	  	my $sth = $dbh->prepare("SELECT TypeName from servicetype where TypeID=$id;");
   	  	if ($sth->execute()) {
@@ -103,6 +123,11 @@ package ba8;
 		shift;
 		my ($name, $type, $opening, $closing) = @_;
 
+		if (! defined($name) || ! defined($type) || ! defined($opening) || ! defined ($closing)) {
+			return undef;
+			# Report an error
+		}
+
 		# Do lookup of TypeID from servicetype
 
 		# Do checks to see if $opening and $closing are defined
@@ -121,6 +146,11 @@ package ba8;
 		shift;
 		my ($oldname, $prop, $value) = @_;
 
+		if (! defined($oldname) || ! defined ($prop) || ! defined ($value)) {
+			return undef;
+			# Report an error
+		}
+
   	  	my $sth = $dbh->prepare("UPDATE service SET $prop=$value where ServiceName=$oldname;");
 
 		if ($sth->execute()) {
@@ -134,6 +164,11 @@ package ba8;
 	sub DeleteOperator {
 		shift;
 		my ($name) = @_;
+
+		if (! defined($name)) {
+			return undef;
+			# Report an error
+		}
 
 		# dependencies in instances, and bookings...
 		
@@ -150,6 +185,11 @@ package ba8;
 	sub GetOperator {
 		shift;
 		my ($id) = @_;
+
+		if (! defined($id)) {
+			return undef;
+			# Report an error
+		}
 
   	  	my $sth = $dbh->prepare("SELECT * from service where ServiceID=$id);");
 
@@ -171,6 +211,14 @@ package ba8;
 	sub AddInstance {
 		shift;
 		my ($operator, $date, $capacity, $cost, $src, $dest, $details) = @_;
+
+		if (! defined($operator) || ! defined ($date) || 
+				  ! defined ($capacity) || ! defined ($cost) || 
+				  ! defined ($src) || ! defined ($dest) || 
+				  ! defined ($details)) {
+			return undef;
+			# Report an error
+		}
 
 		# Do lookup of TypeID from servicetype
 
@@ -201,7 +249,12 @@ package ba8;
 	sub EditInstance {
 		shift;
 		my ($id, $flag, $newvalue) = @_;
-			  
+
+		if (! defined($id) || ! defined ($flag) || ! defined ($newvalue)) {
+			return undef;
+			# Report an error
+		}
+		  
   	  	my $sth = $dbh->prepare("UPDATE instance SET $flag=$newvalue where UniqueID=$id;");
 
 		if ($sth->execute()) {
@@ -215,6 +268,11 @@ package ba8;
 	sub DeleteInstance { 
 		shift;
 		my ($id) = @_;
+
+		if (! defined($id)) {
+			return undef;
+			# Report an error
+		}
 
   	  	my $sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
 
@@ -261,6 +319,11 @@ package ba8;
 		shift;
 		my ($id) = @_;
 
+		if (! defined($id)) {
+			return undef;
+			# Report an error
+		}
+
 		my $booked 		= "true";
 		my $flexible	= "false";
 		my $cancelled 	= "false";
@@ -279,6 +342,11 @@ package ba8;
 	sub EditBooking {
 		shift;
 		my ($id, $flag, $newvalue) = @_;
+
+		if (! defined($id) || ! defined ($flag) || ! defined ($newvalue)) {
+			return undef;
+			# Report an error
+		}
 			  
   	  	my $sth = $dbh->prepare("UPDATE booking SET $flag=$newvalue where BookingID=$id;");
 
@@ -294,6 +362,11 @@ package ba8;
 		shift;
 		my ($id) = @_;
 
+		if (! defined($id)) {
+			return undef;
+			# Report an error
+		}
+
   	  	my $sth = $dbh->prepare("DROP * from booking where BookingID=$id;");
 
 		if ($sth->execute()) {
@@ -307,6 +380,11 @@ package ba8;
 	sub GetBooking {
 		shift;
 		my ($id) = @_;
+
+		if (! defined($id)) {
+			return undef;
+			# Report an error
+		}
 			  
   	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
   	  	
