@@ -22,7 +22,7 @@ create table instance (
 	ServiceDate	datetime	NOT NULL default '0000-00-00 00:00:00',
 	Capacity		int(5) NOT NULL default 0,
 	Cost			int(5) NOT NULL default 0,
-	PRIMARY 		KEY(UniqueID),
+	PRIMARY 		KEY(UniqueID)
 );
 
 drop table if exists booking;
@@ -33,5 +33,5 @@ create table booking (
 	Flexible		int(1),
 	Cancelled	int(1),
 	Confirmed	int(1),
-	PRIMARY KEY(BookingID),
+	PRIMARY KEY(BookingID)
 );
