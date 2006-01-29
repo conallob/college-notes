@@ -7,12 +7,7 @@ create table servicetype (
 	PRIMARY KEY(TypeID)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-create table servicetype (
-	TypeID	INTEGER NOT NULL AUTO_INCREMENT,
-	TypeName VARCHAR(80),
-	PRIMARY 		KEY(TypeID)
-);
-
+drop table if exists service;
 create table service (
 	ServiceID	int(5)	NOT NULL auto_increment,
 	ServiceName	varchar(80) NOT NULL default '',
