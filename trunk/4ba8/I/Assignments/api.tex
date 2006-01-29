@@ -2,6 +2,8 @@
 
 \documentclass[a4paper,12pt]{article}
 
+\usepackage{amssymb}
+
 \begin{document}
 
 \subsection{AddServiceType}
@@ -12,21 +14,21 @@ Adds a new service catagory to the backend database.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -39,22 +41,22 @@ automatically.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!oldname! & \vspace{15mm} & <string> & \vspace{15mm} & Old Catagory Name \\
 \verb!newname! & \vspace{15mm} & <string> & \vspace{15mm} & New Catagory Name \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -68,21 +70,21 @@ Services and Bookings dependant on removed catagory.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -95,20 +97,20 @@ Confirm if a string is a service catagory.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!TypeName! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
 \end{tabular}
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -122,7 +124,7 @@ opening and closing dates and times, stating when operator is active.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Name \\
 \verb!type! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
 \verb!opening! & \vspace{15mm} & <null> | <datetime> & \vspace{15mm} & Opening Date/Time \\
@@ -131,15 +133,15 @@ opening and closing dates and times, stating when operator is active.
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -152,7 +154,7 @@ Updates the recorded details of a Service Provider in the backend.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!oldname! & \vspace{15mm} & <string> & \vspace{15mm} & Current Operator Name \\
 \verb!prop! & \vspace{15mm} & <string> - "ServiceName" | "ServiceType" |
 "Opening" | "Closing"& \vspace{15mm} & Attribute  \\
@@ -161,15 +163,15 @@ Updates the recorded details of a Service Provider in the backend.
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -183,21 +185,21 @@ bookings.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!oldname! & \vspace{15mm} & <string> & \vspace{15mm} & Current Operator Name \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -210,24 +212,24 @@ Returns details on service provider.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Name \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!ServiceName! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Name \\
 \verb!ServiceType! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Catagory \\
 \verb!Opening! & \vspace{15mm} & <null> | <datetime> & \vspace{15mm} & Operator Opeing Date/Time \\
 \verb!Closing! & \vspace{15mm} & <null> | <datetime> & \vspace{15mm} & Operator Closing Date/Time \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -241,7 +243,7 @@ system.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!operator! & \vspace{15mm} & <string> 	& \vspace{15mm} & Operator Name \\
 \verb!date! 	 & \vspace{15mm} & <datetime> & \vspace{15mm} & Date/Time of Service\\
 \verb!capacity! & \vspace{15mm} & <int> 		& \vspace{15mm} & Capacity available \\
@@ -253,15 +255,15 @@ system.
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -274,7 +276,7 @@ Edits details of an existing service.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
 \verb!prop! & \vspace{15mm} & <string> - "ServiceDate" | "Capacity" | "Cost" | "Source" | "Destination" | "Details|& \vspace{15mm} & Attribute  \\
 \verb!value! & \vspace{15mm} & <string> | <datetime> | <int> | <null> & \vspace{15mm} & Desired Value \\
@@ -282,15 +284,15 @@ Edits details of an existing service.
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -304,21 +306,21 @@ service.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -330,15 +332,15 @@ Returns the complete details of a service.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!ServiceID! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
 \verb!ServiceDate! & \vspace{15mm} & <datetime> & \vspace{15mm} & Service Date \\
 \verb!Capacity! & \vspace{15mm} & <int> & \vspace{15mm} & Capacity Available \\
@@ -347,9 +349,9 @@ Returns the complete details of a service.
 \verb!Destination! & \vspace{15mm} & <string> | <null> & \vspace{15mm} & Destination of Service \\
 \verb!Details! & \vspace{15mm} & <string> | <null> & \vspace{15mm} & Additional Details \\
 \end{tabular}
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -362,21 +364,21 @@ Makes a booking for a specified service.
 
 \subsubsection{Parameters}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
 \end{tabular}
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -391,15 +393,15 @@ Edit the status flags of an existing booking.
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -414,15 +416,15 @@ Delete an existing booking.
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
 \end{tabular}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
@@ -437,11 +439,11 @@ Returns details on an existing booking.
 
 \subsubsection{Returns}
 
-\subsubsubsection{On Success}
+\subsubsection{On Success}
 
-\subsubsubsection{On Failure}
+\subsubsection{On Failure}
 
-\begin{tabular}[ccccc]
+\begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
 
