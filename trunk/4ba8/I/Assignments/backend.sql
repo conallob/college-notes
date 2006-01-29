@@ -24,6 +24,8 @@ create table instance (
 	ServiceDate	datetime	NOT NULL default '0000-00-00 00:00:00',
 	Capacity		int(5) NOT NULL default 0,
 	Cost			int(5) NOT NULL default 0,
+	Opening		datetime default NULL,
+	Closing		datetime default NULL,
 	PRIMARY 		KEY(UniqueID)
 );
 
