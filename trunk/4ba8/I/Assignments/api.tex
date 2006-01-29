@@ -1,0 +1,448 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+
+\begin{document}
+
+\subsection{AddServiceType}
+
+\subsubsection{Description}
+
+Adds a new service catagory to the backend database.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+\subsection{EditServiceType}
+
+\subsubsection{Description}
+
+Renames a Service Type. Affects all Operators in this catagory
+automatically. 
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!oldname! & \vspace{15mm} & <string> & \vspace{15mm} & Old Catagory Name \\
+\verb!newname! & \vspace{15mm} & <string> & \vspace{15mm} & New Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteServiceType}
+
+\subsubsection{Description}
+
+Removed a Service Type. Automatically deletes all Operators,
+Services and Bookings dependant on removed catagory.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{GetServiceType}
+
+\subsubsection{Description}
+
+Confirm if a string is a service catagory.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!TypeName! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
+\end{tabular}
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{AddOperator}
+
+\subsubsection{Description}
+
+Adds a service provider to the system. Details can optionally include
+opening and closing dates and times, stating when operator is active.  
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Name \\
+\verb!type! & \vspace{15mm} & <string> & \vspace{15mm} & Catagory Name \\
+\verb!opening! & \vspace{15mm} & <null> | <datetime> & \vspace{15mm} & Opening Date/Time \\
+\verb!closing! & \vspace{15mm} & <null> | <datetime> & \vspace{15mm} & Closing Date/Time \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{EditOperator}
+
+\subsubsection{Description}
+
+Updates the recorded details of a Service Provider in the backend.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!oldname! & \vspace{15mm} & <string> & \vspace{15mm} & Current Operator Name \\
+\verb!prop! & \vspace{15mm} & <string> - "ServiceName" | "ServiceType" |
+"Opening" | "Closing"& \vspace{15mm} & Attribute  \\
+\verb!value! & \vspace{15mm} & <string> | <datetime> | <null> & \vspace{15mm} & Desired Value \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteOperator}
+
+\subsubsection{Description}
+
+Removes a Service Provider, including any dependant services and
+bookings.  
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!oldname! & \vspace{15mm} & <string> & \vspace{15mm} & Current Operator Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{GetOperator}
+
+\subsubsection{Description}
+
+Returns details on service provider.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!name! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!ServiceName! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Name \\
+\verb!ServiceType! & \vspace{15mm} & <string> & \vspace{15mm} & Operator Catagory \\
+\verb!Opening! & \vspace{15mm} & <null> | <datetime> & \vspace{15mm} & Operator Opeing Date/Time \\
+\verb!Closing! & \vspace{15mm} & <null> | <datetime> & \vspace{15mm} & Operator Closing Date/Time \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{AddInstance}
+
+\subsubsection{Description}
+
+Adds details of a specific service from a service provider to the
+system.  
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!operator! & \vspace{15mm} & <string> 	& \vspace{15mm} & Operator Name \\
+\verb!date! 	 & \vspace{15mm} & <datetime> & \vspace{15mm} & Date/Time of Service\\
+\verb!capacity! & \vspace{15mm} & <int> 		& \vspace{15mm} & Capacity available \\
+\verb!cost! 	 & \vspace{15mm} & <int> 		& \vspace{15mm} & Cost per Person/Service \\
+\verb!src! 		 & \vspace{15mm} & <null> | <string> & \vspace{15mm} & Source of Service (Optional) \\
+\verb!dest! 	 & \vspace{15mm} & <null> | <string> & \vspace{15mm} & Destination of Service (Optional) \\
+\verb!details!  & \vspace{15mm} & <null> | <string> & \vspace{15mm} & Additonal Service Details (Optional) \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{EditInstance}
+
+\subsubsection{Description}
+
+Edits details of an existing service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
+\verb!prop! & \vspace{15mm} & <string> - "ServiceDate" | "Capacity" | "Cost" | "Source" | "Destination" | "Details|& \vspace{15mm} & Attribute  \\
+\verb!value! & \vspace{15mm} & <string> | <datetime> | <int> | <null> & \vspace{15mm} & Desired Value \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteInstance}
+
+\subsubsection{Description}
+
+Deletes a specified service and any bookings connected to the specified
+service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+\subsection{GetInstance}
+
+\subsubsection{Description}
+
+Returns the complete details of a service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!ServiceID! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
+\verb!ServiceDate! & \vspace{15mm} & <datetime> & \vspace{15mm} & Service Date \\
+\verb!Capacity! & \vspace{15mm} & <int> & \vspace{15mm} & Capacity Available \\
+\verb!Cost! & \vspace{15mm} & <int> & \vspace{15mm} & Unit Cost \\
+\verb!Source! & \vspace{15mm} & <string> | <null> & \vspace{15mm} & Source of Service \\
+\verb!Destination! & \vspace{15mm} & <string> | <null> & \vspace{15mm} & Destination of Service \\
+\verb!Details! & \vspace{15mm} & <string> | <null> & \vspace{15mm} & Additional Details \\
+\end{tabular}
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{AddBooking}
+
+\subsubsection{Description}
+
+Makes a booking for a specified service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}[ccccc]
+\verb!id! & \vspace{15mm} & <int> & \vspace{15mm} & Service ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{EditBooking}
+
+\subsubsection{Description}
+
+Edit the status flags of an existing booking.
+
+\subsubsection{Parameters}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteBooking}
+
+\subsubsection{Description}
+
+Delete an existing booking.
+
+\subsubsection{Parameters}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\begin{tabular}[ccccc]
+\verb!result! & \vspace{15mm} & <boolean> & \vspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{GetBooking}
+
+\subsubsection{Description}
+
+Returns details on an existing booking.
+
+\subsubsection{Parameters}
+
+\subsubsection{Returns}
+
+\subsubsubsection{On Success}
+
+\subsubsubsection{On Failure}
+
+\begin{tabular}[ccccc]
+\verb!4ba8error! & \vspace{15mm} & <string> & \vspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+\end{document}
