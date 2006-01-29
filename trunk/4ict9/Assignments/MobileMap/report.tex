@@ -2,6 +2,8 @@
 
 \documentclass[a4paper,12pt]{article}
 
+\usepackage{graphicx}
+
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
 
@@ -18,12 +20,12 @@ Conall O'Brien 01734351 \\ conallob@maths.tcd.ie}
 
 The assignment was broken down in the following structure
 
-\begin{tabular}[ccc]
+\begin{tabular}{lcl}
 Entire Group &	\hspace{15mm}	&	Descision on Geographical Location	\\
 David Collins	&					&	Construction of Composite Map			\\
 Conall O'Brien	&					&	Mapping of Mobile Network and Routes\\
 David Collins	&					&	Simulation of Routes around Network	\\
-Entire Group	&					&	Preparation of Report					\\
+Conall O'Brien	&					&	Preparation of Report					\\
 \end{tabular}
 
 \section{Geographic Location Chosen}
@@ -57,7 +59,35 @@ network.
 
 \subsection{Map}
 
+
+\begin{figure}[h]
+
+\includegraphics{amsterdam.png}
+
+\caption{Composite Map before Defining Areas and Mapping Routes}
+
+\end{figure}
+
+\pagebreak
+
+\begin{figure}[h]
+
+\includegraphics{routes.png}
+
+\caption{Overview of map with Areas and Mobile Routes defined}
+
+\end{figure}
+
 \section{Simulation Results}
+
+\begin{figure}[h]
+
+\includegraphics{screen7.png}
+
+\caption{General Simulation Overview}
+
+\end{figure}
+
 
 \section{Problems Encountered}
 
@@ -65,6 +95,20 @@ While attempting to plan the mobile network, Conall repeatidly
 encoutered unusual behaviour with the Eircsson Mapping Tool. While
 importing a map and specifying specific Latitude and Longitude values
 for a reference point on the map, Latitude and Longitude kept appearing
-erroniously as shown in the figure below.
+erroniously as shown in figure 8. To solve this problem, Conall
+was advices to set the width of the map to 140km after inputting the 
+Latitude and Longitude for the map. 
+
+\begin{figure}[h]
+
+\includegraphics{oddness.png}
+
+\caption{Mapping Tool Problem Encountered}
+
+\end{figure}
+
+When attempting to simulate the 4 mobile phone routes, mobile route 3000
+did not appear in the simulator. Despite being defined in the Mapping
+Tool, we were unable to explain why it did not simulate.
 
 \end{document}
