@@ -30,10 +30,10 @@ create table instance (
 drop table if exists booking;
 create table booking (
 	BookingID	int(5) NOT NULL auto_increment,
-	UniqueID		int(5) NOT NULL auto_increment,
-	Booked		int(1),
-	Flexible		int(1),
-	Cancelled	int(1),
-	Confirmed	int(1),
+	UniqueID		int(5) NOT NULL,
+	Booked		enum('false', 'true') NOT NULL default 'false',
+	Flexible		enum('false', 'true') NOT NULL default 'false',
+	Cancelled	enum('false', 'true') NOT NULL default 'false',
+	Confirmed	enum('false', 'true') NOT NULL default 'false',
 	PRIMARY KEY(BookingID)
 );
