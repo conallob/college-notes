@@ -101,7 +101,7 @@ package ba8;
 
 	sub AddOperator {
 		shift;
-		my ($name, $typename, $opening, $closing) = @_;
+		my ($name, $type, $opening, $closing) = @_;
 
 		# Do lookup of TypeID from servicetype
 
@@ -117,32 +117,140 @@ package ba8;
 	}
 
 	
-	#sub EditOperator 
+	sub EditOperator {
+		shift;
+		my ($oldname, $prop, $value) = @_;
 
+  	  	my $sth = $dbh->prepare("UPDATE service SET $prop=$value where ServiceName=$oldname;");
+
+		if ($sth->execute()) {
+			# Good status code
+		} else {
+			# Bad status code
+		}
+	}
+
+
+	sub DeleteOperator {
+		shift;
+		my ($name) = @_;
+
+		# dependencies in instances, and bookings...
+		
+  	  	my $sth = $dbh->prepare("DROP * from service where ServiceName=$name;");
+
+		if ($sth->execute()) {
+			# Good status code
+		} else {
+			# Bad status code
+		}
+	}
 
 	
-	#sub DeleteOperator 
-	
+	sub GetOperator {
+		shift;
+		my ($id) = @_;
 
-	
-	#sub AddOperator 
+  	  	my $sth = $dbh->prepare("SELECT * from service where ServiceID=$id);");
+
+		if ($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
+				return {		  
+					ServiceName	=> $row[1],
+					ServiceType	=> $row[2],
+					Opening		=> $row[3],
+					Closing 		=> $row[4]
+				};
+			# Good status code
+		} else {
+			# Bad status code
+		}
+	}
 
 
+	sub AddInstance {
+		shift;
+		my ($operator, $date, $capacity, $cost, $src, $dest, $details) = @_;
 
+		# Do lookup of TypeID from servicetype
 
-	#sub AddInstance 
+		
+  	  	my $sth = $dbh->prepare("SELECT ServiceID from service where ServiceName='$operator';");
 
+		if ($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
+				$operatorid = $row[0];
+			}
+			# Good status code
+		} else {
+			# Bad status code
+		}
+
+  	  	$sth = $dbh->prepare("INSERT into instance values(NULL, $operatorid, '$date', $capacity, $cost, '$src', '$dest', '$details');");
+
+		if ($sth->execute()) {
+			# Good status code
+		} else {
+			# Bad status code
+		}
+	}
 
 
 	#sub EditInstance 
 	
+	sub EditInstance {
+		shift;
+		my ($id, $flag, $newvalue) = @_;
+			  
+  	  	my $sth = $dbh->prepare("UPDATE instance SET $flag=$newvalue where UniqueID=$id;");
+
+		if ($sth->execute()) {
+			# Good status code
+		} else {
+			# Bad status code
+		}
+	}
+
 	
+	sub DeleteInstance { 
+		shift;
+		my ($id) = @_;
+
+  	  	my $sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
+
+		if ($sth->execute()) {
+			# Good status code
+		} else {
+			# Bad status code
+		}
+	}
+
 	
-	#sub DeleteInstance 
-	
-	
-	
-	#sub AddInstance 
+	sub GetInstance {
+		shift;
+		my ($id) = @_;
+			  
+  	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
+  	  	
+		if($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
+				return {		  
+					ServiceID	=> $row[1],
+					ServiceDate	=> $row[2],
+					Capacity		=> $row[3],
+					Cost			=> $row[4],
+					Source		=> $row[5],
+					Destination	=> $row[6],
+					Details		=> $row[7]
+				};
+			} else {
+				# MySQL Fetch Error
+			}
+		} else {
+			# Bad status code
+		}
+	}
+
 
 	#
 	# Functions to Manipulate Bookings
