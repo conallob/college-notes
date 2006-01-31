@@ -1,6 +1,6 @@
 % $Id$
 
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -9,11 +9,12 @@
 \usepackage[usenames]{color}
 \usepackage[arc,poly,all]{xy}
 \usepackage{ulem}
-\usepackage{listing}
+\usepackage{listings}
 \usepackage{verbatim}
 \usepackage{fancyvrb}
 \usepackage[left=2cm,right=2cm,top=4cm,bottom=4cm]{geometry}
 \usepackage{graphicx}
+\usepackage{url}
 
 \begin{document}
 
@@ -74,82 +75,15 @@ tourism service searchs (queries on the database), comparison of tourism
 services (comparison of query results) and creation of new service
 instances (insert queries on the backend).
 
-\subsection{Description of Functions}
+\subsection{Server API}
 
-% function: AddService
-
-\subsubsection{AddService}
-
-This function is used to add a new type of service into the system. 
-
-To accomodate dynamic creation of new service types, this function
-performs one, optionally two operations. When an administrator invokes 
-AddService, they are given the choice to select an existing service 
-type, or add a new one. Once they have selected their service type, they
-then add service details, such as name and create a unique identifer
-used throughout the backend system.
-
-% function: RmService
-
-\subsection{RmService}
-
-This function compliments AddService. It simply removes a service
-operator from the list of known operators. Additionally, in order to
-prevent hanging dependancies, RmService also check for service instances
-accreddited to the deleted service and remove them, in order to ensure
-data consistincy in the booking system.
-
-% function: EditService
-
-\subsection{EditService}
-
-This function allows a service partner to edit their service details,
-such as their name.
-
-% function: SearchService
-
-\subsection{SearchService}
-
-This function is the core of the intented user experience. Based upon
-supplied criteria, it searches the collection of service instances 
-currently available and returns summary details of the results to enable
-comparisons of the search results.
-
-% function: GetService
-
-\subsection{GetService}
-
-GetService retrieves detailed information of a selected service,
-including Date, Time, Cost, Capacity, and additional details.
-
-% function: MkBooking
-
-\subsection{MkBooking}
-
-MkBooking allows a system user to create a booking of a selected service
-instance. At booking time, a user can make their booking flexible,
-meaning a different user may be able to reserve the booking.
-
-% function: GetBooking
-
-\subsection{GetBooking}
-
-GetBooking returns the status of an existing booking, confirming if a
-booking exists andf whether it is confirmed, flexible or cancelled.
-
-% function: EditBooking
-
-\subsection{EditBooking}
-
-EditBooking allows the booking system to edit the status flags of an
-existing booking. It can be used to mark a booking flexible or
-inflexible, to confirm or unconfirm a booking and to cancel a booking.
+\include{api}
 
 \section{Code}
 
 \subsection{SQL Database}
 
-%\lsttset{language=Python,basicstyle=\footnotesize,fancyvrb=true}
+%\lsttset{language=sql,basicstyle=\footnotesize,fancyvrb=true}
 
 %\lstinputlisting{backend.sql}
 
@@ -157,20 +91,48 @@ inflexible, to confirm or unconfirm a booking and to cancel a booking.
 
 \subsection{Client}
 
-\section{Sample Output}
+\section{Working Prototype}
 
-\section{Bibliography}
+A working demonstration of my server and client are available online.
 
-\begin{tabular}{cccccc}
-Title	&	Author	&	Publisher	&	Edition	&	 ISBN	&	Published	\\
-		&				&					&				&			\\
-Programming Web Services with Perl	&	Pavel Kulchenko,  Randy J. Ray & O'Reilly	&	1st	&	0-596-00206-8 &	December 2002	\\
-Programming Web Services with XML-RPC	&	Edd Dumbill, Joe Johnston, Simon St. Laurent &	O'Reilly	& 3rd	&	0-596-00119-3	&	June 2001	\\
-Real World Web Services	&	Will Iverson	&	O'Reilly	&	1st	& 0-596-00642-X	&	October 2004	\\
-Learning Perl	&	Randal L. Schwartz, Tom Phoenix	&	O'Reilly	&	3rd &	0-596-00132-0	&	July 2001	\\
-Programming Perl	&	Larry Wall, Tom Christiansen, Jon Orwant	& O'Reilly	&	3rd	&	0-596-00027-8	&	July 2000	\\
-Perl \& LWP	&	Sean M. Burke	&	O'Reilly	&	1st	&	0-596-00178-9	& June 2002	\\
 
+My server configuration is setup on a server situated in Tampa, Florida.
+The URL of the CGI script is
+\url{http://master-4ba8.conall.ie/cgi-bin/xmlrpc.cgi}
+
+
+My client script is hosted on a server situated in Dublin, Ireland. The
+URL for the client PHP script is
+\url{http://client-4ba8.conall.ie}
+
+
+Both servers are powered by Debian GNU/Linux, secured by restrictive, 
+stateful iptables firewall, making only the necessary ports available.
+
+\section{Technical References}
+
+\begin{tabular}{lll}
+Title	&	Author(s)	&	Publisher	\\
+Edition	&	ISBN	&	Publish Date 	\\
+			&			&						\\
+			&			&						\\
+Programming Web Services with Perl	&	Pavel Kulchenko,  Randy J. Ray	&
+O'Reilly	\\
+1st&	0-596-00206-8 & December 2002	\\
+			&			&						\\
+Programming Web Services with XML-RPC & Edd Dumbill, Joe Johnston, Simon
+St. Laurent &	O'Reilly	\\
+3rd & 0-596-00119-3	&	June 2001	\\
+			&			&						\\
+Real World Web Services	&	Will Iverson	&	O'Reilly	\\
+1st & 0-596-00642-X	&	October 2004	\\
+			&			&						\\
+Learning Perl	&	Randal L. Schwartz, Tom Phoenix	&	O'Reilly	\\
+3rd  		&	0-596-00132-0	&	July 2001	\\
+			&			&						\\
+Programming Perl	&	Larry Wall, Tom Christiansen, Jon Orwant	&
+O'Reilly	\\
+3rd		&	0-596-00027-8	&	July 2000	\\
 \end{tabular}
 
 \end{document}
