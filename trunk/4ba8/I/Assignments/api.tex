@@ -1,11 +1,5 @@
 % $Id$
 
-\documentclass[a4paper,12pt]{article}
-
-\usepackage{amssymb}
-
-\begin{document}
-
 \subsection{AddServiceType}
 
 \subsubsection{Description}
@@ -127,8 +121,8 @@ opening and closing dates and times, stating when operator is active.
 \begin{tabular}{ccccc}
 \verb!name! & \vspace{15mm} & $<string>$ & \vspace{15mm} & Operator Name \\
 \verb!type! & \vspace{15mm} & $<string>$ & \vspace{15mm} & Catagory Name \\
-\verb!opening! & \vspace{15mm} & $<null>$ | <datetime> & \vspace{15mm} & Opening Date/Time \\
-\verb!closing! & \vspace{15mm} & $<null>$ | <datetime> & \vspace{15mm} & Closing Date/Time \\
+\verb!opening! & \vspace{15mm} & $<null> \mid <datetime>$ & \vspace{15mm} & Opening Date/Time \\
+\verb!closing! & \vspace{15mm} & $<null> \mid <datetime>$ & \vspace{15mm} & Closing Date/Time \\
 \end{tabular}
 
 \subsubsection{Returns}
@@ -156,9 +150,11 @@ Updates the recorded details of a Service Provider in the backend.
 
 \begin{tabular}{ccccc}
 \verb!oldname! & \vspace{15mm} & $<string>$ & \vspace{15mm} & Current Operator Name \\
-\verb!prop! & \vspace{15mm} & $<string>$ - "ServiceName" | "ServiceType" |
-"Opening" | "Closing"& \vspace{15mm} & Attribute  \\
-\verb!value! & \vspace{15mm} & $<string>$ | <datetime> | <null> & \vspace{15mm} & Desired Value \\
+\verb!prop! & \vspace{15mm} & $<string>$ 
+%- "ServiceName" | "ServiceType" |
+%"Opening" | "Closing"
+& \vspace{15mm} & Attribute  \\
+\verb!value! & \vspace{15mm} & $<string> \mid <datetime> \mid <null>$ & \vspace{15mm} & Desired Value \\
 \end{tabular}
 
 \subsubsection{Returns}
@@ -223,8 +219,8 @@ Returns details on service provider.
 \begin{tabular}{ccccc}
 \verb!ServiceName! & \vspace{15mm} & $<string>$ & \vspace{15mm} & Operator Name \\
 \verb!ServiceType! & \vspace{15mm} & $<string>$ & \vspace{15mm} & Operator Catagory \\
-\verb!Opening! & \vspace{15mm} & $<null>$ | <datetime> & \vspace{15mm} & Operator Opeing Date/Time \\
-\verb!Closing! & \vspace{15mm} & $<null>$ | <datetime> & \vspace{15mm} & Operator Closing Date/Time \\
+\verb!Opening! & \vspace{15mm} & $<null> \mid <datetime>$ & \vspace{15mm} & Operator Opeing Date/Time \\
+\verb!Closing! & \vspace{15mm} & $<null> \mid <datetime>$ & \vspace{15mm} & Operator Closing Date/Time \\
 \end{tabular}
 
 \subsubsection{On Failure}
@@ -248,9 +244,9 @@ system.
 \verb!date! 	 & \vspace{15mm} & $<datetime>$ & \vspace{15mm} & Date/Time of Service\\
 \verb!capacity! & \vspace{15mm} & $<int>$ 		& \vspace{15mm} & Capacity available \\
 \verb!cost! 	 & \vspace{15mm} & $<int>$ 		& \vspace{15mm} & Cost per Person/Service \\
-\verb!src! 		 & \vspace{15mm} & $<null>$ | <string> & \vspace{15mm} & Source of Service (Optional) \\
-\verb!dest! 	 & \vspace{15mm} & $<null>$ | <string> & \vspace{15mm} & Destination of Service (Optional) \\
-\verb!details!  & \vspace{15mm} & $<null>$ | <string> & \vspace{15mm} & Additonal Service Details (Optional) \\
+\verb!src! 		 & \vspace{15mm} & $<null> \mid <string>$ & \vspace{15mm} & Source of Service (Optional) \\
+\verb!dest! 	 & \vspace{15mm} & $<null> \mid <string>$ & \vspace{15mm} & Destination of Service (Optional) \\
+\verb!details!  & \vspace{15mm} & $<null> \mid <string>$ & \vspace{15mm} & Additonal Service Details (Optional) \\
 \end{tabular}
 
 \subsubsection{Returns}
@@ -278,8 +274,11 @@ Edits details of an existing service.
 
 \begin{tabular}{ccccc}
 \verb!id! & \vspace{15mm} & $<int>$ & \vspace{15mm} & Service ID \\
-\verb!prop! & \vspace{15mm} & $<string>$ - "ServiceDate" | "Capacity" | "Cost" | "Source" | "Destination" | "Details|& \vspace{15mm} & Attribute  \\
-\verb!value! & \vspace{15mm} & $<string>$ | <datetime> | <int> | <null> & \vspace{15mm} & Desired Value \\
+\verb!prop! & \vspace{15mm} & $<string>$ 
+%- "ServiceDate" | "Capacity" | "Cost" | "Source" | "Destination" | "Details|
+& \vspace{15mm} & Attribute  \\
+\verb!value! & \vspace{15mm} & $<string> \mid <datetime> \mid <int> \mid
+<null>$  & \vspace{15mm} & Desired Value \\
 \end{tabular}
 
 \subsubsection{Returns}
@@ -345,9 +344,9 @@ Returns the complete details of a service.
 \verb!ServiceDate! & \vspace{15mm} & $<datetime>$ & \vspace{15mm} & Service Date \\
 \verb!Capacity! & \vspace{15mm} & $<int>$ & \vspace{15mm} & Capacity Available \\
 \verb!Cost! & \vspace{15mm} & $<int>$ & \vspace{15mm} & Unit Cost \\
-\verb!Source! & \vspace{15mm} & $<string>$ | <null> & \vspace{15mm} & Source of Service \\
-\verb!Destination! & \vspace{15mm} & $<string>$ | <null> & \vspace{15mm} & Destination of Service \\
-\verb!Details! & \vspace{15mm} & $<string>$ | <null> & \vspace{15mm} & Additional Details \\
+\verb!Source! & \vspace{15mm} & $<string> \mid <null>$ & \vspace{15mm} & Source of Service \\
+\verb!Destination! & \vspace{15mm} & $<string> \mid  <null>$ & \vspace{15mm} & Destination of Service \\
+\verb!Details! & \vspace{15mm} & $<string> \mid <null>$ & \vspace{15mm} & Additional Details \\
 \end{tabular}
 \subsubsection{On Failure}
 
@@ -446,5 +445,3 @@ Returns details on an existing booking.
 \begin{tabular}{ccccc}
 \verb!4ba8error! & \vspace{15mm} & $<string>$ & \vspace{15mm} & SQL Error Experienced \\
 \end{tabular}
-
-\end{document}
