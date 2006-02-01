@@ -50,32 +50,22 @@ application of this size and complexity.
 
 For backend database storage, I have opted to use MySQL, the open source
 SQL complient database over other Web Services backend solutions, such 
-as UDDI standard, who's definition is incomplete.
-
-
-In addition, I have chosen to run my Assignment on web hosting servers
-running the Apache 2.0 web server running on the Debian GNU/Linux
-platform. To satisfy the assignment requirement of "system must be 
-deployable across the Internet. It should, for example, be possible for 
-services to interoperate in an environment controlled by firewalls and 
-other Internet infrastructure", I have used MacOS X, FreeBSD and Ubuntu 
-GNU/Linux, systems connected to the TCD network, located behind the
-main TCD firewall configuration (consisting of a Cisco PIX 515 and a 
-Cisco PIX 525).
+as UDDI standard, who's definition is incomplete. I have documented the
+functional dependency diagrams of each table in my database design in
+Section \ref{sec:sql} 
 
 \section{Architectural Design}
 
 My application design is simple, based upon the client - server
 architecture. A Perl script on the primary server acts as a translator
-between XML-RPC calls to the MySQL backend and the client script. An 
-additional feature of the server script not implemented by the 
+between XML-RPC methodss and the MySQL backend. An additional feature of the server script not implemented by the 
 assignment of the deadline allows two server scripts to communicate
 between each other, allowing for backend replication between multiple,
 resielient hosts using XML-RPC.
 
 
-A second Perl script, the client script is a Command Line Interface 
-(CLI) to the server. It allows a user to do multiple actions, such as
+The client interface is a PHP script making XML-RPC calls to the CGI
+script. It allows a user to do multiple actions, such as
 tourism service searchs (queries on the database), comparison of tourism 
 services (comparison of query results) and creation of new service
 instances (insert queries on the backend).
@@ -86,14 +76,18 @@ instances (insert queries on the backend).
 
 \section{SQL Database Design}
 
+\label{sec:sql}
+
+\begin{figure}[ht]
 \begin{tabular}{c}
 Legend: \\
 \primarykey{Primary Key} \\ 
 \\
 \foreignkey{Foreign Key} \\ 
 \end{tabular}
+\end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 
 \xy<1cm,0cm>:
 (15,2) *=(3,1)!UC\txt{\primarykey{TypeID}} *\frm{-} ,
@@ -105,23 +99,71 @@ Legend: \\
 
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 
 \xy<1cm,0cm>:
 (15,2) *=(3,1)!UC\txt{\primarykey{ServiceID}} *\frm{-} ,
-(5,2) *=(3,1)!UC\txt{Opening} *\frm{-} ,
+(10,2) *=(3,1)!UC\txt{Opening} *\frm{-} ,
 (20,2) *=(3,1)!UC\txt{Closing} *\frm{-} ,
 (15,0) *=(3,1)!UC\txt{ServiceName} *\frm{-} ,
 (15,4) *=(3,1)!UC\txt{\foreignkey{ServiceType}} *\frm{-} ,
 (15,0) ; (15,1) **\dir{-}  *\dir{>} ,
 (15,3) ; (15,2) **\dir{-}  *\dir{>} ,
-(6.5,1) ; (13.5,1) **\dir{-}  *\dir{>} ,
-(18.5,1) ; (16.5,1) **\dir{-}  *\dir{>} ,
+(11.5,1.5) ; (13.5,1.5) **\dir{-}  *\dir{>} ,
+(18.5,1.5) ; (16.5,1.5) **\dir{-}  *\dir{>} ,
 \endxy
 
 \caption{Table service}
 
 \end{figure}
+
+\begin{figure}[ht]
+
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{UniqueID}} *\frm{-} ,
+(10,2) *=(3,1)!UC\txt{ServiceDate} *\frm{-} ,
+(20,2) *=(3,1)!UC\txt{ServiceName} *\frm{-} ,
+(20,0) *=(3,1)!UC\txt{Destination} *\frm{-} ,
+(15,4) *=(3,1)!UC\txt{\foreignkey{ServiceID}} *\frm{-} ,
+(10,0) *=(3,1)!UC\txt{Source} *\frm{-} ,
+(10,4) *=(3,1)!UC\txt{Capacity} *\frm{-} ,
+(20,4) *=(3,1)!UC\txt{Details} *\frm{-} ,
+(15,3) ; (15,2) **\dir{-}  *\dir{>} ,
+(11.5,1.5) ; (13.5,1.5) **\dir{-}  *\dir{>} ,
+(18.5,1.5) ; (16.5,1.5) **\dir{-}  *\dir{>} ,
+(18.5,3.5) ; (16.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(18.5,0) ; (16.5,1) **\dir{-}  *\dir{>} ,
+(11.5,0) ; (13.5,1) **\dir{-}  *\dir{>} ,
+\endxy
+
+\caption{Table instance}
+
+\end{figure}
+
+\begin{figure}[ht]
+
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{BookingID}} *\frm{-} ,
+(20,0) *=(3,1)!UC\txt{Confirmed} *\frm{-} ,
+(15,4) *=(3,1)!UC\txt{\foreignkey{UniqueID}} *\frm{-} ,
+(10,0) *=(3,1)!UC\txt{Cancelled} *\frm{-} ,
+(10,4) *=(3,1)!UC\txt{Booked} *\frm{-} ,
+(20,4) *=(3,1)!UC\txt{Flexible} *\frm{-} ,
+(15,3) ; (15,2) **\dir{-}  *\dir{>} ,
+(18.5,3.5) ; (16.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(18.5,0) ; (16.5,1) **\dir{-}  *\dir{>} ,
+(11.5,0) ; (13.5,1) **\dir{-}  *\dir{>} ,
+\endxy
+
+\caption{Table booking}
+
+\end{figure}
+
+
 \section{Working Prototype}
 
 A working demonstration of my server and client are available online.
