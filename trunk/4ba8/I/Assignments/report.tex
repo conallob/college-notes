@@ -16,6 +16,11 @@
 \usepackage{graphicx}
 \usepackage{url}
 
+
+\newcommand{\primarykey}[1]{\mbox{{\color{NavyBlue}{$#1$}}}}
+\newcommand{\foreignkey}[1]{{\mbox{\color{Emerald}{$#1$}}}}
+
+
 \begin{document}
 
 \title{4BA8 \\ Assignment}
@@ -79,18 +84,44 @@ instances (insert queries on the backend).
 
 \input api.tex
 
-\section{Code}
+\section{SQL Database Design}
 
-\subsection{SQL Database}
+\begin{tabular}{c}
+Legend: \\
+\primarykey{Primary Key} \\ 
+\\
+\foreignkey{Foreign Key} \\ 
+\end{tabular}
 
-%\lsttset{language=sql,basicstyle=\footnotesize,fancyvrb=true}
+\begin{figure}[h]
 
-%\lstinputlisting{backend.sql}
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{TypeID}} *\frm{-} ,
+(15,0) *=(3,1)!UC\txt{TypeName} *\frm{-} ,
+(15,0) ; (15,1) **\dir{-}  *\dir{>} ,
+\endxy
 
-\subsection{Server}
+\caption{Table servicetype}
 
-\subsection{Client}
+\end{figure}
 
+\begin{figure}[h]
+
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{ServiceID}} *\frm{-} ,
+(5,2) *=(3,1)!UC\txt{Opening} *\frm{-} ,
+(20,2) *=(3,1)!UC\txt{Closing} *\frm{-} ,
+(15,0) *=(3,1)!UC\txt{ServiceName} *\frm{-} ,
+(15,4) *=(3,1)!UC\txt{\foreignkey{ServiceType}} *\frm{-} ,
+(15,0) ; (15,1) **\dir{-}  *\dir{>} ,
+(15,3) ; (15,2) **\dir{-}  *\dir{>} ,
+(6.5,1) ; (13.5,1) **\dir{-}  *\dir{>} ,
+(18.5,1) ; (16.5,1) **\dir{-}  *\dir{>} ,
+\endxy
+
+\caption{Table service}
+
+\end{figure}
 \section{Working Prototype}
 
 A working demonstration of my server and client are available online.
