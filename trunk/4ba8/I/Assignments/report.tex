@@ -74,11 +74,13 @@ instances (insert queries on the backend).
 
 \input api.tex
 
+\pagebreak
+
 \section{SQL Database Design}
 
 \label{sec:sql}
 
-\begin{figure}[ht]
+\begin{figure}[hp]
 \begin{tabular}{c}
 Legend: \\
 \primarykey{Primary Key} \\ 
@@ -87,7 +89,8 @@ Legend: \\
 \end{tabular}
 \end{figure}
 
-\begin{figure}[ht]
+\vspace{15mm}
+\begin{figure}[hp]
 
 \xy<1cm,0cm>:
 (15,2) *=(3,1)!UC\txt{\primarykey{TypeID}} *\frm{-} ,
@@ -99,7 +102,9 @@ Legend: \\
 
 \end{figure}
 
-\begin{figure}[ht]
+\vspace{15mm}
+
+\begin{figure}[hp]
 
 \xy<1cm,0cm>:
 (15,2) *=(3,1)!UC\txt{\primarykey{ServiceID}} *\frm{-} ,
@@ -117,7 +122,8 @@ Legend: \\
 
 \end{figure}
 
-\begin{figure}[ht]
+\vspace{15mm}
+\begin{figure}[hp]
 
 \xy<1cm,0cm>:
 (15,2) *=(3,1)!UC\txt{\primarykey{UniqueID}} *\frm{-} ,
@@ -142,7 +148,8 @@ Legend: \\
 
 \end{figure}
 
-\begin{figure}[ht]
+\vspace{15mm}
+\begin{figure}[hp]
 
 \xy<1cm,0cm>:
 (15,2) *=(3,1)!UC\txt{\primarykey{BookingID}} *\frm{-} ,
@@ -163,10 +170,27 @@ Legend: \\
 
 \end{figure}
 
+\pagebreak
+\section{Code}
 
-\section{Working Prototype}
+\subsection{Database}
 
-A working demonstration of my server and client are available online.
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{backend.sql}
+
+\subsection{Server}
+
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{xmlrpc.cgi}[language=perl]
+
+\subsection{Client}
+
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{4ba8.cgi}[language=perl]
+
+\section{Demonstration}
+
+A partially working demonstration of my server and client are available online.
 
 
 My server configuration is setup on a server situated in Tampa, Florida.
@@ -175,8 +199,13 @@ The URL of the CGI script is
 
 
 My client script is hosted on a server situated in Dublin, Ireland. The
-URL for the client PHP script is
-\url{http://client-4ba8.conall.ie}
+URL for the client Perl CGI script is
+\url{http://client-4ba8.conall.ie}. Unfortunately, I was unable to
+complete a fully functioning HTML interface for a client script. My
+client scripts are merely invoking indivudual XML-RPC calls from my
+server and displaying the output. This basic client does not fully
+satisfy the assignment requirement of a fully functioning online bookign
+system, but it does demonstrate that my defined API is fully working.
 
 
 Both servers are powered by Debian GNU/Linux, secured by restrictive, 
