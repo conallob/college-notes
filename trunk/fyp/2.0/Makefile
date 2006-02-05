@@ -1,11 +1,12 @@
 # $Id$
 
-APRCFG			=	which apr-config
-APRCFGFLAGSS	=	--includes --cflags --cppflags --link-ld --libs
+APRCFG			=	apr-config --includes --cflags --cppflags --link-ld --libs
+
+aprbootstrap 	=	$(APRCFG) 
 
 DESTDIR			=	.
 
 milestone: milestone1
 
-milestone1:
-	gcc `$(APRCFG) $(APRCFGFLAGS)` -o $(DESTDIR)/test src/milestone1.c
+milestone1: 
+	gcc `$(aprbootstrap)` -o $(DESTDIR)/test src/milestone1.c
