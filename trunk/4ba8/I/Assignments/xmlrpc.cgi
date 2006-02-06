@@ -9,11 +9,9 @@ use XMLRPC::Transport::HTTP;
 use DBI;
 use Switch;
 
-my $dbh = DBI->connect('DBI:mysql:4ba8', '4ba8', 'nkm34e', 
+our $dbh = DBI->connect('DBI:mysql:4ba8', '4ba8', 'nkm34e', 
 								{ RaiseError => 1, AutoCommit => 1});
 
-
-my $sth;
 
 print "Content-Type: text/plain\n\n";
 
@@ -40,12 +38,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	$sth = $dbh->prepare("INSERT into servicetype values(NULL, '$name');");
+  	  	my $sth = $dbh->prepare("INSERT into servicetype values(NULL, '$name');");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -58,12 +56,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	$sth = $dbh->prepare("UPDATE servicetype SET TypeName='$newname' where TypeName='$oldname';");
+  	  	my $sth = $dbh->prepare("UPDATE servicetype SET TypeName='$newname' where TypeName='$oldname';");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -76,12 +74,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	$sth = $dbh->prepare("DROP * from servicetype where TypeName='$name';");
+  	  	my $sth = $dbh->prepare("DROP * from servicetype where TypeName='$name';");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -94,9 +92,9 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 			  
-  	  	$sth = $dbh->prepare("SELECT TypeName from servicetype where TypeID=$id;");
-  	  	if ($sth->execute()) {
-			if (my @row = $sth->fetchrow_array) {
+  	  	my $sth = $dbh->prepare("SELECT TypeName from servicetype where TypeID=$id;");
+  	  	if (my $sth->execute()) {
+			if (my @row = my $sth->fetchrow_array) {
 				return {		  
 					TypeName	=> $row[0]
 				};	
@@ -104,7 +102,7 @@ package ba8;
 				warn $dbh->strerr;
 			}
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -126,12 +124,12 @@ package ba8;
 
 		# Do checks to see if $opening and $closing are defined
 		
-  	  	$sth = $dbh->prepare("INSERT into service values(NULL, '$name', $type, $opening, $closing);");
+  	  	my $sth = $dbh->prepare("INSERT into service values(NULL, '$name', $type, $opening, $closing);");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -145,12 +143,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	$sth = $dbh->prepare("UPDATE service SET $prop=$value where ServiceName='$oldname';");
+  	  	my $sth = $dbh->prepare("UPDATE service SET $prop=$value where ServiceName='$oldname';");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -165,12 +163,12 @@ package ba8;
 
 		# dependencies in instances, and bookings...
 		
-  	  	$sth = $dbh->prepare("DROP * from service where ServiceName='$name';");
+  	  	my $sth = $dbh->prepare("DROP * from service where ServiceName='$name';");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -183,10 +181,10 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	$sth = $dbh->prepare("SELECT * from service where ServiceID=$id);");
+  	  	my $sth = $dbh->prepare("SELECT * from service where ServiceID=$id);");
 
-		if ($sth->execute()) {
-			if (my @row = $sth->fetchrow_array) {
+		if (my $sth->execute()) {
+			if (my @row = my $sth->fetchrow_array) {
 				return {		  
 					ServiceName	=> $row[1],
 					ServiceType	=> $row[2],
@@ -195,7 +193,7 @@ package ba8;
 				};
 			}
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -213,22 +211,22 @@ package ba8;
 
 		my $operatorid;
 		
-  	  	$sth = $dbh->prepare("SELECT ServiceID from service where ServiceName='$operator';");
+  	  	my $sth = $dbh->prepare("SELECT ServiceID from service where ServiceName='$operator';");
 
-		if ($sth->execute()) {
-			if (my @row = $sth->fetchrow_array) {
+		if (my $sth->execute()) {
+			if (my @row = my $sth->fetchrow_array) {
 				$operatorid = $row[0];
 			}
 		} else {
-			return false;
+			return 'false';
 		}
 
   	  	$sth = $dbh->prepare("INSERT into instance values(NULL, $operatorid, '$date', $capacity, $cost, '$src', '$dest', '$details');");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -242,12 +240,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 		  
-  	  	$sth = $dbh->prepare("UPDATE instance SET $flag=$newvalue where UniqueID=$id;");
+  	  	my $sth = $dbh->prepare("UPDATE instance SET $flag=$newvalue where UniqueID=$id;");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -260,12 +258,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	$sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
+  	  	my $sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;	  
+			return 'false';	  
 		}
 	}
 
@@ -278,10 +276,10 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 			  
-  	  	$sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
+  	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
   	  	
-		if($sth->execute()) {
-			if (my @row = $sth->fetchrow_array) {
+		if(my $sth->execute()) {
+			if (my @row = my $sth->fetchrow_array) {
 				return {		  
 					ServiceID	=> $row[1],
 					ServiceDate	=> $row[2],
@@ -292,10 +290,10 @@ package ba8;
 					Details		=> $row[7]
 				};
 			} else {
-				warn $dth->errstr;  
+				warn "$dbh->errstr";  
 			}
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -318,12 +316,12 @@ package ba8;
 		my $cancelled 	= "false";
 		my $confirmed 	= "false";
 			  
-  	  	$sth = $dbh->prepare("INSERT into booking values(NULL, $id, '$booked', '$flexible', '$cancelled', '$confirmed');");
+  	  	my $sth = $dbh->prepare("INSERT into booking values(NULL, $id, '$booked', '$flexible', '$cancelled', '$confirmed');");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -337,12 +335,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 			  
-  	  	$sth = $dbh->prepare("UPDATE booking SET $flag=$newvalue where BookingID=$id;");
+  	  	my $sth = $dbh->prepare("UPDATE booking SET $flag=$newvalue where BookingID=$id;");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -355,12 +353,12 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	$sth = $dbh->prepare("DROP * from booking where BookingID=$id;");
+  	  	my $sth = $dbh->prepare("DROP * from booking where BookingID=$id;");
 
-		if ($sth->execute()) {
-			return true;
+		if (my $sth->execute()) {
+			return 'true';
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
@@ -373,10 +371,10 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 			  
-  	  	$sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
+  	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
   	  	
-		if($sth->execute()) {
-			if (my @row = $sth->fetchrow_array) {
+		if(my $sth->execute()) {
+			if (my @row = my $sth->fetchrow_array) {
 				return {		  
 					BookingID	=> $row[0],
 					Booked 	 	=> XMLRPC::Data->type('boolean', BooleanENUMConvert($row[2])),
@@ -385,10 +383,10 @@ package ba8;
 					Confirmed 	=> XMLRPC::Data->type('boolean', BooleanENUMConvert($row[5]))
 				};
 			} else {
-				warn $dth->errstr;
+				warn "$dbh->errstr";
 			}
 		} else {
-			return false;
+			return 'false';
 		}
 	}
 
