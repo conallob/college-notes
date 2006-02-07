@@ -12,6 +12,9 @@ use Switch;
 my $dbh = DBI->connect('DBI:mysql:4ba8', '4ba8', 'nkm34e', 
 								{ RaiseError => 1, AutoCommit => 1});
 
+
+my $sth;
+
 print "Content-Type: text/plain\n\n";
 
 print "Content-Type: text/plain\n\n";
@@ -36,16 +39,15 @@ package ba8;
 		my ($name) = @_;
 
 		if (! defined($name)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("INSERT into servicetype values(NULL, '$name');");
+  	  	$sth = $dbh->prepare("INSERT into servicetype values(NULL, '$name');");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -55,16 +57,15 @@ package ba8;
 		my ($oldname, $newname) = @_;
 
 		if (! defined($oldname) || ! defined($newname)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("UPDATE servicetype SET TypeName='$newname' where TypeName='$oldname';");
+  	  	$sth = $dbh->prepare("UPDATE servicetype SET TypeName='$newname' where TypeName='$oldname';");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -74,16 +75,15 @@ package ba8;
 		my ($name) = @_;
 
 		if (! defined($name)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("DROP * from servicetype where TypeName='$name';");
+  	  	$sth = $dbh->prepare("DROP * from servicetype where TypeName='$name';");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -93,21 +93,20 @@ package ba8;
 		my ($id) = @_;
 
 		if (! defined($id)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 			  
-  	  	my $sth = $dbh->prepare("SELECT TypeName from servicetype where TypeID=$id;");
+  	  	$sth = $dbh->prepare("SELECT TypeName from servicetype where TypeID=$id;");
   	  	if ($sth->execute()) {
 			if (my @row = $sth->fetchrow_array) {
 				return {		  
 					TypeName	=> $row[0]
 				};	
 			} else {
-				# MySQL Fetch Error
+				warn $dbh->strerr;
 			}
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -122,20 +121,19 @@ package ba8;
 		my ($name, $type, $opening, $closing) = @_;
 
 		if (! defined($name) || ! defined($type)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
 		# Do lookup of TypeID from servicetype
 
 		# Do checks to see if $opening and $closing are defined
 		
-  	  	my $sth = $dbh->prepare("INSERT into service values(NULL, '$name', $type, $opening, $closing);");
+  	  	$sth = $dbh->prepare("INSERT into service values(NULL, '$name', $type, $opening, $closing);");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -146,16 +144,15 @@ package ba8;
 
 		if (! defined($oldname) || ! defined ($prop) || 
 				  ! defined ($value)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("UPDATE service SET $prop=$value where ServiceName='$oldname';");
+  	  	$sth = $dbh->prepare("UPDATE service SET $prop=$value where ServiceName='$oldname';");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -165,18 +162,17 @@ package ba8;
 		my ($name) = @_;
 
 		if (! defined($name)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
 		# dependencies in instances, and bookings...
 		
-  	  	my $sth = $dbh->prepare("DROP * from service where ServiceName='$name';");
+  	  	$sth = $dbh->prepare("DROP * from service where ServiceName='$name';");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -186,11 +182,10 @@ package ba8;
 		my ($id) = @_;
 
 		if (! defined($id)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("SELECT * from service where ServiceID=$id);");
+  	  	$sth = $dbh->prepare("SELECT * from service where ServiceID=$id);");
 
 		if ($sth->execute()) {
 			if (my @row = $sth->fetchrow_array) {
@@ -201,9 +196,8 @@ package ba8;
 					Closing 		=> $row[4]
 				};
 			}
-			# Good status code
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -214,31 +208,29 @@ package ba8;
 
 		if (! defined($operator) || ! defined ($date) || 
 				  ! defined ($capacity) || ! defined ($cost)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
 		# Do lookup of TypeID from servicetype
 
 		my $operatorid;
 		
-  	  	my $sth = $dbh->prepare("SELECT ServiceID from service where ServiceName='$operator';");
+  	  	$sth = $dbh->prepare("SELECT ServiceID from service where ServiceName='$operator';");
 
 		if ($sth->execute()) {
 			if (my @row = $sth->fetchrow_array) {
 				$operatorid = $row[0];
 			}
-			# Good status code
 		} else {
-			# Bad status code
+			return false;
 		}
 
   	  	$sth = $dbh->prepare("INSERT into instance values(NULL, $operatorid, '$date', $capacity, $cost, '$src', '$dest', '$details');");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -249,16 +241,15 @@ package ba8;
 
 		if (! defined($id) || ! defined ($flag) || 
 				  ! defined ($newvalue)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 		  
-  	  	my $sth = $dbh->prepare("UPDATE instance SET $flag=$newvalue where UniqueID=$id;");
+  	  	$sth = $dbh->prepare("UPDATE instance SET $flag=$newvalue where UniqueID=$id;");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -268,16 +259,15 @@ package ba8;
 		my ($id) = @_;
 
 		if (! defined($id)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
+  	  	$sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;	  
 		}
 	}
 
@@ -286,7 +276,11 @@ package ba8;
 		shift;
 		my ($id) = @_;
 			  
-  	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
+		if (! defined($id)) {
+			warn "Warning: I can't work with undefined parameters";
+		}
+			  
+  	  	$sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
   	  	
 		if($sth->execute()) {
 			if (my @row = $sth->fetchrow_array) {
@@ -300,10 +294,10 @@ package ba8;
 					Details		=> $row[7]
 				};
 			} else {
-				# MySQL Fetch Error
+				warn $dth->errstr;  
 			}
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -318,8 +312,7 @@ package ba8;
 		my ($id) = @_;
 
 		if (! defined($id)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
 		my $booked 		= "true";
@@ -327,12 +320,12 @@ package ba8;
 		my $cancelled 	= "false";
 		my $confirmed 	= "false";
 			  
-  	  	my $sth = $dbh->prepare("INSERT into booking values(NULL, $id, '$booked', '$flexible', '$cancelled', '$confirmed');");
+  	  	$sth = $dbh->prepare("INSERT into booking values(NULL, $id, '$booked', '$flexible', '$cancelled', '$confirmed');");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -343,16 +336,15 @@ package ba8;
 
 		if (! defined($id) || ! defined ($flag) || 
 				  ! defined ($newvalue)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 			  
-  	  	my $sth = $dbh->prepare("UPDATE booking SET $flag=$newvalue where BookingID=$id;");
+  	  	$sth = $dbh->prepare("UPDATE booking SET $flag=$newvalue where BookingID=$id;");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -362,16 +354,15 @@ package ba8;
 		my ($id) = @_;
 
 		if (! defined($id)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("DROP * from booking where BookingID=$id;");
+  	  	$sth = $dbh->prepare("DROP * from booking where BookingID=$id;");
 
 		if ($sth->execute()) {
-			# Good status code
+			return true;
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -381,11 +372,10 @@ package ba8;
 		my ($id) = @_;
 
 		if (! defined($id)) {
-			return undef;
-			# Report an error
+			warn "Warning: I can't work with undefined parameters";
 		}
 			  
-  	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
+  	  	$sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
   	  	
 		if($sth->execute()) {
 			if (my @row = $sth->fetchrow_array) {
@@ -397,10 +387,10 @@ package ba8;
 					Confirmed 	=> XMLRPC::Data->type('boolean', BooleanENUMConvert($row[5]))
 				};
 			} else {
-				# MySQL Fetch Error
+				warn $dth->errstr;
 			}
 		} else {
-			# Bad status code
+			return false;
 		}
 	}
 
@@ -418,3 +408,5 @@ package ba8;
 						 return 0;
 			  }
 	}
+
+
