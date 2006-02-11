@@ -80,7 +80,19 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("DROP * from servicetype where TypeName='$name';");
+
+		my $dropstatement = 
+			"DROP * from booking where UniqueID=(SELECT UniqueID from 
+			instance where ServiceID=(SELECT ServiceID from service where 
+			ServiceName='$name'));
+			DROP * from instance where ServiceID=(SELECT ServiceID from 
+			service where ServiceName='$name');
+			DROP * from service where ServiceType=(SELECT TypeID from 
+			service where TypeName='$name');
+			DROP * from servicetype where TypeName='$name'";
+			
+
+  	  	my $sth = $dbh->prepare($dropstatement);
 
 		if ($sth->execute()) {
 			return 'true';
@@ -126,11 +138,18 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-		# Do lookup of TypeID from servicetype
+  	  	my $sth = $dbh->prepare("SELECT TypeID from servicetype where TypeName=$type;");
 
-		# Do checks to see if $opening and $closing are defined
-		
-  	  	my $sth = $dbh->prepare("INSERT into service values(NULL, '$name', $type, $opening, $closing);");
+		if ($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
+					$typename	= $row[1];
+			} else {
+				warn $sth->errstr;
+		} else {
+			return 'false';
+		}
+
+  	  	$sth = $dbh->prepare("INSERT into service values(NULL, '$name', $typename, $opening, $closing);");
 
 		if ($sth->execute()) {
 			return 'true';
@@ -167,9 +186,18 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-		# dependencies in instances, and bookings...
-		
-  	  	my $sth = $dbh->prepare("DROP * from service where ServiceName='$name';");
+		# dependencies in instances
+	
+		my $dropstatement = 
+			"DROP * from booking where UniqueID=(SELECT UniqueID from 
+			instance where ServiceID=(SELECT ServiceID from service where 
+			ServiceName='$name'));
+			DROP * from instance where ServiceID=(SELECT ServiceID from 
+			service where ServiceName='$name');
+			DROP * from service where ServiceName='$name';";
+			
+	
+  	  	my $sth = $dbh->prepare($dropstatement);
 
 		if ($sth->execute()) {
 			return 'true';
@@ -264,7 +292,11 @@ package ba8;
 			warn "Warning: I can't work with undefined parameters";
 		}
 
-  	  	my $sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
+		my $dropstatement = 
+			"DROP * from booking where UniqueID=$id;
+			DROP * from instance where UniqueID=$id;";
+
+  	  	my $sth = $dbh->prepare($dropstatement);
 
 		if ($sth->execute()) {
 			return 'true';
