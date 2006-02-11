@@ -10,37 +10,124 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct linklist {
-   char * val;
-   struct linklist * prev;
-   struct linklist * next;
-};
+#include "linklist.h"
 
+/* Make a Linked List */
+void ListNodeMkList() {
+	
+	linklist * list;
+	list = (linklist*) malloc(sizeof(linklist));
+	list->size = 1;
 
-typedef struct linklist item;
+	list->head = NULL;
+	list->tail = MkNode(NULL, NULL);
 
-
-void init() {
-	item * head; /* We'll need a primary node */
-	head = NULL; /* Let's make it null */
-
-   head = curr; /* Set head to the current list-pointer */
-   curr = head; /* Set current list-pointer to head node */
+	list->tail->next = list->tail;
+	list->tail->prev = list->tail;
 }
 
-
-void addNode(char* value) {
-   item * curr; 
+/* Append a node to the end of a LinkedList */
+void LinkListAddNode(linklist * list, char* value) {
+   item * curr; /* We'll need a new node */ 
 
 	/* dynamically allocate memory */
    curr = (item *)malloc(sizeof(item)); 
 
-	/* Set value of new node to value */
-   curr->val = *value;
+	curr->val = value;
 
-	/* Link the new node to the last node in the list */
-   curr->prev->next = curr;
+	list->tail->next = curr;
+	curr->prev = list->tail
+	list->tail = curr;
+
+	list->size++;
+}
+
+
+/* Delete a node from a Linked List */
+int LinkListRmNode(item * node) {
+
+	if(node->next != node) {
+
+		if(node->prev != node) {
+
+			node->prev->next = node->next; 
+			node->next->prev = node->prev; 
+
+		} else {
+
+			node->prev->next = node->prev;
+
+		}
+	} else {
+
+		if(node->prev != node) {
+
+			node->prev->next = node->prev;
+
+		}
+	}
+
+	node->data = NULL;
 	
-	/* Link the head node to be the next node */
-   curr->next = head;
+	free(node);
+	
+	list->size--;
+
+	return 1;
+}
+
+
+/* Remove every node from a Linked List */
+int LinkListRmList(linklist * list) {
+	item * node = list->head;
+
+	while ((node != NULL) && (node != node->next)) {
+		node = node->next;
+		if(LinkListRmNode(node)) {
+			node = node->next;
+		}
+	}
+
+	return 0;
+}
+
+
+/*
+ * FIFO actions, Push and Pop
+ */
+
+/* Pop the head node off a Linked List */
+void *LinkListPop(linklist *list) {
+	item * node;
+	void * val;
+
+	/* Uh oh! head of the list is NULL, we got nothing! */
+	if (list->head == NULL)
+		return NULL;
+
+	node = list->head;
+	data = node->data;
+
+	if (node->next != list->tail) {
+		node->next->prev = node->next;
+		list->head = node->next;
+	} else {
+		list->head = NULL;
+		list->tail->prev = list->tail;
+	}
+
+	/* Set all values to NULL, then nuke it */
+	node->next = NULL;
+	node->prev = NULL;
+	node->data = NULL;
+
+	free(node);
+
+	return data;
+}
+
+
+/* Push a node onto the end of a Linked List */
+void *LinkListPush(linklist *list, item *node) {
+	return LinkListAddNode(list, node->value);
 }
