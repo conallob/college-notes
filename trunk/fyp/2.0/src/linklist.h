@@ -11,20 +11,26 @@
 #include <stdio.h>
 
 struct listnode {
-   char * val;
-   struct listnode * prev;
-   struct listnode * next;
+   void * val;
+   struct listnode *prev;
+   struct listnode *next;
 };
 
 
 struct linklist {
 	listnode * head;
-	listnode * tail
+	listnode * tail;
 	int size;
 };
 
 typedef listnode item; 
 
-void ListNodeMkList(linklist * list);
+linklist *ListNodeMkList(linklist * list);
 
-void MkNode(linklist * list, char* value);
+int LinkListRmNode(linklist * list, void* value);
+
+int LinkListRmList(linklist * list);
+
+void *LinkListPop(linklist * list);
+
+void *LinkListPop(linklist * list, void* val);

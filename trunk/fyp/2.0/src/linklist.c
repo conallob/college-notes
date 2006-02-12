@@ -13,7 +13,7 @@
 #include "linklist.h"
 
 /* Make a Linked List */
-void ListNodeMkList() {
+linklist *ListNodeMkList() {
 	
 	linklist * list;
 	list = (linklist*) malloc(sizeof(linklist));
@@ -24,10 +24,12 @@ void ListNodeMkList() {
 
 	list->tail->next = list->tail;
 	list->tail->prev = list->tail;
+
+	return list;
 }
 
 /* Append a node to the end of a LinkedList */
-void LinkListAddNode(linklist * list, char* value) {
+int LinkListAddNode(linklist * list, char* value) {
    item * curr; /* We'll need a new node */ 
 
 	/* dynamically allocate memory */
@@ -36,10 +38,12 @@ void LinkListAddNode(linklist * list, char* value) {
 	curr->val = value;
 
 	list->tail->next = curr;
-	curr->prev = list->tail
+	curr->prev = list->tail;
 	list->tail = curr;
 
 	list->size++;
+
+	return 1;
 }
 
 
@@ -47,28 +51,19 @@ void LinkListAddNode(linklist * list, char* value) {
 int LinkListRmNode(item * node) {
 
 	if(node->next != node) {
-
 		if(node->prev != node) {
-
 			node->prev->next = node->next; 
 			node->next->prev = node->prev; 
-
 		} else {
-
 			node->prev->next = node->prev;
-
 		}
 	} else {
-
 		if(node->prev != node) {
-
 			node->prev->next = node->prev;
-
 		}
 	}
 
 	node->data = NULL;
-	
 	free(node);
 	
 	list->size--;
@@ -87,8 +82,8 @@ int LinkListRmList(linklist * list) {
 			node = node->next;
 		}
 	}
-
-	return 0;
+	free(list);
+	return 1;
 }
 
 
@@ -128,6 +123,6 @@ void *LinkListPop(linklist *list) {
 
 
 /* Push a node onto the end of a Linked List */
-void *LinkListPush(linklist *list, item *node) {
-	return LinkListAddNode(list, node->value);
+int LinkListPush(linklist *list, void *val) {
+	return LinkListAddNode(list, val);
 }
