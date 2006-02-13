@@ -1,6 +1,7 @@
 /* 
  * File: linklist.h 
- * Description: char array doubley linked list 
+ * Description: doubley linked list - inspired by  
+ *		g_list.c from c-hey -- http://c-hey.redbrick.dcu.ie
  * Author: Conall O'Brien <conallob@maths.tcd.ie>
  * Date: $Date$
  * 
@@ -10,27 +11,28 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct listnode {
-   void * val;
+typedef struct listnode {
+   void *val;
    struct listnode *prev;
    struct listnode *next;
-};
+} item;
 
 
-struct linklist {
-	listnode * head;
-	listnode * tail;
+typedef struct llist {
+	item *head;
+	item *tail;
 	int size;
-};
+} linklist;
 
-typedef listnode item; 
 
-linklist *ListNodeMkList(linklist * list);
+linklist* LinkListMkList();
 
-int LinkListRmNode(linklist * list, void* value);
+int LinkListAddNode(linklist *list, void *value);
 
-int LinkListRmList(linklist * list);
+int LinkListRmNode(linklist *list, item *node);
 
-void *LinkListPop(linklist * list);
+int LinkListRmList(linklist *list);
 
-void *LinkListPop(linklist * list, void* val);
+item* LinkListPop(linklist *list);
+
+int LinkListPush(linklist *list, void *val);
