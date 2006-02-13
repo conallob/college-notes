@@ -1,28 +1,29 @@
 # $Id: /college/trunk/fyp/2.0/Makefile 2071 2006-02-05T18:01:21.570734Z conall  $
 
 CC=gcc
-LDFLAGS= 
 
 
-APRCFG= apr-config --includes --cflags --cppflags --link-ld --libs
-
-aprbootstrap=$(APRCFG) 
+APR_FLAGS="`apr-config --includes --cflags --cppflags --link-ld --libs`"
 
 SRC= src
 
-TARGET=oi-test 
-DESTDIR			=	.
+TARGET= oi-test 
+DESTDIR=	.
 
 milestone: milestone1
 
-milestone1: 
-	$(CC) `$(aprbootstrap)` \
-	-o $(DESTDIR)/$(TARGET) \ 
-	$(SRC)/milestone1.c
+objects:
+	$(GCC) -c \
+	$(SRC)/*.c \
+	$(APR_FLAGS)
+
+milestone1: objects
+	$(CC) \ 
+	$(SRC)/*.o  \
+	`$(APRCFG)` \
+	-o $(DESTDIR)/$(TARGET)
 
 debug:
-	CFLAGS=" -g" \
+	CFLAGS=" -g -Wall" \
 	LDFLAGS=" -L$(HOME)/lib/ -lefence " \
-	$(CC) `$(aprbootstrap)` \
-	-o $(DESTDIR)/$(TARGET) \
-	$(SRC)/milestone1.c 
+	milestone
