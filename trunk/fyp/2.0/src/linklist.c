@@ -42,6 +42,8 @@ int LinkListAddNode(linklist *list, void *value) {
 			  return 0;
 	}
 
+	curr->prev = NULL;
+	curr->next = NULL;
 	curr->val = value;
 		
 	if(list->head == NULL) {
