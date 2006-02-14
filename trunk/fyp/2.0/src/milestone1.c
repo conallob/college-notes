@@ -4,7 +4,7 @@
  * Author: Conall O'Brien <conallob@maths.tcd.ie>
  * Date: $Date$
  * 
- * Id: $Id$
+ * Id: $Id: /college/trunk/fyp/2.0/src/milestone1.c 2138 2006-02-07T21:25:22.382090Z conall  $
  */
 
 #define STDIN_BUFFER_LEN 80
@@ -17,6 +17,7 @@
 
 /* Use String manipulation functions */
 #include <string.h>
+#include <stdlib.h>
 
 
 #include "linklist.h"
