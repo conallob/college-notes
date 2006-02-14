@@ -59,7 +59,8 @@ int main(int argc, char *argv[]) {
 		  /* Until we hit the end of stdin, grab 80 characters from stdin 
 			* and store in buffer */
 		  while (apr_file_gets(buffer, STDIN_BUFFER_LEN, fp_in) == 0) {
-					 strcat(storage, buffer);
+					 /* Push contents of buffer onto a Linked List */
+					 LinkListPush(storage, buffer);
 		  }
 
 		  /* Debug output */
