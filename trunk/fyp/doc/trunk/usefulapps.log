@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.10.26)  11 FEB 2006 21:17
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2005.10.26)  11 FEB 2006 23:14
 entering extended mode
 **usefulapps.tex
 (./usefulapps.tex
@@ -50,7 +50,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 14.
 
-Overfull \hbox (93.57693pt too wide) in paragraph at lines 14--40
+Overfull \hbox (113.54784pt too wide) in paragraph at lines 14--42
 [][] 
  []
 
@@ -58,12 +58,12 @@ Overfull \hbox (93.57693pt too wide) in paragraph at lines 14--40
 
 ] (./usefulapps.aux) ) 
 Here is how much of TeX's memory you used:
- 297 strings out of 94501
- 3222 string characters out of 1176136
- 51348 words of memory out of 1000000
- 3538 multiletter control sequences out of 10000+50000
- 6545 words of font info for 24 fonts, out of 500000 for 2000
+ 300 strings out of 94501
+ 3251 string characters out of 1176136
+ 50348 words of memory out of 1000000
+ 3540 multiletter control sequences out of 10000+50000
+ 6852 words of font info for 25 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
- 22i,7n,19p,128b,236s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 22i,9n,19p,116b,246s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on usefulapps.dvi (1 page, 1176 bytes).
+Output written on usefulapps.dvi (1 page, 1848 bytes).
