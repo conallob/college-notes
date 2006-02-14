@@ -15,7 +15,7 @@ void ListNodeMkList() {
 	
 	linklist * list;
 	list = (linklist*) malloc(sizeof(linklist));
-	list->size = 1;
+	list->size = 0;
 
 	list->head = NULL;
 	list->tail = MkNode(NULL, NULL);
@@ -118,9 +118,7 @@ void *LinkListPop(linklist *list) {
 	node->prev = NULL;
 	node->data = NULL;
 
-	free(node);
-
-	return data;
+	return node;
 }
 
 
