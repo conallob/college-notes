@@ -4,7 +4,7 @@
  * Author: Conall O'Brien <conallob@maths.tcd.ie>
  * Date: $Date$
  * 
- * Id: $Id: /college/trunk/fyp/2.0/src/milestone1.c 2138 2006-02-07T21:25:22.382090Z conall  $
+ * Id: $Id$
  */
 
 #define STDIN_BUFFER_LEN 80
@@ -17,7 +17,6 @@
 
 /* Use String manipulation functions */
 #include <string.h>
-#include <stdlib.h>
 
 
 #include "linklist.h"
@@ -25,9 +24,7 @@
 int main(int argc, char *argv[]) {
 
 		  /* input buffer */
-		  char buffer[STDIN_BUFFER_LEN];
-		  item *tmp;
-		  linklist *storage; 
+		  char *buffer;  
 
 		  int i = 0; /* loop counter */
 
@@ -56,12 +53,8 @@ int main(int argc, char *argv[]) {
 		  /* Debug output */
 		  apr_file_printf(fp_err, "Input:\n"); 
 
-		  /* Until we hit the end of stdin, grab 80 characters from stdin 
-			* and store in buffer */
-		  while (apr_file_gets(buffer, STDIN_BUFFER_LEN, fp_in) == 0) {
-					 /* Push contents of buffer onto a Linked List */
-					 LinkListPush(storage, buffer);
-		  }
+		  /* Grab 80 characters from stdin and store in buffer */
+		  apr_file_gets(buffer, 80, fp_in); 
 
 		  /* Debug output */
 		  apr_file_printf(fp_err, "Output:\n");
@@ -74,7 +67,5 @@ int main(int argc, char *argv[]) {
 					 /* Print out input buffer */
 					 apr_file_printf(fp_out, tmp->val);
 		  }
-
-		  exit(0); /* And I'm spent... */
 
 }
