@@ -11,7 +11,7 @@
 #include "linklist.h"
 
 /* Make a Linked List */
-void ListNodeMkList() {
+linklist *ListNodeMkList() {
 	
 	linklist * list;
 	list = (linklist*) malloc(sizeof(linklist));
@@ -20,10 +20,12 @@ void ListNodeMkList() {
 	list->head = NULL;
 	list->tail = MkNode(NULL, NULL);
 
+
+	return list;
 }
 
 /* Append a node to the end of a LinkedList */
-void LinkListAddNode(linklist * list, char* value) {
+int LinkListAddNode(linklist * list, char* value) {
    item * curr; /* We'll need a new node */ 
 
 	/* dynamically allocate memory */
@@ -32,7 +34,7 @@ void LinkListAddNode(linklist * list, char* value) {
 	strcpy(curr->val, value);
 
 	list->tail->next = curr;
-	curr->prev = list->tail
+	curr->prev = list->tail;
 	list->tail = curr;
 
 	list->size++;
@@ -47,23 +49,16 @@ int LinkListRmNode(item * node) {
 		if(node->prev != node) {
 			node->prev->next = node->next; 
 			node->next->prev = node->prev; 
-
 		} else {
-
 			node->prev->next = node->prev;
-
 		}
 	} else {
-
 		if(node->prev != node) {
-
 			node->prev->next = node->prev;
-
 		}
 	}
 
 	node->data = NULL;
-	
 	free(node);
 	
 	/* Link the head node to be the next node */
@@ -81,8 +76,8 @@ int LinkListRmList(linklist * list) {
 			node = node->next;
 		}
 	}
-
-	return 0;
+	free(list);
+	return 1;
 }
 
 
