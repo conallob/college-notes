@@ -8,137 +8,36 @@
  * Id: $Id$
  */
 
-#include "linklist.h"
+struct linklist {
+   char * val;
+   struct linklist * prev;
+   struct linklist * next;
+};
 
-/* Make a Linked List */
-linklist *LinkListMkList() {
-	
-	linklist * list;
-	if ( !(list = (linklist*) malloc(sizeof(linklist))) ) {
-			  return NULL;
-	}
-	list->size = 0;
 
-	list->head = NULL;
-	if ( !(list->tail = (item*) malloc(sizeof(item))) ) {
-			  return NULL;
-	}
+typedef struct linklist item;
 
-	list->tail->next = list->tail;
-	list->tail->prev = list->tail;
 
-	return list;
+void init() {
+	item * head; /* We'll need a primary node */
+	head = NULL; /* Let's make it null */
+
+   head = curr; /* Set head to the current list-pointer */
+   curr = head; /* Set current list-pointer to head node */
+	return 1;
 }
 
-/* Append a node to the end of a LinkedList */
-int LinkListAddNode(linklist *list, void *value) {
-   item * curr; /* We'll need a new node */ 
+
+void addNode(char* value) {
+   item * curr; 
 
 	/* dynamically allocate memory */
-   if ( !(curr = (item *) malloc(sizeof(item))) ) { 
-			  return 0;
-	}
-
-	curr->prev = NULL;
-	curr->next = NULL;
-	strcpy(curr->val, value);
-		
-	if(list->head == NULL) {
-		list->head = curr;
-		curr->next = list->tail;
-		list->tail->prev = curr;
-		curr->prev = curr;
-	} else {
-		list->tail->prev->next = curr;
-		curr->next = list->tail;
-		curr->prev = list->tail->prev;
-		list->tail->prev = curr;
-	}
+   curr = (item *)malloc(sizeof(item)); 
+	/* Set value of new node to value */
+   curr->val = *value;
+	/* Link the new node to the last node in the list */
+   curr->prev->next = curr;
 	
-	list->size++;
-	return 1;
+	/* Link the head node to be the next node */
+   curr->next = head;
 }
-
-
-/* Delete a node from a Linked List */
-int LinkListRmNode(linklist *list, item *node) {
-
-	if(node->next != node) {
-		if(node->prev != node) {
-			node->prev->next = node->next; 
-			node->next->prev = node->prev; 
-		} else {
-			node->prev->next = node->prev;
-		}
-	} else {
-		if(node->prev != node) {
-			node->prev->next = node->prev;
-		}
-	}
-
-	node->val = NULL;
-	free(node);
-	
-	list->size--;
-
-	return 1;
-}
-
-
-/* Remove every node from a Linked List */
-int LinkListRmList(linklist *list) {
-	item * node = list->head;
-
-	while ((node != NULL) && (node != node->next)) {
-		node = node->next;
-		if(LinkListRmNode(list, node)) {
-			node = node->next;
-		} else {
-			return 0;
-		}
-	}
-
-	free(list);
-	return 1;
-}
-
-
-/*
- * LIFO actions, Push and Pop
- */
-
-/* Pop the head node off a Linked List */
-item *LinkListPop(linklist *list) {
-	item * node;
-	void * data;
-
-	/* Uh oh! head of the list is NULL, we got nothing! */
-	if (list->head == NULL)
-		return NULL;
-
-	node = list->head;
-	data = node->val;
-
-	if (node->next != list->tail) {
-		node->next->prev = node->next;
-		list->head = node->next;
-	} else {
-		list->head = NULL;
-		list->tail->prev = list->tail;
-	}
-
-	list->size--;
-
-	return node;
-}
-
-
-/* Push a node onto the end of a Linked List */
-int LinkListPush(linklist *list, void *val) {
-	char payload[STDIN_BUFFER_LEN];
-
-	strcpy(payload, (char*) val);
-
-	return LinkListAddNode(list, payload);
-}
-
