@@ -15,7 +15,7 @@ current: milestone
 
 milestone: milestone1
 
-clean: clean.o clean.out clean.target
+clean: clean.o clean.target
 
 
 milestone1: milestone1.c linklist.c
