@@ -9,7 +9,7 @@ use XMLRPC::Transport::HTTP;
 use DBI;
 use Switch;
 
-our $dbh = DBI->connect('DBI:mysql:4ba8', '4ba8', 'nkm34e', 
+my $dbh = DBI->connect('DBI:mysql:4ba8', '4ba8', 'nkm34e', 
 								{ RaiseError => 1, AutoCommit => 1});
 
 
@@ -50,7 +50,7 @@ package ba8;
 
   	  	my $sth = $dbh->prepare("INSERT into servicetype values(NULL, '$name');");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -68,7 +68,7 @@ package ba8;
 
   	  	my $sth = $dbh->prepare("UPDATE servicetype SET TypeName='$newname' where TypeName='$oldname';");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -86,7 +86,7 @@ package ba8;
 
   	  	my $sth = $dbh->prepare("DROP * from servicetype where TypeName='$name';");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -103,8 +103,8 @@ package ba8;
 		}
 			  
   	  	my $sth = $dbh->prepare("SELECT TypeName from servicetype where TypeID=$id;");
-  	  	if (my $sth->execute()) {
-			if (my @row = my $sth->fetchrow_array) {
+  	  	if ($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
 				return {		  
 					TypeName	=> $row[0]
 				};	
@@ -136,7 +136,7 @@ package ba8;
 		
   	  	my $sth = $dbh->prepare("INSERT into service values(NULL, '$name', $type, $opening, $closing);");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -155,7 +155,7 @@ package ba8;
 
   	  	my $sth = $dbh->prepare("UPDATE service SET $prop=$value where ServiceName='$oldname';");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -175,7 +175,7 @@ package ba8;
 		
   	  	my $sth = $dbh->prepare("DROP * from service where ServiceName='$name';");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -193,8 +193,8 @@ package ba8;
 
   	  	my $sth = $dbh->prepare("SELECT * from service where ServiceID=$id);");
 
-		if (my $sth->execute()) {
-			if (my @row = my $sth->fetchrow_array) {
+		if ($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
 				return {		  
 					ServiceName	=> $row[1],
 					ServiceType	=> $row[2],
@@ -223,8 +223,8 @@ package ba8;
 		
   	  	my $sth = $dbh->prepare("SELECT ServiceID from service where ServiceName='$operator';");
 
-		if (my $sth->execute()) {
-			if (my @row = my $sth->fetchrow_array) {
+		if ($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
 				$operatorid = $row[0];
 			}
 		} else {
@@ -233,7 +233,7 @@ package ba8;
 
   	  	$sth = $dbh->prepare("INSERT into instance values(NULL, $operatorid, '$date', $capacity, $cost, '$src', '$dest', '$details');");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -252,7 +252,7 @@ package ba8;
 		  
   	  	my $sth = $dbh->prepare("UPDATE instance SET $flag=$newvalue where UniqueID=$id;");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -270,7 +270,7 @@ package ba8;
 
   	  	my $sth = $dbh->prepare("DROP * from instance where UniqueID=$id;");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';	  
@@ -288,8 +288,8 @@ package ba8;
 			  
   	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
   	  	
-		if(my $sth->execute()) {
-			if (my @row = my $sth->fetchrow_array) {
+		if($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
 				return {		  
 					ServiceID	=> $row[1],
 					ServiceDate	=> $row[2],
@@ -328,7 +328,7 @@ package ba8;
 			  
   	  	my $sth = $dbh->prepare("INSERT into booking values(NULL, $id, '$booked', '$flexible', '$cancelled', '$confirmed');");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -347,7 +347,7 @@ package ba8;
 			  
   	  	my $sth = $dbh->prepare("UPDATE booking SET $flag=$newvalue where BookingID=$id;");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -365,7 +365,7 @@ package ba8;
 
   	  	my $sth = $dbh->prepare("DROP * from booking where BookingID=$id;");
 
-		if (my $sth->execute()) {
+		if ($sth->execute()) {
 			return 'true';
 		} else {
 			return 'false';
@@ -383,8 +383,8 @@ package ba8;
 			  
   	  	my $sth = $dbh->prepare("SELECT * from booking where BookingID=$id;");
   	  	
-		if(my $sth->execute()) {
-			if (my @row = my $sth->fetchrow_array) {
+		if($sth->execute()) {
+			if (my @row = $sth->fetchrow_array) {
 				return {		  
 					BookingID	=> $row[0],
 					Booked 	 	=> XMLRPC::Data->type('boolean', BooleanENUMConvert($row[2])),
