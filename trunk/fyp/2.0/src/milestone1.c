@@ -24,8 +24,8 @@ int main(int argc, char *argv[]) {
 
 		  /* input buffer */
 		  char *buffer, *eof;
-		  item *tmp;
-		  linklist *storage; 
+		  linklist * storage;
+		  item tmp;
 
 		  int i = 0; /* loop counter */
 
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
 		  apr_initialize(); 
 		  atexit(apr_terminate);
 
-		  storage = (linklist*) LinkListMkList();
+		  storage = LinkListMkList();
 
 		  /* initialise APR pool e, p, q */
 		  apr_pool_create(&e, NULL);
@@ -54,18 +54,21 @@ int main(int argc, char *argv[]) {
 		  /* Debug output */
 		  apr_file_printf(fp_err, "Input:\n"); 
 
+		  /* Grab 80 characters from stdin and store in buffer */
 		  while(buffer[strlen(buffer)] != EOF) {
-					 /* Grab 80 characters from stdin and store in buffer */
 					 apr_file_gets(buffer, 80, fp_in); 
-					 /* Push contents of bufer onto a Linked List */
+					 /*strcat(storage, buffer);*/
 					 LinkListPush(storage, buffer);
 		  }
 
 		  /* Debug output */
 		  apr_file_printf(fp_err, "Output:\n");
 
-		  while(storage->size > 0) {
-					 tmp = LinkListPop(storage);
+		  while(storage->head != NULL) {
+					 tmp = LinkListPop();
+					 /* Print out input buffer */
+					 apr_file_printf(fp_out, tmp->value);
+		  }
 
 					 /* Print out input buffer */
 					 apr_file_printf(fp_out, tmp->val);
