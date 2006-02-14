@@ -20,7 +20,7 @@ linklist *LinkListMkList() {
 	if ( !(list = (linklist*) malloc(sizeof(linklist))) ) {
 			  return NULL;
 	}
-	list->size = 1;
+	list->size = 0;
 
 	list->head = NULL;
 	if ( !(list->tail = (item*) malloc(sizeof(item))) ) {
@@ -130,14 +130,9 @@ item *LinkListPop(linklist *list) {
 		list->tail->prev = list->tail;
 	}
 
-	/* Set all values to NULL, then nuke it */
-	node->next = NULL;
-	node->prev = NULL;
-	node->val  = NULL;
+	list->size--;
 
-	free(node);
-
-	return data;
+	return node;
 }
 
 
