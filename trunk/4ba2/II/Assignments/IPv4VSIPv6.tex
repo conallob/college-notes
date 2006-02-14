@@ -58,11 +58,22 @@ various class A, B and C address allocations.
 
 
 Finally, in recent years, IPv4 has had many security concerns concerning
-Address Resolution Protocol (ARP), a protocol it uses to communicate
+address spoofing, many of which are connected to security issues with
+the Address Resolution Protocol (ARP), a protocol it uses to communicate
 with Layer 2 protocols. ARP, by it's nature is an unauthenticated, 
-broadcast protocol which is suseptible to attacks. Modern applications
-which require realtime QoS have also suffered from a certain
-inflexability of IPv4 in adapting to suit their needs.
+broadcast protocol which is suseptible to attacks and "cache poisoning".
+Finally, modern applications which require realtime QoS have also 
+suffered from a certain inflexability of IPv4 in adapting to suit their 
+needs.
+
+\subsection{Do We Need a Replacement IP Protocol}
+
+Due to the limitations of IPv4 and the various stop-gap solutions which
+have been added over the years, the Internet Engineering Task Fource
+(IETF) decided to design a new, much more modular and flexible IP
+protocol, with improvements over the design of IPv4, bassed upon the
+enhancements added over the years and flaws causing limitations. This
+protocol is IPv6.
 
 \section{Technologies}
 
