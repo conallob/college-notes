@@ -8,7 +8,11 @@
  * Id: $Id$
  */
 
-#include "linklist.h"
+struct linklist {
+   char * val;
+   struct linklist * prev;
+   struct linklist * next;
+};
 
 /* Make a Linked List */
 void ListNodeMkList() {
@@ -20,8 +24,6 @@ void ListNodeMkList() {
 	list->head = NULL;
 	list->tail = MkNode(NULL, NULL);
 
-	list->tail->next = list->tail;
-	list->tail->prev = list->tail;
 }
 
 /* Append a node to the end of a LinkedList */
@@ -68,9 +70,8 @@ int LinkListRmNode(item * node) {
 	
 	free(node);
 	
-	list->size--;
-
-	return 1;
+	/* Link the head node to be the next node */
+   curr->next = head;
 }
 
 
