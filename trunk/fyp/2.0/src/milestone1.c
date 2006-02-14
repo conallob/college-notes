@@ -7,6 +7,8 @@
  * Id: $Id: /college/trunk/fyp/2.0/src/milestone1.c 2138 2006-02-07T21:25:22.382090Z conall  $
  */
 
+#define STDIN_BUFFER_LEN 80
+
 /* Use APR */
 #include "apr.h"
 #include "apr_file_io.h"
@@ -21,7 +23,7 @@
 int main(int argc, char *argv[]) {
 
 		  /* input buffer */
-		  char *buffer, *eof;
+		  char buffer[STDIN_BUFFER_LEN];
 		  item *tmp;
 		  linklist *storage; 
 
@@ -52,9 +54,9 @@ int main(int argc, char *argv[]) {
 		  /* Debug output */
 		  apr_file_printf(fp_err, "Input:\n"); 
 
-		  while(buffer[strlen(buffer)] != EOF) {
-					 /* Grab 80 characters from stdin and store in buffer */
-					 apr_file_gets(buffer, 80, fp_in); 
+		  /* Until we hit the end of stdin, grab 80 characters from stdin 
+			* and store in buffer */
+		  while (apr_file_gets(buffer, STDIN_BUFFER_LEN, fp_in) == 0) {
 					 /* Push contents of bufer onto a Linked List */
 					 LinkListPush(storage, buffer);
 		  }
