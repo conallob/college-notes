@@ -8,7 +8,11 @@
  * Id: $Id$
  */
 
-#include "linklist.h"
+struct linklist {
+   char * val;
+   struct linklist * prev;
+   struct linklist * next;
+};
 
 /* Make a Linked List */
 void ListNodeMkList() {
@@ -17,14 +21,13 @@ void ListNodeMkList() {
 	list = (linklist*) malloc(sizeof(linklist));
 	list->size = 0;
 
-	list->head = NULL;
-	list->tail = MkNode(NULL, NULL);
+typedef struct linklist item;
 
 }
 
-/* Append a node to the end of a LinkedList */
-void LinkListAddNode(linklist * list, char* value) {
-   item * curr; /* We'll need a new node */ 
+void init() {
+	item * head; /* We'll need a primary node */
+	head = NULL; /* Let's make it null */
 
 	/* dynamically allocate memory */
    curr = (item *)malloc(sizeof(item)); 
@@ -40,29 +43,15 @@ void LinkListAddNode(linklist * list, char* value) {
 }
 
 
-/* Delete a node from a Linked List */
-int LinkListRmNode(item * node) {
+void addNode(char* value) {
+   item * curr; 
 
-	if(node->next != node) {
-		if(node->prev != node) {
-			node->prev->next = node->next; 
-			node->next->prev = node->prev; 
-
-		} else {
-
-			node->prev->next = node->prev;
-
-		}
-	} else {
-
-		if(node->prev != node) {
-
-			node->prev->next = node->prev;
-
-		}
-	}
-
-	node->data = NULL;
+	/* dynamically allocate memory */
+   curr = (item *)malloc(sizeof(item)); 
+	/* Set value of new node to value */
+   curr->val = *value;
+	/* Link the new node to the last node in the list */
+   curr->prev->next = curr;
 	
 	free(node);
 	
