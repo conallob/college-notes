@@ -4,7 +4,7 @@
  * Author: Conall O'Brien <conallob@maths.tcd.ie>
  * Date: $Date$
  * 
- * Id: $Id$
+ * Id: $Id: /college/trunk/fyp/2.0/src/milestone1.c 2138 2006-02-07T21:25:22.382090Z conall  $
  */
 
 #define STDIN_BUFFER_LEN 80
@@ -13,8 +13,11 @@
 #include "apr.h"
 #include "apr_file_io.h"
 
+#include "dyn_page.h"
+
 /* Use String manipulation functions */
 #include <string.h>
+#include <stdlib.h>
 
 
 #include "linklist.h"
@@ -23,6 +26,7 @@ int main(int argc, char *argv[]) {
 
 		  /* input buffer */
 		  char *buffer;  
+		  char *storage = "\0";  
 
 		  int i = 0; /* loop counter */
 
@@ -52,15 +56,18 @@ int main(int argc, char *argv[]) {
 		  apr_file_printf(fp_err, "Input:\n"); 
 
 		  /* Grab 80 characters from stdin and store in buffer */
-		  apr_file_gets(buffer, 80, fp_in); 
+		  while(!= EOF) {
+					 apr_file_gets(buffer, 80, fp_in); 
+					 strcat(storage, buffer);
+		  }
 
 		  /* Debug output */
 		  apr_file_printf(fp_err, "Output:\n");
 
 		  /* Print out input buffer */
-		  apr_file_printf(fp_out, buffer);
+		  apr_file_printf(fp_out, storage);
 
-		  return 0; /* And I'm spent... */
+		  exit(0); /* And I'm spent... */
 
 					 /* Print out input buffer */
 					 apr_file_printf(fp_out, tmp->val);
