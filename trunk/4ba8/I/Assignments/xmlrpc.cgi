@@ -21,18 +21,6 @@ print "Content-Type: text/plain\n\n";
 
 print "Content-Type: text/plain\n\n";
 
-print "Content-Type: text/plain\n\n";
-
-print "Content-Type: text/plain\n\n";
-
-print "Content-Type: text/plain\n\n";
-
-print "Content-Type: text/plain\n\n";
-
-print "Content-Type: text/plain\n\n";
-
-print "Content-Type: text/plain\n\n";
-
 my $daemon = XMLRPC::Transport::HTTP::CGI
     ->dispatch_to('ba8')
     ->handle;
