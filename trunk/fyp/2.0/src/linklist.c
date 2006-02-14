@@ -31,7 +31,7 @@ void LinkListAddNode(linklist * list, char* value) {
 	/* dynamically allocate memory */
    curr = (item *)malloc(sizeof(item)); 
 
-	curr->val = value;
+	strcpy(curr->val, value);
 
 	list->tail->next = curr;
 	curr->prev = list->tail
@@ -123,6 +123,10 @@ void *LinkListPop(linklist *list) {
 
 
 /* Push a node onto the end of a Linked List */
-void *LinkListPush(linklist *list, item *node) {
-	return LinkListAddNode(list, node->value);
+int LinkListPush(linklist *list, void *val) {
+	char payload[STDIN_BUFFER_LEN];
+
+	strcpy(payload, (char*) val);
+
+	return LinkListAddNode(list, payload);
 }
