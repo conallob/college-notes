@@ -22,6 +22,8 @@ void ListNodeMkList() {
 
 	list->tail->next = list->tail;
 	list->tail->prev = list->tail;
+
+	return list;
 }
 
 /* Append a node to the end of a LinkedList */
@@ -37,7 +39,9 @@ int LinkListAddNode(linklist *list, void *value) {
 			  return 0;
 	}
 
-	strcpy(curr->val, value);
+	curr->prev = NULL;
+	curr->next = NULL;
+	curr->val = value;
 		
 	if(list->head == NULL) {
 		list->head = curr;
@@ -127,10 +131,7 @@ void *LinkListPop(linklist *list) {
 		list->tail->prev = list->tail;
 	}
 
-	/* Set all values to NULL, then nuke it */
-	node->next = NULL;
-	node->prev = NULL;
-	node->data = NULL;
+	list->size--;
 
 	free(node);
 
@@ -139,6 +140,6 @@ void *LinkListPop(linklist *list) {
 
 
 /* Push a node onto the end of a Linked List */
-void *LinkListPush(linklist *list, item *node) {
-	return LinkListAddNode(list, node->value);
+int LinkListPush(linklist *list, void *val) {
+	return LinkListAddNode(list, val);
 }

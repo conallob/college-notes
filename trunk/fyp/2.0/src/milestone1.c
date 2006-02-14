@@ -13,8 +13,6 @@
 #include "apr.h"
 #include "apr_file_io.h"
 
-#include "dyn_page.h"
-
 /* Use String manipulation functions */
 #include <string.h>
 #include <stdlib.h>
@@ -25,8 +23,9 @@
 int main(int argc, char *argv[]) {
 
 		  /* input buffer */
-		  char *buffer;  
-		  char *storage = "\0";  
+		  char buffer[STDIN_BUFFER_LEN];
+		  item *tmp;
+		  linklist *storage; 
 
 		  int i = 0; /* loop counter */
 
@@ -65,13 +64,13 @@ int main(int argc, char *argv[]) {
 		  /* Debug output */
 		  apr_file_printf(fp_err, "Output:\n");
 
-		  /* Print out input buffer */
-		  apr_file_printf(fp_out, storage);
-
-		  exit(0); /* And I'm spent... */
+		  while(storage->size > 0) {
+					 tmp = LinkListPop(storage);
 
 					 /* Print out input buffer */
 					 apr_file_printf(fp_out, tmp->val);
 		  }
+
+		  exit(0); /* And I'm spent... */
 
 }
