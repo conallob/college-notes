@@ -1,1 +1,0 @@
--tapkeep -show normal -mode pipe -command spl2sym -family=spartan decoder.spl decoder.sym

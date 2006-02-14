@@ -1,8 +1,0 @@
-[Inputs]
-CLK
-Reset
-Incr
-=Din[7:0]=
-[Outputs]
-=Dout[7:0]=
-[BiDir]

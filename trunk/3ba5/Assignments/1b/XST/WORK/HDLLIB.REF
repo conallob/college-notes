@@ -1,6 +1,0 @@
-AR float_exp_adder behavioral F:/1b/float_exp_adder.vhdl sub00/vhpl05
-EN float_adder NULL F:/1b/float_adder.vhdl sub00/vhpl02
-AR barrel_shifter_32bit behavioral f:/1b/barrel_shifter_32bit.vhdl sub00/vhpl01
-AR float_adder behavioral F:/1b/float_adder.vhdl sub00/vhpl03
-EN barrel_shifter_32bit NULL f:/1b/barrel_shifter_32bit.vhdl sub00/vhpl00
-EN float_exp_adder NULL F:/1b/float_exp_adder.vhdl sub00/vhpl04

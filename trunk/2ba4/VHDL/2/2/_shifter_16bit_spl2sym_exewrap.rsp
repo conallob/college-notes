@@ -1,1 +1,0 @@
--tapkeep -show normal -mode pipe -command spl2sym -family=virtex2 shifter_16bit.spl shifter_16bit.sym

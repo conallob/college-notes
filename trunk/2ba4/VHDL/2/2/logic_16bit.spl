@@ -1,7 +1,0 @@
-[Inputs]
-=SEL[1:0]=
-=A[15:0]=
-=B[15:0]=
-[Outputs]
-=MUX_OUT[15:0]=
-[BiDir]

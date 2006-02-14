@@ -1,8 +1,0 @@
-[Inputs]
-CLK
-MW
-=A[8:0]=
-=Din[15:0]=
-[Outputs]
-=Dout[15:0]=
-[BiDir]

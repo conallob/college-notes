@@ -1,4 +1,0 @@
-count = $1
-arch  = $2
-
-$( $count ) (test.$arch $3*)  : type=$arch

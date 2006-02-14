@@ -1,8 +1,0 @@
-[Inputs]
-CLK
-DIN
-LOAD
-=LOAD_DATA[3:0]=
-[Outputs]
-=DOUT[3:0]=
-[BiDir]

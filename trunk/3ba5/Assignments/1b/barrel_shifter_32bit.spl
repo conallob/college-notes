@@ -1,6 +1,0 @@
-[Inputs]
-=s[4:0]=
-=input[31:0]=
-[Outputs]
-=output[31:0]=
-[BiDir]

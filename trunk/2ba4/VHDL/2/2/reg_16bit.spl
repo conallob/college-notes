@@ -1,8 +1,0 @@
-[Inputs]
-load
-clk
-din
-=load_data[15:0]=
-[Outputs]
-=dout[15:0]=
-[BiDir]

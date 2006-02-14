@@ -1,2 +1,0 @@
-MODULE shifter_16bit
-   SUBMODULE mux_4to1_16bit

@@ -1,6 +1,0 @@
-[Inputs]
-input2
-=input1[2:0]=
-[Outputs]
-=output[3:0]=
-[BiDir]

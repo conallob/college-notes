@@ -1,4 +1,0 @@
-SETPROJECT .
-SET BusFormat = BusFormatAngleBracketNotRipped
-SETXIPCPORTHOST 2484
-XIPCPJSENDCORES virtex2

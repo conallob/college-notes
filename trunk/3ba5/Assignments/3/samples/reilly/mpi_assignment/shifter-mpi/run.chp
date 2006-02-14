@@ -1,7 +1,0 @@
-count = $1
-arch  = $2
-
-$( $count / 2 + $count % 2 ) (shifter.$arch)  : type=$arch
-####sk  We don't want the Fortran stuff ...
-####sk  $( $count / 2 )              (shifterF.$arch) : type=$arch
-
