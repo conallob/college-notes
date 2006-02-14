@@ -8,9 +8,6 @@
  * Id: $Id$
  */
 
-#include <stdlib.h>
-#include <stdio.h>
-
 #include "linklist.h"
 
 /* Make a Linked List */
@@ -44,7 +41,7 @@ int LinkListAddNode(linklist *list, void *value) {
 
 	curr->prev = NULL;
 	curr->next = NULL;
-	curr->val = value;
+	strcpy(curr->val, value);
 		
 	if(list->head == NULL) {
 		list->head = curr;
@@ -138,6 +135,10 @@ item *LinkListPop(linklist *list) {
 
 /* Push a node onto the end of a Linked List */
 int LinkListPush(linklist *list, void *val) {
-	return LinkListAddNode(list, val);
+	char payload[STDIN_BUFFER_LEN];
+
+	strcpy(payload, (char*) val);
+
+	return LinkListAddNode(list, payload);
 }
 

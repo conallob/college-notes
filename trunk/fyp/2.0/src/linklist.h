@@ -8,8 +8,11 @@
  * Id: $Id$
  */
 
+#define STDIN_BUFFER_LEN 80
+
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 typedef struct listnode {
    void *val;
