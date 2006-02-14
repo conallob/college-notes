@@ -8,11 +8,7 @@
  * Id: $Id$
  */
 
-struct linklist {
-   char * val;
-   struct linklist * prev;
-   struct linklist * next;
-};
+#include "linklist.h"
 
 /* Make a Linked List */
 void ListNodeMkList() {
