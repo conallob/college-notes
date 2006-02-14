@@ -122,10 +122,7 @@ item *LinkListPop(linklist *list) {
 		list->tail->prev = list->tail;
 	}
 
-	/* Set all values to NULL, then nuke it */
-	node->next = NULL;
-	node->prev = NULL;
-	node->val  = NULL;
+	list->size--;
 
 	return node;
 }
