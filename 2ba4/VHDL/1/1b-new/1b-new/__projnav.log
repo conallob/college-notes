@@ -1,0 +1,3980 @@
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @decoder.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @logic.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    logic.vhd
+Scanning    logic.vhd
+Writing logic.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @reg.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @register.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    register.vhd
+Scanning    register.vhd
+Writing register.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @ripple.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    ripple.vhd
+Scanning    ripple.vhd
+Writing ripple.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @zero_detect.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    zero_detect.vhd
+Scanning    zero_detect.vhd
+Writing zero_detect.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_2to1mux_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit 2to1mux...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+2to1mux.vhd(8): Syntax error at or near: 2
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named 2to1mux...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @2to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    2to1mux.vhd
+Scanning    2to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @mux8to1.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @mux8to1.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+Starting: 'jhdparse @splitter.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    splitter.vhd
+Scanning    splitter.vhd
+Writing splitter.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @logic.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    logic.vhd
+Scanning    logic.vhd
+Writing logic.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @4to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    4to1mux.vhd
+Scanning    4to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @8to1mux.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    8to1mux.vhd
+Scanning    8to1mux.vhd
+Warning 0005: Unable to resolve design hierarchy.
+
+JHDPARSE complete -    0 errors,    1 warning.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_adder_4_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit adder_4...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+ripple.vhd(27): Syntax error at or near: component
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named adder_4...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_full_adder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit full_adder...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+ripple.vhd(27): Syntax error at or near: component
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named full_adder...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_half_adder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit half_adder...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+ripple.vhd(27): Syntax error at or near: component
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named half_adder...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_decoder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit decoder...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_decoder_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 decoder.spl decoder.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_logic_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit logic...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+logic.vhd(13): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named logic...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @logic.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    logic.vhd
+Scanning    logic.vhd
+Writing logic.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_logic_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit logic...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_logic_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 logic.spl logic.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_mux2to1_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit mux2to1...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_mux2to1_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 mux2to1.spl mux2to1.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_mux8to1_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit mux8to1...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_mux8to1_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 mux8to1.spl mux8to1.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_reg_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit reg...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_reg_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 reg.spl reg.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_zero_detect_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit zero_detect...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_zero_detect_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 zero_detect.spl zero_detect.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\decoder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\logic_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\logic_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\mux8to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\zero_detect_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @zero_detect.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    zero_detect.vhd
+Scanning    zero_detect.vhd
+Writing zero_detect.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_zero_detect_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit zero_detect...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_zero_detect_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 zero_detect.spl zero_detect.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\zero_detect_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\zero_detect_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\zero_detect_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @ripple.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    ripple.vhd
+Scanning    ripple.vhd
+Writing ripple.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @zero_detect.jp'
+
+
+
+Starting: 'jhdparse @logic.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    logic.vhd
+Scanning    logic.vhd
+Writing logic.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @splitter.jp'
+
+
+
+Starting: 'jhdparse @decoder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    decoder.vhd
+Scanning    decoder.vhd
+Writing decoder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @mux2to1.jp'
+
+
+
+Starting: 'jhdparse @mux8to1.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    mux8to1.vhd
+Scanning    mux8to1.vhd
+Writing mux8to1.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+Starting: 'jhdparse @reg.jp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_full_adder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit full_adder...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_full_adder_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 full_adder.spl full_adder.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_full_adder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit full_adder...
+FATAL ERROR: VHDL Analyzer detecting a syntax error. Description of the error is:
+full_adder.vhd(11): Syntax error at or near: )
+Please correct this syntax error and try again...
+ERROR: This design does not contain an entity named full_adder...
+vhdtdtfi completed with errors...
+
+Done: failed with exit code: 0001.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_full_adder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit full_adder...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_full_adder_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 full_adder.spl full_adder.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\decoder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\decoder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Create Schematic Symbol
+
+Starting: 'exewrap @_full_adder_exewrap.rsp'
+
+
+Analyzing VHDL source files...
+Elaborating design unit full_adder...
+vhdtdtfi completed without error...
+
+Done: completed successfully.
+
+Starting: 'exewrap @_full_adder_spl2sym_exewrap.rsp -projnav'
+
+
+Starting: 'spl2sym -family=virtex2 full_adder.spl full_adder.sym -projnav '
+
+
+Release 4.2.03i - spl2sym E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+EXEWRAP detected that program 'spl2sym' completed successfully.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\logic_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\logic_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\mux2to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\mux8to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\mux8to1_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\reg_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\reg_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\splitter_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\zero_detect_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\zero_detect_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @full_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    full_adder.vhd
+Scanning    full_adder.vhd
+Writing full_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @half_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    half_adder.vhd
+Scanning    half_adder.vhd
+Writing half_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\full_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Simulate Behavioral VHDL Model
+
+Starting: 'exewrap @__updateTBW_exewrap.rsp'
+
+
+Starting: 'C:/Xilinx/bin/nt/tb.exe /u "f:\college\2ba4\vhdl\1\1b-new\1b-new\half_adder_tb.tbw" '
+
+
+EXEWRAP detected that program 'C:/Xilinx/bin/nt/tb.exe' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap @_vhdTOfdo_exewrap.rsp'
+
+
+Starting: 'xilperl C:/Xilinx/data/projnav/createfdo.pl __vhdTOfdo.rsp '
+
+
+Opening __vhdTOfdo.rsp
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Starting: 'exewrap -tapkeep -mode pipe -command xilperl __checkModelSim.pl'
+
+
+Starting: 'xilperl __checkModelSim.pl '
+
+
+EXEWRAP detected that program 'xilperl' completed successfully.
+
+Done: completed successfully.
+
+Launching: 'exewrap @_msim_simBehavVhdlModel_exewrap.rsp'
+
+
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @ripple_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    ripple_adder.vhd
+Scanning    ripple_adder.vhd
+Writing ripple_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Starting: 'jhdparse @ripple_adder.jp'
+
+
+JHDPARSE - VHDL/Verilog Parser.
+ISE 4.1i Copyright(c) 1999-2001 Xilinx, Inc.  All rights reserved. 
+
+Scanning    ripple_adder.vhd
+Scanning    ripple_adder.vhd
+Writing ripple_adder.jhd.
+
+JHDPARSE complete -    0 errors,    0 warnings.
+
+Done: completed successfully.
+
+ISE Auto-Make Log File
+-----------------------
+
+Launching: 'exewrap -tcl -command __runBencher.tcl'
+
+
+

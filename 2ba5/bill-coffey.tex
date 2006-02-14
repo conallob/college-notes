@@ -1,0 +1,2841 @@
+% $Id: bill-coffey.tex,v 1.27 2004/05/14 12:15:46 conall Exp $
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb}
+
+\usepackage[arc,poly,all]{xy}
+\usepackage{pstcol,pst-plot}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+%\chapter{Bill Coffey}
+
+% 20040105
+
+\section{Introduction}
+
+\begin{eqnarray*}
+M & \to & kg \\
+L & \to & m \\
+T & \to & s \\
+Q & \to & Coulombs
+\end{eqnarray*}
+
+Origins of Electricity - 600 BC - Thales of Miletus
+
+Electricity - Greek work meaning "amber"
+
+1687 - Newton - Principia - Gravitational Force
+
+\begin{table}[hbtp]
+
+\xy <1cm, 0cm>:
+0 *+!CR{m_{1}} *+!UC{\vec{F_{12}}} ; (2.5,0) **\dir{-} *\dir{>} ?(1.15)
+*+!CL{m_{2}} *+!DC{\vec{r_{12}}}
+\endxy
+
+\end{table}
+
+\[ \vec{F_{12}} = \frac{\gamma m_{1} m_{2} \hat{\vec{r_{12}}}
+}{r_{12}^{2} } \]
+
+\[ \hat{\vec{r_{12}}} = \frac{\vec{r_{12}}}{\left| \vec{r_{12}} \right|}
+\]
+
+1770 - A Coulomb
+
+\[\vec{F_{12}}^{el} = \frac{q_{1} q_{2} \hat{\vec{r_{12}}} }{ 4 \pi
+\varepsilon_{0} r_{12}^{2} } \]
+
+\begin{table}[hbtp]
+
+\xy <1cm, 0cm>:
+0 *+!CR{q_{1}} ; (2.5,0) **\dir{-} *\dir{>} ?(1.0)
+*+!CL{q_{2}} *+!DC{\vec{r_{12}}}
+\endxy
+
+\end{table}
+
+If the charges $q_{1}$ and $q_{2}$ are of the same sign, they
+repel one another. And if they are opposite sign, they attract one
+another. Moreover, the electrostatic force is billions of times stronger
+than the gravitational force.
+
+\[ \varepsilon_{0} = \frac{1}{36 \pi} \times 10^{-9} \mbox{  - Permitivity
+of Free Space (Units: } Farads/m) \]
+
+\[ i(t) = \frac{d Q(t)}{dt} = \frac{\mbox{Coulombs}}{\mbox{second}} = 
+\mbox{Amperes (aka Amps) (Symbol: $A$)} \]
+
+\begin{table}[hbtp]
+
+\xy<1cm,0cm>:
+0       ; (8,0) **\dir{-} ?(1.05) *+!UR{t} ,
+(0,2)   ; (8,2) **\dir{-} ,
+(0, -1) ; (0,3) **\dir{-} *+!UL{i(t)} ,
+(4,0) *\dir{<} ; (4,2) **\dir{-} *\dir{>} ?(0.65) *+!UL{I}
+\endxy
+
+\end{table}
+
+\begin{table}[hbtp]
+
+\begin{pspicture}(-4,-1)(4,1)
+\tiny
+\psset{xunit=0.011,yunit=1}
+\psaxes[Dx=60,Dy=1](0,0)(-359,-1)(360,1)
+\psplot{-360}{360}{x sin}
+\psplot{-360}{360}{x x mul sin}
+\end{pspicture}
+
+\end{table}
+
+\[ i(t) = I_{m} sin \omega t \mbox{ - Amplitude of I} \]
+
+$ \omega \mbox{  - Angular Frequency.} $ \\
+$ \omega = 2 \pi f \mbox{ (radians/sec)} $ \\
+$ \omega t = \Phi $ \\
+
+We would like to have a measure which will make the AC behave
+like DC.
+
+\begin{table}[hbtp]
+
+\xy <1cm,0cm>:
+0 		; (8,0) **\dir{-} ,
+(1,-1) ; (1,4) **\dir{-} ,
+(3,-1) *+!DC{a} ; (3,4) **\dir{-} ,
+(5,-1) *+!DC{b} ; (5,4) **\dir{-} ,
+(7,-1) ; (7,4) **\dir{-} ,
+(1.5,0.5)  ; (8,4) **\crv{(3,4)&(3,-3)} *+!DL{f(x)}
+\endxy
+
+\end{table}
+
+$\overline{f(x)} = \frac{1}{b - a} \int^{b}_{a} f(x) dx$ \\
+$\sin \omega t - \mbox{repeats every} T $ \\
+$ T = \frac{2 \pi}{\omega} $
+
+\begin{eqnarray*}
+	& = & \sin \omega t \\
+	& = & \sin \omega (t + \frac{2 \pi}{\omega}) \\
+	& = & \sin \omega (\omega t + 2 \pi) \\
+	& = & \sin \omega t \cos 2 \pi + \cos \pi t \sin 2 \pi \\
+	& = & \sin \omega t
+\end{eqnarray*}
+
+\[ \frac{2 \pi}{\omega} = T \rightarrow \mbox{Periodic Time} \]
+
+\[ \sin \omega (t + T) = \sin \omega t = \sin \omega (t - T) \]
+
+\[ f(t \pm nT) = f(t) \]
+
+\[ n = 1, 2, 3, ... \]
+
+The period of every $\frac{2 \pi}{\omega}$ will show the
+function for all time.
+
+\begin{eqnarray*}
+i(t) 				 & = & I_{m} \sin \omega t \\
+\overline{i(t)} & = & \frac{1}{T} \int^{T}_{0} I_{m} \sin \omega t dt \\
+					 & = & \frac{\omega}{2 \pi} \int^{\frac{2 \pi}{\omega}}_{0} I_{m} \sin \omega t dt \\
+\Rightarrow \omega t & = & \Phi \\
+		\omega dt & = & d \Phi \\
+				  t & = & 0 \\
+			  \Phi & = & 0 \\
+				  t & = & \frac{2 \pi}{\omega} \\
+			  \Phi & = & 2 \pi \\
+\Rightarrow \overline{i(t)} & = & \frac{\omega}{2 \pi} \int^{2 \pi}_{0} \frac{I_{m} \sin \Phi d \Phi}{\omega} \\
+					 & = & 2 \pi \int^{2 \pi}_{0} I_{m} \sin \Phi d \Phi \\
+\frac{d}{dx} (\cos x)& = & - \sin x \\
+\frac{-I_{m}}{2 \pi} \cos \Phi |^{2 \pi}_{0} & = & -
+\frac{I_{m}}{2 \pi} \left[ 1 - 1\right] = 0
+\end{eqnarray*}
+
+No use talking about the average value of AC, since it will
+always be zero.
+
+\[ \overline{i^{2}(t)} = \frac{1}{T} \int^{T}_{0} i^{2}(t) dt =
+\sqrt{i^{2}(t)} \]
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+When squared, the average value of $i(t)$ is no longer less
+than or equal to zero.
+
+% 20040107
+
+$ \overline{f(t)} = \frac{1}{T} \int^{T}_{0} f(t) dt $ \\
+$ f(t \pm nT) = f(t) $ \\
+
+Periodic fn in st.
+
+$ i(t) = I_{m} \sin \omega t $ \\
+$ T = \frac{ 2 \pi}{\omega} $ \\
+
+$fn$ repeats itself after a time period of $T = \frac{2 \pi}{\omega}$.
+
+\begin{table}[hbtp]
+
+\begin{pspicture}(-4,-1)(4,1)
+\tiny
+\psset{xunit=0.011,yunit=1}
+\psaxes[Dx=60,Dy=1](0,0)(0,-2)(720,2)
+\psplot{0}{720}{x sin}
+\end{pspicture}
+
+\end{table}
+
+\[ T= \frac{2 \pi}{\omega} \]
+
+Half Wave rectified Sine Wave
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ T = \frac{\pi}{\omega} \]
+
+Full Wave Rectifier
+
+\[ i(t) = I_{m} \sin \omega t \]
+
+\[ \left| \sin \omega t \right| \]
+
+\[ \overline{f^{2}(t)} = \frac{1}{T} \int^{T}_{0} f^{2} (t) dt \]
+
+\[ i^{2}(t) = I_{m}^{2} \sin^{2} \omega t \]
+
+\[ \cos 2 A = 1 - 2 \sin^{2} A \]
+
+\[ \sin^{2} A = \frac{1}{2} (1 - \cos 2A) \]
+
+\[ i^{2}(t) = \frac{I_{m}^{2}}{2} (1 - \cos 2 \omega t) \]
+
+\[ -1 \leq \cos^{2} 2 \omega t \leq 1 \]
+
+The square of the current goes to zero, but never goes
+negative. Furthermore, the square of the current oscillates with the
+angular frequency $2 \omega$.
+
+\[ \overline{i^{2}(t)} = \frac{1}{T} i^{2}(t) dt = \frac{1}{T}
+\int^{T}_{0} \frac{I_{m}^{2}}{2} (1 - \cos 2 \omega t) dt \]
+
+$T$ is of course the periodic time of $i(t)$. $T = \frac{2
+\pi}{\omega}$.
+
+\begin{eqnarray*}
+\overline{i^{2}(t)} & = & \frac{\omega}{2 \pi} \frac{I_{m}^{2}}{2} \int^{\frac{2 \pi}{\omega}}_{0} (1 - \cos 2 \omega t) dt \\
+& = & \frac{\omega}{2 \pi} \frac{I_{m}^{2}}{2} \int^{\frac{2 \pi}{\omega}}_{0} dt - \int^{\frac{2 \pi}{\omega}}_{0} \cos 2 \omega t dt \\
+& = & \frac{\omega}{2 \pi} \frac{I_{m}^{2}}{2} \frac{2 \pi}{\omega} - \int^{\frac{2 \pi}{\omega}}_{0} \cos 2 \omega t dt \\
+\int^{\frac{2 \pi}{\omega}}_{0} \cos 2 \omega t dt \\
+\omega t & = &\Theta \\ 
+\omega dt & = & d\Theta \\
+t & = & 0 \\ 
+\Theta & = & \frac{2 \pi}{\omega} \\ 
+\Theta & = & 2 \pi \\
+\int^{2 \pi}_{0} \frac{\cos 2 \Theta d \Theta}{\omega} & = & \frac{1}{\omega} \left[ \frac{\sin 2 \Theta}{2} \right]^{2 \pi}_{0} \\
+\frac{1}{\omega} (0 - 0) \\
+\overline{i^{2}(t)} & = & \frac{I_{m}^{2}}{2} \\
+\sqrt{i^{2}(t)} & = & \frac{I_{m}}{\sqrt{2}} I
+\end{eqnarray*}
+
+$I = RMS$ value of $i(t) = I_{m} \sin \omega t$.
+
+$V = VMS$ value of $V(t) < V_{m} \sin \omega t$.
+
+\[ V = \frac{V_{m}}{\sqrt{2}} = \frac{0.707 V_{m}}{220V} \]
+
+
+Tutorial Assignment: Find $\overline{V(t)}$ and $\overline{V^{2}(t)}$.
+
+\subsection{$\overline{V(t)}$}
+
+\begin{eqnarray*}
+\overline{V(t)} & = & \frac{1}{T} \int^{T}_{0} V(t)  dt \\
+					 & = & \frac{1}{T} \int^{T}_{0} V_{m} \times \cos\omega t dt \\
+					 & = & \frac{V_{m}}{T} \left| \sin\omega t \right|^{T}_{0} \\
+					 & = & \frac{V_{m}}{T} \times \left( \sin\omega T - \sin\omega 0 \right) \\
+					 & = & \frac{V_{m}}{T} \times \sin\omega T \\
+					 & = & \frac{V_{m} \omega}{2 \pi} \times \sin\omega \frac{2 \pi}{\omega} \\
+					 & = & \frac{V_{m} \omega}{2 \pi} \times \sin2\pi \\
+					 & = & 0
+\end{eqnarray*}
+
+\subsection{$\overline{V^{2}(t)}$}
+
+\begin{eqnarray*}
+\overline{V^{2}(t)} & = & \frac{1}{T} \int^{T}_{0} V^{2}(t)  dt \\
+						  & = & \frac{1}{T} \int^{T}_{0} (V_{m}^{2} \cos^{2}{\omega t}) dt \\
+						  & = & \frac{1}{T} \int^{T}_{0} V_{m}^{2} (1 + \cos{2 \omega t}) dt \\
+						  & = & \frac{V_{m}^{2}}{T} \int^{T}_{0} dt + \cos{2 \omega t} dt \\
+						  & = & \frac{V_{m}^{2}}{T} \left| t + \sin{2 \omega t} \right|^{T}_{0} \\
+						  & = & \frac{V_{m}^{2}}{T} \times \left(T + \sin{2 \omega T} - 0 - \sin{2 \omega 0} \right) \\
+						  & = & \frac{V_{m}^{2}}{T} \times \left(T + \sin{2 \omega T} \right) \\
+						  & = & \frac{V_{m}^{2} \times \omega}{4 \pi} \times \left(\frac{2 \pi}{\omega} + \sin{4 \pi} \right) \\
+						  & = & \frac{V_{m}^{2} \times \omega}{4 \pi} \times \frac{2 \pi}{\omega} \\
+						  & = & \frac{V_{m}^{2}}{2}
+\end{eqnarray*}
+
+% 2004-01-08
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ i(t) = I_{m} \sin \omega t \]
+
+In general, in an AC circuit the instantaneous current $i(t)$
+and instantaneous voltage $v(t)$ will not be in phase with each other.
+They will lag or lead each other by an order greater than $\Phi$.
+
+$\Phi$ is called $i(t) = I_{m} \sin \omega t$ in phase.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Digram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+If you have a purely resistive circuit, the voltage and
+current are always applied in phase because Ohm's Law applies. ie $v(t)
+= i(t) R$.
+
+For capacitive circuit:
+
+\[ v(t) = L \frac{q(t)}{C} \]
+
+\[ i(t) = \frac{d q(t)}{dt} \]
+
+\[ q(t) = \int^{t}_{0} i(t') dt' \]
+
+\[ v(t) = \int^{t}_{0} \frac{d(t')}{C} \]
+
+The applied voltage is proportional to the integral of the
+current. Ohm's Law \emph{does not} apply. In such a circuit the current
+leads the voltage by $90^{o}$ (the phase angle).
+
+For the capacity inductive circuit:
+
+\[ v(t) = L \frac{d i(t)}{dt} \]
+
+The applied voltage is proportional to the derivative of the
+current - Faraday and Lenz's Law. And the constant of proportionality
+$L$ is called the self inductance of the circuit. Again Ohm's Law does
+not apply, the voltage will lead the current by $90^{o}$.
+
+\subsection{Tutorial Questions}
+
+\[ i(t) = I_{m} \sin(\omega t + \Phi) \]
+
+Find $i(t) and i^{2}(t)$.
+
+\begin{eqnarray*}
+\overline{i(t)} & = & \frac{1}{T} \int^{T}_{0} i(t) dt \\
+					 & = & \frac{\omega}{\2 \pi} I_{m} \int^{\frac{2\pi}{\omega}}_{0} 
+					 		 \sin(\omega t + \Phi) dt \\
+\omega t + \Phi & = & \theta \\
+\omega dt		 & = & d\theta \\
+t					 & = & 0 \\
+\theta			 & = & \Phi \\
+t 					 & = & \frac{2 \pi}{\omega} \\
+\theta			 & = & 2 \pi + \Phi \\
+\overline{i(t)} & = & \frac{\omega}{2 \pi} I_{m} \int^{2 \pi + \Phi}_{\Phi} 
+							 \sin\theta \frac{d\theta}{\omega} \\
+\int^{b + a}_{b}& = & \int^{a}_{0} \\
+\overline{i(t)} & = & \frac{I_{m}}{2 \pi} \int^{2 \pi}_{0} \sin\theta d\theta \\
+					 & = & \frac{I_{m}}{2 \pi} \left[ - \cos\theta\right]^{2\pi}_{0} \\
+					 & = & 0
+\end{eqnarray*}
+
+The phase angle $\Phi$ makes no difference when calculating
+the average value.
+
+Mean Square Value:
+
+\begin{eqnarray*}
+\overline{i^{2}(t)} & = & \frac{1}{T} \int^{T}_{0} i^{2}(t) dt \\
+						  & = & \frac{\omega}{2 \pi} I_{m}^{2} \int^{\frac{2
+						  \pi}{\omega}}_{0} \sin^{2}(\omega t + \Phi) dt \\
+\omega t + \Phi	  & = & \theta \\
+\omega dt			  & = & d \theta \\
+dt 					  & = & \frac{d \theta}{\omega} \\
+t						  & = & 0 \\
+\theta				  & = & 0 \\
+t						  & = & \frac{2 \pi}{\omega} \\
+\theta				  & = & 2 \pi + \Phi \\
+\overline{i^{2}(t)} & = & \frac{\omega}{2 \pi} I_{m}^{2} \int^{2 \pi +
+\Phi}_{\Phi} \sin^{2} \theta \frac{d \theta}{\omega} \\
+						  & = & \frac{I_{m}^{2}}{2 \pi} \int^{2 \pi}_{0}
+						  \sin^{2} \theta \frac{d \theta}{\omega} \\
+						  & = & \frac{I_{m}^{2}}{2 \pi} \int^{2 \pi}_{0}
+						  \frac{1}{2} \left( 1 - \cos 2 \theta \right) d
+						  \theta \\
+						  & = & \frac{I_{m}^{2}}{2 \pi} \frac{1}{2} \left[
+						  \theta - \frac{\sin 2 \theta}{2} \right]^{2 \pi}_{0} \\
+						  & = & \frac{I_{m}^{2}}{4 \pi} \left[ 2 \pi - \sin{\frac{4 \pi}{2}} + \sin{\frac{\theta}{2}} \right] \\
+						  & = & \frac{I_{m}^{2}}{2} \\
+I						  & = & \frac{I_{m}}{\sqrt{2}}
+\end{eqnarray*}
+
+The phase angle makes no difference to the root mean square
+value of the average value.
+
+When you talk about $220V 50Hz$ supply, you talk about the RMS
+value.
+
+Speech and music are composed of complicated superpositions of
+sine waves and the same relation between $I$ and $V$.
+
+\[ i(t) = I_{m} \sin{\omega t} + I_{m2} \sin{2 \omega t} + I_{m3} \sin{3
+\omega t} ... = \sum^{\infty}_{n = 1} \sin{n \omega t} \]
+
+The term frequency, $\omega$, is the fundamental frequency
+that with $2 \omega$ is called the second harmonic. $3 \omega$ is the
+third harmonic and so on. How do you work out the mean square value of
+such complex wave forms. Eg 
+
+\[ i(t) = I_{m1} \sin{\omega t} + I_{m2} \sin{2 \omega t} \]
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+The fundamental that one executes one complete cycle in the
+time $\frac{2 \pi}{\omega}$. It's amplitude is $I_{m1}$. The second
+harmonic, because of it's frequency, is twice that of the fundamental,
+executing $2$ oscillations in the fundamental time period $\frac{2
+\pi}{\omega}$.
+
+\[ T_{2} \mbox{(second harmonic)} = \frac{\pi}{\omega} \]
+
+If you have a complex wave if it follows that averaging over
+the period of the fundamental will include the averages over all the
+regular harmonics.
+
+\[ i(t) = \frac{1}{T} \int^{T}_{0} (I_{m1} \cdots + I_{m2}) dt \]
+
+Prove for $\overline{i(t)} = 0$.
+
+% 2004-01-12
+
+\[ v(t) = V_{m1} sin{\omega t} + V_{m2} \sin{2 \omega t} \]
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ T_{1} = \frac{2 \pi}{\omega} \]
+
+\[ T_{2} = \frac{\pi}{\omega} \]
+
+\[ \overline{v(t)} = \frac{1}{T} \int^{T}_{0} \left(V_{m1} \sin{\omega
+t} + V_{m2} \sin{\omega t} \right) dt \]
+
+\[ T = \frac{2 \pi}{\omega} \]
+
+\begin{eqnarray*}
+\overline{v(t)} & = & \frac{\omega}{2 \pi} \int^{\frac{2 \pi}{\omega}}_{0} \left( V_{m1} \sin{\omega t} + V_{m2} \sin{2 \omega t} \right) dt \\
+\int^{\frac{2 \pi}{\omega}}_{0} \sin{\omega t}dt & ; & \int^{\frac{2 \pi}{\omega}}_{0} \sin{2 \omega t}dt \\
+\omega t 		 & = & \theta \\
+t					 & = & 0 \\
+\theta			 & = & 0 \\
+t					 & = & \frac{2 \pi}{\omega} \\
+\theta 			 & = & 2 \pi \\
+\int^{2 \pi}_{0} \sin{\theta}d\theta & ; & \int^{2 \pi}_{0} \sin{2 \theta}d\theta \\
+\frac{d}{d\theta} \left(\cos{\theta} \right) & = & - \sin{\theta} \\
+															& = & \left[ - \cos{\theta}
+															\right]^{2 \pi}_{0} \\
+															& = & - [1 - 1] \\
+															& = & 0 \pi \\
+\int^{2 \pi}{0} \sin{2 \theta}d\theta			& = & \left[ - \frac{\cos{2 \theta}}{2} \right]^{2 \pi}_{0} \\
+															& = & - [1 - 1] \\
+															& = & 0 
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ v(t) = V_{0} + V_{m1} \sin{\omega t} \]
+
+\subsection{}
+
+\begin{eqnarray*}
+v(t)						& = & V_{m1} \sin{\omega t} + V_{m2} \sin{2 \omega t} \\
+v^{2}(t)					& = & V^{2}_{m1} \sin^{2}{\omega t} + V^{2}_{m2} \sin^{2}{2 \omega t} + 2V_{m1}V_{m2} \sin{\omega t}\sin{2 \omega t} \\
+\overline{v^{2}(t)}	& = & \frac{\omega}{2 \pi} \int^{\frac{2 \pi}{\omega}}_{0} V^{2}_{m1} \sin^{2}{\omega t} + V^{2}_{m2} \sin^{2}{2\omega t} + 2V_{m1} V_{m2} \sin{\omega t}\sin{2 \omega t} \\
+\int^{\frac{2 \pi}{\omega}}_{0} \sin^{2}{\omega t} dt & & \\
+\int^{\frac{2 \pi}{\omega}}_{0} \sin^{2}{2 \omega t} dt & & \\
+\cos{2A}					& = & 1 - 2 \sin^{2}{A} \\
+\sin^{2}{A}				& = & \frac{1}{2} \left( 1 - \cos{2A} \right) \\
+\omega t					& = & \theta \\
+\omega dt				& = & d \theta \\
+t							& = & 0 \\
+\theta					& = & 0 \\
+t							& = & \frac{2 \pi}{\omega} \\
+\theta					& = & 2 \pi \\
+\int^{2 \pi}_{0} \sin^{2}{\frac{\theta d \theta}{\omega}} & = & \frac{1}{\omega} \int^{2 \pi}_{0} (1 - \cos{2 \theta}) dt \\ 
+\int^{2 \pi}_{0} \sin^{2}{\frac{2 \theta d \theta}{\omega}} & = & \frac{1}{2\omega} \int^{2 \pi}_{0} (1 - \cos{4 \theta}) dt \\
+\frac{1}{\omega} \int^{2 \pi}_{0} \sin^{2}{\theta} d\theta & = &
+\frac{1}{2 \omega} \left[ 1 - \frac{\sin{2 \theta}}{2} \right]^{2 \pi}_{0} \\
+											  & = & \frac{2 \pi}{2 \omega} \\
+\frac{1}{\omega} \int^{2 \pi}_{0} \sin^{2}{2 \theta} d\theta & = &
+\frac{1}{2 \omega} \left[ 1 - \frac{\sin{4 \theta}}{2} \right]^{2 \pi}_{0} \\
+											  & = & \frac{2 \pi}{2 \omega} \\
+\overline{v^{2}(t)}					  & = & \frac{\omega}{2 \pi} \left[V_{m1}^{2} \frac{\pi}{\omega} + V_{m2} \frac{\pi}{\omega} + 2 V_{m1}
+V_{m2} \int^{frac{2 \pi}{\omega}}_{0} \sin{\omega t}\sin{2\omega t}dt \right] \\
+\frac{\omega}{2 \pi} \int^{frac{2 \pi}{\omega}}_{0} \sin{\omega t}\sin{2\omega t}dt & & \\
+t					& = & 0 \\
+\omega t			& = & \theta \\
+\omega dt		& = & d \theta \\
+dt					& = & \frac{d \theta}{\omega} \\
+t					& = & 0 \\
+\theta			& = & 0 \\
+t					& = & \frac{2 \pi}{\omega} \\
+\theta			& = & 2 \pi \\
+\frac{\omega}{2 \pi} \int^{2 \pi}_{0} \sin{\theta}\sin{\frac{2\theta d
+\theta}{\omega}} & & \\
+\sin{A}\sin{B}	& = & \frac{1}{2} \left[\cos{(A-B)} - \cos{(A+B)} \right] \\
+\sin{\theta}\sin{2 \theta} & = & \frac{1}{2} \left[ \cos{\theta - 2
+\theta)} - \cos{(\theta + 2 \theta)} \right] \\
+\frac{1}{2 \pi} \int^{2 \pi}_{0} \sin{\theta}\sin{2 \theta} d \theta & = & 
+				\frac{1}{4\pi} \int^{2 \pi}_{0} (\cos{(-\theta)} - \cos{(3\theta)}) d \theta \\
+		& = & \frac{1}{4\pi} \int^{2 \pi}_{0} (\cos{\theta} -	\cos{3\theta}) d \theta \\
+		& = & \frac{1}{4\pi} \left[ \sin{\theta} - \frac{\sin{3\theta}}{3}
+		\right]^{2 \pi}_{0} \\
+		& = & 0 \\
+\overline{v^{2}(t)} & = & \frac{V^{2}_{m1}}{2} + \frac{V^{2}_{m2}}{2} \\
+V_{1} & = & \frac{V_{m1}}{\sqrt{2}} \\
+V_{2} & = & \frac{V_{m2}}{\sqrt{2}} \\
+\end{eqnarray*}
+
+The mean square value of a complex wave is the sum  of the
+mean square values of the components.
+
+\[ v(t) = V_{m1} \sin{\omega t} + V_{m3} \sin{3 \omega t} \]
+
+Find $\overline{V}$ and $\overline{V^{2}}$.
+
+% 2004-01-14
+
+\begin{eqnarray*}
+		v(t) & = & V_{m1} \cos{\omega t} + V_{m1} \sin{2\omega t} \\
+\overline{v^{2}(t)}  & = & \frac{V_{m1}^{2}}{2} + \frac{V_{m2}^{2}}{2} \\
+		     & = & V_{1}^{2} + V_{2}^{2} \\
+V_{1}		     & = & \frac{V^{2}_{m}}{\sqrt{2}} \\
+V_{2}                & = & \frac{V^{2}_{m}}{\sqrt{2}}
+\end{eqnarray*}
+
+In general, if one had:
+
+\begin{eqnarray*}
+	v(t) & = & \sum^{\infty}_{n = 0} V_{mn} \sin{\omega t} \\
+	\mbox{or} & & \\
+	v(t) & = & \sum^{\infty}_{n = 1} V_{mn} \cos{\omega t} \\
+	v^{2}(t) & = & \sum^{\infty}_{n = 0} \frac{V_{mn}^{2}}{2} \\
+				& = & \sum^{\infty}_{n = 0} V_{n}^{2} \\
+	\mbox{or}& = & \\
+				& = & \sum^{\infty}_{n = 1} \frac{V_{mn}^{2}}{2} \\
+				& = & \sum^{\infty}_{n = 1} V_{n}^{2} \\
+\end{eqnarray*}
+
+The mean square value of a complex wave is equal to the sum of
+the mean square values of it's frequency components.
+
+\begin{tabular}{ll}
+$v_{1}^{2}$	& mean square value of $V_{m1} \cos{\omega t}$ \\
+$v_{2}^{2}$ & mean square value of $V_{m2} \cos{2 \omega t}$ \\
+$v_{n}^{2}$ & mean square value of $V_{mn} \cos{n \omega t}$ \\
+\end{tabular}
+
+\begin{eqnarray*}
+v(t) & = & V_{0} + V_{1} \cos{\omega t} + V_{2} \cos{2 \omega t} \\
+	  &   &	\mbox{DC}	\hspace{18mm} \mbox{AC} \\
+	  & = & \sum^{2}_{n = 0} V_{mn} \cos{n \omega t} \\
+\overline{v^{2}(t)} & = & V_{0}^{2} + \frac{V_{1}^{2}}{2} + \frac{V_{2}^{2}}{2} \\
+						  & = & V_{0}^{2} + \overline{V_{1}^{2}} + \overline{V_{2}^{2}} \\
+ 						  & = & V_{0}^{2} + V_{2}^{2} + V_{2}^{2}
+\end{eqnarray*}
+
+\emph{Note:} If we have a complex waveform, to get the mean
+square value, we simply add up the individual mean square values.
+
+\[ \frac{1}{T} \int^{T}_{0} f^{2} (t) \]
+
+\[ V(t) = \sum^{zinfty}_{n = 0} V_{mn} \sin{n \omega t} \]
+
+Squaring creates items like $\sin^{2}{n \omega t} - \sin{m
+\omega t}\sin{n \omega t}$.
+
+\[ V(t) = V_{m1} \sin{\omega t} + V_{m2} \sin{2 \omega t} \]
+
+\[ \sin^{2}{\omega t} = \sin{\omega t}\sin{2\omega t} \]
+
+\[ \overline{v^{2}(t)} = \sum^{\infty}_{n = 0} \frac{V_{mn}^{2}}{2} \]
+
+All integrals of cross products where $n \neq m$, vanish. This
+is due to the orthogonality property of the circle earth. The circular
+functions are mutually perpendicular unit vectors in functional space.
+Just an extension of linear algebra - The circular functions are
+considered as unit vectors in function space (or as it is called, little
+burke space).
+
+\begin{eqnarray*}
+\left\{e^{ i p \theta } \right\} & = & \\
+p = - \infty \hspace{15mm} \cdots -1, 0, 1, \cdots \infty \\
+\left\{e^{ i p \theta } \right\} & = & \frac{1}{2 \pi} \int^{2
+\pi}_{0} e^{i p \theta} \times \exp{- i p \theta} d \theta \\
+p & = & q \cdots \mbox{(simplest case)} \\
+\left\{e^{ i p \theta } \right\} & = & \frac{1}{2 \pi} \int^{2
+\pi}_{0} e^{i(p - q) \theta} d \theta \\
+	& = & \frac{1}{2 \pi} \int^{2 \pi}_{0} d \theta \\
+p & \neg & q \\
+\left\{e^{ i p \theta } \right\} & = & \int^{2 \pi}_{0} \exp{i(p -
+q)\theta} d \theta \\
+	& = & \frac{1}{2 \pi} \left[ \frac{e^{i(p - q)\theta}}{i(p - q)}
+	\right]^{2 \pi}_{0} \\
+	& = & \frac{1}{2 \pi i (p - q)} \left[ e^{i(p - q) 2 \pi} - 1
+	\right] \\
+e^{2 \pi i} & = & \cos{2 \pi} + i \sin{2 \pi} \\
+e^{i(p - q) 2 \pi} & = & \cos{(p - q) 2 \pi} + i \sin{(p - q) 2 \pi} \\
+		& = & \frac{1}{2 \pi} \int^{2 \pi}_{0} e^{i(p - q)\theta} d
+		\theta \\
+		& = & 1 \\
+p		& = & q \\
+e^{i(p - q) 2 \pi} & = & \cos{(p - q) 2 \pi} + i \sin{(p - q) 2 \pi} \\
+& = & \frac{1}{2 \pi} \int^{2 \pi}_{0} e^{i(p - q)\theta} d\theta \\
+		& = & 0 \\
+p		& \neq & q \\
+\frac{1}{2 \pi} \int^{2 \pi}_{0} e^{i(p - q) \theta} d	\theta & = &
+\delta_{pq}
+\end{eqnarray*}
+
+Kronechen's Delta
+
+This may be considered a scalar product in function space,
+the set $\left\{ e^{ip\theta}\right\}$ form an orthogonal basis set 
+in function space. Orthogonal vectors are mutually perpendicular unit 
+vectors.
+
+\[ \frac{1}{2 \pi} \int^{2 \pi}_{0} \left[ \cos{(p - q)\theta} + i\sin{(p
+- q)\theta} \right] d \theta \]
+
+\[ \frac{1}{2 \pi} \int^{2 \pi}_{0} \left( \cos{p \theta}\cos{q \theta}
++ \sin{p \theta}\sin{q \theta} + i \sin{p \theta}\cos{q \theta} - i
+\sin{q \theta}\cos{p \theta} \right) d \theta \]
+
+\[ = 0 \]
+
+
+\begin{eqnarray*}
+\frac{1}{2 \pi} \int^{2 \pi}_{0} \left( \cos{p \theta}\cos{q \theta} +
+\sin{p \theta}\sin{q \theta} \right)d \theta & = & 0 \\
+\frac{1}{2 \pi} \int^{2 \pi}_{0} \left( \sin{p \theta}\cos{q \theta} -
+\sin{p \theta}\cos{q \theta} \right)d \theta & = & 0 \\
+\frac{1}{2 \pi} \int^{2 \pi}_{0} \cos{p \theta}\cos{q \theta}d \theta & = & 0 \\
+p = q & = & 0 \\
+\frac{1}{2 \pi} \int^{2 \pi}_{0} \cos{p \theta}\cos{q \theta} d \theta &
+= & 0 \cdots \mbox{always}
+\end{eqnarray*}
+
+By inspection, all cross terms are equal to $0$.
+
+\begin{eqnarray*}
+\frac{1}{2 \pi} \int^{2 \pi}_{0} e^{i(p - q)\theta} d \theta & = &
+\delta_{piq} \\
+\frac{1}{\pi} \int^{2 \pi}_{0} \sin{p \theta}\cos{q \theta}d \theta &
+= & 0 \cdots \mbox{always} \\
+\frac{1}{\pi} \int^{2 \pi}_{0} \sin^{2}{p \theta}d \theta & = & 1 \\
+\frac{1}{\pi} \int^{2 \pi}_{0} \cos^{2}{p \theta}d \theta & = & 1 \\
+\frac{1}{\pi} \int^{2 \pi}_{0} \sin{p \theta}\cos{q \theta}d \theta & = & 0 \\
+\frac{1}{\pi} \int^{2 \pi}_{0} \cos{p \theta}\cos{q \theta}d \theta & = & \delta_{pq} \\
+\frac{1}{\pi} \int^{2 \pi}_{0} \sin{p \theta}\sin{q \theta} d \theta & = & \delta_{piq}
+\end{eqnarray*}
+
+We take the set of functions $\left\{ e^{i p \theta} \right\}$
+and the set of functions $\left\{ e^{-i q \theta} \right\}$. We form
+their scalar product (aka inner product) and if we get the result $1$,
+$p = q$, otherwise $p \neq q$.
+
+That property means $\left\{ e^{i p \theta} \right\}$ and
+$\left\{ e^{-i q \theta} \right\}$ are mutually perpendicular unit
+vectors. then we can use De Moivre's Theorem to write out the result in
+trigonometric form. The integral of scalar $\sin{p \theta}\cos{q
+\theta}$ is $0$. The integral of $\sin^{2}{p \theta}$ only has a value
+when $p = q$. This means $\sin{p \theta}$ and $\sin{q \theta}$ are
+mutually perpendicular unit vectors.
+
+\[ \frac{1}{\pi} \int^{2 \pi}_{0} \cos{p \theta}\cos{q \theta} d \theta =
+\delta_{pq} \]
+
+$\cos{p \theta}$ and $\cos{p \theta}$ are also mutually
+perpendicular unit vectors. If we take mean square values of such
+complex waves, then the mean square value is the sum of the mean square
+values of the sum of the individual harmonic components.
+
+% 2004-01-15 -- Lecture Missing
+
+% 2004-01-18
+
+\subsection{Task 2 (ii)}
+
+Find the value of a full rectified sine wave.
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+\[ v(t) = V_{m} \sin{\omega t} \]
+
+if
+
+\[ 0 \leq t \leq \frac{\pi}{\omega} \]
+
+\begin{eqnarray*}
+\overline{v(t)} & = & \frac{1}{T} \int^{\pi}_{0} v(t) dt \\
+					 & = & \frac{\omega}{T} \int^{\frac{\pi}{\omega}}_{0}
+					 V_{m}\sin{\omega t}dt \\
+					 & = & \frac{\omega}{T} V_{m} \left[ - \cos{\omega t}
+					 \right]^{\frac{\pi}{\omega}}_{0} \\
+					 & = & \frac{- \omega}{T} V_{m} \left[ -1 -1 \right] \\
+					 & = & \frac{2 \omega V_{m}}{\pi}
+\end{eqnarray*}
+
+\subsection{Unknown}
+
+\[ v(t) = V_{m} \sin{\omega t} \]
+
+\[ 0 \leq t \leq \frac{2 \pi}{\omega} \]
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+\[ v(t) = 0 \]
+
+\[ \frac{\pi}{\omega} \leq t \leq \frac{2 \pi}{\omega} \]
+
+\begin{eqnarray*}
+\overline{v(t)} & = & \frac{1}{T} \int^{\frac{T}{2}}_{0} \sin{\omega t}dt 
+							 + \frac{1}{T} \int^{T}_{\frac{T}{2}} 0 \\
+					 & = & \frac{V_{m} \omega}{2 \pi} \int^{\frac{\pi}{\omega}}_{0} 
+					 		 \sin{\omega t}dt \\
+\mbox{Let} \omega t & = & \theta \\
+d \omega t & = & d \theta \\
+\mbox{change limits when} &  & \\
+\omega t & = & 0 \\
+\theta   & = & 0 \\
+\omega t & = & \frac{\pi}{\omega} \\
+\theta	& = & \pi \\
+\overline{v(t)} & = & \frac{V_{m} \omega}{2 \pi} \int^{\pi}_{0}
+\sin{\theta}d \theta \\
+					 & = & \frac{V_{m} \omega}{2 \pi} \left[ - \cos{\pi} +
+					 \cos{0} \right] \\
+					 & = & \frac{V_{m} \omega}{2 \pi} \left(-(-1) + 1 \right) \\
+					 & = & \frac{V_{m}}{\pi}
+\end{eqnarray*}
+
+\subsection{1}
+
+\begin{eqnarray*}
+	 v(t) & = & V_{0} + V_{m} \cos{\omega t} \\
+v^{2}(t) & = & V^{2}_{0} + V_{m}^{2}\cos^{2}{\omega t} + 2V_{0}V_{m}	\cos{\omega t} \\
+\overline{v^{2}(t)} & = & \frac{\omega}{2 \pi} \int^{\frac{2
+\pi}{\omega}}_{0} \left(V_{0}^{2} + V_{m}^{2}\frac{1}{2}(1 + \cos{2
+\omega t}) + 2 V_{0}V_{m} \cos{\omega t}\right)dt \\
+			& = & \frac{\omega}{2 \pi} \left[ V_{0}^{2}t +
+			\frac{V^{2}_{m}}{2}\left(t + \frac{\sin{2 \omega t}}{2}\right)
+			+ 2V_{0}V_{m}\frac{\sin{\omega t}}{\omega} \right]^{\frac{2
+			\pi}{\omega}}_{0} \\
+			& = & \frac{\omega}{2 \pi} \left[ V_{0}^{2}\frac{2 \pi}{\omega}
+			+ \frac{V_{m}^{2}}{2} \left(t + \frac{\sin{2 \omega t}}{2}\right) 
+			+ 2V_{0}V_{m}\frac{-\sin{2 \pi}}{\omega} - 0 \right] \\
+			& = & V^{2}_{0} + \frac{V_{m}^{2}}{2 \pi}(2 \pi) \\
+			& = & V^{2}_{0} + V_{m}^{2} \\
+			& = & \sqrt{V^{2}_{0} + V^{2}} \\
+V			& = & \frac{V_{m}}{2}			
+\end{eqnarray*}
+
+\subsection{4}
+
+\[ \int^{2 \pi}_{0} e^{i(m - n)x} dx \]
+
+\[ m, n \in \mathbb{Z} \]
+
+\begin{eqnarray*}
+	\int^{2 \pi}_{0} e^{i(m - n)x} & = & \int^{2 \pi}_{0} (\cos{(m -n)}x
+	+ i \sin{(m -n)}x)dx \\
+	& = & \int^{2 \pi}_{0} \cos{(m - n)} xdx + i \int^{2 \pi}_{0} \sin{(m
+	- n)}x dx \\
+	& = & \frac{1}{m - n} [\sin{(m - n)}x]^{2 \pi}_{0} - \frac{i}{m - n}
+	[\cos{(m - n)}x]^{2 \pi}_{0} \\
+	i(t) & = & \frac{1}{m - n} [\sin{(m - n)}2 \pi - \sin{(m - n)}0 ] \\
+		  & = & \frac{1}{m - n} [ \cos{(m - n)} 2 \pi - \cos{(m - n)}0 ] \\
+		  & = & \frac{1}{m - n} (\sin{2 \pi} - \sin{2 \pi} + \cos{2 \pi} -
+		  \cos{2 \pi}) \\
+		  & = & 0
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	\frac{1}{\pi} \int^{2 \pi}_{0} \cos{mx}\cos{nx}dx & = & \delta_{mn} \\
+	\frac{1}{\pi} \int^{2 \pi}_{0} \cos{nx}\sin{mx}dx & = & 0 \\
+	\frac{1}{\pi} \int^{2 \pi}_{0} \sin{mx}\sin{nx}dx & = & \delta_{mn} \\
+	\frac{1}{\pi} \int^{2 \pi}_{0} \cos{(m + n)x} + \cos{(m - n)x}dx & &
+\end{eqnarray*}
+
+% 2004-01-21
+
+\subsection{Orthogonality Relationships of the Functions}
+
+\[ \frac{1}{2 \pi} \int^{2 \pi}_{0} e^{i(p - q)\theta} d\theta =
+\delta_{piq} \]
+
+\[ piq = 1 \pm 2 \pm 3 \pm \cdots \]
+
+Clearly
+
+\[	\frac{1}{2 \pi} \int^{2 \pi}_{0} e^{i(p + q)\theta} d \theta =
+\delta_{pi - q} \]
+
+From these identities, one may deduce that
+
+\[ \frac{1}{\pi} \int^{2 \pi}_{0} \sin{p \theta}\cos{q \theta}d\theta =
+0 \forall piq \]
+
+\[ \frac{1}{\pi} \int^{2 \pi}_{0} \sin{p \theta} \sin{q \theta}d \theta
+= \delta_{piq} \]
+
+$\sin{p \theta}$ and $\cos{q \theta}$ are mutually
+perpendicular unit vectors.
+
+\[ \frac{1}{\pi} \int^{2 \pi}_{0} \cos{p \theta} \cos{q \theta} d \theta
+= \delta_{piq} \]
+
+De Moivre:
+
+\begin{eqnarray*}
+	(e^{i \theta})^{n} & = & (\cos{\theta} + i\sin{\theta})^{n} \\
+							 & = & e^{in \theta} \\
+							 & = & \cos{n \theta} + i\sin{n \theta} \\
+			\varepsilon  & = & (x + iy)^{n} \\
+							 & = & r^{n}(\cos{n \theta} + i\sin{n \theta}) 
+\end{eqnarray*}
+							 
+
+The orthogonality of the properties of the circular functions
+allow one to easily evaluate integrals of the period of time (such as
+rise) in calculating. In the same manner, the representation of
+trigonometric functions in terms of complex exponentials greatly
+simplifies the analysis of AC circuits.
+
+Let us evaluate the mean power in an AC circuit. In general,
+(we shall see why later), the instantaneous current and voltage
+(instantaneous break ways) are not in phase.
+
+\begin{eqnarray*}
+		v(t) & = & V_{m} \cos{\omega t} \\
+		i(t) & = & I_{m} \cos{(\omega t + n)} \mbox{ \hspace{5mm}... $n$ is a
+		constant}\\		
+	\Phi(t) & = & \omega t + n \\
+  \psi (h) & = & \omega t \\
+\mbox{Power} & = & \mbox{Rate of doing work} \\
+				 & = & \frac{d \omega}{dt} \mbox{(Joules sec$^{-1}$ or
+				 Watts)} \\
+\mbox{Instantaneous Power} & = & v(t) i(t) \\
+\mbox{log on case but in} & & \\
+		  P(t) & = & I_{m}V_{m} \cos{\omega t} \cos{(\omega t + n)} 
+\end{eqnarray*}
+
+In this case, $P(t)$ varies sinusoidally with time $t$ at 
+twice the frequency of the voltage and current. \\
+
+Power is essentially going to behave like $\cos^{2}{\omega
+t}$.
+
+\begin{eqnarray*}
+		 	 P_{m} & = & I_{m} V_{m} \\
+\overline{P(t)} & = & \frac{1}{T} \int^{T}_{0} v(t) i(t) dt \\
+				T	 & = & \frac{2 \pi}{\omega} \\
+\overline{P(t)} & = & \frac{\omega}{2 \pi} \int^{\frac{2
+\pi}{\omega}}_{0} (V_{m} \cos{\omega t}) I_{m}\cos{(\omega t + \phi)} dt \\
+					 & = &\frac{\omega}{2 \pi} I_{m}V_{m} \int^{\frac{2
+					 \pi}{\omega}}_{0} \cos{\omega t} \cos{(\omega t +
+					 \phi)}dt \\
+					 & = & \frac{\omega}{2 \pi} I_{m} V_{m} \int^{\frac{2
+					 \pi}{\omega}}_{0} \cos{\omega t} [ \cos{\omega
+					 t}\cos{\phi} - \sin{\omega t}\sin{\phi}]dt \\
+\omega t			 & = & \theta \\
+\omega dt		 & = & d \theta \\
+t					 & = & 0 \\
+\theta			 & = & 0 \\
+t					 & = & \frac{2 \pi}{\omega} \\
+\theta			 & = & 2 \pi \\
+\overline{P(t)} & = & \frac{1}{2 \pi} I_{m}v_{m} \int^{2 \pi}_{0}
+\cos{\theta}[\cos{theta}\cos{\phi} - \sin{\theta}\sin{\phi}] d \theta \\
+\cos{\phi} \int^{2 \pi}_{0} \cos^{2}{\theta} d \theta 
+					 & = & \pi \cos{\phi} \mbox{\hspace{5mm}... A} \\
+\sin{\phi} \int^{2 \pi}_{0} \cos{\theta} \sin{\theta} d \theta
+					 & = & 0 \mbox{\hspace{5mm}... B} \\
+\end{eqnarray*}
+
+The scalar or inner product of the sine and cosine functions
+is always equal to $0$.
+
+\[ \frac{1}{\pi} \int^{2 \pi}_{0} \cos{p \theta}\cos{q \theta} d\theta =
+\delta_{piq} \]
+
+\begin{eqnarray*}
+\overline{P(t)} & = & \frac{1}{2 \pi} I_{m} V_{m} (\pi \cos{\phi}) \\
+                & = & \frac{I_{m} V_{m}}{2} \cos{\phi} \\
+I               & = & \frac{I_{m}}{\sqrt{2}} \\
+V               & = & \frac{V_{m}}{\sqrt{2}} \\
+\overline{P(t)} & = & IV \cos{\phi} Watts
+\end{eqnarray*}
+
+\subsection{Mean Power}
+
+\[ I = RMS \mbox{at} i(t) \]
+
+\[ V = RMS \mbox{at} v(t) \]
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+If you have a purely resistive circuit:
+
+\[ \phi = 0 \]
+
+because $v(t)$ and $i(t0$ are in phase.
+
+\[ \overline{P(t)} = \frac{I_{m} V_{m}}{2} \]
+
+\[ \overline{P(t)_{peak}} = I_{m} V_{m} \]
+
+In general, if the circuit contains conductors and capacitors,
+the current $i(t)$ and the voltage $v(t)$ will not be in phase.
+
+\[ \cos{\phi} \mbox{Power Factor} \]
+
+\subsection{Exercise}
+
+\[ i(t) = I_{m} \sin{(\omega t + \phi)} \]
+
+\[ v(t) = V_{m} \sin{\omega t} \]
+
+Prove that $\overline{P(t)} = IV\cos{\phi}$.
+
+\subsection{Exercise}
+
+A voltage $v(t) = 100 + 250 \sin{40 \pi t} + 120\sin{80 \pi
+t}$ is applied to a resistance of $50 \Omega$. Calculate from first
+principles, the mean power dissipated.
+
+Hint:
+
+\begin{eqnarray*}
+v(t) & = & i(t) R \mbox{\hspace{5mm} Ohm's Law} \\
+i(t) & = & \frac{v(t)}{R} \\
+P(t) & = & i(t) v(t) \\
+	  & = & \frac{v^{2}(t)}{R} \\
+\overline{P(t)} & = & \frac{\overline{v^{2}(t)}}{R}
+\end{eqnarray*}
+
+The mean square value of voltage or current is the mean power
+dissipated in a resistance of $1 \Omega$.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+For a purely resistive circuit, we have Ohm's Law: Resistance
+is portortional to the current.
+
+If reactive elements such as inductors or capacitors are
+present.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+$\Phi$ (Weber - Volts/sec).
+
+% Double check this paragraph... vvvvvv
+
+Faraday discovered that the magnitude of fluxes in the coil
+was proportional to the rate of change of the magnetic flux, linking the
+coil.
+
+\begin{eqnarray*}
+e(t) & = & \mbox{Rate of change of flux per leakages} \\
+	  & = & d \Phi (t) \\
+	  & = & \frac{d \Phi}{dt}
+\end{eqnarray*}
+
+The sign of the induced EMFs such as to oppose the change
+proposing.
+
+Action and reaction are equal and opposite.
+
+\[ e(t) = - \frac{d \Phi}{dt} \]
+
+\[ \Phi(t) \propto i(t) \]
+
+\[ e(t) = L \frac{di(t)}{dt} \]
+
+The constant of proportionality $L$ is the self inductance
+value of the circuit.
+
+If a current changing at a rate of $1A$ induces an EMF of $1V$
+in a circuit, then that circuit is said to have self inductance of $1H$.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ e(t) = L \frac{di(t)}{dt} \]
+
+\subsection{AC Case}
+
+\[ e(t) = \varepsilon_{m} \cos{\omega t} \]
+
+\[ \varepsilon_{m} \cos{\omega t} = L \frac{di(t)}{dt} \]
+
+This is a simple differential equation connecting the voltage
+and the current.
+
+Faraday:
+
+\[ \varepsilon_{m} \cos{\omega t} = l \frac{di(t)}{dt} \]
+
+Ohm:
+
+\[ \varepsilon = \cos{\omega t} = i(t) R \]
+
+\begin{eqnarray*}
+\varepsilon_{m} \cos{\omega t} dt & = & Ldi \\
+\varepsilon_{m} \int \cos{\omega t} dt & = & Li \\
+\varepsilon_{m} \frac{\sin{\omega t}}{\omega} & = & Li \\
+\varepsilon_{m} \sin{\omega t} & = & \omega Li \\
+i(t) & = & \frac{\varepsilon_{m} \sin{\omega \omega t}}{\omega L}
+\end{eqnarray*}
+
+Current and voltage are out of phase.
+
+How does phase of $i(t)$ relate to $e(t)$?
+
+\begin{eqnarray*}
+\cos{(A + B)} & = & \cos{A}\cos{B} + \sin{A}\sin{B} \\
+\cos{(\omega t - \frac{\pi}{2})} & = & \cos{\omega t}\cos{\frac{\pi}{2}}
++ \sin{\omega t}\sin{\frac{\pi}{2}} \\
+	& = & \sin{\omega t} \\
+i(t) & = & \frac{\varepsilon_{m}}{\omega L} \cos{\left(\omega t -
+\frac{\pi}{2}\right)} \\
+\Phi & = & - \frac{\pi}{2}
+\end{eqnarray*}
+
+In a purely inductive circuit, the current lags the voltage by
+$\frac{\pi}{2}$.
+
+\begin{eqnarray*}
+\overline{P(t)} & = & \frac{\varepsilon_{m}}{\sqrt{2}} \frac{I_{m}}{\omega
+L \sqrt{2}} \cos{\left(-frac{\pi}{2}\right)} \\
+	& = & 0
+\end{eqnarray*}
+
+An inductor is not a dissipater, it is just an electric mass.
+
+\[ \omega L = X_{L} \mbox{\hspace{5mm} Inductance Reactance} \]
+
+% 2004-01-26
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+\[ e(t) = i(t) R \]
+
+Current is proportional applied EMF.
+
+\[ e(t) = \varepsilon_{m} \cos{\omega t} \]
+
+\[ i(t) = \frac{\varepsilon_{m}}{R} \cos{\omega t} \]
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+\begin{eqnarray*}
+e(t) & = & L \frac{di(t)}{dt} \\
+	  & = & \varepsilon_{m} \cos{\omega t} \\
+\varepsilon_{m} \cos{\omega t} & = & L \frac{di(t)}{dt} \\
+\frac{\varepsilon_{m} \sin{\omega t}}{\omega} & = & L i(t) \\
+i(t) & = & \frac{\varepsilon_{m} \sin{\omega t}}{\omega L} \\
+	  & = & \frac{\varepsilon_{m} \cos{(\omega t - \frac{\pi}{2})}}{\omega L}
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+\begin{eqnarray*}
+\overline{i^{2}(t)} & = & \frac{I_{m}}{\sqrt{2}} \\
+						  & = & I \\
+						  & = & \frac{\varepsilon_{m}}{\sqrt{2} \omega L} \\
+						  & = & \frac{E}{\omega L} < - 90^{o}
+\end{eqnarray*}						  
+
+\subsection{Inductive Reactance ($\omega L$/$X_{L}$)}
+
+Newton's Law:
+
+\begin{eqnarray*}
+m \ddot{q} & = & F(t) \\
+\ddot{q} & = & \mbox{displacement} \\
+e(t) & = & L \frac{di}{dt} \\
+d & = & \frac{dq}{dt} \\
+L \ddot{q} & = & e(t)
+\end{eqnarray*}
+
+There is no dissipation in an inductive circuit, but there is
+dissipation in a resistive circuit. It is impossible to make an
+inductive circuit without resistance.
+
+\section{Capacitance}
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+Lines of electric displacement flux density.
+
+In a capacitor, you have lines of electric flux, which start as a
+positive charge and ends as a negative charge.
+
+\subsection{Electric Flux Density - $D$ (Coulombs/$m^{2}$)}
+
+Maxwell wrote down Faraday + Lenz in mathematical form ($e(t) = -
+\frac{d}{dt} (\mbox{Flux Leakages})$.
+
+Lenz -- Arrow To Do % ---> -
+
+Faraday - Arrow To Do % ---> \frac{d}{dt}
+
+Maxwell connected an electrical quantity, EMF ($e(t)$) with a magnetic
+quantity, $\Phi$ (Webers/sec). But he still had a problem why the
+current appeared to flow in a capacitive circuit. He postulated that the
+current that flows in a capacitive circuit is not conventional induction
+current, but instead, due to the collapse and growth of the electric
+flux lines between the plates, due to the altering sign, the charges on
+the plates arising from the imposition of the time period $e(t)$.
+
+It's a displacement current.
+
+\[ e(t) = \frac{q(t)}{C} \]
+
+Units of $C: Farads$.
+
+If a body raised to a potential of $1V$ stores a charge of $1$ coulomb,
+then that body is said to have the capacitance of $1 Farad$.
+
+Earth's Capacitance: $700\mu F$.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ \dot{e}(t) = \frac{\dot{q}(t)}{C} = \frac{i(t)}{C} \]
+
+Current, in a capacitive circuit is a time derivative of the supplied
+voltage. So, if
+
+\[ e(t) = \varepsilon_{m} \cos{\omega t} \]
+
+then
+
+\begin{eqnarray*}
+\dot{e}(t) & = & - \omega \varepsilon_{m} \sin{\omega t} \\
+			  & = & - \frac{i(t)}{C} \\
+i(t)		  & = & - \omega C \varepsilon_{m} asin{\omega t}
+\end{eqnarray*}
+
+However, we would like to see what it's phase relation of the current to
+the voltage.
+
+\begin{eqnarray*}
+\cos{(\omega t + \frac{\pi}{2})} & = & \cos{\omega t}
+\cos{\frac{\pi}{2}} - \sin{\omega t}{\sin{\frac{\pi}{2}}} \\
+& = & - \sin{\omega t} \\
+X_{C} & = & \frac{1}{\omega C} \mbox{hspace{5mm}... Capacitance
+Reactance} \\
+i(t) & = & \omega C \varepsilon_{m} \cos{(\omega t + \frac{\pi}{2})} \\
+	  & = & \frac{\varepsilon_{m}}{X_{C}} \cos{(\omega t +
+	  \frac{\pi}{2})}
+\end{eqnarray*}
+
+the current leads the voltage by $90^{o}$ in a capacitive circuit.
+
+\section{Capacitance Reactance}
+
+It again has the unit Ohms. Here, there there appears to be no
+dissipation, however capacitance is an electric spring.
+
+\begin{table}[hbtp]
+
+Diagram To Do
+
+\end{table}
+
+Exercise: Voltage $\varepsilon_{m} \sin{\omega t}$ is supplied to \\
+
+(a) to a purely resistive circuit. \\ \\
+
+(b) to a purely capacitive circuit. \\ \\
+
+(c) to a purely inductive circuit. \\ \\
+
+Find the relationship between the voltage and the current in each case
+and draw the phaser diagram of each.
+
+% 2004-01-28
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+$i(t)$ leads $e(t)$ by $90^{o}$.
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+$i(t)$ in phase with $e(t)$
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+$i(t)$ lags $e(t)$ by $90^{o}$.
+
+In electrical engineering however, it is not convenient to use sine and
+cosine as the driving EMFs in AC theory. It is best to consider:
+
+\[ e(t) = \varepsilon_{m} e^{j \omega t} \]
+
+where $j = \sqrt{-1}$ . \\
+
+\[ e(t) = \cos{\omega t} + j \sin{\omega t} \]
+
+Resultant current is complex. \\
+
+Real $i(t)$ gives response to $\cos{\omega t}$. \\
+
+Imaginary $i(t)$ gives response to $\sin{\omega t}$. \\
+
+Simple circuit:
+
+\begin{eqnarray*}
+e(t) & = & R i(t) \\
+\varepsilon_{m} e^{j \omega t} & = & R i(t) \\
+i(t) & = & \frac{\varepsilon_{m} e^{j \omega t}}{R} \mbox{hspace{5mm}
+... Response} \\
+\mbox{Real } i(t) & = & \frac{\varepsilon_{m} \cos{\omega t}}{R} \\
+\mbox{Imaginary } i(t) & = & \frac{\varepsilon_{m} \sin{\omega t}}{R}
+\end{eqnarray*}
+
+% Missing
+
+And it's easy to see the phase relationships.
+
+\subsection{Inductive Circuit}
+
+\begin{eqnarray*}
+		L & = & \frac{di(t)}{dt} \\
+  		  & = & \varepsilon_{m} e^{j \omega t} \\
+Li		  & = & \frac{\varepsilon_{m} e^{j \omega t}}{j \omega} \\
+i(t)	  & = & \frac{\varepsilon_{m} e^{j \omega t}}{j \omega L} \\
+j		  & = & \cos{\frac{\pi}{2}} + j \sin{\frac{\pi}{2}} \\
+		  & = & e^{j \frac{\pi}{2}} \\
+j^{-1}  & = & e^{-j \frac{\pi}{2}} \\
+i(t)	  & = & \frac{\varepsilon_{m} i \omega t e^{- j
+\frac{\pi}{2}}}{\omega L} \\
+		  & = & \frac{\varepsilon_{m} e^{i\left(\omega t -
+		  \frac{\pi}{2}\right)}}{\omega L}
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ [j \hspace{2mm} \omega \hspace{2mm} L ] = [ R ] \]
+
+
+$j \omega L = $ impedance of an impedance circuit, ie $X_{L}$, the
+inductive reactance.
+
+\subsection{Capacitive Circuit}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+e(t)			& = & \frac{q(t)}{C} \\
+\dot{e}(t)	& = & \frac{\dot{q}(t)}{C} \\
+				& = & \frac{i(t)}{C} \\
+i(t)			& = & C \dot{e}(t) \\
+				& = & j \omega C \varepsilon_{m} e^{j \omega t} \\
+j				& = & \cos{\frac{\pi}{2}} + i \sin{\frac{\pi}{2}} \\
+				& = & e^{j \frac{\pi}{2}} \\
+\dot{e}(t)	& = & \frac{\dot{q}(t)}{C} \\
+i(t)			& = & \omega C \varepsilon_{m} e^{(\omega t +
+\frac{\pi}{2})} \\
+				& = & \frac{e(t)}{Z_{C}} \\
+j \omega C	& = & - \frac{1}{\omega C}
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+This is the impedance offered by a capacitor. But there is no
+dissipation.
+
+\[ X_{C} = \frac{1}{\omega C} \mbox{\hspace{5mm}Capacitance Reactance}
+\]
+
+\begin{eqnarray*}
+Z_{R} & = & R_{1} \\
+Z_{C} & = & \frac{1}{\omega C}
+\end{eqnarray*}
+
+It is impossible to build an electric circuit with resistance only, either
+capacitance only or with inductance only.
+
+In general, you will have the three circuit elements present.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+Z_{T} & = & Z_{L} + Z_{R} + Z_{C} \\
+		& = & j \omega L + R + \frac{1}{j \omega C} \\
+		& = & j \omega L + R + \frac{j}{\omega C} \\
+i(t)	& = & \frac{\varepsilon_{m} e^{j \omega t}}{r + j\left(\omega L -
+\frac{1}{\omega C} \right)}
+\end{eqnarray*}
+
+We have got the current from a simple generalised form of Ohm's Law.
+However, we do not know it's phase relative to the applied voltage
+without computation.
+
+\begin{eqnarray*}
+i(t) & = & \frac{\varepsilon_{m} e^{j \omega t}}{R^{2} + \left| \omega L
+- \frac{1}{\omega C} \right|} \times R - j \left(\omega L -
+\frac{1}{\omega C} \right) \\
+	  & = & X_{i} + i Y \\
+\mbox{Arguement} X_{i} & = & \tan^{-1}{\frac{Y}{X}} \\
+\left| X_{i} \right| & = & \sqrt{X^{2} + Y^{2}}
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Exercise: Show that
+
+\[ \mbox{Arguement} X_{i} = \tan^{-1}{\left[ - \frac{\left( \omega L -
+\frac{1}{\omega C} \right)}{R} \right]} \]
+
+\[ \left| X_{i} \right| = \frac{1}{\sqrt{R^{2} + \left( \omega L -
+\frac{1}{\omega C} \right)}} \]
+
+% 2004-02-02
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+By Generalising Ohm's Law:
+
+\[ i(t) = \frac{\varepsilon_{m} e^{j \omega t}}{Z(j \omega)} \]
+
+We work out $Z$ in arguement form and modulus form.
+
+\begin{eqnarray*}
+Z 			& = & \left| Z \right| e^{j \varphi} \mbox{\hspace{5mm}... De Moivre's
+Euler} \\
+Z^{-1}	& = & \frac{1}{\left| Z \right| e^{j \varphi}} \\
+\mbox{Thus Modulus} & & \\
+\left| \frac{1}{Z} \right| & = & \frac{1}{\left| Z \right|} \\
+\mbox{Arguement} \frac{1}{Z} & = & - \mbox{Arguement} Z \\
+Z			& = & \left| Z \right| e^{j \varphi} \\
+Z^{-1}	& = & \frac{1}{\left| Z \right|} e^{- j \varphi} \\
+v(t)		& = & \frac{\varepsilon_{m} e^{j \omega t} e^{-j \varphi}}{\left|
+Z \right|}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\varphi & = & tan^{-1}{\frac{Y}{X}} \\
+		  & = & tan^{-1}{\frac{\mbox{Imaginary} Z}{\mbox{Real} Z}} \\
+Z		  & = & X + j Y
+\end{eqnarray*}
+
+The complex notation is just a way of manipulating AC quantities. The
+actual currents and voltages are always either sine or cosine.
+
+\begin{eqnarray*}
+i(t) \mbox{ is complex.} & & \\
+i'(t) + j i''(t) & & \\
+i'(t), i''(t) \in \mathbb{R} & & \\
+i' + i'' & = & \varepsilon_{m}{(\omega t - \varphi)} + 
+\frac{j \varepsilon_{m} \sin{(\omega t - \varphi)}}{\left|Z \right|} \\
+e^{j \alpha} & = & \cos{\alpha} + j \sin{\alpha} \\
+i'(t) & = & \frac{\varepsilon_{m} \cos{(\omega t - \varphi)}}{\left| Z
+\right|} \mbox{\hspace{5mm} Response to } \varepsilon_{m} \cos{\omega t} \\
+i''(t) & = & \frac{\varepsilon_{m} \sin{(\omega t - \varphi)}}{\left| Z
+\right|} \mbox{\hspace{5mm} Response to } \varepsilon_{m} \sin{\omega t} \\
+\end{eqnarray*}
+
+To solve any serious AC circuit, all you need to know is the complex
+impedance.
+
+\begin{eqnarray*}
+I_{m}			& = & \frac{\varepsilon_{m}}{\left| Z \right|} \\
+I				& = & \frac{I_{m}}{\sqrt{2}} \\
+				& = & \frac{\varepsilon_{m}}{\sqrt{2} \left| Z \right|} \\
+				& = & \frac{E}{\left| Z \right|}
+\end{eqnarray*}
+
+$R$, $L$ in series
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+i(t)			& = & \frac{\varepsilon_{m} e^{j (\omega t -
+\varphi)}}{\left| Z \right|} \\
+Z				& = & R + j \omega L \\
+				& = & R + j X_{L} \\
+\left| Z \right| & = & \sqrt{R^{2} + \omega^{2}L^{2}} \\
+\varphi & = & \mbox{Arguement } Z \\
+				& = & \tan^{-1}{\left(\frac{\omega L}{R}\right)} \\
+				& = & \tan^{-1}{\left(\frac{\mbox{Imaginary } Z}{\mbox{Real
+				} Z}\right)} \\
+i(t)			& = & \frac{\varepsilon_{m} e^{j\left(\omega t -
+\tan^{-1}{\left(\frac{\omega L}{R}\right)}\right)}}{\sqrt{R^{2} +
+\omega^{2}L^{2}}} \mbox{\hspace{5mm} Instantaneous Current}
+\end{eqnarray*}
+
+Response to $\varepsilon_{m} \cos{\omega t}$.
+
+\[ \mbox{Real } i(t) = \frac{\varepsilon_{m} \cos{\left( \omega t - 
+\tan^{-1}{\frac{\omega L}{R}}\right)}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \]
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+I_{m} & = & \frac{\varepsilon_{m}}{\sqrt{R^{2} + \omega^{2} L^{2}}} \\
+I		& = & \frac{E < - \tan^{-1}{\left(\frac{\omega L}{R}\right)}}{\sqrt{R^{2} 
++ \omega^{2} L^{2}}}
+\end{eqnarray*}
+
+The RMS current is very strongly frequency dependent. At low
+frequencies, the phase angle $\varphi$ is $0$. At very high frequencies,
+the inductive reactance, $X_{L}$ dominates the circuit and the circuit
+behaves like a pure inductor.
+
+\[ \overline{P(t)} = I E \cos{\varphi} \]
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+\tan{\varphi} & = & \frac{- \omega L}{R} \\
+\sqrt{R^{2} + \omega^{2} L^{2}} & = & \mbox{hyp} \\
+\cos{\pi} & = & \frac{R}{\sqrt{R^{2} + \omega^{2} L^{2}}} \\
+\overline{P(t)} & = & \frac{IE R}{\sqrt{R^{2} + \omega^{2} L^{2}}} \\
+E & = & I \left| Z \right| \\
+  & = & I \sqrt{R^{2} + \omega^{2} L^{2}} \\
+\overline{P(t)} & = & I^{2} R \\
+\cos{\varphi} & = & \frac{R}{\left| Z \right|} \\
+\overline{P(t)} & = & I^{2} R
+\end{eqnarray*}
+
+\subsection{Summary}
+
+Any AC circuit which is governed by linear differential equations, one
+can always find the response that is the current, if one knows the
+impedence. The complex $j$ notation allows one to easily understand the
+phase relation.
+
+\section{Power Factor Correction}
+
+The problem however, is that many loads are highly inductive, hence
+$\varphi$ is high, approaching $\frac{\pi}{2}$. This means we have hugh,
+reactive currents flowing in the circuit, if it's inductive. We are then
+far from the ideal conditions for peak power thanks to the supply
+voltage. So we try yo make $\cos{\varphi}$ are near to $1$.
+
+To solve this problem, we insert a capacitor into the circuit.
+
+% 2004-02-02
+
+Exercise: A voltage $e(t) = \frac{3}{5} \sin{\frac{3t}{4}}$ is applied
+to a capacitor of $0.5 \mu F$.
+
+Calculate from first principles, the instantaneous current, the maximum
+current, the phase angle, the RMS value, the power consumed. Sketch the
+variation of $\left| Z \right|$ with frequency. Draw a phasor diagram.
+
+Diagram - To Do
+
+\[ Z_{C} = - \frac{j}{\omega L} \]
+
+% 2004-02-04
+
+\section{Resonance}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+Z & = & R + j \omega L - \frac{j}{\omega L} \\
+i(t) & = & \frac{\varepsilon_{m} e^{j \omega t} }{Z} \\
+	  & = & \frac{\varepsilon_{m} e^{j(\omega t - \varphi)}}{\left| Z
+	  \right|} \\
+\varphi & = & \mbox{Arg } Z \\
+\left| Z \right| & = & \sqrt{R^{2} + \left(\omega L - \frac{1}{\omega
+C}\right)^{2}} \\
+Z & = & x + j y \\
+\left| Z \right| & = &\sqrt{x^{2} + y^{2}} \\
+Z & = & \left| Z \right| e^{j \varphi} \\
+  & = & \left| Z \right| e^{j Arg  Z} \\
+\mbox{Arg } Z & = & \tan^{-1}{\frac{y}{x}} \\
+				  & = & \frac{\left( \omega L - \frac{1}{\omega C}
+				  \right)}{R} \\
+i(t)	& = & \frac{\varepsilon_{m} exp j \left\{ \omega t -
+\tan^{-1}{\left[ \frac{\left(\omega L - \frac{1}{\omega C}\right)}{R}
+\right]}\right\}}{\sqrt{R^{2} + \left(\omega L -  \frac{1}{\omega
+C}\right)^{2}}} \\
+i(t)	& = & i'(t) + j i''(t) \\
+i'(t)  & = & \frac{\varepsilon_{m} \cos{\left\{ \omega t -
+\tan^{-1}{\left[ \frac{\left(\omega L - \frac{1}{\omega C}\right)}{R}
+\right]}\right\}}}{\sqrt{R^{2} + \left(\omega L -  \frac{1}{\omega
+C}\right)^{2}}} \\
+\exists \hspace{1mm} \omega & = & \omega_{0} \\
+\mbox{ such that} & & \\
+\omega_{0} L & = & \frac{1}{\omega_{0} C} \\
+\tan^{-1}{\varphi} & = & 0
+\end{eqnarray*}
+
+There exists a special frequency $\omega_{0}$, at which the supply
+current is in phase with the supply voltage. At $\omega = \omega_{0}$,
+the circuit appears to behave as a pure resistance circuit.
+
+At $\omega = \omega_{0}$:
+
+\begin{eqnarray*}
+\omega_{0} & = & \frac{1}{2 \pi\sqrt{LC}} \\
+f_{0} & = & \frac{1}{2 \pi \sqrt{LC}} Hz
+\end{eqnarray*}
+
+This frequency is called the resonance frequency.
+
+The frequency $f_{0} = \frac{1}{2 \pi \sqrt{LC}}$ is the resonance
+frequency for the resonance circuit.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+\tan^{-1}{x} & = & - \tan^{-1}{x} \\
+\tan^{-1}{\infty} & = & \frac{\pi}{2} \\
+\tan^{-1}{- \infty} & = & - \frac{\pi}{2}
+\end{eqnarray*}
+
+The function $\tan^{-1}{x}$, for very large positive values of it's
+arguement, asimtotically approaches $\frac{\pi}{2}$. For very large
+values and negative values of it's arguements asimtotically occur at $-
+\frac{\pi}{2}$. The same behavious occurs for the positive and negative
+at multiples of $n + \frac{\pi}{2}$.
+
+When $\omega$ is far greater than $\omega_{0}$, $\omega L$ dominates the
+phase. Than $\tan^{-1}$ approaches $\infty$, so the current lags the
+voltage by $\frac{\pi}{2}$. $\left| Z \right|$ becomes extremely lerge.
+The incoming signal is presented with a very high impedence, compared to
+that when $\omega = \omega_{0}$.
+
+At low frequencies, when $\omega$ is far smaller than $\omega_{0}$,
+$\frac{1}{\omega C}$ dominates the phase. then the current leads the
+voltage, so the phase angle asimtotically approaches $\frac{\pi}{2}$.
+While the impedence is also very large.
+
+% 2004-02-05
+
+Exercise: An AC circuit of $50V$ at a frequency of $158 kHz$ is applied
+to a series $RLC$ circuit consisting of an inductance of $1000 \mu H$, a
+capacitance of $0.001 \mu F$ and a resistance of $10\Omega$. \\ \\
+
+Find the: \\ 
+
+(a) current flowing \\
+
+(b) phase angle \\
+
+(c) the voltage across the capacitor \\
+
+(d) the voltage across the inductor \\
+
+Fine the resonance frequency.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+If an alternating voltage at $50V$ is applied at this frequency, find
+the answers to a, b, c and d above.
+
+% 2004-02-09
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\[ I = \frac{E}{\left| Z \right|} \]
+
+At $\omega = \omega_{0}$
+
+\begin{eqnarray*}
+\omega_{0} & = &\frac{1}{\sqrt{LC}} \\
+I_{\omega} & = & \frac{E}{\sqrt{R^{2} + \left(\omega L - \frac{1}{\omega
+C}\right)^{2}}}
+\end{eqnarray*}
+
+$I$ is a maximum at $\frac{E}{R}$.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+If the resistance is very small, $I$ tends to $\infty$ at $\omega =
+\omega_{0}$.
+
+This is a high $Q$ factor circuit.
+
+We can find the quality factor by calculating the $Q$ factor of the
+resonance.
+
+In this circuit:
+
+\begin{eqnarray*}
+Q factor & = & 2 \pi \times \mbox{peak energy stored at resonance
+divided by energy dissipated per cycle} \\
+v(t) & = & \frac{1}{2} L i^{2}(t) + \frac{1}{2}
+Cv^{2}(t)\left(\frac{1}{2} mx^{2} + \frac{1}{2} kx^{2} \right)
+\end{eqnarray*}
+
+The electric potential energy stored in capacitance is $\frac{1}{2} k
+x^{2}$.
+
+We want the ratio of the energy stored to the energy dissipated.
+
+\begin{eqnarray*}
+\overline{V}(t) & = & \frac{1}{2} \overline{Li^{2}(t)} + \frac{1}{2}
+\overline{C v^{2}(t)} \\
+			& = & \frac{1}{2} LI^{2} + \frac{1}{2} CV^{2} \\
+V_{C}		& = & \frac{I}{\omega C} \\
+			& = & IX_{C} \\
+\overline{V}(t) & = & \frac{1}{2} LI^{2} + \frac{1}{2}
+\frac{CI}{\omega^{2} C^{2}} \\
+			& = & \frac{1}{2} I^{2} \left( L + \frac{1}{\omega^{2} C}
+			\right) \\
+\omega & = & \omega_{0} \\
+\overline{V}(t) & = & \frac{I^{2}}{2} \left(L + \frac{1}{\omega_{0} C}
+\right)\\
+		 & = & \frac{I^{2}}{2} (L + C) \\
+		 & = & \frac{I^{2}}{2} 2L \\
+		 & = & L I^{2} \\
+\mbox{Since } I & = & \frac{I_{m}}{\sqrt{2}} \\
+E & = & \frac{1}{2} LI_{m}^{2} \\
+Q & = & \frac{2 \pi \left(\frac{1}{2} L I_{m}^{2} \right)}{I^{2} R
+\frac{2 \pi}{\omega_{0}}} \\
+I & = & \frac{I_{m}}{\sqrt{2}} \\
+Q & = & \frac{\omega_{0} L}{R} \\
+\omega_{0}^{2} & = & \frac{1}{LC} \\
+Q & = & \frac{1}{\omega_{0} CR}
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+In a car, you rotate the alternator machanically, so you are supplying
+energy from some external, non electric agent.
+
+\begin{eqnarray*}
+\Phi(t) & = & \Phi_{m} \cos{\theta(t)} \\
+e(t) & = & - \frac{d(\mbox{Flux Linkages})}{dt}
+\end{eqnarray*}
+
+Now, if the coil is made to rotate in the field, with angular velocity
+$\omega$.
+
+\begin{eqnarray*}
+e(t) & = & - \frac{d}{dt} (\Phi (t)) \\
+	  & = & - \frac{d}{dt} (\Phi_{max} \cos{\omega t}) \\
+	  & = & \omega \Phi_{m} \sin{\omega t} \\
+\Phi_{m} \theta & = & 0 \\
+\overline{e^{2}}(t) & = & \frac{\omega^{2} \Phi_{m}^{2}}{2} \\
+E & = & \frac{\omega \Phi_{m}}{\sqrt{2}} \mbox{\hspace{5mm} Elementary
+Generator Equation} \\
+  & = & \frac{2 \pi f \Phi_{m}}{\sqrt{2}} \\
+  & = & 4.4 f \Phi_{m}
+\end{eqnarray*}  
+
+In practice, a DC current is often desirable. So, the AC has to be
+rectified to make it unidirectional. This is accomplished in modern
+alternators by usig diodes as rectifiers.
+
+Before the invention of reliable, solid state diodes, DC current was
+produced using a commumutator, which is an electromechanical device for
+ensuring unidirectional current. This is a good method of generating AC 
+at low frequencies. It is not suitable at high frequencies.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Hertz and Marconi made a large oscillator by connecting accululators or
+batteries to a resistive circuit.
+
+They switched the battery in and out, producing a continious sine wave.
+This is an elementary high frequency oscillator called a \emph{Spark
+Transmitter}.
+
+Lee de Forest patented the vacuum and that allowed one to make a high
+frequency oscillator.
+
+% 2004-02-09
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+We saw that for impedences in series, we add:
+
+\[ Z_{T} = Z_{C} + Z_{L} + Z_{R} \]
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+To deal with such parallel circuits, we introduce the idea of
+admittence.
+
+\[ Y(j \omega) = \frac{1}{Z} (\Omega^{-1}) \]
+
+Just as impedences in series add up, admittences in parallel add up.
+
+Let's consider $R$ and $L$ as constituting admittence and the 
+capacitor as constituting an admittence.
+
+\begin{eqnarray*}
+Z_{C} & = & \frac{1}{j \omega C} \left( \frac{- j}{\omega C} \right) \\
+Z_{LR} & = & R + j \omega L \\
+Y_{C} & = & j \omega C \\
+Y_{LR} & = & \frac{1}{R + j \omega L} \\
+Y_{T} & = & j \omega C + \frac{1}{R + j \omega L} \\
+Z_{T} & = & \frac{1}{Y_{T}} \\
+E & = & I \left| Z \right| \\
+I & = & \frac{E}{\left| Z \right|} \\
+  & = & E \left| Y \right|
+\end{eqnarray*}
+
+This circuit has aproperty that the current is a mimimum when $Y(j)$
+vanishes. This is called a parallel resonance or rejector circuit.
+
+Current is a maximum in a series resonance circuit because the impedence
+is at a minimum, so it's called an acceptor circuit.
+
+In  parallel resonance circuit, when the resistance is at a maximum, the
+current and the resonance are at a minimum.
+
+Resonance is defined as the condition that the imaginary part of the
+admittence (or impedence) vanishes. In practice, the supply current is
+in phase with the supply voltage.
+
+Exercise: Show that
+
+\begin{eqnarray*}
+\omega_{0}^{2} & = & \frac{1}{LC} - \frac{R^{2}}{L^{2}} \\
+& & \\
+& & \\
+Y & = & j \omega L + \frac{R - j \omega L}{R^{2} + \omega^{2} L^{2}} \\
+Y & = & \frac{R}{R^{2} + \omega^{2} L^{2}} + j \omega \left(C -
+\frac{L}{R^{2} + \omega^{2} L^{2}} \right) \\
+C - \frac{L}{R^{2} + \omega^{2} L^{2}} & = & 0 \\
+C & = & \frac{L}{R^{2} + \omega_{0}^{2} L^{2}} \\
+\frac{L}{C} & = & R^{2} + \omega_{0}^{2} L^{2} \\
+\frac{L}{C} - R^{2} & = & \omega_{0}^{2} L^{2} \\
+\frac{1}{LC} - \frac{R^{2}}{L^{2}} & = & \omega_{0}^{2} \\
+Y & = & \frac{R}{R^{2} + \omega^{2} L^{2}}
+\end{eqnarray*}
+
+% 2004-02-16
+
+\section{Ideal Transformer}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+No power loss in
+
+\[ E_{1} I_{1} = E_{2} I_{2} \]
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Flux lines $L_{1}$ cut coil$_2$ and in general, not all the flux lines
+in coil$_1$ will cut coil$_2$.
+
+If a current changing at a rate of $1 A/sec$ in coil$_1$ induces in
+coil$_2$ an EMF of $1V$, then the coils are said to have a mutual
+inductance of $1H$.
+
+\begin{eqnarray*}
+e_{1}(t) & = & \frac{N_{1} d \Phi_{12}}{dt} \\
+\Phi_{12} & = & \Phi_{21} \\
+e_{2}(t) & = & \frac{N^{2} d \Phi}{dt} \\
+\frac{E_{1}}{E_{2}} & = & \frac{N_{1}}{N_{2}} \\
+& & \\
+\mbox{All the flux from coil$_1$} \\
+\mbox{links coil$_2$ and vice versa.} \\
+& & \\
+\frac{E_{1}}{E_{2}} & = & \frac{I_{2}}{I_{1}} \\
+\frac{N_{1}}{N_{2}} & = & \frac{I_{2}}{I_{1}} \\
+E_{2} & = & \frac{N_{2}}{N_{1}} E_{1} \\
+\frac{N_{1}}{N_{2}} & = & n \mbox{\hspace{5mm} (Turns Ratio)} \\
+E_{2} & = & \frac{E_{1}}{n} \\
+I_{2} & = & n I_{1}
+\end{eqnarray*}
+
+The purpose of transformers is to alter the balance of % gap
+
+\begin{table}[hbtp]
+
+Daigram - To Do
+
+\end{table}
+
+Mobile Phone Charger
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Ignition Coil
+
+\vspace{10mm}
+
+First of all, we get different Turns Ratios by tapping the primary
+winding. The tapping responds to the values needed.
+
+Widely used for impedence matching, eg old fashioned amplifiers have a
+very high impedence.
+
+You want to match the output, so you match the impedence using a
+transformer.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+In practice, $RL$ and $RLC$ circuits, etc are subject to simulate which
+are switched on and off all the time. The most common example is in a
+car engine.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+What is the subsequent growth or decay?
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+U(t) & = & 1 \\
+t &> & 0 \\
+U(t) & = & \frac{1}{2} \\
+t & = & 0 \\
+U(t) & = & 0 \\
+t & < & 0
+\end{eqnarray*}
+
+Represents switching on a $DC$ circuit.
+
+What is $i(t)$ for $t > 0$
+
+the home (Kivdnoff)
+
+\begin{eqnarray*}
+V_{R}(t) + V_{L}(t) & = & E U(t) \\
+						  & = & E \\
+t & > & 0 \\
+i(t) R + L \frac{di(t)}{dt} & = & E
+\end{eqnarray*}
+
+First order linear ordinary differential equation.
+
+\begin{eqnarray*}
+R i(t) dt + L di & = & E dt \\
+L di & = & (E - iR) dt \\
+\frac{L di}{E - iR} & = & dt
+\end{eqnarray*}
+
+or
+
+\begin{eqnarray*}
+L \int \frac{di}{E - iR} & = & t + A \\
+E - iR & = & \mu \\
+- R di & = & d \mu \\
+di & = & - \frac{d \mu}{R} \\
+\int \frac{di}{E - IR} & = & - \frac{1}{R} \int \frac{d \mu}{\mu} \\
+							  & = & \frac{1}{R} \log{\mu} \\
+- \frac{L}{R} \log{(E - IR)} & = & t + A \\							  
+\log{(E - iR)} & = & - \frac{R}{L} t - \frac{R}{L} A \\
+E - iR & = & e^{-\frac{R t}{L}} e^{- \frac{R A}{L}} B \\
+E - iR & = & B e^{- \frac{R t}{L}} \\
+\mbox{At } t & = & 0 \\
+i & = & 0 \\
+B & = & E \\
+E - iR & = & E e^{- \frac{R t}{L}} \\
+i & = & \frac{E}{R} \left( 1 - e^{-\frac{R t}{L}} \right)
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+If you differentiate the delta function ($1 - e^{- \frac{R t}{L}}$), the
+result is a spike.
+
+% 2004-02-18
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Flowing at any instance t, following the imposition of a $DC$ current,
+EMF $E$ is given by:
+
+\begin{eqnarray*}
+i(t) = \frac{E}{R} \left( 1 - \exp{-\frac{R t}{L}} \right) U(t) \\
+U(t) & & \mbox{Response}
+\end{eqnarray*}
+
+The current is an inductive circuit, which behaves like:
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Initially, there is no current because the switch has not been turned
+on.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Because there is resistance and inductance in the circuit, the response
+cannot instantaneously reach it's steady state value $\frac{E}{R}$, so
+we say the current is just in a purely resistive circuit and the current
+asymtotically approaches it's steady state value $\frac{E}{R}$.
+
+No physical system can pobtain it's steady state value immediately.
+
+\begin{eqnarray*}
+\tau & = & \frac{E}{R} \\
+i(t) & = & \frac{E}{R} \left( 1 - \exp^{- \frac{R}{L} \frac{L}{R}}
+\right) \\
+	  & = & \frac{E}{R} \left( 1 - e^{-1} \right) \\
+\tau & = & 0.3333
+\end{eqnarray*}
+
+At this time, the current has reached $67\%$ of it's final value.
+
+\[ t_{const} = \frac{L}{R} \mbox{(of inductive circuit)} \]
+
+This is an important quantity because it determines how fast the
+response is. If you have a very small time constant, then the steady
+state response is obtained almost immediately. If you have a very large
+time constant, it takes a long time to reach a steady state.
+
+This is particularly relavent in digital systems, because you are
+switching on and off the electrical circuit in sympathy with the pulses.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+It will rise to the height of the pulse, the steady state position. The
+height of the pulse is $\frac{E}{R}$. However, if you switch the EMF
+off, the current would not decay immediately, but exponentially to $0$.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+The decay transient is the mirror image of the rise transient.
+
+We got all are results from
+
+\begin{eqnarray*}
+L \frac{di(t)}{dt} + R i(t) & = & E V(t) \\
+V_{L} (e) + V_{R}(t) & = & E V(t) \\
+i(0) & = & 0 \mbox{\hspace{5mm} (Initial Condition)} \\
+\end{eqnarray*}
+
+
+What are the voltages across $L$ and $R$ at any time $t > 0$?
+
+\begin{eqnarray*}
+V_{R}(t) & = & R i(t) \\
+			& = & E \left( 1 - e^{- \frac{R}{L} t} \right) V t
+\end{eqnarray*}			
+
+
+At very small times for $t \ll \tau = \frac{L}{R}$.
+
+\begin{eqnarray*}
+V_{R}(t) & \simeq & 0 \\
+i(t) & = & \frac{E}{R} \left(1 - e^{- \frac{R t}{L}} \right) \\
+V_{L}(t) & = & L \frac{di}{dt} \\
+			& = & \frac{LE}{R} \left(- \frac{R}{L} e^{- \frac{R t}{L}}
+			\right) \\
+			& = & - E e^{- \frac{R t}{L}} \\
+V_{L}		& = & - E
+\end{eqnarray*}
+
+The full supply voltage appears across the inductor. Notice Lenz's
+law: sine of the induced EMF is opposide to the sign of the EMF causing
+the charge.
+
+eg switching a starter motor powers approximitely $3kW$. Therefore you
+do not need a started switch, which is a large inductive load. Instead
+you remotely stithc it off a relay.
+
+You also hyave transient effects if you have alternating currents being
+switched on and off in stead like fashion.
+
+\subsection{Decay transient}
+
+Suppose that the battery has been switched into the circuit for a long
+time. Then let us suppose that the circuit is broken at some initial
+time, at $t = 0$.
+
+$E$ applied at $t = - \infty$, then $E$ switched off at $T = 0$.
+
+So for any time $t > 0$,
+
+\begin{eqnarray*}
+L \frac{di(t)}{dt} + R i(t) & = & 0 \\
+i(0) & = & \frac{E}{R}
+\end{eqnarray*}
+
+Find $i(t)$.
+
+\begin{eqnarray*}
+L di + R i dt & = & 0 \\
+dy + x y dx & = & 0 \\
+d \frac{dy}{y} + x dx & = & 0 \\
+\int \frac{di}{i} & = & - \frac{R}{L} \int dt + C \\
+\log{i(t)} & = & - \frac{R}{L} (t + C) \\
+i(0) & = & \frac{E}{R} \\
+\mbox{At } t & = & 0 \\
+\log{i(0)} & = & C \\
+\log{\frac{E}{R}} & = & C \\
+\log{i(t)} & = & - \frac{R t}{L} + \log{\frac{E}{R}} \\
+\log{i(t)} - \log{\frac{E}{R}} & = & - \frac{R t}{L} \\
+\log{\left( \frac{i(t) R}{E} \right)} & = & - \frac{R t}{L} \\
+\frac{i R}{E} & = & e^{- \frac{R t}{L}} \\
+i & = & \frac{E}{R} e^{- \frac{R t}{L}}
+\end{eqnarray*}
+
+Rise Transient: $\frac{E}{R} \left(1 - e^{-\frac{R t}{L}} \right)$
+
+Decay Transient: $\frac{E}{R} e^{-\frac{R t}{L}}$
+
+% 2004-02-19
+
+Example: To Do
+
+% 2004-02-23
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+E & = & V_{C}(t) + V_{R}(t) \\
+  & = & \frac{q(t)}{C} + R \frac{d q(t)}{dt} \\
+t & > & 0 \\
+CR & & \\
+q(t) &= &CE \left(1 - e^{-\frac{t}{CR}} \right)
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+RL & & \\
+i(t) & = & \frac{E}{R} \left(1 - e^{- \frac{Rt}{L}} \right)
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+\mbox{at a time } \tau & = & CR \\
+q(\tau) & = & 0.6666 \cdots CE \\
+q(t) & = & CE \left( 1 - e^{- \frac{t}{CR}} \right) 1
+\end{eqnarray*}
+
+$R$ is called the time constant of the circuit. It's the time the charge
+takes to reach $\frac{2}{3}$ of it's final value. In the $RL$ circuit 
+at a time $t = \tau = \frac{L}{R}$, the current has reached
+$\frac{2}{3}$ of it's final value $\frac{L}{R}$, thus is the time
+constant for an $RL$ circuit.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+After a very long time, $I$ short circuits the battery. Then the charge
+will decay exponentially with a decay transient which is the mirror
+image of the rise transient.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+The response is rounded, because of the damping due to the resistance.
+
+\begin{eqnarray*}
+\dot{q}(t) & = & CE \left( - \frac{1}{CR} e^{- \frac{t}{CR}} \right) \\
+\dot{i}(t) & = & \frac{E}{R} \left( e^{- \frac{t}{CR}} \right)
+\end{eqnarray*}
+
+When the capacitance is empty, no current flows.
+
+The current rises exponentially to it's value, but also decays
+exponentially back to $0$.
+
+\[ R i(t) = E e^{-\frac{t}{CR}} \]
+
+The voltage across the resistor decays exponentially with time. The
+voltage across the capacitor grows exponentially to the supply value
+$E$.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+\mbox{Initial Charge } & = & CE \\
+V_{C}(t) + V_{R}(t) & = & 0 \\
+\frac{q(t)}{C} + \frac{R dq(t)}{dt} & = & 0 \\
+R_{C}(t) & = & \frac{q}{C} \\
+			& = & E \left(1 - e^{\frac{\tau}{\cdots}} \right) \\
+\frac{q(t)}{CR} + \frac{dq}{dt} & = & 0 \\
+\frac{q}{CR}dt + dq & = & 0 \\
+\int \frac{dq}{q} & = & \int \frac{dt}{CR} \\
+\log{q} & = & - \frac{t}{CR} + A \\
+\mbox{At t = 0} & & \mbox{(taking $0$ as origin of time)} \\
+q & = & CE \\
+\log{CE} & = & A \\
+\log{q} & = & - \frac{t}{CR} + \log{CE} \\
+\log{q} - \log{CE} & = & - \frac{1}{CR} \\
+\log{\frac{q}{CE}} & = & - \frac{t}{CR} \\
+q(t) & = & CE e^{- \frac{t}{CR}}
+\end{eqnarray*}
+
+Now we said that a capacitor is an electrical spring and an inductor is
+an electrical mass.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+The capacitor is charged to a mid value $Q$ and let us close the switch
+$S$ at time $t = 0$.
+
+\begin{eqnarray*}
+q(0) & = & Q \mbox{\hspace{5mm}($S$ is closed at $t = 0$)} \\
+\mbox{So } t & > & 0 \\
+V_{L}(t) + V_{C}(t) & = & 0 \\
+L \frac{di}{dt} + \frac{q(t)}{C} & = & 0 \\
+i(t) & = & \dot{q}(t) \\
+L \ddot{q}(t) + \frac{q(t)}{C} & = & 0 \\
+\ddot{q}(t) + \frac{q(t)}{LC} & = & 0 \\
+\mbox{SHM Equation} & & \\
+\omega_{n}^{2} & = & \frac{1}{LC} \\
+fn & = & \frac{1}{2 \pi \sqrt{LC}} \mbox{\hspace{5mm} (Natural
+Frequency)}
+\end{eqnarray*}
+
+If you disturb the system, it will oscillate with frequency $\frac{1}{2
+\pi \sqrt{LC}}$. This circuit is an elementary high frequency
+oscillator.
+
+However, the inductor always has a resistance, therefore you must put
+energy back into the system in order to compensate for the series
+resistance of the inductor.
+
+Modern technology uses solid state devices. Powerful ones still use
+tubes.
+
+% 2004-02-25
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+L \ddot{q} + \frac{q}{C} & = & E \\
+t & > & 0 
+\end{eqnarray*}
+
+If you have a battery and you connect it to an $LC$ circuit, the circuit
+will act as an electric harmonic oscillator.
+
+\[ V_{C} = \frac{q(t)}{C} \]
+
+The voltage across the capacitator will oscillate, as will the current
+and the voltage across the inductor. In practive, it's impossible to make
+an inductive circuit without resistance.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+\begin{eqnarray*}
+V_{L}(t) + V_{R}(t) + V_{C}(t) & = & E \\
+L \frac{di}{dt} + iR + \frac{q}{C} & = & E \\
+L \ddot{q}(t) + R \dot{q}(t) + \frac{q(t)}{C} & = & E \\
+\mbox{Since } \dot{q}(t) & = & i(t)
+\end{eqnarray*}
+
+This is an oscillator with damping, because the mechanical equivalent of
+capacitance is a dashpot. In this situation, the charge will
+exponentially decay with time in damped oscillitory fashion.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Every so often, one must reactivate the oscillation by opening and
+closing the switch, corresponding to the winding of a pendulum clock.
+The onvolope of decay is exponential.
+
+If you recall that an $RLC$ circuit, with small resistance, when
+connected to a battery, can act as a high frequency oscillator.
+Nowadays, active devices, such as transistors, coupled with a suitably
+tuned circuit to replace the battery and switch, are used.
+
+
+\section{Lorentz Force}
+
+\xy <1cm, 0cm>:
+0 ; (1.25,1.25) **\dir{-} *\dir{>} ?(1.25) *+!CR{\vec{V}} ;
+0 ; (2.5,0) **\dir{-} *\dir{>} ?(1.25) *+!CR{\vec{B}} ;
+0 ; (0,-2.5) **\dir{-} *\dir{>} ?(1.25) *+!CR{\vec{F}} ;
+\endxy
+
+\[ \vec{F} = q \vec{V} \times \vec{B} \]
+
+The Lorentz Force is the force on a charge $Q$, when placed in a
+magnetic field $\vec{B}$ (measured in teslas, whose unit is $\frac{V
+sec}{m^{2}}$). If a charged particle moves with velocity $\vec{V}$, then
+it experiences the Lorentz Force.
+
+Lorentz discovered that the sense of the force is as follows: \textit{it
+turns the direction of $\vec{B}$ in the direction $\vec{V}$ int he
+direction a right handed screw would have from $\vec{V}$ to $\vec{B}$.}
+
+Applications: 
+
+\begin{itemize}
+\item focussing electron beams is cathod ray tubes. The Lorentz Force 
+enables one to have a television screen.
+
+\item particle accellerators.
+
+\item electric motors.
+\end{itemize}
+
+If we look at:
+
+\begin{eqnarray*}
+\vec{F} & = & q \vec{V} \times \vec{B} \\
+		  & = & q (L T^{-1}) \times \vec{B} \\
+		  & = & q T^{-1} \vec{L} \times \vec{B} \\
+		  & = & i(\vec{L} \times \vec{B})
+\end{eqnarray*}
+
+A conductor of length $l$, when placed in a magnetic field $\vec{B}$,
+experiences a force $i(\vec{L} \times \vec{B})$. The current through the
+conductor is $i(t)$, and it behaves like a charge moving at velocity
+$\vec{V}$.
+
+We want an expression for the torgue on a conductor carrying $i Amps$
+when it is placed in a magnetic field. Since torque is a mechanical
+quantity, we would then have an electric motor.
+
+\begin{table}[hbtp]
+
+\xy <1cm, 0cm>:
+(-2.0,0) *\txt{.} *+!RD{\vec{L}} ;
+(0.75,0) ; (-1.75,0) **\dir{-} *\dir{>} ?(0.5) *+!RU{\vec{F}} ;
+(0,-1.25) ; (0,-2.5) **\dir{-} *\dir{>} ;
+(0.75,0) ; (0.75,-2.5) **\dir{-} *\dir{>} ;
+(2,0) ; (2,-2.5) **\dir{-} *\dir{>} ?(0.5) *+!LC{\vec{B}} ;
+(3.5,0) ; (3.5,-2.5) **\dir{-} *\dir{>} ;
+(4.5,0) ; (4.5,-2.5) **\dir{-} *\dir{>} ;
+\endxy
+
+\end{table}
+
+\[ \vec{F} = i \vec{L} \times \vec{B} \]
+
+Suppose that the conductor has an area $A$, torque is force by
+perdindicular distance. If the distance is $x$, then the torque for the
+conductor is:
+
+\[ \vec{I} = i \vec{A} \times \vec{B} \]
+
+$\vec{A}$ is the vector area of the coil.
+
+A conductor of area $A$, carrying a conductor $i Amps$, when placed in a
+magnetic field $\vec{B}$, experienced a torque $i \vec{A} \times
+\vec{B}$.
+
+Furthermore, if the coil has $n$ turns, it % gap
+
+Applications:
+
+\begin{itemize}
+\item elementary $AC$ motor
+
+\item galvanometers
+
+\item virtually all analogue ammeters and voltometers
+\end{itemize}
+
+The torque is enourmous, depending on the motor.
+
+
+A coil, rotating in a magnetic field can act either as a motor or as a
+generator. Eg alternators (as used in cars) always incorporate a
+regulator, which is a voltage senstitive relay in order to ensure when
+the battery is charged, the alternator does not start to act as a motor.
+
+\section{Transmission Lines}
+
+Electromagnetic waves, when received on an antenna, have to be fed into
+a receiving device, such as a tv, by for example a coaxial cable. This
+is called a transmission line.
+
+\begin{table}[hbtp]
+
+Diagram - To Do
+
+\end{table}
+
+Such cables have inductance per unit length and capacitance per unit
+length.
+
+Capacitance per unit meter:
+
+\[ \frac{2 \pi \epsilon_{0}}{\log{\frac{b}{a}}} \]
+
+\[ \epsilon_{0} = \frac{1}{36 \pi} \times 10^{-9} F / m \]
+
+$\epsilon_{0}$ is the permeability of free space.
+
+Inductance per unti length:
+
+\[ L = \frac{\mu_{0}}{2 \pi} \log{\frac{b}{a}} \]
+
+$\mu_{0}$ is the inductance per unit length of free space.
+
+\begin{eqnarray*}
+\mu_{0} & = & 4 \pi \times 10^{-7} H / m \\
+\epsilon_{0} \mu_{0} & = & \frac{1}{C^{2}} \\
+C & = & 3 \times 10^{8} m / s \\
+\end{eqnarray*}
+
+Light is propogated in free space at $3 \times 10^{8} m / s$ ($186$ $miles
+/sec$). Eg The sun is $93$ $million$ $miles$ from the Earth, so light takes
+$9$ $minutes$ to reach us.
+
+% 2004-02-26 - Tutorial Missing
+
+% 2004-03-01
+
+\begin{eqnarray*}
+\frac{\delta^{2} v}{\delta x^{2}} & = & L C \frac{\delta^{2} V (n,t)}{\delta t^{2}} \\
+\frac{\delta^{2} i}{\delta x^{2}} & = & L C \frac{\delta^{2} i(x,t)}{\delta t^{2}} \\
+C & = & \frac{1}{\sqrt{LC}} \\
+\frac{e}{L} & = & \frac{2 \pi \epsilon_{0}}{\ln{\frac{b}{a}}} \\
+\frac{L}{e} & = & \frac{\mu_{0}}{2 \pi} \ln{\frac{b}{a}} \\
+V & = & \frac{1}{\sqrt{\epsilon_{0} \mu_{0}}} \\
+  & = & 3 \times 10^{8} m s^{-1}
+\end{eqnarray*}
+
+
+The velocity of propogation of a magnetic wave on a transmission line is
+
+\begin{table}[hbtp]
+
+\xy <1cm, 0cm>:
+{\ellipse(0.5){}}
+{\ellipse(){}}
+%0 ; (3.5,2.5) *+!UR{$\mu$} **\dir{-} ;
+%0 ; (-1.5,-2.5) *+!DL{$\epsilon$} **\dir{-} ,
+\endxy
+
+\end{table}
+
+If we fill the space between the conductors with relative permeability
+$\mu$ and $\epsilon$ % gap
+
+The product:
+
+\begin{eqnarray*}
+LC & \to & \frac{1}{\sqrt{\epsilon \mu \epsilon_{0} \mu_{0}}} \\
+	& = & \frac{C_{LIGHT}}{\sqrt{\epsilon \mu}}
+\end{eqnarray*}
+
+So the electromagnetic waves get slowed down in a material medium.
+
+Eg: Water
+
+\begin{eqnarray*}
+C_{L} & = & \frac{1}{N \sqrt{\epsilon_{0} \mu_{0}}} \\
+		& = & \frac{3 \times 10^{8}}{\sqrt{80.1}}
+\end{eqnarray*}
+
+Application: can be a delay line
+
+\subsection{Characteristic Impedence}
+
+\[ Z_{0} = \frac{L}{C} \]
+
+It's the voltage and the current.
+
+
+Unlike the velocity of propogation, it depends on the geometry of the
+line.
+
+\begin{eqnarray*}
+\sqrt{\frac{L}{C}} & = & 
+\frac{1}{2 \pi}\sqrt{\frac{\mu_{0}}{\epsilon_{0}}} \ln{\frac{b}{a}} \\
+\frac{\delta^{2} v}{\delta x^{2}} & = & 
+\frac{1}{V^{2}} \frac{\delta^{2}v}{\delta t^{2}} \\
+v(x,t) & = & f (x - Vt) + g(x + Vt)
+\end{eqnarray*}
+
+The solution consists of a wave travelling on the positive $x$ axis and
+a wave travellign on the negative $x$ axis.
+
+Eg: tides or incident waves on a seashore.
+
+The wave equation, being a physical law, must contain this fact.
+
+\begin{eqnarray*}
+A \sin{\left(\omega t - \frac{x}{V}\right)} & & \\
+\Phi & = & \omega (t - \frac{x}{V}) \\
+V & = & \lambda f \\
+A \sin{\left( \omega t - \frac{\omega x}{V} \right)} & = & 
+A \sin{\left( \omega t - \frac{2 \pi f x}{V} \right)} \\
+& = & A \sin{\left( \omega t - \frac{2 \pi f(x)}{x f} \right)} \\
+& = & A \sin{(\omega t - k x)} \\
+k & = & \frac{2 \pi}{\lambda}
+\end{eqnarray*}
+
+$k$ is the wave number (phase change). Units are meters.
+
+Sinusiodal Wave:
+
+\begin{eqnarray*}
+A \sin{\left( \omega t \pm kx \right)} & & \\
+y_{1} (n, t) & = & A \sin{\left( \omega t - k n \right)} \\
+y_{2} (x, t) & = & A \sin{\left( \omega t + k x \right)} \\
+& = & 2 A \sin{ \left( \frac{1}{2} \left[ \omega t - k x + \omega t + k x
+\right] \right)} \cos{\left( \frac{1}{2} \left[ \omega t - k x - (\omega
+t + k x) \right] \right)} \\
+& = & 2 A \sin{(\omega t)} \cos{(- k x)} \\
+& = & 2 A \sin{(\omega t)} \cos{(k x)}
+\end{eqnarray*}
+
+% Double check the 7 paragraphs below.
+
+It's not like $ f(x \pm Vt)$. $A$ is not a travelling wave. It's called
+a standing wave.
+
+Discharges from a $V$ notch.
+
+If you add two wave, with the same amplitude, a standing wave will be
+setup.
+
+A standing wave will occur on any place on a transmission line.
+
+In acoustics, standing waves occur whenever a guitar or violin string
+are plucked, because a wave will travel down to where it is connected
+and be reflective.
+
+In electrical enginering and communications, we are interested in the
+velocity of propogation.
+
+In amplitude propogation for example, an audio frequency is superimposed
+onto a high frequewncy $AC$  signal.
+
+\begin{eqnarray*}
+y_{1} (n, t) & = & A \sin{\left( \omega t - k n \right)} \\
+y_{2} (n, t) & = & A \sin{\left( \omega' t - k' x \right)} \\
+2 \pi f_{1} & = & \omega \\
+f_{1} & = &  200 kHz \\
+f_{2} & = & 205kHz \\
+y_{1} + y_{2} & = & 2 A \sin{\left( \frac{1}{2} \left[ \omega t - kx +
+\omega' t - k' x\right] \right)} \cos{ \left( \frac{1}{2} \left[ \omega
+t - \omega' t \right] x \right)} \\
+& = & 2 A \sin{\left[ \frac{( \omega + \omega'}{2} - \frac{(k + k')}{2}
+\right]} \cos{\left( \frac{x}{2} \left[ \omega - \omega' \right]
+\right)} \\
+(\omega - \omega') & \to & \delta \omega \\
+(k' - k) & \to & \Delta K
+\end{eqnarray*}
+
+Sensible get
+
+\begin{eqnarray*}
+2 A \sin{\left( \omega t - k x \right)} \cos{\left( \frac{ \Delta \omega
+t}{2} - \frac{\Delta k v}{2} \right)} \\
+2 A \cos{ \left( \frac{\Delta \omega t}{2} - \frac{\Delta k x}{2}
+\right)} \sin{\left( \omega t - k x \right)} \\
+2 A \cos{\left( \frac{\Delta \omega t}{2} - \frac{\Delta kx}{2} \right)}
+\sin{\left( \omega t - k x \right)} \\
+& = & \Delta (\varphi) 5000 Hz
+\end{eqnarray*}
+
+You get back your original wave, however the amplitude of the original
+character varies slowly.
+
+\begin{eqnarray*}
+U & = & \frac{\Delta \omega}{\Delta k}, \frac{ d \omega}{d k} \\
+V & = & \frac{\omega}{k} \\
+  & = & \frac{2 \pi f}{2 \pi} \\
+  & = & \lambda f
+\end{eqnarray*}
+
+The information is the modular carrier.
+
+The information is propogated by $\frac{d }{d }$. This is group
+velocity.
+
+You need a detector to remove the carrier wave.
+
+% 2004-03-03
+
+\begin{eqnarray*}
+y & = & y_{1} + y_{2} \\
+y(x, t) & = & 2 A \sin{\left( \omega t - k x \right)} \cos{\left(
+\frac{\Delta k}{2} x - \frac{\Delta \omega t}{2} \right)} \\
+\omega t - kx & & \\
+\omega' t - k' x & & \\
+\frac{\omega - \omega'}{2} & &
+\end{eqnarray*}
+
+\begin{table}[hbtp]
+
+%\begin{pspicture}
+%\psset{xunit=1cm,yunit=1cm}
+%\psset{plotpoints=50}
+%\psplot{0}{360}{x sin}
+%\psaxes(0,0)(-1.5,1.5)
+%\end{pspicture}
+
+Graph - To Do
+
+\end{table}
+
+\begin{table}[hbtp]
+
+Graph - To Do
+
+\end{table}
+
+This is what happens when you have a high frequency carrier wave,
+superimposed on which is a wave of the same frequency ($205 kHz$),
+arising from the modulation of the carrier wave by voice frequencies.
+
+Suppose you add up the disturbances of $202 - 205$.
+
+$205$ will be $\omega'4$ and have the wave number $k'$.
+
+\begin{eqnarray*}
+\omega - \omega' & \mbox{is} & \mbox{small} \\
+k - k' & \mbox{is} & \mbox{small} \\
+\Delta k & &
+\end{eqnarray*}
+
+Then the composite disturbance looks like that shown. The red curve is
+original carrier wave of frequency $\omega$ and wave number $k$. The
+black curve is the slowlyvarying amplitude which varies in cosine
+fashion with angular frequency $\Delta \frac{\omega}{2}$ and wave number
+$\Delta k$.
+
+The frequency of the envelope is very low and it is the frequency of the
+information which is superimposed on the carrier. In radio engineering,
+the purpose of a detector is to rectify the carrier wave, turning it
+into perfect $DC$ current, so as to receive the low frequency
+information only. This is achieved using a diode.
+
+\[ \mu = \frac{\Delta \omega}{\Delta k} = \frac{d \omega}{d k} \]
+
+\subsection{Group Velocity}
+
+Group velocity is the velocity of transmission of information. The 
+removal of the carrier is the reason you need a detector in radio
+engineering.
+
+\section{Exam Topics}
+
+\begin{itemize}
+
+\item Impedence caclulations of series and parallel $RLC$ circuits.
+Various properties of $RLC$ circuits (acceptor/rejector circuits),
+calculate impedence at resonance, etc...
+
+\item Ideal transformers, elementory generators, elementory electric
+motors (using Lorentz Force).
+
+\item $RMS$ values of various comp[lex $AC$ voltages and currents.
+Derive the mean power expression in an $AC$ circuit.
+
+\item Three phase circuits (see handout). Show interesting property of a
+three phase circuit (no integrgals of negative instantaneous power,
+unlike in a singe phase circuit).
+
+\item Transience in circuits. What happens when a battery is suddenly
+applied and suddenly removed. Derive expressions for rise and decay
+transients for $LR$ and $CR$ circuits.
+
+\item Loseless transmission line. Define the important quality known as
+characteristic impedence and to appreciate the fact that characteristic
+impedence depends on the geometry of the line. while, on the other hand,
+the velocity of propogation does not depend on upon the geometry, but
+only on the relative premeability and the relative premeability of the
+material between the conductors.
+
+\item Ability to derive the wave equation of the voltage and current at
+any point $x$ on the line at time $t$. Ability to explain what a
+standing wave is and also be able to explain group velocity and it's
+importance in the transmission of information.
+
+\end{itemize}
+
+\end{document}

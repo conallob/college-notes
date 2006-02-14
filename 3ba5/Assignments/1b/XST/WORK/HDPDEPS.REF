@@ -1,0 +1,18 @@
+V1 13
+FL f:/1b/float_exp_adder.vhdl 2005/01/26.15:32:48
+FL F:/1b/float_exp_adder.vhdl 2005/01/26.20:54:12
+EN work/FLOAT_EXP_ADDER FL F:/1b/float_exp_adder.vhdl PB ieee/STD_LOGIC_1164 \
+      PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/FLOAT_EXP_ADDER/BEHAVIORAL FL F:/1b/float_exp_adder.vhdl \
+      EN work/FLOAT_EXP_ADDER
+FL f:/1b/float_adder.vhdl 2005/01/26.10:05:14
+FL F:/1b/barrel_shifter_32bit.vhdl 2005/01/26.06:56:10
+FL f:/1b/barrel_shifter_32bit.vhdl 2005/01/26.07:56:10
+EN work/BARREL_SHIFTER_32BIT FL f:/1b/barrel_shifter_32bit.vhdl \
+      PB ieee/STD_LOGIC_1164 PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/BARREL_SHIFTER_32BIT/BEHAVIORAL FL f:/1b/barrel_shifter_32bit.vhdl \
+      EN work/BARREL_SHIFTER_32BIT
+FL F:/1b/float_adder.vhdl 2005/01/26.14:13:46
+EN work/FLOAT_ADDER     FL F:/1b/float_adder.vhdl PB ieee/STD_LOGIC_1164 \
+      PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/FLOAT_ADDER/BEHAVIORAL FL F:/1b/float_adder.vhdl EN work/FLOAT_ADDER

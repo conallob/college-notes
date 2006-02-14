@@ -1,0 +1,105 @@
+Gal2.pds
+
+PALASM4  PARSER   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+
+                    ***********************************
+                    *     PALASM PARSER LISTING       *
+                    ***********************************
+
+LINE #   |----+----1----+----2----+----3----+----4----+----5----+----6----+
+   1     |;PALASM Design Description
+   2     |
+   3     |;---------------------------------- Declaration Segment ------------
+   4     |TITLE    Gal2
+   5     |PATTERN  2BA4 - Group 15
+   6     |REVISION 1.1
+   7     |AUTHOR   Conall O'Brien
+   8     |COMPANY  
+   9     |DATE     12/02/04
+  10     |
+  11     |CHIP  _gal1  PAL22V10
+  12     |
+  13     |;---------------------------------- PIN Declarations ---------------
+  14     |PIN  24         VCC                                              ;    INPUT   
+  15     |PIN  12         GND                                              ;    INPUT   
+  16     |PIN  1          A19                                              ;    INPUT
+  17     |PIN  2          A18                                              ;    INPUT   
+  18     |PIN  3          A17                                              ;    INPUT
+  19     |PIN  4          A16                                              ;    INPUT
+  20     |PIN  5          A15                                              ;    INPUT
+  21     |PIN  6          A14                                              ;    INPUT
+  22     |PIN  7          A13                                              ;    INPUT
+  23     |PIN  8          A12                                              ;    INPUT
+  24     |PIN  9          A11                                              ;    INPUT
+  25     |PIN  10         AS                                               ;    OUTPUT
+  26     |PIN  11         VAC                                              ;    OUTPUT
+  27     |PIN  19         ROM                                              ;    OUTPUT
+  28     |PIN  21         RAM1                                             ;    OUTPUT
+  29     |PIN  20         RAM2                                             ;    OUTPUT
+  30     |PIN  16         IO1                                              ;    OUTPUT
+  31     |PIN  17         IO2                                              ;    OUTPUT
+  32     |PIN  18         DTACK                                            ;    OUTPUT
+  33     |PIN  14         IOSEL                                            ;    OUTPUT
+  34     |
+  35     |
+  36     |;----------------------------------- Boolean Equation Segment ------
+  37     |EQUATIONS
+  38     |
+  39     |/ROM = /AS * /A19 * /A18 * /A17 * /A16 * /A15 * /A14 * /A13 * VAC
+  40     |/RAM1 = /AS * /A19 * /A18 * /A17 * /A16 * /A15 * A14 * /A13 * /A11 * VAC
+  41     |/RAM2 = /AS * /A19 */A18 * /A17 * /A16 * /A15 * A14 * /A13 * A11 * VAC
+  42     |/IO1 = /AS * /A19 * /A18 * /A17 * /A16 * A15 * A14 * /A13 * VAC
+  43     |/IO2 = /AS * /A19 * /A18 * /A17 * A16 * /A15 * A14 * /A13 * VAC
+  44     |DTACK = ROM * RAM1 * RAM2
+  45     |IOSEL = IO1 + IO2
+  46     |
+  47     |;----------------------------------- Simulation Segment ------------
+  48     |SIMULATION
+  49     |
+  50     |;-------------------------------------------------------------------
+  51     |
+  52     |
+
+ %% PARSE %%    No errors.  No warnings.
+
+ %% PARSE %%    File processed successfully.    File:  Gal2.pds
+PALASM4  MINIMIZE   - MARKET RELEASE 1.5 (7-10-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+.......
+
+
+Processing equation ====> /RAM1               MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /RAM2               MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /ROM                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> DTACK               MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /IO2                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /IO1                MINIMIZE_ON  (1 pt ---> 1 pt)
+Processing equation ====> /IOSEL              MINIMIZE_ON  (2 pt ---> 1 pt)
+
+ %%  MINIMIZE  %% Maximum memory allocated was: 6364 bytes.
+
+ %%  MINIMIZE  %% File Processed Successfully.  File: Gal2.pds.
+ %%  MINIMIZE  %% ERROR count: 0  WARNING count: 0
+
+PALASM4  PAL ASSEMBLER   - MARKET RELEASE 1.5a (8-20-92)
+ (C) - COPYRIGHT ADVANCED MICRO DEVICES INC., 1992
+
+FILE  Gal2.pds
+TITLE  Gal2
+Equation being processed for output ==>> /IOSEL
+Equation being processed for output ==>> /IO1
+Equation being processed for output ==>> /IO2
+Equation being processed for output ==>>  DTACK
+Equation being processed for output ==>> /ROM
+Equation being processed for output ==>> /RAM2
+Equation being processed for output ==>> /RAM1
+The fuse plot is stored in ===>Gal2.XPT
+The JEDEC is stored in ===>Gal2.JED
+
+ %%  PAL ASSEMBLER  %% Maximum memory allocated was: 11470 bytes.
+
+ %%  PAL ASSEMBLER  %% File Processed Successfully.  File: Gal2.pds.
+ %%  PAL ASSEMBLER  %% ERROR count: 0  WARNING count: 0

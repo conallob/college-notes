@@ -1,0 +1,72 @@
+Random, disorganised thoughts about oi:
+
+All messages get delivered by oi.deliver (or maybe oi.mail, haven't decided).
+oi.deliver will be persistent - there'll only be one of them per client process,
+it'll handle both lookup and deliveries, making the delivery process (local or
+remote) transparent to the client.  I'm planning an SMTP like protocol for all
+communications.
+
+I want to read .oirc, or fallback to .heyrc.  That'll mean fiddliness with the
+parser, but it'll be worth it for backwards compatibility.  *ALL* settings will
+be per-recipient - I can't think of anything that shouldn't be.  In the config
+file there'll be global settings, which all have default values, and
+per-recipient settings.  Per-recipient settings inherit immediately from global
+settings and can be over-ridden; they don't inherit from later global settings -
+too confusing.  The config file format needs more work, and good documentation.
+Per-recipient settings are inherited once and once only, when 'recipient foo {'
+is parsed; changes to other settings (global, per-recipient eilsehwere) will not
+be inherited after this.  Multiple instances of 'recipient foo {' will be
+allowed for any given recipient foo.  Per-recipient sections can be
+multi-recipient, e.g. 'recipient tobinjt ruaidhri wuzzle {', and the individual
+recipients inherit from global settings immediately.  Per-recipient sections can
+not be nested.  In 'recipient foo {', foo can be an alias.
+
+Should I provide an include facility?  I'll support multiple alternate config
+files, using them inhibits reading the default user config file.
+
+Groups?  Multi-recipient aliases?  Need a resolution order and an overriding
+order for everything . . .  Recursive aliases?  Would make groups more flexible
+and useful.  Groups could simply be multi-recipient aliases, and per-recipient
+sections could look for aliases first (probably useful anyway).  How about
+situatuions like 'alias kimmage = tobinjt, ruaidhri, diarmuid', 'alias ruaidhri
+= rspower' - does ruaidhri in the kimmage alias expand to rspower?  If so (I
+think it should), when do I do that?  How do I resolve per-recipient settings
+for both names?  Move one to the other, die if both have been defined?  Traverse
+the alias list when looking for per-recipient structs.
+
+I'm going to use glib all over the place, to avoid portability problems and
+take advantage of utility code.
+
+internal structures:
+
+hashtable of aliases, keyed by alias, value the array of aliases/usernames it
+expands to.  An alias without an entry is a username, making recursive lookups
+reasonable, as long as I have a temp hash to prevent loops.  Maybe I should have
+a struct, holding an expansion array, a filename and line number, for
+debugging/warning purposes?  Die on detecting infinite recursion.
+
+Global recipient struct for default values.
+
+hashtable of per-recipient structs, keyed by username (NOT alias).
+
+Nested per-recipient sections are out, so the config parser can use a global
+recipient struct and an array of per-recipient structs for the current
+per-recipient section.
+
+See recipient.h for struct recipient.
+
+UTF, I18N, L10N.  Do terminals support UTF yet?  What's the difference between
+I18N and L10N??
+
+config file example and parsing:
+set signature = "Soul of a New Machine"
+alias kimmage = ruaidhri, diarmuid, tobinjt
+recipient kimmage {
+	set automail = on;
+	set random sig file = "~/.oisigs"
+	set random sig = yes
+	recipient tobinjt {
+		set random sig = no;
+		set signature = "why am I oiing myself?"
+	}
+}

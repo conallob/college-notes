@@ -1,0 +1,9 @@
+[Inputs]
+v
+n
+z
+c
+=sel[2:0]=
+[Outputs]
+MUX_OUT
+[BiDir]

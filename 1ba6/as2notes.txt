@@ -1,0 +1,33 @@
+-IT and civil liberties
+
+Definitions:
+IT: the study or use of processes (especially computers, microelectronics, and telecommunications) for storing, retrieving, and sending information (e.g. words, numbers, pictures).
+
+Civil liberties: freedom of action and speech; basic rights of the individual
+
+Abstract: This essay is a brief examination and analysis of the ways in which IT can be used to both restrict and reinforce civil liberties. An extrapolation will be presented of the possible future interactions of techniques from both areas based on the current political climate.
+
+Restrictions:
+-Justifications: political justification based on public safety
+-Benefits of IT have moved most communications to digital format.
+-Easy to intercept / collect data
+-Internet provides a centralised data collection point - even phone data
+-Carnivore
+-Problems - data overload
+-Solution - intelligent agents / AI solutions/Data mining
+
+Reinforcements
+-Inherent openness of both internet standards and technology itself
+-Distributed nature of internet makes large scale monitoring problematic
+-Specific technology developed to route around monitoring - CDC thingy ....
+-Cryptography (big) ....
+
+Conclusion
+-interaction of both technologies
+-hiding amongst the noise - stenography
+-encryption vs intelligence gathering
+-quantum encryption / decryption
+-assuming no amazing nsa tech - pretty hopeless
+-most effective against individuals rather than organised groups - justifications not really valid
+
+

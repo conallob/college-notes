@@ -1,0 +1,81 @@
+add instance reg 1552 576 R0 -sn=1
+add instance reg 1552 896 R0 -sn=1
+add instance reg 1552 1216 R0 -sn=1
+add instance reg 1552 1536 R0 -sn=1
+add instance reg 1552 1856 R0 -sn=1
+add instance reg 1552 2176 R0 -sn=1
+add instance mux6to1 2544 752 R0 -sn=1
+add instance mux2to1 224 2224 R0 -sn=1
+add instance decoder 288 592 R0 -sn=1
+select figure at 440 2192 10 -branches -sn=1
+move instance at 224 2224 to 368 2208 R0 -keepConn -sn=1
+select figure at 416 2128 10 -sn=1
+select figure at 432 2096 10 -sn=1
+move instance at 368 2208 to 384 2208 R0 -keepConn -sn=1
+select figure at 913 2126 10 -branches -sn=1
+select figure at 913 2123 10 -branches -sn=1
+select figure at 645 2151 10 -branches -sn=1
+move instance at 384 2208 to 544 2224 R0 -keepConn -sn=1
+select figure at 551 529 10 -branches -sn=1
+move instance at 288 592 to 464 608 R0 -keepConn -sn=1
+add autowire 1552 352 1552 672 10 -sn=1
+add autowire 1536 672 1552 992 10 -sn=1
+add autowire 1536 992 1552 1312 10 -sn=1
+add autowire 1536 1312 1552 1632 10 -sn=1
+add autowire 1536 1632 1552 1952 10 -sn=1
+add autowire 2544 720 2192 160 10 -sn=1
+add iomarker 2192 160 10 Input -sn=1
+add autowire 1536 992 336 992 10 -sn=1
+add iomarker 336 992 10 Input -sn=1
+add autowire 464 512 480 992 10 -sn=1
+select figure at 480 888 10 -branches -sn=1
+move wire at 480 672 480 992 to 400 672 400 992 -keepConn -sn=1
+select figure at 569 871 10 -branches -sn=1
+add autowire 848 448 1552 544 10 -sn=1
+add autowire 1200 544 1552 864 10 -sn=1
+add autowire 1200 864 1552 1184 10 -sn=1
+add autowire 1200 1184 1552 1504 10 -sn=1
+add autowire 1200 1504 1552 1824 10 -sn=1
+add autowire 1200 1824 1552 2144 10 -sn=1
+add autowire 1408 544 1424 496 10 -sn=1
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+add autowire 1552 2144 928 2256 10 -sn=1
+add autowire 1232 2144 1552 1824 10 -sn=1
+add autowire 1552 1504 1232 1824 10 -sn=1
+add autowire 1552 1184 1232 1504 10 -sn=1
+add autowire 1552 864 1232 1184 10 -sn=1
+add autowire 1552 544 1232 864 10 -sn=1
+add autowire 1936 608 2544 784 10 -sn=1
+add autowire 1936 928 2544 848 10 -sn=1
+add autowire 1936 1248 2544 912 10 -sn=1
+add autowire 1936 1568 2544 976 10 -sn=1
+add autowire 1936 1888 2544 1040 10 -sn=1
+add autowire 1936 2208 2544 1104 10 -sn=1
+add autowire 2928 784 544 2320 10 -sn=1
+add autowire 544 2256 208 2256 10 -sn=1
+add iomarker 208 2256 10 Input -sn=1
+add autowire 848 448 1552 480 10 -sn=1
+select figure at 713 501 10 -branches -sn=1
+move instance at 464 608 to 464 640 R0 -keepConn -sn=1
+select figure at 1094 587 10 -branches -sn=1
+select figure at 1094 587 10 -branches -sn=1
+select figure at 1560 480 10 -branches -sn=1
+select figure at 1552 480 10 -sn=1
+select figure at 1491 478 10 -branches -sn=1
+select figure at 1552 473 10 -branches -sn=1
+select figure at 1248 483 10 -branches -sn=1
+select figure at 756 473 10 -branches -sn=1
+select figure at 832 480 10 -sn=1
+select figure at 942 468 10 -branches -sn=1
+select figure at 942 468 10 -branches -sn=1
+select figure at 888 2063 10 -branches -sn=1
+select figure at 880 2064 10 -sn=1
+select figure at 263 985 10 -branches -sn=1
+select figure at 354 987 10 -branches -sn=1
+delete selection -sn=1

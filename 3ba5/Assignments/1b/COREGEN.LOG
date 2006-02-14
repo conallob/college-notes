@@ -1,0 +1,21 @@
+# Xilinx CORE Generator 6.2i
+# User = cgobrien
+Initializing default project...
+Loading plug-ins...
+All runtime messages will be recorded in F:\1b\coregen.log
+# busformat=BusFormatAngleBracketNotRipped
+# designflow=VHDL
+# expandedprojectpath=F:\1b
+# flowvendor=Foundation_iSE
+# formalverification=None
+# simulationoutputproducts=VHDL
+# xilinxfamily=Virtex2
+# outputoption=DesignFlow
+# overwritefiles=Default
+# simvendor=ModelSim
+# expandedprojectpath=F:\1b
+SETPROJECT .
+Set current Project to F:\1b
+SET BusFormat = BusFormatAngleBracketNotRipped
+SETXIPCPORTHOST 2229
+XIPCPJSENDCORES virtex2

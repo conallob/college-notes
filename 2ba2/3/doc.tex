@@ -1,0 +1,96 @@
+% $Id: doc.tex,v 1.1 2004/03/05 13:11:18 conall Exp $
+
+\documentclass[a4paper,12pt]{article}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{2BA2: \\ Programming Techniques \\ Assignment III \\ Knight's Journey}
+
+\author{Conall O'Brien \\ \\ 01734351 \\ \\ conall@conall.net}
+
+\maketitle
+
+\pagebreak
+
+\section{Knight's Journey}
+
+My implementaion relys heavily upon the code provided in the lecture
+notes for a Knight's Tour. Apart from simple syntactic conversions into
+SmartEiffel, I will explain and changes I made to each of the following
+functions.
+
+\subsection{init\_moves}
+
+No changes made to this function. It simply generates two arrays
+containing every permutation of the appropriate offsets to represent 
+the movement of a Knight in all eight directions.
+
+\subsection{try\_all(k, x,y : INTEGER)}
+
+I took the the supplied version of this function and adapted it slightly
+when it decides if a journey has been found. My version includes a check
+to see that move no $m \times n$, the final move the knight can make is
+in the specified finishing position. If it is, a Knight's journey has
+been found, else not.
+
+\subsection{acceptable(s,t : INTEGER):BOOLEAN}
+
+No changes from the supplied source code.
+
+\subsection{display\_board is}
+
+No changes from the supplied source code.
+
+\subsection{Sample Output}
+
+\emph{nice ./specific-knight 6 6 1 1 3 2} \\
+
+Knights Journey is given by \\
+
+1 8 5 20 3 10 \\
+6 19 2 9 30 21 \\
+15 36 7 4 11 32 \\
+18 25 16 31 22 29 \\
+35 14 27 24 33 12 \\
+26 17 34 13 28 23 \\
+ 
+\section{Paraberry Knight's Tour}
+
+For this proglem, I've adapted my implmentation of a Knight's Journey
+from a start point to a destination point. Instead of asking the user
+for starting and finishing coordinates, it instead just asks for grid
+dimensions which must be even.
+
+
+It then calculates each of the four smaller tours, transferring them
+into the master array for the final tour.
+
+\subsection{init\_moves}
+
+No changes from the supplied source code.
+
+\subsection{try\_all(k, x,y : INTEGER)}
+
+I adapted my implementation of this function to only generate a tour
+using the generic start and end coordinates required for a Paraberry
+Tour. Once each tour has been generated, it's transferred from the 3D
+array used to represent the the minature board into the corresponding 
+quadrant of the large 2D array representing the full board, 
+
+\subsection{acceptable(s,t : INTEGER):BOOLEAN}
+
+No changes from the supplied source code.
+
+\subsection{display\_board is}
+
+No changes from the supplied source code.
+
+\subsection{Sample Output}
+
+Due to the estimated running time of this program for an $12 x 12$ grid,
+I was unable to supply sample output in time for submission.
+
+\end{document}

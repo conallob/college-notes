@@ -1,0 +1,16 @@
+ISE Auto-Make Log File
+-----------------------
+
+Updating: Synthesize
+
+Starting: 'exewrap @__6to1mux_2epf_exewrap.rsp'
+
+
+Creating TCL Process
+Done: completed successfully.
+
+Starting: 'expresscli 6to1mux.epfx'
+
+
+Unable to obtain a license for FPGA Express
+Done: failed with exit code: 65535.

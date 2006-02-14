@@ -1,0 +1,108 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\ $23^{th}$ November 2004}
+
+\maketitle
+
+$\langle STATEMENT \rangle \to$ $IF$ $\langle C \rangle$ $THEN$ $\langle STATEMENT \rangle$
+
+
+\begin{table}[hbtp]
+
+\xy <1cm,0cm>:
+(5,0) *+!DC{IF} ; (5,-0.75) **\dir{-} *\dir{>} *+!UC{EVALUATE \langle C \rangle} ;
+(5,-1.25) ; (5,-2) **\dir{-} *\dir{>} *+!UC{?\mbox{ }TRUE} , 
+(5,-2.5) ; (5,-3.25) **\dir{-} *\dir{>} *+!LD{YES} *+!UC{EXECUTE} ?(1.6) *+!UC{\langle STATEMENT \rangle} ,
+(5,-4.25) ; (5,-5) **\dir{-} *\dir{>} ,
+(4.25,-2.25) ; (2,-2.25) **\dir{-} ;
+(2,-4.75) **\dir{-} *+!RD{NO} ;
+(4.75,-4.75) **\dir{-} *\dir{>} ,
+%
+(10,1) ; (10,-7) **\dir{-} ,
+%
+(15,0) *+!DC{\langle C \rangle} ; (15,-0.75) **\dir{-} *\dir{>} *+!UC{\actionsym{JUMPF}} ;
+(15,-1.25) ; (15,-2) **\dir{-} *\dir{>} *+!UC{\langle STATEMENT \rangle } ; 
+(15,-2.5) ; (15,-3.25) **\dir{-} *\dir{>} *+!UC{\actionsym{LABEL}} ; 
+(15,-3.75) ; (15,-4.5) **\dir{-} *\dir{>} ,
+(16.15,-1) ; (17,-1) **\dir{--} ;
+(17,-3.5) **\dir{--} ;
+(16,-3.5) **\dir{--} *\dir{>}
+\endxy
+
+\end{table}
+
+
+$\langle START \rangle \to$ $IF$ $\langle C \rangle_{\synth{p}}$
+$\actionsym{JUMPF}_{\synth{qr}}$ $THEN$ $\langle START \rangle$
+$\actionsym{LABEL}$
+
+$\synth{v \leftarrow p}$ \\
+$(\synth{r, s}) \synth{\leftarrow NEWL}$
+
+Where $\langle C \rangle_{\synth{p}}$ synthesizes $\synth{p}$, all
+action symbol attributes are inherited and $\synth{NEW L}$ allocates a
+new symbol table entry for a $\actionsym{LABEL}$.
+
+$\actionsym{JUMPF}_{synth{p, q}}$ - \\
+$\actionsym{LABEL}_{\synth{p}}$
+
+$REPEAT \\
+\mbox{\hspace{15mm}} \leftarrow \\
+\vdots \\
+UNTIL \\
+? \mbox{\hspace{10mm}} \rightarrow \uparrow $
+
+
+$IF$ $\langle C \rangle$ $?$ $THEN$ $\langle STATEMENT \rangle \cdots \\
+\mbox{\hspace{14mm}} \mid \hspace{50mm} \uparrow \\
+\mbox{\hspace{14mm}} \overrightarrow{\mbox{\hspace{54mm}}} 
+$
+
+$\cdots \\
+\cdots \\
+\langle C \rangle \\
+BCF \cdots \\
+\cdots \\
+\cdots \\
+\cdots \\
+\langle STATEMENT \rangle \\
+\cdots \\
+\cdots \\
+\\
+AEC 8 \to$
+
+
+\begin{tabular}{r|c|l}
+							&					&				\\
+							&					&				\\
+$\synth{NEW L} \to$	&	$0000000$	&	$AFA0$	\\
+							&					&				\\
+\end{tabular}
+
+Symbol Table
+
+
+\section*{Excercises:}
+
+$\langle STATEMENT \rangle$ $\to$ $WHILE$ $\langle C \rangle$ $DO$ $\langle STATEMENT \rangle$
+
+$\langle STATEMENT \rangle$ $\to$ $IF$ $\langle C \rangle$ $THEN$
+$\langle STATEMENT \rangle$ $ELSE$ $\langle STATEMENT \rangle$
+
+\end{document}

@@ -1,0 +1,101 @@
+-- F:\3BA5\ASSIGNMENTS\1A
+-- VHDL Annotation Test Bench created by
+-- HDL Bencher 6.1i
+-- Thu Dec 09 17:25:04 2004
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY or_gate_tb IS
+END or_gate_tb;
+
+ARCHITECTURE testbench_arch OF or_gate_tb IS
+-- If you get a compiler error on the following line,
+-- from the menu do Options->Configuration select VHDL 87
+FILE RESULTS: TEXT OPEN WRITE_MODE IS "f:\3ba5\assignments\1a\or_gate_tb.ano";
+	COMPONENT or_inv_gate
+		PORT (
+			a : In  std_logic;
+			b : In  std_logic;
+			output : Out  std_logic
+		);
+	END COMPONENT;
+
+	SIGNAL a : std_logic;
+	SIGNAL b : std_logic;
+	SIGNAL output : std_logic;
+
+BEGIN
+	UUT : or_inv_gate
+	PORT MAP (
+		a => a,
+		b => b,
+		output => output
+	);
+
+	PROCESS -- Annotate outputs process
+		VARIABLE TX_TIME : INTEGER :=0;
+
+		PROCEDURE ANNOTATE_output(
+			TX_TIME : INTEGER
+		) IS
+			VARIABLE TX_STR : String(1 to 4096);
+			VARIABLE TX_LOC : LINE;
+		BEGIN
+			STD.TEXTIO.write(TX_LOC,string'("Annotate["));
+			STD.TEXTIO.write(TX_LOC, TX_TIME);
+			STD.TEXTIO.write(TX_LOC,string'(",output,"));
+			IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, output);
+			STD.TEXTIO.write(TX_LOC, string'("]"));
+			TX_STR(TX_LOC.all'range) := TX_LOC.all;
+			STD.TEXTIO.writeline(results, TX_LOC);
+			STD.TEXTIO.Deallocate(TX_LOC);
+		END;
+
+	BEGIN
+		CHECK_LOOP : LOOP
+		WAIT FOR 1 ns;
+		TX_TIME := TX_TIME + 1;
+		ANNOTATE_output(TX_TIME);
+		WAIT FOR 1 ns;
+		TX_TIME := TX_TIME + 1;
+		END LOOP CHECK_LOOP;
+	END PROCESS;
+
+	PROCESS
+		VARIABLE TX_OUT : LINE;
+
+		BEGIN
+		-- --------------------
+		a <= transport '0';
+		b <= transport '0';
+		-- --------------------
+		WAIT FOR 2 ns; -- Time=2 ns
+		b <= transport '1';
+		-- --------------------
+		WAIT FOR 2 ns; -- Time=4 ns
+		a <= transport '1';
+		b <= transport '0';
+		-- --------------------
+		WAIT FOR 2 ns; -- Time=6 ns
+		b <= transport '1';
+		-- --------------------
+		WAIT FOR 3 ns; -- Time=9 ns
+		-- --------------------
+
+		STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+		STD.TEXTIO.writeline(results, TX_OUT);
+		ASSERT (FALSE) REPORT
+			"Success! Simulation for annotation completed"
+			SEVERITY FAILURE;
+	END PROCESS;
+END testbench_arch;
+
+CONFIGURATION or_inv_gate_cfg OF or_gate_tb IS
+	FOR testbench_arch
+	END FOR;
+END or_inv_gate_cfg;

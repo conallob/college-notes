@@ -1,0 +1,7 @@
+[Inputs]
+SEL
+=A[3:0]=
+=B[3:0]=
+[Outputs]
+=MUX_OUT[3:0]=
+[BiDir]

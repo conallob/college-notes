@@ -1,0 +1,17 @@
+          00000000                           1  INITSP		EQU	$0000
+          00000400                           2  LOOP		EQU	$0400
+          00000400                           3  INITPC		EQU	$0400
+                                             4  
+00000000                                     5  	ORG INITSP
+00000000  00000000                           6  	dc.l INITSP
+00000004  00000400                           7  	dc.l INITPC
+                                             8  
+00000400                                     9  	org LOOP
+                                            10  
+00000400  11FC 0002 4000                    11  	MOVE.B	#$02,$4000
+00000406  11F8 4000 4800                    12  	MOVE.B	$4000,$4800
+                                            13  
+0000040C  4EF8 0400                         14  	JMP LOOP
+
+No errors detected
+No warnings generated

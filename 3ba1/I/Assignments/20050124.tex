@@ -1,0 +1,176 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA1 - Part I -  Statistics \\ Assignment 1 \\ $24^{th}$ January 2005}
+
+\author{Conall O'Brien \\ conallob@maths.tcd.ie \\ 01734351}
+
+\maketitle
+
+\section{}
+
+\subsection*{(a)}
+
+$P(R) = \frac{0.51}{1} = 0.51$ (Calc)
+
+$P(E) = \frac{0.59}{1} = 0.59$ (Calc)
+
+$P(R \cap E) = \frac{0.28}{1} = 0.28$ (Calc)
+
+$\therefore R$ and $E$ are independant.
+
+$P(S|E) = \frac{P(S \cap E)}{P(E)}$
+
+$P(S \cap E) = \frac{0.23}{1}$ (Calc)
+
+$P(S|E) = \frac{0.23}{0.59} = 0.39$ (Calc)
+
+$P(S|R) = \frac{P(S \cap R)}{P(R)}$ (Calc)
+
+$P(S \cap R) = \frac{0.23}{1} = 0.23$ (Calc)
+
+$P(S|R) = \frac{0.23}{0.51} = 0.45$ (Calc)
+
+$P(E|R) = \frac{P(E \cap R)}{P(R)}$
+
+$P(E|R) = \frac{0.28}{0.51} = 0.55$ (Calc)
+
+$P(E|\overline{R}) = \frac{P(E \cap \overline{R})}{P(\overline{R})}$
+
+$P(E|\overline{R}) = \frac{0.31}{0.49} = 0.63$ (Calc)
+
+\subsection*{(b)}
+
+$P(\overline{S}) \times P(\overline{S}) \times P(\overline{S})$
+
+$\Rightarrow P(\overline{S}) = \frac{0.56}{1} = 0.56$ (Calc)
+
+$\Rightarrow 0.56 \times 0.56 \times 0.56 = 0.18$ (Calc)
+
+$P(\overline{S}) \times P(\overline{S}) \times P(\overline{S} \cap R)$
+
+$\Rightarrow P(\overline{S} \cap R) =  0.56$ (Calc)
+
+$\Rightarrow 0.56 \times 0.56 \times 0.28 = 0.08$ (Calc)
+
+\section{}
+
+$P(\overline{V}|D) = 0.9$
+
+$P(\overline{V}|\overline{D}) = 0.1$
+
+$P(\overline{R}|D) = 0.9$
+
+$P(\overline{R}|\overline{D}) = 0.03$
+
+$P(D) = 0.04$
+
+$\Rightarrow P(\overline{V}|D) = \frac{P(\overline{V} \cap D)}{P(D)} = 0.9$
+
+$\Rightarrow P(\overline{V} \cap D) = 0.9 \times 0.04$
+
+$\Rightarrow P(\overline{V}) - P(D) = 0.036$
+
+$\Rightarrow P(\overline{V}) = 0.04$
+
+$\Rightarrow P(D|\overline{V}) = \frac{P(D \cap
+\overline{V})}{P(\overline{V})} = 0$
+
+$P(\overline{R}|D) = \frac{P(\overline{R} \cap D)}{P(D)} = 0.9$
+
+$\Rightarrow (0.9) \times (0.04) = P(\overline{R}) - P(D)$
+
+$\Rightarrow 0.036 + 0.04 = P(\overline{R})$
+
+$\Rightarrow 0.04 = P(\overline{R})$
+
+$P(R) = 1 - P(\overline{R}) = 1 - 0.04 = 0.96$
+
+\section{}
+
+\subsection*{(a)}
+
+The Poisson distribution is a distribution of counts in a random
+scenario. It is a reasonable distribution to use in the circumstance due
+to the irregular, random patterns branches grown on trees forming knots 
+on timber.
+
+Poisson expression for:
+
+Grade A: 
+
+$x < 2$
+
+$=POISSON(1.9,\lambda,0)$ where $\lambda = 2$
+
+$\Rightarrow 0.270670566$
+
+Grade B: 
+
+$x < 5$
+
+$=POISSON(4.9,\lambda,0) \mbox{ where } \lambda = 2$
+
+$\Rightarrow 0.090223522$
+
+Grade C: 
+
+$> 5$
+
+$ =POISSON(5.1,\lambda,0) \mbox{ where } \lambda = 2$
+
+$\Rightarrow 0.036089409$
+
+\subsection*{(b)}
+
+\section{}
+
+\subsection*{(a)}
+
+Mean Lifetime of a type A monitor is $3$ years.
+
+$\exp{- \lambda x}$
+
+Probability of a monitor lasting $3$ years is $\exp{-1} \therefore 
+0.36787944117$ (Calc)
+
+Probability of a $1$ year old monitor lasting another $1$ year $= 
+\exp{- 0.3 x} = 0.71653131057$ (Calc)
+
+Innsuficient data given to determine the operation requirement of one or
+more monitors. Unable to calculate the probability of the maximum of $2$
+monitors being required for $3$ years continious use.
+
+\subsection*{(b)}
+
+The mean lifespan of a type B monitor is $16$ months.
+
+The probability of a type B monitor lasting $2$ years is $(0.6)^{2}(2)
+\exp{-(2)(2)} = 0.01318725999$ (Calc)
+
+The probability of a $1$ year old monitor lasting another year is $1 -
+\exp{-(0.6)(0.6)(2)} - (0.6)(0.6)(2) \exp{-(0.6)(0.6)(2)} = 1 -
+\exp{-0.72} - 0.72 \exp{0.72}$ 
+
+\section{}
+
+$\mu = 1000$
+
+$\omega^{2} = 900$
+
+\subsection*{(a)}
+
+The probability of a resistor with a resistance less than $975 \Omega$
+is $0.000443Â1$ (Calc)
+
+$P(\frac{965 - 1000}{30} \leq Z \leq \frac{975 - 1000}{30} = -
+\frac{7}{6} \leq Z \leq \frac{-5}{6}) = 0.00000009837299826606$ (Calc)
+
+\end{document}

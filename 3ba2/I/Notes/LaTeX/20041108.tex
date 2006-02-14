@@ -1,0 +1,146 @@
+% $Id: 20041018.tex 338 2004-10-27 12:48:06Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA2: Artificial Intellegence \\ Additional Lecture Notes \\ $8^{th}$ November 2004}
+
+\maketitle
+
+Sorting
+
+\begin{verbatim}
+
+quicksort(unsorted,sorted).
+
+[key-[payload]]
+
+[a-21,b-96,a-20,z-94]
+
+
+sort(unsorted,sorted) - merge identical terms
+
+keysort(unsortedkeyedlist, sortedkeyedlist).
+
+[key-payload, ...]
+
+\end{verbatim}
+
+No known \emph{trackable} solutions.
+
+No useful algorithms
+
+
+Heuristic - Rules of Thumb
+
+
+Programming in Prolog - Clockin \& Mellish
+
+
+Artificial Intelligence through(/in ?) Prolog - Neil C Rowe or Yoaw
+Shohan
+
+\begin{verbatim}
+
+move(a,b).
+move(b,c).
+move(b,n).
+move(b,m).
+move(c,d).
+move(c,i).
+move(d,e).
+move(f,g).
+move(g,c).
+move(g,m).
+move(h,i).
+move(i,j).
+move(i,m).
+move(i,p).
+move(j,d).
+move(j,e).
+move(k,g).
+move(k,h).
+move(k,l).
+move(l,h).
+move(m,n).
+move(n,i).
+move(n,o).
+move(o,e).
+
+
+% dfs(Target, ListOfStates).
+
+% Usage: specify target state and a list containing the starting state
+
+dfs(TargetState, [TargetState|_]). % finished
+
+dfs(T, [C|R]) :- findall(D, move(C,D), L),
+                 append(L, R, N),
+                 dfs(T, N).
+
+
+append([], X, X).
+
+append([H|T], R, [H|X]) :- append(T, R, X). 
+
+
+findall(X, move(a, X), L).
+
+bagof(
+
+setof(
+
+\end{verbatim}
+
+
+Breath First
+
+\begin{verbatim}
+
+% bfs(Target, ListOfStates).
+
+% Usage: specify target state and a list containing the starting state
+
+bfs(TargetState, [TargetState|_]). % finished
+
+bfs(T, [C|R]) :- findall(D, move(C,D), L),
+                 append(L, N, R),
+                 bfs(T, N).
+
+
+append([], X, X).
+
+append([H|T], R, [H|T]) :- append(T, R, X). 
+
+\end{verbatim}
+
+\begin{verbatim}
+
+% seach(TargetSeach, ListOfStates)
+
+search(TargetSearch, [TargetStates|_]). % finished
+
+serch(T, [C|R]) :- findall(Cost-D,move(C,D,Cost),L),
+                   keysort(L,sortedByCostMoves),
+						 key_list(SortedByCostmoves,Lc),
+                   append(Lc,R,N),
+                   search(T,N).
+
+
+key_list([],[]).
+
+key_list([_-H|X],[H|R]) :- key_list(X,R).
+
+
+append([],X,X).
+
+append([H|T],R,[H|X]) :- append(T,R,X).
+
+\end{verbatim}
+
+\end{document}

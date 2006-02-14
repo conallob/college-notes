@@ -1,0 +1,371 @@
+ % $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+\usepackage{multirow}
+\usepackage{pst-all}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+
+\newcommand{\actionsym}[1]{{\mbox{\color{Emerald}{\{$#1$\}}}}}
+
+\newcommand{\inherit}[1]{\mbox{{\color{NavyBlue}{$#1$}}}}
+
+\newcommand{\synth}[1]{\mbox{{\color{Maroon}{$#1$}}}}
+
+\newcommand{\yellowify}[1]{\mbox{{\color{Yellow}{$#1$}}}}
+
+\newcommand{\nonterminal}[1]{\langle #1 \rangle}
+
+\begin{document}
+
+\title{Course 3BA7: Compiler Design I \\ Additional Lecture Notes \\	$20^{th}$ January 2005}
+
+\maketitle
+
+\subsection{Code Generation}
+
+Translation of $\actionsym{ADD}_{p\txt{ }q\txt{ }r}$
+
+Machine with a single accumulator (register)
+
+
+\[ Z \gets (A + B) + (C + D); \]
+
+\begin{tabular}{lll}
+$\actionsym{ADD}_{\uparrow A, \uparrow B, \uparrow PR_{1}}$	&	\verb!LOAD A!	&	Atom 1	\\
+																				&	\verb!ADD B!	&	\\
+$\actionsym{ADD}_{\uparrow C, \uparrow D, \uparrow PR_{2}}$	&	\verb!STORE TEMP!	&	Atom 2	\\
+																				&	\verb!LOAD C!	&	\\
+																				&	\verb!ADD D!	&	\\
+$\actionsym{ADD}_{\uparrow PR_{1}, \uparrow PR_{2}, \uparrow PR_{3}}$	&	\verb!ADD TEMP!	&	Atom 3	\\
+$\actionsym{ASSIGN}_{\uparrow Z, \uparrow PR_{3}}$				&	\verb!STORE Z!	&	Atom 4	\\
+\end{tabular}
+
+\emph{Problem} is due to location of operands.
+
+\emph{Solution} - maintain at compile time, a runtime simulation showing
+the locations of the operands. Eg - in register, in memory or in both.
+
+
+Type of operands:
+
+$\actionsym{ADD}_{p\txt{ }q\txt{ }r}$
+
+\verb!TYPE! of $p$, $q$ both int.
+
+\subsubsection{Property of Operators}
+
+\[ Z \gets (A + B) - (C + D) \]
+
+
+\begin{tabular}{lll}
+$\actionsym{ADD}_{\uparrow A, \uparrow B, \uparrow PR_{1}}$	&	\verb!LOAD A!	&	\\
+																				&	\verb!ADD B!	&	\\
+																				& 	\verb!STORE TEMP!	&	\\
+																				&	\verb!LOAD C!	&	\\
+																				&	\verb!ADD D!	&	\\
+$\actionsym{ADD}_{\uparrow C, \uparrow D, \uparrow PR_{2}}$	&		&	\\
+$\actionsym{SUBTRACT}_{\uparrow PR_{1}, \uparrow PR_{2}, \uparrow PR_{3}}$				&	\verb!STORE Z!	&	\\
+\end{tabular}
+
+\subsubsection{Mode of Operations}
+
+Constant, Scalar, subscribed variable, information...
+
+
+If operand is parameter, it is passed by reference.
+
+
+\[ A + B [x + y] \]
+
+
+\begin{tabular}{lll}
+$\actionsym{ADD}_{\uparrow X, \uparrow Y, \uparrow PR_{1}}$	&	\verb!LOAD X!	&	\\
+																				&	\verb!ADD Y!	&	\\
+$\actionsym{SUBSCRIPT}_{\uparrow B, \uparrow PR_{1}, \uparrow PR_{2}}$	&
+\multirow{3}{50mm}{Produce code to compute address of subscripted variable}	&	$B[x + y]$\\
+																				&		&	\\
+																				&		&	\\
+$\actionsym{ADD}_{\uparrow A, \uparrow PA_{2}, \uparrow PR_{2}}$	&
+\multirow{4}{50mm}{Store temp \\ Load A \\ Add A \\ Add at Temp (Indirect Add)}	&	\\
+																				&		&	\\
+																				&		&	\\
+																				&		&	\\
+\end{tabular}
+
+$\actionsym{ADDOP}_{p\txt{ },q\txt{ },r\txt{ },s,} $	-	$+, -, OR$
+
+
+\subsubsection{Opcode Table}
+
+\begin{figure}[hb]
+
+\xy <1cm,0cm>:
+0 *=(1,1)\frm{-} , 
+(1,0) *=(1,1)\frm{-} , 
+(2,0) *=(1,1)\frm{-} , 
+0 ; (0,-3) **\dir{-} ;
+(3,-3) **\dir{-} *\dir{>} ;
+\POS (3.25,-3) *!CL{\txt{Mode Table}} ,
+(1,0) ; (1,-2) **\dir{-} ;
+(3,-2) **\dir{-} *\dir{>}  ,
+(2,0) ; (2,-1) **\dir{-} ;
+(3,-1) **\dir{-} *\dir{>} 
+\endxy
+
+\end{figure}
+
+\subsubsection{Mode Table}
+
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+R Right /  Q Left			&	Const	&	Scalar	&	Subscription Variable	&	Param	\\
+\hline
+Const							&	$\#1$	&				&									&			\\
+\hline
+Scalar						&			&	$\#2$		&									&			\\
+\hline
+Subscription Variable	&			&				&	$\#$							&			\\
+\hline
+Param							&			&				&									&	$\#$	\\
+\hline
+\end{tabular}
+
+$\#1$:	Perform at compile time. eg $\actionsym{ADDOP}_{ADD, 7, 5,\uparrow S}$ \\
+$\#1$:	$\downarrow$
+
+\subsubsection{Type Table}
+
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+R Right / \\ Q Left	&	Int		&	Real		&	Bool	\\
+\hline
+Int						&	$\#2_{1}$	&				&	ERROR	\\
+\hline
+Real						&	$\#2_{2}$	&	$\ast$	&	ERROR	\\
+\hline
+Bool						&	ERROR		&	ERROR		&	ERROR	\\
+\hline
+\end{tabular}
+
+$\ast$: $\actionsym{ADD}_{Q, R', S}$ \\
+$\#2_{2}$: Convert Int to Real ($R$, $R'$) \\
+$\#2_{1}$:	$\downarrow$
+
+\subsubsection{Location Table}
+
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+R Right / \\ Q Left	&	REG		&	MEM		&	BOTH	\\
+\hline
+REG						&	$\#2_{1_{1}}$	&	$\#2_{1_{2}}$	&			\\
+\hline
+MEM						&				&				&			\\
+\hline
+BOTH						&				&				&			\\
+\hline
+\end{tabular}
+
+$\#2_{1_{1}}$:  Generate ADDR instruction	\\
+$\#2_{1_{2}}$:	Generate ADD instruction
+
+
+and update symbol table.
+
+
+\subsection{Simple Register Management}
+
+Data structure and set of operations: \verb!GET!, \verb!LINK!,
+\verb!UNLINK! and \verb!CLEARALL!.
+
+\begin{tabular}{ll}
+$R_{0}$		&	\verb!FREE!	 \\
+$R_{1}$		&	$\to$ x		 \\
+$R_{2}$		&	\verb!FREE!	 \\
+$R_{3}$		&	$\to$ x		 \\
+$R_{4}$		&	$\to$ x		 \\
+$R_{5}$		&	\verb!FREE!	 \\
+$R_{6}$		&	\verb!FREE!	 \\
+$\vdots$		&					 \\
+$R_{n - 1}$	&	\verb!FREE!	 \\
+\end{tabular}
+
+x: PTRs to symbol table with back PTRs
+
+
+Divide code into basic blocks - minimal blocks with single entry point
+ending with branch instruction.
+
+\verb!CLEARALL! is called at start of basic block copies contents
+registers inro memory, updates symbol table entries and marks all
+registers as \verb!FREE!.
+
+\begin{figure}[ht]
+
+\xy <1cm,0cm>:
+0 *=(1,1)\frm{-} ="A",
+(3,0) *=(1,1)\frm{-} ="B",
+(1.5,-2) *=(1,1)\frm{-} ="C",
+\POS "A" !DR \ar ; "C" !UL , 
+\POS "B" !DL \ar ; "C" !UR , 
+\POS "C" !DC \ar ; +(0,-1) , 
+\endxy
+
+\end{figure}
+
+\verb!GET(R)!:
+
+Allocate a register:
+
+Therefore spill contents of register.
+
+Selection policy - LRU.
+
+\verb!LINK(R,P)!:
+
+\verb!UNLINK(R,P)!:
+
+$A * B + (C + D) * (E + F)$
+
+$N = 2$
+
+$\actionsym{MULT}_{\uparrow A, \uparrow B, \uparrow PR_{1}}$
+
+\begin{verbatim}
+CLEARALL
+
+GET  r0
+L    r0,A
+A    r0,B
+LINK (r0,PR1)
+\end{verbatim}
+
+$\actionsym{ADD}_{\uparrow C, \uparrow D, \uparrow PR_{2}}$
+
+\begin{verbatim}
+GET  r1
+L    r1,C
+A    r1,D
+LINK (r1,PR2)
+\end{verbatim}
+
+$\actionsym{ADD}_{\uparrow E, \uparrow F, \uparrow PR_{3}}$
+
+\begin{verbatim}
+GET  r0
+ST   r0,TEMP
+UPDATE SYMBOL TABLE ENTRY
+UNLINK (r0)
+L    r0,E
+A    r0,F
+LINK (r0,PR3)
+\end{verbatim}
+
+$\actionsym{MULT}_{\uparrow PR_{2}, \uparrow PR_{3}, \uparrow PR_{4}}$
+
+\begin{verbatim}
+MR   r0,r1
+UNLINK (r0)
+LINK (r0,PR4)
+\end{verbatim}
+
+$\actionsym{ADD}_{\uparrow PR_{1}, \uparrow PR_{4}, \uparrow PR_{5}}$
+
+\begin{verbatim}
+A    r1,TEMP
+UNLINK (r1)
+LINK (r1,PR5)
+\end{verbatim}
+
+
+\begin{verbatim}
+L    r0,A
+M    r0,B
+L    r1,C
+A    r1,D
+ST   r0,TEMP
+L    r0,E
+A    r0,F
+MR   r0,r1
+A    r1,TEMP
+\end{verbatim}
+
+\begin{figure}[ht]
+
+\vspace{15mm}
+
+\psset{levelsep=15mm,nodesep=1mm,labelsep=0mm}
+
+\pstree{\TR{$+$} ~{$2$}}
+{
+		\pstree{\TR{$\ast$} ~{$1$}}
+		{
+			\TR{$A$} ~{$1$}
+			\TR{$B$} ~{$0$}
+		}
+		\pstree{\TR{$\ast$} ~{$2$}}
+		{
+			\pstree{\TR{$+$} ~{$1$}}
+			{
+				\TR{$C$} ~{$1$}	
+				\TR{$D$} ~{$0$}	
+			}
+			\pstree{\TR{$+$} ~{$1$}}
+			{
+				\TR{$E$} ~{$1$}	
+				\TR{$F$} ~{$0$}	
+			}
+		}
+}
+
+\end{figure}
+
+\begin{figure}[ht]
+
+\psset{levelsep=15mm,nodesep=1mm}
+
+\pstree{\TR{$Z_{regs}$}}
+{
+		\TR{$X_{regs}$}
+		\TR{$Y_{regs}$}
+}
+
+\caption{Optimisation}
+
+\end{figure}
+
+If $X_{regs} = Y_{regs}$ then
+
+
+\hspace{10mm} $Z_{regs} \gets X_{regs} + 1$
+
+else
+
+\hspace{10mm} MAX$(X_{regs}, Y_{regs})$
+
+Label tree with left leaf $1$ and right leaf $0$.
+
+
+When generating code from labelled trees, generate code for sub trees
+with highest label first or left said tree if labels are equal, navi
+setai...
+
+\begin{verbatim}
+L       r0,C
+A       r0,D
+L       r1,E
+A       r1,F
+M  (R)  r0,R1
+L       r0,A
+M       r1,B
+AR      r0,r1
+\end{verbatim}
+
+
+\end{document}

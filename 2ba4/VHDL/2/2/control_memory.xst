@@ -1,0 +1,4 @@
+set -tmpdir .
+set -overwrite YES
+elaborate
+-ifn control_memory.sprj

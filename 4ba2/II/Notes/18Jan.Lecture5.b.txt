@@ -1,0 +1,11 @@
+As we have seen ARP requires a broadcast-enabled LAN technology.  What
+would happen if we were to use the TCP/IP protocol suite in a
+non-broadcast medium access (NBMA) LAN?  Try to think of a solution.
+
+You can find one possible answer in RFC 1735:
+
+J. Heinanen and R. Govindan, "NBMA Address Resolution Protocol (NARP),"
+IETF RFC 1735, http://www.ietf.org/rfc/rfc1735.txt, 1994.
+
+Remember, this is just one possible solution.  If you come up with a
+different one we can discuss it.

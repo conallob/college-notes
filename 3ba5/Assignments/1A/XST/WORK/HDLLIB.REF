@@ -1,0 +1,8 @@
+EN shift_register NULL f:/3ba5/assignments/1a/shift_register.vhd sub00/vhpl06
+AR shift_register behavioral f:/3ba5/assignments/1a/shift_register.vhd sub00/vhpl07
+EN dlatch NULL F:/3ba5/Assignments/1A/dlatch.vhdl sub00/vhpl04
+AR or_inv_gate behavioral f:/3ba5/assignments/1a/or_inv_gate.vhd sub00/vhpl01
+AR and_gate behavioral f:/3ba5/assignments/1a/and_gate.vhd sub00/vhpl03
+EN and_gate NULL f:/3ba5/assignments/1a/and_gate.vhd sub00/vhpl02
+EN or_inv_gate NULL f:/3ba5/assignments/1a/or_inv_gate.vhd sub00/vhpl00
+AR dlatch behavioral F:/3ba5/Assignments/1A/dlatch.vhdl sub00/vhpl05

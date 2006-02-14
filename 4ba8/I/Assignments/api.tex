@@ -1,0 +1,565 @@
+% $Id$
+
+\subsection{AddServiceType}
+
+\subsubsection{Description}
+
+Adds a new service catagory to the backend database.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!name! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+\subsection{EditServiceType}
+
+\subsubsection{Description}
+
+Renames a Service Type. Affects all Operators in this catagory
+automatically. 
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!oldname! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Old Catagory Name \\
+\verb!newname! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & New Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteServiceType}
+
+\subsubsection{Description}
+
+Removed a Service Type. Automatically deletes all Operators,
+Services and Bookings dependant on removed catagory.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!name! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{GetServiceType}
+
+\subsubsection{Description}
+
+Confirm if a string is a service catagory.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!name! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Catagory Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!TypeName! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Catagory Name \\
+\end{tabular}
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{AddOperator}
+
+\subsubsection{Description}
+
+Adds a service provider to the system. Details can optionally include
+opening and closing dates and times, stating when operator is active.  
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!name! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Operator Name \\
+\verb!type! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Catagory Name \\
+\verb!opening! & \hspace{15mm} & $\langle null\rangle  \mid \langle datetime\rangle $ & \hspace{15mm} & Opening Date/Time \\
+\verb!closing! & \hspace{15mm} & $\langle null\rangle  \mid \langle datetime\rangle $ & \hspace{15mm} & Closing Date/Time \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{EditOperator}
+
+\subsubsection{Description}
+
+Updates the recorded details of a Service Provider in the backend.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!oldname! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Current Operator Name \\
+\verb!prop! & \hspace{15mm} & $\langle string\rangle $ 	& \hspace{15mm} & Attribute. Expects  $"ServiceName" \mid$ \\
+	&	&	&	&	$"ServiceType"  \mid "Opening" \mid "Closing"$\\
+\verb!value! & \hspace{15mm} & $\langle string\rangle  \mid \langle datetime\rangle  \mid \langle null\rangle $ & \hspace{15mm} & Desired Value \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteOperator}
+
+\subsubsection{Description}
+
+Removes a Service Provider, including any dependant services and
+bookings.  
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!oldname! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Current Operator Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{GetOperator}
+
+\subsubsection{Description}
+
+Returns details on service provider.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!name! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Operator Name \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!ServiceName! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Operator Name \\
+\verb!ServiceType! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & Operator Catagory \\
+\verb!Opening! & \hspace{15mm} & $\langle null\rangle  \mid \langle datetime\rangle $ & \hspace{15mm} & Operator Opeing Date/Time \\
+\verb!Closing! & \hspace{15mm} & $\langle null\rangle  \mid \langle datetime\rangle $ & \hspace{15mm} & Operator Closing Date/Time \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{AddInstance}
+
+\subsubsection{Description}
+
+Adds details of a specific service from a service provider to the
+system.  
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!operator! & \hspace{15mm} & $\langle string\rangle $ 	& \hspace{15mm} & Operator Name \\
+\verb!date! 	 & \hspace{15mm} & $\langle datetime\rangle $ & \hspace{15mm} & Date/Time of Service\\
+\verb!capacity! & \hspace{15mm} & $\langle int\rangle $ 		& \hspace{15mm} & Capacity available \\
+\verb!cost! 	 & \hspace{15mm} & $\langle int\rangle $ 		& \hspace{15mm} & Cost per Person/Service \\
+\verb!src! 		 & \hspace{15mm} & $\langle null\rangle  \mid \langle string\rangle $ & \hspace{15mm} & Source of Service (Optional) \\
+\verb!dest! 	 & \hspace{15mm} & $\langle null\rangle  \mid \langle string\rangle $ & \hspace{15mm} & Destination of Service (Optional) \\
+\verb!details!  & \hspace{15mm} & $\langle null\rangle  \mid \langle string\rangle $ & \hspace{15mm} & Additonal Service Details (Optional) \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+				&	&	&	&	\\
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+				&	&	&	&	\\
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{EditInstance}
+
+\subsubsection{Description}
+
+Edits details of an existing service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+				&	&	&	&	\\
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!id! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Service ID \\
+\verb!prop! & \hspace{15mm} & $\langle string\rangle $ Property. Expects
+& \hspace{15mm} & Attribute  Expects \\
+	&	&	&	&	$"ServiceDate" \mid "Capacity" \mid$\\ 
+	&	&	&	&	$"Cost" \mid "Source" \mid $ \\
+	&	&	&	&	$"Destination" \mid"Details$ \\
+\verb!value! & \hspace{15mm} & $\langle string\rangle  \mid \langle datetime\rangle  \mid \langle int\rangle  \mid
+\langle null\rangle $  & \hspace{15mm} & Desired Value \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteInstance}
+
+\subsubsection{Description}
+
+Deletes a specified service and any bookings connected to the specified
+service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!id! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Service ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+\subsection{GetInstance}
+
+\subsubsection{Description}
+
+Returns the complete details of a service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!id! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Service ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!ServiceID! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Service ID \\
+\verb!ServiceDate! & \hspace{15mm} & $\langle datetime\rangle $ & \hspace{15mm} & Service Date \\
+\verb!Capacity! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Capacity Available \\
+\verb!Cost! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Unit Cost \\
+\verb!Source! & \hspace{15mm} & $\langle string\rangle  \mid \langle null\rangle $ & \hspace{15mm} & Source of Service \\
+\verb!Destination! & \hspace{15mm} & $\langle string\rangle  \mid  \langle null\rangle $ & \hspace{15mm} & Destination of Service \\
+\verb!Details! & \hspace{15mm} & $\langle string\rangle  \mid \langle null\rangle $ & \hspace{15mm} & Additional Details \\
+\end{tabular}
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+				&	&	&	&	\\
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{AddBooking}
+
+\subsubsection{Description}
+
+Makes a booking for a specified service.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!id! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Service ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{EditBooking}
+
+\subsubsection{Description}
+
+Edit the status flags of an existing booking.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+				&	&	&	&	\\
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!id! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Booking ID \\
+\verb!flag! & \hspace{15mm} & $\langle string\rangle $ Property. Expects
+& \hspace{15mm} & Attribute  Expects \\
+	&	&	&	&	$"Booked" \mid "Flexible" \mid$\\ 
+	&	&	&	&	$"Cancelled" \mid "Confirmed"$ \\
+\verb!newvalue! & \hspace{15mm} & $\langle boolean \rangle $  & \hspace{15mm} & Desired Value \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{DeleteBooking}
+
+\subsubsection{Description}
+
+Delete an existing booking.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+				&	&	&	&	\\
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!id! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Booking ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!result! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & True if Sucessful \\
+\end{tabular}
+
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}
+
+
+\subsection{GetBooking}
+
+\subsubsection{Description}
+
+Returns details on an existing booking.
+
+\subsubsection{Parameters}
+
+\begin{tabular}{lllll}
+				&	&	&	&	\\
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+\verb!id! & \hspace{15mm} & $\langle int\rangle $ & \hspace{15mm} & Booking ID \\
+\end{tabular}
+
+\subsubsection{Returns}
+
+\subsubsection{On Success}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!Booked! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & Booking Details \\
+\verb!Flexible! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} & Booking Details\\
+\verb!Cancelled! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} &  Booking Details\\
+\verb!Confirmed! & \hspace{15mm} & $\langle boolean\rangle $ & \hspace{15mm} &  Booking Details\\
+\end{tabular}
+\subsubsection{On Failure}
+
+\begin{tabular}{lllll}
+Variable Name	&		&	Data Type(s)		&	&	Description	\\
+				&	&	&	&	\\
+\verb!faultString! & \hspace{15mm} & $\langle string\rangle $ & \hspace{15mm} & SQL Error Experienced \\
+\end{tabular}

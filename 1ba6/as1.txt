@@ -1,0 +1,76 @@
+
+
+
+I.T.
+Key to a Brave New World
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Name: Eamon Phelan
+Student No: 0240639020K8
+Course No: 1BA6
+Lecturer: Brendan Tangney
+Assignment No: 1
+Word Count: 1290
+
+Abstract
+A brief examination of the ways in which information technology can facilitate social change both by accelerating existing trends and by creating fundamentally novel paradigms.
+
+
+IT Assisted Social Change
+The most common way in which IT facilitates change is by simply replacing an old technology in which case it simply acts as an extension of the original  social change created by the replaced technology. Email is an example of this form of IT assisted change. The revolution associated with instantaneous information exchange occurred with the invention of the telegraph when the deciding factor in the speed at which communication occurred shifted from being the medium to the participants. Subsequent improvements in speed and complexity such as email and fax were merely evolutions of the form rather than revolutionary new tools.
+
+In this form of social change IT is passive, it is a tool which can be moulded to fit an existing norm - an improved way of accomplishing an already possible goal. The vast majority of the ways in which IT is utilised fall into this category. However IT is still not used to its maximum potential in these situations. 
+
+There are many reasons why IT isnt used in every situation where it would result in an improvement over previous technology. From a purely economic point of view where IT is an option in the accomplishment of a task the deciding factor is whether it is less costly to use it. Once the cost of implementing the solution within an IT framework falls below the cost of other options the demand will be such that in a free market economy a company will begin to produce it as a product. 
+
+This economically based explanation of which IT based solutions are produced is too simplistic however. There are human factors to be considered, chief of which is inertia: simple resistance to change. From the very beginning of the mass computing movement it was believed that it "may be the most significant inhibiting force of all"[1] in the implementation of IT solutions. This inhibiting factor may be reduced in future however as more generations view computing as a normal part of their environment.
+
+Another reason why demand for a particular IT solution to a problem may not be answered by a product is simple ignorance of consumer desires on the part of industry. There is an implicit assumption on the part of many technologists that a more technically efficent IT system is automatically better than a less efficent system. A view which is in direct opposition to consumers' task-focused view. While a computer scientist may view a 20% increase in performance as a large increase in the inherent value of a particular machine if the inefficiencies in the use of the computer are a result of the user interface then the development is relatively insignificant. A recent example of consumers' task-oriented as opposed to performance oriented outlook is the continued popularity of the Apple iMac. More recent computers may have a major advantage in the price/performance ratio but because the iMac is more attuned to consumers desires it has retained it's marketshare. 
+
+
+
+
+
+
+
+IT enabled social change
+While IT assisted change merely replaces existing methods IT enabled change occurs as the result of the unique nature of IT. In these situations IT makes possible things which were unachievable using pre-IT technology. These technologies change society by altering fundamental assumptions.
+
+The whole of the film and music industry is based upon the assumption that it is impossible to easily copy their products. With the advent of digital compression techniques and computer networking however any digital media such as Cds or DVDs can be copied with perfect precision. The audiovisual industry now has to deal with competition when they previously had a monopoly on the prevision of specific works.
+
+The internet was designed to be faul

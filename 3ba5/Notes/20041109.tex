@@ -1,0 +1,133 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[all]{xy}
+\usepackage{tabularx}
+
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA5: Computer Engineering \\ Lecture Notes \\ $9^{th}$ November 2004}
+
+\maketitle
+
+Another approach - Not in Zarghon
+
+Split Level Control Memory (Nanocode)
+
+When a typical instruction set is microcoded relatively few different
+control words ($CW$) are found, which results in inefficient life for
+the CROM.
+
+Consider, for example a $64k$ CROM delivering a $250$ bit $CW$, then a
+typical straightforward implementation will require:
+
+\begin{table}[hbtp]
+
+% xy-pic Diagram
+
+\caption{Single Level Control State}
+
+\end{table}
+
+If however, in the CROM, we find only $512 = 2^{a}$ different $CW$s, we
+may restructure it to reduce the total ROM.
+
+
+\begin{table}[hbtp]
+
+% xy-pic Diagram
+
+\caption{Split Level Control State}
+
+\end{table}
+
+\subsection*{Compare Total ROM}
+
+\begin{eqnarray*}
+\mbox{Single Level}	&	=	&	2^{16} \times 270 \approx 2^{24} 		\\
+\mbox{Two Level}		&	=	&	2^{16} \times 29 + 29 \times 250			\\
+							&	=	&	2^{16} \times 25 + 2^{9} \times 2^{8}	\\
+							&	=	&	2^{21} + 2^{17}								\\
+							&	=	&	2^{21}											\\
+\end{eqnarray*}
+
+Single Level : Two Level - $2^{24} : 2^{21} \approx 8 : 1$
+
+It is nearly one order or magnitude in reduction.
+
+\section*{Hardwaired Vs Microcoded Implementations - A Changing
+Perspective}
+
+For a microcasm of implementation issues, consider two ways to implement
+the following function:
+
+\begin{table}[hbtp]
+
+% xy-pic diagram
+
+\end{table}
+
+
+\begin{table}[hbtp]
+
+% xy-pic schematic diagram
+
+\caption{Implementation A}
+
+\end{table}
+
+\begin{table}[hbtp]
+
+% xy-pic schematic diagram
+
+\caption{Implementation B}
+
+\end{table}
+
+$F = ABC + AB\overline{C} + A\overline{B}C + \overline{A}B\overline{C} +
+\overline{A}BC$
+
+$2^{3} \times 3 - 1 AND$ Array $1 \times 8 - 1 OR$
+
+
+\begin{table}[hbtp]
+
+% xy-pic diagram
+
+\caption{Microcoded Solution}
+
+\end{table}
+
+\subsection*{Traditional (1970 - 1995) Views}
+
+\begin{tabular}{|l|l|l|}
+\hline
+Aspect					&	A - Hardwired	&	B - Microcoded		\\
+\hline
+Size						&	Minimum			&	Larger				\\
+\hline
+Propogation Delay		&	Minimum			&	Larger				\\
+\hline
+Power						&	Minimum			&	More					\\
+\hline
+Flexability				&	None				&	Complete				\\
+\hline
+Change					&	Redesign			&	Reconnect			\\
+\hline
+\end{tabular}
+
+\subsection*{Traditional Conclusion}
+
+Unless you are desperate for speed, use microcode.
+But from the 90's, VLSI layout and CAD tools were able to convert from
+microcode into near optimal PLA layout, so in a sophisticated development
+enviroment, the traditional arguement doesn't stand.
+
+\end{document}

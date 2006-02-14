@@ -1,0 +1,1 @@
+-tapkeep -show normal -mode pipe -command spl2sym -family=virtex2 8to1mux.spl 8to1mux.sym

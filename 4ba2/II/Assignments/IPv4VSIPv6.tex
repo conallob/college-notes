@@ -1,0 +1,157 @@
+% $Id: /college/trunk/4ict9/Assignments/MobileMap/report.tex 888 2005-12-08T16:27:16.887239Z conall  $
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{url}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{4BA2 \\ Analysis of IP suitability for various application domains}
+
+\author{Brian Brazil (02017610) brazilb@tcd.ie \\
+David Collins (02704030) collinda@tcd.ie \\ 
+Conall O'Brien (01734351) conallob@maths.tcd.ie}
+
+\maketitle
+
+\section{Introduction}
+
+In order to compare and contrast the suitability of IPv4 against IPv6
+for specific applications, we must first look at the reasons why IPv6
+was created in the first place.
+
+\subsection{The Limitations of IPv4}
+
+Over the last 25 years, since it's standardisation in RFC 791, published
+in 1981, IPv4 has proven to be very popular. Despite it's popularity, it 
+has some limitations, which have arisen over the years as new uses for 
+IP connectivity are invented. Some even believe one of the key reasons
+for it's popularity, Network Address Translation (NAT), is also a 
+limitation, and in certain cases, it is. Other limitations
+affecting IPv4 include address allocation, security concerns, growth of 
+routing tables and quality of service (QoS).
+
+
+NAT is a method by which a network with private IP space, as defined in
+RFC 1918, is masked behind a single or a few public, globally unique IP
+address or addresses. NAT works by mapping certain TCP/IP ports between
+addresses in the private address network and the public IP address(es).
+While many find this useful, it does come at a cost, which is becoming
+more and more expensive. Certain applications used in modern times to
+not perform as expected when their IP datagrams are rewritten by a NAT
+router. Additionally, certain applications, which shall be discussed
+later, require a significant amount of TCP/IP ports, which are not
+available in a NAT enviroment.
+
+
+Initially, IPv4 address allocation was done in 3 catagories, Class A, B
+and C. Hindsight showed that this method was overly gratituitious and
+wasted IPv4 addresses. As a result, Classless Inter Domain Routing
+(CIDR) addressing was created to slow down, but not stop IPv4 addresses
+being wasted. CIDR also managed to condense routing table information,
+slow down another problem afflicting IPv4, where routing tables on core
+routers were growing out of control, with the addition of routes to
+various class A, B and C address allocations.
+
+
+Finally, in recent years, IPv4 has had many security concerns concerning
+address spoofing, many of which are connected to security issues with
+the Address Resolution Protocol (ARP), a protocol it uses to communicate
+with Layer 2 protocols. ARP, by it's nature is an unauthenticated, 
+broadcast protocol which is suseptible to attacks and "cache poisoning".
+Finally, modern applications which require realtime QoS have also 
+suffered from a certain inflexability of IPv4 in adapting to suit their 
+needs.
+
+\subsection{Do We Need a Replacement IP Protocol}
+
+Due to the limitations of IPv4 and the various stop-gap solutions which
+have been added over the years, the Internet Engineering Task Fource
+(IETF) decided to design a new, much more modular and flexible IP
+protocol, with improvements over the design of IPv4, bassed upon the
+enhancements added over the years and flaws causing limitations. This
+protocol is IPv6.
+
+\section{Technologies}
+
+\subsection{Routing Protocols}
+
+% RIP, OSPF, IS-IS, BGP
+
+\subsection{Voice over IP (VoIP)}
+
+There are a large amount of Voice over IP (VoIP) protocols around. They
+include popular, widely deployed (in enterprises) standards such as 
+H.323, Session Initiation Protocol (SIP) and Cisco SCCP (known as
+Skinny). There are also newer protocols, such as the propriatary one used
+by Skype, and the open source Inter Asterisk Exchange (IAX) protocol,
+designed for call trunking and to address limitations NAT causes H.323
+and SIP.
+
+
+VoIP protocols are one of the application catagories most affected by
+the limitations of IPv4. The primary issue is the widespread deployment
+of NAT. Since a limited subset of TCP and UDP ports are mapped to each
+privately addresses host, VoIP protcols which rely upon multiple UDP
+based connections between nodes are adversely affected by NAT.
+Additionally NAT IP header rewriting causes additional delays, which 
+multimedia protocols (and their users) are particularly sensitive 
+towards.
+
+
+In addition, VoIP and other multimedia protocols are held to a higher
+standard regarding delays, such as network congestion, network jitter 
+and other interruptions. IP datagrams are designed to allow delivery 
+in a non-sequential order, before the destination node reassembles them
+sequentially. This behaviour causes noticible delay and distortions in 
+multimedia applications. Attempts to address this issue are primarily
+done using QoS, which is not widely supported over IPv4 networks.
+
+
+For these reasons, VoIP protocols (and their multimedia cousins) are
+better suited over IPv6, as they raise many of the limitations
+encoutered with IPv4. 
+
+\subsection{Remote Computing}
+
+% X11, SSH, Telnet, VNC, Teminal Services
+
+\section{Network Configuration and Administration}
+
+% Ping, DHCP, autoconf, Traceroute, ARP
+
+\section{Conclusion}
+
+
+\section{References}
+
+Title: RFC 791 - Internet Protocol \\
+Author(s): Jon Postel \\
+Publisher: IETF
+Published Date: Semtember 1981 \\
+URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc791.txt}	 
+
+Title: RFC 1918 - Address Allocation for Private Internets \\
+Author(s): Y. Rekhter, B. Moskowitz, D. Karrenberg, G. J. de Groot, \
+\indent E. Lear \\
+Publisher: IETF \\
+Published Date: February 1996  \\
+URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc791.txt}	 
+
+Title: RFC 3261 - SIP: Session Initiation Protocol \\
+Author(s): J. Rosenberg, H. Schulzrinne, G. Camarillo, A. Johnston, \\
+\indent J. Peterson, R. Sparks, M. Handley, E. Schooler \\
+Publisher: IETF \\
+Published Date: June 2002  \\
+URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc3261.txt}	 
+
+Title: IPv6 Network Administration \\
+Author(s): Niall Richard Murphy, David Malone \\
+Publisher: O'Reilly \\
+Published Date: March 2005  \\
+ISBN: 0-596-00934-8	 
+
+\end{document}

@@ -1,0 +1,94 @@
+-- F:\1B
+-- VHDL Annotation Test Bench created by
+-- HDL Bencher 6.1i
+-- Wed Jan 26 20:49:37 2005
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY float_exp_adder_tb IS
+END float_exp_adder_tb;
+
+ARCHITECTURE testbench_arch OF float_exp_adder_tb IS
+-- If you get a compiler error on the following line,
+-- from the menu do Options->Configuration select VHDL 87
+FILE RESULTS: TEXT OPEN WRITE_MODE IS "f:\1b\float_exp_adder_tb.ano";
+	COMPONENT float_exp_adder
+		PORT (
+			s : In  std_logic;
+			x : In  std_logic_vector (31 DOWNTO 0);
+			y : In  std_logic_vector (31 DOWNTO 0);
+			output : Out  std_logic_vector (31 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	SIGNAL s : std_logic;
+	SIGNAL x : std_logic_vector (31 DOWNTO 0);
+	SIGNAL y : std_logic_vector (31 DOWNTO 0);
+	SIGNAL output : std_logic_vector (31 DOWNTO 0);
+
+BEGIN
+	UUT : float_exp_adder
+	PORT MAP (
+		s => s,
+		x => x,
+		y => y,
+		output => output
+	);
+
+	PROCESS -- Annotate outputs process
+		VARIABLE TX_TIME : INTEGER :=0;
+
+		PROCEDURE ANNOTATE_output(
+			TX_TIME : INTEGER
+		) IS
+			VARIABLE TX_STR : String(1 to 4096);
+			VARIABLE TX_LOC : LINE;
+		BEGIN
+			STD.TEXTIO.write(TX_LOC,string'("Annotate["));
+			STD.TEXTIO.write(TX_LOC, TX_TIME);
+			STD.TEXTIO.write(TX_LOC,string'(",output,"));
+			IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, output);
+			STD.TEXTIO.write(TX_LOC, string'("]"));
+			TX_STR(TX_LOC.all'range) := TX_LOC.all;
+			STD.TEXTIO.writeline(results, TX_LOC);
+			STD.TEXTIO.Deallocate(TX_LOC);
+		END;
+
+	BEGIN
+		CHECK_LOOP : LOOP
+		WAIT FOR 1 ns;
+		TX_TIME := TX_TIME + 1;
+		ANNOTATE_output(TX_TIME);
+		WAIT FOR 1 ns;
+		TX_TIME := TX_TIME + 1;
+		END LOOP CHECK_LOOP;
+	END PROCESS;
+
+	PROCESS
+		VARIABLE TX_OUT : LINE;
+
+		BEGIN
+		-- --------------------
+		s <= transport '0';
+		y <= transport std_logic_vector'("00000000000000000000000000000000"); --0
+		-- --------------------
+		WAIT FOR 2 ns; -- Time=2 ns
+		-- --------------------
+
+		STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+		STD.TEXTIO.writeline(results, TX_OUT);
+		ASSERT (FALSE) REPORT
+			"Success! Simulation for annotation completed"
+			SEVERITY FAILURE;
+	END PROCESS;
+END testbench_arch;
+
+CONFIGURATION float_exp_adder_cfg OF float_exp_adder_tb IS
+	FOR testbench_arch
+	END FOR;
+END float_exp_adder_cfg;

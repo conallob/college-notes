@@ -1,0 +1,11 @@
+#!/sw/bin/bash
+# Compile lecturenotes.tex
+# (C) Edsko de Vries, 2000-2002
+
+# Compile circuit macros
+for i in *.dvi;
+do
+	echo $i
+	name=`echo $i | cut -d. -f1`;
+	dvips -f $name.dvi >$name.ps
+done

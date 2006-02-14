@@ -1,0 +1,31 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA2: Artitficial Intellegence \\ Tutorial Answers \\ $13^{th}$ October 2004}
+
+\maketitle
+
+\section{Solution}
+
+\begin{verbatim}
+
+path(X,Y) :- door(X,Y).
+path(X,Y) :- door(Y,X).
+
+path(X,Y) :- door(X,Z),path(Z,Y).
+path(X,Y) :- door(Z,X),door(Z,Y).
+
+
+path(X,Y) :- \left( door(X,Y); door(Y,X) \right).
+path(X,Y) :- \left( door(X,Y);door(Z,X) \right),path(Z,Y).
+
+\end{verbatim}
+
+\end{document}

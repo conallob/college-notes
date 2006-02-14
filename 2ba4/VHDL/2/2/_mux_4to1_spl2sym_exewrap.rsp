@@ -1,0 +1,1 @@
+-tapkeep -show normal -mode pipe -command spl2sym -family=virtex2 mux_4to1.spl mux_4to1.sym

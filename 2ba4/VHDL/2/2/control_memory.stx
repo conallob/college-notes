@@ -1,0 +1,14 @@
+Release 4.2.03i - xst E.38
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to .
+CPU : 0.00 / 0.09 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter overwrite set to YES
+CPU : 0.00 / 0.09 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Compiling vhdl file F:/2ba4/VHDL/2/2/control_memory.vhd in Library work.
+WARNING:HDLParsers:533 - F:/2ba4/VHDL/2/2/control_memory.vhd Line 40. Default values are ignored in synthesis.
+Entity <control_memory> (Architecture <behavioral>) compiled.
+CPU : 1.01 / 1.11 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 

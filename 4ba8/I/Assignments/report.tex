@@ -1,0 +1,240 @@
+% $Id$
+
+\documentclass[a4paper,10pt]{article}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[arc,poly,all]{xy}
+\usepackage{ulem}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+\usepackage[left=2cm,right=2cm,top=4cm,bottom=4cm]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+
+
+\newcommand{\primarykey}[1]{\mbox{{\color{NavyBlue}{$#1$}}}}
+\newcommand{\foreignkey}[1]{{\mbox{\color{Emerald}{$#1$}}}}
+
+
+\begin{document}
+
+\title{4BA8 \\ Assignment}
+
+\author{Conall O'Brien \\ 01734351 \\ conallob@maths.tcd.ie}
+
+\maketitle
+
+\section{Introduction}
+
+Given the broad guidelines relating to the implementation of this 
+assignment,  programming language and Web Services, I have decided to 
+use three technologies, Perl, MySQL and XML-RPC.
+
+
+I have chosen to use Perl for multiple reasons, primarily it's
+popular use developing server-side applications and dynamic web content.
+In addition, the extensive library of modules available to Perl ensures
+a complete implementation of numerous web service technologies.
+
+
+I have chosen to use XML-RPC for the exchanging of RPC messages due to
+it's lightweight and uncomplicated definition. It is my belief that the 
+use of XML-RPC over compeditors such as SOAP is appropariate for an
+application of this size and complexity.
+
+
+For backend database storage, I have opted to use MySQL, the open source
+SQL complient database over other Web Services backend solutions, such 
+as UDDI standard, who's definition is incomplete. I have documented the
+functional dependency diagrams of each table in my database design in
+Section \ref{sec:sql} 
+
+\section{Architectural Design}
+
+My application design is simple, based upon the client - server
+architecture. A Perl script on the primary server acts as a translator
+between XML-RPC methodss and the MySQL backend. An additional feature of the server script not implemented by the 
+assignment of the deadline allows two server scripts to communicate
+between each other, allowing for backend replication between multiple,
+resielient hosts using XML-RPC.
+
+
+The client interface is a PHP script making XML-RPC calls to the CGI
+script. It allows a user to do multiple actions, such as
+tourism service searchs (queries on the database), comparison of tourism 
+services (comparison of query results) and creation of new service
+instances (insert queries on the backend).
+
+\section{Server API}
+
+\input api.tex
+
+\pagebreak
+
+\section{SQL Database Design}
+
+\label{sec:sql}
+
+\begin{figure}[hp]
+\begin{tabular}{c}
+Legend: \\
+\primarykey{Primary Key} \\ 
+\\
+\foreignkey{Foreign Key} \\ 
+\end{tabular}
+\end{figure}
+
+\vspace{15mm}
+\begin{figure}[hp]
+
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{TypeID}} *\frm{-} ,
+(15,0) *=(3,1)!UC\txt{TypeName} *\frm{-} ,
+(15,0) ; (15,1) **\dir{-}  *\dir{>} ,
+\endxy
+
+\caption{Table servicetype}
+
+\end{figure}
+
+\vspace{15mm}
+
+\begin{figure}[hp]
+
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{ServiceID}} *\frm{-} ,
+(10,2) *=(3,1)!UC\txt{Opening} *\frm{-} ,
+(20,2) *=(3,1)!UC\txt{Closing} *\frm{-} ,
+(15,0) *=(3,1)!UC\txt{ServiceName} *\frm{-} ,
+(15,4) *=(3,1)!UC\txt{\foreignkey{ServiceType}} *\frm{-} ,
+(15,0) ; (15,1) **\dir{-}  *\dir{>} ,
+(15,3) ; (15,2) **\dir{-}  *\dir{>} ,
+(11.5,1.5) ; (13.5,1.5) **\dir{-}  *\dir{>} ,
+(18.5,1.5) ; (16.5,1.5) **\dir{-}  *\dir{>} ,
+\endxy
+
+\caption{Table service}
+
+\end{figure}
+
+\vspace{15mm}
+\begin{figure}[hp]
+
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{UniqueID}} *\frm{-} ,
+(10,2) *=(3,1)!UC\txt{ServiceDate} *\frm{-} ,
+(20,2) *=(3,1)!UC\txt{ServiceName} *\frm{-} ,
+(20,0) *=(3,1)!UC\txt{Destination} *\frm{-} ,
+(15,4) *=(3,1)!UC\txt{\foreignkey{ServiceID}} *\frm{-} ,
+(10,0) *=(3,1)!UC\txt{Source} *\frm{-} ,
+(10,4) *=(3,1)!UC\txt{Capacity} *\frm{-} ,
+(20,4) *=(3,1)!UC\txt{Details} *\frm{-} ,
+(15,3) ; (15,2) **\dir{-}  *\dir{>} ,
+(11.5,1.5) ; (13.5,1.5) **\dir{-}  *\dir{>} ,
+(18.5,1.5) ; (16.5,1.5) **\dir{-}  *\dir{>} ,
+(18.5,3.5) ; (16.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(18.5,0) ; (16.5,1) **\dir{-}  *\dir{>} ,
+(11.5,0) ; (13.5,1) **\dir{-}  *\dir{>} ,
+\endxy
+
+\caption{Table instance}
+
+\end{figure}
+
+\vspace{15mm}
+\begin{figure}[hp]
+
+\xy<1cm,0cm>:
+(15,2) *=(3,1)!UC\txt{\primarykey{BookingID}} *\frm{-} ,
+(20,0) *=(3,1)!UC\txt{Confirmed} *\frm{-} ,
+(15,4) *=(3,1)!UC\txt{\foreignkey{UniqueID}} *\frm{-} ,
+(10,0) *=(3,1)!UC\txt{Cancelled} *\frm{-} ,
+(10,4) *=(3,1)!UC\txt{Booked} *\frm{-} ,
+(20,4) *=(3,1)!UC\txt{Flexible} *\frm{-} ,
+(15,3) ; (15,2) **\dir{-}  *\dir{>} ,
+(18.5,3.5) ; (16.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(11.5,3.5) ; (13.5,2) **\dir{-}  *\dir{>} ,
+(18.5,0) ; (16.5,1) **\dir{-}  *\dir{>} ,
+(11.5,0) ; (13.5,1) **\dir{-}  *\dir{>} ,
+\endxy
+
+\caption{Table booking}
+
+\end{figure}
+
+\pagebreak
+\section{Code}
+
+\subsection{Database}
+
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{backend.sql}
+
+\subsection{Server}
+
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{xmlrpc.cgi}[language=perl]
+
+\subsection{Client}
+
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{4ba8.cgi}[language=perl]
+
+\section{Demonstration}
+
+A partially working demonstration of my server and client are available online.
+
+
+My server configuration is setup on a server situated in Tampa, Florida.
+The URL of the CGI script is
+\url{http://master-4ba8.conall.ie/cgi-bin/xmlrpc.cgi}
+
+
+My client script is hosted on a server situated in Dublin, Ireland. The
+URL for the client Perl CGI script is
+\url{http://client-4ba8.conall.ie}. Unfortunately, I was unable to
+complete a fully functioning HTML interface for a client script. My
+client scripts are merely invoking indivudual XML-RPC calls from my
+server and displaying the output. This basic client does not fully
+satisfy the assignment requirement of a fully functioning online bookign
+system, but it does demonstrate that my defined API is fully working.
+
+
+Both servers are powered by Debian GNU/Linux, secured by restrictive, 
+stateful iptables firewall, making only the necessary ports available.
+
+\section{Technical References}
+
+\begin{tabular}{lll}
+Title	&	Author(s)	&	Publisher	\\
+Edition	&	ISBN	&	Publish Date 	\\
+			&			&						\\
+			&			&						\\
+Programming Web Services with Perl	&	Pavel Kulchenko,  Randy J. Ray	&
+O'Reilly	\\
+1st&	0-596-00206-8 & December 2002	\\
+			&			&						\\
+Programming Web Services with XML-RPC & Edd Dumbill, Joe Johnston, Simon
+St. Laurent &	O'Reilly	\\
+3rd & 0-596-00119-3	&	June 2001	\\
+			&			&						\\
+Real World Web Services	&	Will Iverson	&	O'Reilly	\\
+1st & 0-596-00642-X	&	October 2004	\\
+			&			&						\\
+Learning Perl	&	Randal L. Schwartz, Tom Phoenix	&	O'Reilly	\\
+3rd  		&	0-596-00132-0	&	July 2001	\\
+			&			&						\\
+Programming Perl	&	Larry Wall, Tom Christiansen, Jon Orwant	&
+O'Reilly	\\
+3rd		&	0-596-00027-8	&	July 2000	\\
+\end{tabular}
+
+\end{document}

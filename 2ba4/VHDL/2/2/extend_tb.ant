@@ -1,0 +1,121 @@
+-- F:\2BA4\VHDL\2\2\EXTEND_TB.ANT
+-- VHDL Annotation Test Bench created by
+-- HDL Bencher 4.1i
+-- Wed May 12 10:51:44 2004
+
+LIBRARY  IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+LIBRARY ieee;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY testbench IS
+END testbench;
+
+ARCHITECTURE testbench_arch OF testbench IS
+-- If you get a compiler error on the following line,
+-- from the menu do Options->Configuration select VHDL 87
+FILE RESULTS: TEXT OPEN WRITE_MODE IS "f:\2ba4\vhdl\2\2\extend_tb.ano";
+	COMPONENT extend
+		PORT (
+			dr : in  std_logic_vector (2 DOWNTO 0);
+			sb : in  std_logic_vector (2 DOWNTO 0);
+			extend_out : out  std_logic_vector (15 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	SIGNAL dr : std_logic_vector (2 DOWNTO 0);
+	SIGNAL sb : std_logic_vector (2 DOWNTO 0);
+	SIGNAL extend_out : std_logic_vector (15 DOWNTO 0);
+
+BEGIN
+	UUT : extend
+	PORT MAP (
+		dr => dr,
+		sb => sb,
+		extend_out => extend_out
+	);
+
+	PROCESS -- Annotate outputs process
+		VARIABLE TX_TIME : INTEGER :=0;
+
+		PROCEDURE ANNOTATE_extend_out(
+			TX_TIME : INTEGER
+		) IS
+			VARIABLE TX_STR : String(1 to 4096);
+			VARIABLE TX_LOC : LINE;
+		BEGIN
+			write(TX_LOC,string'("Annotate["));
+			write(TX_LOC, TX_TIME);
+			write(TX_LOC,string'(",extend_out,"));
+			write(TX_LOC, extend_out);
+			write(TX_LOC, string'("]"));
+			TX_STR(TX_LOC.all'range) := TX_LOC.all;
+			writeline(results, TX_LOC);
+			Deallocate(TX_LOC);
+		END;
+
+	BEGIN
+		CHECK_LOOP : LOOP
+		WAIT FOR 50 ns;
+		TX_TIME := TX_TIME + 50;
+		ANNOTATE_extend_out(TX_TIME);
+		WAIT FOR 50 ns;
+		TX_TIME := TX_TIME + 50;
+		END LOOP CHECK_LOOP;
+	END PROCESS;
+
+	PROCESS
+		VARIABLE TX_OUT : LINE;
+
+		BEGIN
+		-- --------------------
+		dr <= transport std_logic_vector'("000"); --0
+		sb <= transport std_logic_vector'("111"); --7
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=100 ns
+		dr <= transport std_logic_vector'("001"); --1
+		sb <= transport std_logic_vector'("110"); --6
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=200 ns
+		dr <= transport std_logic_vector'("010"); --2
+		sb <= transport std_logic_vector'("101"); --5
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=300 ns
+		dr <= transport std_logic_vector'("011"); --3
+		sb <= transport std_logic_vector'("100"); --4
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=400 ns
+		dr <= transport std_logic_vector'("100"); --4
+		sb <= transport std_logic_vector'("011"); --3
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=500 ns
+		dr <= transport std_logic_vector'("101"); --5
+		sb <= transport std_logic_vector'("010"); --2
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=600 ns
+		dr <= transport std_logic_vector'("110"); --6
+		sb <= transport std_logic_vector'("001"); --1
+		-- --------------------
+		WAIT FOR 100 ns; -- Time=700 ns
+		dr <= transport std_logic_vector'("111"); --7
+		sb <= transport std_logic_vector'("000"); --0
+		-- --------------------
+		WAIT FOR 1000 ns; -- Time=1700 ns
+		-- --------------------
+
+		write(TX_OUT, string'("Total[]"));
+		writeline(results, TX_OUT);
+		ASSERT (FALSE) REPORT
+			"Success! Simulation for annotation completed"
+			SEVERITY FAILURE;
+	END PROCESS;
+END testbench_arch;
+
+CONFIGURATION extend_cfg OF testbench IS
+	FOR testbench_arch
+	END FOR;
+END extend_cfg;

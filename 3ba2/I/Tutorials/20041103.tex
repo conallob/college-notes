@@ -1,0 +1,85 @@
+% $Id: 20041018.tex 338 2004-10-27 12:48:06Z conall $
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{Course 3BA2: Artificial Intellegence \\ Additional Lecture Notes \\ $3^{rd}$ November 2004}
+
+\maketitle
+
+\begin{verbatim}
+
+file2words(X) :-
+                see(X),
+                get0(C),
+                file2words(C),
+                seen.
+
+\end{verbatim}
+
+\begin{verbatim}
+
+get_a_line(List) :- get0(C),
+                    get_a_line(C,List).
+
+get_a_line(-1,[]).
+
+get_a_line(13,[]). % where 13 is the ASCII for EOL on a Mac 
+
+get_a_line(C,[C|R]) :- get0(N),
+                       get_a_line(N,R).
+
+\end{verbatim}
+
+Eg:
+
+\begin{verbatim}
+
+foo([A|B] --> bar(A),baz(B).
+
+foo([A|B],Tin,Tout) :- bar(A,Tin,Tin),
+                       baz(B,Tin,Tout).
+
+\end{verbatim}
+
+\begin{verbatim}
+
+Word([L]) --> space,rest_of_word(q).
+
+rest_of_word([R|T]) --> alphanumeric(R),
+                        rest_of_word(T).
+
+rest_of_word([]) --> []
+
+rest_of_word(space) --> []
+
+space(C) --> [C],{C=32}
+
+alphanumeric(C) --> [C],{C >= "A", C<= "Z"}.
+
+alphanumeric(C) --> [C],{C >="a", C <="z"}.
+
+word(W) --> letter(L),rest_of_word(R),{name(W,[L|R])}.
+
+rest_of_word([L|R]) --> letter(L),rest_of_word(R).
+
+rest_of_word([]) --> []
+
+
+letter(L) --> [L],{L >= "A",L <= "Z"}.
+
+letter(L) --> [L],{L >= "a", L <= "z"}.
+
+\end{verbatim}
+
+\verb!"A"! becomes \verb![65]! \\
+\verb!"AB"! becomes \verb![65,66]! \\
+\verb!"X"! gives a list containing the ASCII values of characters
+contained in \verb!"X"!
+
+\end{document}

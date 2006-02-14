@@ -1,0 +1,36 @@
+info x 29 201 0 0 0 0 0 0 VHDLvhdl_genericverilog_generic
+col x 257 0 0 0 0 0 0 0 
+radix x 10 0 0 0 0 0 0 0 
+entity name 0 0 0 0 0 0 0 0 n_check_16bit
+term mark 20 0 0 0 0 0 0 0 
+vlib save 0 0 0 0 0 0 0 0 LIBRARY  IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+var add 1 15 0 36 9 16 0 0 inputinstd_logic_vector
+var add 2 31 0 34 10 12 0 0 noutstd_logic
+vdone xxx 0 0 0 0 0 0 0 0 
+npos xxx 99 0 0 0 0 0 0 0 
+cell fill 1 0 0 0 0 0 0 0 0000000000000010
+cell fill 1 2 0 0 0 0 0 0 0000000000000100
+cell fill 1 4 0 0 0 0 0 0 0000000000001000
+cell fill 1 6 0 0 0 0 0 0 1111111111111111
+cell fill 1 8 0 0 0 0 0 0 0000000000000000
+cell fill 1 10 0 0 0 0 0 0 0000000000000101
+cell fill 1 12 0 0 0 0 0 0 0000000000000100
+cell fill 1 14 0 0 0 0 0 0 0000000000001000
+cell fill 1 16 0 0 0 0 0 0 0000000000000101
+time info 50 50 10 10 50 50 0 1 ns
+font save -14 0 400 49 0 0 0 0 Times New Roman
+src mod 0 26347520 29636630 8 0 0 0 0 v_n_check_16bit.vhd
+utd false 0 0 0 0 0 0 0 0 
+cellenab on 0 0 0 0 0 0 0 0 
+grid on 0 0 0 0 0 0 0 0 
+com add 1 0 50 242 5 0 -67 0 Waveform created by
+HDL Bencher 4.1i
+Source = v_n_check_16bit.vhd
+Wed May 12 12:40:41 2004
+type info 0 0 0 0 0 0 0 0 std_logicBITDOWNTO
+type info 31 0 0 0 0 0 0 0 std_logic_vectorVECTORDOWNTO
+opt vhdl87 0 0 0 0 0 0 0 0 

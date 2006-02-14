@@ -1,0 +1,49 @@
+# Reading C:/FPGAdv62/Modeltech/tcl/vsim/pref.tcl 
+# //  ModelSim SE Viewer 5.7f Sep 1 2003 
+# //
+# //  Copyright Model Technology, a Mentor Graphics Corporation company, 2003
+# //                         All Rights Reserved.
+# //                   UNPUBLISHED, LICENSED SOFTWARE.
+# //         CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //        PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# do shift_register_tb.fdo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 5.7f Compiler 2003.09 Sep 15 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity shift_register
+# -- Compiling architecture behavioral of shift_register
+# Model Technology ModelSim SE vcom 5.7f Compiler 2003.09 Sep 15 2003
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity shift_register_tb
+# -- Compiling architecture testbench_arch of shift_register_tb
+# -- Loading entity shift_register
+# -- Compiling configuration shift_register_cfg
+# -- Loading entity shift_register_tb
+# -- Loading architecture testbench_arch of shift_register_tb
+# vsim -lib work -t 1ps shift_register_tb 
+# Loading C:/FPGAdv62/Modeltech/win32/../std.standard
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_1164(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_arith(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_unsigned(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../std.textio(body)
+# Loading C:/FPGAdv62/Modeltech/win32/../ieee.std_logic_textio(body)
+# Loading work.shift_register_tb(testbench_arch)
+# Loading work.shift_register(behavioral)
+# .wave
+# .structure
+# .signals
+# ** Failure: Simulation successful (not a failure).  No problems detected. 
+#    Time: 910 ns  Iteration: 0  Process: /shift_register_tb/line__71 File: shift_register_tb.vhw
+# Break at shift_register_tb.vhw line 180
+# Simulation Breakpoint: Break at shift_register_tb.vhw line 180
+# MACRO ./shift_register_tb.fdo PAUSED at line 13
+destroy .wave

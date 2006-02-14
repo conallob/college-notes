@@ -1,0 +1,18 @@
+
+
+system
+	date_day
+
+root
+
+	GET_DAY (ROOT_CLUSTER): "make"
+
+default
+
+	precompiled ("$EIFFEL4/precomp/spec/$PLATFORM/base")
+
+cluster
+
+	ROOT_CLUSTER: 	".";
+
+end

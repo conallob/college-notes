@@ -1,0 +1,17 @@
+identifier(I) -->
+        small_letter(C),
+        rest_of_identifier(R),{name(I,[C|R])}.
+
+rest_of_identifier([C|R]) -->
+        alphanumeric(C),
+        rest_of_identifier(R).
+rest_of_identifier([]) --> [].
+
+small_letter(C) --> [C],{C>="a",C=<"z"}.
+capital_letter(C) --> [C],{C>="A",C=<"Z"}.
+digit(C) --> [C],{C>="0",C=<"9"}.
+
+alphanumeric(C) --> small_letter(C).
+alphanumeric(C) --> capital_letter(C).
+alphanumeric(C) --> digit(C).
+alphanumeric(95) --> [95].

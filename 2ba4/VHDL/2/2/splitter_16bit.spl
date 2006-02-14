@@ -1,0 +1,13 @@
+[Inputs]
+=input[8:0]=
+[Outputs]
+output0
+output2
+output1
+output3
+output4
+output5
+output6
+output7
+output8
+[BiDir]

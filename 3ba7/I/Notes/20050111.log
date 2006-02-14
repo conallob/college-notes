@@ -1,0 +1,208 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2004.10.17)  14 JAN 2005 16:51
+**20050111.tex
+(./20050111.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(/sw/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/sw/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/sw/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/sw/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/sw/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/sw/share/texmf/tex/latex/config/color.cfg
+File: color.cfg 2001/08/31 v1.1 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+
+(/sw/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+(/sw/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/sw/share/texmf/tex/generic/xypic/xy.sty
+(/sw/share/texmf/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes, docmode,
+(/sw/share/texmf/tex/generic/xypic/xyrecat.tex)
+(/sw/share/texmf/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.7 <1999/02/16>
+ Copyright (c) 1991-1998 by Kristoffer H. Rose <krisrose@ens-lyon.fr>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen103
+\Y@c=\dimen104
+\U@c=\dimen105
+\D@c=\dimen106
+\L@c=\dimen107
+\R@c=\dimen108
+\Edge@c=\toks15
+\X@p=\dimen109
+\Y@p=\dimen110
+\U@p=\dimen111
+\D@p=\dimen112
+\L@p=\dimen113
+\R@p=\dimen114
+\Edge@p=\toks16
+\X@origin=\dimen115
+\Y@origin=\dimen116
+\X@xbase=\dimen117
+\Y@xbase=\dimen118
+\X@ybase=\dimen119
+\Y@ybase=\dimen120
+\X@min=\dimen121
+\Y@min=\dimen122
+\X@max=\dimen123
+\Y@max=\dimen124
+\lastobjectbox@=\box26
+\zerodotbox@=\box27
+\almostz@=\dimen125
+ direction,
+\d@X=\dimen126
+\d@Y=\dimen127
+\K@=\count87
+\KK@=\count88
+\Direction=\count89
+\K@dXdY=\dimen128
+\K@dYdX=\dimen129
+\xyread@=\read1
+\xywrite@=\write3
+\csp@=\count90
+\quotPTK@=\dimen130
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks17
+\connectobjectbox@@=\box28
+ objects,
+\styletoks@=\toks18
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 1999/02/16 Xy-pic version 3.7
+
+(/sw/share/texmf/tex/generic/xypic/xyarc.tex
+ Xy-pic option: Circle, Ellipse, Arc feature v.3.4
+(/sw/share/texmf/tex/generic/xypic/xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.7 curve,
+\crv@cnt@=\count91
+\crvpts@=\toks19
+\splinebox@=\box29
+\splineval@=\dimen131
+\splinedepth@=\dimen132
+\splinetol@=\dimen133
+\splinelength@=\dimen134
+ circles,
+\L@=\dimen135
+ loaded)
+circles, ellipses, elliptical arcs, loaded)
+(/sw/share/texmf/tex/generic/xypic/xypoly.tex
+ Xy-pic option: Polygon feature v.3.7
+(/sw/share/texmf/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded) polygons,
+\xypolynode@=\count92
+
+loaded) (/sw/share/texmf/tex/generic/xypic/xyall.tex
+ Xy-pic option: All features v.3.3
+(/sw/share/texmf/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.7 loaded)
+(/sw/share/texmf/tex/generic/xypic/xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.3
+(/sw/share/texmf/tex/generic/xypic/xytips.tex
+ Xy-pic option: More Tips extension v.3.3 loaded) loaded)
+(/sw/share/texmf/tex/generic/xypic/xyline.tex
+ Xy-pic option: Line styles extension v.3.6
+\xylinethick@=\dimen136
+ loaded)
+(/sw/share/texmf/tex/generic/xypic/xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.3 loaded)
+(/sw/share/texmf/tex/generic/xypic/xycolor.tex
+ Xy-pic option: Colour extension v.3.3 loaded)
+(/sw/share/texmf/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.4
+\Row=\count93
+\Col=\count94
+\queue@=\toks20
+\queue@@=\toks21
+\qcount@=\count95
+\qcount@@=\count96
+\matrixsize@=\count97
+ loaded)
+(/sw/share/texmf/tex/generic/xypic/xygraph.tex
+ Xy-pic option: Graph feature v.3.7 loaded) loaded))
+(/sw/share/texmf-local/tex/latex/other/misc/ulem.sty
+\UL@box=\box30
+\UL@hyphenbox=\box31
+\UL@skip=\skip43
+\UL@hook=\toks22
+\UL@pe=\count98
+\UL@pixel=\dimen137
+\ULC@box=\box32
+Package: ulem 2000/05/26
+\ULdepth=\dimen138
+)
+No file 20050111.aux.
+\openout1 = `20050111.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+(/sw/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+
+(/sw/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+
+LaTeX Warning: No \author given.
+
+[1
+
+] [2] [3] [4] (./20050111.aux) ) 
+Here is how much of TeX's memory you used:
+ 3339 strings out of 95847
+ 40061 string characters out of 1196008
+ 128167 words of memory out of 1000001
+ 6249 multiletter control sequences out of 10000+50000
+ 14164 words of font info for 59 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 26i,6n,28p,212b,319s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on 20050111.dvi (4 pages, 4620 bytes).

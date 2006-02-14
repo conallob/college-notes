@@ -1,0 +1,4 @@
+set -tmpdir .
+set -overwrite YES
+elaborate
+-ifn whatsit.sprj

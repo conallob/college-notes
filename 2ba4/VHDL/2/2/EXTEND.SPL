@@ -1,0 +1,6 @@
+[Inputs]
+=dr[2:0]=
+=sb[2:0]=
+[Outputs]
+=extend_out[15:0]=
+[BiDir]

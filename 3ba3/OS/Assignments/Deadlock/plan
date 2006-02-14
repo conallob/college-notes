@@ -1,0 +1,34 @@
+# $Id$
+
+::Classes and Functions::
+
+* MessageQueue()
+
+  Send msg
+  Receive msg - print message contents to stdout
+
+* BankersController()
+
+  construct a FILO queue to queue the Threads()
+
+  construct semaphores with couters to simulate resources.
+  
+  Run checks on each Thread() to determine if required resources are met. 
+     Place in queue accordingly.
+
+* Thread()
+
+  fork() a new process, checking to see if Thread-{A,B,C}.
+  must have generic structure and ability to have resource 
+  requirements and sleep paramaters passed via contructor. 
+
+  Run generic loop running sleep($a) and request resource $b as per 
+    function parameters
+
+* main()
+
+  Construct MessageQueue()
+  Construct BankersController()
+  Define paramaters for each thread and construct using Thread()
+  Wait using sleep for all 3 threads to complete, referring all 
+     async actions to the BankersController for processing.

@@ -1,0 +1,14 @@
+[xcs05-4pc84-FPGA Express VHDL]
+Design Entry Utilities=true
+[reg_file]
+Design Entry Utilities=true
+[decoder]
+Generate Programming File=false
+Design Entry Utilities=true
+User Constraints=false
+Synthesize=true
+Implement Design=true
+Map=false
+View Reports=false
+[decoder_tb.tbw]
+ModelSim Simulator=true

@@ -1,0 +1,5 @@
+MODULE reg_file
+   SUBMODULE decoder
+   SUBMODULE mux_2to1_16bit
+   SUBMODULE mux_9to1_16bit
+   SUBMODULE reg_16bit
