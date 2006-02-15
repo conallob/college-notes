@@ -1,0 +1,67 @@
+% $Id: /college/4ict9/Assignments/MobileMap/report.tex 1043 2006-01-31T00:42:38.195386Z conall  $
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[arc,poly,all]{xy}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+
+\begin{document}
+
+\title{4ICT9 \\ Assignment 3 \\ Location Based Services}
+
+\author{David Collins 02704030 \\ collinda@tcd.ie \\ 
+Conall O'Brien 01734351 \\ conallob@maths.tcd.ie}
+
+\maketitle
+
+\section{Group Tasks}
+
+The assignment was broken down in the following structure
+
+\begin{tabular}{lcl}
+Entire Group &	\hspace{15mm}	&	Descision of Application Ideas	\\
+David Collins	&					&	Mobile Emulator Programming			\\
+Conall O'Brien	&					&	Middleware JSP Servlet \\
+David Collins	&					&	Integration	of Middleware and Emulator \\
+Conall O'Brien	&					&	Preparation of Report					\\
+\end{tabular}
+
+\section{Application}
+
+\subsection{Description}
+
+Our LBS application idea is to inform a person the film listing and 
+showing times for a cinema close to their current location.
+
+\subsection{Use Case Diagram}
+
+\begin{figure}[hp]
+\xy<1cm,0cm>:
+\POS (1,2) *\txt{Mobile User \\ (Emulator)} !UL ,
+\POS (7,2) *\txt{Middleware \\ (Servlet) } !UL ,
+\POS (13,2)*\txt{Mobile Network \\ (Ericsson LBS)} !UL ,
+(1,0) *=(4,2)!UC\txt{User Makes \\ Listings Query} *\frm{-} ,
+(7,0) *=(4,2)!UC\txt{Queries Location \\ of User} *\frm{-} ,
+(13,0) *=(4,6)!UC\txt{Establish Location \\ Of User \\ \\ \\ \\ \\ Return Location} *\frm{-} ,
+(7,-4) *=(4,2)!UC\txt{Queries and \\ Returns Relevant \\ Cinema Listings} *\frm{-} ,
+(1,-4) *=(4,2)!UC\txt{Displays Listings \\ to User} *\frm{-} ,
+(3,-1) ; (5,-1)  **\dir{-}  *\dir{>} ;
+(9,-1) ; (11,-1) **\dir{-} *\dir{>} ;
+(5,-5)  ; (3,-5) **\dir{-}  *\dir{>} ;
+(11,-5) ; (9,-5) **\dir{-} *\dir{>} ;
+\endxy
+
+\end{figure}
+
+
+\section{Problems Encountered}
+
+Conall encountered numerous issues while trying to develop the
+middleware application. These issues were mainly connected to Java
+enviromental settings and using Tomcat.
+
+David...
+
+\end{document}
