@@ -44,11 +44,11 @@ more and more expensive. Certain applications used in modern times to
 not perform as expected when their IP datagrams are rewritten by a NAT
 router. Additionally, certain applications, which shall be discussed
 later, require a significant amount of TCP/IP ports, which are not
-available in a NAT enviroment.
+available in a NAT environment.
 
 
-Initially, IPv4 address allocation was done in 3 catagories, Class A, B
-and C. Hindsight showed that this method was overly gratituitious and
+Initially, IPv4 address allocation was done in 3 categories, Class A, B
+and C. Hindsight showed that this method was overly gratuitous and
 wasted IPv4 addresses. As a result, Classless Inter Domain Routing
 (CIDR) addressing was created to slow down, but not stop IPv4 addresses
 being wasted. CIDR also managed to condense routing table information,
@@ -61,17 +61,17 @@ Finally, in recent years, IPv4 has had many security concerns concerning
 address spoofing, many of which are connected to security issues with
 the Address Resolution Protocol (ARP), a protocol it uses to communicate
 with Layer 2 protocols. ARP, by it's nature is an unauthenticated, 
-broadcast protocol which is suseptible to attacks and "cache poisoning".
+broadcast protocol which is susceptible to attacks and "cache poisoning".
 Finally, modern applications which require realtime QoS have also 
-suffered from a certain inflexability of IPv4 in adapting to suit their 
+suffered from a certain inflexibility of IPv4 in adapting to suit their 
 needs.
 
 \subsection{Do We Need a Replacement IP Protocol}
 
 Due to the limitations of IPv4 and the various stop-gap solutions which
-have been added over the years, the Internet Engineering Task Fource
+have been added over the years, the Internet Engineering Task Force
 (IETF) decided to design a new, much more modular and flexible IP
-protocol, with improvements over the design of IPv4, bassed upon the
+protocol, with improvements over the design of IPv4, based upon the
 enhancements added over the years and flaws causing limitations. This
 protocol is IPv6.
 
@@ -86,16 +86,16 @@ protocol is IPv6.
 There are a large amount of Voice over IP (VoIP) protocols around. They
 include popular, widely deployed (in enterprises) standards such as 
 H.323, Session Initiation Protocol (SIP) and Cisco SCCP (known as
-Skinny). There are also newer protocols, such as the propriatary one used
+Skinny). There are also newer protocols, such as the proprietary one used
 by Skype, and the open source Inter Asterisk Exchange (IAX) protocol,
 designed for call trunking and to address limitations NAT causes H.323
 and SIP.
 
 
-VoIP protocols are one of the application catagories most affected by
+VoIP protocols are one of the application categories most affected by
 the limitations of IPv4. The primary issue is the widespread deployment
 of NAT. Since a limited subset of TCP and UDP ports are mapped to each
-privately addresses host, VoIP protcols which rely upon multiple UDP
+privately addresses host, VoIP protocols which rely upon multiple UDP
 based connections between nodes are adversely affected by NAT.
 Additionally NAT IP header rewriting causes additional delays, which 
 multimedia protocols (and their users) are particularly sensitive 
@@ -106,14 +106,14 @@ In addition, VoIP and other multimedia protocols are held to a higher
 standard regarding delays, such as network congestion, network jitter 
 and other interruptions. IP datagrams are designed to allow delivery 
 in a non-sequential order, before the destination node reassembles them
-sequentially. This behaviour causes noticible delay and distortions in 
+sequentially. This behaviour causes noticeable delay and distortions in 
 multimedia applications. Attempts to address this issue are primarily
 done using QoS, which is not widely supported over IPv4 networks.
 
 
 For these reasons, VoIP protocols (and their multimedia cousins) are
 better suited over IPv6, as they raise many of the limitations
-encoutered with IPv4. 
+encountered with IPv4. 
 
 \subsection{Remote Computing}
 
@@ -121,7 +121,52 @@ encoutered with IPv4.
 
 \section{Network Configuration and Administration}
 
-% Ping, DHCP, autoconf, Traceroute, ARP
+On a network with any more than a handful of active nodes, it is desirable to
+do as little manual configuration as possible for each node. Furthermore,
+should your network configuration change at some point, for instance moving a
+system to another network, it is desirable that the effort required be
+minimised. It is for these reasons that automatic configuration is useful.
+
+One manner of providing automatic configuration is that of DHCP, the Dynamic
+Host Configuration Protocol as defined in RFC2131 for IPv4. The method of
+operation is usually that a new node on the network will broadcast a message to
+all nodes, looking for DHCP servers. DHCP servers then respond via unicast with
+offers of addresses, and the client node once again broadcasts accepting one of
+the offers, the final action by the server is to send a unicast message to the
+client node, allowing it to take the address. The client sends out an ARP
+request, to ensure that the address really is free, and if this is so starts
+using its new address.
+
+Note that this requires a server to be setup on the network. It also requires,
+in addition to unicast packets, three broadcasts, each of which must be
+processed by every system in the same broadcast domain. In practise the
+broadcast domain would be the entire subnet. Accordingly if the network size
+doubles, the processing required will quadruple.
+
+Contrast that with the stateless autoconfiguration provided by RFC2463 for
+IPv6 where no server is required to generate link-local addresses. This address
+is generated from the MAC (Media Access Control) address of the NIC (Network
+Interface Card), which are in theory unique. To verify this an algorithm called
+Duplicate Address Detection is used, which involves sending a packet to the
+candidate address and waiting for a reply. Unlike similar to DHCP this is not a
+broadcast packet.
+
+To provide routing beyond the local link, a global address is required. The
+manner in which this works is that routers send out Routing Advertisements at
+regular intervals, this provides a network prefix which is combined with the
+unique address generated above. It also provides routing information.
+
+Comparing at the IPv4 and IPv6 autoconfiguration methods one notes that it is
+not possible to autoconfigure an IPv4 without setting up a separate server for
+DHCP. With IPv6 basic autoconfiuration is builtin and requires no special
+server. For the next level of configuration routers have to be configured,
+however this isn't as much of a burden as for a network with more than one
+subnet as the routers would have to be configured anyway.
+
+A further advantage of IPv6 autoconfiguration, as with IPv6 in general, is that
+all implementations are required to support encryption. This gives
+administrators the ability to remove one of the problems with DHCP - namely
+that there is no way to distinguish a valid server from a rouge server.
 
 \section{Conclusion}
 
@@ -131,7 +176,7 @@ encoutered with IPv4.
 Title: RFC 791 - Internet Protocol \\
 Author(s): Jon Postel \\
 Publisher: IETF
-Published Date: Semtember 1981 \\
+Published Date: September 1981 \\
 URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc791.txt}	 
 
 Title: RFC 1918 - Address Allocation for Private Internets \\
@@ -140,6 +185,18 @@ Author(s): Y. Rekhter, B. Moskowitz, D. Karrenberg, G. J. de Groot, \
 Publisher: IETF \\
 Published Date: February 1996  \\
 URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc791.txt}	 
+
+Title: RFC2131 - Dynamic Host Configuration Protocol \\
+Author(s): R. Droms \\
+Publisher: IETF \\
+Published Date: March 1997 \\
+URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc2131.txt}	 
+
+Title: RFC2462 - 
+Author(): S. Thomson, T. Narten
+Publisher: IETF \\
+Published Date: December 1998
+URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc2462.txt}	 
 
 Title: RFC 3261 - SIP: Session Initiation Protocol \\
 Author(s): J. Rosenberg, H. Schulzrinne, G. Camarillo, A. Johnston, \\
