@@ -1,0 +1,73 @@
+Groups
+
+1) Webpage
+-------------
+Keith Mahony
+Antonia Karpova
+Andy Phillips
+
+2) Analysis of IP suitability for various application domains
+--------------
+Conal O’ Brien
+Brian Brazil
+David Collins
+
+3) *Peer to Peer streaming technologies
+--------------
+Karen Molony
+David Roche 
+Kevin Williams
+
+4) Web censorship
+---------------
+Eoghan McCabe
+Caitriona Logue
+Elena Berkout
+
+5) Quantum entanglement and it's implications for secure communications
+---------------
+James Dunne
+Mike Pearce
+Vivian Hunt
+
+6) Evolution of P2P technologies
+--------------
+Cillian Kelly
+Keith Hale
+Niall Redmond
+
+7) Online Gambling(security, social impacts, fair play techniques)
+-------------
+Stephen Byrne
+Peter Collen
+Rory Fearon
+
+8) Phone Based Location Services
+-------------
+David Bowles
+Daniel Kane
+-Ivan Lennon
+
+9) *Power efficiency in sensor networking
+-------------
+Andrew Carton
+Joseph Flynn
+-Ross Lynch
+
+10) Evolution of AI in Gamebots
+--------------
+Nicholas Nash
+Philip McGuinness
+Paul O'Donnell
+
+11) *Music Recommendation systems
+--------------
+-Ahmed Al-Aseeri
+-Morgan McEvoy
+-Eamonn Phelan
+
+12) *Moderm DRM technologies
+---------------
+-Ciaran Brady
+-Morgan Fox
+-Francois Pouliquen

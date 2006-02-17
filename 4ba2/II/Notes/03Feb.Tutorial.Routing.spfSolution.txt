@@ -1,0 +1,75 @@
+Expand A 
+
+Routing Table @ A
+Dest	Dist	Node
+F	3	A
+G	5	A
+B	2*	A
+C	7	A
+
+expand B
+- new routes
+D	13	B
+C	6	B
+
+RT @ A
+F	3*	A
+G	5	A
+B	2*	A
+D	13	B
+C	6	B
+
+Expand F
+- boring!
+Expand G
+- boring!
+
+RT @ A
+F	3*	A
+G	5*	A
+B	2*	A
+D	13	B
+C	6*	B
+
+expand C
+
+- new routes
+
+E	15	B
+
+RT @ A
+
+F	3*	A
+G	5*	A
+B	2*	A
+D	13	B
+C	6*	B
+E	15	B
+
+
+Have a path, finished.. right?
+No, we have a path but not necessarily the shortest path. 
+ Djikstra algorithm runs until all nodes whose current path length is <
+ shorter current solution.
+
+Only when all paths are greater can you say that you have the SHORTEST
+path.
+
+So.... expand D
+
+E      15     B
+
+RT @ A 
+F	3*	A
+G	5*	A
+B	2*	A
+D	13*	B
+C	6*	B
+E	15	B
+
+Two paths are the same for our current metric of cost.
+
+The End...
+
+
+

@@ -1,0 +1,65 @@
+The exchange of messages i.e who exchanges when, is arbitrary
+
+
+-- Round 1 --
+D broadcasts [BD,11] [DE,2]
+ - B, E receives
+ - Routing Table (RT) @ B
+  E	   13	 D
+  D	   11	 D
+ - RT @ E
+  D	   2	 D
+  B	   13	 D
+  C	   9	 C
+
+
+-- Round 2 --
+B broadcasts [BA,2] [BC,4] [BD,11] [BE,13]
+ - A,C,D receive
+ - RT @ A
+ B    2		B
+ C    6		B
+ D    13	B
+ E    15	B
+
+ - RT @ C
+
+ B    4		B
+ A    6		B
+ D    15	B
+ E    17	B
+
+-- Round 3 --
+E broadcasts [ED,2] [EC,9] [EB,13]
+ - C,D receives
+ - original RT @ C
+ B    4		B
+ A    6		B
+ D    15	B
+ E    17	B - Discarded 
+ - new messages at C
+ E    9		E
+ D    11	E - Discarded
+ B    22	E - Discarded
+
+ - New improved RT @ C
+ B    4		B
+ A    6		B
+ D    15	B
+ E    9		E
+
+-- Round 4 --
+C broadcasts [CE,9].....
+ - A,B,E receive
+ - RT @ A
+ ..
+ ..
+ E	15	B
+ ..
+ - 
+ - Following calculation performed at A
+ - 9 + 7(Distance from A -> C) = 16
+ - 16 > 15 (A's current best cost to E through B)
+  -> discards message from C.
+
+
