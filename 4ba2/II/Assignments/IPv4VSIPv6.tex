@@ -25,11 +25,11 @@ was created in the first place.
 
 \subsection{The Limitations of IPv4}
 
-Over the last 25 years, since it's standardisation in RFC 791, published
-in 1981, IPv4 has proven to be very popular. Despite it's popularity, it 
+Over the last 25 years, since its standardisation in RFC 791, published
+in 1981, IPv4 has proven to be very popular. Despite its popularity, it 
 has some limitations, which have arisen over the years as new uses for 
 IP connectivity are invented. Some even believe one of the key reasons
-for it's popularity, Network Address Translation (NAT), is also a 
+for its popularity, Network Address Translation (NAT), is also a 
 limitation, and in certain cases, it is. Other limitations
 affecting IPv4 include address allocation, security concerns, growth of 
 routing tables and quality of service (QoS).
@@ -78,9 +78,31 @@ protocol is IPv6.
 
 \section{Technologies}
 
-\subsection{Routing Protocols}
+\subsection{Routing}
 
-% RIP, OSPF, IS-IS, BGP
+In an IPv4 environment there are a number of protocols that may be in use. These
+include Routing Information Protocol (RIP), Open Shortest Path First (OSPF) and
+Border Gateway Protocol (BGP). Of these RIP and OSPF are Interior Gateway
+Protocols (IGP), that is they are intended for use within an organisation. In
+contrast BGP is intended as an Exterior Gateway Protocol (EGP), it is used to
+maintain the global routing table that controls forwarding of all packets
+across the Internet.
+
+IPv6 implementations of all three protocols mentioned above are available, and
+are by and large the same as their IPv4 versions. The main difference that IPv6
+will bring to routing is the effects of the larger address spaces and the
+manner in which it is to be assigned and managed. 
+
+In addition to concern for the running out of IPv4 addresses there are also
+problems arising from the increasing size of the global routing tables. As the
+tables get larger better routers with more memory and processor power will be
+required. Currently an IPv4 address gives no information as to where it should
+be routed. The intention with IPv6 is that carriers will assign subnets from
+their allocations to their customers. For example a large backbone carrier
+might be assigned a /32, and would then assign /56 sized chunks of that to its
+customers. The global routing tables would then only require one entry for the
+/32, rather than entries for each of the potential sixteen million /56 subnets.
+This is known as route aggregation.
 
 \subsection{Voice over IP (VoIP)}
 
@@ -146,8 +168,8 @@ doubles, the processing required will quadruple.
 
 Contrast that with the stateless autoconfiguration provided by RFC2463 for
 IPv6 where no server is required to generate link-local addresses. This address
-is generated from the MAC (Media Access Control) address of the NIC (Network
-Interface Card), which are in theory unique. To verify this an algorithm called
+is generated from the Media Access Control (MAC) address of the Network
+Interface Card (NIC), which are in theory unique. To verify this an algorithm called
 Duplicate Address Detection is used, which involves sending a packet to the
 candidate address and waiting for a reply. Unlike similar to DHCP this is not a
 broadcast packet.
@@ -178,33 +200,33 @@ Title: RFC 791 - Internet Protocol \\
 Author(s): Jon Postel \\
 Publisher: IETF
 Published Date: September 1981 \\
-URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc791.txt}	 
+URL: \url{http://www.ietf.org/rfc/rfc791.txt}	 
 
 Title: RFC 1918 - Address Allocation for Private Internets \\
 Author(s): Y. Rekhter, B. Moskowitz, D. Karrenberg, G. J. de Groot, \
 \indent E. Lear \\
 Publisher: IETF \\
 Published Date: February 1996  \\
-URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc791.txt}	 
+URL: \url{http://www.ietf.org/rfc/rfc791.txt}	 
 
 Title: RFC2131 - Dynamic Host Configuration Protocol \\
 Author(s): R. Droms \\
 Publisher: IETF \\
 Published Date: March 1997 \\
-URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc2131.txt}	 
+URL: \url{http://www.ietf.org/rfc/rfc2131.txt}	 
 
-Title: RFC2462 - 
+Title: RFC2462 - IPv6 Stateless Autoconfiguration
 Author(): S. Thomson, T. Narten
 Publisher: IETF \\
 Published Date: December 1998
-URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc2462.txt}	 
+URL: \url{http://www.ietf.org/rfc/rfc2462.txt}	 
 
 Title: RFC 3261 - SIP: Session Initiation Protocol \\
 Author(s): J. Rosenberg, H. Schulzrinne, G. Camarillo, A. Johnston, \\
 \indent J. Peterson, R. Sparks, M. Handley, E. Schooler \\
 Publisher: IETF \\
 Published Date: June 2002  \\
-URL: \url{ftp://ftp.rfc-editor.org/in-notes/rfc3261.txt}	 
+URL: \url{http://www.ietf.org/rfc/rfc3261.txt}	 
 
 Title: IPv6 Network Administration \\
 Author(s): Niall Richard Murphy, David Malone \\
