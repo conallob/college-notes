@@ -140,7 +140,45 @@ encountered with IPv4.
 
 \subsection{Remote Computing}
 
-% X11, SSH, Telnet, VNC, Teminal Services
+Remote computing is an important technology for allowing users to access
+and operate systems and computers that they are not physically close to. 
+By using network and internet connections, users can remotely access 
+their computers allowing greater convenience, and often practicality, in
+accessing systems which it would be inconvenient or impossible to get to  
+otherwise. Telnet was one of the earliest protocols used for remote 
+computing, allowing general byte orientated communications that was 
+often used for simple command line login sessions. Other similar 
+protocols would come about but one in particular, SSH, became  very 
+popular in the late 1990s due to being far very secure and powerful. 
+It also allowed other protocols such as SCP and FTP to be tunneled
+through it. Other remote computing protocols include VNC and RDP (which
+supports Microsoft's Terminal Services) which allow full screen
+graphical interaction with the remote computer allowing negotiation of 
+GUIs. There is also X11, a Windowing system that is designed to allow 
+the user interface to run on a different machine to the actual programs. 
+
+
+In some ways, the benefits of IPv6 to remote computing programs is
+similar to its benefits to VOIP. In both cases there are 
+instances of one computer connecting to another and communicating with it. 
+Hence, the ability of IPv6 to give each computer an individual IP address 
+makes it a lot easier for computers to connect and communicate with each 
+other as there is no need for a NAT which would hinder communication.
+Depending on the protocol used, remote computing may also require good 
+QoS which Ipv6 also provides.
+
+
+Given that the information transported in a remote login session is
+sensitive (given that it tells and determines everything you are doing)   
+security is an important feature. IPv6 ensures mandatory IPsec support, a 
+standard for encryption and authentication of IP packets. While some 
+some protocols such as SSH already have security features, IPsec is   
+capable of quickly adding security to any remote login protocol, 
+including telnet, given that it is built into the layers of the IPv6 
+protocol. IPsec can help to protect against such threats as packet 
+sniffing or fake packets, which could either compromise information,
+cause disruption or cause the host to perform unwarranted operation the
+during a remote session.
 
 \section{Network Configuration and Administration}
 
