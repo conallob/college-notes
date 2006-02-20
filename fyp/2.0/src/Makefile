@@ -13,12 +13,12 @@ all: current
 
 current: milestone
 
-milestone: client
+milestone1: client
 
 clean: clean.o clean.target
 
 
-client: milestone1.c linklist.c
+client: client.c linklist.c
 	$(CC) linklist.o client.o $(LDFLAGS) $(APR_LDFLAGS) -o $(TARGET) 
 
 
