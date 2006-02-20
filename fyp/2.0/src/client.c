@@ -1,10 +1,10 @@
 /* 
- * File: milestone1.c 
- * Description: Milestone #1 - Simple Local Echo Test
+ * File: client.c 
+ * Description: Simple Local Echo Test
  * Author: Conall O'Brien <conallob@maths.tcd.ie>
- * Date: $Date$
+ * $Date$
  * 
- * Id: $Id: /college/trunk/fyp/2.0/src/milestone1.c 2138 2006-02-07T21:25:22.382090Z conall  $
+ * $Id: /college/trunk/fyp/2.0/src/milestone1.c 2138 2006-02-07T21:25:22.382090Z conall  $
  */
 
 #define STDIN_BUFFER_LEN 80

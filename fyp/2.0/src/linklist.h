@@ -3,9 +3,9 @@
  * Description: doubley linked list - inspired by  
  *		g_list.c from c-hey -- http://c-hey.redbrick.dcu.ie
  * Author: Conall O'Brien <conallob@maths.tcd.ie>
- * Date: $Date$
+ * $Date$
  * 
- * Id: $Id$
+ * $Id$
  */
 
 #define STDIN_BUFFER_LEN 80
