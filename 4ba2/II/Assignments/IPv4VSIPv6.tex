@@ -88,10 +88,12 @@ contrast BGP is intended as an Exterior Gateway Protocol (EGP), it is used to
 maintain the global routing table that controls forwarding of all packets
 across the Internet.
 
+
 IPv6 implementations of all three protocols mentioned above are available, and
 are by and large the same as their IPv4 versions. The main difference that IPv6
 will bring to routing is the effects of the larger address spaces and the
 manner in which it is to be assigned and managed. 
+
 
 In addition to concern for the running out of IPv4 addresses there are also
 problems arising from the increasing size of the global routing tables. As the
@@ -101,8 +103,9 @@ be routed. The intention with IPv6 is that carriers will assign subnets from
 their allocations to their customers. For example a large backbone carrier
 might be assigned a /32, and would then assign /56 sized chunks of that to its
 customers. The global routing tables would then only require one entry for the
-/32, rather than entries for each of the potential sixteen million /56 subnets.
-This is known as route aggregation.
+/32, rather than entries for each of the potential sixteen million /56
+subnets, thus extending the benefits of routing prefix aggregation into
+the IPv6 world.
 
 \subsection{Voice over IP (VoIP)}
 
@@ -126,59 +129,47 @@ towards.
 
 
 In addition, VoIP and other multimedia protocols are held to a higher
-standard regarding delays, such as network congestion, network jitter 
-and other interruptions. IP datagrams are designed to allow delivery 
-in a non-sequential order, before the destination node reassembles them
-sequentially. This behaviour causes noticeable delay and distortions in 
-multimedia applications. Attempts to address this issue are primarily
-done using QoS, which is not widely supported over IPv4 networks.
+standard by end users regarding delays, such as network congestion, 
+network jitter  and other interruptions. IP datagrams are designed to 
+allow delivery in a non-sequential order, before the destination node 
+reassembles them sequentially. This behaviour causes noticeable delay 
+and distortions in multimedia applications. Attempts to address this 
+issue are primarily done using QoS, which is not widely supported over 
+IPv4 networks.
 
 
-For these reasons, VoIP protocols (and their multimedia cousins) are
-better suited over IPv6, as they raise many of the limitations
-encountered with IPv4. 
+There are also security concerns relating to protecting VoIP streams
+from malicious attack. Security features built into IPv6, such as IPsec,
+(as discussed in sec X) would help address such issues. For these 
+reasons, VoIP protocols (and their multimedia cousins) are better suited 
+over IPv6, as they raise many of the limitations encountered with IPv4. 
 
 \subsection{Remote Computing}
 
 Remote computing is an important technology for allowing users to access
-and operate systems and computers that they are not physically close to. 
-By using network and internet connections, users can remotely access 
-their computers allowing greater convenience, and often practicality, in
-accessing systems which it would be inconvenient or impossible to get to  
-otherwise. Telnet was one of the earliest protocols used for remote 
-computing, allowing general byte orientated communications that was 
-often used for simple command line login sessions. Other similar 
-protocols would come about but one in particular, SSH, became  very 
-popular in the late 1990s due to being far very secure and powerful. 
-It also allowed other protocols such as SCP and FTP to be tunneled
-through it. Other remote computing protocols include VNC and RDP (which
-supports Microsoft's Terminal Services) which allow full screen
-graphical interaction with the remote computer allowing negotiation of 
-GUIs. There is also X11, a Windowing system that is designed to allow 
-the user interface to run on a different machine to the actual programs. 
+and operate systems and computers that they are not physically close 
+to. By using network and internet connections, users can remotely access 
+their computers allowing greater convenience, and often practicality, 
+in accessing systems which it would be inconvenient or impossible to get 
+to otherwise. 
 
 
-In some ways, the benefits of IPv6 to remote computing programs is
-similar to its benefits to VOIP. In both cases there are 
-instances of one computer connecting to another and communicating with it. 
-Hence, the ability of IPv6 to give each computer an individual IP address 
-makes it a lot easier for computers to connect and communicate with each 
-other as there is no need for a NAT which would hinder communication.
-Depending on the protocol used, remote computing may also require good 
-QoS which Ipv6 also provides.
+Telnet was one of the earliest protocols used for remote computing, 
+allowing general byte orientated communications that was often used for 
+simple command line login sessions. Other similar protocols came out, 
+including rsh in 1983 which was more flexible and hence replaced Telnet 
+as the de-facto standard on Unix. However, a later protocol, SSH, became 
+very popular in the late 1990s due to being powerful and far more secure 
+secure with authentication and encryption, ensuring that remote login 
+sessions could take place over even untrusted networks with relative 
+security. 
 
 
-Given that the information transported in a remote login session is
-sensitive (given that it tells and determines everything you are doing)   
-security is an important feature. IPv6 ensures mandatory IPsec support, a 
-standard for encryption and authentication of IP packets. While some 
-some protocols such as SSH already have security features, IPsec is   
-capable of quickly adding security to any remote login protocol, 
-including telnet, given that it is built into the layers of the IPv6 
-protocol. IPsec can help to protect against such threats as packet 
-sniffing or fake packets, which could either compromise information,
-cause disruption or cause the host to perform unwarranted operation the
-during a remote session.
+Other remote computing protocols include VNC and RDP (which supports 
+Microsoft's Terminal Services) which allow full screen graphical 
+interaction with the remote computer allowing negotiation of GUIs. 
+There is also X11, a windowing system that is designed to allow the 
+user interface to run on a different machine to the actual programs.
 
 \section{Network Configuration and Administration}
 
@@ -187,6 +178,7 @@ do as little manual configuration as possible for each node. Furthermore,
 should your network configuration change at some point, for instance moving a
 system to another network, it is desirable that the effort required be
 minimised. It is for these reasons that automatic configuration is useful.
+
 
 One manner of providing automatic configuration is that of DHCP, the Dynamic
 Host Configuration Protocol as defined in RFC2131 for IPv4. The method of
@@ -198,11 +190,13 @@ client node, allowing it to take the address. The client sends out an ARP
 request, to ensure that the address really is free, and if this is so starts
 using its new address.
 
+
 Note that this requires a server to be setup on the network. It also requires,
 in addition to unicast packets, three broadcasts, each of which must be
 processed by every system in the same broadcast domain. In practise the
 broadcast domain would be the entire subnet. Accordingly if the network size
 doubles, the processing required will quadruple.
+
 
 Contrast that with the stateless autoconfiguration provided by RFC2463 for
 IPv6 where no server is required to generate link-local addresses. This address
@@ -212,10 +206,12 @@ Duplicate Address Detection is used, which involves sending a packet to the
 candidate address and waiting for a reply. Unlike similar to DHCP this is not a
 broadcast packet.
 
+
 To provide routing beyond the local link, a global address is required. The
 manner in which this works is that routers send out Routing Advertisements at
 regular intervals, this provides a network prefix which is combined with the
 unique address generated above. It also provides routing information.
+
 
 Comparing at the IPv4 and IPv6 autoconfiguration methods one notes that it is
 not possible to autoconfigure an IPv4 without setting up a separate server for
@@ -224,6 +220,7 @@ server. For the next level of configuration routers have to be configured,
 however this isn't as much of a burden as for a network with more than one
 subnet as the routers would have to be configured anyway.
 
+
 A further advantage of IPv6 autoconfiguration, as with IPv6 in general, is that
 all implementations are required to support encryption. This gives
 administrators the ability to remove one of the problems with DHCP - namely
@@ -231,6 +228,25 @@ that there is no way to distinguish a valid server from a rouge server.
 
 \section{Conclusion}
 
+After researching, comparing and contrasting various layer 7 application
+protocols widely used in modern times, we have failed to find any cases
+where the use of IPv4 has technical advantages over IPv6. All of the
+popular routing protocols used in the current IPv4 world are already
+IPv6 ready. In addition, prefix routing has built upon the CIDR
+allocation system which was devised as a stop gap measure to slow the 
+rate of IPv4 exhuastion.
+
+
+Modern VoIP application protocols actually benefit from IPv6 rather than
+IPv4, since IPv6 boasts QoS, security and a lack of NAT as improvements
+relavent to VoIP. Remote login protocols are primarily unaffected by the
+differences between IPv4 and IPv6. The majority of such protocols are
+IPv6 aware and compatable.
+
+
+Finally, IPv6 has built in safeguards and available tools to drastically
+decrease the effort required to administer IPv6 in comparision
+to IPv4 on the same subnet.
 
 \section{References}
 
