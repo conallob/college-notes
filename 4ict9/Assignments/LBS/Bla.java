@@ -22,10 +22,10 @@ class Bla {
                 while ((line = in.readLine()) != null) {
 								if (line.endsWith(":")) {
 									System.out.println(line.replace(':',',')); 
-								} else {
-									if (line.length() > 2) {
-										System.out.println(line);
-									}
+								} else if (line.startsWith("#")) {
+									System.out.println("Coordinates: " + (line.replace('#',' ')).trim());
+								} else if (line.length() > 2) {
+									System.out.println(line);
 								}	
 							}
             } 
