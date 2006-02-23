@@ -3,6 +3,10 @@
 \documentclass[a4paper,12pt]{article}
 
 \usepackage[arc,poly,all]{xy}
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
@@ -23,8 +27,9 @@ The assignment was broken down in the following structure
 \begin{tabular}{lcl}
 Entire Group &	\hspace{15mm}	&	Descision of Application Ideas	\\
 David Collins	&					&	Mobile Emulator Programming			\\
+David Collins	&					&	Ericsson LBS Library Development \\
 Conall O'Brien	&					&	Middleware JSP Servlet \\
-David Collins	&					&	Integration	of Middleware and Emulator \\
+Conall O'Brien	&					&	Integration	of Middleware and Emulator \\
 Conall O'Brien	&					&	Preparation of Report					\\
 \end{tabular}
 
@@ -55,6 +60,17 @@ showing times for a cinema close to their current location.
 
 \end{figure}
 
+\section{Code}
+
+\subsection{Middleware}
+
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{MTLRResult.java}[language=java]
+
+\subsection{Mobile Client}
+
+\lstset{breaklines=true,tabsize=3,basicstyle=\ttfamily}
+\lstinputlisting{movieLBS.java}[language=java]
 
 \section{Problems Encountered}
 
@@ -62,6 +78,19 @@ Conall encountered numerous issues while trying to develop the
 middleware application. These issues were mainly connected to Java
 enviromental settings and using Tomcat.
 
-David...
+\section{Possible Improvements}
+
+The middleware servlet could be adapted to perform increased
+functionality. 
+
+Such possible features include:
+
+\begin{itemize}
+\item Client specified proximity, to adjust the distance between the user and the cinema locations
+
+\item Further filter results to only provide showing times after the timestamp of the request
+
+\item Further information available for each film showing, such as film synopsis, review, availability, etc
+\end{itemize}
 
 \end{document}
