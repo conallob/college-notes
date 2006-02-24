@@ -143,7 +143,7 @@ int main(int argc, const char * const argv[])
     
     fprintf(stdout, "\tServer:  Beginning to poll for socket.......");
     rv = 1; 
-    if (apr_poll(sdset, &rv, &rv, -1) != APR_SUCCESS) {
+    if (apr_poll(sdset, 1, &rv, -1) != APR_SUCCESS) {
         apr_socket_close(sock);
         fprintf(stderr, "Select caused an error\n");
         exit(-1);
