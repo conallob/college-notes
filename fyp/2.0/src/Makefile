@@ -7,13 +7,13 @@ APR_LDFLAGS= $(shell apr-config --includes --cflags --cppflags --link-ld --libs)
 
 TARGET= oi-test
 
-.PHONY: clean linklist.c client.c daemon.c apr_client.c
+.PHONY: clean linklist.c client.c daemon.c apr_client.c oid.c
 
 all: current
 
-current: milestone
+current: milestone2
 
-milestone1: client
+milestone2: apr_client daemon oid
 
 clean: clean.o clean.target
 
@@ -24,9 +24,8 @@ apr_client: apr_client.c
 client: client.c linklist.c
 	$(CC) linklist.o client.o $(LDFLAGS) $(APR_LDFLAGS) -o client 
 
-daemon: daemon.c
-	$(CC) daemon.o $(LDFLAGS) $(APR_LDFLAGS) -o daemon
-
+daemon: oid.c
+	$(CC) oid.o $(LDFLAGS) $(APR_LDFLAGS) -o oid
 
 linklist.c:
 	$(CC) $(CFLAGS) -c linklist.c $(APR_CFLAGS)
@@ -41,8 +40,8 @@ apr_client.c:
 client.c:
 	$(CC) $(CFLAGS) -c client.c $(APR_CFLAGS)
 
-daemon.c:
-	$(CC) $(CFLAGS) -c daemon.c $(APR_CFLAGS)
+oid.c:
+	$(CC) $(CFLAGS) -c oid.c $(APR_CFLAGS)
 
 
 clean.o:
@@ -52,4 +51,4 @@ clean.out:
 	rm *.out
 
 clean.target:
-	rm $(TARGET)
+	rm $(TARGET) daemon client apr_client oid
