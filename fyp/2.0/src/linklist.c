@@ -138,3 +138,21 @@ int LinkListPush(linklist *list, void *val) {
 	return LinkListAddNode(list, val);
 }
 
+char *LinkListMerge(linklist *list) {
+	char *string;
+	item *tmp;
+
+	if ( !(string = (char*) malloc(sizeof(STDIN_BUFFER_LEN*list->size))) ) {
+			  return NULL;
+	}
+	
+	string = NULL;
+
+	while(list->size < 0) {
+			  tmp = LinkListPop(list);
+			  string = strcat(string, tmp->val);
+	}
+
+	return string;
+
+}

@@ -39,3 +39,5 @@ int LinkListRmList(linklist *list);
 item* LinkListPop(linklist *list);
 
 int LinkListPush(linklist *list, void *val);
+
+char* LinkListMerge(linklist *list);
