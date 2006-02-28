@@ -9,13 +9,19 @@
 
 \begin{document}
 
-\title{4BA2 \\ Analysis of IP suitability for various application domains}
+\title{4BA2 \\ \hspace{5mm} \\ Analysis of IP Suitability For Various Application Domains}
 
 \author{Brian Brazil (02017610) brazilb@tcd.ie \\
-David Collins (02704030) collinda@tcd.ie \\ 
+David Collins (02704030) collinda@tcd.ie \\
 Conall O'Brien (01734351) conallob@maths.tcd.ie}
 
 \maketitle
+
+\pagebreak 
+
+\tableofcontents
+
+\pagebreak 
 
 \section{Introduction}
 
@@ -63,7 +69,7 @@ address spoofing, many of which are connected to security issues with
 the Address Resolution Protocol (ARP), a protocol it uses to communicate
 with Layer 2 protocols. ARP, by it's nature is an unauthenticated, 
 broadcast protocol which is susceptible to attacks and "cache poisoning".
-Finally, modern applications which require realtime QoS have also 
+Finally, modern applications which require real-time QoS have also 
 suffered from a certain inflexibility of IPv4 in adapting to suit their 
 needs.
 
@@ -140,7 +146,9 @@ IPv4 networks.
 
 There are also security concerns relating to protecting VoIP streams
 from malicious attack. Security features built into IPv6, such as IPsec,
-(as discussed in sec X) would help address such issues. For these 
+would help address such issues. Additionally, since IP Multicast has
+been merged into ICMPv6, one to many and many to many multicast 
+connections make multicast conference calls more of a reality. For these 
 reasons, VoIP protocols (and their multimedia cousins) are better suited 
 over IPv6, as they raise many of the limitations encountered with IPv4. 
 
@@ -171,7 +179,7 @@ interaction with the remote computer allowing negotiation of GUIs.
 There is also X11, a windowing system that is designed to allow the 
 user interface to run on a different machine to the actual programs.
 
-\section{Network Configuration and Administration}
+\subsection{Network Configuration and Administration}
 
 On a network with any more than a handful of active nodes, it is desirable to
 do as little manual configuration as possible for each node. Furthermore,
@@ -193,12 +201,12 @@ using its new address.
 
 Note that this requires a server to be setup on the network. It also requires,
 in addition to unicast packets, three broadcasts, each of which must be
-processed by every system in the same broadcast domain. In practise the
+processed by every system in the same broadcast domain. In practice the
 broadcast domain would be the entire subnet. Accordingly if the network size
 doubles, the processing required will quadruple.
 
 
-Contrast that with the stateless autoconfiguration provided by RFC2463 for
+Contrast that with the stateless autoconfiguration provided by RFC 2463 for
 IPv6 where no server is required to generate link-local addresses. This address
 is generated from the Media Access Control (MAC) address of the Network
 Interface Card (NIC), which are in theory unique. To verify this an algorithm called
@@ -215,7 +223,7 @@ unique address generated above. It also provides routing information.
 
 Comparing at the IPv4 and IPv6 autoconfiguration methods one notes that it is
 not possible to autoconfigure an IPv4 without setting up a separate server for
-DHCP. With IPv6 basic autoconfiuration is builtin and requires no special
+DHCP. With IPv6 basic autoconfiguration is built in and requires no special
 server. For the next level of configuration routers have to be configured,
 however this isn't as much of a burden as for a network with more than one
 subnet as the routers would have to be configured anyway.
@@ -234,31 +242,80 @@ where the use of IPv4 has technical advantages over IPv6. All of the
 popular routing protocols used in the current IPv4 world are already
 IPv6 ready. In addition, prefix routing has built upon the CIDR
 allocation system which was devised as a stop gap measure to slow the 
-rate of IPv4 exhuastion.
+rate of IPv4 exhaustion.
 
 
 Modern VoIP application protocols actually benefit from IPv6 rather than
 IPv4, since IPv6 boasts QoS, security and a lack of NAT as improvements
-relavent to VoIP. Remote login protocols are primarily unaffected by the
+relevant to VoIP. Remote login protocols are primarily unaffected by the
 differences between IPv4 and IPv6. The majority of such protocols are
-IPv6 aware and compatable.
+IPv6 aware and compatible.
 
 
 Finally, IPv6 has built in safeguards and available tools to drastically
-decrease the effort required to administer IPv6 in comparision
+decrease the effort required to administer IPv6 in comparison
 to IPv4 on the same subnet.
 
 \section{References}
 
+Title: IPv6 Network Administration \\
+Author(s): Niall Richard Murphy, David Malone \\
+Publisher: O'Reilly \\
+Published Date: March 2005  \\
+ISBN: 0-596-00934-8	 
+
 Title: RFC 791 - Internet Protocol \\
 Author(s): Jon Postel \\
-Publisher: IETF
+Publisher: IETF \\
 Published Date: September 1981 \\
 URL: \url{http://www.ietf.org/rfc/rfc791.txt}	 
 
+Title: RFC 854 - Telnet Protocol Specification \\
+Author(s): J. Postel, J. Reynolds \\
+Publisher: IETF \\
+Published Date: May 1983 \\
+URL: \url{http://www.ietf.org/rfc/rfc854.txt}	 
+
+Title: RFC 1058 - Routing Information Protocol \\
+Author(s): C. Hedrick \\
+Publisher: IETF \\
+Published Date: June 1988 \\
+URL: \url{http://www.ietf.org/rfc/rfc1058.txt}	 
+
+Title: RFC 1131 - OSPF specification \\
+Author(s): J. Moy \\
+Publisher: IETF \\
+Published Date: October 1989 \\
+URL: \url{http://www.ietf.org/rfc/rfc1131.txt}	 
+
+Title: RFC 1258 - BSD Rlogin \\
+Author(s): B. Kantor \\
+Publisher: IETF \\
+Published Date: December 1991 \\
+URL: \url{http://www.ietf.org/rfc/rfc1258.txt}	 
+
+Title: RFC 1519 - Classless Inter-Domain Routing (CIDR): an Address \\
+\hspace{15mm} Assignment and Aggregation Strategy \\
+Author(s): V. Fuller, T. Li, J. Yu, K. Varadhan \\
+Publisher: IETF \\
+Published Date: September 1993  \\
+URL: \url{http://www.ietf.org/rfc/rfc1519.txt}	 
+
+Title: RFC 1613 - The IP Network Address Translator (NAT) \\
+Author(s): K. Egevang, P. Francis \\
+Publisher: IETF \\
+Published Date: May 1994  \\
+URL: \url{http://www.ietf.org/rfc/rfc1613.txt}	 
+
+Title: RFC 1771 - A Border Gateway Protocol 4 (BGP-4) \\
+Author(s): Y. Rekhter, T. Li \\
+Publisher: IETF \\
+Published Date: March 1995  \\
+URL: \url{http://www.ietf.org/rfc/rfc1771.txt}	 
+
 Title: RFC 1918 - Address Allocation for Private Internets \\
-Author(s): Y. Rekhter, B. Moskowitz, D. Karrenberg, G. J. de Groot, \
-\indent E. Lear \\
+Author(s): Y. Rekhter, B. Moskowitz, D. Karrenberg, G. J. de Groot, \\
+\hspace{15mm} E. Lear \\
 Publisher: IETF \\
 Published Date: February 1996  \\
 URL: \url{http://www.ietf.org/rfc/rfc791.txt}	 
@@ -269,23 +326,36 @@ Publisher: IETF \\
 Published Date: March 1997 \\
 URL: \url{http://www.ietf.org/rfc/rfc2131.txt}	 
 
-Title: RFC2462 - IPv6 Stateless Autoconfiguration
-Author(): S. Thomson, T. Narten
+Title: RFC 2460 - Internet Protocol, Version 6 (IPv6) Specification \\
+Author(s): S. Deering, R. Hinden \\
 Publisher: IETF \\
-Published Date: December 1998
+Published Date: December 1998 \\
+URL: \url{http://www.ietf.org/rfc/rfc2460.txt}	 
+
+Title: RFC 2462 - IPv6 Stateless Autoconfiguration \\
+Author(s): S. Thomson, T. Narten \\
+Publisher: IETF \\
+Published Date: December 1998\\
 URL: \url{http://www.ietf.org/rfc/rfc2462.txt}	 
+
+Title: RFC 2463 - Internet Control Message Protocol (ICMPv6) for the \\
+\hspace{15mm} Internet Protocol Version 6 (IPv6) Specification \\
+Author(s): A. Conta, S. Deering \\
+Publisher: IETF \\
+Published Date: December 1998 \\
+URL: \url{http://www.ietf.org/rfc/rfc2463.txt}	 
+
+Title: RFC 2710 - Multicast Listener Discovery (MLD) for IPv6 \\
+Author(s): S. Deering, W. Fenner, B. Haberman \\
+Publisher: IETF \\
+Published Date: October 1999 \\
+URL: \url{http://www.ietf.org/rfc/rfc2710.txt}	 
 
 Title: RFC 3261 - SIP: Session Initiation Protocol \\
 Author(s): J. Rosenberg, H. Schulzrinne, G. Camarillo, A. Johnston, \\
-\indent J. Peterson, R. Sparks, M. Handley, E. Schooler \\
+\hspace{15mm} J. Peterson, R. Sparks, M. Handley, E. Schooler \\
 Publisher: IETF \\
 Published Date: June 2002  \\
 URL: \url{http://www.ietf.org/rfc/rfc3261.txt}	 
-
-Title: IPv6 Network Administration \\
-Author(s): Niall Richard Murphy, David Malone \\
-Publisher: O'Reilly \\
-Published Date: March 2005  \\
-ISBN: 0-596-00934-8	 
 
 \end{document}
