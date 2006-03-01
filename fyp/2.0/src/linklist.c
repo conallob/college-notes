@@ -142,13 +142,15 @@ char *LinkListMerge(linklist *list) {
 	char *string;
 	item *tmp;
 
-	if ( !(string = (char*) malloc(sizeof(char)*STDIN_BUFFER_LEN*list->size)) ) {
-			  return NULL;
-	}
-	
 	string = NULL;
 
-	while(list->size < 0) {
+	if ( !(string = (char*) malloc(sizeof(char)*STDIN_BUFFER_LEN*(list->size))) ) {
+			  return NULL;
+	}
+
+	string[0] = '\0';
+	
+	while(list->size > 0) {
 			  tmp = LinkListPop(list);
 			  strcat(string, tmp->val);
 	}
