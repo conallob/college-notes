@@ -8,6 +8,7 @@
 
 #include <stdlib.h>
 #include "apr_network_io.h"
+#include "apr_file_io.h"
 #include "apr_errno.h"
 #include "apr_general.h"
 #include "apr_getopt.h"
@@ -22,7 +23,7 @@ static void closeapr(void)
 
 int main(int argc, const char * const argv[])
 {
-    apr_pool_t *context;
+    apr_pool_t *context, *sin, *sout, *serr;
     apr_socket_t *sock;
     apr_socket_t *sock2;
     apr_size_t length;
@@ -40,24 +41,58 @@ int main(int argc, const char * const argv[])
     apr_getopt_t *opt;
     const char *optarg;
     char optchar;
+	 apr_pool_t *p, *q, *e;
+	 apr_file_t *fp_in, *fp_out, *fp_err;
 
     if (apr_initialize() != APR_SUCCESS) {
         fprintf(stderr, "Something went wrong\n");
         exit(-1);
     }
+
     atexit(closeapr);
 
     if (apr_pool_create(&context, NULL) != APR_SUCCESS) {
         fprintf(stderr, "Could not create a context\n");
         exit(-1);
     }
-    fprintf(stdout, "OK\n");
 
     if (apr_getopt_init(&opt, context, argc, argv)) {
         fprintf(stderr, "failed to initialize opts\n");
         exit(-1);
     }
 
+	 if (apr_pool_create(&sin, NULL) != APR_SUCCESS) {
+				fprintf(stderr, "Could not create a sin pool");
+				exit(-1);
+	 }
+
+	 if (apr_pool_create(&sout, NULL) != APR_SUCCESS) {
+				fprintf(stderr, "Could not create a sout pool");
+				exit(-1);
+	 }
+
+	 if (apr_pool_create(&serr, NULL) != APR_SUCCESS) {
+				fprintf(stderr, "Could not create a serr pool");
+				exit(-1);
+	 }
+
+	 /* Open stdin, stdout & stderr */
+
+	 if (apr_file_open_stdin(&fp_in, sin) != APR_SUCCESS) {
+				fprintf(stderr, "Could not open stdin");
+				exit(-1);
+	 }
+
+	 if (apr_file_open_stdout(&fp_out, sout) != APR_SUCCESS) {
+				fprintf(stderr, "Could not open stdout");
+				exit(-1);
+	 }
+
+	 if (apr_file_open_stderr(&fp_err, serr) != APR_SUCCESS) {
+				fprintf(stderr, "Could not open stderr");
+				exit(-1);
+	 }
+	 
     while ((stat = apr_getopt(opt, "i:", &optchar, &optarg)) == APR_SUCCESS) {
         switch(optchar) {
         case 'i':
@@ -66,7 +101,7 @@ int main(int argc, const char * const argv[])
         }
     }
     if (stat != APR_EOF) {
-        fprintf(stderr,
+        apr_file_printf(fp_err,
                 "usage: %s [-i local-interface-address]\n",
                 argv[0]);
         exit(-1);
@@ -80,7 +115,7 @@ int main(int argc, const char * const argv[])
         stat = apr_sockaddr_info_get(&localsa, bind_to_ipaddr, APR_UNSPEC, 8021, 0,
                                context);
         if (stat != APR_SUCCESS) {
-            fprintf(stderr,
+            apr_file_printf(fp_err,
                     "Couldn't build the socket address correctly: %s\n",
                     apr_strerror(stat, buf, sizeof buf));
             exit(-1);
@@ -89,19 +124,19 @@ int main(int argc, const char * const argv[])
     }
 
     if (apr_socket_create(&sock, family, SOCK_STREAM, context) != APR_SUCCESS) {
-        fprintf(stderr, "Couldn't create socket\n");
+        apr_file_printf(fp_err, "Couldn't create socket\n");
         exit(-1);
     }
 
     if (apr_setsocketopt(sock, APR_SO_NONBLOCK, 1) != APR_SUCCESS) {
         apr_socket_close(sock);
-        fprintf(stderr, "Couldn't set socket option\n");
+        apr_file_printf(fp_err, "Couldn't set socket option\n");
         exit(-1);
     }
 
     if (apr_setsocketopt(sock, APR_SO_REUSEADDR, 1) != APR_SUCCESS) {
         apr_socket_close(sock);
-        fprintf(stderr, "Couldn't set socket option\n");
+        apr_file_printf(fp_err, "Couldn't set socket option\n");
         exit(-1);
     }
 
@@ -112,86 +147,91 @@ int main(int argc, const char * const argv[])
 
     if ((stat = apr_bind(sock, localsa)) != APR_SUCCESS) {
         apr_socket_close(sock);
-        fprintf(stderr, "Could not bind: %s\n",
+        apr_file_printf(fp_err, "Could not bind: %s\n",
                 apr_strerror(stat, buf, sizeof buf));
         exit(-1);
     }
     
     if (apr_listen(sock, 5) != APR_SUCCESS) {
         apr_socket_close(sock);
-        fprintf(stderr, "Could not listen\n");
+        apr_file_printf(fp_err, "Could not listen\n");
         exit(-1);
     }
 
     apr_poll_setup(&sdset, 1, context);
     apr_poll_socket_add(sdset, sock, APR_POLLIN);
-    fprintf(stdout, "OK\n");
     
     rv = 1; 
     if (apr_poll(sdset, 1, &rv, -1) != APR_SUCCESS) {
         apr_socket_close(sock);
-        fprintf(stderr, "Select caused an error\n");
+        apr_file_printf(fp_err, "Select caused an error\n");
         exit(-1);
     }
     else if (rv == 0) {
         apr_socket_close(sock);
-        fprintf(stderr, "I should not return until rv == 1\n");
+        apr_file_printf(fp_err, "I should not return until rv == 1\n");
         exit(-1);
     }
 
     if (apr_accept(&sock2, sock, context) != APR_SUCCESS) {
         apr_socket_close(sock);
-        fprintf(stderr, "Could not accept connection.\n");
+        apr_file_printf(fp_err, "Could not accept connection.\n");
         exit(-1);
     }
+	 
     apr_socket_addr_get(&remotesa, APR_REMOTE, sock2);
     apr_sockaddr_ip_get(&remote_ipaddr, remotesa);
     apr_sockaddr_port_get(&remote_port, remotesa);
     apr_socket_addr_get(&localsa, APR_LOCAL, sock2);
     apr_sockaddr_ip_get(&local_ipaddr, localsa);
     apr_sockaddr_port_get(&local_port, localsa);
-    fprintf(stdout, "\tServer socket: %s:%u -> %s:%u\n", local_ipaddr, local_port, remote_ipaddr, remote_port);
+    apr_file_printf(fp_out, "Server socket: %s:%u -> %s:%u\n", local_ipaddr, local_port, remote_ipaddr, remote_port);
 
     length = STRLEN;
+
     if (apr_recv(sock2, datasend, &length) != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_socket_close(sock2);
-        fprintf(stderr, "Problem recving data\n");
+        apr_file_printf(fp_err, "Problem recving data\n");
         exit(-1);
     }
+
+	 /*
     if (strcmp(datasend, "Send data test")) {
         apr_socket_close(sock);
         apr_socket_close(sock2);
-        fprintf(stderr, "I did not receive the correct data %s\n", datarecv);
+        apr_file_printf(fp_err, "I did not receive the correct data %s\n", datarecv);
         exit(-1);
     }
+	 */
+
+	 apr_file_printf(fp_out, "%s\n", datasend);
 
     length = STRLEN;
     if (apr_send(sock2, datarecv, &length) != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_socket_close(sock2);
-        fprintf(stderr, "Problem sending data\n");
+        apr_file_printf(fp_err, "Problem sending data\n");
         exit(-1);
     }
     
     if (apr_shutdown(sock2, APR_SHUTDOWN_READ) != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_socket_close(sock2);
-        fprintf(stderr, "Problem shutting down\n");
+        apr_file_printf(fp_err, "Problem shutting down\n");
         exit(-1);
     }
 
     if (apr_socket_close(sock2) != APR_SUCCESS) {
         apr_socket_close(sock);
-        fprintf(stderr, "Problem closing down\n");
+        apr_file_printf(fp_err, "Problem closing down\n");
         exit(-1);
     }
     
     if (apr_socket_close(sock) != APR_SUCCESS) {
-        fprintf(stderr, "Problem closing down\n");
+        apr_file_printf(fp_err, "Problem closing down\n");
         exit(-1);
     }
 
     return 1;
 }
-
