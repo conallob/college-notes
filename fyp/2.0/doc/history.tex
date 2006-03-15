@@ -1,0 +1,44 @@
+Since the release of Version 1 of AT\&T Unix upon the world 
+\footnote{http://www.faqs.org/faqs/unix-faq/faq/part6/section-2.html}{in 1971}, 
+there has been the \emph{write} tool, which allows multiple users on a Unix 
+system to communicate with each other.
+
+
+\emph{write} is quite simple and delivers a message one line at a time,
+resulting in the recipient of a \emph{write} message waiting while the
+sender composes the next line of his or her message.
+
+
+Due ot this behaviour, implementing a tool which buffers the message
+prior to sending is a logical progression for improved communication
+between users. Since this is a logical progression, I believe this
+enhancement has been implemented by many people, however I am mainly
+aware of the timeline of \emph{hey} from Trinity College Dublin in 
+the early 1990s.
+
+
+In 199X, \emph{hey} was created as a shell script by Adrian Colley. In 
+1993/1994, Paul McGaley translated \emph{hey} to Perl and enhanced it's 
+usability until 1996. Paul's Perl version of \emph{hey} resurfaced in 
+Dublin City University's RedBrick Society in 1998, where it was enhanced
+further by Colin Whittaker and others to interpret enviromental variable 
+settings and accept additional command line flags.
+
+
+Due to it's popularity in RedBrick, Cian Synnott begun work in 1998/1999
+on a version written in C, known as \emph{c-hey}. \emph{c-hey} has since
+recieved many contributions and additional features such as user
+definible formatting and at the time of writing, is currently maintained 
+by Colm MacC\'{a}rthaigh.
+
+
+Meanwile in 199X, back in Trinity College, Aidan Kehoe began work on his
+own rewrite of \emph{hey} in C. Over the following years, it inherited 
+and shared many feaures with RedBrick's c-hey, including ANSI colour
+formatting.
+
+
+Finally, in 2000/2001, the idea of making hey distributed across a
+network was formed by John Tobin in Trinity College. He went on to 
+christened this idea \emph{oi} and work on it as his final year project
+in 2002. 
