@@ -1,0 +1,34 @@
+% $Id$
+
+Given the requirements of dual stacked IPv4 and IPv6 networking,
+portable code, cryptography to ensure security, unicode to support
+multiple languages, and multicast support to avail of modern network
+capabilities.
+
+
+Since there are many existing messaging clients and protocols available,
+what use is there for this client? Most IM clients available are GUI
+based. While there are a select few CLI based clients for Unix systems,
+but they are all interactive clients which work in the foreground of a
+Unix console. These clients do not act as true Unix tools, which are
+traditionally simple, consise and flexible, thus allowing a user to
+harness their immense power, by combining multiple tools together.
+
+
+Existing IM clients transmit unencrypted messages between users as
+standard. Although there are 
+\footnote{For example, Off The Record - http://www.cypherpunks.ca/otr/}{recent enhancements}
+to encrypt messages, unencrypted messages are still send by default.
+Additionally, these enhancements to existing IM protocols use different
+cryptography cypers since there is no standard, de facto or otherwise.
+
+
+IP Multicast networking has only become popular in recent times, so most
+networks still don't support IP Multicast partially, or at all. One of
+the reasons why Multicast is not widely deployed is because there is yet
+to be a \emph{killer application} . Most multicast protocols distribute
+multimedia formats to many users. Hence, these complex applications 
+are not suited to perform basic multicast functionality tests. A simple,
+lightweight messaging system, such as \emph{oi} is a much better  
+application to test a multicast deployment, before attempting more
+significant or complete tests.

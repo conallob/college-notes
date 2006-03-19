@@ -1,9 +1,11 @@
 % $Id$
 
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,12pt]{book}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
+
+\usepackage{url}
 
 \begin{document}
 
@@ -11,35 +13,37 @@
 
 \author{Conall O'Brien \\ 01734351 \\ conallob@maths.tcd.ie}
 
+\pagenumbering{roman}
+
 \maketitle
 
-\pagebreak
+\section[Acknowledgements]*{Acknowledgements}
 
-\chapter{Abstract}
+\input acknowledgements
 
-\pagebreak
+\section[Abstract]*{Abstract}
 
-\chapter{Ackowledgements}
-
-\pagebreak
-
+Abstract
 
 \tableofcontents
 
-\pagebreak
+\part*{}
 
+\pagenumbering{arabic}
 
 \chapter{Introduction}
 
+\section{History of Hey and Oi}
 
-\section{History of Oi and Hey} 
+\input history
 
 \section{Objective}
 
+\input objective
+
 \subsection{Practical Uses}
 
-\pagebreak
-
+\input practicaluses
 
 \chapter{Design}
 
@@ -59,16 +63,12 @@
 
 \section{Message Transmission Format}
 
-\pagebreak
-
 
 \chapter{Implemention}
 
 \section{Language Chosen}
 
 \section{Libraries Used}
-
-\pagebreak
 
 
 \chapter{Problems Encountered}
@@ -83,8 +83,6 @@
 
 \subsection{Milestones}
 
-\pagebreak
-
 
 \chapter{Project Conslusions}
 
@@ -96,8 +94,7 @@
 
 \section{Final Conclusions}
 
-\pagebreak
-
+\part*{Appendices}
 
 \chapter{Appendix I - Background}
 
@@ -113,14 +110,10 @@
 
 \section{XMPP}
 
-\pagebreak
-
 
 \chapter{Appendix II - Project Journal}
 
 \section{Weekly Progress}
-
-\pagebreak
 
 
 \chapter{Appendix III - Bibliography, References and Tools Used}
@@ -129,6 +122,8 @@
 
 \section{Reference}
 
+\input references
+
 \subsection{Books}
 
 \subsection{Websites}
@@ -136,5 +131,7 @@
 \subsection{Mailing Lists}
 
 \section{Software}
+
+\input usefulapps
 
 \end{document}
