@@ -9,13 +9,18 @@
 
 #include <sys/stat.h>
 #include <unistd.h>
+#include <string.h>
 
-#include "apr_strings.h"
+/*
+ * #include "apr_string.h"
+ */
 
 #include "oi_logins.h"
 #include "utent.h"
-//#include "aux.h"
+#include "aux.h"
 
+#define NAMELEN	16
+#define TTYLEN 	8
 
 /* Does a user exist on the system ? */
 int oi_user_exists(oi_user *u) {
@@ -27,7 +32,7 @@ int oi_mesg_on(char *tty) {
 	char filename[FILENAME_MAX];
 	struct stat s;
 
-	apr_snprintf(filename, FILENAME_MAX, "/dev/%s", tty);
+	snprintf(filename, FILENAME_MAX, "/dev/%s", tty);
 
 	if(tty[0]==':') /* we need to ignore ":0" type tty's on X systems */
 		return 0;

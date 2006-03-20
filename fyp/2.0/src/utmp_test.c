@@ -1,23 +1,37 @@
-#include "oi_structs.h"
+/* $Id$ */
+
+/*
+ * #include "oi_structs.h"
+ */
 #include "oi_logins.h"
+#include "utent.h"
+
+#include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
+#include <unistd.h> 
+
+#define WRITE_BIN "/usr/bin/write"
+#define COMMANDLEN 64
 
 int main(int argc, char **argv) {
 
 		  oi_user *u;
-		  char command[64];
+
+		  char command[COMMANDLEN];
 		  FILE *pipe;
 		  char *ptr;
 
-		  /*u = malloc(sizeof(oi_user));*/
+		  strncpy(u->name, argv[1], NAMELEN);
 
-		  strcpy(u->name, "conall");
 		  u->tty[0] = 0;
 		  u->exists = 0;
 		  u->login = 0;
 		  u->mesg = 0;
 
-		  if (!oi_user_exist(u)) {
+		  ptr = "Testing 123\n";
+
+		  if (!oi_user_exists(u)) {
 					 fprintf(stderr, "Stop talking to imaginary people!");
 					 exit(-1);
 		  }
@@ -37,8 +51,9 @@ int main(int argc, char **argv) {
 					}
 		  }
 
-			sprintf(command, 64, "%s %s ", WRITE_BIN, u->name);		
-			/*if (u->tty[0]) strncat(command, u->tty, 63);*/
+			snprintf(command, COMMANDLEN, "%s %s ", WRITE_BIN, u->name);		
+
+			if (u->tty[0]) strncat(command, u->tty, (COMMANDLEN - 1));
 
 			if (!(pipe = popen(command, "w"))) {
 					  fprintf(stderr, "Aaaagh! Can't open pipe!\n");
