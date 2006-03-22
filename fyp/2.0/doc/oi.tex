@@ -1,27 +1,40 @@
 % $Id$
 
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt]{report}
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
 
 \usepackage{url}
+%\usepackage{glossary}
+\usepackage[all]{xy}
+
+%\makeglossary
 
 \begin{document}
 
-\title{Oi \\ A Secure, Distributed CLI Messaging System}
+\setlength{\rightskip}{0pt plus 2cm}
 
-\author{Conall O'Brien \\ 01734351 \\ conallob@maths.tcd.ie}
+\title{Oi \\ A Secure, Distributed, Unix Messaging System}
 
-\pagenumbering{roman}
+\author{Student: Conall O'Brien \\ 
+		  Course:  B.A. (Mod) Computer Science \\
+		  Final Year Project \\ 
+		  Supervisor: Stephen Barrett} 
 
 \maketitle
 
-\section[Acknowledgements]*{Acknowledgements}
+\pagenumbering{roman}
+
+\part{Preface}
+
+\section{Acknowledgements}
 
 \input acknowledgements
 
-\section[Abstract]*{Abstract}
+\pagebreak
+
+\section{Abstract}
 
 Abstract
 
@@ -29,9 +42,10 @@ Abstract
 
 \part*{}
 
-\pagenumbering{arabic}
-
 \chapter{Introduction}
+
+\pagenumbering{arabic}
+\setcounter{page}{9}
 
 \section{History of Hey and Oi}
 
@@ -41,7 +55,7 @@ Abstract
 
 \input objective
 
-\subsection{Practical Uses}
+\section{Practical Uses}
 
 \input practicaluses
 
@@ -94,9 +108,17 @@ Abstract
 
 \section{Final Conclusions}
 
-\part*{Appendices}
 
-\chapter{Appendix I - Background}
+\part{Appendix}
+
+\appendix
+
+
+\chapter{Glossary}
+
+%\printglossary
+
+\chapter{Background}
 
 \section{IPv6}
 
@@ -111,24 +133,30 @@ Abstract
 \section{XMPP}
 
 
-\chapter{Appendix II - Project Journal}
+\chapter{Project Journal}
 
 \section{Weekly Progress}
 
 
-\chapter{Appendix III - Bibliography, References and Tools Used}
+\chapter{References and Tools Used}
 
 \section{Bibliography}
 
 \section{Reference}
 
-\input references
+%\input references
 
 \subsection{Books}
 
-\subsection{Websites}
+\input books
+
+\subsection{Online Resources}
+
+\input onlineresources
 
 \subsection{Mailing Lists}
+
+%\input lists
 
 \section{Software}
 
