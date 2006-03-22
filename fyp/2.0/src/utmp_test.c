@@ -14,6 +14,9 @@
 #define WRITE_BIN "/usr/bin/write"
 #define COMMANDLEN 64
 
+#define NAMELEN 16
+
+
 int main(int argc, char **argv) {
 
 		  oi_user *u;
@@ -32,22 +35,34 @@ int main(int argc, char **argv) {
 		  ptr = "Testing 123\n";
 
 		  if (!oi_user_exists(u)) {
-					 fprintf(stderr, "Stop talking to imaginary people!");
+					 fprintf(stderr, "Stop talking to imaginary people!\n");
 					 exit(-1);
+		  } else {
+					 fprintf(stdout, "%s exists!\n", u->name);
 		  }
+
+		  fprintf(stdout, "u->exists is set to %d\n", u->exists);
+		  
+		  fprintf(stdout, "oi_user_login(u) is %d\n", oi_user_exists(u));
 
 		  if (u->exists) {
 					switch(oi_user_login(u)) {
 							  case NOT_LOGGED_ON:
-										 fprintf(stderr, "%s is not logged in on tty %s\n", u->name, u->tty);
+										 fprintf(stderr, "%s is not logged in", u->name);
+										 if (u->tty[0]) printerr(" on %s", u->tty);
+										 printerr(".\n");
+										 exit(-1);
 										 break;
 
 								case NOT_MESG_Y:
 										 fprintf(stderr, "%s has messages turned off\n", u->name);
+										 exit(-1);
 										 break;
 
 								default:
+										 fprintf(stderr, "Unexpected return type.\n");
 										 exit(-1);
+										 break;
 					}
 		  }
 
@@ -62,6 +77,19 @@ int main(int argc, char **argv) {
 
 			fprintf(pipe, "%s\n", ptr);
 
+			/* Close the pipe */
+			if(pclose(pipe) == -1) {
+					  perror("hey: failure");
+					  exit(1);
+			}
+			
+			/* Success message */
+			printf("oi: %s", u->name);
+			if (u->tty[0]) printf(".%s", u->tty);
+
+			printf(" - sent\n");
+
+			return 0;
 }
 
 
