@@ -37,8 +37,6 @@ int main(int argc, char **argv) {
 		  if (!oi_user_exists(u)) {
 					 fprintf(stderr, "Stop talking to imaginary people!\n");
 					 exit(-1);
-		  } else {
-					 fprintf(stdout, "%s exists!\n", u->name);
 		  }
 
 		  fprintf(stdout, "u->exists is set to %d\n", u->exists);
@@ -59,10 +57,6 @@ int main(int argc, char **argv) {
 										 exit(-1);
 										 break;
 
-								default:
-										 fprintf(stderr, "Unexpected return type.\n");
-										 exit(-1);
-										 break;
 					}
 		  }
 
