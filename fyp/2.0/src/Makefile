@@ -2,12 +2,12 @@
 
 CC= gcc
 
-APR_CFLAGS=  $(shell apr-config --includes --cflags --cppflags)
-APR_LDFLAGS= $(shell apr-config --includes --cflags --cppflags --link-ld --libs)
+APR_CFLAGS  := $(shell apr-config --includes --cflags --cppflags)
+APR_LDFLAGS := $(shell apr-config --includes --link-ld --libs)
 
 TARGET= oi-test
 
-.PHONY: clean linklist.c client.c daemon.c apr_client.c oid.c oi_client.c
+.PHONY: clean 
 
 all: current
 
@@ -18,36 +18,48 @@ milestone2: apr_client daemon oid
 clean: clean.o clean.target
 
 
-apr_client: apr_client.c
-	$(CC) apr_client.o $(LDFLAGS) $(APR_LDFLAGS) -o apr_client 
+apr_client: apr_client.o
+	$(CC) $(LDFLAGS) $(APR_LDFLAGS) $^ -o $@
 
-client: client.c linklist.c
-	$(CC) linklist.o client.o $(LDFLAGS) $(APR_LDFLAGS) -o client 
+client: client.o linklist.o
+	$(CC) $(LDFLAGS) $(APR_LDFLAGS) $^ -o $@
 
-oi_client: oi_client.c linklist.c
-	$(CC) linklist.o oi_client.o $(LDFLAGS) $(APR_LDFLAGS) -o oi_client 
+oi_client: oi_client.o linklist.o
+	$(CC) $(LDFLAGS) $(APR_LDFLAGS) $^ -o $@
 
-daemon: oid.c
-	$(CC) oid.o $(LDFLAGS) $(APR_LDFLAGS) -o oid
+daemon: oid.o
+	$(CC) $(LDFLAGS) $(APR_LDFLAGS) $^ -o $@
 
-linklist.c:
-	$(CC) $(CFLAGS) -c linklist.c $(APR_CFLAGS)
+utmp_test: aux.o oi_logins.o utent.o utmp_test.o
+	$(CC) $(LDFLAGS) $(APR_LDFLAGS) $^ -o $@
+
 
 linklist.o: linklist.c
-	$(CC) linklist.o $(LDFLAGS) $(APR_LDFLAGS)
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
 
+oi_client.o: oi_client.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
 
-oi_client.c:
-	$(CC) $(CFLAGS) -c oi_client.c $(APR_CFLAGS)
+apr_client.o: apr_client.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
 
-apr_client.c:
-	$(CC) $(CFLAGS) -c apr_client.c $(APR_CFLAGS)
+client.o: client.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
 
-client.c:
-	$(CC) $(CFLAGS) -c client.c $(APR_CFLAGS)
+oid.o: oid.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
 
-oid.c:
-	$(CC) $(CFLAGS) -c oid.c $(APR_CFLAGS)
+oi_logins.o: oi_logins.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
+
+utent.o: utent.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
+
+aux.o: aux.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
+
+utmp_test.o: utmp_test.c
+	$(CC) $(CFLAGS) -c $< $(APR_CFLAGS)
 
 
 clean.o:
