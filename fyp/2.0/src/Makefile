@@ -2,7 +2,8 @@
 
 CC= gcc
 
-CFLAGS		 = -lc -g -O2
+CFLAGS		 =  -g -O2
+LDFLAGS		 =	 -lc
 
 APR_CFLAGS  := $(shell apr-config --includes --cflags --cppflags)
 APR_LDFLAGS := $(shell apr-config --includes --link-ld --libs)
