@@ -16,7 +16,6 @@
 
 #define NAMELEN 16
 
-
 int main(int argc, char **argv) {
 
 		  oi_user *u;
@@ -24,6 +23,11 @@ int main(int argc, char **argv) {
 		  char command[COMMANDLEN];
 		  FILE *pipe;
 		  char *ptr;
+
+		  if( !(u = (oi_user *) malloc(sizeof(oi_user)))	) {
+					 fprintf(stderr, "Error allocating memory for user structure\n");
+					 exit(-4);
+		  }
 
 		  strncpy(u->name, argv[1], NAMELEN);
 
@@ -38,6 +42,8 @@ int main(int argc, char **argv) {
 					 fprintf(stderr, "Stop talking to imaginary people!\n");
 					 exit(-1);
 		  }
+
+		  fprintf(stdout, "u->name is %s\n", u->name);
 
 		  fprintf(stdout, "u->exists is set to %d\n", u->exists);
 		  
@@ -59,9 +65,7 @@ int main(int argc, char **argv) {
 
 					}
 		  }
-
 			snprintf(command, COMMANDLEN, "%s %s ", WRITE_BIN, u->name);		
-
 			if (u->tty[0]) strncat(command, u->tty, (COMMANDLEN - 1));
 
 			if (!(pipe = popen(command, "w"))) {
