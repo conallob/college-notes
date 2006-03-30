@@ -20,6 +20,7 @@
 #include "linklist.h"
 
 #define STRLEN 15
+#define SERVICEPORT 5222
 
 static void closeapr(void) {
     apr_terminate();
@@ -35,7 +36,7 @@ int main(int argc, char *argv[]) {
     char msgbuf[80];
     char *local_ipaddr, *remote_ipaddr;
     char *dest = "localhost";
-	apr_file_t *fp_in, *fp_out, *fp_err; 
+	 apr_file_t *fp_in, *fp_out, *fp_err; 
     apr_port_t local_port, remote_port;
     apr_interval_time_t read_timeout = 2 * APR_USEC_PER_SEC;
     apr_sockaddr_t *local_sa, *remote_sa;
@@ -63,10 +64,6 @@ int main(int argc, char *argv[]) {
 	apr_file_open_stdin(&fp_in, p);   
 	apr_file_open_stdout(&fp_out, q); 
 
-	#ifdef DEBUG
-		apr_file_printf(fp_err, "Input:\n"); 
-	#endif
-	
 	/* Until we hit the end of stdin, grab 80 characters from stdin 
 	 * and store in buffer */
 	while (apr_file_gets(buffer, STDIN_BUFFER_LEN, fp_in) == 0) {
@@ -76,14 +73,11 @@ int main(int argc, char *argv[]) {
 
 	datasend = LinkListMerge(storage);
 
-	 #ifdef DEBUG
-		apr_file_printf(fp_err, "Output:\n");
-	 #endif
-
     setbuf(stdout, NULL);
     if (argc > 1) {
         username = strtok_r(argv[1], "@", &brkt); 
-		  dest = strtok_r(NULL, "@", &brkt); 
+		  if( !(dest = strtok_r(NULL, "@", &brkt)) ) 
+					 dest = "localhost";
     }
 
     if (argc > 2) {
@@ -102,7 +96,7 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
-    if ((stat = apr_sockaddr_info_get(&remote_sa, dest, APR_UNSPEC, 8021, 0, context)) 
+    if ((stat = apr_sockaddr_info_get(&remote_sa, dest, APR_UNSPEC, SERVICEPORT, 0, context)) 
         != APR_SUCCESS) {
         apr_file_printf(fp_err, "Address resolution failed for %s: %s\n", 
                 dest, apr_strerror(stat, msgbuf, sizeof(msgbuf)));
@@ -132,10 +126,10 @@ int main(int argc, char *argv[]) {
     apr_sockaddr_ip_get(&local_ipaddr, local_sa);
     apr_sockaddr_port_get(&local_port, local_sa);
 
-	 #ifdef DEBUG
+	 /* #ifdef DEBUG */
     	apr_file_printf(fp_out, "Client socket: %s:%u -> %s:%u\n", 
 				local_ipaddr, local_port, remote_ipaddr, remote_port);
-	 #endif
+	 /* #endif */
 
     length = strlen(username);
 
