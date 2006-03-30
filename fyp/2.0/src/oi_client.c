@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     apr_sockaddr_t *local_sa, *remote_sa;
 
 	/* input buffer */
-	char buffer[STDIN_BUFFER_LEN];
+	char buffer[STDIN_BUFFER_LEN], *username, *host, *brkt;
 	item *tmp;
 	linklist *storage; 
 
@@ -82,7 +82,8 @@ int main(int argc, char *argv[]) {
 
     setbuf(stdout, NULL);
     if (argc > 1) {
-        dest = argv[1];
+        username = strtok_r(argv[1], "@", &brkt); 
+		  dest = strtok_r(NULL, "@", &brkt); 
     }
 
     if (argc > 2) {
@@ -136,6 +137,14 @@ int main(int argc, char *argv[]) {
 				local_ipaddr, local_port, remote_ipaddr, remote_port);
 	 #endif
 
+    length = strlen(username);
+
+    if (apr_send(sock, username, &length) != APR_SUCCESS) {
+        apr_socket_close(sock);
+        apr_file_printf(fp_err, "Problem sending data\n");
+        exit(-1);
+    }
+   
     length = strlen(datasend);
 
     if (apr_send(sock, datasend, &length) != APR_SUCCESS) {
