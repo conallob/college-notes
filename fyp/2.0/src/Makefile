@@ -30,7 +30,7 @@ client: client.o linklist.o
 oi_client: oi_client.o linklist.o
 	$(CC) $(LDFLAGS) $(APR_LDFLAGS) $^ -o $@
 
-daemon: oid.o
+daemon: aux.o oi_logins.o utent.o oid.o 
 	$(CC) $(LDFLAGS) $(APR_LDFLAGS) $^ -o $@
 
 utmp_test: aux.o oi_logins.o utent.o utmp_test.o
