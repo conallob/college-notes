@@ -1,16 +1,7 @@
  % $Id$
 
-\documentclass[a4paper,12pt]{article}
-\usepackage[usenames]{color}
-\usepackage[arc,poly,all]{xy}
 
-\setlength{\parindent}{0mm}
-\setlength{\parskip}{7.5mm}
-
-
-\begin{document}
-
-\section{Client Sending a Message to Server}
+\begin{figure}[hbt]
 
 \xy<1cm,0cm>:
 (10,0) *=(7.5,1)!UC\txt{Message} *\frm{-} ;
@@ -22,6 +13,10 @@
 (10,-9)*=(7.5,1)!UC\txt{Passed to $Server_{Sender}$} *\frm{-} ; 
 (10,-11) **\dir{=} *\dir{>},
 \endxy
+
+\caption{Use Case: Client sending a message to Server}
+
+\end{figure}
 
 \begin{enumerate}
 
@@ -36,7 +31,8 @@ already in Unicode, no translation is performed.
 
 \end{enumerate}
 
-\section{Sending a Message between Servers}
+
+\begin{figure}[hbt]
 
 \xy<1cm,0cm>:
 (10,0) *=(7.5,1)!UC\txt{Send from $Server_{Sender}$} *\frm{-} ;
@@ -47,6 +43,10 @@ already in Unicode, no translation is performed.
 (10,-6)*=(7.5,1)!UC\txt{Poll for User} *\frm{-} ; 
 (10,-9) **\dir{=} *\dir{>},
 \endxy
+
+\caption{Use Case: Sending a Message between Servers}
+
+\end{figure}
 
 \begin{enumerate}
 
@@ -64,7 +64,8 @@ already in Unicode, no translation is performed.
 
 \end{enumerate}
 
-\section{User Receiving a Message from Server}
+
+\begin{figure}[hbt]
 
 \xy<1cm,0cm>:
 (10,2) ; (10,0) **\dir{=} *\dir{>},
@@ -78,6 +79,10 @@ already in Unicode, no translation is performed.
 (10,-12) **\dir{-} *\dir{>},
 (10,-12)*=(7.5,1)!UC\txt{Print Message to User} *\frm{-} ; 
 \endxy
+
+\caption{Use Case: Server delivering message to local recipient}
+
+\end{figure}
 
 \begin{enumerate}
 
@@ -93,5 +98,3 @@ declared they can accept Unicode.
 \item Message is printed to user's terminal
 
 \end{enumerate}
-
-\end{document}
