@@ -26,7 +26,7 @@
 
 \pagenumbering{roman}
 
-\part{Preface}
+\part*{Preface}
 
 \section{Acknowledgements}
 
@@ -40,12 +40,14 @@ Abstract
 
 \tableofcontents
 
-\part*{}
+\listoffigures
+
+\part*{Report}
 
 \chapter{Introduction}
 
 \pagenumbering{arabic}
-\setcounter{page}{9}
+\setcounter{page}{12}
 
 \section{History of Hey and Oi}
 
@@ -63,7 +65,11 @@ Abstract
 
 \section{Requirements}
 
+\input requirements
+
 \section{Specification}
+
+\input specification
 
 \section{Architecture}
 
@@ -73,10 +79,13 @@ Abstract
 
 \subsubsection{UML Use Cases}
 
+\input use-cases
+
 \section{Security Model}
 
 \section{Message Transmission Format}
 
+\input msgformat
 
 \chapter{Implemention}
 
@@ -109,7 +118,7 @@ Abstract
 \section{Final Conclusions}
 
 
-\part{Appendix}
+\part*{Appendix}
 
 \appendix
 
