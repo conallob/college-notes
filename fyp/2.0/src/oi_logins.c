@@ -53,29 +53,14 @@ int oi_mesg_on(char *tty) {
 ** program */
 int oi_user_login(oi_user *u) {
 
-#ifndef HAVE_UTMPX_H
 	struct utmp *ent;
-#else
-	struct utmpx *ent;
 	
-#define ut_name		ut_user
-#define getutent()	getutxent()
-#define setutent()  	setutxent()
-#define endutent()	endutxent()
-
-#endif
-
 	setutent();
 
 	while ((ent = getutent()) != NULL) {
 		/* Skip unless it's the name we're interested in */
 		if (strncmp (u->name, ent->ut_name, NAMELEN)) 
 			continue;
-
-#ifdef HAVE_UTMPX_H
-		if(ent->ut_type != USER_PROCESS)	
-			continue;
-#endif
 
 		/* It's one we want */
 		if (!u->login) {
@@ -97,26 +82,26 @@ int oi_user_login(oi_user *u) {
 
 	endutent();
 
-#ifndef HAVE_UTMPX_H
-
 #undef ut_name
 #undef getutent
 #undef setutent
 #undef endutent
 
-#endif
-
-
-	if (!u->login) 
-		return NOT_LOGGED_ON;
+	if (!u->login) { 
+			  fprintf(stdout, "returning NOT_LOGGED_ON\n");
+			  return NOT_LOGGED_ON;
+	}
 	
-	if (u->tty[0])
+	if (u->tty[0]) {
 		u->mesg = oi_mesg_on(u->tty);
+	}
 	
 	if (!u->mesg) {
+		fprintf(stdout, "returning NOT_MESG_Y\n");
 		return NOT_MESG_Y;
 	}
 	
+	fprintf(stdout, "returning LOGGED_ON\n");
 	return LOGGED_ON;
 }
 
@@ -132,9 +117,11 @@ mesg_flag my_mesg() {
 	}
 
 	if (tty_stat.st_mode & S_IWGRP) {
+		fprintf(stdout, "returning MESG_Y\n");
 		return MESG_Y;
 	}
 	
+	fprintf(stdout, "returning MESG_N\n");
 	return MESG_N;
 }
 
