@@ -19,6 +19,7 @@
 
 #include "linklist.h"
 
+#define OI_VERSION 2.01
 #define STRLEN 15
 #define SERVICEPORT 5222
 
@@ -27,6 +28,7 @@ static void closeapr(void) {
 }
 
 int main(int argc, char *argv[]) {
+
     apr_pool_t *context, *p, *q, *e;
     apr_socket_t *sock;
     apr_size_t length;
@@ -48,8 +50,14 @@ int main(int argc, char *argv[]) {
 
 	int i = 0; /* loop counter */
 
-	/* Initialise APR */
-	apr_initialize(); 
+	/* initialise APR... */
+   if (apr_initialize() != APR_SUCCESS) {
+       apr_file_printf(fp_err, "Something went wrong initialising APR\n");
+       exit(-1);
+   }
+
+   atexit(closeapr);
+
 	atexit(apr_terminate);
 
 	storage = (linklist*) LinkListMkList();
@@ -71,31 +79,43 @@ int main(int argc, char *argv[]) {
       LinkListPush(storage, strdup(buffer));
 	}
 
+	/* condense the contents of storage into a single string */
 	datasend = LinkListMerge(storage);
 
-    setbuf(stdout, NULL);
-    if (argc > 1) {
-        username = strtok_r(argv[1], "@", &brkt); 
-		  if( !(dest = strtok_r(NULL, "@", &brkt)) ) 
-					 dest = "localhost";
-    }
+   setbuf(stdout, NULL);
 
+	if (argc > 0) {
+		apr_file_printf(fp_out, "this is oi, version %d\n", OI_VERSION);
+		exit(0);
+	}
+	
+   if (argc > 1) {
+	   /* expect user@example.com as value for argv[1] */
+
+	   /* the first part before '@' is the username */
+      username = strtok_r(argv[1], "@", &brkt); 
+
+	   /* now check to see if there is something beyond '@'
+	  	*	if so, that's the remote host, if not
+	  	*	just talk to localhost...
+	  	*/
+	   if( !(dest = strtok_r(NULL, "@", &brkt)) ) 
+	  		 dest = "localhost";
+   }
+
+	 /* accept an optional timeout (in secs) from argv[2] */
     if (argc > 2) {
         read_timeout = APR_USEC_PER_SEC * atoi(argv[2]);
     }
 
-    if (apr_initialize() != APR_SUCCESS) {
-        apr_file_printf(fp_err, "Something went wrong\n");
-        exit(-1);
-    }
 
-    atexit(closeapr);
-
+	 /* create pool called context */
     if (apr_pool_create(&context, NULL) != APR_SUCCESS) {
-        apr_file_printf(fp_err, "Something went wrong\n");
+        apr_file_printf(fp_err, "Something went wrong creating APR pool context\n");
         exit(-1);
     }
 
+	 /*  */
     if ((stat = apr_sockaddr_info_get(&remote_sa, dest, APR_UNSPEC, SERVICEPORT, 0, context)) 
         != APR_SUCCESS) {
         apr_file_printf(fp_err, "Address resolution failed for %s: %s\n", 
@@ -103,14 +123,17 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
+	 /*  */
     if (apr_socket_create(&sock, remote_sa->sa.sin.sin_family, SOCK_STREAM,
                           context) != APR_SUCCESS) {
         apr_file_printf(fp_err, "Couldn't create socket\n");
         exit(-1);
     }
 
+	 /* ET phone home... */
     stat = apr_connect(sock, remote_sa);
 
+	 /* "I'm sorry, there is nobdy to take your call..." */
     if (stat != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_file_printf(fp_err, "Could not connect: %s (%d)\n", 
@@ -119,9 +142,12 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
+	 /*  */
     apr_socket_addr_get(&remote_sa, APR_REMOTE, sock);
     apr_sockaddr_ip_get(&remote_ipaddr, remote_sa);
     apr_sockaddr_port_get(&remote_port, remote_sa);
+
+	 /*  */
     apr_socket_addr_get(&local_sa, APR_LOCAL, sock);
     apr_sockaddr_ip_get(&local_ipaddr, local_sa);
     apr_sockaddr_port_get(&local_port, local_sa);
@@ -133,6 +159,7 @@ int main(int argc, char *argv[]) {
 
     length = strlen(username);
 
+	 /* send the username to the remote node... */
     if (apr_send(sock, username, &length) != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_file_printf(fp_err, "Problem sending data\n");
@@ -141,12 +168,14 @@ int main(int argc, char *argv[]) {
    
     length = strlen(datasend);
 
+	 /* send the payload to the remote node... */
     if (apr_send(sock, datasend, &length) != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_file_printf(fp_err, "Problem sending data\n");
         exit(-1);
     }
    
+	 /* set the socke timeout... */
     stat = apr_setsocketopt(sock, APR_SO_TIMEOUT, read_timeout);
     if (stat) {
         apr_file_printf(fp_err, "Problem setting timeout: %d\n", stat);
@@ -155,6 +184,7 @@ int main(int argc, char *argv[]) {
 
     length = STRLEN; 
 
+	 /* receive status message from the remote node */
     if ((stat = apr_recv(sock, datarecv, &length)) != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_file_printf(fp_err, "Problem receiving data: %s (%d)\n", 
@@ -162,12 +192,14 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
+	 /* shut down socket... */
     if (apr_shutdown(sock, APR_SHUTDOWN_WRITE) != APR_SUCCESS) {
         apr_socket_close(sock);
         apr_file_printf(fp_err, "Could not shutdown socket\n");
         exit(-1);
     }
 
+	 /* close socket... */
     if (apr_socket_close(sock) != APR_SUCCESS) {
         apr_file_printf(fp_err, "Could not shutdown socket\n");
         exit(-1);
