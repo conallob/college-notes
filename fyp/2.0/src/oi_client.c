@@ -19,8 +19,9 @@
 
 #include "linklist.h"
 
-#define OI_VERSION 2.01
+#define OI_VERSION "2.01"
 #define STRLEN 15
+#define NAMELEN 16
 #define SERVICEPORT 5222
 
 static void closeapr(void) {
@@ -37,7 +38,7 @@ int main(int argc, char *argv[]) {
     char datarecv[STRLEN];
     char msgbuf[80];
     char *local_ipaddr, *remote_ipaddr;
-    char *dest = "localhost";
+    char *dest;
 	 apr_file_t *fp_in, *fp_out, *fp_err; 
     apr_port_t local_port, remote_port;
     apr_interval_time_t read_timeout = 2 * APR_USEC_PER_SEC;
@@ -72,20 +73,10 @@ int main(int argc, char *argv[]) {
 	apr_file_open_stdin(&fp_in, p);   
 	apr_file_open_stdout(&fp_out, q); 
 
-	/* Until we hit the end of stdin, grab 80 characters from stdin 
-	 * and store in buffer */
-	while (apr_file_gets(buffer, STDIN_BUFFER_LEN, fp_in) == 0) {
-		/* Push contents of buffer onto a Linked List */
-      LinkListPush(storage, strdup(buffer));
-	}
-
-	/* condense the contents of storage into a single string */
-	datasend = LinkListMerge(storage);
-
-   setbuf(stdout, NULL);
-
-	if (argc > 0) {
-		apr_file_printf(fp_out, "this is oi, version %d\n", OI_VERSION);
+	if (argc < 2) {
+		apr_file_printf(fp_out, "this is oi, version %s\n\n", OI_VERSION);
+		apr_file_printf(fp_out, 
+							 "(c) Conall O'Brien 2006 - http://oi.conall.net/\nincorporating assorted functions from http://c-hey.redbrick.dcu.ie/\n");
 		exit(0);
 	}
 	
@@ -103,10 +94,24 @@ int main(int argc, char *argv[]) {
 	  		 dest = "localhost";
    }
 
+	 fprintf(stdout, "user: \"%s\"\nhost: \"%s\"\n\n", username, dest); 
+
 	 /* accept an optional timeout (in secs) from argv[2] */
     if (argc > 2) {
         read_timeout = APR_USEC_PER_SEC * atoi(argv[2]);
     }
+
+	/* Until we hit the end of stdin, grab 80 characters from stdin 
+	 * and store in buffer */
+	while (apr_file_gets(buffer, STDIN_BUFFER_LEN, fp_in) == 0) {
+		/* Push contents of buffer onto a Linked List */
+      LinkListPush(storage, strdup(buffer));
+	}
+
+	/* condense the contents of storage into a single string */
+	datasend = LinkListMerge(storage);
+
+   setbuf(stdout, NULL);
 
 
 	 /* create pool called context */
@@ -157,16 +162,18 @@ int main(int argc, char *argv[]) {
 				local_ipaddr, local_port, remote_ipaddr, remote_port);
 	 /* #endif */
 
-    length = strlen(username);
+	 fprintf(stdout, "user: %s (%d)\n", username, strlen(username));
+
+	 length = NAMELEN;
 
 	 /* send the username to the remote node... */
     if (apr_send(sock, username, &length) != APR_SUCCESS) {
         apr_socket_close(sock);
-        apr_file_printf(fp_err, "Problem sending data\n");
+        apr_file_printf(fp_err, "Problem sending username\n");
         exit(-1);
     }
    
-    length = strlen(datasend);
+    length = STDIN_BUFFER_LEN * 2048;
 
 	 /* send the payload to the remote node... */
     if (apr_send(sock, datasend, &length) != APR_SUCCESS) {
