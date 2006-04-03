@@ -3,7 +3,7 @@
  * Description: doubley linked list - inspired by  
  *		g_list.c from c-hey -- http://c-hey.redbrick.dcu.ie
  * Author: Conall O'Brien <conallob@maths.tcd.ie>
- * $Date$
+ * $Date: 2006-02-28T03:02:30.294885Z $
  * 
  * $Id$
  */
