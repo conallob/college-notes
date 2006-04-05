@@ -1,0 +1,46 @@
+% $Id$
+
+Due to the events in the history of Unix over the last 30 years, there
+are now 3 catagories of Unix based systems; commercial Unix
+implementations, open source Unix implementations and Unix and Unix-like 
+derivatives.
+
+
+Commercial Unix implementations are primarily able to trace ties back to
+the orginal AT\&T Unix dynasty and are thus referred to as System V (V5)
+dreivatives. Examples include Sun Solaris, HP UX, Compaq
+Tru64 and IBM AIX. 
+
+
+By contrast, open source Unix implementations do not share ties to Unix 
+System V, but to the 4.4BSD codebase, primarily due to the fallout from 
+the lawsuit between USL and BSDI, which resulted in a requirement to
+make the distinction between Unix and BSD. Leading up to the time the 
+BSD project in the University of Berkeley concluded in 1995, The NetBSD
+and FreeBSD projects, based upon the 4.3BSD (and ultimately 4.4BSD R2) 
+codebase were formed in the community spirit of the CSRG who ran the BSD
+project. Examples of BSD systems nowadsys include FreeBSD, NetBSD,
+OpenBSD (a fork from the NetBSD project) and DragonFlyBSD (a fork from
+the FreeBSD Project).
+
+
+The last catagory consists of Unix and Unix-like derivatives, which
+refer to systems which were never based upon the System V or BSD
+codebases, yet mimic many of the features and functionality of a Unix or
+BSD system. Examples include the popular Linux kernel, the Gnu/Herd,
+and NeXTSTEP operating systems.
+
+
+Finally, a special mention should be made for Apple's MacOS X, which is
+a commercial BSD implementation consisting of a merger between the
+FreeBSD codebase and the NeXTSTEP Mach kernel.
+
+
+As a result of all of these options, there are a wide number of
+differences in the userland enviroments of various these systems.
+Therefore, portability becomes an issue, if a project is intended to run
+on a wide range of Unix, BSD and Unix-like, since every system call, 
+standard library or API interface cannot be anticiated on each system.
+As a result, traditionally a number of conditions are placed in portable
+programs, in order to edit the function calls to suit the system being
+used.
