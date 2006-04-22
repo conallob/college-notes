@@ -1,0 +1,115 @@
+% $Id$
+
+By the deadline of the demonstration of this project, the following
+features from the original specification were fully implemented and
+integrated:
+
+\begin{itemize}
+
+\item Client / Server Model
+
+\item Portable Code
+
+\item IPv4 and IPv6 Networking Sockets
+
+\end{itemize}
+
+Additionally, the following features have been partially implemented,
+but not extensively tested or integrated into the client or server:
+
+\begin{itemize}
+
+\item XMPP XML Message Formatting
+
+\end{itemize}
+
+
+Due to various unpredicated issues during the coure of the project, the
+following features from the original specification were removed from the
+intended deliverable:
+
+\begin{itemize}
+
+\item Unicode Formatting
+
+\item OpenPGP (GPG) Cryptograhy
+
+\item IP Multicast Support
+
+\end{itemize}
+
+
+\subsection{Unicode Formatting}
+
+Created currently unresolved architectural issues. Although
+the client can be informed if input should expect UTF-8 input. 
+Messages between a client and server can also be encoded in and
+decoded from UTF-8. However, there is no set method of checking if a
+recipient's terminal is Unicode aware, or even Unicode enabled. Such
+information is not stored in the termcap information.
+
+One possible solution could be a third component, a user
+agent, which is used to tranmit some basic information to a daemon
+process, user availability such as whether a user is able to receive 
+Unicode formatted messages.
+
+\subsection{OpenPGP (GPG) Cryptography}
+
+Developing OpenPGP functionality using the GnuPG software
+suite was delayed due to two independant issues.
+
+Documentation for the GnuPG Made Easy (GPGME) wrapper of
+functions (which is recommended library for adding GnuPG encryption,
+decryption and digital signatures to MUA clients), is virtually not
+existant. As a result, integrating GnuPG functionality would take
+significantly longer than initially allocated.
+
+
+subitem A more fundamental issue with integrating GnuPG cryptography 
+is how a reciepient decodes a message. Due to the architectural 
+design of the system, the daemon runsas a process forked in the 
+background, delivering messages only when they arrive at a server. 
+Since the recipient does not have an active client awaiting messages, 
+a recipient cannot be prompted to enter a passphrase to decode any 
+messages delivered. 
+
+One possible solution would be to employ the GPG Agent, a 
+tool found in the GnuPG development branch, version 1.9. The GPG
+Agent would work similarly to the suggested Unicode solution. When a
+user runs the GPG agent, preferably at login, they enter their
+passphrase. The corresponding daemon process is then informed that
+this user is using the GPG Agent. During this session, any encrypted 
+messages trasmitted to a user running the ssh agent is automatically
+and securely decrypted. Due to the work involved in adding a third
+agent component to the system architecture, combined with the
+warnings that the GPG Agent is not ready for production usage yet, it
+was decided that development on GnuPG encryption would be halted.
+
+\subsection{IP Multicast Sockets}
+
+subitem Although there are pre-existing routines in APR to create and
+manage IP multicast connections, testing mulitcast connections would
+prove problematic. 
+
+Multicasting across a simple network consisting of one or 
+more unnamaged network switches daisy chained together is trivial. 
+Multicast tests across a sophisticated network using managed
+switches, IGMP snooping and vlans is more useful. Finally, enquiries
+were made during the course of development to find a suitable testing
+enviroment for IP multicasting across dynamic multicast routing. One
+such test network would be the \footnote{The Internet Neurtral
+Exchange, the sole ISP hub in Ireland, conisting of more
+25 ISP, hosting and content organisation}{INEX}, where 3 ISP members 
+have currently deployed IP mulicast to the edges of their networks.
+
+However, IP multicast is not properly supported across the 
+TCD network, primarily due to the design of the backbone in addition 
+to a lack of layer 3 subnetting. After meeting with the TCD network 
+designer and a member of the TCD network managegment team, multicast 
+tests were encouraged, although there was concern over high 
+probability of adverse behaviour occuring, which would affect network 
+performance. Due to the proposed timing of any such tests, 
+accompanied by the volume of users potentially affected, any adverse 
+network behaviour would be viewed as a widespread DoS. As a result,
+IP multicast functionality was converted to a non compulsary feature.
+
