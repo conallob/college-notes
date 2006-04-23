@@ -12,9 +12,9 @@
 (0, 3)  	*=(4,1.5) !CL \txt{Asclepian} 					*\frm{-} ="asclepian" , 
 (8, 3)  	*=(4,1.5) !CC \txt{HEAnet} 						*\frm{-} ="heanet" , 
 (10,-6)  *=(4,1.5) !CC \txt{InfoCAD} 						*\frm{-} ="infocad" , 
-(10,6)  	*=(4,1.5) !CC \txt{Trinity College} 			*\frm{-} ="tcd" , 
-(7,9)  	*=(4,1.5) !CC \txt{School of \\ Mathematics} *\frm{-} ="maths" , 
-(13,9)  	*=(4,1.5) !CC \txt{Netsoc} 						*\frm{-} ="netsoc" , 
+(8,6)  	*=(4,1.5) !CC \txt{Trinity College} 			*\frm{-} ="tcd" , 
+(5,9)  	*=(4,1.5) !CC \txt{School of \\ Mathematics} *\frm{-} ="maths" , 
+(11,9)  	*=(4,1.5) !CC \txt{Netsoc} 						*\frm{-} ="netsoc" , 
 %
 \POS (7,-9) *\txt{\FreeBSD{rowlf}} !UL ="rowlf",
 \POS (10,-9) *\txt{\MacOSX{thog}} !UL ="thog",
@@ -24,13 +24,13 @@
 %
 \POS (0,6) *\txt{\Linux{icarus}} !UL ="icarus",
 %
-\POS (15,12) *\txt{\Solaris{matrix}} !UL ="matrix",
+\POS (13,12) *\txt{\Solaris{matrix}} !UL ="matrix",
 %
-\POS (3,12) *\txt{\NetBSD{hansel}} !UL ="hansel",
-\POS (6,12) *\txt{\NetBSD{gretel}} !UL ="gretel",
-\POS (9,12) *\txt{\FreeBSD{jbell}} !UL ="jbell",
-\POS (12,12) *\txt{\Linux{zoidberg}} !UL ="zoidberg",
-\POS (3,9) *\txt{\FreeBSD{walton}} !UL ="walton",
+\POS (1,12) *\txt{\NetBSD{hansel}} !UL ="hansel",
+\POS (4,12) *\txt{\NetBSD{gretel}} !UL ="gretel",
+\POS (7,12) *\txt{\FreeBSD{jbell}} !UL ="jbell",
+\POS (10,12) *\txt{\Linux{zoidberg}} !UL ="zoidberg",
+\POS (1,9) *\txt{\FreeBSD{walton}} !UL ="walton",
 %
 \POS (0,-9) *\txt{\underline{Legend:} \\ \hspace{2mm} \\ \FreeBSD{FreeBSD} \\ \Linux{Linux} \\
 \MacOSX{MacOS X} \\ \NetBSD{NetBSD} \\ \Solaris{Solaris} \\ - IPv4 Network \\ = IPv6/IPv4 Dual \\ Stacked Network} *++\frm{-} !UL ="legend",
@@ -45,24 +45,24 @@
 %
 "icarus"  	!DC ; "asclepian" !UC **\dir{=} ,
 %
-"rowlf"  	!DC ; "infocad" 	!DC **\dir{=} ,
-"thog"	  	!DC ; "infocad" 	!DC **\dir{=} ,
-"sweetums" 	!DC ; "infocad" 	!DC **\dir{=} ,
+"rowlf"  	!UC ; "infocad" 	!DC **\dir{=} ,
+"thog"	  	!UC ; "infocad" 	!DC **\dir{=} ,
+"sweetums" 	!UC ; "infocad" 	!DC **\dir{=} ,
 %
 "h365" 		!DC ; "inex" 		!DC **\dir{-} ,
-"h365" 		!DC ; "l3" 			!DC **\dir{-} ,
-"h365" 		!DC ; "leonidas" 	!DC **\dir{=} ,
+"h365" 		!UC ; "l3" 			!DC **\dir{-} ,
+"h365" 		!DC ; "leonidas" 	!UC **\dir{=} ,
 %
-"ibb" 		!DC ; "inex" 		!DC **\dir{-} ,
+"ibb" 		!UC ; "inex" 		!DC **\dir{-} ,
 "ibb" 		!DC ; "l3" 			!DC **\dir{-} ,
-"ibb" 		!DC ; "infocad" 	!DC **\dir{-} ,
+"ibb" 		!DC ; "infocad" 	!UC **\dir{-} ,
 %
-"heanet" 	!DC ; "inex" 		!DC **\dir{=} ,
-"heanet" 	!CC ; "asclepian" !CC **\dir{=} ,
+"heanet" 	!DC ; "inex" 		!UC **\dir{=} ,
+"heanet" 	!LC ; "asclepian" !RC **\dir{=} ,
 %
-"asclepian" !DC ; "l3" 			!DC **\dir{-} ,
+"asclepian" !DC ; "l3" 			!UC **\dir{-} ,
 %
-"tcd" 		!DC ; "heanet" 	!DC **\dir{=} ,
+"tcd" 		!DC ; "heanet" 	!UC **\dir{=} ,
 "tcd" 		!DC ; "maths" 		!DC **\dir{=} ,
 "tcd" 		!DC ; "netsoc" 	!DC **\dir{=} ,
 \endxy
