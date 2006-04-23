@@ -4,20 +4,13 @@
 
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{7.5mm}
-
-\usepackage{url}
-\usepackage[usenames]{color}
-%\usepackage[left=3cm,right=3cm,top=4cm,bottom=4cm]{geometry}
-\usepackage[all]{xy}
-%\usepackage{glossary}
-
-%\makeglossary
+\setlength{\rightskip}{0pt plus 2cm} % justify
 
 \input include/preamble
 
-\begin{document}
+\makeindex
 
-\setlength{\rightskip}{0pt plus 2cm}
+\begin{document}
 
 \title{Oi \\ A Secure, Distributed, Unix Messaging System}
 
@@ -171,6 +164,8 @@ Abstract
 
 \section{Unicode}
 
+\input include/background-utf8
+
 \section{Unix Portability}
 
 \input include/background-portability
@@ -222,5 +217,9 @@ Abstract
 \section{Software}
 
 \input include/usefulapps
+
+\chapter{Index}
+
+\printindex 
 
 \end{document}
