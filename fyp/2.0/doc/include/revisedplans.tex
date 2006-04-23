@@ -1,0 +1,167 @@
+% $Id$
+
+Since the project was running behind schedule, after consultation with
+the project supervisor, it was decided that the number of milestones and
+thus specificed features outstanding required a number of man hours that
+would exceed the deadline.
+
+
+Since the deadline was not flexible, therefore the outstanding
+features had to be reviewed and reprioritised. Thhe aim of
+recatagorising at least one feature as optional would result in a
+reduction of required man hours needed, in order to meet the project
+deadlines.
+
+\begin{table}[Hbt]
+
+\begin{center}
+
+\begin{enumerate}
+
+
+\item Local Echo 
+
+	\subitem Client which echoes text back
+
+\item Local Server Echo 
+
+	\subitem Client sends text to Server, server echoes text back
+
+\item UTF8 Server Echo 
+
+	\subitem Same as 2, with Unicode translation involved
+
+\item Encrypted UTF8 Server Echo 
+
+	\subitem Same as 3, with GPG encryption in the mix
+
+\item Remote Server Echo 
+
+	\subitem Same as 2, but using network sockets
+
+\item Remote UTF8 Server Echo 
+
+	\subitem Same as 3, over network sockets
+
+\item Remote GPG UTF8 Server Echo 
+
+	\subitem Same as 4, with network sockets
+
+\item Local User to User 
+
+	\subitem Client sends message to local server, which sends to a 
+	different user
+
+\item Remove GPG UTF8 User to User 
+
+	\subitem Hybrid of 7 and 8.
+
+\item Multicasting Remote User to User 
+
+	\subitem Same as 9, using optional multicast sockets
+
+\end{enumerate}
+
+\end{center}
+
+\caption{List of Initial Milestones}
+
+\end{table}
+
+
+The initial reprioritisation was primarily a regrouping of the
+milestones. Instead of treating local and remote behaviour differently,
+local connections were performed by using Unix Sockets IPC on a host's
+loopback interface, therefore using the same mechanism for remote
+connections.
+
+\begin{table}[Hbt]
+
+\begin{center}
+
+\begin{enumerate}
+
+\item Client Local Echo 
+
+	\subitem Client accepts Input from stdin, buffers and echos
+
+\item Local Daemon Echo 
+
+	\subitem Client sends input to Daemon using sockets, Dameon 
+	echoes transmission
+
+\item UTF-8 Client Local Echo 
+
+	\subitem Client accepts UTF-8 Input from stdin, performs checks and
+	outputs UTF-8 to stdout
+
+\item UTF-8 Daemon Echo
+
+	\subitem Introduce Unicode formatting before and after transmission 
+
+\item Encrypted UTF8 Daemon Echo 
+
+	\subitem Introduce GnuPG encryption and decryption before and after 
+	transmission 
+
+\item IP Multicast Daemon Test
+
+	\subitem Integrate join and unsubscribe functionality to IP Multicast
+	groups
+
+\end{enumerate}
+
+\end{center}
+
+\caption{List of Milestones Reprioritised}
+
+\end{table}
+
+
+Due to delays during testing and the remote Deamon echo objective, the 
+outstanding milestones were further scrutinised and specified features
+were marked as optional and removed from the critical path.
+
+
+\begin{table}[Hbt]
+
+\begin{center}
+
+\begin{enumerate}
+
+\item \sout{Client Local Echo}
+
+	\subitem \sout{Client accepts Input from stdin, buffers and echos}
+
+\item Daemon Echo 
+
+	\subitem Client sends input to Daemon using sockets, Dameon 
+	echoes transmission
+
+\item \xout{UTF-8 Client Local Echo}
+
+	\subitem \xout{Client accepts UTF-8 Input from stdin, performs checks and
+	outputs UTF-8 to stdout}
+
+\item \xout{UTF-8 Daemon Echo}
+
+	\subitem \xout{Introduce Unicode formatting before and after
+	transmission}
+
+\item Encrypted Daemon Echo 
+
+	\subitem Introduce GnuPG encryption and decryption before and after 
+	transmission 
+
+\item IP Multicast Daemon Test
+
+	\subitem Integrate join and unsubscribe functionality to IP Multicast
+	groups
+
+\end{enumerate}
+
+\end{center}
+
+\caption{List of Milestones After Further Reprioritisation}
+
+\end{table}
