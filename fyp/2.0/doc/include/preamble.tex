@@ -9,13 +9,31 @@
 \newcommand{\todo}{\immediate\write16{*** WARNING: TODO on line \the\inputlineno}\textbf{TODO\ }}
 \newcommand{\tofix}{\immediate\write16{*** WARNING: UNresolved issue on line \the\inputlineno}\textbf{TOFIX\ }}
 
+
+\newcommand{\diamondframe}[6]{%
+  \save           % save the current state
+    c!C           % center on the current <pos>
+   ,*#1+=\frm{}%  % drop empty frame with modifiers, equalized
+    ="@f@"        % name it
+   ,"@f@"+U,{\ar@{#2}"@f@"+R#3}%   draw each side, allowing labels
+   ,"@f@"+R,{\ar@{#2}"@f@"+D#4}%  (could be more efficiently done
+   ,"@f@"+D,{\ar@{#2}"@f@"+L#5}%    as a single \PATH)
+   ,"@f@"+L,{\ar@{#2}"@f@"+U#6}%
+ \restore         % return to the saved state
+}
+% allow the 1st argument to be of variable-length, pre-{
+\def\dframe#1#{\diamondframe{#1}}
+
+
 \usepackage{url}
 \usepackage{ulem}
 \usepackage{makeidx}
 \usepackage[usenames]{color}
 \usepackage[all]{xy}
 \usepackage[utf8]{inputenc}
-\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{geometry}
 %\usepackage{glossary}
+
+%\setmargins{3cm}{2cm}{3cm}{2cm}
 
 %\makeglossary
