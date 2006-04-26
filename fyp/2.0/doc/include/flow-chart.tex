@@ -12,17 +12,17 @@
 (4, 17)      *=(2,1) \txt{Client Formats \\ Message} 										*\frm{-} ="s3",
 (4, 15.5)    *=(2,1) \txt{Client Encrypts \\ Message} 										*\frm{-} ="s4",
 (4, 14)      *=(2,1) \txt{Client Parses \\ Destination Host} 							*\frm{-} ="s5",
-(4, 12)   *=(2,1) \txt{Is Destination \\ Localhost?} 									*\frm{-} ="s6" , % diamond
-(8, 12) *=(2,1) \txt{Does \\ Destination \\ Exist?} 						*\frm{-} ="s61" , % diamond
-(8, 10.5)   *=(2,1) \txt{Is \\ Destination \\ Available?} 						*\frm{-} ="s62" , % diamond
+(4, 12)   *=(2,1) \txt{Is Destination \\ Localhost?} 									*\frm{=} ="s6" , % diamond
+(8, 12) *=(2,1) \txt{Does \\ Destination \\ Exist?} 						*\frm{=} ="s61" , % diamond
+(8, 10.5)   *=(2,1) \txt{Is \\ Destination \\ Available?} 						*\frm{=} ="s62" , % diamond
 (4, 9.5)   *=(2,1) \txt{Connect to \\ Daemon And \\ Transmit Message} 	*\frm{-} ="s7",
-(4, 8)    *=(2,1) \txt{Is Message \\ For This \\ Host?} 							*\frm{-} ="s8", % diamond
-(0, 8)    *=(2,1) \txt{Relay \\ Message} 														*\frm{-} ="s81", 
-(4, 6.5)    *=(2,1) \txt{Does \\ Recipient \\ Exist?} 							*\frm{-} ="s9", % diamond
-(4, 5)    *=(2,1) \txt{Is \\ Recipient \\ Available?}								*\frm{-} ="s10",
-(8, 5)    *=(2,1) \txt{Resort to \\ Email?} 													*\frm{-} ="s101",
+(4, 8)    *=(2,1) \txt{Is Message \\ For This \\ Host?} 							*\frm{=} ="s8", % diamond
+(0, 8)    *=(2,1) \txt{Relay \\ Message} 														*\frm{=} ="s81", 
+(4, 6.5)    *=(2,1) \txt{Does \\ Recipient \\ Exist?} 							*\frm{=} ="s9", % diamond
+(4, 5)    *=(2,1) \txt{Is \\ Recipient \\ Available?}								*\frm{=} ="s10",
+(8, 5)    *=(2,1) \txt{Resort to \\ Email?} 													*\frm{=} ="s101",
 (4, 3.5)    *=(2,1) \txt{Deliver \\ Message \\ To User}							*\frm{-} ="s11",
-(4, 2)    *=(2,1) \txt{Recipient \\ Decrypts \\ Message?} 						*\frm{-} ="s12",
+(4, 2)    *=(2,1) \txt{Recipient \\ Decrypts \\ Message} 						*\frm{-} ="s12",
 (8, 2)    *=(2,1) \txt{Recipient \\ Receives \\ Email} 						*\frm{-} ="s121",
 (12, 2)  	 *=(2,1) \txt{Inform \\ Client \\ Of Error} 							*\frm{-} ="e",
 %
@@ -59,6 +59,8 @@
 "s101"  !CR ; (12,5) **\dir{-} *\dir{>} ,
 %
 "s9"  !CR ; (12,6.5) **\dir{-} *\dir{>} ,
+%
+"s81"  !DC ; (0, 7.25) **\dir{-} ; (12,7.25) **\dir{-} *\dir{>} ,
 \endxy
 
 %\end{center}
