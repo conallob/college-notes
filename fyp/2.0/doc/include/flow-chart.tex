@@ -2,29 +2,86 @@
 
 \begin{figure}[Hbt]
 
-%\begin{center}
+\begin{center}
 
 \tiny 
 
 \ \xy<1cm,0cm>:
-(4, 20)      *=(2,1) \txt{Sender Inputs \\ Message} 										*\frm{-} ="s1",
-(4, 18.5)    *=(2,1) \txt{Clients Buffers \\ Message} 										*\frm{-} ="s2",
-(4, 17)      *=(2,1) \txt{Client Formats \\ Message} 										*\frm{-} ="s3",
-(4, 15.5)    *=(2,1) \txt{Client Encrypts \\ Message} 										*\frm{-} ="s4",
-(4, 14)      *=(2,1) \txt{Client Parses \\ Destination Host} 							*\frm{-} ="s5",
-(4, 12)   *=(2,1) \txt{Is Destination \\ Localhost?} 									*\frm{=} ="s6" , % diamond
-(8, 12) *=(2,1) \txt{Does \\ Destination \\ Exist?} 						*\frm{=} ="s61" , % diamond
-(8, 10.5)   *=(2,1) \txt{Is \\ Destination \\ Available?} 						*\frm{=} ="s62" , % diamond
-(4, 9.5)   *=(2,1) \txt{Connect to \\ Daemon And \\ Transmit Message} 	*\frm{-} ="s7",
-(4, 8)    *=(2,1) \txt{Is Message \\ For This \\ Host?} 							*\frm{=} ="s8", % diamond
-(0, 8)    *=(2,1) \txt{Relay \\ Message} 														*\frm{=} ="s81", 
-(4, 6.5)    *=(2,1) \txt{Does \\ Recipient \\ Exist?} 							*\frm{=} ="s9", % diamond
-(4, 5)    *=(2,1) \txt{Is \\ Recipient \\ Available?}								*\frm{=} ="s10",
-(8, 5)    *=(2,1) \txt{Resort to \\ Email?} 													*\frm{=} ="s101",
+(4, 20)     *=(2,1) \txt{Sender Inputs \\ Message} 								*\frm{-} ="s1",
+(4, 18.5)   *=(2,1) \txt{Clients Buffers \\ Message} 								*\frm{-} ="s2",
+(4, 17)     *=(2,1) \txt{Client Formats \\ Message} 								*\frm{-} ="s3",
+(4, 15.5)   *=(2,1) \txt{Client Encrypts \\ Message} 								*\frm{-} ="s4",
+(4, 14)     *=(2,1) \txt{Client Parses \\ Destination Host} 					*\frm{-} ="s5",
+(4, 12)   	*=(2,1) \txt{Destination \\ Localhost?}	 							*\frm{} ="s6" , 
+(8, 12) 		*=(2,1) \txt{Does \\ Destination \\ Exist?} 							*\frm{} ="s61" , 
+(8, 10.5)   *=(2,1) \txt{Destination \\ Available?} 								*\frm{} ="s62" , 
+(4, 9.5)   	*=(2,1) \txt{Connect to \\ Daemon And \\ Transmit \\ Messsage}	*\frm{-} ="s7",
+(4, 8)    	*=(2,1) \txt{Is \\ Message For \\ Here?} 								*\frm{} ="s8", 
+(0, 8)    	*=(2,1) \txt{Relay \\ Message} 											*\frm{} ="s81", 
+(4, 6.5)    *=(2,1) \txt{Does \\ Recipient \\ Exist?} 							*\frm{} ="s9", 
+(4, 5)    	*=(2,1) \txt{Recipient \\ Available?}									*\frm{} ="s10",
+(8, 5)    	*=(2,1) \txt{Resort to \\ Email?} 										*\frm{} ="s101",
 (4, 3.5)    *=(2,1) \txt{Deliver \\ Message \\ To User}							*\frm{-} ="s11",
-(4, 2)    *=(2,1) \txt{Recipient \\ Decrypts \\ Message} 						*\frm{-} ="s12",
-(8, 2)    *=(2,1) \txt{Recipient \\ Receives \\ Email} 						*\frm{-} ="s121",
-(12, 2)  	 *=(2,1) \txt{Inform \\ Client \\ Of Error} 							*\frm{-} ="e",
+(4, 2)    	*=(2,1) \txt{Recipient \\ Decrypts \\ Message} 						*\frm{-} ="s12",
+(8, 2)    	*=(2,1) \txt{Recipient \\ Receives \\ Email} 						*\frm{-} ="s121",
+(12, 2)  	*=(2,1) \txt{Inform \\ Client \\ Of Error} 							*\frm{-} ="e",
+%
+"s6"  +L ; "s6" +U **\dir{-} 
+; "s6" +R **\dir{-} 
+; "s6" +D **\dir{-} 
+; "s6" +L **\dir{-} ,
+"s6" !R ?(-0.25) *\txt{Yes} ,
+"s6" !R+(.25,.25) *\txt{No} ,
+%
+"s61"  +L ; "s61" +U **\dir{-} 
+; "s61" +R **\dir{-} 
+; "s61" +D **\dir{-} 
+; "s61" +L **\dir{-} ,
+"s61" !R ?(-0.25) *\txt{Yes} ,
+"s61" !R+(.25,.25) *\txt{No} ,
+%
+"s62"  +L ; "s62" +U **\dir{-} 
+; "s62" +R **\dir{-} 
+; "s62" +D **\dir{-} 
+; "s62" +L **\dir{-} ,
+"s62" !R!P *\txt{Yes} ,
+"s62" !R+(.25,.25) *\txt{No} ,
+%
+"s8"  +L ; "s8" +U **\dir{-} 
+; "s8" +R **\dir{-} 
+; "s8" +D **\dir{-} 
+; "s8" +L **\dir{-} ,
+"s8" !R!P *\txt{No} ,
+"s8" !R ?(-0.25) *\txt{Yes} ,
+%
+"s81"  +L ; "s81" +U **\dir{-} 
+; "s81" +R **\dir{-} 
+; "s81" +D **\dir{-} 
+; "s81" +L **\dir{-} ,
+"s81" !R ?(-0.25) *\txt{No} ,
+%"s81" !R!P *\txt{Yes} ,
+"s81" !U+(.25,.25) *\txt{Yes} ,
+%
+"s9"  +L ; "s9" +U **\dir{-} 
+; "s9" +R **\dir{-} 
+; "s9" +D **\dir{-} 
+; "s9" +L **\dir{-} ,
+"s9" !R ?(-0.25) *\txt{Yes} ,
+"s9" !R+(.25,.25) *\txt{No} ,
+%
+"s10"  +L ; "s10" +U **\dir{-} 
+; "s10" +R **\dir{-} 
+; "s10" +D **\dir{-} 
+; "s10" +L **\dir{-} ,
+"s10" !R ?(-0.25) *\txt{Yes} ,
+"s10" !R+(.25,.25) *\txt{No} ,
+%
+"s101"  +L ; "s101" +U **\dir{-} 
+; "s101" +R **\dir{-} 
+; "s101" +D **\dir{-} 
+; "s101" +L **\dir{-} ,
+"s101" !R ?(-0.25) *\txt{Yes} ,
+"s101" !R+(.25,.25) *\txt{No} ,
 %
 "s1" !DC ; "s2" !UC **\dir{-} *\dir{>} ,
 "s2" !DC ; "s3" !UC **\dir{-} *\dir{>} ,
@@ -52,6 +109,7 @@
 "s101"  !DC ; "s121" !UC **\dir{-} *\dir{>} ,
 %
 "s81"  !UC ; (0, 13) **\dir{-} ; (4,13) **\dir{-} *\dir{>} ,
+%"s81"  !CR ; (-2,8) **\dir{-} ; (-2, 13) **\dir{-} ; (4,13) **\dir{-} *\dir{>} ,
 %
 "s61"  !CR ; (12,12) **\dir{-} ; "e" !UC **\dir{-} *\dir{>} ,
 "s62"  !CR ; (12,10.5) **\dir{-} *\dir{>} ,
@@ -63,7 +121,7 @@
 "s81"  !DC ; (0, 7.25) **\dir{-} ; (12,7.25) **\dir{-} *\dir{>} ,
 \endxy
 
-%\end{center}
+\end{center}
 
 \caption{Flow chart depicting designed behaviour of client and server}
 
