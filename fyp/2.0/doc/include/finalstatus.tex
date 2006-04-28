@@ -102,14 +102,28 @@ Exchange, the sole ISP hub in Ireland, conisting of more
 25 ISP, hosting and content organisation}{INEX}, where 3 ISP members 
 have currently deployed IP mulicast to the edges of their networks.
 
-However, IP multicast is not properly supported across the 
-TCD network, primarily due to the design of the backbone in addition 
-to a lack of layer 3 subnetting. After meeting with the TCD network 
-designer and a member of the TCD network managegment team, multicast 
-tests were encouraged, although there was concern over high 
-probability of adverse behaviour occuring, which would affect network 
-performance. Due to the proposed timing of any such tests, 
-accompanied by the volume of users potentially affected, any adverse 
-network behaviour would be viewed as a widespread DoS. As a result,
-IP multicast functionality was converted to a non compulsary feature.
 
+However, IP multicast is not properly supported across the 
+TCD network, primarily due to the design of the production backbone in 
+addition to a lack of layer 3 subnetting. Therefore, there were two 
+options, either submit an official request for IP multicast to be 
+deployed across the core backbone and parts of the distibution layer, 
+to allow testing. Alternatively, a multicast tunnel could be established
+to HEAnet, who have a functioning, multicast enabled network, are the 
+upstream connectivity providers to TCD. 
+
+
+Queries to HEAnet management regarding the feasability of a deploying
+a multicast tunnel resulted in the agreement that a request to deploy IP
+multicast across the TCD backbone should be submitted first. If denied,
+a tunnel could then be established. 
+
+
+After meeting with the TCD network designer and a member of the TCD 
+network managegment team, multicast tests were encouraged, although 
+there was concern over high probability of adverse behaviour occuring, 
+which would affect network performance. Subsequent to this meeting, 
+IP multicast functionality was re-prioritised to a non compulsary
+feature, due to the proposed timing of any such tests, accompanied by 
+the volume of users potentially affected; any adverse network behaviour 
+would be viewed as a widespread DoS. 
