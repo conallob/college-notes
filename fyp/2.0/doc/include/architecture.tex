@@ -2,11 +2,7 @@ The architectural model of the system is relatively straight forward,
 consisting of a client and a server. However, there are multiple
 operational modes for each component.
 
-\subsection{Operating Modes of the Client}
-
-There are two operational modes for the client, direct and relayed.
-
-\begin{figure}[hbt]
+\begin{figure}[H]
 
 \begin{center}
 \ \xy<1cm,0cm>:
@@ -16,21 +12,13 @@ There are two operational modes for the client, direct and relayed.
 \endxy
 \end{center}
 
+\label{fig:client}
+
 \caption{Message 1 sent from Client A to Server B}
 
 \end{figure}
 
-Direct mode is a pure distributed system, using the peer to peer model.
-When transmitting a message, a client connects directly to the
-recipient node.
-
-
-Unfortunately, due to modern security concerns, it is often common 
-practice to restrict access to non local subnets by employing firewall
-and/or routing table restrictions. Remote access is possible through
-certain nodes, acting as proxies for allowed services. 
-
-\begin{figure}[hbt]
+\begin{figure}[H]
 
 \begin{center}
 \ \xy<1cm,0cm>:
@@ -44,7 +32,24 @@ certain nodes, acting as proxies for allowed services.
 
 \caption{Message 2 sent from Client A to Server B, routed through Server C}
 
+\label{fig:relay}
+
 \end{figure}
+
+\subsection{Operating Modes of the Client}
+
+There are two operational modes for the client, direct and relayed.
+
+Direct mode is a pure distributed system, using the peer to peer model.
+When transmitting a message, a client connects directly to the
+recipient node, as illustrated in Figure \ref{fig:client}.
+
+
+Unfortunately, due to modern security concerns, it is often common 
+practice to restrict access to non local subnets by employing firewall
+and/or routing table restrictions. Remote access is possible through
+certain nodes, acting as proxies for allowed services. 
+
 
 \subsection{Operating Modes of the Server}
 
@@ -55,7 +60,10 @@ message and attempts to deliver the message to a local user.
 
 Alternatively, in proxy mode, the server simply accepts a message from a
 client connection, buffers the message and relays it to the target 
-destination, similar to the model currently used by SMTP.
+destination, similar to the model currently used by SMTP, as dipicted in
+Figure \ref{fig:relay}.
+
+\pagebreak
 
 \subsection{Operational Flow Chart}
 
