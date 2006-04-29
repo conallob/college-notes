@@ -1,5 +1,49 @@
 % $Id: /college/fyp/2.0/doc/skeleton.tex 2490 2006-03-19T22:58:59.629349Z conall  $
 
+% Use various packages
+
+\usepackage{url}
+\usepackage{ulem}
+\usepackage{makeidx}
+\usepackage{footmisc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[usenames]{color}
+\usepackage[all]{xy}
+\usepackage[utf8]{inputenc}
+\usepackage[pagestyles]{titlesec}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+
+%\usepackage{glossary}
+
+%\makeglossary
+
+% Configure various settings
+
+\titlespacing{\chapter}{0cm}{1em}{2em}[-1cm]
+\renewcommand{\familydefault}{\sfdefault}
+
+\newpagestyle{fancy}{\headrule\setheadrule{.15pt}\sethead[\OghamOr - Oi][][]{}{}{\textbf{\sectiontitle \quad \thesection}}\setfoot[\thepage][][]{}{}{\thepage}}
+\renewpagestyle{plain}{\setfoot[\thepage][][]{}{}{\thepage}}
+\pagestyle{fancy}
+
+\renewcommand{\emph}[1]{\textit{#1}}
+
+\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\topfraction}{0.7}
+\renewcommand{\bottomfraction}{0.7}
+\renewcommand{\textfraction}{0.3}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+\setlength{\rightskip}{0pt plus 2cm} % justify
+\setlength{\footnotesep}{0mm}
+\setlength{\footnotemargin}{\parindent}
+
+% Custom macros to make life easier
+
+\newcommand{\OghamOr}{$\raisebox{-0.1ex}{$\Diamond$}\mspace{-12.8mu}{-}$}
+
 \newcommand{\MacOSX}[1]{{\color{Blue}{#1}}}
 \newcommand{\NetBSD}[1]{{\color{BurntOrange}{#1}}}
 \newcommand{\FreeBSD}[1]{{\color{Red}{#1}}}
@@ -9,21 +53,3 @@
 \newcommand{\todo}{\immediate\write16{*** WARNING: TODO on line \the\inputlineno}\textbf{TODO\ }}
 \newcommand{\tofix}{\immediate\write16{*** WARNING: UNresolved issue on line \the\inputlineno}\textbf{TOFIX\ }}
 
-
-\usepackage{url}
-\usepackage{ulem}
-\usepackage{makeidx}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage[usenames]{color}
-\usepackage[all]{xy}
-\usepackage[utf8]{inputenc}
-\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
-%\usepackage{glossary}
-
-%\makeglossary
-
-\renewcommand{\familydefault}{\sfdefault}
-
-\newcommand{\OghamOr}{$\raisebox{-0.1ex}{$\Diamond$}\mspace{-12.8mu}{-}$}
-\renewcommand{\emph}[1]{\textit{#1}}
