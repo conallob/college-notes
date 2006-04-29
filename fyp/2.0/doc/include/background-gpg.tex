@@ -25,22 +25,40 @@ able to decrypt and/or verify the transmission.
 
 While this system is cryptographically secure, it is only as strong as
 the weakest link, which is the human element. Unless 
-\footnote{Eg: periodic changes, use of alphanumeric and non
-alphanumeric characters, not sharing passwords or noting passwords down
-on paper}{good password/pass phrase practices} are employed, a
-keypair is only as stong as the passphrase associated with the keys and
-how the owner of the keys maintains the passphrase.
+good password/pass phrase practices\footnote{Eg: periodic changes, use 
+of alphanumeric and non alphanumeric characters, not sharing passwords 
+or noting passwords down on paper} are employed, a keypair is only as 
+stong as the passphrase associated with the keys and how the owner of 
+the keys maintains the passphrase.
 
 
 Additionally, a secure method of distributing public keys is required to
 ensure a malicious individual does not attempt to alter a public key in
 an effort to intercept encrypted communications
 
+\subsubsection{The Web Of Trust}
+
+\begin{figure}[p]
+
+\label{fig:wot}
+
+\begin{center}
+
+\includegraphics[bb= 0 0 868 739,scale=0.5]{include/EE7DC74E.png}
+
+\end{center}
+
+\caption{Graphical Representation of the WoT for OpenPGP Key 0xEE7DC74E}
+
+\end{figure}
+
+\pagebreak
+
 \subsection{Cryptography Algorithms}
 
-
-
 === Rewrite ===
+
+
 GPG encrypts messages using asymmetric keypairs individually generated
 by GPG users. The resulting public keys can be exchanged with other
 users in a variety of ways, such as Internet key servers. They must
