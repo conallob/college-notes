@@ -11,28 +11,33 @@ payload types include audio and video data types.
 
 \subsection{Identifiers (JIDs)}
 
-XMPP/Jabber identifier addresses, known as JIDs are valid URI addresses,
-using the Augmented Backus-Naur Form. JIDs are primarily used to 
-identify a user, but can also be used to identify a multi-user chatroom.
-JIDs cannot be more than 3071 bytes in length. The 
+XMPP/Jabber identifier addresses, known as JIDs, are valid URI 
+addresses, using the Augmented Backus-Naur Form. JIDs are primarily used 
+to identify a user, but can also be used to identify a multi-user 
+chatroom. JIDs cannot be more than 3071 bytes in length. The format of a
+JID is described in Table \ref{tab:jid}.
 
 \begin{table}[p]
 
 \label{tab:jid}
 
-\begin{tabular}[lcl]
+\begin{center}
+
+\begin{tabular}{lll}
 jid		&		&	[ node "@" ] domain [ "/" resource ]				\\
 			&		&																	\\
 domain	&		&	FQDN / DNS A or AAAA Record / Literal Address	\\
-Literal Address	&	&	IPv4 / IPv6 IP Address							\\
+Literal Address	&		&	IPv4 / IPv6 IP Address						\\
 resource &		&	Context / User Handle (Nickname)						\\
 \end{tabular}
+
+\end{center}
 
 \caption{Construction of a JID Identifier}
 
 \end{table}
 
-\subsection{How It Works}
+\subsection{How XMPP Works}
 
 There are 4 operational modes to XMPP: Client, Server, Gateway and
 Network.
