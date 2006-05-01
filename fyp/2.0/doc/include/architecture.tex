@@ -1,4 +1,4 @@
-The architectural model of the system is relatively straight forward,
+The architectural model of the system is relatively straight-forward,
 consisting of a client and a server. However, there are multiple
 operational modes for each component.
 
@@ -38,7 +38,7 @@ operational modes for each component.
 
 \subsection{Operating Modes of the Client}
 
-There are two operational modes for the client, direct and relayed.
+There are two operational modes for the client: direct and relayed.
 
 Direct mode is a pure distributed system, using the peer to peer model.
 When transmitting a message, a client connects directly to the
@@ -46,16 +46,17 @@ recipient node, as illustrated in Figure \ref{fig:client}.
 
 
 Unfortunately, due to modern security concerns, it is often common 
-practice to restrict access to non local subnets by employing firewall
+practice to restrict access to non-local subnets by employing firewall
 and/or routing table restrictions. Remote access is possible through
 certain nodes, acting as proxies for allowed services. 
 
 
 \subsection{Operating Modes of the Server}
 
-The server can also operate in two modes, direct and proxy. In direct
-mode, the server accepts connections from the client, processes the
-message and attempts to deliver the message to a local user.
+The server can also operate in two modes: direct and proxy. When
+operating in direct mode, the server accepts connections from the 
+client, processes the message and attempts to deliver the message to a 
+local user.
 
 
 Alternatively, in proxy mode, the server simply accepts a message from a

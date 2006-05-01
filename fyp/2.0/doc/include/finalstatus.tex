@@ -41,11 +41,13 @@ intended deliverable:
 
 \subsection{Unicode Formatting}
 
-Created currently unresolved architectural issues. Although
-the client can be informed if input should expect UTF-8 input. 
-Messages between a client and server can also be encoded in and
+Created currently unresolved architectural issues. 
+
+
+The client can can check to see if it should expect UTF-8 input. 
+Messages between a client and server can also be encoded into and
 decoded from UTF-8. However, there is no set method of checking if a
-recipient's terminal is Unicode aware, or even Unicode enabled. Such
+recipient's terminal is Unicode-capable, or even Unicode-enabled. This
 information is not stored in the termcap information.
 
 One possible solution could be a third component, a user

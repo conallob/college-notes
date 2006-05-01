@@ -1,42 +1,44 @@
 % $Id: /college/fyp/2.0/doc/objective.tex 2490 2006-03-19T22:58:59.629349Z conall  $
 
-Client should be intuitive for a novice to use, but versatile for a
+The client should be intuitive for a novice to use, but versatile for a
 power user.
 
 
 The client should transmit the message to the server on the destination
-host. The server then will attempt delivery of the message to the
+host. The server then attempts to delivery of the message to the
 recipient and transmit status details to the sender via the client.
 
 
-System should support IPv4 and IPv6 sockets to communicate between
+The system should support IPv4 and IPv6 sockets to communicate between
 client and server. 
 
 
-System should be as portable as possible, compiling and working on 
-various Unix and Unix related systems (eg commercial Unix
-implementations like Solaris and MacOS X, Open Source Unix 
-implementations such as the primary BSD flavours and open source Unix
+The system should be as portable as possible, compiling and working on 
+various Unix and Unix related systems (including commercial Unix
+implementations like Solaris and MacOS X, Unix 
+implementations such as the primary BSD flavours, and open source Unix
 related systems such as various Linux distributions) 
 
 
 Messages between client and server should be cryptographically secure by
 default. Due to the additional security concerns using SSL connections
 and corresponding X.509 certificates to encrypt messages in transit
-between servers on separate notes. Therefore public private keys should
+between servers on separate nodes. Public-private keys should
 be used and the encryption should be from end user to end user.
-Therefore, OpenPGP should be the encryption model used.
+OpenPGP should be the encryption model used.
 
 
-Client should support unicode input from the user. Server should attempt
-delivery in Unicode, if the recipient terminal is Unicode capable. 
+The client should support unicode input from the user. The server should 
+attempt delivery in Unicode, if the terminal of the recipient is Unicode 
+capable. 
+
 
 Messages should be transmitted in unicode. Non unicode input should be
 encoded into unicode prior to encryption and transmission. Messages
 should be decoded from unicode after transmission and decryption, if
-recipient is not able to receive unicode support. 
+the terminal of the recipient does not support unicode. 
 
 
-Server should be able to join IP multicast group, to allow multiple
+The server should be able to join IP multicast group, to allow multiple
 servers to receive the same message transmitted by a client to an IP
 multicast group. 

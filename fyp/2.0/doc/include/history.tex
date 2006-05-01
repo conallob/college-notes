@@ -4,33 +4,32 @@ there has been the \emph{write} tool, which allows multiple users on a Unix
 system to communicate with each other.
 
 
-\emph{write} is quite simple and delivers a message one line at a time,
+\emph{write} is delivers a message one line at a time,
 resulting in the recipient of a \emph{write} message waiting while the
 sender composes the next line of his or her message.
 
 
-Due to this behaviour, implementing a tool which buffers the message
+Due to this behaviour, implementing a tool to buffer the message
 prior to sending is a logical progression for improved communication
-between users. Since this is an obvious enhancement, I believe this
-enhancement may have been implemented by many people. However I am 
-documenting the timeline of \emph{hey}, a buffer system for write,
-which emerged originally from Dublin University, Trinity College in the 
-early 1990s.
+between users. Since this is an obvious enhancement, I believe 
+may have been implemented by many people. I am documenting the 
+timeline of \emph{hey}, a buffer system for write, which emerged 
+originally from Dublin University, Trinity College in the early 1990s.
 
 
 In 1991, \emph{hey} was created as a shell script by Adrian Colley. In 
 1993/1994, Paul McGaley translated \emph{hey} to Perl and enhanced it's 
-usability until 1996. Paul's Perl version of \emph{hey} resurfaced in 
-Dublin City University's RedBrick Society in 1998, where it was enhanced
-further by Colin Whittaker and others to interpret environmental variable 
-settings and accept additional command line flags.
+usability. Paul's Perl version of \emph{hey} resurfaced in Dublin City 
+University's RedBrick Society in 1998, where it was enhanced further by
+Colin Whittaker and others to interpret environmental variable settings 
+and accept additional command line flags.
 
 
 Due to it's popularity in RedBrick, Cian Synnott begun work in 1998/1999
 on a version written in C to improve speed and portability, which is 
 known as \emph{c-hey}. \emph{c-hey} has since received many 
-contributions and additional features such as user definable formatting 
-and at the time of writing, is currently maintained by Colm 
+contributions and additional features such as user definable formatting,
+at the time of writing, \emph{c-hey} is maintained by Colm 
 MacC\'{a}rthaigh.
 
 
