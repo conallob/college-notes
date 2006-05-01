@@ -1,0 +1,24 @@
+% $Id: /college/fyp/2.0/doc/include/buildenvnetmap.tex 2594 2006-04-04T21:09:58.634858Z conall  $
+
+\begin{figure}[H]
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(10, 0)  	*=(4,1.5) !CR \txt{oi\_client.c} 	*\frm{-} ="oi\_client.c" ,
+(10, 3)  	*=(4,1.5) !CR \txt{linklist.h} 	*\frm{-} ="linklist.h" ,
+(5, 3)  		*=(4,1.5) !CR \txt{linklist.c} 	*\frm{-} ="linklist.c" ,
+(5,  -5)  	*=(4,4)   !CR \txt{$\langle errno.h \rangle$ \\ $\langle pwd.h \rangle$ \\ $\langle stdlib.h \rangle$ \\ $\langle stdio.h \rangle$ \\ $\langle string.h \rangle$ \\ $\langle sys/types.h \rangle$ \\ $\langle unistd.h \rangle $} *\frm{-} 		="libc" ,
+(15, -5)  	*=(4,4)   !CR \txt{apr.h \\ apr\_errno.h \\ apr\_file\_io.h \\ apr\_general.h \\ apr\_getopt.h \\ apr\_network\_io.h \\ apr\_poll.h} *\frm{-} 	="apr" ,
+%
+"oi\_client.c" !UC ; "linklist.h" 	!DC **\dir{-} ,
+"oi\_client.c" !DC ; "apr" 			!UC **\dir{-} ,
+"oi\_client.c" !DC ; "libc" 			!UC **\dir{-} ,
+"linklist.c" 	!RC ; "linklist.h" 	!LC **\dir{-} ,
+\endxy
+
+\end{center}
+
+\caption{UML Class Diagram of Client}
+
+\end{figure}

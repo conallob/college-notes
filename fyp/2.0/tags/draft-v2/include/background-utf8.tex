@@ -1,0 +1,142 @@
+% $Id$
+
+\subsection{Introduction}
+
+Unicode, also referred to as UTF8, UTF-8 and i18n is a universal
+character encoding standard designed to replace multiple existing
+character sets such as ASCII, 
+ISO/IEC 8859 series\footnote{The series consists of 16 parts, including 8859-1 "Latin-1" and the modern revision, 8859-15, both of which are used mainly in Western Europe}
+of character sets which cater for most languages using the Latin, 
+Cyrillic, Arabic, Hebrew and Thai alphabets.
+
+\subsection{Characters Supported by Unicode}
+
+Unicode has defined characters for all major languages, including the
+Latin, Cyrillic, Arabic, Hebrew, Thai, Kanji, Punjabi, Ethiopian, 
+Braille, Runic, Ogham and numerous other alphabets. Additionally,
+Unicode also includes punctuation marks, diacritics, mathematical
+symbols, technical symbols, arrows, dingbats, etc. As of Unicode version
+4.0, provides codes for 96447 characters and has 6400 standard and over
+100000 supplemental code points for private use by vendors.
+
+\subsection{Different Flavours}
+
+There are three Unicode standards, UTF-8, UTF-16 and UTF-32 which allow 
+the same data to be transmitted in a byte, word or longword format. All
+three encoding forms encode the same information and conversion between
+any two standards can be done without any data loss.
+
+
+UTF-8 is a way of transforming all Unicode characters into a variable
+length encoding of bytes. Symbols common to both Unicode and ASCII have
+the same byte values, allowing existing software to use Unicode with
+minimal effort. UTF-8 is popular in various documentation standards, 
+such as HTML and XML.
+
+
+UTF-16 is popular in environments which balance efficient access to
+characters with economical use of storage. It is reasonably compact and
+every heavily used symbol fit into a single UTF-16 code unit, while
+less commonly used symbols are accessible via pairs of 16-bit code
+units.
+
+
+UTF-32 is popular where memory space is of no concern, but a fixed
+width, single code unit access to characters using a single 32-bit code
+unit.
+
+\subsection{Glyphs}
+
+Unicode does not define glyph images. Instead the Unicode standard
+defines how characters are interpreted, rather than how to render the
+size, shape or style of a glyph on screen. The software or hardware 
+rendering engine of a computer interprets and renders the characters to 
+the selected output device.
+
+\subsection{Character Codes}
+
+Unicode character codes are represented by a four hexadecimal digit with
+a "U" prefix. For example, U+004F represents "O", the "Latin Capital 
+Letter O" and U+1696 represents the symbol "Ogham Letter Or", "\OghamOr"
+(which can be considered to be "Oi")
+
+\subsubsection{Combined Characters}
+
+The Unicode standard specifics the order of characters in interpreting 
+a combined character. The base character is first, followed by one or
+more non-spacing marks. The order of the marks is unimportant, if the 
+marks don't interact typographically, if hey do interact, order is
+important.
+
+
+Certain combined characters, eg "\"{o}" can also be represented as a
+precomposed character. To generate the glyph "\"{o}" using Unicode, one
+can use either the precomposed base character U+00F6, or combine the
+characters U+006F ("o") with the non-spacing character U+0308 ("\"{ }").
+
+\begin{table}
+
+\begin{center}
+
+\begin{tabular}{ccccc}
+\'{a}	&	\`{e}	&	\"{u}	&	\^{o}	&	\~{n}	\\
+\={o}	&	\.{o}	&	\u{o}	&	\v{c}	&	\H{o}	\\
+\t{oo}&	\c{c}	&	\d{o}	&	\b{o}	&			\\
+\end{tabular}
+
+\end{center}
+
+\caption{Examples of combined character codes}
+
+\end{table}
+
+\subsection{Principles}
+
+Unicode was invented by a group of computer professionals, linguists and
+scholars in the early 1990s. In an effort to become a worldwide
+character set easily used for text encoding everywhere, they defined a
+set of fundamental principles:
+
+\begin{itemize}
+
+\item Universal Repertoire
+
+\item Logical Order
+
+\item Efficiency
+
+\item Unification
+
+\item Characters, not Glyphs
+
+\item Dynamic Composition
+
+\item Semantics
+
+\item Equivalent Sequence
+
+\item Plain Text
+
+\item Convertibility
+
+\end{itemize}
+
+The first 256 characters within the Unicode standard are taken from the
+widely used ASCII format. Duplicate entries across different languages
+is avoided by unifying characters within scripts. CJK consolidation is
+achieved by assigning a single code for each ideograph each time it
+occurs in each language.
+
+The Unicode standard also specifies an algorithm for the presentation of
+text in a bidirectional manner, such as left to right languages (such as
+English and other Latin alphabet based languages) and right to left
+(such as Hebrew and Arabic) and special characters to specify changes in
+direction. For all scripts, Unicode characters are arranged in a
+logical order, corresponding to the order in which they can be typed on
+a keyboard.
+
+\subsection{Further Information}
+
+Further information on the history of Unicode, a list of supported
+alphabets and a complete list of character codes are available from
+\url{http://www.unicode.org/}

@@ -1,0 +1,98 @@
+% $Id$
+
+\subsection{Introduction}
+
+XMPP is the IETF name for a set of XML based streaming protocols for
+instant messaging, as proven by the success of the Jabber IM protocol.
+It consists of a transport layer with an addressing scheme, 
+authentication and optional encryption. Due to these abstractions, XMPP 
+can be used for more than simple text based messaging. Additional 
+payload types include audio and video data types.
+
+\subsection{Identifiers (JIDs)}
+
+XMPP/Jabber identifier addresses, known as JIDs, are valid URI 
+addresses, using the Augmented Backus-Naur Form. JIDs are primarily used 
+to identify a user, but can also be used to identify a multi-user 
+chatroom. JIDs cannot be more than 3071 bytes in length. The format of a
+JID is described in Table \ref{tab:jid}.
+
+\begin{table}[p]
+
+\label{tab:jid}
+
+\begin{center}
+
+\begin{tabular}{lll}
+jid		&		&	[ node "@" ] domain [ "/" resource ]				\\
+			&		&																	\\
+domain	&		&	FQDN / DNS A or AAAA Record / Literal Address	\\
+Literal Address	&		&	IPv4 / IPv6 IP Address						\\
+resource &		&	Context / User Handle (Nickname)						\\
+\end{tabular}
+
+\end{center}
+
+\caption{Construction of a JID Identifier}
+
+\end{table}
+
+\subsection{How XMPP Works}
+
+There are 4 operational modes to XMPP: Client, Server, Gateway and
+Network.
+
+\subsubsection{Client}
+
+XMPP clients connect directly to an XMPP server over a TCP connection,
+on the recommended port 5222. Multiple clients can connect from 
+different addresses can connect to a server simultaneously with the same 
+authorisation credentials; resulting in differing resource identifiers
+or JIDs.
+
+\subsubsection{Server}
+
+An XMPP Server is responsible for managing connections between XMPP
+clients, servers and other entities and routing the appropriate XML stanzas
+to the corresponding XMPP entity using XML streams. XMPP servers are
+also commonly responsible for managing and storing user data, such as a
+user's contact list.
+
+\subsubsection{Gateway}
+
+An XMPP gateway is a special case of an XMPP server. It's primary
+function is to translate XMPP data into non XMPP data. Existing gateway 
+examples include connections to propiatary IM networks such as AIM, ICQ,
+MSN Messenger and Yahoo! Messenger; translating XMPP messages into email 
+or SMS messages; or interfacing with IRC network. Other proposed gateway
+translations include translating XMPP Jingle Messages into SIP or IAX
+VoIP messages.
+
+\subsubsection{Network}
+
+Since XMPP servers are easily identified by network address, and server
+to server connections are a simple extension of client to server
+connections, an XMPP network is simply constructed by interconnecting
+multiple servers together.
+
+\subsection{Applications using XMPP}
+
+The best known example of XMPP is the Jabber IM protocol. Jabber has
+become increasingly popular as an IM protocol due to it's ability to
+interface with propietary IM protocols, such as ICQ, AIM and MSN
+Messenger. Additionally, a private Jabber network can be easily 
+deployed within a network if an IM protocol is required, without 
+requiring full internet access. 
+
+
+A second example is the Google Talk network, while interoperable with
+the existing Jabber network and propiatary networks, in addition it
+supports Jingle\footnote{As specified by JEP-0167 - \url{http://www.jabber.org/jeps/jep-0167.html}},
+a proposed extension to XMPP to allow audio conversations, similar to
+other VoIP protocols such as SIP and IAX.
+
+\subsection{Further Information}
+
+Further information about XMPP, XMPP compatible applications and
+proposed XMPP extensions can be found at \url{http://www.jabber.org} and
+\url{http://www.xmpp.org}

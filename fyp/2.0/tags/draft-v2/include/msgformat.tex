@@ -1,0 +1,97 @@
+% $Id$
+
+In order to function as a messaging system between multiple nodes, a
+message format storing relevant information will be required. 
+Information, such as the sender's username, sender's real name, FQDN of 
+sender node, recipient's username, recipient's real name, FQDN of 
+recipient node, message text, timestamps, and public key IDs should all
+be considered relavent. 
+
+
+Therefore, during the design stages, there were 
+two options, design a custom message format, or adopt a pre-existing, 
+possibly standardised format. While designing a custom format could have 
+resulting in an efficient format suited ideally for transmitting the 
+relavent information, multiple design revisions would have been 
+necessary. 
+
+
+Therefore, adopting an open standard such as the XMPP format, as 
+standardised in RFCs 3920 and 3921 provided a well designed, scalable 
+messaging format. In addition, it would allow possible interoperability 
+with other XMPP based technologies and facilitate possible extensions 
+in the future.
+
+
+Incorporating details from
+JEP-0027\footnote{\url{http://www.jabber.org/jeps/jep-0027.html}} 
+facilitated meeting the OpenPGP, public key encryption 
+specification of the project.
+
+\subsection{XMPP Message Format}
+
+\begin{table}[hbt]
+
+\begin{verbatim}
+<message to='romeo@example.net' from='juliet@example.com/balcony' 
+type='chat' xml:lang='en'>
+  <body>Wherefore art thou, Romeo?</body>
+</message>
+\end{verbatim}
+
+\caption{Example of basic XMPP formatted message}
+
+\end{table}
+
+
+\subsection{XMPP Format, with OpenPGP Extensions}
+
+
+\begin{table}[hbt]
+
+\begin{verbatim}
+<presence from='pgmillard@jabber.org/wj_dev2' to='jer@jabber.org'>
+  <status>Online</status>
+  <x xmlns='jabber:x:signed'>
+    iQA/AwUBOjU5dnol3d88qZ77EQI2JACfRngLJ045brNnaCX78ykKNUZaTIoAoPHI
+    2uJxPMGR73EBIvEpcv0LRSy+
+    =45f8
+  </x>
+</presence>
+\end{verbatim}
+
+\caption{Example of OpenPGP signed, XMPP status message}
+
+\end{table}
+
+
+\begin{table}[hbt]
+
+\begin{verbatim}
+<message to='reatmon@jabber.org/jarl' from='pgmillard@jabber.org/wj_dev2'>
+  <body>This message is encrypted.</body>
+  <x xmlns='jabber:x:encrypted'>
+    qANQR1DBwU4DX7jmYZnncmUQB/9KuKBddzQH+tZ1ZywKK0yHKnq57kWq+RFtQdCJ
+    WpdWpR0uQsuJe7+vh3NWn59/gTc5MDlX8dS9p0ovStmNcyLhxVgmqS8ZKhsblVeu
+    IpQ0JgavABqibJolc3BKrVtVV1igKiX/N7Pi8RtY1K18toaMDhdEfhBRzO/XB0+P
+    AQhYlRjNacGcslkhXqNjK5Va4tuOAPy2n1Q8UUrHbUd0g+xJ9Bm0G0LZXyvCWyKH
+    kuNEHFQiLuCY6Iv0myq6iX6tjuHehZlFSh80b5BVV9tNLwNR5Eqz1klxMhoghJOA
+    w7R61cCPt8KSd8Vcl8K+StqOMZ5wkhosVjUqvEu8uJ9RupdpB/4m9E3gOQZCBsmq
+    OsX4/jJhn2wIsfYYWdqkbNKnuYoKCnwrlmn6I+wX72p0R8tTv8peNCwK9bEtL/XS
+    mhn4bCxoUkCITv3k8a+Jdvbov9ucduKSFuCBq4/l0fpHmPhHQjkFofxmaWJveFfF
+    619NXyYyCfoLTmWk2AaTHVCjtKdf1WmwcTa0vFfk8BuFHkdah6kJJiJ7w/yNwa/E
+    O6CMymuZTr/LpcKKWrWCt+SErxqmq8ekPI8h7oNwMxZBYAa7OJ1rXWKNgL9pDtNI
+    824Mf0mXj7q5N1eMHvX1QEoKLAda/Ae3TTEevOyeUK1DEgvxfM2KRZ11RzU+XtIE
+    My/bJk7EycAw8P/QKyeNlO1fxP58VEd6Gb8NCPqKOYn/LKh1O+c20ZNVEPFM4bNV
+    XA4hB4UtFF7Ao8kpdlrUqdKyw4lEtnmdemYQ6+iIIVPEarWl9PxOMY90KAnZrSAq
+    bt9uRY/1rPgelRaWblMKvxgpRO8++Y8VjdEyGgMOXxOiE851Ve72ftGzkSxDH8mW
+    TgY3pf2aATmBp3lagQ1COkGS/xupovT5AQPA3RzbCxDvc6s6eGYKmVVQVj5vmSj1
+    WULad5MB9KT1DzCm6FOSy063nWGBYYMWiejRvGLpo1j4eAnj0qOt7rTWmgv3RkYF
+    Oin0vDOhW7aC
+    =CvnG</x>
+</message>
+\end{verbatim}
+
+\caption{Example of encrypted, XMPP formatted Message}
+
+\end{table}

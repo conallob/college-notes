@@ -1,0 +1,76 @@
+% $Id$
+
+\documentclass[a4paper,12pt]{report}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{7.5mm}
+\setlength{\rightskip}{0pt plus 2cm} % justify
+
+\input include/preamble
+
+\makeindex
+
+\begin{document}
+
+\input include/cover
+
+\title{Oi \\ A Secure, Distributed, Unix Messaging System}
+
+\author{Student: Conall O'Brien \\ 
+		  Course:  B.A. (Mod) Computer Science \\
+		  Final Year Project \\ 
+		  Supervisor: Stephen Barrett} 
+
+
+\date{}
+\maketitle
+
+\pagenumbering{roman}
+
+\part*{Preface}
+
+
+\section{About This Report}
+
+\input include/about-report
+
+\pagebreak
+
+
+\section{Acknowledgements}
+
+\input include/acknowledgements
+
+\pagebreak
+
+\section{Abstract}
+
+\input include/abstract
+
+\tableofcontents
+
+\listoftables
+
+\listoffigures
+
+
+\part*{Report}
+
+\input include/chapter1
+\input include/chapter2
+\input include/chapter3
+\input include/chapter4
+\input include/chapter5
+
+\part*{Appendix}
+
+\appendix
+
+\input include/appendixa
+\input include/appendixb
+%\input include/appendixc
+\input include/appendixd
+\input include/appendixe
+\input include/appendixf
+
+\end{document}

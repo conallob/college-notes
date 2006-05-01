@@ -1,0 +1,53 @@
+% $Id$
+
+\subsection{Concerns Raised}
+
+During the initial brainstorming phase when possible requirements were
+suggested to the authors of software such as the original \emph{hey},
+the widely used \emph{c-hey} and the predecessor \emph{Oi, version 1},
+some concerns over the security model used in \emph{Oi, version 1} were
+raised by John Tobin and Adrian Colley. 
+
+
+\emph{Oi, version 1} used X.509 managed SSL certificates to encrypt 
+messages between nodes, so unencrypted messages were not transmitted 
+across a network. Adrian expressed reservations over this security model 
+for a multiuser, multiple node architecture. With this model, if a
+single node with multiple users is compromised, the messages to and from
+any user on this system are also compromised. As a result, a malicious
+user could potentially intercept messages within minimal effort.
+
+
+John also raised concerns over using X.509 certificates as well,
+primarily because his SSL socket functionality was created using the
+OpenSSL open source library. However, due to lack of adequate
+documentation during development, the preexisting SSL support is
+semi-functional.
+
+\subsection{A Different Approach}
+
+After considering the concerns highlighted regarding the preexisting
+security architecture, I decided to redesign the security model using a
+different technology to X.509 security certificates. I decided to use the 
+OpenPGP standard for encrypting transmissions between two individual 
+users.
+
+
+The principle difference using this approach to the preexisting
+codebase is that encryption is end to end, not node to node. As a
+result, the model is more robust and privacy is gaurentee. Instead of a
+single SSL certificate and private key on each node, every user has a
+public and private key pair. Users also require the public key component
+of their intended recipient, to allow them to encrypt their message using
+their recipient's public key.
+
+
+Using a public private key model, a compromised node is no longer as
+critical as it was using X.509 SSL certificates. Additionally, messages
+are still encrypted until delivered to the recipient, protecting
+sensitive messages from being intercepted during the delivery process.
+
+
+Finally, since OpenPGP keys are quite common, there is an existing
+public key management system in widespread deployment, simplifying the
+task of key management for the messaging system.

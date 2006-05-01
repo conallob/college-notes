@@ -1,0 +1,100 @@
+ % $Id$
+
+
+\begin{figure}[Hbt]
+
+\xy<1cm,0cm>:
+(10,0) *=(7.5,1)!UC\txt{Message} *\frm{-} ;
+(10,-3) **\dir{-} *\dir{>},
+(10,-3)*=(7.5,1)!UC\txt{Encode into Unicode} *\frm{=} ; 
+(10,-6) **\dir{-} *\dir{>},
+(10,-6)*=(7.5,1)!UC\txt{Encrypt Message} *\frm{-} ; 
+(10,-9) **\dir{-} *\dir{>},
+(10,-9)*=(7.5,1)!UC\txt{Passed to $Server_{Sender}$} *\frm{-} ; 
+(10,-11) **\dir{=} *\dir{>},
+\endxy
+
+\caption{Use Case: Client sending a message to Server}
+
+\end{figure}
+
+\begin{enumerate}
+
+\item User types messages, then hits send.
+
+\item Message is (optionally) translated into Unicode. If message is
+already in Unicode, no translation is performed.
+
+\item Message is encrypted before transport across the network
+
+\item Message is placed in the outgoing queue of the local server
+
+\end{enumerate}
+
+
+\begin{figure}[Hbt]
+
+\xy<1cm,0cm>:
+(10,0) *=(7.5,1)!UC\txt{Send from $Server_{Sender}$} *\frm{-} ;
+(10,-3) **\dir{-} *\dir{>},
+(10,-3)*=(7.5,1)!UC\txt{Receive at $Server_{Receive}$} *\frm{-} , 
+(7.5,-4) ; (7.5,-6)**\dir{-} *\dir{>},
+(12.5,-6) ; (12.5,-4)**\dir{--} *\dir{>},
+(10,-6)*=(7.5,1)!UC\txt{Poll for User} *\frm{-} ; 
+(10,-9) **\dir{=} *\dir{>},
+\endxy
+
+\caption{Use Case: Sending a Message between Servers}
+
+\end{figure}
+
+\begin{enumerate}
+
+\item Message is queued in $Server_{Sender}$.
+
+\item $Server_{Sender}$ passes message to $Server_{Receiver}$.
+
+\item $Server_{Receiver}$ polls for recipient user. 
+
+\subitem If user is available, attempt to delivery message. 
+
+\subitem If user is not available, pass message to local SMTP queue. 
+
+\subitem If user does not exist, destroy message and report error to $Server_{Sender}$.
+
+\end{enumerate}
+
+
+\begin{figure}[Hbt]
+
+\xy<1cm,0cm>:
+(10,2) ; (10,0) **\dir{=} *\dir{>},
+(10,0) *=(7.5,1)!UC\txt{Message Received by $Server_{Reciece}$} *\frm{-} ;
+(10,-3) **\dir{-} *\dir{>},
+(10,-3)*=(7.5,1)!UC\txt{User is Available} *\frm{-} ; 
+(10,-6) **\dir{-} *\dir{>},
+(10,-6)*=(7.5,1)!UC\txt{Decrypt Message} *\frm{-} ; 
+(10,-9) **\dir{-} *\dir{>},
+(10,-9)*=(7.5,1)!UC\txt{Decode from Unicode} *\frm{=} ; 
+(10,-12) **\dir{-} *\dir{>},
+(10,-12)*=(7.5,1)!UC\txt{Print Message to User} *\frm{-} ; 
+\endxy
+
+\caption{Use Case: Server delivering message to local recipient}
+
+\end{figure}
+
+\begin{enumerate}
+
+\item Message is received by $Server_{Receive}$.
+
+\item User appears to be available. Attempting to deliver message.
+
+\item Message is decrypted by recipient user. 
+
+\item Message is optionally translated from Unicode, unless user has
+declared they can accept Unicode. 
+
+\item Message is printed to user's terminal
+
+\end{enumerate}

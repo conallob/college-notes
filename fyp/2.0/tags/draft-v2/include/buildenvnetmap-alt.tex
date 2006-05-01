@@ -1,0 +1,74 @@
+% $Id: /college/fyp/2.0/doc/include/buildenvnetmap.tex 2594 2006-04-04T21:09:58.634858Z conall  $
+
+\begin{figure}
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(2, 0)  	*=(3,1.5) !CR \txt{Level 3} 						*\frm{-} ="l3" , 
+(8, 0)  	*=(3,1.5) !CL \txt{INEX} 							*\frm{-} ="inex" , 
+(0,-3) 	*=(4,1.5) !CL \txt{Hosting 365} 					*\frm{-} ="h365" , 
+(8,-3) 	*=(4,1.5) !CC \txt{Irish Broadband} 			*\frm{-} ="ibb" , 
+(0, 3)  	*=(4,1.5) !CL \txt{Asclepian} 					*\frm{-} ="asclepian" , 
+(8, 3)  	*=(4,1.5) !CC \txt{HEAnet} 						*\frm{-} ="heanet" , 
+(10,-6)  *=(4,1.5) !CC \txt{InfoCAD} 						*\frm{-} ="infocad" , 
+(8,6)  	*=(4,1.5) !CC \txt{Trinity College} 			*\frm{-} ="tcd" , 
+(5,9)  	*=(4,1.5) !CC \txt{School of \\ Mathematics} *\frm{-} ="maths" , 
+(11,9)  	*=(4,1.5) !CC \txt{Netsoc} 						*\frm{-} ="netsoc" , 
+%
+\POS (7,-9) *\txt{\FreeBSD{rowlf}} !UL ="rowlf",
+\POS (10,-9) *\txt{\MacOSX{thog}} !UL ="thog",
+\POS (13,-9) *\txt{\FreeBSD{sweetums}} !UL ="sweetums",
+%
+\POS (0,-6) *\txt{\FreeBSD{leonidas}} !UL ="leonidas",
+%
+\POS (0,6) *\txt{\Linux{icarus}} !UL ="icarus",
+%
+\POS (13,12) *\txt{\Solaris{matrix}} !UL ="matrix",
+%
+\POS (1,12) *\txt{\NetBSD{hansel}} !UL ="hansel",
+\POS (4,12) *\txt{\NetBSD{gretel}} !UL ="gretel",
+\POS (7,12) *\txt{\FreeBSD{jbell}} !UL ="jbell",
+\POS (10,12) *\txt{\Linux{zoidberg}} !UL ="zoidberg",
+\POS (1,9) *\txt{\FreeBSD{walton}} !UL ="walton",
+%
+\POS (0,-9) *\txt{\underline{Legend:} \\ \hspace{2mm} \\ \FreeBSD{FreeBSD} \\ \Linux{Linux} \\
+\MacOSX{MacOS X} \\ \NetBSD{NetBSD} \\ \Solaris{Solaris} \\ - IPv4 Network \\ = IPv6/IPv4 Dual \\ Stacked Network} *++\frm{-} !UL ="legend",
+%
+"walton" 	!CR ; "maths" 		!CL **\dir{=} ,
+"hansel" 	!DC ; "maths" 		!UC **\dir{=} ,
+"gretel" 	!DC ; "maths" 		!UC **\dir{=} ,
+"jbell"  	!DC ; "maths" 		!UC **\dir{=} ,
+"zoidberg"  !DC ; "maths" 		!UC **\dir{=} ,
+%
+"matrix"  	!DC ; "netsoc" 	!UC **\dir{-} ,
+%
+"icarus"  	!DC ; "asclepian" !UC **\dir{=} ,
+%
+"rowlf"  	!UC ; "infocad" 	!DC **\dir{=} ,
+"thog"	  	!UC ; "infocad" 	!DC **\dir{=} ,
+"sweetums" 	!UC ; "infocad" 	!DC **\dir{=} ,
+%
+"h365" 		!DC ; "inex" 		!DC **\dir{-} ,
+"h365" 		!UC ; "l3" 			!DC **\dir{-} ,
+"h365" 		!DC ; "leonidas" 	!UC **\dir{=} ,
+%
+"ibb" 		!UC ; "inex" 		!DC **\dir{-} ,
+"ibb" 		!DC ; "l3" 			!DC **\dir{-} ,
+"ibb" 		!DC ; "infocad" 	!UC **\dir{-} ,
+%
+"heanet" 	!DC ; "inex" 		!UC **\dir{=} ,
+"heanet" 	!LC ; "asclepian" !RC **\dir{=} ,
+%
+"asclepian" !DC ; "l3" 			!UC **\dir{-} ,
+%
+"tcd" 		!DC ; "heanet" 	!UC **\dir{=} ,
+"tcd" 		!DC ; "maths" 		!DC **\dir{=} ,
+"tcd" 		!DC ; "netsoc" 	!DC **\dir{=} ,
+\endxy
+
+\end{center}
+
+\caption{Network Overview of Build Environments}
+
+\end{figure}

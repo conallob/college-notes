@@ -1,0 +1,71 @@
+% $Id$
+
+\begin{figure}
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(2, 0)  	*=(3,1.5) !CR \txt{Level 3} 						*\frm{-} ="l3" , 
+(8, 0)  	*=(3,1.5) !CL \txt{INEX} 							*\frm{-} ="inex" , 
+(0,-3) 	*=(4,1.5) !CL \txt{Hosting 365} 					*\frm{-} ="h365" , 
+(8,-3) 	*=(4,1.5) !CC \txt{Irish Broadband} 			*\frm{-} ="ibb" , 
+(0, 3)  	*=(4,1.5) !CL \txt{Asclepian} 					*\frm{-} ="asclepian" , 
+(8, 3)  	*=(4,1.5) !CC \txt{HEAnet} 						*\frm{-} ="heanet" , 
+(10,-6)  *=(4,1.5) !CC \txt{InfoCAD} 						*\frm{-} ="infocad" , 
+(10,6)  	*=(4,1.5) !CC \txt{Trinity College} 			*\frm{-} ="tcd" , 
+(7,9)  	*=(4,1.5) !CC \txt{School of \\ Mathematics} *\frm{-} ="maths" , 
+(13,9)  	*=(4,1.5) !CC \txt{Netsoc} 						*\frm{-} ="netsoc" , 
+%
+\POS (7,-9) *\txt{rowlf} !UL ="rowlf",
+\POS (10,-9) *\txt{thog} !UL ="thog",
+\POS (13,-9) *\txt{sweetums} !UL ="sweetums",
+%
+\POS (0,-6) *\txt{leonidas} !UL ="leonidas",
+%
+\POS (0,6) *\txt{icarus} !UL ="icarus",
+%
+\POS (15,12) *\txt{matrix} !UL ="matrix",
+%
+\POS (3,12) *\txt{hansel} !UL ="hansel",
+\POS (6,12) *\txt{gretel} !UL ="gretel",
+\POS (9,12) *\txt{jbell} !UL ="jbell",
+\POS (12,12) *\txt{zoidberg} !UL ="zoidberg",
+\POS (3,9) *\txt{walton} !UL ="walton",
+%
+"walton" 	!CR ; "maths" 		!CL **\dir{-} ,
+"hansel" 	!DC ; "maths" 		!UC **\dir{-} ,
+"gretel" 	!DC ; "maths" 		!UC **\dir{-} ,
+"jbell"  	!DC ; "maths" 		!UC **\dir{-} ,
+"zoidberg"  !DC ; "maths" 		!UC **\dir{-} ,
+%
+"matrix"  	!DC ; "netsoc" 	!UC **\dir{-} ,
+%
+"icarus"  	!DC ; "asclepian" !UC **\dir{-} ,
+%
+"rowlf"  	!DC ; "infocad" 	!DC **\dir{-} ,
+"thog"	  	!DC ; "infocad" 	!DC **\dir{-} ,
+"sweetums" 	!DC ; "infocad" 	!DC **\dir{-} ,
+%
+"h365" 		!DC ; "inex" 		!DC **\dir{-} ,
+"h365" 		!DC ; "l3" 			!DC **\dir{-} ,
+"h365" 		!DC ; "leonidas" 	!DC **\dir{-} ,
+%
+"ibb" 		!DC ; "inex" 		!DC **\dir{-} ,
+"ibb" 		!DC ; "l3" 			!DC **\dir{-} ,
+"ibb" 		!DC ; "infocad" 	!DC **\dir{-} ,
+%
+"heanet" 	!DC ; "inex" 		!DC **\dir{-} ,
+"heanet" 	!CC ; "asclepian" !CC **\dir{-} ,
+%
+"asclepian" !DC ; "l3" 			!DC **\dir{-} ,
+%
+"tcd" 		!DC ; "heanet" 	!DC **\dir{-} ,
+"tcd" 		!DC ; "maths" 		!DC **\dir{-} ,
+"tcd" 		!DC ; "netsoc" 	!DC **\dir{-} ,
+\endxy
+
+\end{center}
+
+\caption{Network Overview of Build Environments}
+
+\end{figure}
