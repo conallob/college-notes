@@ -26,6 +26,14 @@ simply programming.
 Address Resolution Protocol, used in IPv4 TCP/IP stacks to translate 
 between IP and Layer 2 address (eg Ethernet MAC addresses).
 
+\textbf{ASM}
+
+Any Source Multicast, the current term referring to one-to-many and
+many-to-many IP multicast as originallyy defined in RFC 1112. ASM is 
+generally implemented using PIM (using either PIM-SM or PIM-DM). A more 
+detailed description of ASM is available in section \ref{sec:asm} in 
+Appendix \ref{app:bg}.
+
 \textbf{bit}
 
 The method of expressing data on most computers. It is a number in base
@@ -194,8 +202,17 @@ are mathematically related to each other.
 \textbf{PIM}
 
 Protocol Independent Multicast, a protocol for routing multicast
-traffic. There are two versions, Sparse Mode and Dense Mode, referring
-to the density of nodes subnets in multicast enabled subnets.
+traffic. There are two versions, Sparse Mode (PIM-SM) and Dense Mode
+(PIM-DM), referring to the density of nodes subnets in multicast 
+enabled subnets.
+
+\textbf{PIM-DM}
+
+See PIM.
+
+\textbf{PIM-SM}
+
+See PIM.
 
 \textbf{prefix}
 
@@ -219,6 +236,14 @@ govern the Internet and the protocols available.
 
 Simple Mail Transfer Protocol, the protocol used to transmit email
 between nodes on a network, or the Internet.
+
+\textbf{SSM}
+
+Source Specific Multicast, a dramatically revised design of Multicast,
+with the aim to simplify setup, as compared to ASM. At the time of
+writing, while standardised in RFC 3569, it is largely unsupported by
+vendors. A more detailed description of SSM is available in section 
+\ref{sec:ssm} in Appendix \ref{app:bg}.
 
 \textbf{tunnel}
 
