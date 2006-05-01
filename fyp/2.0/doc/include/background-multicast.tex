@@ -3,33 +3,242 @@
 \subsection{Introduction}
 
 Multicast is a data delivery method allowing data to be transmitted from
-one-to-many and many-to-many delivery. The network itself is responsible
-for generating the duplicate traffic, thus using bandwidth more
-efficinently than using multiple Unicast connections between the source
-and multiple destinations.
+one-to-many and many-to-many delivery. It can be considered the middle
+ground between the traditional delivery methods of Unicast and
+Broadcast. The network itself is responsible for generating the 
+duplicate traffic, thus using bandwidth more efficinently than using 
+multiple Unicast connections between the source and multiple 
+destinations. There are currently two catagories of multicast, ASM and 
+SSM.
 
-\subsection{How Multicast Works}
+\subsection{What Multicast Is}
 
 Multicast connections are based upon groups and group membership. In
 practical terms, a multicast group is an IP number from the multicast IP
-block, from the class D IP range 224.0.0.0/4.
+block, from the class D IP range 224.0.0.0/4. Group members are clients
+who are interested in receiving the multicast transmissions.
+
+\subsection{Flavours}
+
+\subsubsection{Any Source Multicast (ASM)}
+\label{sec:asm}
+
+ASM is the current name referring to IP Multicast as defined in RFC
+1112, refers to the original IP Multicast specification. To distribute
+traffic, the concept of a distribution tree is required. 
 
 
+Using ASM, routers perform RPF to calculate which interface is 
+topologically nearest to the top of the tree. Once calculated, a router
+treats the RPF interface as the incoming multicast interface for a
+group.
 
 
+Using the simplest form of ASM, known as SPT, is when the multicast
+source is the root of the distrution tree. To construct the tree, any
+router which receives a join request from a node forwards the join
+request from it's RPT interface to the next upstream router, until the 
+join message reaches a router connected with the multicast source or a
+router in a multicast forwarding state for the relavent source-group
+pair; thus forming a distribution tree. See example in Figure 
+\ref{fig:asm-spt}.
+
+\begin{figure}[Hp]
+\label{fig:asm-spt}
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(1, 7.5)  *=(1,1) \txt{$S$}	  	*\frm{-}  ="src",
+(1, -3)   *=(1,1) \txt{$H_{1}$}	*\frm{-}  ="dst1",
+(7, -3)   *=(1,1) \txt{$H_{2}$}	*\frm{-}  ="dst2",
+%
+(4,  5)   *=(1,1) \txt{$R_{1}$} *\frm{o}   ="r1",
+(8,  5)   *=(1,1) \txt{$R_{2}$} *\frm{o}   ="r2",
+(2,  0)   *=(1,1) \txt{$R_{3}$} *\frm{o}   ="r3",
+(6,  0)   *=(1,1) \txt{$R_{4}$} *\frm{o}   ="r4",
+(10, 0)   *=(1,1) \txt{$R_{5}$} *\frm{o}   ="r5",
+%
+"src" !DR ; "r1" !UC **\dir{~} ,
+%
+"r1" !CC ; "r2" !CC **\dir{~} ,
+"r3" !CC ; "r4" !CC **\dir{~} ,
+"r4" !CC ; "r5" !CC **\dir{~} ,
+"r1" !CC ; "r3" !CC **\dir{~} ,
+"r1" !CC ; "r4" !CC **\dir{~} ,
+"r2" !CC ; "r5" !CC **\dir{~} ,
+%
+"src" !DR; "r1"   !CC **[thicker]\dir{=} ,
+"r1"  !CC; "r3"   !CC **[thicker]\dir{=} ,
+"r1"  !CC; "r4"   !CC **[thicker]\dir{=} ,
+"r3"  !CC; "dst1" !UC **[thicker]\dir{=} *\dir3{>},
+"r4"  !CC; "dst2" !UC **[thicker]\dir{=} *\dir3{>},
+%
+\POS (13,5) *\txt{Legend: \\ \\ ~ L1 Link \\ = IP Multicast Link \\ $R_{n}$ Router \\ S Source \\ $H_{n}$ Host} *++\frm{-} !UL ="legend"
+\endxy
+
+\end{center}
+
+\caption{Creating a SPT Tree in ASM}
+
+\end{figure}
+
+
+Alternative operating modes of ASM are referred to as PIM, which
+can operate in two modes, Sparse Mode (PIM-SM) and Dense Mode (PIM-DM),
+depending on the level of popularity the multicast functionality is with
+connected nodes. The core difference compared to SPT is that a shared
+tree is used, meaning the root of the distribution tree is an RP.
+
+
+An RP is a router on the network, which is aware of the source address.
+As a result, the RP is in a multicast forwarding state. The RP is a node
+on a SPT to the true multicast source.
+
+
+The other routers on the network will join the distribution tree of a 
+particular  group under the same conditions as when creating a RPT. The 
+key contrast is that only the router serving as the RP is aware of the 
+true source address. All other routers treat the RP as the source node. 
+See example in Figure \ref{fig:asm-rpt}.
+
+\begin{figure}[Hp]
+\label{fig:asm-rpt}
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(1, 7.5)  *=(1,1) \txt{$S$}	  	*\frm{-}  ="src",
+(1, -3)   *=(1,1) \txt{$H_{1}$}	*\frm{-}  ="dst1",
+(7, -3)   *=(1,1) \txt{$H_{2}$}	*\frm{-}  ="dst2",
+%
+(4,  5)   *=(1,1) \txt{$R_{1}$} *\frm{o}   ="r1",
+(8,  5)   *=(1,1) \txt{$R_{2}$} *\frm{o}   ="r2",
+(2,  0)   *=(1,1) \txt{$R_{3}$} *\frm{o}   ="r3",
+(6,  0)   *=(1,1) \txt{$R_{4}$} *\frm{o}   ="r4",
+(10, 0)   *=(1,1) \txt{$R_{5}$} *\frm{o}   ="r5",
+%
+"src" !DR ; "r1" !UC **\dir{~} ,
+%
+"r1" !CC ; "r2" !CC **\dir{~} ,
+"r3" !CC ; "r4" !CC **\dir{~} ,
+"r4" !CC ; "r5" !CC **\dir{~} ,
+"r1" !CC ; "r3" !CC **\dir{~} ,
+"r1" !CC ; "r4" !CC **\dir{~} ,
+"r2" !CC ; "r5" !CC **\dir{~} ,
+%
+"src" !DR; "r1"   !CC **[thicker]\dir{=} ,
+"r1"  !CC; "r2"   !CC **[thicker]\dir{=} ,
+"r2"  !CC; "r5"   !CC **[thicker]\dir{=} ,
+"r5"  !CC; "r4"   !CC **[thicker]\dir{=} ,
+"r4"  !CC; "r3"   !CC **[thicker]\dir{=} ,
+"r3"  !CC; "dst1" !UC **[thicker]\dir{=} *\dir3{>},
+"r4"  !CC; "dst2" !UC **[thicker]\dir{=} *\dir3{>},
+%
+\POS (8.75,5.75) !UR *\txt{RP} ,
+%
+\POS (13,5) *\txt{Legend: \\ \\ ~ L1 Link \\ = IP Multicast Link \\ $R_{n}$ Router \\ S Source \\ $H_{n}$ Host \\ RP Rendezvous Point} *++\frm{-} !UL ="legend"
+\endxy
+
+\end{center}
+
+\caption{Creating a RPT Tree in ASM}
+
+\end{figure}
+
+Although the RPF table on a router can be identical to the Unicast
+routing table, or there can be a dedicated RPF table. In order to 
+populate a dedicated RPF tables on a router, dynamic multicast 
+routing protocols are required. Due to the similarities between the data
+in Unicast routing tables and a multicast RPF tables, slightly modified
+routing protocols such as Multicast BGP (MBGP) and Multicast-ISIS
+(M-ISIS) are employed to maintain the RPF tables of the routers on a
+mulitcast network if PIM-SM or PIM-DM is employed. Otherwise, DVMRP is
+used to populate the RPT table on every router on the network.
+
+
+In order to use ASM properly, statically assigned Multicast IP numbers
+are required. Since these IP numbers are generaully unavailable,
+organisationa with public AS numbers automatically have a portion of
+233.0.0.0/8 IP block GLOB range reserved for them, in accordance with 
+RFC 3180.
+
+\subsubsection{Source Specific Multicast (SSM)}
+\label{sec:ssm}
+
+SSM is a proposed standard to replace ASM multicast models. The key
+difference is the lack of many-to-many multicast delivery, primarily due
+to the fewer uses it has compared to the one-to-many multicast delivery
+model. As a result, the functionality for source discovery has been
+moved from the router to the host. Thus, RPTs and RPs are no longer
+required in SSM, considerably reducing the complexity involved.
+
+
+An additional by product of SSM is that the Multicast IPs are not 
+required to be globally unique, making the 232.0.0.0/8 SSM IP block
+resuable within different organisations.
+
+\subsection{Group Management}
+
+While there are a number of group management protocol to control IP
+multicast group membership, IGMP is the one primarily used. To join a
+multicast group, a host transmits an IGMP report to a well-known
+mutlicast group. All IGMP enabled routers on the nework are listening to
+this multicast group. Then the appropriate router with a direct link to
+the host in question joins a multicast group using ASM or SSM based
+multicast using the appropriate routing protocol.
+
+
+In order to conserve bandwidth, and in order to support the preference
+of L2 switches over L2 hubs (primarily due to unique collision domains
+created for every port on a switch), IGMP Snooping is an operational
+mode to allow switches to be aware of ICMP messages and to switch or
+disregard ICMP messages in a similar manner to traditional unicast
+traffic.
 
 \subsection{Interdomain Multicast Routing}
 
-Additionally, in a similar manner to why IGP and EGP dynamic routing
-protocols are required to populate routing tables, multicast routing
-protocols are required to populate multicast group membership tables 
-across routers on a network. Protocols such as MBGP and M-ISIS 
+Although the RPF table on a router can be identical to the Unicast
+routing table, or there can be a dedicated RPF table. In order to 
+populate a dedicated RPF tables on a router, dynamic multicast 
+routing protocols are required. Due to the similarities between the data
+in Unicast routing tables and a multicast RPF tables, slightly modified
+routing protocols such as Multicast BGP (MBGP) and Multicast-ISIS
+(M-ISIS) are employed to maintain the RPF tables of the routers on a
+mulitcast network.
 
 \subsection{Practical Uses}
 
+Multicast has numerous practical activities, where efficient use of
+bandwidth is preferred. Applications such as selective broadcast
+catagorised information (such as stock values), multimedia systems (such
+as audio and video streaming, IPTV), audio and video conference calling, 
+as well as computer system protocols of interest to many, such as
+authentication and configuraion protocols where replication is
+used (eg LDAP, NFS, etc).
 
-\subsection{Common Multicast Problems}
+\subsection{Common Multicast Issues and Problems}
 
+\subsubsection{Layer 3 to Layer 2 Mapping}
+
+On a L2 Ethernet network, all devices have a unique 48-bit MAC address
+used as an identifier. IP Multicast IP blocks are Class D IPs and are 
+thus do not correspond with a single end host. The MAC address range
+assigned for L2 Multicast is only 24 bits long, thus resulting in a 1:32
+overlap, where there are 32 possible Multicast MAC addresses mapped to a 
+single multicast IP address.
+overlap
+
+\subsubsection{Incompatible Network Design}
+
+
+\subsection{Vendor Support}
+
+At the time or writing, networking hardware vendors support for ASM
+multicast is complete, while SSM is still not supported as yet. As a
+result, deploying IP multicast, no matter which delivery method is
+desired, ASM is the only available choice, adding additional complexity
+and effort to the deployment of multicast.
 
 \subsection{Further Information}
 
