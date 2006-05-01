@@ -229,8 +229,20 @@ overlap, where there are 32 possible Multicast MAC addresses mapped to a
 single multicast IP address.
 overlap
 
-\subsubsection{Incompatible Network Design}
+\subsubsection{Network Design Flaws}
 
+A badly structured layer 2 network design can experience numerous issues
+when deploying mulicast. Such issues can include symptoms such as: 
+additional CPU load on switches when IGMP Snooping is enabled; 
+Overlapping MAC addresses causing IGMP Snooping information for 
+different groups to be merged; network flooded with IGMP Snooping 
+messages as topology changes and networking devices relearn network 
+structure; inability to restrict groups by network given the large
+number of active ports on the network.
+
+Similarly, a badly structured L3 network can also experience adverse 
+behaviour, such as routing instabilities which cause PIM to change it's
+forwarding state.
 
 \subsection{Vendor Support}
 
