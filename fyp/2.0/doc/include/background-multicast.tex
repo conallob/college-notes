@@ -6,9 +6,9 @@ Multicast is a data delivery method allowing data to be transmitted from
 one-to-many and many-to-many delivery. It can be considered the middle
 ground between the traditional delivery methods of Unicast and
 Broadcast. The network itself is responsible for generating the 
-duplicate traffic, thus using bandwidth more efficinently than using 
+duplicate traffic, thus using bandwidth more efficiently than using 
 multiple Unicast connections between the source and multiple 
-destinations. There are currently two catagories of multicast, ASM and 
+destinations. There are currently two categories of multicast, ASM and 
 SSM.
 
 \subsection{What Multicast Is}
@@ -35,11 +35,11 @@ group.
 
 
 Using the simplest form of ASM, known as SPT, is when the multicast
-source is the root of the distrution tree. To construct the tree, any
+source is the root of the distribution tree. To construct the tree, any
 router which receives a join request from a node forwards the join
 request from it's RPT interface to the next upstream router, until the 
 join message reaches a router connected with the multicast source or a
-router in a multicast forwarding state for the relavent source-group
+router in a multicast forwarding state for the relevant source-group
 pair; thus forming a distribution tree. See example in Figure 
 \ref{fig:asm-spt}.
 
@@ -153,13 +153,13 @@ routing protocols are required. Due to the similarities between the data
 in Unicast routing tables and a multicast RPF tables, slightly modified
 routing protocols such as Multicast BGP (MBGP) and Multicast-ISIS
 (M-ISIS) are employed to maintain the RPF tables of the routers on a
-mulitcast network if PIM-SM or PIM-DM is employed. Otherwise, DVMRP is
+multicast network if PIM-SM or PIM-DM is employed. Otherwise, DVMRP is
 used to populate the RPT table on every router on the network.
 
 
 In order to use ASM properly, statically assigned Multicast IP numbers
-are required. Since these IP numbers are generaully unavailable,
-organisationa with public AS numbers automatically have a portion of
+are required. Since these IP numbers are generally unavailable,
+organisation with public AS numbers automatically have a portion of
 233.0.0.0/8 IP block GLOB range reserved for them, in accordance with 
 RFC 3180.
 
@@ -176,14 +176,14 @@ required in SSM, considerably reducing the complexity involved.
 
 An additional by product of SSM is that the Multicast IPs are not 
 required to be globally unique, making the 232.0.0.0/8 SSM IP block
-resuable within different organisations.
+reusable within different organisations.
 
 \subsection{Group Management}
 
 While there are a number of group management protocol to control IP
 multicast group membership, IGMP is the one primarily used. To join a
 multicast group, a host transmits an IGMP report to a well-known
-mutlicast group. All IGMP enabled routers on the nework are listening to
+multicast group. All IGMP enabled routers on the network are listening to
 this multicast group. Then the appropriate router with a direct link to
 the host in question joins a multicast group using ASM or SSM based
 multicast using the appropriate routing protocol.
@@ -192,8 +192,8 @@ multicast using the appropriate routing protocol.
 In order to conserve bandwidth, and in order to support the preference
 of L2 switches over L2 hubs (primarily due to unique collision domains
 created for every port on a switch), IGMP Snooping is an operational
-mode to allow switches to be aware of ICMP messages and to switch or
-disregard ICMP messages in a similar manner to traditional unicast
+mode to allow switches to be aware of IGMP messages and to switch or
+disregard IGMP messages in a similar manner to traditional Unicast
 traffic.
 
 \subsection{Interdomain Multicast Routing}
@@ -205,16 +205,16 @@ routing protocols are required. Due to the similarities between the data
 in Unicast routing tables and a multicast RPF tables, slightly modified
 routing protocols such as Multicast BGP (MBGP) and Multicast-ISIS
 (M-ISIS) are employed to maintain the RPF tables of the routers on a
-mulitcast network.
+multicast network.
 
 \subsection{Practical Uses}
 
 Multicast has numerous practical activities, where efficient use of
 bandwidth is preferred. Applications such as selective broadcast
-catagorised information (such as stock values), multimedia systems (such
+categorized information (such as stock values), multimedia systems (such
 as audio and video streaming, IPTV), audio and video conference calling, 
 as well as computer system protocols of interest to many, such as
-authentication and configuraion protocols where replication is
+authentication and configuration protocols where replication is
 used (eg LDAP, NFS, etc).
 
 \subsection{Common Multicast Issues and Problems}
@@ -243,6 +243,6 @@ and effort to the deployment of multicast.
 \subsection{Further Information}
 
 Further information about Multicast and Interdomain Multicast can be
-found in Interdomain Multicasty by Brian Edwards, Leonard Guiliano and
+found in Interdomain Multicast by Brian Edwards, Leonard Guiliano and
 Brian Wright; and Developing IP Multicast Networks: Volume I by Beau
 Williamson.
