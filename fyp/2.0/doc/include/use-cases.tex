@@ -1,22 +1,29 @@
  % $Id$
 
 
-\begin{figure}[Hbt]
+\begin{figure}[h]
 
-\xy<1cm,0cm>:
-(10,0) *=(7.5,1)!UC\txt{Message} *\frm{-} ;
+\small
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(10,0) 	*=(4,1)!UC\txt{Enter Message} *\frm{-} ;
 (10,-3) **\dir{-} *\dir{>},
-(10,-3)*=(7.5,1)!UC\txt{Encode into Unicode} *\frm{=} ; 
+(10,-3)	*=(4,1)!UC\txt{Encode into Unicode} *\frm{--} ; 
 (10,-6) **\dir{-} *\dir{>},
-(10,-6)*=(7.5,1)!UC\txt{Encrypt Message} *\frm{-} ; 
+(10,-6)	*=(4,1)!UC\txt{Encrypt Message} *\frm{--} ; 
 (10,-9) **\dir{-} *\dir{>},
-(10,-9)*=(7.5,1)!UC\txt{Passed to $Server_{Sender}$} *\frm{-} ; 
+(10,-9)	*=(4,1)!UC\txt{Passed to $Server_{Sender}$} *\frm{-} ; 
 (10,-11) **\dir{=} *\dir{>},
 \endxy
+
+\end{center}
 
 \caption{Use Case: Client sending a message to Server}
 
 \end{figure}
+
 
 \begin{enumerate}
 
@@ -32,21 +39,28 @@ already in Unicode, no translation is performed.
 \end{enumerate}
 
 
-\begin{figure}[Hbt]
+\begin{figure}[h]
 
-\xy<1cm,0cm>:
-(10,0) *=(7.5,1)!UC\txt{Send from $Server_{Sender}$} *\frm{-} ;
+\small
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(10,0) *=(4,1)!UC\txt{Send from $Server_{Sender}$} *\frm{-} ;
 (10,-3) **\dir{-} *\dir{>},
-(10,-3)*=(7.5,1)!UC\txt{Receive at $Server_{Receive}$} *\frm{-} , 
-(7.5,-4) ; (7.5,-6)**\dir{-} *\dir{>},
-(12.5,-6) ; (12.5,-4)**\dir{--} *\dir{>},
-(10,-6)*=(7.5,1)!UC\txt{Poll for User} *\frm{-} ; 
+(10,-3)*=(4,1)!UC\txt{Receive at $Server_{Receive}$} *\frm{-} , 
+(9,-4) ; (9,-6)**\dir{-} *\dir{>},
+(11,-6) ; (11,-4)**\dir{--} *\dir{>},
+(10,-6)*=(4,1)!UC\txt{Poll for User} *\frm{-} ; 
 (10,-9) **\dir{=} *\dir{>},
 \endxy
+
+\end{center}
 
 \caption{Use Case: Sending a Message between Servers}
 
 \end{figure}
+
 
 \begin{enumerate}
 
@@ -65,24 +79,30 @@ already in Unicode, no translation is performed.
 \end{enumerate}
 
 
-\begin{figure}[Hbt]
+\begin{figure}[h]
 
-\xy<1cm,0cm>:
-(10,2) ; (10,0) **\dir{=} *\dir{>},
-(10,0) *=(7.5,1)!UC\txt{Message Received by $Server_{Reciece}$} *\frm{-} ;
+\small
+
+\begin{center}
+
+\ \xy<1cm,0cm>:
+(10,0) *=(4,1)!UC\txt{Message Received by \\ $Server_{Reciece}$} *\frm{-} ;
 (10,-3) **\dir{-} *\dir{>},
-(10,-3)*=(7.5,1)!UC\txt{User is Available} *\frm{-} ; 
+(10,-3)*=(4,1)!UC\txt{User is Available} *\frm{-} ; 
 (10,-6) **\dir{-} *\dir{>},
-(10,-6)*=(7.5,1)!UC\txt{Decrypt Message} *\frm{-} ; 
+(10,-6)*=(4,1)!UC\txt{Decrypt Message} *\frm{--} ; 
 (10,-9) **\dir{-} *\dir{>},
-(10,-9)*=(7.5,1)!UC\txt{Decode from Unicode} *\frm{=} ; 
+(10,-9)*=(4,1)!UC\txt{Decode from Unicode} *\frm{--} ; 
 (10,-12) **\dir{-} *\dir{>},
-(10,-12)*=(7.5,1)!UC\txt{Print Message to User} *\frm{-} ; 
+(10,-12)*=(4,1)!UC\txt{Print Message to User} *\frm{-} ; 
 \endxy
+
+\end{center}
 
 \caption{Use Case: Server delivering message to local recipient}
 
 \end{figure}
+
 
 \begin{enumerate}
 
@@ -98,3 +118,5 @@ declared they can accept Unicode.
 \item Message is printed to user's terminal
 
 \end{enumerate}
+
+\vfill
