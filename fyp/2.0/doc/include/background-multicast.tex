@@ -8,8 +8,8 @@ ground between the traditional delivery methods of Unicast and
 Broadcast. The network itself is responsible for generating the 
 duplicate traffic, thus using bandwidth more efficiently than using 
 multiple Unicast connections between the source and multiple 
-destinations. There are currently two categories of multicast, ASM and 
-SSM.
+destinations. There are currently three categories of multicast, ASM, 
+SSM and PIM-Bidir.
 
 \subsection{What Multicast Is}
 
@@ -34,7 +34,7 @@ treats the RPF interface as the incoming multicast interface for a
 group.
 
 
-Using the simplest form of ASM, known as SPT, is when the multicast
+Using ASM, a system known as SPT, is used to appoint the multicast
 source is the root of the distribution tree. To construct the tree, any
 router which receives a join request from a node forwards the join
 request from it's RPT interface to the next upstream router, until the 
@@ -43,7 +43,7 @@ router in a multicast forwarding state for the relevant source-group
 pair; thus forming a distribution tree. See example in Figure 
 \ref{fig:asm-spt}.
 
-\begin{figure}[Hp]
+\begin{figure}[ht]
 \label{fig:asm-spt}
 
 \begin{center}
@@ -84,25 +84,21 @@ pair; thus forming a distribution tree. See example in Figure
 \end{figure}
 
 
-Alternative operating modes of ASM are referred to as PIM, which
-can operate in two modes, Sparse Mode (PIM-SM) and Dense Mode (PIM-DM),
-depending on the level of popularity the multicast functionality is with
-connected nodes. The core difference compared to SPT is that a shared
-tree is used, meaning the root of the distribution tree is an RP.
-
-
-An RP is a router on the network, which is aware of the source address.
-As a result, the RP is in a multicast forwarding state. The RP is a node
-on a SPT to the true multicast source.
+Numerous ASM routing protocols exist to aid the creating of a
+distribution tree. One such protocol is PIM, which comes in two 
+flavours, Sparse Mode (PIM-SM) and Dense Mode (PIM-DM). With PIM, a
+distribution tree consists of a SPT from the source to a router acting 
+as a Rendezvous Point. A complete distribution tree is then formed,
+using the RP as the root.
 
 
 The other routers on the network will join the distribution tree of a 
-particular  group under the same conditions as when creating a RPT. The 
+particular group under the same conditions as when creating a RPT. The 
 key contrast is that only the router serving as the RP is aware of the 
 true source address. All other routers treat the RP as the source node. 
 See example in Figure \ref{fig:asm-rpt}.
 
-\begin{figure}[Hp]
+\begin{figure}[ht]
 \label{fig:asm-rpt}
 
 \begin{center}
@@ -146,18 +142,6 @@ See example in Figure \ref{fig:asm-rpt}.
 
 \end{figure}
 
-\clearpage
-
-Although the RPF table on a router can be identical to the Unicast
-routing table, or there can be a dedicated RPF table. In order to 
-populate a dedicated RPF tables on a router, dynamic multicast 
-routing protocols are required. Due to the similarities between the data
-in Unicast routing tables and a multicast RPF tables, slightly modified
-routing protocols such as Multicast BGP (MBGP) and Multicast-ISIS
-(M-ISIS) are employed to maintain the RPF tables of the routers on a
-multicast network if PIM-SM or PIM-DM is employed. Otherwise, DVMRP is
-used to populate the RPT table on every router on the network.
-
 
 In order to use ASM properly, statically assigned Multicast IP numbers
 are required. Since these IP numbers are generally unavailable,
@@ -180,6 +164,26 @@ An additional by product of SSM is that the Multicast IPs are not
 required to be globally unique, making the 232.0.0.0/8 SSM IP block
 reusable within different organisations.
 
+\subsubsection{Bi-directional Protocol Independent Multicast (PIM-Bidir)}
+\label{sec:pim-bidir}
+
+PIM-Bidir is derived from the PIM suite of routing protocols. It is
+becoming the preferred method of many-to-many multicasting compared to
+ASM and is expected to compliment SSM based one-to-many multicast. PIM
+Bidir has proven to scale to an arbitrary number of sources elegantly
+without incurring overhead. 
+
+
+PIM-Bidir creates a bidirectional shared distribution tree as
+performing in other PIM variants, using the RP as the root of the group.
+A network IP address is used as a key, allowing the routers on a network
+to establish a loop-free spanning tree rooted to that IP address.
+
+
+In order to avoid multicast packet loops, PIM-bidir uses a new mechanism
+called a Designated Forwarder (DF), which is elected by discovering the
+router with the nearest Unicast routing metric to the RP.
+
 \subsection{Group Management}
 
 While there are a number of group management protocol to control IP
@@ -197,17 +201,6 @@ created for every port on a switch), IGMP Snooping is an operational
 mode to allow switches to be aware of IGMP messages and to switch or
 disregard IGMP messages in a similar manner to traditional Unicast
 traffic.
-
-\subsection{Interdomain Multicast Routing}
-
-Although the RPF table on a router can be identical to the Unicast
-routing table, or there can be a dedicated RPF table. In order to 
-populate a dedicated RPF tables on a router, dynamic multicast 
-routing protocols are required. Due to the similarities between the data
-in Unicast routing tables and a multicast RPF tables, slightly modified
-routing protocols such as Multicast BGP (MBGP) and Multicast-ISIS
-(M-ISIS) are employed to maintain the RPF tables of the routers on a
-multicast network.
 
 \subsection{Practical Uses}
 
@@ -234,25 +227,17 @@ overlap
 \subsubsection{Network Design Flaws}
 
 A badly structured layer 2 network design can experience numerous issues
-when deploying mulicast. Such issues can include symptoms such as: 
+when deploying multicast. Such issues can include symptoms such as: 
 additional CPU load on switches when IGMP Snooping is enabled; 
 Overlapping MAC addresses causing IGMP Snooping information for 
 different groups to be merged; network flooded with IGMP Snooping 
-messages as topology changes and networking devices relearn network 
+messages as topology changes and networking devices re-learn network 
 structure; inability to restrict groups by network given the large
 number of active ports on the network.
 
 Similarly, a badly structured L3 network can also experience adverse 
 behaviour, such as routing instabilities which cause PIM to change it's
 forwarding state.
-
-\subsection{Vendor Support}
-
-At the time or writing, networking hardware vendors support for ASM
-multicast is complete, while SSM is still not supported as yet. As a
-result, deploying IP multicast, no matter which delivery method is
-desired, ASM is the only available choice, adding additional complexity
-and effort to the deployment of multicast.
 
 \subsection{Further Information}
 
