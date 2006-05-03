@@ -1,0 +1,25 @@
+% $Id$
+
+Since Unix and Unix derivatives treat devices the same as file
+descriptors, delivering a message to the TTY file descriptor 
+representing the terminal session of a user on a system is simply the 
+same as writing to a file.
+
+
+However, for security there ownership and write access restrictions
+applied. All TTY devices are owned by the user currently connected to
+that tty and the "tty" system group. Only the owner has read and write
+access to a specific terminal. If a user is willing to accept 
+messages\footnote{Users are able to nominally enable or disable receiving messages by using the mesg y and mesg n commands},
+their TTY is writable by members of the "tty" group.
+
+
+In order for the daemon to deliver messages to any system user, it needs
+to invoke the setgid() system call in order to execute as a member of 
+the "tty" group. However, using setgid() is a security 
+risk\footnote{A process needs to be run initially as the root super user in order to call setgid() properly. Additionally, if a setgid() application has a security vulnerability, a malicious user could gain privileges granted to the group}.
+
+
+To avoid this security issue, the daemon shall use the 
+\emph{write}\footnote{which is setgid to the "tty" group} application
+to write a message to a user's terminal.
