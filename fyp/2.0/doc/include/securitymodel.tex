@@ -26,7 +26,7 @@ semi-functional.
 
 \subsection{A Different Approach}
 
-After considering the concerns highlighted regarding the preexisting
+After considering the concerns highlighted regarding the pre-existing
 security architecture, I decided to redesign the security model using a
 different technology to X.509 security certificates. I decided to use the 
 OpenPGP standard for encrypting transmissions between two individual 
@@ -38,7 +38,7 @@ codebase is that encryption is end-to-end, not node-to-node. As a
 result, the model is more robust and privacy is achieved. Instead of a
 single SSL certificate and private key on each node, every user has a
 public and private key pair. Users also require the public key component
-of their intended recipient, to allow them to encrypt their message using
+of their intended recipient to allow them to encrypt their message using
 their recipient's public key.
 
 

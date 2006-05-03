@@ -2,7 +2,7 @@
 
 In order to function as a messaging system between multiple nodes, a
 message format storing relevant information will be required. 
-Information, such as the sender's username, sender's real name, FQDN of 
+Information such as the sender's username, sender's real name, FQDN of 
 sender node, recipient's username, recipient's real name, FQDN of 
 recipient node, message text, timestamps, and public key IDs should all
 be considered relevant. 
@@ -10,14 +10,14 @@ be considered relevant.
 
 Therefore, during the design stages, there were two options: design a 
 custom message format, or adopt a pre-existing, possibly standardised 
-format. Chosing to design a custom format could result in an efficient 
-format suited ideally for transmitting the relevant information, 
-multiple design revisions would have been necessary to remove any
-design flaws initially overlooked. 
+format. Choosing to design a custom format could result in an efficient 
+format ideally suited for transmitting the relevant information, 
+however multiple design revisions would have been necessary would be
+necessary to remove any design flaws initially overlooked. 
 
 
 Therefore, adopting an open standard such as the XMPP format, as 
-standardised in RFCs 3920 and 3921 provided a well designed, scalable 
+standardised in RFCs 3920 and 3921, provided a well designed, scalable 
 messaging format. In addition, this decision would allow possible 
 interoperability with other XMPP based technologies and facilitate 
 possible extensions in the future.

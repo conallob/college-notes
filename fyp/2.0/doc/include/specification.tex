@@ -5,7 +5,7 @@ power user.
 
 
 The client should transmit the message to the server on the destination
-host. The server then attempts to delivery of the message to the
+host. The server should then attempts to delivery of the message to the
 recipient and transmit status details to the sender via the client.
 
 
@@ -17,28 +17,28 @@ The system should be as portable as possible, compiling and working on
 various Unix and Unix related systems (including commercial Unix
 implementations like Solaris and MacOS X, Unix 
 implementations such as the primary BSD flavours, and open source Unix
-related systems such as various Linux distributions) 
+related systems such as various Linux distributions).
 
 
 Messages between client and server should be cryptographically secure by
 default. Due to the additional security concerns using SSL connections
 and corresponding X.509 certificates to encrypt messages in transit
-between servers on separate nodes. Public-private keys should
+between servers on separate nodes, public-private keys should
 be used and the encryption should be from end user to end user.
 OpenPGP should be the encryption model used.
 
 
-The client should support unicode input from the user. The server should 
-attempt delivery in Unicode, if the terminal of the recipient is Unicode 
+The client should support Unicode input from the user. The server should 
+attempt delivery in Unicode if the terminal of the recipient is Unicode 
 capable. 
 
 
-Messages should be transmitted in unicode. Non unicode input should be
-encoded into unicode prior to encryption and transmission. Messages
-should be decoded from unicode after transmission and decryption, if
-the terminal of the recipient does not support unicode. 
+Messages should be transmitted in Unicode. Non Unicode input should be
+encoded into Unicode prior to encryption and transmission. Messages
+should be decoded from Unicode after transmission and decryption, if
+the terminal of the recipient does not support Unicode. 
 
 
-The server should be able to join IP multicast group, to allow multiple
-servers to receive the same message transmitted by a client to an IP
+The server should be able to join IP multicast groups, to allow multiple
+servers receive the same message transmitted by a client to an IP
 multicast group. 
