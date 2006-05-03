@@ -4,6 +4,7 @@
 
 \usepackage{url}
 \usepackage{ulem}
+\usepackage{setspace}
 \usepackage{makeidx}
 \usepackage{footmisc}
 \usepackage{graphicx}
@@ -23,22 +24,24 @@
 \titlespacing{\chapter}{0cm}{1em}{2em}[-1cm]
 \renewcommand{\familydefault}{\sfdefault}
 
-\newpagestyle{fancy}{\headrule\setheadrule{.15pt}\sethead[][][]{\OghamOr Oi}{}{\textbf{\sectiontitle \quad \thesection}}\setfoot[\thepage][][]{}{}{\thepage}}
+\newpagestyle{fancy}{\headrule\setheadrule{.15pt}\sethead[][][]{\OghamOr{} Oi}{}{\textbf{\sectiontitle \quad \thesection}}\setfoot[\thepage][][]{}{}{\thepage}}
 \renewpagestyle{plain}{\setfoot[\thepage][][]{}{}{\thepage}}
 \pagestyle{fancy}
 
 \renewcommand{\emph}[1]{\textit{#1}}
 
-\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
 \renewcommand{\topfraction}{0.7}
 \renewcommand{\bottomfraction}{0.7}
 \renewcommand{\textfraction}{0.3}
 
 \setlength{\parindent}{0mm}
-\setlength{\parskip}{7.5mm}
+\setlength{\parskip}{5mm}
 \setlength{\rightskip}{0pt plus 2cm} % justify
 \setlength{\footnotesep}{0mm}
 \setlength{\footnotemargin}{\parindent}
+
+\titlespacing{\chapter}{0cm}{1em}{2em}[-1cm]
 
 % Custom macros to make life easier
 
