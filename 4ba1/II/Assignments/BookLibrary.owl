@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="BookCopy"/>
+  <owl:Class rdf:ID="Person"/>
+  <owl:Class rdf:ID="BookISBN"/>
+  <owl:Class rdf:ID="BookPart"/>
+  <owl:Class rdf:ID="Book"/>
+  <owl:Class rdf:ID="BookEdition"/>
+  <owl:ObjectProperty rdf:ID="hasAuthor">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#BookEdition"/>
+          <owl:Class rdf:about="#Book"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isAuthorOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEditor">
+    <rdfs:domain rdf:resource="#BookEdition"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isEditorOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasMaterialisation">
+    <rdfs:domain rdf:resource="#Book"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isMaterialisationOf"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isAuthorOf">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Book"/>
+          <owl:Class rdf:about="#BookEdition"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <owl:inverseOf rdf:resource="#hasAuthor"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasISBN"/>
+  <owl:ObjectProperty rdf:ID="hasCopy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPart"/>
+  <owl:ObjectProperty rdf:about="#isMaterialisationOf">
+    <owl:inverseOf rdf:resource="#hasMaterialisation"/>
+    <rdfs:range rdf:resource="#Book"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isEditorOf">
+    <owl:inverseOf rdf:resource="#hasEditor"/>
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Book"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasEdition">
+    <rdfs:domain rdf:resource="#Book"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasBinding"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.1, Build 284)  http://protege.stanford.edu -->
