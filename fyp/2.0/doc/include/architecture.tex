@@ -6,13 +6,19 @@ operational modes for each component.
 
 \begin{figure}[ht]
 
+\hspace{10mm}
+
+\small
+
 \begin{center}
 \ \xy<1cm,0cm>:
-(3, 0) *=(2,2) !CR \txt{A} *\frm{-} ="nodeA" , 
-(9, 0) *=(2,2) !CL \txt{B} *\frm{=} ="nodeB" , 
+(3, 0) *=(1,1) !CR \txt{A} *\frm<44mm>{-} ="nodeA" , 
+(6, 0) *=(1,1) !CL \txt{B} *\frm{-} ="nodeB" , 
 "nodeA" ; "nodeB" **\dir{-} *\dir{>} ?(0.5) *++!CC{1}*\frm{o} , 
 \endxy
 \end{center}
+
+\hspace{10mm}
 
 \label{fig:client}
 
@@ -22,13 +28,15 @@ operational modes for each component.
 
 \begin{figure}[ht]
 
+\small
+
 \begin{center}
 \ \xy<1cm,0cm>:
-(3, 0) *=(2,2) !CR \txt{A} *\frm{-} ="nodeA" , 
-(9, 4) *=(2,2) !CL \txt{B} *\frm{=} ="nodeB" , 
-(9,-4) *=(2,2) !CL \txt{C} *\frm{=} ="nodeC" , 
-"nodeA" ; "nodeC" **\dir{-} *\dir{>} ?(0.5) *++!CC{2}*\frm{o} , 
-"nodeC"!CC ; "nodeB"!DC **\dir{-} *\dir{>} ?(0.5) *++!CC{2}*\frm{o} , 
+(3, 0) *=(1,1) !CR \txt{A} *\frm<44mm>{-} ="nodeA" , 
+(6, 2) *=(1,1) !CL \txt{B} *\frm{-} ="nodeB" , 
+(6,-2) *=(1,1) !CL \txt{C} *\frm{-} ="nodeC" , 
+"nodeA" ; "nodeC" **\dir{-} *\dir{>} ?(0.5) *^++!CC{2}*\frm{o} , 
+"nodeC"!CC ; "nodeB"!DC **\dir{-} *\dir{>} ?(0.5) *^++!CC{2}*\frm{o} , 
 \endxy
 \end{center}
 

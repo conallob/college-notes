@@ -1,7 +1,7 @@
 % $Id$
 
 Since the project was running behind schedule, after consultation with
-the project supervisor, it was decided that the number of milestones and
+the project supervisor it was decided that the number of milestones and
 thus specified features outstanding required a number of man hours that
 would exceed the deadline.
 
@@ -16,9 +16,11 @@ The initial reprioritisation was primarily a regrouping of the
 milestones. Instead of treating local and remote behaviour differently,
 local connections were performed by using Unix Sockets IPC on a host's
 loopback interface, therefore using the same mechanism for remote
-connections.
+connections. The resulting list of milestones is shown in Figure
+\ref{fig:steps-v2}.
 
-\begin{table}[Hbt]
+\begin{table}[hbt]
+\label{fig:steps-v2}
 
 \begin{center}
 
@@ -26,7 +28,7 @@ connections.
 
 \item Client Local Echo 
 
-	\subitem Client accepts Input from stdin, buffers and echos.
+	\subitem Client accepts input from stdin, buffers and echos.
 
 \item Local Daemon Echo 
 
@@ -35,12 +37,17 @@ connections.
 
 \item UTF-8 Client Local Echo 
 
-	\subitem Client accepts UTF-8 Input from stdin, performs checks and
+	\subitem Client accepts UTF-8 input from stdin, performs checks and
 	outputs UTF-8 to stdout.
 
 \item UTF-8 Daemon Echo
 
 	\subitem Introduce Unicode formatting before and after transmission.
+
+\item XMPP Message Transmission 
+
+	\subitem Client formats message into XMPP template, Daemon parses
+	XMPP.
 
 \item Encrypted UTF8 Daemon Echo 
 
@@ -63,10 +70,12 @@ connections.
 
 Due to delays during testing and the remote Daemon echo objective, the 
 outstanding milestones were further scrutinised and specified features
-were marked as optional and removed from the critical path.
+were marked as optional and removed from the critical path. The ultimate
+list of milestones is shown in Figure \ref{tab:final-steps}.
 
 
-\begin{table}[Hbt]
+\begin{table}[hbt]
+\label{fig:final-steps}
 
 \begin{center}
 
@@ -74,22 +83,21 @@ were marked as optional and removed from the critical path.
 
 \item \sout{Client Local Echo}
 
-	\subitem \sout{Client accepts Input from stdin, buffers and echos}
+	\subitem \sout{Client accepts input from stdin, buffers and echos}
 
 \item Daemon Echo 
 
 	\subitem Client sends input to Daemon using sockets, Dameon 
 	echoes transmission.
 
-\item \xout{UTF-8 Client Local Echo}
+\item Daemon User Delivery
 
-	\subitem \xout{Client accepts UTF-8 Input from stdin, performs checks and
-	outputs UTF-8 to stdout}.
+	\subitem Have daemon check for user, then attempt message delivery.
 
-\item \xout{UTF-8 Daemon Echo}
+\item XMPP Message Transmission 
 
-	\subitem \xout{Introduce Unicode formatting before and after
-	transmission}.
+	\subitem Client formats message into XMPP template, Daemon parses
+	XMPP.
 
 \item Encrypted Daemon Echo 
 

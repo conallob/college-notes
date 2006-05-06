@@ -36,7 +36,8 @@ various class A, B and C address allocations.
 
 
 IP addressing is not the only advantage IPv6 over IPv4. Numerous
-supplementary functionality, such as layer 3 multicast, that was added to IPv4 over 20 years.
+supplementary functionality, such as Layer 3 multicast, that was added to IPv4 over 20 years.
+
 
 Finally, in recent years, IPv4 has had many security concerns concerning
 address spoofing, many of which are connected to security issues with
@@ -54,6 +55,29 @@ have been added over the years, the Internet Engineering Task Force
 protocol, with improvements over the design of IPv4, based upon the
 enhancements added over the years and flaws causing limitations. This
 protocol is IPv6.
+
+\subsection{Improvements in IPv6}
+
+As a result of how IPv4 was extended over the last 25 years, IPv6 has
+been designed from the start to be extensible. The IPv6 header was been
+redesigned to include only the key fields and defines an extensible
+field, where option header information can be added.
+
+
+One of the key differences noticed in IPv6, after the number of IP
+numbers possible, is IPv6 auto-configuration. Current IPv4 networks often
+employ DHCP to distribute stateful IP configurations to hosts on a
+network. Using IPv6 autoconf, stateless configuration is also possible,
+whereby a device can assign itself an IP number based upon an advertised
+prefix and the MAC address of the connected interface. Mechanisms such
+as DAD and ND are used to ensure IP addresses are unique.
+
+
+IPv6 also implicitly encourages various good practices, such as prefix
+routing (which is quite similar to CIDR) and multicasting (which is used
+to contact defined network devices, such as routers). Additionally, 
+optional features such as QoS, Mobile IP and IPsec can also be enabled 
+with minimal extra effort.
 
 \subsection{Further Information}
 

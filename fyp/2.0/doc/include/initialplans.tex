@@ -1,6 +1,26 @@
 % $Id$
 
-\begin{table}[H]
+The initial list of milestones was drawn up with a plan to create the
+core functionality of the client first. Once the client accepted input,
+transmit this input across a network.
+
+
+When messages were passing across a network properly, additional
+functionality such as UTF-8 encoding and encryption would be applied.
+Then remote user delivery features would be added to form the daemon.
+
+
+The UTF-8 formatting, encrypting client would then be integrated with a
+complementing daemon, before finally adding IP multicast functionality
+to the daemon.
+
+
+The deadline for final completion of all these milestones was set as
+early January, before eight weeks of quality assurance testing in an
+attempt to iron out as many issues as possible before demonstration of
+the system. 
+
+\begin{table}[ht]
 
 \begin{center}
 
@@ -13,11 +33,11 @@
 
 \item Local Server Echo 
 
-	\subitem Client sends text to Server, server echoes text back.
+	\subitem Client sends text to Daemon, Daemon echoes text back.
 
 \item UTF8 Server Echo 
 
-	\subitem Same as 2, with Unicode translation involved.
+	\subitem Same as 2, with Unicode encoding involved.
 
 \item Encrypted UTF8 Server Echo 
 
@@ -37,7 +57,7 @@
 
 \item Local User to User 
 
-	\subitem Client sends message to local server, which sends to a 
+	\subitem Client sends message to local Daemon, which sends to a 
 	different user.
 
 \item Remove GPG UTF8 User to User 
