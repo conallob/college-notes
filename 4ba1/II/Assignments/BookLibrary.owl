@@ -7,70 +7,318 @@
     xmlns="http://www.owl-ontologies.com/unnamed.owl#"
   xml:base="http://www.owl-ontologies.com/unnamed.owl">
   <owl:Ontology rdf:about=""/>
-  <owl:Class rdf:ID="BookCopy"/>
   <owl:Class rdf:ID="Person"/>
-  <owl:Class rdf:ID="BookISBN"/>
-  <owl:Class rdf:ID="BookPart"/>
-  <owl:Class rdf:ID="Book"/>
-  <owl:Class rdf:ID="BookEdition"/>
-  <owl:ObjectProperty rdf:ID="hasAuthor">
-    <rdfs:domain>
+  <owl:Class rdf:ID="BookCopy"/>
+  <owl:Class rdf:ID="SoftBackCover">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BookBinding"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="HardBackCover"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="ISBN780596009342">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BookISBN"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ISBN780471117094"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ISBN780201433074"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="AppliedCryptography">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Book"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
       <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#BookEdition"/>
-          <owl:Class rdf:about="#Book"/>
-        </owl:unionOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#SoftBackCover"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasBinding"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="BruceSchneider"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasAuthor"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#ISBN780471117094"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasISBN"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="SecondEdition"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasMaterialisation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasCopy"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="YesCopy"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
       </owl:Class>
-    </rdfs:domain>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#SecondEdition">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BookEdition"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="FirstEdition"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="BookPart"/>
+  <owl:Class rdf:ID="NiallRichardMurphy">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="StephenRago"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="WRichardStevens"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BruceSchneider"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="DavidMalone"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HardBackCover">
+    <owl:disjointWith rdf:resource="#SoftBackCover"/>
+    <rdfs:subClassOf rdf:resource="#BookBinding"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ISBN780201433074">
+    <owl:disjointWith rdf:resource="#ISBN780596009342"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ISBN780471117094"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#BookISBN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NoCopy">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#YesCopy"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#BookCopy"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DavidMalone">
+    <owl:disjointWith rdf:resource="#NiallRichardMurphy"/>
+    <rdfs:subClassOf rdf:resource="#Person"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BruceSchneider"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WRichardStevens"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StephenRago"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#FirstEdition">
+    <owl:disjointWith rdf:resource="#SecondEdition"/>
+    <rdfs:subClassOf rdf:resource="#BookEdition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ISBN780471117094">
+    <owl:disjointWith rdf:resource="#ISBN780596009342"/>
+    <rdfs:subClassOf rdf:resource="#BookISBN"/>
+    <owl:disjointWith rdf:resource="#ISBN780201433074"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WRichardStevens">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BruceSchneider"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#DavidMalone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StephenRago"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#NiallRichardMurphy"/>
+    <rdfs:subClassOf rdf:resource="#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="#YesCopy">
+    <owl:disjointWith rdf:resource="#NoCopy"/>
+    <rdfs:subClassOf rdf:resource="#BookCopy"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BruceSchneider">
+    <owl:disjointWith rdf:resource="#NiallRichardMurphy"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StephenRago"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Person"/>
+    <owl:disjointWith rdf:resource="#WRichardStevens"/>
+    <owl:disjointWith rdf:resource="#DavidMalone"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IPv6NetworkAdministration">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasAuthor"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#DavidMalone"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasAuthor"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#NiallRichardMurphy"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#FirstEdition"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasMaterialisation"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#ISBN780596009342"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasISBN"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#SoftBackCover"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasBinding"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasCopy"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#YesCopy"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Book"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AdvancedProgrammingInTheUNIXEnvironment">
+    <rdfs:subClassOf rdf:resource="#Book"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasISBN"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#ISBN780201433074"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasAuthor"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#WRichardStevens"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#StephenRago"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasEditor"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasMaterialisation"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#SecondEdition"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#HardBackCover"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasBinding"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#YesCopy"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#hasCopy"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#StephenRago">
+    <rdfs:subClassOf rdf:resource="#Person"/>
+    <owl:disjointWith rdf:resource="#WRichardStevens"/>
+    <owl:disjointWith rdf:resource="#NiallRichardMurphy"/>
+    <owl:disjointWith rdf:resource="#DavidMalone"/>
+    <owl:disjointWith rdf:resource="#BruceSchneider"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#hasAuthor">
+    <rdfs:domain rdf:resource="#Book"/>
     <owl:inverseOf>
       <owl:ObjectProperty rdf:ID="isAuthorOf"/>
     </owl:inverseOf>
     <rdfs:range rdf:resource="#Person"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="hasEditor">
+  <owl:ObjectProperty rdf:about="#hasEditor">
     <rdfs:domain rdf:resource="#BookEdition"/>
     <owl:inverseOf>
       <owl:ObjectProperty rdf:ID="isEditorOf"/>
     </owl:inverseOf>
     <rdfs:range rdf:resource="#Person"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="hasMaterialisation">
+  <owl:ObjectProperty rdf:about="#hasMaterialisation">
     <rdfs:domain rdf:resource="#Book"/>
+    <owl:equivalentProperty>
+      <owl:ObjectProperty rdf:ID="hasEdition"/>
+    </owl:equivalentProperty>
+    <rdfs:range rdf:resource="#BookEdition"/>
     <owl:inverseOf>
       <owl:ObjectProperty rdf:ID="isMaterialisationOf"/>
     </owl:inverseOf>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#isAuthorOf">
-    <rdfs:range>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#Book"/>
-          <owl:Class rdf:about="#BookEdition"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:range>
     <owl:inverseOf rdf:resource="#hasAuthor"/>
+    <rdfs:range rdf:resource="#Book"/>
     <rdfs:domain rdf:resource="#Person"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="hasISBN"/>
-  <owl:ObjectProperty rdf:ID="hasCopy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  <owl:ObjectProperty rdf:about="#hasISBN">
+    <rdfs:range rdf:resource="#BookISBN"/>
+    <rdfs:domain rdf:resource="#Book"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasCopy">
+    <rdfs:range rdf:resource="#BookCopy"/>
+    <rdfs:domain rdf:resource="#Book"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="hasPart"/>
   <owl:ObjectProperty rdf:about="#isMaterialisationOf">
     <owl:inverseOf rdf:resource="#hasMaterialisation"/>
     <rdfs:range rdf:resource="#Book"/>
+    <rdfs:domain rdf:resource="#BookEdition"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="#isEditorOf">
     <owl:inverseOf rdf:resource="#hasEditor"/>
     <rdfs:domain rdf:resource="#Person"/>
     <rdfs:range rdf:resource="#Book"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="hasEdition">
-    <rdfs:domain rdf:resource="#Book"/>
+  <owl:ObjectProperty rdf:about="#hasEdition">
+    <owl:equivalentProperty rdf:resource="#hasMaterialisation"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="hasBinding"/>
+  <owl:ObjectProperty rdf:about="#hasBinding">
+    <rdfs:range rdf:resource="#BookBinding"/>
+    <rdfs:domain rdf:resource="#Book"/>
+  </owl:ObjectProperty>
 </rdf:RDF>
 
 <!-- Created with Protege (with OWL Plugin 2.1, Build 284)  http://protege.stanford.edu -->
